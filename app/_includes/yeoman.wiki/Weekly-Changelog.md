@@ -1,4 +1,3 @@
-
 ###Changelog for the Yeoman CLI dev team
 
 (Addy, Mickael, Sindre)
@@ -38,6 +37,7 @@
 
 **Documentation**
 
+* `yeoman docs` brings up the local docs folder (note: very much WIP)
 * Work has begun on the documentation
 * Decided on markdown source
 * Setting up Jekyll so we can easily generate HTML docs and integrate with whatever the agency come up with
