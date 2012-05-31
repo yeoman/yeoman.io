@@ -5,6 +5,7 @@
 
 **28th May - June 1st**
 
+
 **`yeoman init`**
 
 * We now have a new remote template pulling in:
@@ -12,6 +13,11 @@
     2. twitter-bootstrap for the optional list of JavaScript plugin
     3. compass_twitter_bootstrap for the sass files, as the CSS files are authored in sass     
 * `--template <name>` can now be used to load a pre-defined template
+
+**`yeoman` (no args)**
+* Correctly defaults to displaying --v and help
+* help updated to display options available
+
 
 **`yeoman server`**
 
