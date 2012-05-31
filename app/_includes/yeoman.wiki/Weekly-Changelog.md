@@ -1,41 +1,43 @@
-The weekly changelog (started May 31st) will give us an easier window into what has been done during the last week without having to review all of the commit history. 
+
+###Changelog for the Yeoman CLI dev team
+
+(Addy, Mickael, Sindre)
+
 
 **28th May - June 1st**
 
-(Will include updates that were not discussed at the last Tooling meeting)
+**`yeoman init`**
 
-A new remote template:
-  * html5-boilerplate for the main base
-  * twitter-bootstrap for the optional list of JavaScript plugins
-  * compass_twitter_bootstrap for the sass files, as the CSS files are authored in sass
+* We now have a new remote template pulling in:
+    1. html5-boilerplate for the main base
+    2. twitter-bootstrap for the optional list of JavaScript plugin
+    3. compass_twitter_bootstrap for the sass files, as the CSS files are authored in sass     
+* `--template <name>` can now be used to load a pre-defined template
 
-Other:
+**`yeoman server`**
 
-* --template <name> option used to load a pre-defined template
-* make .coffee files in the /js folder automagically compile when tasks are run
-* - jasmine task
-* start on documentation
+* We now make .coffee files in the /js folder automagically compile when tasks are run
+
+**`yeoman test`**
+
+* Jasmine testing hasness support has begun in the form of `yeoman --jasmine`
+
+**`yeoman build`**
+
+* Image compression: Sindre spent time researching the most optimal approaches we can take for PNG compression. Discovered that OptiPNG was the best so we're using that at the moment. 
+
+**Additional work on tests**
+
 * Tests for the usemin task
 * Tests for the tar task
 * Tests for the img task
 * Tests for the html task
 * Tests for the css task
-* CSS task - minifications once inline imports are done
 * Tests for the build:* tasks
 
-Todos:
-* Yeoman template notes for the CLI intro
 
+**Documentation**
 
-**Notes:**
-
-Installation: 
-`
-cd yeoman/cli
-sudo npm instal -g
-`
-
-Usage:
-`
-yeoman init
-`
+* Work has begun on the documentation
+* Decided on markdown source
+* Setting up Jekyll so we can easily generate HTML docs and integrate with whatever the agency come up with
