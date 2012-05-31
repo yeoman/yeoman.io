@@ -47,3 +47,10 @@
 * Work has begun on the documentation
 * Decided on markdown source
 * Setting up Jekyll so we can easily generate HTML docs and integrate with whatever the agency come up with
+
+**ES6 Support Research + POC**
+* https://github.com/addyosmani/require-hm
+* Discussion thread at: https://groups.google.com/forum/#!msg/yeoman-dev/LCZ00RcDVRo/5ufIlxTuP2AJ
+
+**To Discuss:**
+* Default wizard questions? https://github.com/yeoman/yeoman/issues/24
