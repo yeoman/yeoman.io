@@ -5,9 +5,12 @@ The weekly changelog (started May 31st) will give us an easier window into what 
 (Will include updates that were not discussed at the last Tooling meeting)
 
 A new remote template:
-* html5-boilerplate for the main base
-* twitter-bootstrap for the optional list of JavaScript plugins
-* compass_twitter_bootstrap for the sass files, as the CSS files are authored in sass
+  * html5-boilerplate for the main base
+  * twitter-bootstrap for the optional list of JavaScript plugins
+  * compass_twitter_bootstrap for the sass files, as the CSS files are authored in sass
+
+Other:
+
 * --template <name> option used to load a pre-defined template
 * make .coffee files in the /js folder automagically compile when tasks are run
 * - jasmine task
