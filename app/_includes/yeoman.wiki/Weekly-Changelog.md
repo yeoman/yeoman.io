@@ -21,10 +21,6 @@
 
 * Jasmine testing hasness support has begun in the form of `yeoman --jasmine`
 
-**`yeoman build`**
-
-* Image compression: Sindre spent time researching the most optimal approaches we can take for PNG compression. Discovered that OptiPNG was the best so we're using that at the moment. 
-
 **Additional work on tests**
 
 * Tests for the usemin task
@@ -34,6 +30,10 @@
 * Tests for the css task
 * Tests for the build:* tasks
 
+
+**`yeoman build`**
+
+* Image compression: Sindre spent time researching the most optimal approaches we can take for PNG compression. Discovered that OptiPNG was the best so we're using that at the moment. 
 
 **Documentation**
 
