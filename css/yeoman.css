@@ -5,8 +5,8 @@ body {
 
 body {
   background-image: url( '../img/content-bg.png' );
-  font-family: 'Istok Web', sans-serif;
-  font-size: 12px;
+  font-family: 'Lekton', sans-serif;
+  font-size: 13px;
   line-height: 18px;
   color: #333;
 }
@@ -14,51 +14,48 @@ body {
 a,
 a:visited,
 a:active {
-  color: #666;
+  color: #ce181e;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #000;
 }
 
 hr {
   height: 1px;
   background-color: #ccc;
   border: 0;
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
 }
 
 h1,
 h2 {
-  font-family: 'Bitter', serif;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-family: 'Ubuntu Mono', serif;
+  font-weight: normal;
   margin: 20px 0 20px 0;
 }
 
 h1 {
   text-align: center;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 24px;
+  letter-spacing: 2px;
 }
 
 h2 {
-  letter-spacing: 1px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #999;
-  padding: 8px 8px 8px 8px;
+  margin-top: 40px;
+  font-size: 18px;
+  /*color: #CE181E;*/
 }
 
 #search {
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Lekton', serif;
   font-size: 12px;
   border-radius: 14px;
   border: 1px solid #c7c7c7;
-  padding: 4px 16px 4px 16px;
+  padding: 6px 16px 4px 16px;
   color: #b2b1b1;
-  width: 170px;
+  width: 180px;
   margin: 10px 0 10px 0;
 }
 
@@ -75,6 +72,12 @@ nav {
 
 nav header {
   padding: 20px 0 10px 0;
+}
+
+article header hr {
+  margin: 0;
+}
+article header h1 {
 }
 
 nav header img {
@@ -120,13 +123,17 @@ nav ul li img {
 }
 
 article {
-  max-width: 510px;
+  max-width: 700px;
   margin: auto;
 }
 
+article header {
+  text-align: center;
+}
+
 article p {
-  margin: 0 8px 0 8px;
   padding: 0 0 10px 0;
+  text-align: left;
 }
 
 #content-subnav {
@@ -134,38 +141,18 @@ article p {
 }
 
 #content-subnav ul {
-  font-family: 'Bitter', serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   text-align: left;
   display: table;
   margin: auto;
-  list-style-type: none;
-  padding: 10px 0 10px 0;
+  color: #CE181E;
 }
 
 #content-subnav ul li {
-  padding: 4px 0 4px 12px;
-  background-image: url( '../img/content-list-dot.png' );
-  background-repeat: no-repeat;
-  background-position: 0px 11px;
+  margin: 8px 0 8px 0;
 }
 
 #content-subnav ul li a {
-  color: #333;
   display: block;
-}
-
-.stitch {
-  height: 13px;
-  background-color: transparent;
-  background-image: url( '../img/stitch-line.png' );
-  margin: auto;
-}
-
-.stitch-small {
-  width: 84px;  /* divided by 14 */
 }
 
 @media (min-width: 480px) and (max-width:760px) {

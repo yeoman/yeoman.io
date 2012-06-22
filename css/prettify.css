@@ -44,10 +44,20 @@ li.L4,
 li.L5,
 li.L6,
 li.L7,
-li.L8 { list-style-type: decimal-leading-zero; }
+li.L8 { list-style-type: decimal; }
 /* Alternate shading for lines */
-li.L1,
-li.L3,
-li.L5,
-li.L7,
-li.L9 { background: #eee }
+/*li.L1,*/
+/*li.L3,*/
+/*li.L5,*/
+/*li.L7,*/
+/*li.L9 { background: #eee }*/
+
+pre.prettyprint {
+  border-width: 12px 1px;
+  -moz-border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
+  -webkit-border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
+  -o-border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
+  border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
+  background-color: #FFF;
+  padding: 10px 0 10px 0;
+}
