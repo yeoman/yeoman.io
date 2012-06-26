@@ -83,10 +83,29 @@ nav header {
   padding: 20px 0 10px 0;
 }
 
+.strikethrough {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  top: -30px;
+}
+
+.strikethrough h1 {
+  position: relative;
+  top: 30px;
+  background-image: url( '../img/content-bg.png' );
+  display: inline-block;
+  padding: 0 12px 0 12px;
+}
+
+.strikethrough-image {
+  top: -47px;
+}
+.strikethrough-image h1 {
+  top: 47px;
+}
+
 article header hr {
   margin: 0;
-}
-article header h1 {
 }
 
 nav header img {
@@ -140,10 +159,6 @@ article header {
   text-align: center;
 }
 
-article header img {
-  margin: 24px 0 0 0;
-}
-
 article p {
   padding: 0 0 20px 0;
   text-align: left;
@@ -177,6 +192,7 @@ article p {
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+  margin: 0 0 20px 0;
 }
 .video-container iframe,
 .video-container object,
