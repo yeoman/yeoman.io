@@ -1,0 +1,21 @@
+{
+  "name": "yosite",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/addyo/yosite",
+  "author": {
+    "name": "addyosmani"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/addyo/yosite.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/addyo/yosite/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {},
+  "keywords": []
+}

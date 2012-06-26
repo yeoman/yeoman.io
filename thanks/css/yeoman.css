@@ -55,6 +55,10 @@ h2 {
   color: #CE181E;
 }
 
+section, section p{
+  text-align:center;
+}
+
 #search {
   font-family: 'Lekton', serif;
   font-size: 13px;
@@ -244,25 +248,8 @@ article p {
 
 @media (min-width: 761px) {
 
-  nav {
-    width: 250px;
-    height: 100%;
-    float: left;
-    padding: 0;
-  }
-
-  nav header {
-    padding: 40px 0 20px 0;
-  }
-
-  nav header img {
-    width: 164px;
-    height: 146px;
-  }
-
   #content {
     padding: 30px 25px 0 25px;
-    margin: 0 0 0 250px;
   }
 
 }
