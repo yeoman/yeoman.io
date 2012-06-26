@@ -1,19 +1,19 @@
 /* Pretty printing styles. Used with prettify.js. */
 
 /* SPAN elements with the classes below are added by prettyprint. */
-.pln { color: #000 }  /* plain text */
+.pln { color: #ccc }  /* plain text */
 
 @media screen {
-  .str { color: #080 }  /* string content */
-  .kwd { color: #008 }  /* a keyword */
-  .com { color: #800 }  /* a comment */
-  .typ { color: #606 }  /* a type name */
-  .lit { color: #066 }  /* a literal value */
+  .str { color: #00D300 }  /* string content */
+  .kwd { color: #61C4F2 }  /* a keyword */
+  .com { color: #888 }  /* a comment */
+  .typ { color: #C0F }  /* a type name */
+  .lit { color: #00D300 }  /* a literal value */
   /* punctuation, lisp open bracket, lisp close bracket */
-  .pun, .opn, .clo { color: #660 }
-  .tag { color: #008 }  /* a markup tag name */
-  .atn { color: #606 }  /* a markup attribute name */
-  .atv { color: #080 }  /* a markup attribute value */
+  .pun, .opn, .clo { color: #CCC }
+  .tag { color: #EC131B }  /* a markup tag name */
+  .atn { color: #ccc }  /* a markup attribute name */
+  .atv { color: #FFC20E }  /* a markup attribute value */
   .dec, .var { color: #606 }  /* a declaration; a variable name */
   .fun { color: red }  /* a function name */
 }
@@ -32,7 +32,7 @@
 }
 
 /* Put a border around prettyprinted code snippets. */
-pre.prettyprint { padding: 2px; border: 1px solid #d9d9d9 }
+/*pre.prettyprint { padding: 2px; border: 1px solid #d9d9d9 }*/
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
@@ -45,19 +45,16 @@ li.L5,
 li.L6,
 li.L7,
 li.L8 { list-style-type: decimal; }
-/* Alternate shading for lines */
-/*li.L1,*/
-/*li.L3,*/
-/*li.L5,*/
-/*li.L7,*/
-/*li.L9 { background: #eee }*/
 
 pre.prettyprint {
-  border-width: 12px 1px;
-  -moz-border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
-  -webkit-border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
-  -o-border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
-  border-image: url( '../img/codeblock-borders.png' ) 13 1 round;
-  background-color: #FFF;
-  padding: 10px 0 10px 0;
+  font-size: 13px;
+  padding: 2px; border: 1px solid #ccc;
+  background-color: #000;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 8px 14px 8px 14px;
+  margin: 0 0 20px 0;
 }
+
+
+
