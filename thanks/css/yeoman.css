@@ -67,7 +67,8 @@ section, section p{
   border: 1px solid #c7c7c7;
   padding: 8px 10px 6px 10px;
   color: #b2b1b1;
-  width: 180px;
+  max-width: 400px;
+  width: 80%;
   margin: 10px 0 10px 0;
 }
 
