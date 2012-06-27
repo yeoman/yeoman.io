@@ -131,7 +131,7 @@ label.error {
   padding: 5px 0 0;
 }
 
-#subscribeForm input{ 
+#subscribeForm input[type=text]{ 
   width: 350px;
   display: block;
 }
