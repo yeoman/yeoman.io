@@ -12,7 +12,7 @@ Medium to advanced JavaScript developers who have already started with client si
 
 Yeoman V1 will include new webapp project creation tools with recommended file structures and a Grunt based customizable command line build tool. Yeoman V1 aill also attempt to integrate with Twitter's (yet to be released) Bower project which provides package hosting service and unified API to access packages. Our target is to have a stable V1 out by the end of July.
 
-The current tickets we're targeting for this release can be found [here](https://github.com/yeoman/yeoman/issues/112).
+The current tickets we're targeting for this release can be found [here](https://github.com/yeoman/yeoman/issues/112). The backlog completed for Google I/O can be found [here](https://github.com/yeoman/yeoman/issues/71).
 
 ## Who is involved?
 
