@@ -37,7 +37,7 @@ Interested in helping out? Great. We welcome any and all contributions to the pr
 
 Please note that Yeoman is an opinionated workflow by choice and as such, we want to focus on delivering a solid user experience with as little overall bloat as possible. Before beginning any large pieces of work, feel free to open up an issue for discussion where we can talk through whether a feature fits in well with the overall project direction.
 
-## Where is the code?
+## A note on repos
 
 The Yeoman org has a number of repos. This one is for the main project codebase, yeoman/yeoman.io contains the site content designed by B-Reel as well as the current holding page (the content of which can be seen on [http://yeoman.io](http://yeoman.io)). Should you require access to other repos, feel free to ask Paul or Addy and we'll sort that out.
 
