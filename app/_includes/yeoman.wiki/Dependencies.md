@@ -1,21 +1,21 @@
 Yeoman uses:
 
-* Compass
 * Grunt
 * Twitter Bootstrap
-* Html5 Boilerplate
+* HTML5 Boilerplate
 * Modernizr
-* Node
+* Twitter Bower
+* Node.js
 * NPM
-* Twitter Nest 
-* socket.io
-* coffeescript
-* mocha
-* jasmine
+* Compass
+* Socket.IO
+* CoffeeScript
+* Mocha
+* Jasmine
 * PhantomJS
-* optipng, jpegtran
-* connect
-* html-minifier
+* OptiPNG, jpegtran
+* Connect
+* HTML minifier
 * clean-css
 * node-build-script
 * compass_bootstrap
