@@ -29,6 +29,9 @@ a:hover{
   vertical-align: top;
 }
 
+.built-with ul{list-style-type:none}
+
+
 .google-follow {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 11px;
