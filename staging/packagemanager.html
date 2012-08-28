@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Google Yeoman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Lekton|Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/yeoman.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="js/libs/prettify.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+      <nav>
+    <header><a href="index.html"><img src="img/yeoman-logo.png" /></a></header>
+    <ul>
+      <li class="nav-divider"><a href="index.html"><img src="img/icon-home.png" />Home</a></li>
+      <li><a href="whyyeoman.html"><img src="img/icon-why-yeoman.png" />Why Yeoman?</a></li>
+      <li><a href="gettingstarted.html"><img src="img/icon-getting-started.png" />Getting Started</a></li>
+      <li><img src="img/icon-documentation.png" />Documentation</li>
+      <li class="nav-sub"><a href="commandline.html">Command Line</a></li>
+      <li class="nav-sub nav-divider"><a href="packagemanager.html">Package Manager</a></li>
+      <li><a href="faq.html"><img src="img/icon-faqs.png" />FAQs</a></li>
+      <li class="nav-divider"><img src="img/icon-discuss.png" /><a href="https://groups.google.com/forum/?fromgroups#!forum/yeoman-dev">Discuss</a></li>
+      <li><a href="https://plus.google.com/101063139999404044459/posts"><img src="img/icon-google-plus.png" />Google Plus</a></li>
+      <li class="nav-divider"><a href="http://twitter.com/yeoman"><img src="img/icon-twitter.png" />Twitter</a></li>
+      <li><a href="http://github.com/yeoman/yeoman"><img src="img/icon-github.png" />GitHub</a></li>
+      <li><a href="https://github.com/yeoman/yeoman/#contribute"><img src="img/icon-contributing.png" />Contributing</a></li>
+    </ul>
+  </nav>
+
+     <div id="content">
+    <article><h1>Package Manager</h1>
+
+<p>Until now, client-side JavaScript has not benefited from a rich package management solution such as those found in other platforms (e.g NPM, RubyGems). By instead maintaining packages of packages in client-side JS, developers reduced the chances of using up-to-date versions of libraries.</p>
+
+<p>Yeoman's integration with <a href="http://github.com/twitter/bower">Twitter Bower</a> changes that.</p>
+
+<p>In Bower, dependencies are listed in a ‘component.json’ file, similar to Node’s package.json or the Ruby Gemfile. This is useful for locking down the dependencies a project has.</p>
+
+<pre><code>
+{
+  "name": "myProject",
+  "version": "1.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.1"
+  }
+}
+</code></pre>
+
+<p>Dependencies are then installed locally via the `yeoman install’ command. First they're resolved to find conflicts, then downloaded and unpacked in a local sub dir (browser_modules) to component.json, for example:</p>
+
+<pre><code>
+/package.json
+/browser_modules/modernizr/index.js
+/browser_modules/modernizr/component.json
+</code></pre>
+
+<p>This approach has a number of benefits.</p>
+
+<ul>
+<li>There are no system wide dependencies and no dependencies are shared between different applications</li>
+<li>None of this is JavaScript specific. Packages can contain JavaScript, CSS, images etc</li>
+<li>None of this is specific to a specific module format (e.g AMD/CommonJS). These formats can be used but aren't required</li>
+<li>The dependency tree is flat meaning that we don't ship multiple versions of say, Modernizr to clients</li>
+</ul>
+
+<p>The easiest approach is to use a Bower package statically is to then just reference the package manually from a script tag:</p>
+
+<pre><code>
+&lt;script src="components/jquery/index.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Similar to NPM, our Bower integration also allows users to easily search for and update packages easily. e.g</p>
+
+<p>To search for a package:</p>
+
+<pre><code>
+bower search jquery
+</code></pre>
+
+<p>To update a package, you need to reference it by name:</p>
+
+<pre><code>
+bower update jquery
+</code></pre>
+
+<p>To list installed packages:</p>
+
+<pre><code>
+bower list
+</code></pre>
+
+<p>To search for packages:</p>
+
+<pre><code>
+bower search packageName
+</code></pre>
+
+<p>and so on.</p>
+
+<p>For more information on how to use Yeoman's Bower integration, please see our relevant command docs below:</p>
+
+<ul>
+<li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/install.md">install</a></li>
+<li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/update.md">update</a></li>
+<li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/search.md">search</a></li>
+<li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/list.md">list</a></li>
+<li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/lookup.md">lookup</a></li>
+</ul>
+
+
+<img src="img/yeoman-005.png" class="character"/>
+      </section>
+    </article>
+  </div>
+</body>
+</html>
