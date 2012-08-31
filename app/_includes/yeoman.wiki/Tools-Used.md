@@ -17,7 +17,7 @@
 * [Require.js](http://requirejs.org/)
 * [RequireHM](https://github.com/jrburke/require-hm)
 * [optipng](http://optipng.sourceforge.net/)
-* JPEGTran
+* [JPEGTran](http://jpegclub.org/jpegtran/)
 * [connect](https://npmjs.org/package/connect)
 * [html-minifier](https://npmjs.org/package/html-minifier)
 * [clean-css](https://github.com/GoalSmashers/clean-css)
