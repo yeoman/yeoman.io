@@ -1,25 +1,24 @@
-Yeoman uses:
+## Yeoman uses:
 
-* Grunt
-* Twitter Bower 
-* Twitter Bootstrap
-* Html5 Boilerplate
-* Compass
-* Modernizr
-* Node
-* NPM
-* socket.io
-* CoffeeScript
-* Mocha
-* Jasmine
-* PhantomJS
-* Require.js
-* RequireHM
-
-
-* optipng, jpegtran
-* connect
-* html-minifier
-* clean-css
-* node-build-script
-* compass_bootstrap
+* [Grunt](https://github.com/cowboy/grunt)
+* [Twitter Bower ](http://twitter.github.com/bower)
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap)
+* [Node Build Script](https://github.com/h5bp/node-build-script)
+* [HTML5 Boilerplate](http://html5boilerplate.com)
+* [Compass](http://compass-style.org/)
+* [Modernizr](https://github.com/Modernizr/Modernizr/)
+* [Node](http://nodejs.org)
+* [NPM](http://npmjs.org)
+* [socket.io](http://socket.io)
+* [CoffeeScript](http://coffeescript.org)
+* [Mocha](http://visionmedia.github.com/mocha/)
+* [Jasmine](http://pivotal.github.com/jasmine/)
+* [PhantomJS](http://phantomjs.org/)
+* [Require.js](http://requirejs.org/)
+* [RequireHM](https://github.com/jrburke/require-hm)
+* [optipng](http://optipng.sourceforge.net/)
+* JPEGTran
+* [connect](https://npmjs.org/package/connect)
+* [html-minifier](https://npmjs.org/package/html-minifier)
+* [clean-css](https://github.com/GoalSmashers/clean-css)
+* [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
