@@ -41,9 +41,21 @@
 
 <h2>Installation</h2>
 
-<p>Installing Yeoman in an easy process that should take less than 10 minutes on OSX. We also provide notes on how to install on Linux or opt for a more custom installation, should you need to do this. At present, Yeoman is not supported on Windows (but we're working on it!).</p>
+<p>Installing Yeoman in an easy process that should take less than 10 minutes. The installation script currently supports OSX and Linux operating systems. We also provide notes on how to perform a more custom installation. At present, Yeoman is not supported on Windows (but we're working on it!).</p>
 
-<h2>OSX</h2>
+<h2>OSX & Linux</h2>
+
+<h3>Step 0: Dependencies</h3>
+
+<p>Yeoman has dependencies that are required in order for it to be used to it's full potential, these dependencies vary between OSX and Linux. The installation script will point you to the place where you can resolve these dependencies if they are not already present on your system.</p>
+
+<p>To get ahead of the game, it would be wise to ensure these dependencies are installed before starting the Yeoman installation.</p>
+
+<p>For OSX Homebrew is required, it can be installed using the following command:</p>
+
+<pre><code>
+$ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+</code></pre>
 
 <h3>Step 1: Install me</h3>
 
@@ -53,7 +65,7 @@
 $ curl <a href='https://raw.github.com/yeoman/yeoman/master/setup/install.sh'>https://raw.github.com/yeoman/yeoman/master/setup/install.sh</a> | sh
 </code></pre>
 
-<p>This will immediately install Yeoman and any dependencies it may need such as Node, NPM and Ruby.</p>
+<p>This will immediately install Yeoman using the installation script.</p>
 
 <h3>Step 2: Create a new project</h3>
 
