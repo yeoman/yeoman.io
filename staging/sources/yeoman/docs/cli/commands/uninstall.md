@@ -1,5 +1,5 @@
 
-## uninstall
+## <a href="#uninstall" name="uninstall">uninstall</a>
 
 Usage: yeoman uninstall <packageName>
 

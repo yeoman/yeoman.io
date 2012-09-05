@@ -1,5 +1,5 @@
 
-## help
+## <a href="#help" name="help">help</a>
 
 * `yeoman --help` or `yeoman help`
 

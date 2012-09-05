@@ -1,6 +1,6 @@
 
 
-## update
+## <a href="#update" name="update">update</a>
 
 Usage: `yeoman update <packageName>`
 

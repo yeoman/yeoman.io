@@ -42,7 +42,26 @@
 
 <p>The Yeoman Command-Line Interface (CLI) provides access to most of our features. In this section, you can learn about the various commands supported, about our generator system and many other topics related to creating and building projects with Yeoman.</p>
 
-<h2>help</h2>
+<h2>Commands &amp; Topics</h2>
+
+<ul>
+<li><a href="#help">help</a></li>
+<li><a href="#init">init</a></li>
+<li><a href="#build">build</a></li>
+<li><a href="#server">server</a></li>
+<li><a href="#test">test</a></li>
+<li><a href="#help">help</a></li>
+<li><a href="#generator">generator</a></li>
+<li><a href="#modules">modules</a></li>
+<li><a href="#install">install</a></li>
+<li><a href="#update">update</a></li>
+<li><a href="#search">search</a></li>
+<li><a href="#list">list</a></li>
+<li><a href="#lookup">lookup</a></li>
+<li><a href="#uninstall">uninstall</a></li>
+</ul>
+
+<h2><a href="#help" name="help">help</a></h2>
 
 <ul>
 <li><code>yeoman --help</code> or <code>yeoman help</code></li>
@@ -66,7 +85,7 @@ yeoman lookup    # Look up info on a particular package
 
 <p>Note that commands may also support additional flags and so we recommend consulting the documentation for specific<br />commands for the complete details.</p>
 
-<h2>init</h2>
+<h2><a href="#init" name="init">init</a></h2>
 
 <p>Usage: <code>yeoman init</code>, <code>yeoman init generatorName</code>, <code>yeoman init generatorName:subgenerator</code></p>
 
@@ -186,7 +205,7 @@ Backbone:
   backbone:collection
 </code></pre>
 
-<h2>build</h2>
+<h2><a href="#build" name="build">build</a></h2>
 
 <p>Usage: <code>yeoman build</code>, <code>yeoman build:&lt;target&gt;</code></p>
 
@@ -265,7 +284,7 @@ Backbone:
 
 <p>See the official project <a href="https://github.com/jrburke/r.js">repo</a> for more information on the <br />options supported by r.js.</p>
 
-<h2>server</h2>
+<h2><a href="#server" name="server">server</a></h2>
 
 <p>Usage: <code>yeoman server</code></p>
 
@@ -294,7 +313,7 @@ Backbone:
 
 <p>At present, when initially running <code>yeoman server</code> or <code>yeoman server:app</code>, some users may find that their browser is opened before intermediate files such as Compass and CoffeeScript have completed compiling. Whilst we intend on fixing this issue very soon, in the mean time we recommend refreshing the browser shortly after you first fire up the server (e.g 10 seconds after). You can then easily make any changes you wish to your application and the browser will be automatically reloaded via LiveReload.</p>
 
-<h2>test</h2>
+<h2><a href="#test" name="test">test</a></h2>
 
 <p>Usage: <code>yeoman test</code></p>
 
@@ -319,7 +338,7 @@ Running specs for index.html
 Done, without errors.
 </code></pre>
 
-<h2>install</h2>
+<h2><a href="#install" name="install">install</a></h2>
 
 <p>Usage: <code>yeoman install &lt;packageName&gt;</code>, <code>yeoman install &lt;package1&gt; &lt;package2&gt;</code></p>
 
@@ -369,7 +388,7 @@ bower install ./repos/jquery
 
 <p>For further information, see the section on the package manager.</p>
 
-<h2>list</h2>
+<h2><a href="#list" name="list">list</a></h2>
 
 <p>Usage: <code>yeoman list</code></p>
 
@@ -396,7 +415,7 @@ yeoman list
 
 <p>As you can see, this also includes the version information for each package and its dependencies.</p>
 
-<h2>lookup</h2>
+<h2><a href="#lookup" name="lookup">lookup</a></h2>
 
 <p>Usage: <code>yeoman lookup &lt;packageName&gt;</code></p>
 
@@ -412,7 +431,7 @@ yeoman lookup jquery
 jquery git://github.com/maccman/package-jquery.git
 </code></pre>
 
-<h2>search</h2>
+<h2><a href="#search" name="search">search</a></h2>
 
 <p>Usage: <code>yeoman search &lt;keyword&gt;</code></p>
 
@@ -433,7 +452,7 @@ Search results:
 
 </code></pre>
 
-<h2>update</h2>
+<h2><a href="#update" name="update">update</a></h2>
 
 <p>Usage: <code>yeoman update &lt;packageName&gt;</code></p>
 
@@ -450,7 +469,7 @@ bower checking out jquery#v1.7.2
 
 <p>The <code>update</code> command will also update any other packages in your project relying on this dependency to use<br />this most recent version if any update is applied.</p>
 
-<h2>uninstall</h2>
+<h2><a href="#uninstall" name="uninstall">uninstall</a></h2>
 
 <p>Usage: yeoman uninstall <packageName></p>
 
@@ -477,7 +496,7 @@ yeoman uninstall jquery
 warning backbone depends on jquery
 </code></pre>
 
-<p>This simply means that you should uninstall backbone (the top-level package with the dependency) if you<br />wish to remove all traces of the jquery package.## Generators</p>
+<p>This simply means that you should uninstall backbone (the top-level package with the dependency) if you<br />wish to remove all traces of the jquery package.## <a href="#generators" name="generators">generators</a></p>
 
 <p>Generator templates allow you to scaffold out a project using a custom setup of boilerplates, frameworks and dependencies. The basic application generated when calling <code>yeoman init</code> actually uses a generator itself and they can be quite powerful. </p>
 
@@ -1146,7 +1165,7 @@ this.remote('h5bp', 'html5-boilerplate', 'master', function(err, remote) {
 
 <p><code>warnOn</code> is most likely to be used in constructors.</p>
 
-<h2>EcmaScript 6 Modules And Module Support</h2>
+<h2><a href="#modules" name="modules">EcmaScript 6 Modules And Module Support</a></h2>
 
 <p>Note: This content is subject to change and may be removed prior to launch.</p>
 

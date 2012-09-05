@@ -1,6 +1,6 @@
 
 
-## install
+## <a href="#install" name="install">install</a>
 
 Usage: `yeoman install <packageName>`, `yeoman install <package1> <package2>`
 

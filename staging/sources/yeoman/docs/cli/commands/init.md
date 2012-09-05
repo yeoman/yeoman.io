@@ -1,6 +1,6 @@
 
 
-## init
+## <a href="#init" name="init">init</a>
 
 Usage: `yeoman init`, `yeoman init generatorName`, `yeoman init generatorName:subgenerator`
 
