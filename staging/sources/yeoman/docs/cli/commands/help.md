@@ -1,5 +1,5 @@
 
-## Help
+## help
 
 * `yeoman --help` or `yeoman help`
 

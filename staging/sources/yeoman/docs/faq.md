@@ -4,6 +4,7 @@
 
 Yeoman is a robust and opinionated client-side stack, comprised of tools and frameworks that can help developers quickly build beautiful web applications. The project was initially announced at Google I/O and it's capabilities include:
 
+
 * Lightning-fast scaffolding — Easily scaffold new projects with customizable templates (e.g HTML5 Boilerplate, Twitter Bootstrap), AMD (via RequireJS) and more.
 * Automatically compile CoffeeScript & Compass — Our LiveReload watch process automatically compiles source files and refreshes your browser whenever a change is made so you don't have to.
 * Automatically lint your scripts — All your scripts are automatically run against jshint to ensure they're following language best-practices.

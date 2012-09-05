@@ -11,7 +11,7 @@ Installing Yeoman in an easy process that should take less than 10 minutes on OS
 Open up a terminal and enter in the following:
 
 ```sh
-$ curl https://raw.github.com/yeoman/yeoman/master/setup/install.sh | sh
+$ curl -L get.yeoman.io | sh
 ```
 
 This will immediately install Yeoman and any dependencies it may need such as Node, NPM and Ruby.
