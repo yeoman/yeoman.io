@@ -189,7 +189,7 @@ Backbone:
 
 <p>Constructs an optimized version of your application that's ready to deploy.</p>
 
-<p>Yeoman makes use of <a href="https://github.com/cowboy/grunt">Grunt</a> behind the scenes to tackle much of the hard work for this, with some useful additions that assist with compression, optimization and testing.</p>
+<p>Yeoman makes use of <a href="https://github.com/cowboy/grunt">Grunt</a> behind the scenes to tackle much of the hard work for this, with some useful additions that assist with compression, optimization and testing. </p>
 
 <p>These include:</p>
 
@@ -203,6 +203,8 @@ Backbone:
 <li>Creating an Application Cache manifest via Confess.js</li>
 <li>Using revision filenames or oldernames</li>
 </ul>
+
+<p>Much of the build configuration information for a project is placed inside 'Gruntfile.js', a file which we automatically create when you generate a new project using Yeoman. This file can be fully customized to support which paths you wish to watch, have compiled (should they contain Compass or CoffeeScript files) and so on.</p>
 
 <p>When you run <code>yeoman server</code>, we generate an intermediate build directory called <code>temp</code>, containing compiled versions of your Compass and CoffeeScript files as well as all of the other files needed to preview your application. Running <code>yeoman build</code> creates a <code>dist</code> directory which has completely optimized version of your application that can be deployed to staging.</p>
 
@@ -234,6 +236,32 @@ Backbone:
 <li>usemin: Replaces references to non-minified scripts / stylesheets</li>
 </ul>
 
+<h3>Require.js / r.js configuration</h3>
+
+<p>Yeoman has a special task that automatically handles the optimization of Require.js/AMD<br />projects using the r.js optimizer. Configuration for this optimization (i.e your r.js<br />configuration) should be done within the <code>rjs</code> section of the Gruntfile for a project.</p>
+
+<p>You can either do this at a project level by editing your projects Gruntfile or do this<br />at a generator level if you would rather avoid editing the Gruntfile outside of the default<br />setup each time.</p>
+
+<p>The following is the relevant block to edit within your Gruntfile: </p>
+
+<pre><code>
+    // rjs configuration. You don't necessarily need to specify the typical
+    // `path` configuration, the rjs task will parse these values from your
+    // main module, using <a href='http://requirejs.org/docs/optimization.html#mainConfigFile'>http://requirejs.org/docs/optimization.html#mainConfigFile</a>
+    //
+    // name / out / mainConfig file should be used. You can let it blank if
+    // you're using usemin-handler to parse rjs config from markup (default
+    // setup)
+    rjs: {
+      // no minification, is done by the min task
+      optimize: 'none',
+      baseUrl: './scripts',
+      wrap: true
+   }
+</code></pre>
+
+<p>See the official project <a href="https://github.com/jrburke/r.js">repo</a> for more information on the <br />options supported by r.js.</p>
+
 <h2>server</h2>
 
 <p>Usage: <code>yeoman server</code></p>
@@ -247,6 +275,21 @@ Backbone:
 <p><code>yeoman server</code> generates an intermediate build directory in your project root which (called <code>temp</code>)<br />contains the compiled files mentioned above as well as the basic blocks needed to preview your application.<br />A complete build can be generated using <code>yeoman build</code>.</p>
 
 <p>To quit the server, simply run <code>yeoman quit server</code> and this will kill the Python server<br />process.</p>
+
+<h3>profiles</h3>
+
+<p>The built-in server also supports serving different profiles of your application, such as: <code>app</code>, <code>dist</code>, <code>test</code> and <code>reload</code>.</p>
+
+<ul>
+<li><code>yeoman server</code> and <code>server:app</code> compile to and serve <code>/temp</code>, an intermediate build of your application.</li>
+<li><code>yeoman server:dist</code> serves up the optimized final version of your application. This will just serve up the <code>/dist</code> directory if it exists and you will need to run <code>yeoman build</code> in order to generate the production build of your app.</li>
+<li><code>yeoman server:test</code> serves up the test suite</li>
+<li><code>yeoman server:reload</code> forces the port to be LiveReload standard port: 35729 and prevents the automatic default browser opening. Handy for those wishing to use livereload extensions with other systems / HTTP servers than the one provided by Yeoman out of the box.</li>
+</ul>
+
+<h3>further notes</h3>
+
+<p>At present, when initially running <code>yeoman server</code> or <code>yeoman server:app</code>, some users may find that their browser is opened before intermediate files such as Compass and CoffeeScript have completed compiling. Whilst we intend on fixing this issue very soon, in the mean time we recommend refreshing the browser shortly after you first fire up the server (e.g 10 seconds after). You can then easily make any changes you wish to your application and the browser will be automatically reloaded via LiveReload.</p>
 
 <h2>test</h2>
 
@@ -1098,7 +1141,15 @@ this.remote('h5bp', 'html5-boilerplate', 'master', function(err, remote) {
 
 <h4>remote.template(source, destination, options)</h4>
 
-<p>Same as <code>generator.directory()</code> but relative <code>source</code> is prefixed with the cache<br />directory.</p>
+<p>Same as <code>generator.directory()</code> but relative <code>source</code> is prefixed with the cache directory.</p>
+
+<h4>Prompt user before overwriting files with <code>--force</code></h4>
+
+<p>Generators also support a <code>warnOn</code> method, which allows developers to warn on global paths that are matching those paths or files which the generator is going to generate (e.g <code>self.warnOn('*')</code>. </p>
+
+<p>Where used, Yeoman will warn the user they if they proceed that a file will be overwritten and they may need to call the generator with the <code>--force</code> flag to proceed.</p>
+
+<p><code>warnOn</code> is most likely to be used in constructors.</p>
 
 <h2>EcmaScript 6 Modules And Module Support</h2>
 

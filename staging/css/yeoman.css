@@ -218,6 +218,17 @@ pre{
   width:50%;
 }
 
+.share{
+  padding:0px;
+}
+.quick-links {
+  text-align: center;
+  list-style: none;
+}
+
+.quick-links li{
+  float:left;
+}
 
 @media (min-width: 480px) and (max-width:760px) {
 

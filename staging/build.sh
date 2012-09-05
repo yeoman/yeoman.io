@@ -12,7 +12,7 @@ rm -f "whyyeoman.html"
 #build index
 cat sources/header.html >> index.html
 cat sources/sidebar.html >> index.html
-cat sources/index.md | mdown > index_content.html
+cat sources/index.html >> index_content.html
 cat index_content.html >> index.html
 cat sources/footer.html >> index.html
 rm -f "index_content.html"
@@ -58,7 +58,7 @@ rm -f "faq_content.html"
 cat sources/header.html >> commandline.html
 cat sources/sidebar.html >> commandline.html
 
-cat sources/docsheader.md >> docstemp.md
+cat sources/cliheader.md >> docstemp.md
 cat sources/yeoman/docs/cli/commands/help.md >> docstemp.md
 cat sources/yeoman/docs/cli/commands/init.md >> docstemp.md
 cat sources/yeoman/docs/cli/commands/build.md >> docstemp.md
