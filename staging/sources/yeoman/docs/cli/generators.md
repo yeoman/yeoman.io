@@ -1,22 +1,21 @@
 ## Generators
 
-Generator templates allow you to scaffold out a project using a custom setup of boilerplates, frameworks and dependencies. The basic  application generated when calling `yeoman init` actually uses a generator itself and they can be quite powerful.
+Generator templates allow you to scaffold out a project using a custom setup of boilerplates, frameworks and dependencies. The basic application generated when calling `yeoman init` actually uses a generator itself and they can be quite powerful. 
+
+Some of the generators Yeoman includes out of the box include implementations for Backbone.js, Ember.js and Angular.js. These allow you to not only use complete boilerplates for an application but also scaffold out smaller parts such as Models, Views, Controllers and so on. 
+
 
 ### Getting Started
 
-Note: The guide listed below relies on commands which we are currently still being reintegrated. Specifically, the `generate` command needs to be reinstated to work with our `init` rewrite.
-
-yeoman init generate
+yeoman init generator
 ----------------------
 
 The `yeoman init` command uses templates and prompts to create the files needed for a project.
 
-Running `yeoman init generate` by itself gives a list of available generators:
+Running `yeoman init --help` by itself gives a list of available generators:
 
-You can also use the alias `g` to invoke the generator command: `yeoman init g`
-
-    $ yeoman init generate
-    Usage: yeoman init generate GENERATOR [args] [options]
+    $ yeoman init generator
+    Usage: yeoman init generator GENERATOR [args] [options]
 
     ...
     ...
@@ -30,17 +29,17 @@ You can also use the alias `g` to invoke the generator command: `yeoman init g`
       ...
 
 **Note**: You can install more generators through npm package and you can even create your own.
-
+Yeoman's own generators are available in a dedicated [repository](https://github.com/yeoman/generators).
 Using generators will save you a large amount of time by writing boilerplate code, code that is necessary for the app to work.
 
 Let's make our own controller with the controller generator. But what command should we use?  Let's ask the generator:
 
-**Note**: All generators available have help text. You can try adding --help or
+**Note**: Generators available may have help text. You can try adding --help or
 -h to the end, for example `yeoman generate controller --help`
 
     .. Invoke controller ..
     Usage:
-      yeoman init generate controller NAME one two three [options]
+      yeoman init generator controller NAME one two three [options]
 
     Options:
       -h, --help          # Print generator's options and usage
@@ -52,16 +51,13 @@ The controller generator is expecting parameters in the form of `generate contro
 
 Let's make a `Greeting` controller with an action of `hello`.
 
-    $ yeoman init generate controller Greeting hello
+    $ yeoman init generator controller Greeting hello
 
-What all did this generate? If made sure a bunch of directories where in our application, and created a controller file, a view file and / or template file
-and a test file.
+What did this generate? It made sure a bunch of directories where in our application, and created a controller file, a view file and / or template file and a test file.
 
 Yeoman comes with a generator for data models too.
 
     $ yeoman init generator model
-
-> TODO help output
 
 
 Creating and Customizing Yeoman Generators & Templates
@@ -81,15 +77,15 @@ Creating and Customizing Yeoman Generators & Templates
 
 When you create an application using the `yeoman init` command, you are in fact
 using a Yeoman generator. After that, you can get a list of all available
-generators by just invoking `yeoman init generate`:
+generators by just invoking `yeoman init --help`:
 
     $ yeoman init
     $ cd app
-    $ yeoman init generate
+    $ yeoman init --help
 
 You will get a list of all generators that come with yeoman. If you need a detailed description for a given generator, you can simply do:
 
-    $ yeoman init generate [generator] --help
+    $ yeoman init generator [generator] --help
 
 ### Creating Your First Generator
 
@@ -133,7 +129,7 @@ Finally, we invoke the `write` method that will create a file at the given desti
 Now, we can see that the initializer generator available to use if we output
 the list of available generators in this application:
 
-    $ yeoman init generate
+    $ yeoman init generator
 
     Usage: yeoman generate GENERATOR [args] [options]
     ...
@@ -183,7 +179,7 @@ Now we can see the new description by invoking --help on the new generator. The 
 
 Generators themselves have a generator:
 
-    $ yeoman init generate generator initializer
+    $ yeoman init generator generator initializer
       create  lib/generators/initializer
       create  lib/generators/initializer/index.js
       create  lib/generators/initializer/USAGE
