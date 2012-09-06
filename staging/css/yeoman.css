@@ -32,6 +32,16 @@ hr {
   margin: 0 0 20px 0;
 }
 
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
 h1,
 h2 {
   font-family: 'Ubuntu Mono', serif;
@@ -225,6 +235,8 @@ pre{
 .quick-links {
   text-align: center;
   list-style: none;
+  margin: 50px 0;
+  height: 30px;
 }
 
 .quick-links li{
