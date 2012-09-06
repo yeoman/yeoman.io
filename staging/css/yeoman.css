@@ -37,6 +37,7 @@ h2 {
   font-family: 'Ubuntu Mono', serif;
   font-weight: normal;
   margin: 10px 0 20px 0;
+  text-transform: uppercase;
 }
 
 h1 {
