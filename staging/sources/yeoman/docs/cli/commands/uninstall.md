@@ -12,7 +12,7 @@ yeoman uninstall backbone
 
 # outputs:
 
-bower uninstalling /project/browser_modules/backbone
+bower uninstalling /project/components/backbone
 ```
 
 Note: If you attempt to uninstall a package that is a dependency of other packages, yeoman (via Bower)

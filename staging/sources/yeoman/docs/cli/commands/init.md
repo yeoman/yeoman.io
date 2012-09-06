@@ -106,7 +106,7 @@ To list out all of the generators currently available locally, you can use the `
 yeoman init --help
 ```
 
-This will print out a list of existing generators as follows:
+This will print out a list of existing generators, including some of the below:
 
 ```shell
 Please choose a generator below.

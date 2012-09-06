@@ -4,7 +4,7 @@
 
 Usage: `yeoman update <packageName>`
 
-Updates an already installed package <packageName> to the latest version available in the Bower registry.
+Updates an already installed package `packageName` to the latest version available in the Bower registry.
 
 Example:
 

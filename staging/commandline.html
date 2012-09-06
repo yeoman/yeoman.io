@@ -182,7 +182,7 @@ yeoman init backbone:router routerName
 yeoman init --help
 </code></pre>
 
-<p>This will print out a list of existing generators as follows:</p>
+<p>This will print out a list of existing generators, including some of the below:</p>
 
 <pre><code>
 Please choose a generator below.
@@ -342,9 +342,9 @@ Done, without errors.
 
 <p>Usage: <code>yeoman install &lt;packageName&gt;</code>, <code>yeoman install &lt;package1&gt; &lt;package2&gt;</code></p>
 
-<p>Installs a package <name> and any packages that this depends on using Twitter Bower. A package is a folder containing a resource described by a package.json file or a gzipped tarball containing this information.</p>
+<p>Installs a package and any packages that this depends on using Twitter Bower. A package is a folder containing a resource described by a package.json file or a gzipped tarball containing this information.</p>
 
-<p>Running yeoman install <name> will install the dependencies in your projects browser_modules folder.</p>
+<p>Running yeoman install packageName will install the dependencies in your projects browser_modules folder.</p>
 
 <p>Example:</p>
 
@@ -371,22 +371,6 @@ bower install git://github.com/maccman/package-jquery.git
 bower install <a href='http://code.jquery.com/jquery-1.7.2.js'>http://code.jquery.com/jquery-1.7.2.js</a>
 bower install ./repos/jquery
 </code></pre>
-
-<h2>Available Packages</h2>
-
-<p>Currently available packages:</p>
-
-<ul>
-<li><strong>backbone</strong> <em>git://github.com/paulirish/package-backbone.git</em></li>
-<li><strong>jquery-ui</strong> <em>git://github.com/maccman/package-jquery-ui.git</em></li>
-<li><strong>jquery</strong> <em>git://github.com/maccman/package-jquery.git</em></li>
-<li><strong>knockout</strong> <em>git://github.com/SteveSanderson/knockout.git</em></li>
-<li><strong>modernizr</strong> <em>git://github.com/josh/package-modernizr.git</em></li>
-<li><strong>spine</strong> <em>git://github.com/maccman/spine.git</em></li>
-<li><strong>underscore</strong> <em>git://github.com/paulirish/package-underscore.git</em></li>
-</ul>
-
-<p>For further information, see the section on the package manager.</p>
 
 <h2><a href="#list" name="list">list</a></h2>
 
@@ -456,7 +440,7 @@ Search results:
 
 <p>Usage: <code>yeoman update &lt;packageName&gt;</code></p>
 
-<p>Updates an already installed package <packageName> to the latest version available in the Bower registry.</p>
+<p>Updates an already installed package <code>packageName</code> to the latest version available in the Bower registry.</p>
 
 <p>Example:</p>
 
@@ -482,7 +466,7 @@ yeoman uninstall backbone
 
 # outputs:
 
-bower uninstalling /project/browser_modules/backbone
+bower uninstalling /project/components/backbone
 </code></pre>
 
 <p>Note: If you attempt to uninstall a package that is a dependency of other packages, yeoman (via Bower)<br />will throw an error.</p>
