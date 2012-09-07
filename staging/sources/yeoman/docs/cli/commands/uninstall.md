@@ -1,9 +1,9 @@
 
 ## <a href="#uninstall" name="uninstall">uninstall</a>
 
-Usage: yeoman uninstall <packageName>
+Usage: yeoman uninstall packageName
 
-Removes the package <packageName> from the current project.
+Removes the package `packageName` from the current project.
 
 Example:
 
@@ -27,5 +27,4 @@ yeoman uninstall jquery
 warning backbone depends on jquery
 ```
 
-This simply means that you should uninstall backbone (the top-level package with the dependency) if you
-wish to remove all traces of the jquery package.
+This simply means that you should uninstall backbone (the top-level package with the dependency) if you wish to remove all traces of the jquery package.

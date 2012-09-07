@@ -83,15 +83,15 @@ yeoman search    # Query the registry for matching package names
 yeoman lookup    # Look up info on a particular package
 </code></pre>
 
-<p>Note that commands may also support additional flags and so we recommend consulting the documentation for specific<br />commands for the complete details.</p>
+<p>Note that commands may also support additional flags and so we recommend consulting the documentation for specific commands for the complete details.</p>
 
 <h2><a href="#init" name="init">init</a></h2>
 
 <p>Usage: <code>yeoman init</code>, <code>yeoman init generatorName</code>, <code>yeoman init generatorName:subgenerator</code></p>
 
-<p>Helps you kick-start a new web application by asking a number of questions about what you would like to include.<br />These answers are used to scaffold out a file structure for your project.</p>
+<p>Helps you kick-start a new web application by asking a number of questions about what you would like to include. These answers are used to scaffold out a file structure for your project.</p>
 
-<p>The init template is based on:</p>
+<p>The default <code>init</code> template is based on:</p>
 
 <ul>
 <li>HTML5 Boilerplate for the main base</li>
@@ -101,9 +101,9 @@ yeoman lookup    # Look up info on a particular package
 <li>RequrieHM for experimental EcmaScript 6 module syntax support on top of RequireJS (optional)</li>
 </ul>
 
-<p>By default we support Compass and CoffeeScript, so if your project includes any .coffee files, these will be<br />compiled when either <code>server</code> or <code>build</code> tasks are being run.</p>
+<p>By default we support Compass and CoffeeScript, so if your project includes any .coffee files, these will be compiled when either <code>server</code> or <code>build</code> tasks are being run.</p>
 
-<p>If everything has been installed successfully, running <code>yeoman init</code> will present you with a welcome<br />screen to kick off your project that looks a little like this:</p>
+<p>If everything has been installed successfully, running <code>yeoman init</code> will present you with a welcome screen to kick off your project that looks a little like this:</p>
 
 <pre><code>
         _   .--------------------------.
@@ -114,6 +114,7 @@ yeoman lookup    # Look up info on a particular package
     o/ --- \
       _\ /_
 
+Out of the box I include HTML5 Boilerplate, jQuery and Modernizr.
 
 .. Invoke app ..
 
@@ -131,19 +132,19 @@ yeoman init angular  #angularjs seed
 yeoman init ember    #ember app based on ember-rails
 </code></pre>
 
-<p>Yeoman comes with a powerful system of Generators for scaffolding out applications using any number<br />of boilerplates, frameworks and dependencies. Generators can be called in a project which has already<br />been initialized with a basic Yeoman application structure OR may contain all of the files needed for the<br />application structure themselves. By default, one can call a generator as follows:</p>
+<p>Yeoman comes with a powerful system of Generators for scaffolding out applications using any number of boilerplates, frameworks and dependencies. Generators can be called in a project which has already been initialized with a basic Yeoman application structure OR may contain all of the files needed for the application structure themselves. By default, one can call a generator as follows:</p>
 
 <pre><code>
-yeoman init generatorName:subgenerator #e.g init angular:all
+yeoman init generatorName #e.g yeoman init angular
 </code></pre>
 
-<p>In the case of a Generator named "angular", a grouping sub-generator called <code>all</code> may exist for scaffolding<br />out all of the files needed for a new AngularJS application. One would use this as follows:</p>
+<p>In the case of a Generator named "angular", a grouping sub-generator called <code>all</code> may exist for scaffolding out all of the files needed for a new AngularJS application. One would use this as follows:</p>
 
 <pre><code>
 yeoman init angular:all
 </code></pre>
 
-<p>The idea here is that the Generator would pull in AngularJS, its common dependencies and write out the<br />boilerplate needed for a basic Controller and any other components the framework may require.</p>
+<p>The idea here is that the Generator would pull in AngularJS, its common dependencies and write out the boilerplate needed for a basic Controller and any other components the framework may require.</p>
 
 <p>As we understand that it's unlikely a user will wish to manually type out the ":all" part of each generator, we support a catch-"all". If a generator has a sub-generator (grouper) called "all" we will attempt to call "all" when you try running the top-level generator. This allows a user to simply call:</p>
 
@@ -153,7 +154,7 @@ yeoman init angular
 
 <p>and has it defer to <code>angular:all</code> automatically.</p>
 
-<p>If one then wishes to create further AngularJS controllers, one can simply call the 'controller' sub-generator as<br />follows:</p>
+<p>If one then wishes to create further AngularJS controllers, one can simply call the 'controller' sub-generator as follows:</p>
 
 <pre><code>
 yeoman init angularjs:controller controllerName
@@ -167,7 +168,7 @@ yeoman init angularjs:controller controllerName
 yeoman init backbone
 </code></pre>
 
-<p>where the above would result in boilerplate for models, views, collections and a router being written to<br />the current application directory, as well as Backbone.js and its dependencies being pulled in. One could<br />then call the different sub-generators for the Generator as follows:</p>
+<p>where the above would result in boilerplate for models, views, collections and a router being written to the current application directory, as well as Backbone.js and its dependencies being pulled in. One could then call the different sub-generators for the Generator as follows:</p>
 
 <pre><code>
 yeoman init backbone:model modelName
@@ -288,13 +289,13 @@ Backbone:
 
 <p>Usage: <code>yeoman server</code></p>
 
-<p>Launches a preview server on port 3051 that allows you to access a running version of your application<br />locally.</p>
+<p>Launches a preview server on port 3051 that allows you to access a running version of your application locally.</p>
 
 <p>It also automatically fires up the <code>yeoman watch</code> process, so changes to any of the applications<br />files cause the browser to refresh via <a href="http://livereload.com">LiveReload</a>. Should you not have<br />LiveReload installed locally, a fallback reload process will be used instead.</p>
 
 <p>Any changes to CoffeeScript or Compass files result in them being recompiled, meaning that<br />no manual intervention is required to write and preview code in the format you feel most<br />comfortable with.</p>
 
-<p><code>yeoman server</code> generates an intermediate build directory in your project root which (called <code>temp</code>)<br />contains the compiled files mentioned above as well as the basic blocks needed to preview your application.<br />A complete build can be generated using <code>yeoman build</code>.</p>
+<p><code>yeoman server</code> generates an intermediate build directory in your project root which (called <code>temp</code>) contains the compiled files mentioned above as well as the basic blocks needed to preview your application. A complete build can be generated using <code>yeoman build</code>.</p>
 
 <p>To quit the server, simply run <code>yeoman quit server</code> and this will kill the Python server<br />process.</p>
 
@@ -403,7 +404,7 @@ yeoman list
 
 <p>Usage: <code>yeoman lookup &lt;packageName&gt;</code></p>
 
-<p>Performs a lookup in the Bower registry for a package of a specific name. One would use this to confirm<br />that a package exists under a specific name (e.g <code>jquery</code>), othewise <code>search</code> should be used for broader queries.</p>
+<p>Performs a lookup in the Bower registry for a package of a specific name. One would use this to confirm that a package exists under a specific name (e.g <code>jquery</code>), othewise <code>search</code> should be used for broader queries.</p>
 
 <p>Example:</p>
 
@@ -451,13 +452,13 @@ yeoman update jquery
 bower checking out jquery#v1.7.2
 </code></pre>
 
-<p>The <code>update</code> command will also update any other packages in your project relying on this dependency to use<br />this most recent version if any update is applied.</p>
+<p>The <code>update</code> command will also update any other packages in your project relying on this dependency to use this most recent version if any update is applied.</p>
 
 <h2><a href="#uninstall" name="uninstall">uninstall</a></h2>
 
-<p>Usage: yeoman uninstall <packageName></p>
+<p>Usage: yeoman uninstall packageName</p>
 
-<p>Removes the package <packageName> from the current project.</p>
+<p>Removes the package <code>packageName</code> from the current project.</p>
 
 <p>Example:</p>
 
@@ -480,7 +481,7 @@ yeoman uninstall jquery
 warning backbone depends on jquery
 </code></pre>
 
-<p>This simply means that you should uninstall backbone (the top-level package with the dependency) if you<br />wish to remove all traces of the jquery package.## <a href="#generators" name="generators">generators</a></p>
+<p>This simply means that you should uninstall backbone (the top-level package with the dependency) if you wish to remove all traces of the jquery package.## <a href="#generators" name="generators">generators</a></p>
 
 <p>Generator templates allow you to scaffold out a project using a custom setup of boilerplates, frameworks and dependencies. The basic application generated when calling <code>yeoman init</code> actually uses a generator itself and they can be quite powerful. </p>
 
@@ -509,7 +510,9 @@ Yeoman:
   ...
 </code></pre>
 
-<p><strong>Note</strong>: You can install more generators through npm package and you can even create your own.<br />Yeoman's own generators are available in a dedicated <a href="https://github.com/yeoman/generators">repository</a>.<br />Using generators will save you a large amount of time by writing boilerplate code, code that is necessary for the app to work.</p>
+<p><strong>Note</strong>: You can install more generators through npm package and you can even create your own.<br />Yeoman's own generators are available in a dedicated <a href="https://github.com/yeoman/generators">repository</a>.</p>
+
+<p>Using generators will save you a large amount of time by writing boilerplate code, code that is necessary for the app to work.</p>
 
 <p>Let's make our own controller with the controller generator. But what command should we use?  Let's ask the generator:</p>
 
@@ -588,9 +591,11 @@ Generator.prototype.createInitializerFile = function() {
 };
 </code></pre>
 
-<p><code>write</code> is a method provided by <code>yeoman.generators.Base</code>, and is a basic facade to the <code>grunt.file</code> API. When we "write" things, this happen relative to the<br />working directory (that is the Gruntfile location, the Gruntfile is resolved internally, walking up the FS until one is found. This is most likely the root<br />of the yeoman application).</p>
+<p><code>write</code> is a method provided by <code>yeoman.generators.Base</code>, and is a basic facade to the <code>grunt.file</code> API. When we "write" things, this happen relative to the working directory (that is the Gruntfile location, the Gruntfile is resolved internally, walking up the FS until one is found. This is most likely the root<br />of the yeoman application).</p>
 
-<p>Our new generator is quite simple: it inherits from <code>yeoman.generators.Base</code> and has one method definition. Each "public" method in the generator is<br />executed when a generator is invoked (first level method in the prototype chain, eg.  <code>Base</code> class method are not called). There are two exceptions,<br />generators won't run:</p>
+<p>Our new generator is quite simple: it inherits from <code>yeoman.generators.Base</code> and has one method definition. Each "public" method in the generator is executed when a generator is invoked (first level method in the prototype chain, eg.  <code>Base</code> class method are not called). </p>
+
+<p>There are two exceptions, generators won't run:</p>
 
 <ul>
 <li>any method begining with the <code>_</code> prefix.</li>
@@ -630,7 +635,7 @@ Description:
     Create files for initializer generator.
 </code></pre>
 
-<p>Yeoman is usually able to generate good descriptions, but not in this particular<br />case. We can solve this problem in two ways. The first one is calling desc<br />inside our generator:</p>
+<p>Yeoman is usually able to generate good descriptions, but not in this particular case. We can solve this problem in two ways. The first one is calling desc inside our generator:</p>
 
 <pre><code>var util = require('util'),
     yeoman = require('../../../');
@@ -679,7 +684,7 @@ function Generator() {
 util.inherits(Generator, yeoman.generatos.NamedBase);
 </code></pre>
 
-<p>First, notice that we are inheriting from <code>yeoman.Generators.NamedBase</code> instead<br />of <code>yeoman.Generators.Base</code>. This means that our generator expects at least one<br />argument, which will be the name of the initializer, and will be available in<br />our code in the variable <code>name</code>.</p>
+<p>First, notice that we are inheriting from <code>yeoman.Generators.NamedBase</code> instead of <code>yeoman.Generators.Base</code>. This means that our generator expects at least one argument, which will be the name of the initializer, and will be available in our code in the variable <code>name</code>.</p>
 
 <p>We can see that by invoking the description of this new generator:</p>
 
@@ -689,11 +694,11 @@ Usage:
   yeoman init initializer NAME [options]
 </code></pre>
 
-<p><strong>Note</strong>: The banner is not automatically generated yet for generators (the Usage: thing above). Same for options and arguments defined by the generator,<br />they should show up during the help output. Right now, the USAGE file is dumped<br />to the console as is.</p>
+<p><strong>Note</strong>: The banner is not automatically generated yet for generators (the Usage: thing above). Same for options and arguments defined by the generator, they should show up during the help output. Right now, the USAGE file is dumped to the console as is.</p>
 
 <p>We can also see that our new generator has an instance method called <code>sourceRoot</code>.</p>
 
-<p>This method points to where our generator templates will be placed, if any, and<br />by default it points to the created directory<br /><code>lib/generators/initializer/templates</code> (so the <code>sourceRoot(__dirname,<br />'templates')</code> can be removed, this is the default).</p>
+<p>This method points to where our generator templates will be placed, if any, and by default it points to the created directory <code>lib/generators/initializer/templates</code> (so the <code>sourceRoot(__dirname, 'templates')</code> can be removed, this is the default).</p>
 
 <p>In order to understand what a generator template means, let’s create the file<br />lib/generators/initializer/templates/initializer.js with the following content:</p>
 
@@ -770,9 +775,9 @@ directory.</li>
 
 <p>Looking at this output, it’s easy to understand how generators work in yeoman.</p>
 
-<p>Generator relies on hook and other generators, some don't actually generate<br />anything, they just invokes others to do the work.</p>
+<p>Generator relies on hook and other generators, some don't actually generate anything, they just invokes others to do the work.</p>
 
-<p>This allows us to add/replace/remove any of those invocations. For instance,<br />the <code>controller</code> generator invokes the <code>view</code> and <code>test-framework</code> hooks. These<br />hooks tries to resolve their value from cli options first, then look at the<br />Gruntfile for a generator property with the corresponding hook name, and<br />finally defaults to the hook name if none were found.</p>
+<p>This allows us to add/replace/remove any of those invocations. For instance, the <code>controller</code> generator invokes the <code>view</code> and <code>test-framework</code> hooks. These hooks tries to resolve their value from cli options first, then look at the Gruntfile for a generator property with the corresponding hook name, and finally defaults to the hook name if none were found.</p>
 
 <p>Since each generator has a single responsibility, they are easy to reuse,<br />avoiding code duplication.</p>
 
@@ -780,11 +785,11 @@ directory.</li>
 
 <h3>Customizing Your Workflow by Changing Generators Templates</h3>
 
-<p>In the step above we simply wanted to add a line to the generated helper,<br />without adding any extra functionality. There is a simpler way to do that, and<br />it’s by replacing the templates of already existing generators, in that case<br /><code>yeoman.generators.HelperGenerator</code>.</p>
+<p>In the step above we simply wanted to add a line to the generated helper, without adding any extra functionality. There is a simpler way to do that, and it’s by replacing the templates of already existing generators, in that case <code>yeoman.generators.HelperGenerator</code>.</p>
 
-<p>Generators don’t just look in the source root for templates, they also search<br />for templates in other paths. And one of them is lib/templates. Since we want<br />to customize <code>yeoman.generators.HelperGenerator</code>, we can do that by simply<br />making a template copy inside lib/templates/yeoman/helper with the name<br />helper.js.</p>
+<p>Generators don’t just look in the source root for templates, they also search for templates in other paths. And one of them is lib/templates. Since we want to customize <code>yeoman.generators.HelperGenerator</code>, we can do that by simply making a template copy inside lib/templates/yeoman/helper with the name helper.js.</p>
 
-<p>If you generate another resource, you can see that we get exactly the same<br />result! This is useful if you want to customize your scaffold templates and/or<br />layout by just creating edit.html.erb, index.html.erb and so on inside<br />lib/templates/erb/scaffold.</p>
+<p>If you generate another resource, you can see that we get exactly the same result! This is useful if you want to customize your scaffold templates and/or layout by just creating edit.html.erb, index.html.erb and so on inside lib/templates/erb/scaffold.</p>
 
 <h3>More On Generators</h3>
 
@@ -809,7 +814,7 @@ Generator.prototype.createSomething = function() {
 // ... other methods ...
 </code></pre>
 
-<p>Generators can also be written in CofeeScript, they just needs to be named with<br />a <code>.coffee</code> extension (typically <code>lib/generators/generatorName/index.coffee</code>)</p>
+<p>Generators can also be written in CofeeScript, they just needs to be named with a <code>.coffee</code> extension (typically <code>lib/generators/generatorName/index.coffee</code>)</p>
 
 <pre><code>
 yeoman = require 'yeoman'
@@ -835,9 +840,9 @@ module.exports = class Generator extends yeoman.generators.NamedBase
         └── templates
 </code></pre>
 
-<p>Generators extends either <code>yeoman.generators.Base</code> or<br /><code>yeoman.generators.NamedBase</code>. <code>NamedBase</code> is suitable to use for genetors that<br />expects a "name" argument, such as <code>yeoman init model [NAME]</code>.</p>
+<p>Generators extends either <code>yeoman.generators.Base</code> or <code>yeoman.generators.NamedBase</code>. <code>NamedBase</code> is suitable to use for genetors that expects a "name" argument, such as <code>yeoman init model [NAME]</code>.</p>
 
-<p>Every public method in a generator are executed serially. Every first level<br />method in the prototype chain, eg. inherited method in <code>Base</code> are not.</p>
+<p>Every public method in a generator are executed serially. Every first level method in the prototype chain, eg. inherited method in <code>Base</code> are not.</p>
 
 <p>Two exceptions:</p>
 
@@ -847,19 +852,19 @@ helper. They won't be called automatically on generator invokation.</li>
 <li>a <code>constructor</code> method, most likely when using CoffeeScript to implement the generator</li>
 </ul>
 
-<p>Either <code>Name</code> or <code>BasedName</code> are EventEmitters, you may use the EventEmitter<br />API if you wish to (emit / on / once / ...)</p>
+<p>Either <code>Name</code> or <code>BasedName</code> are EventEmitters, you may use the EventEmitter API if you wish to (emit / on / once / ...)</p>
 
 <h2>grunt.file</h2>
 
-<p>Generators get mixed into their prototype the<br /><a href="https://github.com/cowboy/grunt/blob/master/docs/api_file.md#the-file-api">grunt.file</a><br />API. You can use read, readJSON, write, copy, mkdir, expandFiles, etc.</p>
+<p>Generators get mixed into their prototype the <a href="https://github.com/cowboy/grunt/blob/master/docs/api_file.md#the-file-api">grunt.file</a> API. You can use read, readJSON, write, copy, mkdir, expandFiles, etc.</p>
 
-<p>Note that some of them have special additional logic attached, for <code>copy</code>,<br /><code>read</code> and <code>write</code>.</p>
+<p>Note that some of them have special additional logic attached, for <code>copy</code>, <code>read</code> and <code>write</code>.</p>
 
-<p><code>copy</code> and <code>read</code> make sure to prefix the source filename to be within the<br />generator's source root (usually a <code>templates/</code> folder next to the generator<br />implementation).</p>
+<p><code>copy</code> and <code>read</code> make sure to prefix the source filename to be within the generator's source root (usually a <code>templates/</code> folder next to the generator implementation).</p>
 
 <h2>grunt.log</h2>
 
-<p>In addition to the grunt.file API directly available into your generators, you<br />can use the<br /><a href="https://github.com/cowboy/grunt/blob/master/docs/api_log.md#the-log-api">grunt.log</a> API as <code>this.log</code></p>
+<p>In addition to the grunt.file API directly available into your generators, you<br />can use the <a href="https://github.com/cowboy/grunt/blob/master/docs/api_log.md#the-log-api">grunt.log</a> API as <code>this.log</code></p>
 
 <pre><code>
 Generator.prototype.doingSomething = function() {
@@ -870,11 +875,11 @@ Generator.prototype.doingSomething = function() {
 
 <h2>sync vs async</h2>
 
-<p>Methods are expected to run synchronously by default. This is fine for most<br />cases, and will be just what you need for most common operations. Every file<br />system method (copy, write, read, etc.) available are borrowed to grunt's,<br />where most of them are implemented synchronously for conveniency.</p>
+<p>Methods are expected to run synchronously by default. This is fine for most cases, and will be just what you need for most common operations. Every file system method (copy, write, read, etc.) available are borrowed to grunt's, where most of them are implemented synchronously for conveniency.</p>
 
-<p>If you wish to run your method in an asynchronous way, you should tell the<br />system to do so. Very similarly to how you would handle async stuff in grunt<br />tasks.</p>
+<p>If you wish to run your method in an asynchronous way, you should tell the system to do so. Very similarly to how you would handle async stuff in grunt tasks.</p>
 
-<p>If a method is asynchronous, <code>this.async</code> must be invoked to tell the system to<br />wait. It returns a handle to a "done" function that should be called when the<br />method has completed. Every non-falsy value (most likely an Error object) can<br />be passed to the done function as a first argument to indicate a failure.</p>
+<p>If a method is asynchronous, <code>this.async</code> must be invoked to tell the system to wait. It returns a handle to a "done" function that should be called when the method has completed. Every non-falsy value (most likely an Error object) can be passed to the done function as a first argument to indicate a failure.</p>
 
 <p>It this method isn't invoked, the method executes synchronously.</p>
 
@@ -882,7 +887,7 @@ Generator.prototype.doingSomething = function() {
 
 <p>The following are methods available for generators.</p>
 
-<p>NOTE: Methods provided by Grunt are not covered this guide and can be found in<br />"Grunt's<br />documentation":<a href='https://github.com/cowboy/grunt/blob/master/docs/api_file.md#the-file-api'>https://github.com/cowboy/grunt/blob/master/docs/api_file.md#the-file-api</a></p>
+<p>NOTE: Methods provided by Grunt are not covered this guide and can be found in<br />"Grunt's documentation":<a href='https://github.com/cowboy/grunt/blob/master/docs/api_file.md#the-file-api'>https://github.com/cowboy/grunt/blob/master/docs/api_file.md#the-file-api</a></p>
 
 <p><strong>TBD</strong></p>
 
@@ -898,7 +903,7 @@ Generator.prototype.doingSomething = function() {
 
 <p>Adds an argument to the class and creates an instance property for it.</p>
 
-<p>Arguments are different from options in several aspects. The first one<br />is how they are parsed from the command line, arguments are retrieved<br />from position:</p>
+<p>Arguments are different from options in several aspects. The first one is how they are parsed from the command line, arguments are retrieved from position:</p>
 
 <pre><code>yeoman init NAME
 </code></pre>
@@ -908,7 +913,7 @@ Generator.prototype.doingSomething = function() {
 <pre><code>yeoman init --name NAME
 </code></pre>
 
-<p>Besides, arguments are used inside your code as a property (this.argument),<br />while options are all kept in a hash (this.options).</p>
+<p>Besides, arguments are used inside your code as a property (this.argument), while options are all kept in a hash (this.options).</p>
 
 <p>Options:</p>
 
@@ -929,17 +934,17 @@ Generator.prototype.doingSomething = function() {
 
 <ul>
 <li>name       - The name of the argument</li>
-<li>options    - Hash of configuration values where:
-<ul><li>desc     - Description for the argument.</li>
+<li>options    - Hash of configuration values where:</li>
+<li>desc     - Description for the argument.</li>
 <li>type     - Type for this argument, either Boolean, String or Number.</li>
 <li>defaults - Default value for this argument.</li>
 <li>banner   - String to show on usage notes.</li>
-<li>hide     - If you want to hide this option from the help.</li></ul></li>
+<li>hide     - If you want to hide this option from the help.</li>
 </ul>
 
 <h3>generator.sourceRoot([path])</h3>
 
-<p>Stores and return the source root for this class. This is used with <code>copy()</code>,<br /><code>template()</code>, <code>read()</code>, etc. to prefix the relative path.</p>
+<p>Stores and return the source root for this class. This is used with <code>copy()</code>, <code>template()</code>, <code>read()</code>, etc. to prefix the relative path.</p>
 
 <p>By default, takes the value of <code>templates/</code> next to the generator file.</p>
 
@@ -953,7 +958,7 @@ Generator.prototype.doingSomething = function() {
 
 <p>Must be called within the constructor only.</p>
 
-<p>Register a hook to invoke a generator based on the value supplied by the user<br />to the given option named "name". An option is created when this method is<br />invoked and you can set a hash to customize it.</p>
+<p>Register a hook to invoke a generator based on the value supplied by the user to the given option named "name". An option is created when this method is invoked and you can set a hash to customize it.</p>
 
 <pre><code>
 function MyGenerator(args, options, config) {
@@ -963,7 +968,7 @@ function MyGenerator(args, options, config) {
 }
 </code></pre>
 
-<p>Hooks work in a way that you can delegate the groundwork of scaffolding to<br />other generators. They're totally inspired by Rails 3 generators <a href="http://apidock.com/rails/Rails/Generators/Base/hook_for/class"><code>hook_for</code><br />method</a>.</p>
+<p>Hooks work in a way that you can delegate the groundwork of scaffolding to other generators. They're totally inspired by Rails 3 generators <a href="http://apidock.com/rails/Rails/Generators/Base/hook_for/class"><code>hook_for</code> method</a>.</p>
 
 <p>The example above will create a js framework option and will invoke a<br />generator based on the user supplied value.</p>
 
@@ -987,11 +992,11 @@ generators: {
 // ... more grunt config ...
 </code></pre>
 
-<p>This is what allows any js framework to hook into Yeoman as long as it provides<br />any of the hooks above.</p>
+<p>This is what allows any js framework to hook into Yeoman as long as it provides any of the hooks above.</p>
 
 <h4>Options</h4>
 
-<p>The first and last part used to find the generator to be invoked are guessed<br />based on constructor's <code>hookFor</code> invokes, as noticed in the example above. This<br />can be customized with the following options:</p>
+<p>The first and last part used to find the generator to be invoked are guessed based on constructor's <code>hookFor</code> invokes, as noticed in the example above. This can be customized with the following options:</p>
 
 <ul>
 <li><code>as</code>      - the context to lookup, defaults to generator's name.</li>
@@ -1000,7 +1005,7 @@ generators: {
 <li><code>config</code>  - Grunt config to pass through, defaults to generator's config.</li>
 </ul>
 
-<p>Let’s suppose you are creating a generator that needs to invoke the controller<br />generator from a unit test. Your first attempt is:</p>
+<p>Let’s suppose you are creating a generator that needs to invoke the controller generator from a unit test. Your first attempt is:</p>
 
 <pre><code>
 // in lib/generators/awesome/index.js generator's constructor.
@@ -1032,7 +1037,7 @@ this.hookFor('test-framework', { as: 'controller' });
   <p>Copy a source file to a destination path, creating intermediate directories if necessary.</p>
 </blockquote>
 
-<p>Grunt's<br /><a href="https://github.com/cowboy/grunt/blob/master/docs/api_file.md#grunt-file-copy"><code>grunt.file.copy</code></a><br />is used, we simply make sure that relative path are prefixed by the generator's<br />sourceRoot value.</p>
+<p>Grunt's<a href="https://github.com/cowboy/grunt/blob/master/docs/api_file.md#grunt-file-copy"><code>grunt.file.copy</code></a> is used, we simply make sure that relative path are prefixed by the generator's <code>sourceRoot</code> value.</p>
 
 <pre><code>
 // similar to
@@ -1061,15 +1066,15 @@ grunt.option('verbose', false);
 
 <h3>generator.template(source, [destination], [data])</h3>
 
-<p>Gets an underscore template at the relative source, executes it and makes a<br />copy at the relative destination. If the destination is not given it's assumed<br />to be equal to the source relative to destination.</p>
+<p>Gets an underscore template at the relative source, executes it and makes a copy at the relative destination. If the destination is not given it's assumed to be equal to the source relative to destination.</p>
 
 <pre><code>
 this.template('Gruntfile.js');
 </code></pre>
 
-<p>will copy and process the <code>templates/Gruntfile.js</code> file through<br /><code>grunt.template.process</code>, and write the results to <code>./Gruntfile.js</code> relative<br />the the application root.</p>
+<p>will copy and process the <code>templates/Gruntfile.js</code> file through <code>grunt.template.process</code>, and write the results to <code>./Gruntfile.js</code> relative the the application root.</p>
 
-<p>Another example is using a <code>templates/model.js</code> template to write at the<br /><code>app/js/models/{name}-model.js</code> location in a <code>NamedBase</code> generator.</p>
+<p>Another example is using a <code>templates/model.js</code> template to write at the <code>app/js/models/{name}-model.js</code> location in a <code>NamedBase</code> generator.</p>
 
 <pre><code>
 this.template('model.js', path.join('app/js/models', this.name + '-model.js'));
@@ -1077,7 +1082,7 @@ this.template('model.js', path.join('app/js/models', this.name + '-model.js'));
 
 <h3>generator.directory(source, [destination])</h3>
 
-<p>Copies recursively the files from source directory to destination root<br />directory. If the destination is not given it's assumed<br />to be equal to the source relative to destination.</p>
+<p>Copies recursively the files from source directory to destination root directory. If the destination is not given it's assumed to be equal to the source relative to destination.</p>
 
 <p>Each file is copied and processed through <code>grunt.template.process</code>.</p>
 

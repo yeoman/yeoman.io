@@ -15,5 +15,4 @@ yeoman update jquery
 bower checking out jquery#v1.7.2
 ```
 
-The `update` command will also update any other packages in your project relying on this dependency to use
-this most recent version if any update is applied.
+The `update` command will also update any other packages in your project relying on this dependency to use this most recent version if any update is applied.
