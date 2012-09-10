@@ -16,7 +16,6 @@ yeoman update    # Update a package to the latest version
 yeoman list      # List the packages currently installed
 yeoman search    # Query the registry for matching package names
 yeoman lookup    # Look up info on a particular package
-
 ```
 
 A common initial workflow with Yeoman might be:
@@ -24,7 +23,7 @@ A common initial workflow with Yeoman might be:
 ```shell
 yeoman init      # Invoke the most basic application scaffold (Bootstrap, Boilerplate etc.)
 yeoman build     # Build your project, creating an optimized version in a new `dist` directory
-yeoman server    # Fire off a file watch/server process which also places an 
+yeoman server    # Fire off a file watch/server process which also places an
                  # intermediate build of your project in `temp`
 ```
 
@@ -52,4 +51,4 @@ yeoman update jquery                       # Update a specific dependency (e.g j
 
 
 
-<img src="img/yeoman-007.png" class="character"/>
+<img src="/assets/img/yeoman-007.png" class="character"/>

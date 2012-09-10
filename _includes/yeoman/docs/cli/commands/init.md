@@ -18,23 +18,20 @@ By default we support Compass and CoffeeScript, so if your project includes any 
 
 If everything has been installed successfully, running `yeoman init` will present you with a welcome screen to kick off your project that looks a little like this:
 
-```shell
+            _   .--------------------------.
+          _|o|_ |    Welcome to Yeoman,    |
+           |_|  |   ladies and gentlemen!  |
+         / \Y/ \ o_________________________|
+        ||  :  |//
+        o/ --- \
+          _\ /_
 
-        _   .--------------------------.
-      _|o|_ |    Welcome to Yeoman,    |
-       |_|  |   ladies and gentlemen!  |
-     / \Y/ \ o_________________________|
-    ||  :  |//
-    o/ --- \
-      _\ /_
+    Out of the box I include HTML5 Boilerplate, jQuery and Modernizr.
 
-Out of the box I include HTML5 Boilerplate, jQuery and Modernizr.
+    .. Invoke app ..
 
-.. Invoke app ..
-
-Please answer the following:
-[?] Would you like to include Twitter Bootstrap for Compass? (Y/n)
-```
+    Please answer the following:
+    [?] Would you like to include Twitter Bootstrap for Compass? (Y/n)
 
 ### custom generators
 
