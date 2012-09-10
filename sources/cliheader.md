@@ -11,7 +11,7 @@ The Yeoman Command-Line Interface (CLI) provides access to most of our features.
 * [server](#server)
 * [test](#test)
 * [help](#help)
-* [generator](#generator)
+* [generator](#generators)
 * [modules](#modules)
 * [install](#install)
 * [update](#update)
