@@ -4,17 +4,7 @@
 rm -f "docs.html"
 rm -f "gettingstarted.html"
 rm -f "faq.html"
-rm -f "packagemanager.html"
 rm -f "commandline.html"
-
-#packagemanager
-cat sources/header.html >> packagemanager.html
-cat sources/sidebar.html >> packagemanager.html
-cat sources/yeoman/docs/cli/package_manager.md | mdown > pm_content.html
-cat pm_content.html >> packagemanager.html
-cat sources/pmfooter.md >> packagemanager.html
-cat sources/footer.html >> packagemanager.html
-rm -f "pm_content.html"
 
 #gettingstarted
 cat sources/header.html >> gettingstarted.html
