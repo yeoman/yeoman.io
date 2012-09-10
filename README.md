@@ -1,36 +1,32 @@
 
 # Yeoman.io
 
-Home to the Yeoman.io site.
+Made with [Jekyll](https://github.com/mojombo/jekyll/), is a static generator in Ruby.
 
-## Building the docs site
+## Getting started
 
-For the first version of our site, we've opted for a very simple compilation
-setup that uses a bash script for file concatenation. 
+The best way to install Jekyll is via RubyGems:
 
-You can build the site using [mdown](https://github.com/millermedeiros/gh-markdown-cli)
-the build.sh file found in the root directory.
+  gem install jekyll
 
-First install mdown:
+Once Jekyll is installed, you just need to clone the project:
 
-```
-sudo npm install gh-markdown-cli -g
-```
+  git clone git@github.com:zenorocha/yeoman.io.git
 
-Then:
+Then go to the project's folder:
 
-```
-bash ./build.sh
-```
+  cd yeoman.io
 
-## Notes
+And run:
 
-At present, we manually include the Yeoman docs folder we use for compilation. This will
-be changed once the project is public and we can simple submodule the directory from the
-main Yeoman repository.
+  jekyll --server
 
-## Future
+Now you can see the website running in `localhost:4000` :D
 
-We intend on switching over to using Jekyll or Octopress for future versions of the
-site. If you would be interested in helping us with this effort, please feel free to
-open up a new issue or submit a PR to get things started.
+## Build
+
+To generate the files, just run:
+
+  jekyll
+
+It will create a folder called `_site`. Upload it's content to your server.
