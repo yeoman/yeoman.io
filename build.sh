@@ -6,15 +6,6 @@ rm -f "gettingstarted.html"
 rm -f "faq.html"
 rm -f "packagemanager.html"
 rm -f "commandline.html"
-rm -f "whyyeoman.html"
-
-#whyyeoman
-cat sources/header.html >> whyyeoman.html
-cat sources/sidebar.html >> whyyeoman.html
-cat sources/whyyeoman.md | mdown > whyyeoman_content.html
-cat whyyeoman_content.html >> whyyeoman.html
-cat sources/footer.html >> whyyeoman.html
-rm -f "whyyeoman_content.html"
 
 #packagemanager
 cat sources/header.html >> packagemanager.html
