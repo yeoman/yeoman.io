@@ -1,113 +1,95 @@
+
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-  <meta charset="utf-8">  
+  <meta charset="utf-8">
+  <title>Yeoman - Modern workflows for modern webapps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/i/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Lekton|Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/yeoman.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
 
-  <title>Yeoman</title>
-  <meta name="description" content="">
-
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width"> 
-
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-  <!-- All JavaScript at the bottom, except this Modernizr build.
-       Modernizr enables HTML5 elements & feature detects for optimal performance.
-       Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/vendor/modernizr-2.5.3.min.js"></script>
-
- 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="js/libs/prettify.js"></script>
+  <script src="js/script.js"></script>
 </head>
+
 <body>
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
-<script>
-    /*!
-      * $script.js Async loader & dependency manager
-      * https://github.com/ded/script.js
-      * (c) Dustin Diaz, Jacob Thornton 2011
-      * License: MIT
-      */
-    (function(a,b){typeof module!="undefined"?module.exports=b():typeof define=="function"&&define.amd?define(a,b):this[a]=b()})("$script",function(){function q(a,b,c){for(c=0,j=a.length;c<j;++c)if(!b(a[c]))return k;return 1}function r(a,b){q(a,function(a){return!b(a)})}function s(a,b,i){function o(a){return a.call?a():d[a]}function p(){if(!--n){d[m]=1,k&&k();for(var a in f)q(a.split("|"),o)&&!r(f[a],o)&&(f[a]=[])}}a=a[l]?a:[a];var j=b&&b.call,k=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){r(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&p();h[a]=1,m&&(e[m]=1),t(!c.test(a)&&g?g+a+".js":a,p)})},0),s}function t(c,d){var e=a.createElement("script"),f=k;e.onload=e.onerror=e[p]=function(){if(e[n]&&!/^c|loade/.test(e[n])||f)return;e.onload=e[p]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",k=!1,l="push",m="DOMContentLoaded",n="readyState",o="addEventListener",p="onreadystatechange";return!a[n]&&a[o]&&(a[o](m,function u(){a.removeEventListener(m,u,k),a[n]="complete"},k),a[n]="loading"),s.get=t,s.order=function(a,b,c){(function d(e){e=a.shift(),a.length?s(e,d):s(e,b,c)})()},s.path=function(a){g=a},s.ready=function(a,b,c){a=a[l]?a:[a];var e=[];return!r(a,function(a){d[a]||e[l](a)})&&q(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][l](b),c&&c(e)}(a.join("|")),s},s})
 
 
-    var _gaq=[
-      ['_setAccount','UA-32956520-1'],
-      ['_setDomainName', '.yeoman.io'],
-      ['_trackPageview'],['_trackPageLoadTime']
-    ];
+    <nav>
+    <header><a href="index.html"><img src="img/yeoman-logo.png" /></a></header>
+    <ul>
+      <li class="nav-divider"><a href="index.html"><img src="img/icon-home.png" />Home</a></li>
+      <li><a href="whyyeoman.html"><img src="img/icon-why-yeoman.png" />Why Yeoman?</a></li>
+      <li><a href="gettingstarted.html"><img src="img/icon-getting-started.png" />Getting Started</a></li>
+      <li><img src="img/icon-documentation.png" />Documentation</li>
+      <li class="nav-sub"><a href="commandline.html">Command Line</a></li>
+      <li class="nav-sub nav-divider"><a href="packagemanager.html">Package Manager</a></li>
+      <li><a href="faq.html"><img src="img/icon-faqs.png" />FAQs</a></li>
+      <li class="nav-divider"><img src="img/icon-discuss.png" /><a href="https://groups.google.com/forum/?fromgroups#!forum/yeoman-dev">Discuss</a></li>
+      <li><a href="https://plus.google.com/101063139999404044459/posts"><img src="img/icon-google-plus.png" />Google Plus</a></li>
+      <li class="nav-divider"><a href="http://twitter.com/yeoman"><img src="img/icon-twitter.png" />Twitter</a></li>
+      <li><a href="http://github.com/yeoman/yeoman"><img src="img/icon-github.png" />GitHub</a></li>
+      <li><a href="https://github.com/yeoman/yeoman/#contribute"><img src="img/icon-contributing.png" />Contributing</a></li>
+    </ul>
+  </nav>
 
-    $script('https://apis.google.com/js/plusone.js');
-    $script(('https:'==location.protocol?'//ssl':'http://www')+'.google-analytics.com/ga.js');
-    $script("//platform.twitter.com/widgets.js");
-   
-
-  </script>
-
-<div class="container">
-
-<!-- Masthead
-================================================== -->
-<header class="jumbotron masthead">
-  <div class="inner">
-
-    <div class="hero-unit">
-      <div class="logo-holder">
-        <img src="img/yeoman-logo.png"/>
-      </div>
-
-      <p class="hero-desc">
-        Why, hello! I'm Yeoman &mdash; a <strong>robust</strong> and opinionated client-side <strong>stack</strong>, comprised of tools and frameworks that can help developers quickly <strong>build</strong> beautiful web applications.
-      </p>
+     <div id="content">
+    <article>
+<article>
 
 
-      <p class="share">
-            <ul class='quick-links'>
-              <li class="google-follow">
-                Follow +Yeoman on
-                <a href="https://plus.google.com/101063139999404044459?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:20px;height:20px;"/></a>
-              </li>
-              <li style="width: 120px; height: 25px;">
-                <g:plusone size="medium" annotation="inline" width="120" href="http://yeoman.io"></g:plusone>
-              </li>
-              <li style="width: 220px; height: 25px;">
-                <a href="https://twitter.com/yeoman" class="twitter-follow-button" data-show-count="true">Follow @yeoman</a>
-              </li>
-              <li style="width: 107px; height: 25px;">
-                <a href="https://twitter.com/share" class="twitter-share-button"
-                   data-url="http://yeoman.io" data-text="Yeoman - Modern Workflows For Modern Web Apps" data-via="angularjs">Tweet</a>
-              </li>
-            </ul>
-      </p>
+<header>
+<div class="strikethrough strikethrough-image">
+ <h1><img src="img/yeoman-header.png" /></h1>
+</div>
+</header>
 
-      <p>&nbsp;</p>
+<section>
+<h1><span hidden>Yeoman: </span>Modern Workflows for Modern Webapps</h1>
 
-      <h3 class="hero-title">May I interest you in a preview?</h3>
-      <p class="hero-video">
-        <object style="height: 360px; width: 640px"><param name="movie" value="http://www.youtube.com/v/4qFwYiVjooc?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/4qFwYiVjooc?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>
-      </p>
+<p><a href="http://github.com/yeoman/yeoman">Yeoman</a> is a robust and opinionated set of tools, libraries, and a workflow that can help developers quickly build beautiful, compelling web apps.</p>
 
-    <p>&nbsp;</p>
-    <h3 class="hero-title">My features include:</h3>
+<div class="video-container">
+  <iframe width="700" height="394" src="http://www.youtube.com/embed/vFacaBinGZ0?hd=1" frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<hr />
+
+<section>
+<h2>Can I help you get started?</h2>
+<h2><span class="step">Step 1:</span> Install me</h2>
+
+Open up a terminal and enter in the following:
+<pre class="prettyprint">
+$ curl -L get.yeoman.io | bash
+</pre>
+<p>This will immediately install Yeoman and any dependencies it may need such as Node, NPM and Ruby.</p>
+
+<h2><span class="step">Step 2:</span> Create a new project</h2>
+<p>Next, enter in `yeoman init` in the directory you would like to scaffold your application in.</p>
+<pre class="prettyprint">
+$ yeoman init
+</pre>
+
+<h2><span class="step">Step 3:</span> Profit</h2>
+<p>We'll then ask you some questions to help scaffold your project out. Simple!</p>
+</section>
+
+<h2>There's more!</h2>
+<p>Psst..would you like to learn how to scaffold out Backbone, Ember or Chrome Apps? Read our
+<a href="commandline.html">Command Line</a> docs for more info.</p>
+
+
+<img src="img/yeoman-008.png" class="character"/>
+
+ <h2 class="hero-title">My features</h2>
     <div class="row features">
-     <p>&nbsp;</p>
+
       <ul class="span5">
         <li>
           <i class="icon-star"></i> <strong>Lightning-fast scaffolding</strong> — Easily scaffold new projects with customizable templates (e.g HTML5 Boilerplate, Twitter Bootstrap), AMD (via RequireJS) and more.<p></p>
@@ -127,8 +109,6 @@
         <li>
           <i class="icon-wrench"></i> <strong>AppCache manifest generation</strong> — I generate your application cache manifests for you. Just build a project and boom. You'll get it for free.<p></p>
         </li>
-      </ul>
-      <ul class="span5">
         <li>
           <i class="icon-tasks"></i> <strong>Killer build process</strong> — Not only do you get minification and concatenation; I also optimize all your image files, HTML, compile your CoffeeScript and Compass files, generate you an application cache manifest and, if you're using AMD, we'll pass those modules through r.js so you don't have to.<p></p>
         </li>
@@ -143,110 +123,59 @@
         </li>
 
       </ul>
-<p>&nbsp;</p>
-
-
-
-
-<p>&nbsp;</p>
     </div>
 
-    <div class="row built-with">
-      <p>&nbsp;</p>
-      <h3 class="hero-title">Built On Open-Source</h3>
-      <p><span>Yeoman harnesses the power of a number of different open-source tools and libraries. We would be nowhere without the authors of these tools, so thank you to <a href="https://github.com/cowboy/grunt">Grunt</a>, <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, <a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://pivotal.github.com/jasmine/">Jasmine</a>, <a href="http://nodejs.org/">Node</a>, <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="https://github.com/visionmedia/mocha">Mocha</a>, <a href="http://compass-style.org">Compass</a>, and a host of other best-in-class projects.</span></p>
-      <p>&nbsp;</p>
+
+<section>
+
+            <ul class='quick-links'>
+              <li class="google-follow">
+                Follow +Yeoman on
+                <a href="https://plus.google.com/101063139999404044459?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:20px;height:20px;"/></a>
+              </li>
+              <li style="width: 120px; height: 25px;">
+                <g:plusone size="medium" annotation="inline" width="120" href="http://yeoman.io"></g:plusone>
+              </li>
+              <li style="width: 220px; height: 25px;">
+                <a href="https://twitter.com/yeoman" class="twitter-follow-button" data-show-count="true">Follow @yeoman</a>
+              </li>
+              <li style="width: 107px; height: 25px;">
+                <a href="https://twitter.com/share" class="twitter-share-button"
+                   data-url="http://yeoman.io" data-text="Yeoman - Modern Workflows For Modern Web Apps">Tweet</a>
+              </li>
+            </ul>
+
+</section>
+
+
+
+<h2>About</h2>
+<p class="credits">
+        Yeoman is a project developed by <a href="http://github.com/paulirish">Paul Irish</a>, <a href="http://github.com/addyosmani">Addy Osmani</a>, <a href="http://github.com/sindresorhus">Sindre Sorhus</a>, <a href="http://github.com/mklabs">Mickael Daniel</a>, <a href="http://github.com/ebidel">Eric Bidelman</a>, and the <a href="http://github.com/yeoman/yeoman">Yeoman Community</a>.
+ <p>
+  It's built upon <a href="https://github.com/yeoman/yeoman/wiki/Tools-Used">many projects</a> including Ben Alman's awesome work on <a href="http://gruntjs.com">Grunt</a> and Mickael's work on the HTML5 Boilerplate <a href="https://github.com/h5bp/node-build-script">Node Build Script</a>.
+</p>
+
+</article>
+
+<script>
+    // github.com/ded/script.js
+    (function(a,b){typeof module!="undefined"?module.exports=b():typeof define=="function"&&define.amd?define(a,b):this[a]=b()})("$script",function(){function q(a,b,c){for(c=0,j=a.length;c<j;++c)if(!b(a[c]))return k;return 1}function r(a,b){q(a,function(a){return!b(a)})}function s(a,b,i){function o(a){return a.call?a():d[a]}function p(){if(!--n){d[m]=1,k&&k();for(var a in f)q(a.split("|"),o)&&!r(f[a],o)&&(f[a]=[])}}a=a[l]?a:[a];var j=b&&b.call,k=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){r(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&p();h[a]=1,m&&(e[m]=1),t(!c.test(a)&&g?g+a+".js":a,p)})},0),s}function t(c,d){var e=a.createElement("script"),f=k;e.onload=e.onerror=e[p]=function(){if(e[n]&&!/^c|loade/.test(e[n])||f)return;e.onload=e[p]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",k=!1,l="push",m="DOMContentLoaded",n="readyState",o="addEventListener",p="onreadystatechange";return!a[n]&&a[o]&&(a[o](m,function u(){a.removeEventListener(m,u,k),a[n]="complete"},k),a[n]="loading"),s.get=t,s.order=function(a,b,c){(function d(e){e=a.shift(),a.length?s(e,d):s(e,b,c)})()},s.path=function(a){g=a},s.ready=function(a,b,c){a=a[l]?a:[a];var e=[];return!r(a,function(a){d[a]||e[l](a)})&&q(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][l](b),c&&c(e)}(a.join("|")),s},s})
+
+
+    var _gaq=[
+      ['_setAccount','UA-32956520-1'],
+      ['_setDomainName', '.yeoman.io'],
+      ['_trackPageview'],['_trackPageLoadTime']
+    ];
+
+    $script('https://apis.google.com/js/plusone.js');
+    $script(('https:'==location.protocol?'//ssl':'http://www')+'.google-analytics.com/ga.js');
+    $script("//platform.twitter.com/widgets.js");
+
+  </script>
+      </section>
+    </article>
   </div>
-
-
-    <div class="row built-with">
-      <p>&nbsp;</p>
-      <h3 class="hero-title">Videos</h3>
-
-      <p><h4>Paul Irish On Better Web App Development Through Tooling</h4></p>
-      <iframe width="640" height="360" src="http://www.youtube.com/embed/Mk-tFn2Ix6g?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-
-      <p>&nbsp;</p>
-
-      <p><h4>Yeoman On Google Developers Live With Addy Osmani</h4></p>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/Hl1sp9axHEY?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
-
-      <p>&nbsp;</p>
-
-      <p><h4>Improved Developer Tooling And Yeoman</h4></p>
-      <iframe width="640" height="360" src="http://www.youtube.com/embed/3s6Yv9pVXZc?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-
-      <p>&nbsp;</p>
-  </div>
-
-
-
-
-<div class="row">
-      <div class="span5 character-base">
-          <img src="img/yeoman-holding.png"/>
-</div>
-
-
-
-<div class="span5 newsletter">
-               <p>&nbsp;</p>
-               <p>&nbsp;</p>
-              <p><strong>Sign-up to be notified when I'm available:</strong></p>
-
-              <!--iframe hack to allow google docs to redirect within onsubmit limitations-->
-              <iframe name="hif" id="hif" style="display:none;"     
-              onload="if(submitted) {window.location='thanks/index.html';}"></iframe>
-              <!--end hack-->
-              
-              <form  id="subscribeForm" action="https://docs.google.com/a/google.com/spreadsheet/formResponse?formkey=dDdQVGF5LWhMQVgxdjQxaWd3N1RxQmc6MQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form" target="hif" onsubmit="submitted=true;">
-                <div class="errorbox-good">
-                <div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_0">
-                </label>
-                <input placeholder="GitHub username" type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1">
-                <input id="required" title="Please enter a valid e-mail address" placeholder="Email address" type="text" name="entry.0.single" value="" class="{validate:{required:true, email:true, messages:{required:'Please enter your email address', email:'Please enter a valid email address'}}}" id="entry_0">
-
-                <input class="btn btn-danger" type="submit" name="submit" value="Subscribe"></div></div></div>
-                <br>
-                <input type="hidden" name="pageNumber" value="0">
-                <input type="hidden" name="backupCache" value="">
-
-                <div class="ss-item ss-navigate"><div class="ss-form-entry">
-                </div>
-          </div>
-</form>
-
-
-
-
-      </div>
-</div>
-
-</div>
-
-  </div>
-
-</header>
-
-     <!-- Footer
-      ================================================== -->
-      <footer class="footer">
-        <p>Copyright Google, 2012.</p>
-        <p>&nbsp;</p>
-      </footer>
-
-    </div><!-- /container -->
-
-
-  <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
-
-  <!-- scripts concatenated and minified via build script -->
-  <script src="js/vendor/jquery.validate.js"></script>
-  <script src="js/main.js"></script>
-  <!-- end scripts -->
 </body>
 </html>
