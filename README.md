@@ -7,19 +7,19 @@ Made with [Jekyll](https://github.com/mojombo/jekyll/), is a static generator in
 
 The best way to install Jekyll is via RubyGems:
 
-  gem install jekyll
+	gem install jekyll
 
 Once Jekyll is installed, you just need to clone the project:
 
-  git clone git@github.com:zenorocha/yeoman.io.git
+	git clone git@github.com:zenorocha/yeoman.io.git
 
 Then go to the project's folder:
 
-  cd yeoman.io
+	cd yeoman.io
 
 And run:
 
-  jekyll --server
+	jekyll --server
 
 Now you can see the website running in `localhost:4000` :D
 
@@ -27,6 +27,6 @@ Now you can see the website running in `localhost:4000` :D
 
 To generate the files, just run:
 
-  jekyll
+	jekyll
 
 It will create a folder called `_site`. Upload it's content to your server.
