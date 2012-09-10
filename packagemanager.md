@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Package Manager
 
 Until now, client-side JavaScript has not benefited from a rich package management solution such as those found in other platforms (e.g NPM, RubyGems). By instead maintaining packages of packages in client-side JS, developers reduced the chances of using up-to-date versions of libraries.
@@ -103,3 +107,4 @@ Don't use a package.json – user component.json.
 
 Twitter has a pretty good track record with there open source projects thus far, and has an entire engineer pool to work on it. Another good thing we can say is that Twitter.com is moving it's frontend architecture onto Bower, so it's fairly safe to say it will be maintained.
 
+<img src="img/yeoman-005.png" class="character"/>
