@@ -3,7 +3,6 @@
 # uses https://github.com/millermedeiros/gh-markdown-cli
 rm -f "docs.html"
 rm -f "gettingstarted.html"
-rm -f "faq.html"
 rm -f "commandline.html"
 
 #gettingstarted
