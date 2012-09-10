@@ -17,15 +17,6 @@ cat sources/footer.html >> gettingstarted.html
 rm -f "gs_content.html"
 rm -f "gstemp.md"
 
-#faq
-cat sources/header.html >> faq.html
-cat sources/sidebar.html >> faq.html
-cat sources/yeoman/docs/faq.md | mdown > faq_content.html
-cat faq_content.html >> faq.html
-cat sources/faqfooter.md >> faq.html
-cat sources/footer.html >> faq.html
-rm -f "faq_content.html"
-
 #build docs
 cat sources/header.html >> commandline.html
 cat sources/sidebar.html >> commandline.html
