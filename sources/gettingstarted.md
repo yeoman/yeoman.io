@@ -9,7 +9,7 @@
   </pre>
   <p>This will immediately install Yeoman and any dependencies it may need such as Node, NPM and Ruby.</p>
 
-  <p><strong>Please note that Yeoman requires <a href="http://nodejs.org/download/">Node 0.8.x </a>in order to correctly function.</strong></p>
+  <p><strong>Please note that Yeoman requires <a href="http://nodejs.org/download/">Node 0.8.x </a>in order to correctly install.</strong></p>
 
   <h2><span class="step">STEP 2:</span> CREATE A NEW PROJECT</h2>
   <p>Next, enter in yeoman init followed by the name of the directory you would like to scaffold your application in.</p>
