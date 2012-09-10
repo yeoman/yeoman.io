@@ -22,7 +22,11 @@
 
   <div id="content">
     <article>
-      {{content}}
+      {% if page.markdown == 1 %}
+        {{ content | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
     </article>
   </div>
 </body>
