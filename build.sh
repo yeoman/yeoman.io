@@ -1,21 +1,12 @@
 #!/usr/bin/env bash
 
 # uses https://github.com/millermedeiros/gh-markdown-cli
-rm -f "index.html"
 rm -f "docs.html"
 rm -f "gettingstarted.html"
 rm -f "faq.html"
 rm -f "packagemanager.html"
 rm -f "commandline.html"
 rm -f "whyyeoman.html"
-
-#build index
-cat sources/header.html >> index.html
-cat sources/sidebar.html >> index.html
-cat sources/index.html >> index_content.html
-cat index_content.html >> index.html
-cat sources/footer.html >> index.html
-rm -f "index_content.html"
 
 #whyyeoman
 cat sources/header.html >> whyyeoman.html
