@@ -26,13 +26,7 @@ cd yeoman.io
 Initialize the submodule: 
 
 ```
-git submodule init
-```
-
-Update in order to pull down the files:
-
-```
-git submodule update
+git submodule update --init
 ```
 
 And finally run:
