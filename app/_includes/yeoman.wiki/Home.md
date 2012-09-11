@@ -1,5 +1,6 @@
 * [[About]]
 * [[Bug submission guidelines]]
-* [[Manual Install]]
 * [[Tools Used]]
 * [[yeoman init]]
+* [[Manual Install]]
+* [[Uninstall]]
