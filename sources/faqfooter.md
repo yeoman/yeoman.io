@@ -1,1 +1,0 @@
-<img src="img/yeoman-009.png" class="character"/>
