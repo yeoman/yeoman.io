@@ -1,1 +1,5 @@
-Welcome to the Yeoman Wiki. This is a placeholder for internal docs which end-users may not need to view, but are useful to be aware of.
+* [[About]]
+* [[Bug submission guidelines]]
+* [[Manual Install]]
+* [[Tools Used]]
+* [[yeoman init]]
