@@ -23,7 +23,19 @@ Then go to the project's folder:
 cd yeoman.io
 ```
 
-And run:
+Initialize the submodule: 
+
+```
+git submodule init
+```
+
+Update in order to pull down the files:
+
+```
+git submodule update
+```
+
+And finally run:
 
 ```
 jekyll --server
