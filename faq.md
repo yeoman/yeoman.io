@@ -60,6 +60,6 @@ Thanks for your interest in submitting an issue. In order for us to help you ple
 
 Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/issues) on our GitHub repo.
 
-<img src="img/yeoman-009.png" class="character"/>
+<img src="assets/img/yeoman-009.png" class="character"/>
 
 
