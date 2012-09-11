@@ -17,4 +17,4 @@ Yeoman is fast, performant and is optimized to work best in modern browsers.
 
 To learn more about the current developer tooling eco-system, you may be interested in watching Paul's talk on "[Better Web App Development Through Tooling](http://www.youtube.com/watch?feature=player_embedded&v=Mk-tFn2Ix6g)" or Addy's Yeoman session on [Google Developers Live](https://www.youtube.com/watch?feature=player_embedded&v=Hl1sp9axHEY).
 
-<img src="img/yeoman-003.png" class="character"/>
+<img src="assets/img/yeoman-003.png" class="character"/>
