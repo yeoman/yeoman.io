@@ -1,7 +1,7 @@
 Feel free to read through the [get.yeoman.io](http://get.yeoman.io) shell script before installing it. Alternatively, you're very welcome to handle installation on your own:
 
 1. Use system package manager to install some necessary dependencies
-  * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`
+  * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)` . After installing, run `brew doctor` and follow the recommendations.
   * On Linux, you can use `apt-get`, `yum`, or `up2date`
 1. Install these packages if you don't already have them: `git optipng jpeg-turbo phantomjs`
   * In homebrew you may want to `brew update` first.
