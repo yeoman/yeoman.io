@@ -1,4 +1,4 @@
-Below you can find questions and answers for common questions that we're iterating on. We'll be adding these to our main FAQ page on yeoman.io shortly.
+Below you can find common questions and answers to recent issues. We'll be adding these to our main FAQ page on yeoman.io shortly.
 
 **Q: When trying to list generators I receive "Cannot call method 'substr' of undefined...."**
 
