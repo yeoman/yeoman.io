@@ -30,4 +30,5 @@ sudo rm -rf /usr/local/lib/node_modules/yeoman
 npm cache clean yeoman
 ```
 
+For clarity, the bug is in line 29 of `/usr/local/lib/node_modules/yeoman/package.json`.
 This bug is fixed in _master_ and ships in 0.9.1.
