@@ -1,16 +1,21 @@
 Below you can find common questions and answers to recent issues. We'll be adding these to our main FAQ page on yeoman.io shortly.
 
-### Q: When trying to list generators I receive "Cannot call method 'substr' of undefined...."
+### Q: I'd like to use the Yeoman that's in git _master_. How?
 
-This was an issue in Yeoman 0.9 and is [fixed](https://github.com/yeoman/generators/issues/21) in master. To manually update your local installation to get this version, please do the following:
+To get a prerelease version of Yeoman, you can install from git master. This is also recommended for developing Yeoman.
 
-```
-sudo npm uninstall yeoman -g
+```sh
+sudo npm uninstall yeoman -g   # if you experience problems, read below...
 git clone https://github.com/yeoman/yeoman.git
 cd yeoman/cli
 sudo npm install -g
 sudo npm link
 ```
+
+### Q: When trying to list generators I receive "Cannot call method 'substr' of undefined...."
+
+This was an issue in Yeoman 0.9 and is [fixed](https://github.com/yeoman/generators/issues/21) in master. Follow the instructions above to manually update your local installation to master.
+
 
 #### Q: I'm trying to uninstall or reinstall and having problems. Help?
 
