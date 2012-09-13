@@ -12,14 +12,17 @@ sudo npm install -g
 sudo npm link
 ```
 
-#### Q: How do I uninstall?
+#### Q: I'm trying to uninstall or reinstall and having problems. Help?
 
-A full and comprehensive uninstallation is:
+We shipped v0.9.0 with an npm uninstall script [with an error](https://github.com/yeoman/yeoman/blob/v0.9/cli/package.json#L33). For some people, this has resulted in an un/re-install procedure that asks for two sudo passwords. The second one is actually asking for the `nobody` user, whoever that is... :)
+
+A full and comprehensive uninstallation of 0.9.0 is:
 
 ```sh
-npm uninstall -g yeoman
-sudo rm -rf ~/.yeoman* && sudo rm -rf ~/.npm/yeoman
+sudo rm -rf ~/.yeoman
+sudo rm -rf ~/.npm/yeoman*
+sudo rm -rf /usr/local/lib/node_modules/yeoman
+npm cache clean yeoman
 ```
 
-On some systems, and especially if you were an early user, this might fail to clean out everything, if so, try this: `rm -rf ~/.yeoman && npm cache clean yeoman`
-
+This bug is fixed in _master_ and ships in 0.9.1.
