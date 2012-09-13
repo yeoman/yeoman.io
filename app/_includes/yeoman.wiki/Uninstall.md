@@ -1,1 +1,1 @@
-.
+Now answered at https://github.com/yeoman/yeoman/wiki/Additional-FAQ
