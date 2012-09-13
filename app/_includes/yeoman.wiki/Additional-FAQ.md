@@ -19,7 +19,7 @@ This was an issue in Yeoman 0.9 and is [fixed](https://github.com/yeoman/generat
 
 ### Q: I'm trying to uninstall or reinstall and having problems. Help?
 
-We shipped v0.9.0 with an npm uninstall script [with an error](https://github.com/yeoman/yeoman/blob/v0.9/cli/package.json#L33). For some people, this has resulted in an un/re-install procedure that asks for two sudo passwords. The second one is actually asking for the `nobody` user, whoever that is... :)
+We [shipped v0.9.0](https://github.com/yeoman/yeoman/blob/v0.9/cli/package.json#L33) with an npm uninstall script [with an error](https://github.com/yeoman/yeoman/issues/327#issuecomment-8446662). For some people, this has resulted in an un/re-install procedure that asks for two sudo passwords. The second one is actually asking for the `nobody` user, whoever that is... :)
 
 A full and comprehensive uninstallation of 0.9.0 is:
 
