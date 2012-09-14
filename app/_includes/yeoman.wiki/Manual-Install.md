@@ -2,13 +2,13 @@ Yeoman used to have an automated installer, which worked great on fresher system
 
 ### Audit script
 
-The audit script can tell you what you're missing in order to install Yeoman. You can run it as many times are you want:
+The audit script can tell you what you're missing in order to install Yeoman. _(Feel free to read the [script source](https://github.com/yeoman/yeoman/blob/master/setup/install.sh) first, if you like)_. You can run it as many times are you want:
 
 ```sh
 curl -L get.yeoman.io | bash
 ```
 
-Below is a more verbose install procedure for Yeoman:
+The script recommends how to install what's missing, but a more verbose description follows:
 
 ### Yeoman Install Procedure
 
