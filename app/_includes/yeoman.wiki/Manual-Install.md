@@ -27,4 +27,4 @@ Below is a more verbose install procedure for Yeoman:
 
 ### Other procedures
 
-For uninstall, reinstall and other issues, see [[Additional FAQ]]
+For uninstall, reinstall, running an edge build, and other issues, see [[Additional FAQ]]
