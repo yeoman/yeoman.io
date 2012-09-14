@@ -25,6 +25,18 @@ Below is a more verbose install procedure for Yeoman:
 1. [Install Compass](http://compass-style.org/install/) stable
 1. Install Yeoman as a global node module: `npm install yeoman -g`. You may potentially need to run this with `sudo`
 
+### Requirements
+
+Dependencies in list form:
+
+* NodeJS >= 0.8.x
+* Ruby >= 1.8.7
+* Compass >= 0.12.1
+* optipng
+* jpegtran
+* PhantomJS >= 1.6
+
+Also, Homebrew is recommended on Mac to install phantomjs, jpegtran, optipng. It depends on Xcode CLI Tools.
 
 ### Other procedures
 
