@@ -1,5 +1,7 @@
 Yeoman used to have an automated installer, which worked great on fresher systems, but had trouble with more used and configured systems. It has been officially deprecated, though is maintained at the [Yeoman-scripts](https://github.com/tomlane/Yeoman-scripts) repo. It's recommended for people with less experience installing node, homebrew packages, etc.
 
+### Audit script
+
 The audit script can tell you what you're missing in order to install Yeoman. You can run it as many times are you want:
 
 ```sh
@@ -21,3 +23,8 @@ Below is a more verbose install procedure for Yeoman:
   * We recommend downloading and installing the node binaries directly from [nodejs.org](http://nodejs.org/download/). This will save you needing to compile from source. 
 1. [Install Compass](http://compass-style.org/install/) stable
 1. Install Yeoman as a global node module: `npm install yeoman -g`. You may potentially need to run this with `sudo`
+
+
+### Other procedures
+
+For uninstall, reinstall and other issues, see [[Additional FAQ]]
