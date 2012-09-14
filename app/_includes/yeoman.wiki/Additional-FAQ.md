@@ -9,7 +9,7 @@ sudo npm uninstall yeoman -g   # if you experience problems, read below...
 git clone https://github.com/yeoman/yeoman.git
 cd yeoman/cli
 sudo npm install -g
-sudo npm link
+sudo npm link # links your global yeoman binary to this folder location
 ```
 
 ### Q: When trying to list generators I receive "Cannot call method 'substr' of undefined...."
