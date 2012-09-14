@@ -1,6 +1,6 @@
 Yeoman used to have an automated installer, which worked great on fresher systems, but had trouble with more used and configured systems. It has been officially deprecated, though is maintained at the [Yeoman-scripts](https://github.com/tomlane/Yeoman-scripts) repo. It's recommended for people with less experience installing node, homebrew packages, etc.
 
-### Audit script
+## Audit script
 
 The audit script can tell you what you're missing in order to install Yeoman. _(Feel free to read the [script source](https://github.com/yeoman/yeoman/blob/master/setup/install.sh) first, if you like)_. You can run it as many times are you want:
 
@@ -8,9 +8,11 @@ The audit script can tell you what you're missing in order to install Yeoman. _(
 curl -L get.yeoman.io | bash
 ```
 
+![](https://a248.e.akamai.net/camo.github.com/17d4523f378ce6aab85ce2901e09d87d016c266e/687474703a2f2f7061756c69726973682e636f6d2f692f6263383765302e706e67)
+
 The script recommends how to install what's missing, but a more verbose description follows:
 
-### Yeoman Install Procedure
+## Yeoman Install Procedure
 
 1. Use system package manager to install some necessary dependencies
   * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`. After installing, run `brew doctor` and follow the recommendations. 
@@ -25,7 +27,7 @@ The script recommends how to install what's missing, but a more verbose descript
 1. [Install Compass](http://compass-style.org/install/) stable
 1. Install Yeoman as a global node module: `npm install yeoman -g`. You may potentially need to run this with `sudo`
 
-### Requirements
+## Requirements
 
 Dependencies in list form:
 
