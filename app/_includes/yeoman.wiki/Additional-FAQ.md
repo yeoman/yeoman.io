@@ -1,6 +1,6 @@
 Below you can find common questions and answers to recent issues. We'll be adding these to our main FAQ page on yeoman.io shortly.
 
-### Q: I'd like to use the Yeoman that's in git _master_. How?
+### Q: I'd like to use the latest Yeoman that's in git _master_. How?
 
 To get a prerelease version of Yeoman, you can install from git master. This is also recommended for developing Yeoman.
 
