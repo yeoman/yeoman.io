@@ -13,7 +13,8 @@ Below is a more verbose install procedure for Yeoman:
 ### Yeoman Install Procedure
 
 1. Use system package manager to install some necessary dependencies
-  * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`. After installing, run `brew doctor` and follow the recommendations. You may also want to `brew update`.
+  * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`. After installing, run `brew doctor` and follow the recommendations. 
+  * **Please** `brew update`. Your formulae are likely outdated.
   * On Linux, you can use `apt-get`, `yum`, or `up2date`
 1. Install these packages if you don't already have them: `git optipng jpeg-turbo phantomjs`
   * `git` for obvious reasons, `optipng` and `jpeg-turbo` for image optimization in the build process. The [PhantomJS install](http://phantomjs.org/download.html) is used for a browser-run test suite.
