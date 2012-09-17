@@ -38,6 +38,9 @@ sudo npm link # links your global yeoman binary to this folder location
 
 This was an issue in Yeoman 0.9 and is [fixed](https://github.com/yeoman/generators/issues/21) in master. Follow the instructions above to manually update your local installation to master.
 
+### Q: NPM appears to have installed yeoman but `yeoman` still gives me "command not found".
+
+It's likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read [this comment](https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733) and [this thread](https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663).
 
 ### Q: I'm trying to uninstall or reinstall and having problems. Help?
 
