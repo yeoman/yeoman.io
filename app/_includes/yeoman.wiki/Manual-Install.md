@@ -30,7 +30,8 @@ The script recommends how to install what's missing, but a more verbose descript
 1. Install Yeoman as a global node module: `npm install yeoman -g`. You may potentially need to run this with `sudo`
 
 _(Also, specific instructions for Debian users [here](https://github.com/yeoman/yeoman/issues/461))_.
-_(and for ArchLinux yeoman is present in [AUR](http://aur.archlinux.org/packages.php?ID=62782)).
+
+_(and for ArchLinux users, yeoman is present in [AUR](http://aur.archlinux.org/packages.php?ID=62782))_.
 
 ## Requirements
 
