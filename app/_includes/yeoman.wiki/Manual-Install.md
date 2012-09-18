@@ -29,6 +29,8 @@ The script recommends how to install what's missing, but a more verbose descript
 1. [Install Compass](http://compass-style.org/install/) stable
 1. Install Yeoman as a global node module: `npm install yeoman -g`. You may potentially need to run this with `sudo`
 
+_(Also, specific instructions for Debian users [here](https://github.com/yeoman/yeoman/issues/461))_.
+
 ## Requirements
 
 Dependencies in list form:
