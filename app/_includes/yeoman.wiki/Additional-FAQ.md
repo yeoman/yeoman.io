@@ -45,3 +45,12 @@ It's likely your PATH does not account for global NPM modules just yet. Better d
 ### Q: I'm trying to uninstall or reinstall and having problems. Help?
 
 See the answer to the first question.
+
+
+### Q: I'm getting `EMFILE, too many open files`
+
+EMFILE mean you've reached the OS limit of concurrently open files. There aren't much we can do about it, however you can increase the limit yourself.
+
+Add `ulimit -n [number of files]` to your .bashrc/.zshrc file to increase the soft limit.
+
+If you reach the OS hard limit, you can follow this [StackOverflow answer](http://stackoverflow.com/a/34645/64949) to increase it.
