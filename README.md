@@ -3,6 +3,10 @@
 Home to the Yeoman.io site.
 Made with [Jekyll](https://github.com/mojombo/jekyll/), a static generator in Ruby.
 
+## Attention
+
+If you want to create an issue about something of Yeoman's website you are in the right place! But if the problem is with Yeoman's source code, please visit [this repository](https://github.com/yeoman/yeoman).
+
 ## Getting started
 
 The best way to install Jekyll is via RubyGems:
