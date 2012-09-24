@@ -1,6 +1,4 @@
-Right now, there is no specific infrastructure to test out individual generators.
-
-`yeoman init mocha:generator` was however added:
+Right now, there is no specific infrastructure to test out individual generators, however `yeoman init mocha:generator` was recently added.
 
 ```sh
 Usage:
