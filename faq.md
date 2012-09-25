@@ -60,6 +60,10 @@ Thanks for your interest in submitting an issue. In order for us to help you ple
 
 Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/issues) on our GitHub repo.
 
+### My question isn't answered! Help?
+
+A few more common questions relating to using Yeoman are answered here: [github.com/yeoman/yeoman/wiki/Additional-FAQ](https://github.com/yeoman/yeoman/wiki/Additional-FAQ)
+
 <img src="assets/img/yeoman-009.png" class="character"/>
 
 
