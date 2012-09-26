@@ -55,6 +55,44 @@ Add `ulimit -n [number of files]` to your .bashrc/.zshrc file to increase the so
 
 If you reach the OS hard limit, you can follow this [StackOverflow answer](http://stackoverflow.com/a/34645/64949) to increase it.
 
+### Q: I just upgraded to 0.9.1 and my coffee files are not compiled anymore
+
+With 0.9.1, coffescript file are now handled through [grunt-contrib-coffee](https://github.com/gruntjs/grunt-contrib-coffee), and thus the old configuration, contained in your project `Gruntfile.js` is deprecated.
+To fix the issue replace your old coffee config, but something like:
+```
+    coffee: {
+      compile: {
+        files: {
+          'app/scripts/build/*.js': 'app/scripts/**/*.coffee'
+        },
+        options: {
+          basePath: 'app/scripts',
+          flatten: true
+        }
+      }
+    },
+```
+(see the [grunt-contrib-coffee](https://github.com/gruntjs/grunt-contrib-coffee) for additional documentation).
+
+Additionally the `watch` config related to coffee files needs to be updated from:
+```
+    watch: {
+      coffee: {
+        files: <config:coffee.dist.src>,
+        tasks: 'coffee reload'
+      },
+
+```
+to
+```
+    watch: {
+      coffee: {
+        files: 'app/scripts/**/*.coffee',
+        tasks: 'coffee reload'
+      },
+
+```
+
 ### What does Yeoman require a CLA?
 
 It keeps the IP clean and helps to prevent frivolous lawsuits around who owns what software. Basically the thing all of us want to avoid anyhow. In summary, the CLA asserts that when you donate fixes or documentation, you both own the code that you're submitting and that Google can in turn license that code to other people. (In this case, making it available under the BSD license)
