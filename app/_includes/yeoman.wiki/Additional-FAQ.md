@@ -93,7 +93,7 @@ to
 
 ```
 
-### What does Yeoman require a CLA?
+### Why does Yeoman require a CLA?
 
 It keeps the IP clean and helps to prevent frivolous lawsuits around who owns what software. Basically the thing all of us want to avoid anyhow. In summary, the CLA asserts that when you donate fixes or documentation, you both own the code that you're submitting and that Google can in turn license that code to other people. (In this case, making it available under the BSD license)
 
