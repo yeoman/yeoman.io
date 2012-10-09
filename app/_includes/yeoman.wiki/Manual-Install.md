@@ -19,7 +19,7 @@ The script recommends how to install what's missing, but a more verbose descript
 1. Use system package manager to install some necessary dependencies
   * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`. After installing, run `brew doctor` and follow the recommendations. 
   * **Please** `brew update`. Your formulae are likely outdated.
-  * On Linux, you can use `apt-get`, `yum`, or `up2date`
+  * On Linux, you can use `apt-get`, `yum`, or `up2date`. Install jpegtran on linux using `sudo apt-get install libjpeg-progs`
 1. Install these packages if you don't already have them: `git optipng jpeg-turbo phantomjs`
   * `git` for obvious reasons, `optipng` and `jpeg-turbo` for image optimization in the build process. The [PhantomJS install](http://phantomjs.org/download.html) is used for a browser-run test suite.
 1. Confirm Ruby >= 1.8.7 is installed (`ruby -v`). If not, [install it](http://www.ruby-lang.org/en/downloads/). (Ruby is used with Compass)
