@@ -93,6 +93,12 @@ to
 
 ```
 
+### Q: Yeoman just auto-updated but still shows the old version
+
+That is as intended. Since the update check run daily, we don't want to disrupt your flow, so your previous action continues after the update check and/or update, which uses the old version loaded in memory. The next time you use Yeoman you'll be using the updated version.
+
+
+
 ### Why does Yeoman require a CLA?
 
 It keeps the IP clean and helps to prevent frivolous lawsuits around who owns what software. Basically the thing all of us want to avoid anyhow. In summary, the CLA asserts that when you donate fixes or documentation, you both own the code that you're submitting and that Google can in turn license that code to other people. (In this case, making it available under the BSD license)
