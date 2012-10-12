@@ -22,7 +22,7 @@ The script recommends how to install what's missing, but a more verbose descript
 
 1. Follow the instructions [here](http://www.decodize.com/css/installing-yeoman-front-end-development-stack-windows/#chocolatey) to install Yeoman and its dependencies using Chocolatey.
 2. [Download](http://www.python.org/getit/) and install Python 2.7.
-3. Add python to your system path by adding "`C:\Python27;`" to the `PATH`. See [these instructions](http://java.com/en/download/help/path.xml).
+3. Add python to your system path. Add "`C:\Python27;`" to the `PATH` env variable. See [these instructions](http://java.com/en/download/help/path.xml).
 
 ###Everyone else
 
