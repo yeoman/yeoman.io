@@ -16,6 +16,16 @@ The script recommends how to install what's missing, but a more verbose descript
 
 ## Yeoman Install Procedure
 
+###Windows
+
+**NOTE:** Windows is not officially supported yet. Some things might not work!
+
+1. Follow the instructions [here](http://www.decodize.com/css/installing-yeoman-front-end-development-stack-windows/#chocolatey) to install Yeoman and its dependencies using Chocolatey.
+2. [Download](http://www.python.org/getit/) and install Python 2.7.
+3. Add python to your system path by adding "`C:\Python27;`" to the `PATH`. See [these instructions](http://java.com/en/download/help/path.xml).
+
+###Everyone else
+
 1. Use system package manager to install some necessary dependencies
   * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`. After installing, run `brew doctor` and follow the recommendations. 
   * **Please** `brew update`. Your formulae are likely outdated.
