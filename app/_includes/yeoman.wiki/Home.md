@@ -3,4 +3,5 @@
 * [[Tools Used]]
 * [[yeoman init]]
 * [[Manual Install]]
+* [[Customization]]
 * [[Yeoman related projects]]
