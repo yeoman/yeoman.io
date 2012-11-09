@@ -25,7 +25,7 @@
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.registerTask('compass', ['stylus']);
 ```
-4. replace the compass config section by the stylus one:
+4. stylus configuration
 ```
     stylus: {
       compile: {
@@ -39,7 +39,7 @@
       }
     },
 ```
-6. replace the compass config **watch** section by the stylus one:
+6. stylus **watch** configuration
 ```
       stylus: {
         files: [
@@ -48,4 +48,4 @@
         tasks: 'stylus reload'
       },
 ```
-7. (optional) delete the compass config and compas watch config
+6. (optional) delete the compass and compass watch configurations
