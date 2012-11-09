@@ -16,7 +16,7 @@
       compile: {
         options: {
           compress: true,
-          paths: ['node_modules/grunt-contrib-stylus/node_modules/']
+          paths: ['node_modules/grunt-contrib-stylus/node_modules']
         },
         files: {
           'app/styles/*.css': ['app/styles/*.styl']
