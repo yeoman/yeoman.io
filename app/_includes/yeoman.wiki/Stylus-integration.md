@@ -1,31 +1,16 @@
-# Stylus integration
-
 ## Gist 
 
 [here](https://gist.github.com/ffcbf037e6e856e1010d)
 
-## Howto
+## How to
 
-1. add a `grunt-contrib-stylus`  dependency to `package.json` 
-```
-{
-  "author": "",
-  "name": "app_name",
-  "version": "0.0.0",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt-contrib-stylus":"*"
-  }
-}
-```
-(and fill the name field otherwise npm is not happy)
-2. run `npm install -l`
-3. declare the task in Gruntfile.js:
+1. add `grunt-contrib-stylus` as a devDependency by running `npm install -D grunt-contrib-stylus`. This will add it to your package.json after installing.
+2. declare the task in Gruntfile.js:
 ```
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.registerTask('compass', ['stylus']);
 ```
-4. stylus configuration
+3. stylus configuration
 ```
     stylus: {
       compile: {
@@ -39,7 +24,7 @@
       }
     },
 ```
-6. stylus **watch** configuration
+4. stylus **watch** configuration
 ```
       stylus: {
         files: [
@@ -48,4 +33,4 @@
         tasks: 'stylus reload'
       },
 ```
-6. (optional) delete the compass and compass watch configurations
+5. (optional) delete the compass and compass watch configurations
