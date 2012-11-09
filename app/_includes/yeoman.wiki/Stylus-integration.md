@@ -4,7 +4,7 @@
 
 ## How to
 
-1. add `grunt-contrib-stylus` as a devDependency by running `npm install -D grunt-contrib-stylus`. This will add it to your package.json after installing.
+1. add `grunt-contrib-stylus` as a devDependency by running `npm install -D grunt-contrib-stylus`. This will add it to your package.json after installing. You may also run `npm install -D  canvas` if you want to use the node-canvas fallback for gradients(see nib doc).
 2. declare the task in Gruntfile.js:
 ```
   grunt.loadNpmTasks('grunt-contrib-stylus');
@@ -16,7 +16,7 @@
       compile: {
         options: {
           compress: true,
-          paths: []
+          paths: ['node_modules/grunt-contrib-stylus/node_modules/']
         },
         files: {
           'app/styles/*.css': ['app/styles/*.styl']
@@ -24,6 +24,7 @@
       }
     },
 ```
+The path definition let you do `@import 'nib'` in the stylesheets.
 4. stylus **watch** configuration
 ```
       stylus: {
