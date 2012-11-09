@@ -6,7 +6,7 @@
 
 ## Howto
 
-1. add `grunt-contrib-stylus`  dependency to `package.json` 
+1. add a `grunt-contrib-stylus`  dependency to `package.json` 
 ```
 {
   "author": "",
@@ -18,7 +18,7 @@
   }
 }
 ```
-(and enter something in the name field otherwise npm is not happy)
+(and fill the name field otherwise npm is not happy)
 2. run `npm install -l`
 3. declare the task in Gruntfile.js:
 ```
