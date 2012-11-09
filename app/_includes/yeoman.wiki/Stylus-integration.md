@@ -24,7 +24,7 @@
       }
     },
 ```
-The path definition let you do `@import 'nib'` in the stylesheets.
+The path definition let you do `@import 'nib'` in stylesheets.
 4. stylus **watch** configuration
 ```
       stylus: {
