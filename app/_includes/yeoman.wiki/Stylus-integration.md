@@ -4,13 +4,13 @@
 
 ## How to
 
-1. add `grunt-contrib-stylus` as a devDependency by running `npm install -D grunt-contrib-stylus`. This will add it to your package.json after installing. You may also run `npm install -D  canvas` if you want to use the node-canvas fallback for gradients(see nib doc).
-2. declare the task in Gruntfile.js:
+1. Add `grunt-contrib-stylus` as a devDependency by running `npm install -D grunt-contrib-stylus`. This will add it to your package.json after installing. You may also run `npm install -D  canvas` if you want to use the node-canvas fallback for gradients(see nib doc).
+2. Declare the task in Gruntfile.js:
 ```
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.registerTask('compass', ['stylus']);
 ```
-3. stylus configuration
+3. Stylus configuration
 ```
     stylus: {
       compile: {
@@ -24,8 +24,8 @@
       }
     },
 ```
-The path definition let you do `@import 'nib'` in stylesheets.
-4. stylus **watch** configuration
+The `paths` definition let you do `@import 'nib'` in stylesheets.
+4. Stylus **watch** configuration
 ```
       stylus: {
         files: [
@@ -34,4 +34,4 @@ The path definition let you do `@import 'nib'` in stylesheets.
         tasks: 'stylus reload'
       },
 ```
-5. (optional) delete the compass and compass watch configurations
+5. (optional) Delete the Compass and Compass watch configurations
