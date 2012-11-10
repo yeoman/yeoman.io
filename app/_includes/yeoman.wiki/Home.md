@@ -1,1 +1,1 @@
-# [View Yeoman Wiki Contents](https://github.com/yeoman/yeoman/wiki/_pages)
+## [Yeoman Wiki Contents](https://github.com/yeoman/yeoman/wiki/_pages)
