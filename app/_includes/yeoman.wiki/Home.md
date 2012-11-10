@@ -1,7 +1,1 @@
-* [[About]]
-* [[Additional FAQ]]
-* [[Tools Used]]
-* [[yeoman init]]
-* [[Manual Install]]
-* [[Customization]]
-* [[Yeoman related projects]]
+# [View Yeoman Wiki Contents](https://github.com/yeoman/yeoman/wiki/_pages)
