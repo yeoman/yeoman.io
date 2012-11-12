@@ -9,11 +9,20 @@
 
 * provide first-class hooks for tools like WebStorm, Brackets, Sublime
 * support for authoring in ES6 for Traceur
-* better support for mobile webapps: forked view layer, remote debugging a la Adobe Inspect/Shadow
+* better support for mobile webapps
+  * forked view layer, remote debugging a la Adobe Inspect/Shadow, DevTools UI for iOS6
+* detect memory leak patterns via Esprima?
 * integration with backends (express, php) during iteration
-* better unit test execution: only run affected tests, test in all browsers, test in cloud browsers
+* better unit test execution
+  * only run affected tests, test in all browsers, test in cloud browsers
+  * UI testing a la casper.js
 * solve clientside storage, offline and sync
+  * Rich synchronization. Both real-time collab and offline.
+  * pushState incl server 
 * web components via package management
 * revolution in code reuse (fix js ecosystem fragmentation) via package management :)
+* UI widgets. Kendo, ClosureLib, Bootstrap, web components?
+* Auth (Google Connect) and Payment (Stripe or Google Payment)
+
 
 __draft__
