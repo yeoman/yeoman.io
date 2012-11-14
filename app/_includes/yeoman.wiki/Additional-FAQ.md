@@ -98,6 +98,17 @@ to
 That is as intended. Since the update check run daily, we don't want to disrupt your flow, so your previous action continues after the update check and/or update, which uses the old version loaded in memory. The next time you use Yeoman you'll be using the updated version.
 
 
+### Q: How can I change built-in task like `build` or `server`
+
+You just rename the default task, and then override it, add in your custom tasks in front or after and make sure to also include the renamed default task.
+
+Example:
+
+```js
+grunt.renameTask('server', 'old-server');
+grunt.registerTask('server', 'custom-task old-server');
+```
+
 
 ### Why does Yeoman require a CLA?
 
