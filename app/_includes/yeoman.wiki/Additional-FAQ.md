@@ -109,6 +109,9 @@ grunt.renameTask('server', 'old-server');
 grunt.registerTask('server', 'custom-task old-server');
 ```
 
+### What should I use for documenting my app
+
+View the details within [#152 ticket for recommended solutions for documentation generation](https://github.com/yeoman/yeoman/issues/152#issuecomment-7081670)
 
 ### Why does Yeoman require a CLA?
 
