@@ -11,6 +11,7 @@
 * support for authoring in ES6 for Traceur
 * better support for mobile webapps
   * forked view layer, remote debugging a la Adobe Inspect/Shadow (also see [#167](https://github.com/yeoman/yeoman/issues/167)), DevTools UI for iOS6
+* Adobe Shadow-like follow behavior for all desktop/mobile via browserstack/browerling cloud browsers
 * detect memory leak patterns via Esprima?
 * integration with backends (express, php) during iteration
 * better unit test execution
