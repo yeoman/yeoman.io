@@ -1,3 +1,5 @@
+# Additional FAQ
+
 Below you can find common questions and answers to recent issues. We'll be adding these to our main FAQ page on yeoman.io shortly.
 
 ### Q: I just got prompted to upgrade, but it is asking me for a sudo password and not working.
