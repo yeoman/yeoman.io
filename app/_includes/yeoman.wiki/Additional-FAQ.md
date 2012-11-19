@@ -44,6 +44,23 @@ This was an issue in Yeoman 0.9 and is [fixed](https://github.com/yeoman/generat
 
 It's likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read [this comment](https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733) and [this thread](https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663).
 
+This usually happens when you install Node through Homebrew, since it puts Node modules in a directory that's not in your PATH.
+
+From Homebrew:
+
+```
+==> Caveats
+Homebrew installed npm.
+We recommend prepending the following path to your PATH environment
+variable to have npm-installed binaries picked up:
+  /usr/local/share/npm/bin
+```
+
+Quick fix for advanced users is to put the following in your .bashrc/.zshrc file:
+`export PATH=/usr/local/share/npm/bin:$PATH`
+
+For beginners `brew uninstall node` and download and install Node from their [website](http://nodejs.org).
+
 ### Q: I'm trying to uninstall or reinstall and having problems. Help?
 
 See the answer to the first question.
@@ -110,6 +127,13 @@ Example:
 grunt.renameTask('server', 'old-server');
 grunt.registerTask('server', 'custom-task old-server');
 ```
+
+### Q: I'm getting `yeoman: command not found` when running Yeoman
+
+You've most likely installed Yeoman through Homebrew which puts Node modules in a path that is usually not in your PATH. To work around this, put 
+
+A friend suggested this to fix it - "export PATH=/usr/local/share/npm/bin:$PATH", so now I can access "yeoman" commands, but it returns this message now instead:
+
 
 ### What should I use for documenting my app
 
