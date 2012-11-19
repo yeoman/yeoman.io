@@ -128,11 +128,6 @@ grunt.renameTask('server', 'old-server');
 grunt.registerTask('server', 'custom-task old-server');
 ```
 
-### Q: I'm getting `yeoman: command not found` when running Yeoman
-
-You've most likely installed Yeoman through Homebrew which puts Node modules in a path that is usually not in your PATH. To work around this, open .bash_profile (open -t .bash_profile) and add this line export PATH=/usr/local/share/npm/bin:$PATH
-
-
 ### What should I use for documenting my app
 
 View the details within [#152 ticket for recommended solutions for documentation generation](https://github.com/yeoman/yeoman/issues/152#issuecomment-7081670)
