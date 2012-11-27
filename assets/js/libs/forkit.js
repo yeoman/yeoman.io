@@ -85,6 +85,9 @@
       document.addEventListener( 'mousemove', onMouseMove, false );
       document.addEventListener( 'mousedown', onMouseDown, false );
       document.addEventListener( 'mouseup', onMouseUp, false );
+      document.addEventListener( 'touchstart', onTouchStart, false);
+      document.addEventListener( 'touchmove', onTouchMove, false);
+      document.addEventListener( 'touchend', onTouchEnd, false);
       window.addEventListener( 'resize', layout, false );
 
       if( dom.closeButton ) {
@@ -101,7 +104,6 @@
   function onMouseDown( event ) {
     if( dom.curtain && state === STATE_DETACHED ) {
       event.preventDefault();
-
       dragY = event.clientY;
       dragTime = Date.now();
       dragging = true;
@@ -115,6 +117,29 @@
   }
 
   function onMouseUp( event ) {
+    if( state !== STATE_OPENED ) {
+      state = STATE_CLOSED;
+      dragging = false;
+    }
+  }
+
+  function onTouchStart( event ) {
+    if( dom.curtain && state === STATE_DETACHED ) {
+      event.preventDefault();
+      var touch = event.touches[0];
+      dragY = touch.clientY;
+      dragTime = Date.now();
+      dragging = true;
+    }
+  }
+
+  function onTouchMove( event ) {
+    var touch = event.touches[0];
+    mouse.x = touch.pageX;
+    mouse.y = touch.pageY;
+  }
+
+  function onTouchEnd( event ) {
     if( state !== STATE_OPENED ) {
       state = STATE_CLOSED;
       dragging = false;
