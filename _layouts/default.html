@@ -18,13 +18,6 @@
 </head>
 
 <body>
-    <div class="forkit-curtain">
-      <div class="close-button"></div>
-      <!-- Fork links to each repo -->
-    </div>
-    <a class="forkit" data-text="Fork me on GitHub" data-text-detached="Drag down >" href="https://github.com/yeoman/yeoman.io">
-      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub">
-    </a>
 
   {% include sidebar.html %}
 
@@ -37,6 +30,35 @@
       {% endif %}
     </article>
   </div>
+
+  <div class="forkit-curtain">
+    <div class="close-button"></div>
+      <h2>Yeoman Repositories</h2>
+      <section class="repo">
+        <h2>Yeoman</h2>
+        <a href="https://github.com/yeoman/yeoman">
+          <img src="assets/img/yeoman-003.png" class="character">
+        </a>
+        <p>Your new favorite web application stack and development tool</p>
+      </section>
+      <section class="repo">
+        <h2>Yeoman.io</h2>
+        <a href="https://github.com/yeoman/yeoman.io">
+          <img src="assets/img/yeoman-007.png" class="character">
+        </a>
+        <p>Yeoman website</p>
+      </section>
+      <section class="repo">
+        <h2>Generators</h2>
+        <a href="https://github.com/yeoman/generators">
+          <img src="assets/img/yeoman-005.png" class="character">
+        </a>
+        <p>Rails-like generator system for Yeoman that provide scaffolding for your apps</p>
+      </section>
+  </div>
+  <a class="forkit" data-text="Fork me on GitHub" data-text-detached="Drag down >" href="https://github.com/yeoman/yeoman.io">
+    <img class="forkit-img" src="https://a248.e.akamai.net/camo.github.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub">
+  </a>
 
   <script src="assets/js/libs/forkit.js"></script>
 </body>
