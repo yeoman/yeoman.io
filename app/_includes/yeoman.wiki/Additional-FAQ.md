@@ -36,6 +36,11 @@ sudo npm install -g
 sudo npm link # links your global yeoman binary to this folder location
 ```
 
+*as of yeoman 0.9.6 the contents of cli have been moved to the root yeoman directory.  Step 3 above would be:* 
+```sh
+cd yeoman
+```
+
 ### Q: When trying to list generators I receive "Cannot call method 'substr' of undefined...."
 
 This was an issue in Yeoman 0.9 and is [fixed](https://github.com/yeoman/generators/issues/21) in master. Follow the instructions above to manually update your local installation to master.
