@@ -148,3 +148,5 @@
     ```
 
 9. Enjoy Handlebars goodness in your `yeoman build` and `yeoman server`.
+
+IMPORTANT NOTICE: Customizing the server tasks using the configuration ``server: {  app: 'clean lint compass coffee handlebars open-browser watch'  }`` doesn't work out of the box with 0.9.6 (form npmjs). You must either modify your implementation as suggested in the [FAQ (Q: How can I change built-in task like build or server)](https://github.com/yeoman/yeoman/wiki/Additional-FAQ) or if you want the method described here to work, then check the instructions at https://github.com/yeoman/yeoman/wiki/Control-server-target-tasks-via-Gruntfile.js However this manual shows the main parts you need to have it all ready, you will only have to change the way you chain Handlebars task to the server task.
