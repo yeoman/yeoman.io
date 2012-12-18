@@ -28,8 +28,7 @@ The commit below includes the changes from: https://github.com/yeoman/yeoman/com
 For some reason, I couldn't find any package.json reporting version 0.9.6, but this apparently contains all 0.9.6 code only labeled as 0.9.5 so it shouldn't be a problem.
 
 To clone and get into the directory:
-``git clone https://github.com/yeoman/yeoman.git
-cd yeoman``
+```git clone https://github.com/yeoman/yeoman.git && cd yeoman```
 
 Get the last version including the server.js that accepts customization of its tasks, for that checkout to the commit identified before:
 ```git checkout -b 0.9.5 606de80e```
@@ -46,8 +45,7 @@ Reset the version to something else that 0.9.5 so that 0.9.6 doesnt overwrite th
 Now, you are ready to use this as your installation source.
 
 ### Install using NPM
-```cd cli
-npm install -g cli```
+```cd cli && npm install -g cli```
 
 Now you have yeoman 0.9.2-2 (-2 indicates our custom build)
 
