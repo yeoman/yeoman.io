@@ -8,9 +8,3 @@ A community driven overview of Yeoman related projects. Feel free to add your ow
 
 - [yeoman-bootstrap-less](https://github.com/Thomas-Lebeau/yeoman-bootstrap-less)  
   Generator to use Yeoman to generate a Twitter Bootstrap project with LESS
-
-# Yeoman articles
-
-- [Serving PHP files with Yeoman](http://fgnass.github.com/2012/08/30/yeoman.html)
-- [Yeoman meets Jekyll](http://mklabs.github.com/yeoman/yeoman-meets-jekyll/)
-- [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
