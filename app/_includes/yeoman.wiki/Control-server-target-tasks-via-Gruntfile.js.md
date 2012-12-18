@@ -1,6 +1,6 @@
 # How to control yeoman server targets tasks on your app's Gruntfile.js
 
-_This entry should be useful until a new version older than 0.9.6 is released. The developers have announced they're working on a refactor for v1, but in the meantime this is your best choice to have control on what tasks are run when you do ```yeoman server```_
+_This entry should be useful until a new version older than 0.9.6 is released. The developers have announced they're working on a refactor for v1, but in the meantime this is your best choice to have control on what tasks are run when you do ```yeoman server```. Also notice there's a simpler version in the [FAQ (Q: How can I change built-in task like build or server)](https://github.com/yeoman/yeoman/wiki/Additional-FAQ) in case you don't need to control in detail the order of the tasks run by server_
 
 Customizing the server is useful to have at your services new NPM modules, like pre-processors or compilers not available by default (e.g. Handlebars, Jade, Haml, etc.). An example appears in [Hamlbars integration](https://github.com/yeoman/yeoman/wiki/Handlebars-integration) however this requires that your running version of Yeoman includes the capability of customizing server tasks.
 
