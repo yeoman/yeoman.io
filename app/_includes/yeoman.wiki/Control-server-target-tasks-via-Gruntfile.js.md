@@ -52,6 +52,6 @@ Now you have yeoman 0.9.2-2 (-2 indicates our custom build)
 You can control server tasks as indicated in  the [Hamlbars integration](https://github.com/yeoman/yeoman/wiki/Handlebars-integration)
 
 For information about the issue of controlling server tasks, please refer to:
-https://github.com/yeoman/yeoman/pull/709
-https://github.com/yeoman/yeoman/pull/530
-https://github.com/yeoman/yeoman/pull/669
+* https://github.com/yeoman/yeoman/pull/709
+* https://github.com/yeoman/yeoman/pull/530
+* https://github.com/yeoman/yeoman/pull/669
