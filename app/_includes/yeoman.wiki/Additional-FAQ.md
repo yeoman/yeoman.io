@@ -133,6 +133,15 @@ grunt.renameTask('server', 'old-server');
 grunt.registerTask('server', 'custom-task old-server');
 ```
 
+Note that this will only be useful if your tasks doesn't write to the `temp` folder. If what you are trying to achieve is to compile something to the `temp` folder to have it served, then you must make sure your compilation happens after the `clean` task that the server includes in its targets list. 
+
+```js
+  grunt.renameTask('clean', 'original-clean');
+  grunt.registerTask('clean', 'original-clean custom-task');
+```
+
+This method must "contaminate" at least one of the tasks in the default server targets (``clean coffee compass open-browser watch``), so you can choose to make the renaming above with any of the other tasks if you'd like to have clean only perform its default behavior.
+
 ### What should I use for documenting my app
 
 View the details within [#152 ticket for recommended solutions for documentation generation](https://github.com/yeoman/yeoman/issues/152#issuecomment-7081670)
