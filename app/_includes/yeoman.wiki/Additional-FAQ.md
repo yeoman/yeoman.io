@@ -124,23 +124,7 @@ That is as intended. Since the update check run daily, we don't want to disrupt 
 
 ### Q: How can I change built-in task like `build` or `server`
 
-You just rename the default task, and then override it, add in your custom tasks in front or after and make sure to also include the renamed default task.
-
-Example:
-
-```js
-grunt.renameTask('server', 'old-server');
-grunt.registerTask('server', 'custom-task old-server');
-```
-
-Note that this will only be useful if your tasks doesn't write to the `temp` folder. If what you are trying to achieve is to compile something to the `temp` folder to have it served, then you must make sure your compilation happens after the `clean` task that the server includes in its targets list. 
-
-```js
-  grunt.renameTask('clean', 'original-clean');
-  grunt.registerTask('clean', 'original-clean custom-task');
-```
-
-This method must "contaminate" at least one of the tasks in the default server targets (``clean coffee compass open-browser watch``), so you can choose to make the renaming above with any of the other tasks if you'd like to have clean only perform its default behavior.
+Please refer to the wiki page [How to control yeoman server and build tasks from Gruntfile.js](https://github.com/yeoman/yeoman/wiki/Control-server-target-tasks-via-Gruntfile.js).
 
 ### What should I use for documenting my app
 
