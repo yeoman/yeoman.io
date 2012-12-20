@@ -124,7 +124,7 @@ That is as intended. Since the update check run daily, we don't want to disrupt 
 
 ### Q: How can I change built-in task like `build` or `server`
 
-Please refer to the wiki page [How to control yeoman server and build tasks from Gruntfile.js](https://github.com/yeoman/yeoman/wiki/Control-server-target-tasks-via-Gruntfile.js).
+Please refer to the wiki page [How to control yeoman server and build tasks from Gruntfile.js](https://github.com/yeoman/yeoman/wiki/Control-server-and-build-tasks-from-Gruntfile.js).
 
 ### What should I use for documenting my app
 
