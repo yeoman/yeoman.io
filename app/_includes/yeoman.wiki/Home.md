@@ -1,7 +1,7 @@
 ## [Yeoman Wiki Contents](https://github.com/yeoman/yeoman/wiki/_pages)
 
 ##Documentation
-* [Command Line](Documentation-Command-Line)
-* [Package Manager](Documentation-Package-Manager)
-* [Installation](Documentation-Installation)
-* [Insight](Documentation-Insight)
+* [Command Line](wiki/Documentation-Command-Line)
+* [Package Manager](wiki/Documentation-Package-Manager)
+* [Installation](wiki/Documentation-Installation)
+* [Insight](wiki/Documentation-Insight)
