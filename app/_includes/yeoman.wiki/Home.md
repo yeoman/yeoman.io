@@ -1,8 +1,6 @@
 ## [Yeoman Wiki Contents](https://github.com/yeoman/yeoman/wiki/_pages)
 
 
-[[_TOC_]]
-
 ##Documentation
 * [Command Line](wiki/Documentation-Command-Line)
 * [Package Manager](wiki/Documentation-Package-Manager)
