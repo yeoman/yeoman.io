@@ -4,18 +4,18 @@ The Yeoman Command-Line Interface (CLI) provides access to most of our features.
 
 ## Commands & Topics
 
-* [help](Documentation-yeoman-help)
-* [init](Documentation-yeoman-init)
-* [build](Documentation-yeoman-build)
-* [server](Documentation-yeoman-server)
-* [test](Documentation-yeoman-test)
-* [generator](Documentation-generators)
-* [modules](Documentation-modules)
-* [install](Documentation-yeoman-install)
-* [update](Documentation-yeoman-update)
-* [search](Documentation-yeoman-search)
-* [list](Documentation-yeoman-list)
-* [lookup](Documentation-yeoman-lookup)
-* [uninstall](Documentation-yeoman-uninstall)
+* [help](yeoman-help-%5BDocumentation%5D)
+* [init](yeoman-init-%5BDocumentation%5D)
+* [build](yeoman-build-%5BDocumentation%5D)
+* [server](yeoman-server-%5BDocumentation%5D)
+* [test](yeoman-test-%5BDocumentation%5D)
+* [generator](generators-%5BDocumentation%5D)
+* [modules](modules-%5BDocumentation%5D)
+* [install](yeoman-install-%5BDocumentation%5D)
+* [update](yeoman-update-%5BDocumentation%5D)
+* [search](yeoman-search-%5BDocumentation%5D)
+* [list](yeoman-list-%5BDocumentation%5D)
+* [lookup](yeoman-lookup-%5BDocumentation%5D)
+* [uninstall](yeoman-uninstall-%5BDocumentation%5D)
 
 <img src="http://yeoman.io/assets/img/yeoman-006.png" class="character">
