@@ -348,7 +348,7 @@ Generator.prototype.createSomething = function() {
 
 Generators can also be written in CoffeeScript, they just needs to be named with a `.coffee` extension (typically `lib/generators/generatorName/index.coffee`)
 
-```coffee
+```coffeescript
 yeoman = require 'yeoman'
 
 module.exports = class Generator extends yeoman.generators.NamedBase
