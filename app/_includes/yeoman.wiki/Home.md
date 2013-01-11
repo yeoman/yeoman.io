@@ -2,7 +2,7 @@
 
 
 ##Documentation
-* [Command Line](wiki/Documentation-Command-Line)
-* [Package Manager](wiki/Documentation-Package-Manager)
-* [Installation](wiki/Documentation-Installation)
-* [Insight](wiki/Documentation-Insight)
+* [Command Line](wiki/Command-Line-%5BDocumentation%5D)
+* [Package Manager](wiki/Package-Manager-%5BDocumentation%5D)
+* [Installation](wiki/Installation-%5BDocumentation%5D)
+* [Insight](wiki/Insight-%5BDocumentation%5D)
