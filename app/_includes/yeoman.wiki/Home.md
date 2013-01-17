@@ -3,7 +3,7 @@
 
 ## Documentation
 
-- [[Documentation__Installation|Installation]]
+- [[Installation|Documentation__Installation]]
 - [[Documentation__Command-Line|Command-line]]
   - [[Documentation__yeoman-init|yeoman-init]]
   - [[Documentation__yeoman-build|yeoman-build]]
