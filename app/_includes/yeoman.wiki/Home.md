@@ -1,4 +1,4 @@
-This wiki is open for any to edit. Feel free to fix grammar and other things. For big changes, open and issue discussion it first.
+This wiki is open for anyone to edit. Feel free to fix grammar and other things. For big changes, first open an issue for discussion.
 
 
 ## Pages
