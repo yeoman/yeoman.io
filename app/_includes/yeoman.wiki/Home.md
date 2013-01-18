@@ -1,3 +1,2 @@
-## [Yeoman Wiki Contents](https://github.com/yeoman/yeoman/wiki/_pages)
-
-Documentation ==>
+- [Table of contents](https://github.com/yeoman/yeoman/wiki/_pages)
+- Documentation ==>
