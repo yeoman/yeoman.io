@@ -26,16 +26,10 @@ Eric Bidelman working on Insight (Yeoman analytics and logging)
 
 ### External Contributors:
 
-Sindre Sorhus
+Sindre Sorhus  
 Mickael Daniel
 
 who are both helping greatly with pushing development of the CLI and other aspects of the project forward.
-
-## Contributing
-
-Interested in helping out? Great. We welcome any and all contributions to the project and our style-guidelines can be found in the project README. 
-
-Please note that Yeoman is an opinionated workflow by choice and as such, we want to focus on delivering a solid user experience with as little overall bloat as possible. Before beginning any large pieces of work, feel free to open up an issue for discussion where we can talk through whether a feature fits in well with the overall project direction.
 
 ## A note on repos
 
