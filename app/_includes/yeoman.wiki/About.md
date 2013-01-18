@@ -20,8 +20,8 @@ The Chrome Developer relations team and select external contributors from the co
 
 ### Google:
 
-Paul Irish driving the project
-Addy Osmani leading the development of the CLI and Docs
+Paul Irish driving the project  
+Addy Osmani leading the development of the CLI and Docs  
 Eric Bidelman working on Insight (Yeoman analytics and logging)
 
 ### External Contributors:
