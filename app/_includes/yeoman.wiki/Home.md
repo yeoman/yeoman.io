@@ -1,3 +1,6 @@
+This wiki is open for any to edit. Feel free to fix grammar and other things. For big changes, open and issue discussion it first.
+
+
 ## Pages
 
 - [[Manual Install]]
@@ -5,16 +8,12 @@
 - [[FAQ]]
 - [[Additional FAQ]]
 - [[Articles]]
-- [[Customization]]
-  - [[Stylus integration]]
-  - [[Handlebars integration]]
-  - [[Control server and build tasks from Gruntfile.js]]
+- Customization
+  - [[Stylus Integration]]
+  - [[Handlebars Integration]]
+  - [[Customize server and build task]]
 - [[Goals and Roadmap]]
-- [[Related projects]]
-- [[Testing generators]]
-- [[Tools Used]]
-- [[Uninstall]]
-- [[Yeoman character language doc]]
+- [[Related Projects]]
 
 
 ## Documentation

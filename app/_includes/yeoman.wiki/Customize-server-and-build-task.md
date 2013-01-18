@@ -1,4 +1,4 @@
-# How to control yeoman server targets tasks from your app's Gruntfile.js
+# Customize server and build task
 
 _This entry should be useful until a new version older than 0.9.6 is released. The developers have announced they're working on a refactor for v1, but in the meantime this is your best choice to have control on what tasks are run when you do ```yeoman server```._
 
@@ -11,7 +11,7 @@ grunt.renameTask('server', 'old-server');
 grunt.registerTask('server', 'custom-task old-server');
 ```
 
-Note that this will only be useful if your tasks doesn't write to the `temp` folder. If what you are trying to achieve is to compile something to the `temp` folder to have it served, then you must make sure your compilation happens after the `clean` task that the server includes in its targets list. 
+Note that this will only be useful if your tasks doesn't write to the `temp` folder. If what you are trying to achieve is to compile something to the `temp` folder to have it served, then you must make sure your compilation happens after the `clean` task that the server includes in its targets list.
 
 ```js
   grunt.renameTask('clean', 'original-clean');

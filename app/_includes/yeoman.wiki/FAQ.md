@@ -1,5 +1,4 @@
-# FREQUENTLY ASKED QUESTIONS
-
+# Frequently Asked Questions
 
 ### What are the goals of the project?
 
@@ -55,6 +54,33 @@ Thanks for your interest in submitting an issue. In order for us to help you ple
 * Shared the output from `echo $PATH $NODE_PATH` and `brew doctor` as this can also help track down the issue.
 
 Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/issues) on our GitHub repo.
+
+
+### What tools do Yeoman make use of?
+
+* [Grunt](https://github.com/cowboy/grunt)
+* [Twitter Bower ](http://twitter.github.com/bower)
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap)
+* [Node Build Script](https://github.com/h5bp/node-build-script)
+* [HTML5 Boilerplate](http://html5boilerplate.com)
+* [Compass](http://compass-style.org/)
+* [Modernizr](https://github.com/Modernizr/Modernizr/)
+* [Node](http://nodejs.org)
+* [NPM](http://npmjs.org)
+* [socket.io](http://socket.io)
+* [CoffeeScript](http://coffeescript.org)
+* [Mocha](http://visionmedia.github.com/mocha/)
+* [Jasmine](http://pivotal.github.com/jasmine/)
+* [PhantomJS](http://phantomjs.org/)
+* [Require.js](http://requirejs.org/)
+* [RequireHM](https://github.com/jrburke/require-hm)
+* [optipng](http://optipng.sourceforge.net/)
+* [JPEGTran](http://jpegclub.org/jpegtran/)
+* [connect](https://npmjs.org/package/connect)
+* [html-minifier](https://npmjs.org/package/html-minifier)
+* [clean-css](https://github.com/GoalSmashers/clean-css)
+* [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
+
 
 ### My question isn't answered! Help?
 

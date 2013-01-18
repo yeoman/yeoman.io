@@ -17,7 +17,7 @@
     // Gruntfile.js
     module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-contrib-handlebars');
-      
+
       grunt.initConfig({
 
         handlebars: {
@@ -48,7 +48,7 @@
     // Gruntfile.js
     module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-contrib-handlebars');
-      
+
       grunt.initConfig({
 
         handlebars: {
@@ -88,7 +88,7 @@
     // Gruntfile.js
     module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-contrib-handlebars');
-      
+
       grunt.initConfig({
 
         handlebars: {
@@ -132,7 +132,7 @@
       grunt.registerTask('build', 'intro clean compass coffee handlebars mkdirs usemin-handler rjs concat css min img rev usemin manifest copy time');
     };
     ```
-7. Run `yeoman install handlebars` to install the handlebars runtime. 
+7. Run `yeoman install handlebars` to install the handlebars runtime.
 
 8. Add the generated compiled-templates.js to your index.html, preferably in your build blocks:
 

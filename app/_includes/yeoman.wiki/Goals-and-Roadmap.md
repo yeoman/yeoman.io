@@ -1,4 +1,4 @@
-## Overall project goals: 
+## Overall project goals
 
 * improve developer productivity and happiness in building a web application
 * aggregate the best in class offerings to front end devs.
@@ -19,7 +19,7 @@
   * UI testing a la casper.js
 * solve clientside storage, offline and sync
   * Rich synchronization. Both real-time collab and offline.
-  * pushState incl server 
+  * pushState incl server
 * web components via package management
 * revolution in code reuse (fix js ecosystem fragmentation) via package management :)
 * UI widgets. Kendo, ClosureLib, Bootstrap, web components?
