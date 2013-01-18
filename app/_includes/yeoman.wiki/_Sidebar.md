@@ -1,7 +1,7 @@
 # Documentation
 
 - [[Installation|Documentation__Installation]]
-- [[Command-line|Documentation__Command-Line]]
+- [[Command Line|Documentation__Command-Line]]
   - [[yeoman-init|Documentation__yeoman-init]]
   - [[yeoman-build|Documentation__yeoman-build]]
   - [[yeoman-server|Documentation__yeoman-server]]
