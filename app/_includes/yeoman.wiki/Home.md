@@ -1,3 +1,22 @@
+## Pages
+
+- [[Manual Install]]
+- [[About]]
+- [[FAQ]]
+- [[Additional FAQ]]
+- [[Articles]]
+- [[Customization]]
+  - [[Stylus integration]]
+  - [[Handlebars integration]]
+  - [[Control server and build tasks from Gruntfile.js]]
+- [[Goals and Roadmap]]
+- [[Related projects]]
+- [[Testing generators]]
+- [[Tools Used]]
+- [[Uninstall]]
+- [[Yeoman character language doc]]
+
+
 ## Documentation
 
 - [[Installation]]
@@ -16,23 +35,3 @@
 - [[Generators]]
 - [[Modules]]
 - [[Insight]]
-
-
-## Other
-
-- [[Manual Install]]
-- [[About]]
-- [[FAQ]]
-- [[Additional FAQ]]
-- [[Articles]]
-- [[Customization]]
-  - [[Stylus integration]]
-  - [[Handlebars integration]]
-  - [[How to control yeoman server targets tasks from your app's Gruntfile.js]]
-- [[Goals and Roadmap]]
-- [[Yeoman related projects]]
-- [[Testing generators]]
-- [[Tools Used]]
-- [[Uninstall]]
-- [[Yeoman character language doc]]
-
