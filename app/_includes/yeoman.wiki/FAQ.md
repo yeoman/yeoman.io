@@ -18,7 +18,7 @@ A package manager runs through a command-line interface and is a tool for automa
 
 ### How does Yeoman differ from Grunt?
 
-Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily.[Grunt.js](http://gruntjs.com) is one of these tools and powers our underlying build process and task plugin architecture.
+Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily. [Grunt.js](http://gruntjs.com) is one of these tools and powers our underlying build process and task plugin architecture.
 
 On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Twitter Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js/r.js out of the box. With additional features like wiring, an improved `server` and `init`, we like to think of ourselves as a helper project on top of Grunt.
 
