@@ -24,7 +24,8 @@ The script recommends how to install what's missing, but a more verbose descript
 2. [Download](http://www.python.org/getit/) and install Python 2.7.
 3. Add python to your system path. Add "`C:\Python27;`" to the `PATH` env variable. See [these instructions](http://java.com/en/download/help/path.xml).
 
-###  Mac & Linux
+###  Mac & Linux 
+_(Debian and ArchLinux users can check below)_.
 
 1. Use system package manager to install some necessary dependencies
   * On Mac, install Homebrew: `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`. After installing, run `brew doctor` and follow the recommendations. 
