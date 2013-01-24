@@ -1,5 +1,5 @@
-# Gist
 
+# Get the Gist of It
 Download [here](https://gist.github.com/ffcbf037e6e856e1010d)
 
 # How-To
