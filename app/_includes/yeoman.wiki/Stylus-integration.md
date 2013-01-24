@@ -1,28 +1,28 @@
-## Gist
+# Gist
 
 Download [here](https://gist.github.com/ffcbf037e6e856e1010d)
 
-## How-To
+# How-To
 
-### Part I: Grunt
+## Part I: Grunt
 
-#### Add `grunt-contrib-stylus` as a `devDependency`
+### Add `grunt-contrib-stylus` as a `devDependency`
 
 Run `npm install -D grunt-contrib-stylus`. This will add it to your `package.json` after installing. 
 
 (If you want to use the node-canvas fallback for gradients, you may also run `npm install -D canvas`. See nib doc.)
 
 
-#### Declare the task in `Gruntfile.js`
+### Declare the task in `Gruntfile.js`
 
 ```
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.registerTask('compass', ['stylus']);
 ```
 
-### Part II: Stylus
+## Part II: Stylus
 
-#### Configure Compilation 
+### Configure Compilation 
 
 ```
     stylus: {
@@ -42,7 +42,7 @@ The `paths` definition let you do `@import 'nib'` in stylesheets.
 
 
 
-#### Configure `--watch` Behavior
+### Configure `--watch` Behavior
 ```
       stylus: {
         files: [
@@ -52,4 +52,4 @@ The `paths` definition let you do `@import 'nib'` in stylesheets.
       },
 ```
 
-### (optional) Part III: Delete the Compass and Compass watch configurations
+## Part III (optional): Delete the Compass and Compass watch configurations
