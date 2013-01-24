@@ -18,7 +18,7 @@ The script recommends how to install what's missing, but a more verbose descript
 
 ###Windows
 
-**NOTE:** Windows is not officially supported yet. Some things might not work!
+**NOTE:** [Windows is not officially supported yet](https://github.com/yeoman/yeoman/issues/216). Some things might not work!
 
 1. Follow the instructions [here](http://www.decodize.com/css/installing-yeoman-front-end-development-stack-windows/#chocolatey) to install Yeoman and its dependencies using Chocolatey.
 2. [Download](http://www.python.org/getit/) and install Python 2.7.
