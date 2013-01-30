@@ -34,5 +34,10 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
  * You must first commit your ```dist``` directory to your default (master) branch before running the git subtree command.
  * The ```git subtree``` command must be called from the root directory.
  * The ```--prefix``` option must be the full path to your ```dist``` directory.
+ * GitHub Pages uses the ```gh-pages``` branch for deploying project pages. Users & Organization Pages use the ```master``` branch. This means you might want to use master as your subtree branch and set up a different branch for your app source.
 
 
+### Extra
+ [Git Subtree Documentation](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
+ [Yeoman Build](https://github.com/yeoman/yeoman/wiki/yeoman-build)
+ [Github Pages](https://help.github.com/articles/user-organization-and-project-pages)
