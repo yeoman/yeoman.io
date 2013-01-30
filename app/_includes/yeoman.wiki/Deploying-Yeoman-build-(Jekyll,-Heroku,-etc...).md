@@ -6,9 +6,9 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
 
 2. Add the ```dist``` directory to your repository and commit it with your project.
 
-```
-git add dist && git commit -m "Initial dist subtree commit"
-```
+   ```
+   git add dist && git commit -m "Initial dist subtree commit"
+   ```
 
 3. Once the ```dist``` directory is part of your project we can use ```git subtree``` to set up a separate repository on a different branch.
 
