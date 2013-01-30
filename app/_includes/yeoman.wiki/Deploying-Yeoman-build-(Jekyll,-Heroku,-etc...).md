@@ -12,8 +12,8 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
 
 3. Once the ```dist``` directory is part of your project we can use ```git subtree``` to set up a separate repository on a different branch.
 
-```
-git subtree push --prefix dist origin gh-pages
-```
+   ```
+   git subtree push --prefix dist origin gh-pages
+   ```
 
 This examples assumes the ```dist``` directory is being deployed to GitHub Pages.
