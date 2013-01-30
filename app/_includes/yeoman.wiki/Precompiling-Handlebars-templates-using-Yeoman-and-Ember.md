@@ -1,6 +1,6 @@
-A regular question we are asked is 'How do I load Handlebar templates using Yeoman?'. Some of our generators include support for a templates directory, but if you wish to use Handlebars to precompile these templates the following guide should help.
+A regular question we are asked is 'How do I precompile Handlebar templates using Yeoman?'. Some of our generators include support for a templates directory and if you wish to precompile templates for Ember.js applications, the following guide should help.
 
-Note: Whilst this guide demonstrates how to precompile templates for use with Ember, there is nothing here that should prevent you from using the solution with another Yeoman generator.
+Note: Users wishing to use one of our other generators with Handlebar precompilation as a part of their build may be interested in our related [Handlebars Integration](https://github.com/yeoman/yeoman/wiki/Handlebars-integration) guide which uses `grunt-contrib-handlebars`.
 
 Let's begin by scaffolding out a brand new Ember.js application.
 
