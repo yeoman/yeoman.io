@@ -90,3 +90,11 @@ watch: {
 ```
 
 and that's it!
+
+Precompilation can also be added as a part of your build process by overriding the default build profile. In your Gruntfile, you can use:
+
+```sh
+  grunt.registerTask('build', 'intro clean compass coffee ember_templates mkdirs usemin-handler rjs concat css min img rev usemin manifest copy time');
+```
+
+to achieve this.
