@@ -1,16 +1,19 @@
+Our initial release of Yeoman attempted to be a lot of things to a lot of people. We learned a number of lessons from this process, including the importance of clear messaging around the tools used in our toolbelt and how our workflow might be customized. We aim to make the experience of using Yeoman more streamlined in 1.0 keeping in mind the following:
+
 ## Yeoman 0.9 pain points
 
 * Confusion with Grunt, no clear migration path
-* Grunt tasks, Yeoman tasks, difference?
+* Grunt tasks, Yeoman tasks - it's not entirely clear what the differences are.
 * 10-20 minutes to install all dependencies
-* A little too opinionated in some areas
+* A little too opinionated in some areas. It's not clear how to customize.
 * Not enough flexibility with existing projects
 * Package management only occasionally worked
 
 ## Clearing up misconceptions
 
 * Isn't meant to replace Grunt, but be used alongside it
-* Is meant to be used for workflow. Grunt is the build process
+* Is an opinionated collection of Grunt tasks, with scaffolding
+* Is meant to be used for workflow alone. Grunt is the build process
 * Not a Mac/Unix only tool. Windows support coming
 * Not recommended for building websites
 * Shouldn't be used as a blanket "replace everything" solution
