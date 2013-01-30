@@ -18,7 +18,12 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
    git subtree push --prefix dist origin gh-pages
    ```
 
-Note: prefix must be the full path to your ```dist``` directory. This is assuming ```dist``` is in your root directory.
+   Note: prefix must be the full path to your ```dist``` directory. This is assuming ```dist``` is in your root directory.
 
-This examples assumes the ```dist``` directory is being deployed to GitHub Pages.
+
+4. Now you can commit to your entire repository to your default (master) branch and when ever you want to deploy the ```dist``` directory you can run:
+
+   ```
+   git subtree push --prefix dist origin gh-pages
+   ```
 
