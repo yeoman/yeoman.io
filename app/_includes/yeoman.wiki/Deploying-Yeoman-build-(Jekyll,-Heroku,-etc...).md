@@ -4,6 +4,7 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
 
 1. Remove the ```dist``` directory from the ```.gitignore``` file.
 
+
 2. Add the ```dist``` directory to your repository and commit it with your project.
 
    ```
@@ -13,7 +14,11 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
 3. Once the ```dist``` directory is part of your project we can use ```git subtree``` to set up a separate repository on a different branch.
 
    ```
+   // Deploying dist to GitHub Pages
    git subtree push --prefix dist origin gh-pages
    ```
 
+Note: prefix must be the full path to your ```dist``` directory. This is assuming ```dist``` is in your root directory.
+
 This examples assumes the ```dist``` directory is being deployed to GitHub Pages.
+
