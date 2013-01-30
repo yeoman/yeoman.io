@@ -10,7 +10,7 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
 git add dist && git commit -m "Initial dist subtree commit"
 ```
 
-4. Once the ```dist``` directory is part of your project we can use ```git subtree``` to set up a separate repository on a different branch.
+3. Once the ```dist``` directory is part of your project we can use ```git subtree``` to set up a separate repository on a different branch.
 
 ```
 git subtree push --prefix dist origin gh-pages
