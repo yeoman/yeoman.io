@@ -84,17 +84,9 @@ You can also enable auto-reload by addind this in you Gruntfile:
 watch: {
   ember_templates: {
     files: 'app/scripts/**/*.handlebars',
-    tasks: 'ember_templates reload'
+    tasks: 'ember_templates livereload'
   },
 }
 ```
 
 and that's it!
-
-Precompilation can also be added as a part of your build process by overriding the default build profile. In your Gruntfile, you can use:
-
-```sh
-  grunt.registerTask('build', 'intro clean compass coffee ember_templates mkdirs usemin-handler rjs concat css min img rev usemin manifest copy time');
-```
-
-to achieve this.
