@@ -4,6 +4,30 @@ A typical workflow using Express would be to first use the express binary to gen
 
 We attempted to answer these questions in an experimental Yeoman sub-project called Express Stack. It's a proof of concept end-to-end stack for development using [Yeoman](http://yeoman.io) 0.9.6, Express and [AngularJS](http://angularjs.org). 
 
+<pre>
+                                                                             Command flow
+
+                                          +----------------------------+
+                                          |                            |
+                          +-------------&gt; |  AngularJS CRUD Generator  |      init angularcrud
+                          |               |                            |      init angularcrud:crud
+                          |               +----------------------------+
+      +------------------+|
+      |                  ||
+      |     Yeoman       |+               +----------------------------+
+      |                  | +              |                            |      init express
+      +------------------+ +------------&gt; |  ExpressJS CRUD Generator  |
+               +                          |                            |
+               v                          +----------------------------+
+        Middleware (server.js)
+               + ^
+               | |
+               | |   Enable LiveReload, asset serving
+               v +
+      +------------------+
+      |   ExpressJS      |
+      +------------------+</pre>
+
 Note: This project is currently considered an experiment and is likely to break after Yeoman 1.0 is released. We do however have plans on upgrading it soon after to maintain forwards and backwards compatibility.
 
 The high-level goals of the stack are to provide:
