@@ -27,3 +27,12 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
    git subtree push --prefix dist origin gh-pages
    ```
 
+
+
+### Some common errors
+ * By default the ```dist``` directory is going to be ignored by git. It is important to remove it from the .gitignore file.
+ * You must first commit your ```dist``` directory to your default (master) branch before running the git subtree command.
+ * The ```git subtree``` command must be called from the root directory.
+ * The ```--prefix``` option must be the full path to your ```dist``` directory.
+
+
