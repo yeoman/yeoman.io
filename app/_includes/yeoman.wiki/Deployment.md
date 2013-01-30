@@ -35,6 +35,7 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
  * The ```git subtree``` command must be called from the root directory.
  * The ```--prefix``` option must be the full path to your ```dist``` directory.
  * GitHub Pages uses the ```gh-pages``` branch for deploying project pages. Users & Organization Pages use the ```master``` branch. This means you might want to use master as your subtree branch and set up a different branch for your app source.
+ * You might get an error like this `Updates were rejected because the tip of your current branch is behind`. You can solve this by [force pushing to Heroku](http://stackoverflow.com/a/13403588/64949) (be careful though).
 
 
 ### Extra
