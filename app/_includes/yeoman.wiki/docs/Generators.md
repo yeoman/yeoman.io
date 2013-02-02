@@ -201,7 +201,7 @@ function Generator() {
   this.sourceRoot(__dirname, 'templates');
 }
 
-util.inherits(Generator, yeoman.generatos.NamedBase);
+util.inherits(Generator, yeoman.generators.NamedBase);
 ```
 
 First, notice that we are inheriting from `yeoman.Generators.NamedBase` instead of `yeoman.Generators.Base`. This means that our generator expects at least one argument, which will be the name of the initializer, and will be available in our code in the variable `name`.
@@ -237,7 +237,7 @@ function Generator() {
   // if your templates/ location differ, feel free to set it with sourceRoot()
 }
 
-util.inherits(Generator, yeoman.generatos.NamedBase);
+util.inherits(Generator, yeoman.generators.NamedBase);
 
 Generator.prototype.copyInitializerFile = function() {
   this.copy('initializer.js', 'config/initializers/' + this.name + '.js');
