@@ -24,6 +24,6 @@
 * revolution in code reuse (fix js ecosystem fragmentation) via package management :)
 * UI widgets. Kendo, ClosureLib, Bootstrap, web components?
 * Auth (Google Connect) and Payment (Stripe or Google Payment)
-
+* Integration with [thrill](https://github.com/turn/thrill) for running tests in all browsers at the same time
 
 __draft__
