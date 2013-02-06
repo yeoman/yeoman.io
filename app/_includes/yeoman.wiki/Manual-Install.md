@@ -20,9 +20,19 @@ The script recommends how to install what's missing, but a more verbose descript
 
 **NOTE:** [Windows is not officially supported yet](https://github.com/yeoman/yeoman/issues/216). Some things might not work!
 
-1. Follow the instructions [here](http://www.decodize.com/css/installing-yeoman-front-end-development-stack-windows/#chocolatey) to install Yeoman and its dependencies using Chocolatey.
-2. [Download](http://www.python.org/getit/) and install Python 2.7.
-3. Add python to your system path. Add "`C:\Python27;`" to the `PATH` env variable. See [these instructions](http://java.com/en/download/help/path.xml).
+To install Yeoman and its dependencies using Chocolatey:
+
+> 1. Open cmd & paste
+
+    C:> @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://bit.ly/psChocInstall'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
+    
+> 2. Type
+
+```c:> cinst yeoman```
+    
+> It will fetch & install all dependent files. Done!
+
+Full instructions [here](http://www.decodize.com/css/installing-yeoman-front-end-development-stack-windows/#chocolatey), which includes how to install each component individually if Chocolatey doesn't work.
 
 ###  Mac & Linux 
 _(Debian and ArchLinux users can check below)_.
