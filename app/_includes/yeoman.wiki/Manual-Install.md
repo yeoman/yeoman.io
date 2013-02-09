@@ -26,7 +26,7 @@ To install Yeoman and its dependencies using Chocolatey:
 
     C:> @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://bit.ly/psChocInstall'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
     
-> 2. Type
+> 1. Type
 
 ```c:> cinst yeoman```
     
