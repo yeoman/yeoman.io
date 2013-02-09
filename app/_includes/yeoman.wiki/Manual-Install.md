@@ -22,11 +22,11 @@ The script recommends how to install what's missing, but a more verbose descript
 
 To install Yeoman and its dependencies using Chocolatey:
 
-> 1. Open cmd & paste
+> 1 | Open cmd & paste
 
     C:> @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://bit.ly/psChocInstall'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
     
-> 2. Type
+> 2 | Type
 
 ```c:> cinst yeoman```
     
