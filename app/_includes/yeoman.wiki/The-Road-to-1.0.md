@@ -75,3 +75,7 @@ Our initial release of Yeoman attempted to be a lot of things to a lot of people
 * Autocompletion
 * Improved listing times
 * Improved error handling and messages
+
+<hr>
+
+If you're interested in [Migrating your 0.9 app to 1.0 then follow this migration guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.9.6-to-1.0).
