@@ -2,28 +2,6 @@
 
 Below you can find common questions and answers to recent issues. We'll be adding these to our main FAQ page on yeoman.io shortly.
 
-### Q: I just got prompted to upgrade, but it is asking me for a sudo password and not working.
-
-
-We [shipped v0.9.0](https://github.com/yeoman/yeoman/blob/v0.9/cli/package.json#L33) with an npm uninstall script [with an error](https://github.com/yeoman/yeoman/issues/327#issuecomment-8446662). For some people, this has resulted in an un/re-install procedure that asks for two sudo passwords. The second one is actually asking for the `nobody` user, whoever that is... :)
-
-A full and comprehensive uninstallation of 0.9.0 to upgrade to the latest yeoman is this:
-
-```sh
-sudo rm -rf ~/.yeoman
-sudo rm -rf ~/.npm/yeoman*
-sudo rm -rf /usr/local/lib/node_modules/yeoman
-npm cache clean yeoman
-
-# and install:
-npm install -g yeoman # may need sudo
-```
-
-For clarity, the bug is in line 29 of `/usr/local/lib/node_modules/yeoman/package.json`.
-This bug is fixed in _master_ and ships in 0.9.1.
-
-
-
 ### Q: I'd like to use the latest Yeoman that's in git _master_. How?
 
 To get a prerelease version of Yeoman, you can install from git master. This is also recommended for developing Yeoman.
