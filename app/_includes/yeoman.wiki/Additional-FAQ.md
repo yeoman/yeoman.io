@@ -1,3 +1,5 @@
+**Note: The documentation below is for an older version of Yeoman and has been deprecated.**
+
 # Additional FAQ
 
 Below you can find common questions and answers to recent issues. We'll be adding these to our main FAQ page on yeoman.io shortly.
