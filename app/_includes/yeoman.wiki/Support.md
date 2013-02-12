@@ -21,15 +21,15 @@ Our scaffolds (such as angular above) are community-driven, with several of our 
 
 ### Build issues
 
-As we recommend using Grunt for building your projects, the Grunt issue tracker should be used for support issues around building projects. Keep in mind however that if you have an issue with a specific task (e.g CoffeeScript compilation) it probably makes more sense to submit a bug report to grunt-contrib to address this as the official Grunt tracker should not be used for such issues.
+As we recommend using Grunt for building your projects, the [Grunt issue tracker](https://github.com/gruntjs/grunt/issues) should be used for support issues around building projects. Keep in mind however that if you have an issue with a specific task (e.g CoffeeScript compilation) it probably makes more sense to submit a bug report to [grunt-contrib](https://github.com/gruntjs/grunt-contrib) to address this as the official Grunt tracker should not be used for such issues.
 
 Issue trackers for some of the common tasks used in the Yeoman workflow can be found below:
 
-* coffee
-* compass
-* handlebars
-* requirejs
+* [coffee](https://github.com/gruntjs/grunt-contrib-coffee/)
+* [compress](https://github.com/gruntjs/grunt-contrib-compress/)
+* [handlebars](https://github.com/gruntjs/grunt-contrib-handlebars/)
+* [requirejs](https://github.com/gruntjs/grunt-contrib-requirejs/)
 
 ### Package management issues
 
-If you have installed a package using Bower, updated a package or are experiencing issues managing packages, the Bower issue tracker should be used for submitting bug reports. The Yeoman workflow typically relies on Grunt for minification/concat of such dependencies, however we will let you know if an issue submitted is a Bower issue or a Yeoman issue.
+If you have installed a package using Bower, updated a package or are experiencing issues managing packages, the [Bower issue tracker](https://github.com/twitter/bower) should be used for submitting bug reports. The Yeoman workflow typically relies on Grunt for minification/concat of such dependencies, however we will let you know if an issue submitted is a Bower issue or a Yeoman issue.
