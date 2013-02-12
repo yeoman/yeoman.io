@@ -8,6 +8,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[Manual Install]]
 - [[About]]
 - [[FAQ]]
+- [[Support]]
 - [[Additional FAQ]]
 - [[Goals and Roadmap]]
 - [[Articles]]
