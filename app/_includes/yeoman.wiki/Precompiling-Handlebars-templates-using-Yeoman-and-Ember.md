@@ -71,7 +71,7 @@ $  ls app/scripts/templates
 application.handlebars application.js         forms.handlebars       forms.js
 
 ```
-Then you can access load the templates from your html file like normal js files:
+Then you can load the compiled templates in your html file like normal js files:
 
 ```html
   <script src="scripts/templates/application.js"></script>
