@@ -28,7 +28,7 @@ Once installed, you can begin to use the yo tool to scaffold out new application
 yo webapp
 ```
 
-This is the default generator and will scaffold out a project containing HTML5 Boilerplate, jQuery and Modernizr. Twitter Bootstrap can be optionally installed from the prompt you will be presented.
+This is the default generator and will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com) and [Modernizr](http://modernizr.com). [Twitter Bootstrap](http://twitter.github.com/bootstrap) can be optionally installed from the prompt you will be presented.
 
 Each project created with yo will also pull in relevant Grunt tasks which we feel are needed or useful for your workflow. 
 
