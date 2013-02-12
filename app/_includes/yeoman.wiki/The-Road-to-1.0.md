@@ -3,10 +3,11 @@ Our initial release of Yeoman attempted to be a lot of things to a lot of people
 ## Yeoman 0.9 pain points
 
 * Confusion with Grunt, no clear migration path
-* Grunt tasks, Yeoman tasks - it's not entirely clear what the differences are.
-* 10-20 minutes to install all dependencies
-* A little too opinionated in some areas. It's not clear how to customize.
 * Not enough flexibility with existing projects
+* Grunt tasks, Yeoman tasks - it's not entirely clear what the differences are
+* 10-20 minutes to install all dependencies
+* A little too opinionated in some areas. It's not clear how to customize
+
 * Package management only occasionally worked
 
 ## Clearing up misconceptions
