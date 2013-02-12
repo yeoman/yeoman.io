@@ -78,7 +78,7 @@ Then you can access load the templates from your html file like normal js files:
   <script src="scripts/templates/forms.js"></script>
 ```
 
-You can also enable auto-reload by addind this in you Gruntfile:
+You can also enable auto-reload by adding this in your Gruntfile:
 
 ```js
 watch: {
