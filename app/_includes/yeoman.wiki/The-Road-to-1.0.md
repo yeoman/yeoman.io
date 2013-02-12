@@ -7,7 +7,6 @@ Our initial release of Yeoman attempted to be a lot of things to a lot of people
 * Grunt tasks, Yeoman tasks - it's not entirely clear what the differences are
 * 10-20 minutes to install all dependencies
 * A little too opinionated in some areas. It's not clear how to customize
-
 * Package management only occasionally worked
 
 ## Clearing up misconceptions
