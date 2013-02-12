@@ -6,7 +6,6 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[The Road to 1.0]]
 - [[Migrate from 0.9.6 to 1.0]]
 - [[Getting started with 1.0]]
-- [[Manual Install]]
 - [[About]]
 - [[FAQ]]
 - [[Support]]
