@@ -16,13 +16,17 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 
 First you’ll need to install some tools (the webapp generator is bundled):
 
-```npm install -g yo generator-angular grunt-cli bower```
+```
+npm install -g yo generator-angular grunt-cli bower
+```
 
 Once installed, you can begin to use the yo tool to scaffold out new applications.
 
 ### Basic scaffolding
 
-```yo webapp```
+```
+yo webapp
+```
 
 This is the default generator and will scaffold out a project containing HTML5 Boilerplate, jQuery and Modernizr. Twitter Bootstrap can be optionally installed from the prompt you will be presented.
 
@@ -32,7 +36,9 @@ The webapp generator is considered the simplest possible start for a webapp. We 
 
 ### Scaffolding an AngularJS app
 
-```yo angular```
+```
+yo angular
+```
 
 Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Testacular unit tests.
 
