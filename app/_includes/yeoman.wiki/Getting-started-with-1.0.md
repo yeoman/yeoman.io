@@ -2,9 +2,9 @@
 
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:
 
-* yo - the scaffolding tool from Yeoman
-* grunt - the build tool
-* bower - the package management tool
+* [yo](https://github.com/yeoman/yo) - the scaffolding tool from Yeoman
+* [grunt](http://gruntjs.com) - the build tool
+* [bower](http://twitter.github.com/bower) - the package management tool
 
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.
 
@@ -120,4 +120,4 @@ It’s as simple as that.
 
 ### I used Yeoman 0.9.x and would like to upgrade to 1.0. What do I do?
 
-We have an upgrade guide to assist with moving your 0.9.x projects over to 1.0. Note that we no longer offer a yeoman binary which wraps both grunt and bower, but instead use a new yo binary for your scaffolding needs. The guide will explain how this workflow applies to upgrading in more detail.
+We have an [upgrade guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.9.6-to-1.0) to assist with moving your 0.9.x projects over to 1.0. Note that we no longer offer a yeoman binary which wraps both grunt and bower, but instead use a new yo binary for your scaffolding needs. The guide will explain how this workflow applies to upgrading in more detail.
