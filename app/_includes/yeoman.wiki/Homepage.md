@@ -48,6 +48,7 @@ A complete workflow might look like this:
 
 ```sh
 yo webapp                      # scaffold out a skeleton web app project
+npm install && bower install   # install default dependencies
 bower install underscore       # install a dependency for your project from Bower
 grunt                          # build the application for deployment
 ```
