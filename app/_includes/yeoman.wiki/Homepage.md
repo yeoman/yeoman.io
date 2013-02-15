@@ -45,10 +45,17 @@ You may also want to install and use additional generators. This is done through
 
 A complete workflow might look like this:
 
+```shell
+yo webapp                      # scaffold out a web app skeleton project using the bundled generator
+bower install underscore       # install a dependency for your project from Bower
+grunt                          # build the application for deployment
 ```
+
+Or with the AngularJS generator:
+
+```shell
 npm install generator-angular  # install the generator you want
-yo webapp                      # scaffold out a new webapp
-yo angular                     # (optional) add framework specific views, models
+yo angular                     # scaffold out a AngularJS project
 bower install angular-ui       # install a dependency for your project from Bower
 grunt test                     # test your app
 grunt server                   # preview your app
@@ -58,7 +65,7 @@ grunt                          # build the application for deployment
 For the 1.0 beta, we support generators for webapp, angular, mocha and testacular. More will become available as they get ported over to the new version.
 
 <p class="toolset">
-<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yocli.jpg"/>
+  <img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yocli.jpg">
 </p>
 
 ## Migrating from earlier versions
