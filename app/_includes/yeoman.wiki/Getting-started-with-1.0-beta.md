@@ -1,4 +1,6 @@
-# Getting started with Yeoman 1.0
+# Getting started with Yeoman 1.0 beta
+
+**Keep in mind that this is a beta and will have bugs. Don't use in production.**
 
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:
 
