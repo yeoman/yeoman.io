@@ -1,5 +1,7 @@
 # MODERN WORKFLOWS FOR MODERN WEBAPPS
 
+<img width="90%" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png"/>
+
 ## 1.0 beta 
 
 Yeoman 1.0 is more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better. 
