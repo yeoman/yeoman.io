@@ -46,7 +46,7 @@ You may also want to install and use additional generators. This is done through
 
 A complete workflow might look like this:
 
-```shell
+```sh
 yo webapp                      # scaffold out a web app skeleton project using the bundled generator
 bower install underscore       # install a dependency for your project from Bower
 grunt                          # build the application for deployment
@@ -54,7 +54,7 @@ grunt                          # build the application for deployment
 
 Or with the AngularJS generator:
 
-```shell
+```sh
 npm install generator-angular  # install the generator you want
 yo angular                     # scaffold out a AngularJS project
 bower install angular-ui       # install a dependency for your project from Bower
