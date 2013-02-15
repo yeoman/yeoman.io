@@ -10,7 +10,7 @@ Each of these projects are independently maintained by their respective communit
 
 ## yo 
 
-Yo is maintained by the Yeoman project and offers web application scaffolding, utilizing scaffolding templates we refer to as generators. You typically install yo and any generators who think you might use via npm.
+Yo is maintained by the Yeoman project and offers web application scaffolding, utilizing scaffolding templates we refer to as generators. You typically install yo and any generators you think you might use via npm.
 
 ### Installing yo and some generators
 
@@ -20,16 +20,7 @@ First you’ll need to install some tools (the webapp generator is bundled):
 npm install -g yo grunt-cli bower
 ```
 
-#### For those special windows people
-    
-- Install [node.js](http://nodejs.org)
-- Install tools with npm: `npm install -g yo grunt-cli bower`
-- Install [Ruby](http://rubyinstaller.org) and ensure Ruby is added to the path
-- Install the Compass gem if you want to use Compass: `gem install compass`
-
-Note: using an improved command line tool such as console2 and powershell would help a lot when using Windows.
-
-Once installed, you can begin to use the yo tool to scaffold out new applications.
+*Windows instructions at the bottom*
 
 ### Basic scaffolding
 
@@ -127,6 +118,20 @@ grunt
 
 It’s as simple as that. 
 
+---
+
 ### I used Yeoman 0.9.x and would like to upgrade to 1.0. What do I do?
 
 We have an [upgrade guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.9.6-to-1.0) to assist with moving your 0.9.x projects over to 1.0. Note that we no longer offer a yeoman binary which wraps both grunt and bower, but instead use a new yo binary for your scaffolding needs. The guide will explain how this workflow applies to upgrading in more detail.
+
+
+### For those special Windows people
+    
+- Install [node.js](http://nodejs.org)
+- Install tools with npm: `npm install -g yo grunt-cli bower`
+- Install [Ruby](http://rubyinstaller.org) and ensure Ruby is added to the path
+- Install the Compass gem if you want to use Compass: `gem install compass`
+
+Note: using an improved command line tool such as console2 and powershell would help a lot when using Windows.
+
+Once installed, you can begin to use the yo tool to scaffold out new applications.
