@@ -35,7 +35,7 @@ Note: using an improved command line tool such as console2 and powershell would 
 ### Usage
 
 <p class="toolset">
-<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/workflow.jpg"/>
+<img class="full" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/workflow.jpg"/>
 </p>
 
 
