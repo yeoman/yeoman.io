@@ -58,6 +58,8 @@ grunt                          # build the application for deployment
 
 For the 1.0 beta, we support generators for webapp, angular, mocha and testacular. More will become available as they get ported over to the new version.
 
+![](https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yocli.jpg)
+
 ## Migrating from earlier versions
 
 If you were previously using Yeoman 0.9.x, you may have noticed a few things have changed. A [migration guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.9.6-to-1.0) is available to help you move over to 1.0. We've also written up some of the [reasons](https://github.com/yeoman/yeoman/wiki/The-Road-to-1.0) behind our move. 
