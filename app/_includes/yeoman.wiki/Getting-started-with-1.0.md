@@ -19,6 +19,14 @@ First you’ll need to install some tools (the webapp generator is bundled):
 ```
 npm install -g yo generator-angular grunt-cli bower
 ```
+#### For those special windows people
+    
+    - Install [node.js]( http://nodejs.org )
+    - Install yeoman through npm.
+    - Install ruby using [Ruby Installer]( http://rubyinstaller.org/ ) ensure ruby is added to the path.
+    - Install compass gem.    
+
+Note: using an improved command line tool such as console2 and powershell would help alot when using windows.
 
 Once installed, you can begin to use the yo tool to scaffold out new applications.
 
