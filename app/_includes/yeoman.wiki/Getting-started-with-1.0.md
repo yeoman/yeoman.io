@@ -20,6 +20,8 @@ First you’ll need to install some tools (the webapp generator is bundled):
 npm install -g yo grunt-cli bower
 ```
 
+If you have installed Grunt globally in the past, you will need to remove it first: `npm uninstall -g grunt`
+
 *Windows instructions at the bottom*
 
 ### Basic scaffolding
