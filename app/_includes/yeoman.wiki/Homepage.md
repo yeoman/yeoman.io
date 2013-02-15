@@ -58,7 +58,9 @@ grunt                          # build the application for deployment
 
 For the 1.0 beta, we support generators for webapp, angular, mocha and testacular. More will become available as they get ported over to the new version.
 
-![](https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yocli.jpg)
+<p class="toolset">
+<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yocli.jpg"/>
+</p>
 
 ## Migrating from earlier versions
 
