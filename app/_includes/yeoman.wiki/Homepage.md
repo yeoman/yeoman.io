@@ -1,6 +1,8 @@
 # MODERN WORKFLOWS FOR MODERN WEBAPPS
 
-<img width="90%" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png"/>
+<p class="toolset">
+<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png"/>
+</p>
 
 ## 1.0 beta 
 
