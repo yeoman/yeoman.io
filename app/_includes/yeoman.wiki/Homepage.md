@@ -63,5 +63,3 @@ If you were previously using Yeoman 0.9.x, you may have noticed a few things hav
 We are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests. 
 
 At this time we are primarily focusing on improving the user-experience and stability of Yeoman for our 1.0 beta release. Please keep this in mind when submitting feature requests, which we're happy to consider for future versions.
-
-At this time we are primarily focusing on improving the user-experience and stability of Yeoman for our 1.0 beta release. Please keep this in mind when submitting feature requests, which we're happy to consider for future versions.
