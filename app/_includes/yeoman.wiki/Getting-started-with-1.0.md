@@ -136,6 +136,4 @@ We have an [upgrade guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.
 - Install [Ruby](http://rubyinstaller.org) and ensure Ruby is added to the path
 - Install the Compass gem if you want to use Compass: `gem install compass`
 
-Note: using an improved command line tool such as console2 and powershell would help a lot when using Windows.
-
-Once installed, you can begin to use the yo tool to scaffold out new applications.
+Use an improved command line tool such as Console2 or PowerShell to improve the experience on Windows.
