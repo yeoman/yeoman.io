@@ -30,7 +30,6 @@ npm install -g yo grunt-cli bower
 
 This will install the recommended tools globally. For scaffolding, our web app generator comes bundled with `yo`. You can install additional generators with npm. For exmaple to install the [AngularJS](http://angularjs.org) generator, you do `npm install generator-angular`. Run `yo` for more info.
 
-Note: using an improved command line tool such as console2 and powershell would help alot when using windows.
 
 ### Usage
 
