@@ -17,16 +17,17 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 First you’ll need to install some tools (the webapp generator is bundled):
 
 ```
-npm install -g yo generator-angular grunt-cli bower
+npm install -g yo grunt-cli bower
 ```
+
 #### For those special windows people
     
-    - Install [node.js]( http://nodejs.org )
-    - Install yeoman through npm.
-    - Install ruby using [Ruby Installer]( http://rubyinstaller.org/ ) ensure ruby is added to the path.
-    - Install compass gem.    
+    - Install [node.js](http://nodejs.org)
+    - Install tools with npm: `npm install -g yo grunt-cli bower`
+    - Install [Ruby](http://rubyinstaller.org) and ensure Ruby is added to the path
+    - Install the Compass gem if you want to use Compass: `gem install compass`
 
-Note: using an improved command line tool such as console2 and powershell would help alot when using windows.
+Note: using an improved command line tool such as console2 and powershell would help a lot when using Windows.
 
 Once installed, you can begin to use the yo tool to scaffold out new applications.
 
