@@ -304,6 +304,10 @@ pre{
   width:80%;
 }
 
+.toolset .full{
+  width:100%;
+}
+
 .icon-white {                       background-image: url("../img/glyphicons-halflings-white.png"); }
 .icon-glass {                       background-position: 0      0; }
 .icon-music {                       background-position: -24px 0; }
