@@ -46,7 +46,7 @@ You may also want to install and use additional generators. This is done through
 
 A complete workflow might look like this:
 
-```
+```shell
 npm install generator-angular  # install the generator you want
 yo webapp                      # scaffold out a new webapp
 yo angular                     # (optional) add framework specific views, models
