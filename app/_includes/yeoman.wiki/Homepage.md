@@ -8,7 +8,7 @@
 
 Yeoman 1.0 is more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better. 
 
-Our workflow is comprised of three tools for improving your **productivity** and **satisfaction** when building a web app: yo (the scaffolding tool), grunt (the build tool) and bower (for package management).
+Our workflow is comprised of three tools for improving your **productivity** and **satisfaction** when building a web app: *yo* (the scaffolding tool), *grunt* (the build tool) and *bower* (for package management).
 
 * [Yo](https://github.com/yeoman/yo) scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build. 
  
