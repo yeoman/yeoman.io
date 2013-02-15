@@ -47,7 +47,7 @@ You may also want to install and use additional generators. This is done through
 A complete workflow might look like this:
 
 ```sh
-yo webapp                      # scaffold out a web app skeleton project using the bundled generator
+yo webapp                      # scaffold out a skeleton web app project
 bower install underscore       # install a dependency for your project from Bower
 grunt                          # build the application for deployment
 ```
