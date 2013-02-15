@@ -22,6 +22,8 @@ All three of these tools are developed and maintained separately, but work well 
 
 ### Installation
 
+**This beta does not yet work on Windows. We'll be working hard to fix this towards the final release.**
+
 A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-started-with-1.0) guide is available but for those looking to get up and running quickly. Make sure you have [Node.js](http://nodejs.org) installed (plus [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) too if you plan to use it) then install the recommended tools by running:
 
 ```
