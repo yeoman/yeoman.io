@@ -2,7 +2,7 @@ If you're new to Yeoman and have been invited to contribute to the codebase or p
 
 ## What is Yeoman?
 
-Yeoman is an open source project by Google which defines an opinionated stack for web application development. It includes a golden bundle of tools and frameworks, provided with documentation and authority. Our aim is to help developers quickly build beautiful web apps. For more details on project features, see [yeoman.io](http://yeoman.io).
+Yeoman is an open source project which defines an opinionated stack for web application development. It includes a golden bundle of tools and frameworks, provided with documentation and authority. Our aim is to help developers quickly build beautiful web apps. For more details on project features, see [yeoman.io](http://yeoman.io).
 
 ## Who are we targeting?
 
@@ -10,9 +10,7 @@ Medium to advanced JavaScript developers who have already started with client si
 
 ## What are we aiming to deliver with V1?
 
-Yeoman V1 will include new webapp project creation tools with recommended file structures and a Grunt based customizable command line build tool. Yeoman V1 will also attempt to integrate with Twitter's (yet to be released) Bower project which provides package hosting service and unified API to access packages. Our target is to have a stable V1 out by the end of July.
-
-The current tickets we're targeting for this release can be found [here](https://github.com/yeoman/yeoman/issues/112). The backlog completed for Google I/O can be found [here](https://github.com/yeoman/yeoman/issues/71).
+For complete details on our goals with Yeoman 1.0, see the [road to 1.0](https://github.com/yeoman/yeoman/wiki/The-Road-to-1.0).
 
 ## Who is involved?
 
