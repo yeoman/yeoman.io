@@ -34,11 +34,6 @@ Note: using an improved command line tool such as console2 and powershell would 
 
 ### Usage
 
-<p class="toolset">
-<img class="full" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/workflow.jpg"/>
-</p>
-
-
 Run `yo` in your Terminal to see some help and get familiar with the tool.
 
 Then you would want to scaffold out a new project. For this you use `yo` the scaffolder. It comes bundled with the webapp generator by default, which scaffolds out a skeleton front-end web app:
