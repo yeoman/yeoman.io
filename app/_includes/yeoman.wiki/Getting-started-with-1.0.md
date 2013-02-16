@@ -5,8 +5,8 @@
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:
 
 * [yo](https://github.com/yeoman/yo) - the scaffolding tool from Yeoman
-* [grunt](http://gruntjs.com) - the build tool
 * [bower](http://twitter.github.com/bower) - the package management tool
+* [grunt](http://gruntjs.com) - the build tool
 
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.
 
@@ -71,6 +71,41 @@ Each framework generator has further documentation available noting what sub-gen
 
 Link up.
 
+## Bower 
+
+Bower is a package manager for the web which allows you to easily manage dependencies for your projects. This includes assets such as JavaScript, images and CSS. It is maintained by Twitter and the open-source community.
+
+Managing packages using Bower can be done using the following commands:
+
+```
+bower search <dep> - search for a dependency in the Bower registry
+bower install <dep>..<depN> - install one or more dependencies
+bower list - list out the dependencies you have installed for a project
+bower update <dep> - update a dependency to the latest version available
+```
+
+Bower can be used with a project scaffolded using yo.
+
+### Create a basic webapp, search for a jQuery plugin with Bower and install it
+
+```
+yo webapp
+bower search jquery-bbq
+> BBQ has been found. Let’s install it!
+bower install jquery-bbq
+> installs jquery, jquery-bbq
+```
+
+### Create an AngularJS app, install Angular UI from Bower and build it.
+
+```
+yo angular
+bower install angular-ui
+grunt
+```
+
+It’s as simple as that. 
+
 ## grunt
 
 Grunt is a task-based command-line tool for JavaScript projects. It can be used to build projects, but also exposes several commands which you will want to use in your workflow. Many of these commands utilize Grunt tasks behind the hood which are maintained by the Yeoman team.
@@ -93,42 +128,6 @@ grunt server
 grunt test
 grunt
 ```
-
-## Bower 
-
-Bower is a package manager for the web which allows you to easily manage dependencies for your projects. This includes assets such as JavaScript, images and CSS. It is maintained by Twitter and the open-source community.
-
-Managing packages using Bower can be done using the following commands:
-
-```
-bower search <dep> - search for a dependency in the Bower registry
-bower install <dep>..<depN> - install one or more dependencies
-bower list - list out the dependencies you have installed for a project
-bower update <dep> - update a dependency to the latest version available
-```
-
-Similar to grunt, bower can also be used with a project scaffolded using yo.
-
-### Create a basic webapp, search for a jQuery plugin with Bower and install it
-
-```
-yo webapp
-bower search jquery-bbq
-> BBQ has been found. Let’s install it!
-bower install jquery-bbq
-> installs jquery, jquery-bbq
-```
-
-### Create an AngularJS app, install Angular UI from Bower and build it.
-
-```
-yo angular
-bower install angular-ui
-grunt
-```
-
-It’s as simple as that. 
-
 ---
 
 ### I used Yeoman 0.9.x and would like to upgrade to 1.0. What do I do?
