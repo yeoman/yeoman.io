@@ -59,4 +59,4 @@ There have been [major changes](https://github.com/yeoman/generator-webapp/compa
 
 ### What happened to the AppCache task
 
-We decided not to include it since it was too much magic generating the appcache manifest fully automatically.  We are [discussion](https://github.com/yeoman/yeoman/issues/762) other options.
+We decided not to include it since it was too much magic generating the appcache manifest fully automatically.  We are [discussing](https://github.com/yeoman/yeoman/issues/762) other options.
