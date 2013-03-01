@@ -3,15 +3,25 @@
 
 /* TEAM */
 
-    Mickael Daniel
-    Site: http://blog.mklog.fr
-    Twitter: mklabs
-    Location: Lyon, France
-
     Addy Osmani
     Site: http://addyosmani.com
     Twitter: addyosmani
     Location: London, UK
+
+    Eric Bidelman
+    Site: http://ericbidelman.com
+    Twitter: ebidel
+    Location: San Francisco, USA
+
+    Frederick Ros
+    Site: https://github.com/sleeper
+    Twitter: sl33p3r
+    Location: Mouans-Sartoux, France
+
+    Mickael Daniel
+    Site: http://blog.mklog.fr
+    Twitter: mklabs
+    Location: Lyon, France
 
     Paul Irish
     Site: http://paulirish.com
@@ -25,7 +35,6 @@
 
 
 /* THANKS */
-
 
 
 /* PROJECT */
