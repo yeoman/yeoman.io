@@ -1,3 +1,4 @@
+#!/bin/sh
 # automating this repetitive step
 
 git submodule update --init # just in case
