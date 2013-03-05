@@ -2,7 +2,7 @@
 
 A lot has changed since our last release 0.9.6. We decided to make Yeoman more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better.
 
-You can read more about the changes in [[The Road to 1.0]].
+You can read more about the changes in [The Road to 1.0](https://github.com/yeoman/yeoman/wiki/The-Road-to-1.0).
 
 The first thing you'll notice is that there is no more `yeoman` command. We extracted the scaffolding into a new tool called `yo`. For package management we no longer proxy Bower, but let you use it directly. Same goes for grunt.
 
@@ -50,7 +50,7 @@ yeoman lookup     ➜    bower lookup
 
 ## How to upgrade?
 
-Read [[Getting started with 1.0]] before continuing.
+Read [Getting started with 1.0](https://github.com/yeoman/yeoman/wiki/Getting-started-with-1.0) before continuing.
 
 There have been [major changes](https://github.com/yeoman/generator-webapp/compare/adb4ae52b47f80e2cdcca9557aa461dbce798450...master#diff-8?w=1) done to the Gruntfile, so you can't simply use the same file. If you've done no changes to the Gruntfile you can just generate a new project with the `yo` command and then copy paste over your files except for the generated ones like the Gruntfile.js, package.json, etc. However, if you have made changes to the Gruntfile, you could diff the [original](https://github.com/yeoman/generator-webapp/blob/adb4ae52b47f80e2cdcca9557aa461dbce798450/app/templates/Gruntfile.js) one with yours and try to apply the same changes to the new one.
 
