@@ -23,7 +23,7 @@ When you run `yeoman server`, we generate an intermediate build directory called
 
 ### Build targets
 
-Yeoman supports a number of build targets to be used with `yeoman build`. To implicitly
+Yeoman supports a number of build targets to be used with `yeoman build`. To explicitly
 pass the `default` target one would run `yeoman build:default` for example. The complete
 list of supported build targets can be found below:
 
