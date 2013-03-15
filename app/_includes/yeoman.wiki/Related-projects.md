@@ -11,3 +11,6 @@ A community driven overview of Yeoman related projects. Feel free to add your ow
 
 - [yeoman-bootstrap-less](https://github.com/Thomas-Lebeau/yeoman-bootstrap-less)  
   Generator to use Yeoman to generate a Twitter Bootstrap project with LESS
+
+- [foundation4-yeoman](https://github.com/lkbgift/foundation4-yeoman)
+An example of using the Foundation 4 framework with *Yeoman 1.0*
