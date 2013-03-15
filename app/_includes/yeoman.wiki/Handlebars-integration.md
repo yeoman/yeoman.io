@@ -61,6 +61,7 @@
             },
             options: {
               namespace: 'MyApp.Templates',
+              wrapped: true,
               processName: function(filename) {
                 // funky name processing here
                 return filename
@@ -101,6 +102,7 @@
             },
             options: {
               namespace: 'MyApp.Templates',
+              wrapped: true,
               processName: function(filename) {
                 // funky name processing here
                 return filename
