@@ -1,4 +1,4 @@
-1. Install Yeoman v0.9.6, we need this so we can configure server tasks from our Gruntfile.
+1. Install Yeoman v0.9.6.
 
 2. Add `grunt-contrib-handlebars` as a devDependency by running `npm install -D grunt-contrib-handlebars@0.3.5`. This will add it to package.json after installing it.
 
