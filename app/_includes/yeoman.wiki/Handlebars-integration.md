@@ -1,6 +1,6 @@
-1. Install Yeoman directly from GitHub (or get v0.9.6 if it's out), we need this so we can configure server tasks from our Gruntfile.
+1. Install Yeoman v0.9.6, we need this so we can configure server tasks from our Gruntfile.
 
-2. Add `grunt-contrib-handlebars` as a devDependency by running `npm install -D grunt-contrib-handlebars`. This will add it to package.json after installing it.
+2. Add `grunt-contrib-handlebars` as a devDependency by running `npm install -D grunt-contrib-handlebars@0.3.5`. This will add it to package.json after installing it.
 
 3. Load the `handlebars` task in your Gruntfile.js
 
@@ -118,12 +118,6 @@
             tasks: 'handlebars reload'
           }
         },
-
-        // this server config requires you install yeoman directly from GitHub, it won't work for Yeoman <=0.9.5
-        server: {
-          // Personally I find open-browser annoying and so I remove it
-          app: 'clean lint compass coffee handlebars open-browser watch'
-        }
       });
 
       grunt.renameTask('build', 'original-build'); // optional
@@ -131,6 +125,10 @@
       // override default build task, the built-in yeoman build task spits out all the tasks it runs in your command line
       grunt.registerTask('build', 'intro clean compass coffee handlebars mkdirs usemin-handler rjs concat css min img rev usemin manifest copy time');
     };
+
+    grunt.renameTask('clean', 'original-clean');
+    // override built-in yeoman clean task to include handlebars
+    grunt.registerTask('clean', 'original-clean handlebars');
     ```
 7. Run `yeoman install handlebars` to install the handlebars runtime.
 
@@ -148,7 +146,3 @@
     ```
 
 9. Enjoy Handlebars goodness in your `yeoman build` and `yeoman server`.
-
-IMPORTANT NOTICE: Customizing the server tasks using the configuration ``server: {  app: 'clean lint compass coffee handlebars open-browser watch'  }`` doesn't work out of the box with 0.9.6 (form npmjs). You must either modify your implementation as suggested in the [FAQ (Q: How can I change built-in task like build or server)](https://github.com/yeoman/yeoman/wiki/Additional-FAQ) or if you want the method described here to work, then check the instructions at https://github.com/yeoman/yeoman/wiki/Control-server-target-tasks-via-Gruntfile.js However this manual shows the main parts you need to have it all ready, you will only have to change the way you chain Handlebars task to the server task.
-
-NOTE ABOUT IMPORTANT NOTICE: Those links don't work, https://github.com/yeoman/yeoman/wiki/Control-server-and-build-tasks-from-Gruntfile.js is empty, and https://github.com/yeoman/yeoman/wiki/Control-server-target-tasks-via-Gruntfile.js goes to a new wiki page.
