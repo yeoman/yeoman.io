@@ -9,7 +9,6 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[About]]
 - [[FAQ]]
 - [[Support]]
-- [[Additional FAQ]]
 - [[Goals and Roadmap]]
 - [[Articles]]
 - [[Related Projects]]
@@ -36,6 +35,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[Generators]]
 - [[Modules]]
 - [[Insight]]
+- [[Additional FAQ]]
 - Customization
   - [[Stylus Integration]]
   - [[Handlebars Integration]]
