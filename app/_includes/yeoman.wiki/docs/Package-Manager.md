@@ -2,7 +2,7 @@
 
 Until now, client-side JavaScript has not benefited from a rich package management solution such as those found in other platforms (e.g NPM, RubyGems). By instead maintaining packages of packages in client-side JS, developers reduced the chances of using up-to-date versions of libraries.
 
-Yeoman's integration with [Twitter Bower](http://github.com/twitter/bower) changes that.
+[Twitter Bower](http://github.com/twitter/bower) changes that.
 
 In Bower, dependencies are listed in a ‘component.json’ file, similar to Node’s package.json or the Ruby Gemfile. This is useful for locking down the dependencies a project has.
 
@@ -17,7 +17,7 @@ In Bower, dependencies are listed in a ‘component.json’ file, similar to Nod
 }
 ```
 
-Dependencies are then installed locally via the `yeoman install` command. First they're resolved to find conflicts, then downloaded and unpacked in a local sub dir called components:
+Dependencies are then installed locally via the `bower install` command. First they're resolved to find conflicts, then downloaded and unpacked in a local sub dir called components:
 
     /component.json
     /components/modernizr/index.js
@@ -41,23 +41,21 @@ Similar to NPM, our Bower integration also allows users to easily search for and
 
 To search for a package:
 
-    yeoman search jquery
+    bower search jquery
 
 To install a package:
 
-    yeoman install jquery
+    bower install jquery
 
 To update a package, you need to reference it by name:
 
-    yeoman update jquery
+    bower update jquery
 
 To list installed packages:
 
-    yeoman list
+    bower list
 
 and so on.
-
-For more information on how to use Yeoman's Bower integration, please see our relevant command-line docs.
 
 
 ## What distinguishes Bower from Jam, Volo or Ender? What does it do better?
