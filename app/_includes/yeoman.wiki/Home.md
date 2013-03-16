@@ -20,6 +20,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 
 ## 0.9.6 docs [outdated]
 
+- [[Getting-Started-(0.9)]]
 - [[Installation]]
 - Command Line
   - [[yeoman-init]]
