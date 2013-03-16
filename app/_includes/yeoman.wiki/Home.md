@@ -25,7 +25,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 ## 0.9.6 docs [outdated]
 
 - [[Installation]]
-- [[Command Line]]
+- Command Line
   - [[yeoman-init]]
   - [[yeoman-build]]
   - [[yeoman-server]]
