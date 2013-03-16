@@ -82,6 +82,50 @@ Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/is
 * [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
 
 
-### My question isn't answered! Help?
+### Q: NPM appears to have installed yeoman but `yeoman` still gives me "command not found".
 
-A few more common questions relating to using Yeoman are answered here: [github.com/yeoman/yeoman/wiki/Additional-FAQ](https://github.com/yeoman/yeoman/wiki/Additional-FAQ)
+It's likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read [this comment](https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733) and [this thread](https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663).
+
+This usually happens when you install Node through Homebrew, since it puts Node modules in a directory that's not in your PATH.
+
+From Homebrew:
+
+```
+==> Caveats
+Homebrew installed npm.
+We recommend prepending the following path to your PATH environment
+variable to have npm-installed binaries picked up:
+  /usr/local/share/npm/bin
+```
+
+Quick fix for advanced users is to put the following in your .bashrc/.zshrc file:
+`export PATH=/usr/local/share/npm/bin:$PATH`
+
+For beginners `brew uninstall node` and download and install Node from their [website](http://nodejs.org).
+
+
+### Q: I'm getting `EMFILE, too many open files`
+
+EMFILE mean you've reached the OS limit of concurrently open files. There aren't much we can do about it, however you can increase the limit yourself.
+
+Add `ulimit -n [number of files]` to your .bashrc/.zshrc file to increase the soft limit.
+
+If you reach the OS hard limit, you can follow this [StackOverflow answer](http://stackoverflow.com/a/34645/64949) to increase it.
+
+
+
+### What should I use for documenting my app
+
+View the details within [#152 ticket for recommended solutions for documentation generation](https://github.com/yeoman/yeoman/issues/152#issuecomment-7081670)
+
+### Why does Yeoman require a CLA?
+
+It keeps the IP clean and helps to prevent frivolous lawsuits around who owns what software. Basically the thing all of us want to avoid anyhow. In summary, the CLA asserts that when you donate fixes or documentation, you both own the code that you're submitting and that Google can in turn license that code to other people. (In this case, making it available under the BSD license)
+
+So yeah it's an extra hurdle, but it's something we can't avoid here. This is a Google open source project and thems are the rules.
+
+Just FWIW, here are some other projects that require a similar agreement, jQuery, Firefox, Sizzle, Dojo, Plone, Fedora, Cordova/Phonegap, Apache, Flex.
+
+More:
+* http://incubator.apache.org/ip-clearance/index.html
+* http://wiki.civiccommons.org/Contributor_Agreements
