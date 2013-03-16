@@ -1,6 +1,6 @@
 ## Deploying your application
 
-When you run ```yeoman build```, it generates a completely optimized version of your application in a ```dist``` directory that can be deployed.
+When you run ```grunt build```, it generates a completely optimized version of your application in a ```dist``` directory that can be deployed.
 
 The recommended way of deploying the ```dist``` directory is using ```git subtree```.
 
