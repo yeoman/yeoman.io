@@ -18,6 +18,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
   - [[Handlebars Integration]]
   - [[Customize server and build task]]
 - [[Deployment]]
+- [[Package Manager]]
 
 
 ---
@@ -36,7 +37,6 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
   - [[yeoman-list]]
   - [[yeoman-search]]
   - [[yeoman-lookup]]
-- [[Package Manager]]
 - [[Generators]]
 - [[Modules]]
 - [[Insight]]
