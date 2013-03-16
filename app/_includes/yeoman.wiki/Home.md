@@ -1,7 +1,7 @@
 This wiki is open for anyone to edit. Feel free to fix grammar and other things. For big changes, first open an issue for discussion.
 
 
-## Pages
+## 1.0 docs
 
 - [[The Road to 1.0]]
 - [[Migrate from 0.9.6 to 1.0]]
@@ -17,9 +17,12 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
   - [[Stylus Integration]]
   - [[Handlebars Integration]]
   - [[Customize server and build task]]
+- [[Deployment]]
 
 
-## Documentation
+---
+
+## 0.9.6 docs [outdated]
 
 - [[Installation]]
 - [[Command Line]]
@@ -37,4 +40,3 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[Generators]]
 - [[Modules]]
 - [[Insight]]
-- [[Deployment]]
