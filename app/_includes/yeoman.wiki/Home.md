@@ -13,10 +13,6 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[Goals and Roadmap]]
 - [[Articles]]
 - [[Related Projects]]
-- Customization
-  - [[Stylus Integration]]
-  - [[Handlebars Integration]]
-  - [[Customize server and build task]]
 - [[Deployment]]
 - [[Package Manager]]
 
@@ -40,3 +36,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[Generators]]
 - [[Modules]]
 - [[Insight]]
+- Customization
+  - [[Stylus Integration]]
+  - [[Handlebars Integration]]
+  - [[Customize server and build task]]
