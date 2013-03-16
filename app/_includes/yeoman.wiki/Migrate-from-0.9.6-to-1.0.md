@@ -50,6 +50,8 @@ yeoman lookup     ➜    bower lookup
 
 ## How to upgrade?
 
+First you need to uninstall the existing Yeoman 0.9.6 install. You can do this be running `npm uninstall -g yeoman`.
+
 Read [Getting started with 1.0](https://github.com/yeoman/yeoman/wiki/Getting-started-with-1.0) before continuing.
 
 There have been [major changes](https://github.com/yeoman/generator-webapp/compare/adb4ae52b47f80e2cdcca9557aa461dbce798450...master#diff-8?w=1) done to the Gruntfile, so you can't simply use the same file. If you've done no changes to the Gruntfile you can just generate a new project with the `yo` command and then copy paste over your files except for the generated ones like the Gruntfile.js, package.json, etc. However, if you have made changes to the Gruntfile, you could diff the [original](https://github.com/yeoman/generator-webapp/blob/adb4ae52b47f80e2cdcca9557aa461dbce798450/app/templates/Gruntfile.js) one with yours and try to apply the same changes to the new one.
