@@ -50,7 +50,7 @@ The webapp generator is considered the simplest possible start for a webapp. We 
 Before you can create an angular app you need to install the generator  
 
 ```
-npm install generator-angular generator-testacular
+npm install generator-angular generator-karma
 ```
 
 After that you can run
@@ -64,7 +64,7 @@ or if you intend to minify your code
 yo angular --minsafe
 ```
 
-Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Testacular unit tests.
+Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Karma unit tests.
 
 ### Scaffolding out Angular pieces
 
