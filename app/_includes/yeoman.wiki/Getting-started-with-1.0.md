@@ -1,1 +1,0 @@
-Silly people from Google, leaving an open wiki and stuff.
