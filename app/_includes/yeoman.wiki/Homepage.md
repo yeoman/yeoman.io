@@ -42,7 +42,7 @@ Then you would want to scaffold out a new project. For this you use `yo` the sca
 yo webapp
 ```
 
-You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator with the required Testacular generator one would run: `npm install generator-angular generator-testacular`.
+You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator with the required Karma generator one would run: `npm install generator-angular generator-karma`.
 
 A complete workflow might look like this:
 
@@ -56,7 +56,7 @@ grunt                          # build the application for deployment
 Or with the AngularJS generator:
 
 ```sh
-npm install generator-angular generator-testacular  # install generators
+npm install generator-angular generator-karma  # install generators
 yo angular                     # scaffold out a AngularJS project
 npm install && bower install   # install default dependencies
 bower install angular-ui       # install a dependency for your project from Bower
@@ -65,7 +65,7 @@ grunt server                   # preview your app
 grunt                          # build the application for deployment
 ```
 
-For the 1.0 beta, we support generators for webapp, angular, mocha and testacular. More will become available as they get ported over to the new version.
+For the 1.0 beta, we support generators for webapp, angular, mocha and karma. More will become available as they get ported over to the new version.
 
 ## Migrating from earlier versions
 
