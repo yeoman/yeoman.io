@@ -1,9 +1,0 @@
-# Lowering the Price of Russian Gas: A Challenge for European Energy Security
-
-Europe’s energy discourse has been unjustifiably preoccupied with concerns about potential physical disruptions of Russian gas. Yet, the real challenge for European-Russian energy relations, and in fact, for European energy security, lies in settling on a price that leaves both sides content. While Europe will come under increasing pressure to acquire affordable energy resources to enhance its competitiveness, Gazprom may find it increasingly difficult to deliver gas at lower prices in the coming years. 
-
-### Physical Disruption: An Overstated Risk
-
-Narratives about energy security in Europe often focus on worries about Russia using its energy as a weapon. Such analyses are misleading and counterproductive. Fixation over the possibility of a physical disruption misses the point and misreads current European gas market realities.On balance, for more than four decades, Moscow has been a fairly reliable gas partner in Europe. Gas relations with Western Europe started to flourish already during the Cold War—despite strong initial opposition from the United States. During the 1980s, the USSR’s drive for developing West Siberia’s gas coincided with a rapidly expanding market share for Soviet gas in Europe, generating vital foreign currency revenues for Moscow. 
-
-Gazprom and Russia carry a fair share of the blame for the misguided fixation on cuts of gas flows to Europe. The disruptions originating in Ukraine in the winters of 2006 and 2009 had a dramatic impact on several countries in Central and Eastern Europe, severely damaging European perceptions about Russian gas supplies. This is true even though these disruptions need to be viewed in the context of a complex pricing and payment dispute between Moscow and Kyiv and it would therefore be unfair to assign Gazprom sole responsibility for the predicament. 
