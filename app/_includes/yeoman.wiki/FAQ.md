@@ -82,7 +82,7 @@ Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/is
 * [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
 
 
-### Q: NPM appears to have installed yeoman but `yeoman` still gives me "command not found".
+### NPM appears to have installed yeoman but `yeoman` still gives me "command not found".
 
 It's likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read [this comment](https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733) and [this thread](https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663).
 
@@ -104,7 +104,7 @@ Quick fix for advanced users is to put the following in your .bashrc/.zshrc file
 For beginners `brew uninstall node` and download and install Node from their [website](http://nodejs.org).
 
 
-### Q: I'm getting `EMFILE, too many open files`
+### I'm getting `EMFILE, too many open files`
 
 EMFILE mean you've reached the OS limit of concurrently open files. There aren't much we can do about it, however you can increase the limit yourself.
 
@@ -129,3 +129,7 @@ Just FWIW, here are some other projects that require a similar agreement, jQuery
 More:
 * http://incubator.apache.org/ip-clearance/index.html
 * http://wiki.civiccommons.org/Contributor_Agreements
+
+### How do I use Compass sprites and the `image_url` helper with Yeoman?
+
+Follow the guide provided in [this gist](https://gist.github.com/passy/5270050).
