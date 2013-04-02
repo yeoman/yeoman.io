@@ -24,7 +24,7 @@ All three of these tools are developed and maintained separately, but work well 
 
 **This beta does not yet work on Windows. We'll be working hard to fix this towards the final release.**
 
-A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Started) guide is available but for those looking to get up and running quickly. Make sure you have [Node.js](http://nodejs.org) installed (plus [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) too if you plan to use it) then install the recommended tools by running:
+A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Started) guide is available but for those looking to get up and running quickly. Make sure you have [Node.js](http://nodejs.org) and [Git](http://git-scm.org) installed (plus [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) too if you plan to use it) then install the recommended tools by running:
 
 ```
 npm install -g yo grunt-cli bower 
