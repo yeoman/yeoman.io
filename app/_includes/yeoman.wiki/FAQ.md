@@ -133,3 +133,13 @@ More:
 ### How do I use Compass sprites and the `image_url` helper with Yeoman?
 
 Follow the guide provided in [this gist](https://gist.github.com/passy/5270050).
+
+
+### How can I disable Insight or Update Notifier?
+
+You can use use a command line flag to disable them. Eg. `yo webapp --no-insight`
+
+Insight: `--no-insight`  
+Update Notifier: `--no-update-notifier`
+
+You can also add `yeoman_test` as an environment variable with any value to permanently disable both.
