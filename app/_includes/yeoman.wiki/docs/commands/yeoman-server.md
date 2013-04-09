@@ -8,7 +8,7 @@ It also automatically fires up the `yeoman watch` process, so changes to any of 
 files cause the browser to refresh via [LiveReload](http://livereload.com). Should you not have
 LiveReload installed locally, a fallback reload process will be used instead.
 
-Any changes to CoffeeScript or Compass files result in them being recompiled, meaning that
+Any changes to CoffeeScript or Sass files result in them being recompiled, meaning that
 no manual intervention is required to write and preview code in the format you feel most
 comfortable with.
 
@@ -27,4 +27,4 @@ The built-in server also supports serving different profiles of your application
 
 ### further notes
 
-At present, when initially running `yeoman server` or `yeoman server:app`, some users may find that their browser is opened before intermediate files such as Compass and CoffeeScript have completed compiling. Whilst we intend on fixing this issue very soon, in the mean time we recommend refreshing the browser shortly after you first fire up the server (e.g 10 seconds after). You can then easily make any changes you wish to your application and the browser will be automatically reloaded via LiveReload.
+At present, when initially running `yeoman server` or `yeoman server:app`, some users may find that their browser is opened before intermediate files such as Sass and CoffeeScript have completed compiling. Whilst we intend on fixing this issue very soon, in the mean time we recommend refreshing the browser shortly after you first fire up the server (e.g 10 seconds after). You can then easily make any changes you wish to your application and the browser will be automatically reloaded via LiveReload.
