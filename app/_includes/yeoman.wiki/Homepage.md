@@ -48,7 +48,6 @@ A complete workflow might look like this:
 
 ```sh
 yo webapp                      # scaffold out a skeleton web app project
-npm install && bower install   # install default dependencies
 bower install underscore       # install a dependency for your project from Bower
 grunt                          # build the application for deployment
 ```
@@ -56,16 +55,13 @@ grunt                          # build the application for deployment
 Or with the AngularJS generator:
 
 ```sh
-npm install generator-angular generator-karma  # install generators
+npm install -g generator-angular generator-karma  # install generators
 yo angular                     # scaffold out a AngularJS project
-npm install && bower install   # install default dependencies
 bower install angular-ui       # install a dependency for your project from Bower
 grunt test                     # test your app
 grunt server                   # preview your app
 grunt                          # build the application for deployment
 ```
-
-For the 1.0 beta, we support generators for webapp, angular, mocha and karma. More will become available as they get ported over to the new version.
 
 ## Migrating from earlier versions
 
