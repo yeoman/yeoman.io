@@ -41,7 +41,7 @@ yo webapp
 
 This is the default generator and will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com) and [Modernizr](http://modernizr.com). [Twitter Bootstrap](http://twitter.github.com/bootstrap) can be optionally installed from the prompt you will be presented.
 
-Each project created with yo will also pull in relevant Grunt tasks which we feel are needed or useful for your workflow. _Be sure to follow the on-screen directions and type_ `npm install && bower install` _to ensure that both bower and grunt are installed locally to your project._
+Each project created with yo will also pull in relevant Grunt tasks which we feel are needed or useful for your workflow.
 
 The webapp generator is considered the simplest possible start for a webapp. We also provide some framework generators can be used to scaffold out a project and later views, models, controllers and so on. 
 
@@ -50,7 +50,7 @@ The webapp generator is considered the simplest possible start for a webapp. We 
 Before you can create an angular app you need to install the generator  
 
 ```
-npm install generator-angular generator-karma
+npm install -g generator-angular generator-karma
 ```
 
 After that you can run
