@@ -8,6 +8,11 @@
     Twitter: addyosmani
     Location: London, UK
 
+    Brian Ford
+    Site: http://briantford.com
+    Twitter: briantford
+    Location: Ann Arbor, MI
+
     Eric Bidelman
     Site: http://ericbidelman.com
     Twitter: ebidel
