@@ -1,4 +1,4 @@
-#Writing Custom Yo Generators
+# Writing Custom Yo Generators
 
 This guide will help you get started with the Yeoman generator system. If you want to skip the explanations and just get started, you can.
 
