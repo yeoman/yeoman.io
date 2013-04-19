@@ -356,7 +356,9 @@ content to a specified file.
 
 ```
 AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
-    this.write('app/styles/main.scss', '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {\n    margin: 50px auto 0 auto;\n    width: 300px;\n}');
+    this.write('app/styles/main.scss', 
+    '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {\n  
+     margin: 50px auto 0 auto;\n    width: 300px;\n}');
 };
 ```
 
@@ -367,7 +369,9 @@ sub-directories and again, write custom content to a new file.
 
 ```
 AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
-    this.write('app/styles/main.scss', '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {\n    margin: 50px auto 0 auto;\n    width: 300px;\n}');
+    this.write('app/styles/main.scss', 
+    '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {
+    \n    margin: 50px auto 0 auto;\n    width: 300px;\n}');
 };
 ```
 
@@ -510,7 +514,8 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   if (this.compassBootstrap) {
     var cb = this.async();
 
-    this.write(path.join(appPath, 'styles/main.scss'), '@import "compass_twitter_bootstrap";');
+    this.write(path.join(appPath, 'styles/main.scss'),
+    '@import "compass_twitter_bootstrap";');
     this.remote('vwall', 'compass-twitter-bootstrap', 'v2.2.2.2', function (err, remote) {
       if (err) {
         return cb(err);
@@ -547,24 +552,24 @@ there.
 
 <h2 id="faq">Frequently asked questions</h2>
 
-* **How do I pull in dependencies using Bower? ** Place a component.json file 
+* **How do I pull in dependencies using Bower?** Place a component.json file 
   filled out with Underscore templating in the /templates directory and then run 
   `this.installDependencies` from within your generator's app/index.js. 
   Alternatively they can install with `this.bowerInstall(['jquery', 
   'underscore'], { save: true });`
-* **How do I unit test generators? ** If using the 
+* **How do I unit test generators?** If using the 
   [generator-generator](https://github.com/passy/generator-generator), very 
   basic Mocha unit tests will be scaffolded out for you. You can also take a 
   look at the [unit 
   tests](https://github.com/yeoman/generator-webapp/blob/master/test/test.js) 
   written for generator-webapp for examples of what you probably want to be 
   testing.
-* **How do I create sub-generators? **Again, the generator-generator now has 
+* **How do I create sub-generators?** Again, the generator-generator now has 
   support for [generating 
   sub-generators](https://github.com/passy/generator-generator#commands) that is 
   worth checking out. 
 * **How can I extend my generators to do more than what the system allows out of 
-  the box? **Generators are just Node.js and what's not available in the API can 
+  the box?** Generators are just Node.js and what's not available in the API can 
   be found over on npmjs.org.
 * **How do I publish my generator to NPM?** Make sure you add relevant keywords 
   to your package so that people can find your generator (e.g 
