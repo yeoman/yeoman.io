@@ -1,695 +1,571 @@
-**Outdated, please see the [generator repo wiki](https://github.com/yeoman/generator/wiki)**
+#Writing Custom Yo Generators
 
----
+This guide will help you get started with the Yeoman generator system. If you want to skip the explanations and just get started, you can.
 
-## <a href="#generators" name="generators">generators</a>
-
-
-Generator templates allow you to scaffold out a project using a custom setup of boilerplates, frameworks and dependencies. The basic application generated when calling `yeoman init` actually uses a generator itself and they can be quite powerful.
-
-Some of the generators Yeoman includes out of the box include implementations for Backbone.js, Ember.js and Angular.js. These allow you to not only use complete boilerplates for an application but also scaffold out smaller parts such as Models, Views, Controllers and so on.
-
-
-### Getting Started
-
-yeoman init generator
-----------------------
-
-The `yeoman init` command uses templates and prompts to create the files needed for a project.
-
-Running `yeoman init --help` by itself gives a list of available generators:
-
-    $ yeoman init generator
-    Usage: yeoman init generator GENERATOR [args] [options]
-
-    ...
-    ...
-
-    Please choose a generator below.
-
-    Yeoman:
-      controller
-      generator
-      ...
-      ...
-
-**Note**: You can install more generators through npm package and you can even create your own.
-Yeoman's own generators are available in a dedicated [repository](https://github.com/yeoman/generators).
-
-Using generators will save you a large amount of time by writing boilerplate code, code that is necessary for the app to work.
-
-Let's make our own controller with the controller generator. But what command should we use?  Let's ask the generator:
-
-**Note**: Generators available may have help text. You can try adding --help or
--h to the end, for example `yeoman generate controller --help`
-
-    .. Invoke controller ..
-    Usage:
-      yeoman init generator controller NAME one two three [options]
-
-    Options:
-      -h, --help          # Print generator's options and usage
-          --js-framework  # Js framework to be invoked
-                          # Default: ember
+* [Introduction](#introduction)
+* [Types of generators](#generator-types)
+* [Creating a Boilerplate generator](#generator-boilerplate)
+* [Creating an Application scaffolding generator](#generator-application)	* [Using the Passy generator-generator](#passy-generator)
+	* [The built-in generator generator](#generator-generator)
+	* [Generator Bootstrap](#generator-bootstrap)
+* [Generator snippets](#generator-snippets)
+* [Generator Internals](#generator-internals)
+* [FAQ](#faq)
 
 
-The controller generator is expecting parameters in the form of `generate controller ControllerName action1 action2`
+<h2 id="introduction">Introduction</h2>
 
-Let's make a `Greeting` controller with an action of `hello`.
+Yo generator templates allow you to scaffold out a project using a custom setup 
+of boilerplates, frameworks and dependencies. Think of them as a way to easily 
+kick off a new project (or part of a project) without manually writing or 
+grabbing a random boilerplate.
 
-    $ yeoman init generator controller Greeting hello
+The basic application generated when calling `yo webapp` actually uses a 
+generator itself and they can be quite powerful. A generator can simply copy an 
+existing set of files that make up a boilerplate or be more complex, offering 
+customization prompts, unit tests and documentation.
 
-What did this generate? It made sure a bunch of directories where in our application, and created a controller file, a view file and / or template file and a test file.
-
-Yeoman comes with a generator for data models too.
-
-    $ yeoman init generator model
-
-
-Creating and Customizing Yeoman Generators & Templates
-------------------------------------------------------
-
-1. First Contact
-2. Creating Your First Generator
-3. Creating Generators with Generators
-4. Generators Lookup
-5. Customizing Your Workflow
-6. Customizing Your Workflow by Changing Generators Templates
-7. Adding Generators Fallbacks
-8. Application Templates
+In case you think they're a Yeoman-only thing, they're not - anyone in the 
+community and write and published by anyone and there are already a number of 
+them that have been published to npm: generators for HTML5 Boilerplate, Twitter 
+Bootstrap, Karma and so on.
 
 
-### First contact
+<h2 id="generator-types">Types of generators</h2>
 
-When you create an application using the `yeoman init` command, you are in fact
-using a Yeoman generator. After that, you can get a list of all available
-generators by just invoking `yeoman init --help`:
+There are two types of Yeoman generators: _boilerplate_ copiers and _application 
+scaffolders_. Boilerplate generators generally take an existing boilerplate 
+project and write them to your application directory when calling them using 
+`yo`. 
 
-    $ yeoman init
-    $ cd app
-    $ yeoman init --help
+Application scaffolders do a lot more and can cover build systems, 
+sub-generators, dependency management and automating workflow. 
 
-You will get a list of all generators that come with yeoman. If you need a detailed description for a given generator, you can simply do:
+<h2 id="generator-boilerplate">Creating a Boilerplate generator</h2>
 
-    $ yeoman init generator [generator] --help
+Let's say you have an existing boilerplate Grunt project hosted on GitHub you 
+would like to expose via a generator called "awesome". For arguments sake, let's 
+say it's HTML5 Boilerplate.
 
-### Creating Your First Generator
+```
 
-Generators are built on top of Grunt. Grunt provides powerful options parsing and a great API for manipulating files. For instance, let’s build a generator that creates an initializer file named initializer.js inside `app/js/`
+# Grab the boilerplate generator project
+git clone git://github.com/addyosmani/generator-boilerplate.git
 
-The first step is to create a file at `lib/generators/initializer/index.js with
-the following content:
+# Add your boilerplate to the templates directory
+git submodule add https://github.com/h5bp/html5-boilerplate app/templates
 
-```js
-var util = require('util'),
-    yeoman = require('../../../');
+# Edit package.json and README.md to customize the repository, author and dependencies as well as your instructions (here, our generator is called generator-awesome)
 
-module.exports = Generator;
+# Run `npm install` within the directory for your generator
+npm install
 
-function Generator() {
-  yeoman.generators.Base.apply(this, arguments);
-}
+# Create a new directory and run the new generator
+
+mkdir app
+cd app
+yo awesome 
+```
+
+
+
+Note: By default, Yo will run the code located at `app/index.js` within your generator's 
+directory. This is the file that defines what should happen when a user calls 
+your generator.
+
+<h2 id="generator-application">Creating an Application scaffolding generator</h2>
+
+<h3 id="passy-generator">Using the Passy generator-generator</h3>
+
+The [generator-generator](https://github.com/passy/generator-generator) project 
+can be used to create complete application scaffold generators, but also 
+includes editorconfig, package.json, tests and other sane defaults.
+
+**Writing your own new generator (with generator-generator)**
+
+```
+# Make sure you have yo installed
+npm install -g yo
+
+# Install the generator
+npm install -g generator-generator
+
+#Run the generator
+yo generator:app 
+
+# Be sure to include :app as generator alone is part of yeoman itself.
+  
+```
+
+**How is this different from the built-in generator?**
+
+The built-in yo generator command only generates an index.js file for you. 
+generator-generator instead comes with a full project directory 
+structure:
+
+```
+├── app
+│   ├── index.js
+│   └── templates
+│       ├── editorconfig
+│       └── jshintrc
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── .jshintrc
+├── LICENSE
+├── package.json
+├── README.md
+└── test
+    ├── test-creation.js
+    └── test-load.js
+```
+
+`yo generator:app` shows a wizard for generating a new generator whilst yo 
+`generator:subgenerator` NAME generates a sub-generator with the name NAME
+
+<h3 id="generator-generator">The built-in generator generator</h3>
+
+Yo also includes the ability to create a new generator directly from the 
+command-line (without additional tools) which is useful for projects requiring 
+more custom capabilities or build steps. The following steps will allow you to 
+get started with your own custom generator project:
+
+**Make sure you've installed yo**
+
+`npm install -g yo`
+
+**Then to see what has already been installed:**
+
+Running `yo` by itself gives a list of available generators.
+
+**Then to create a new generator call: `yo generate:generatorName`:
+
+
+```
+$ yo generator generator
+   create generator/index.js
+   create generator/templates/readme.md
+```
+
+
+The index.js file is the entry point for your generator whilst the templates 
+directory is the place to put the list of files /templates for the generator to 
+consume. For example, if you have an existing boilerplate directory of files you 
+want to just write out whenever a generator is called, the templates directory 
+is where this would go. Same for a simple static site/page generator.
+
+**The contents of generator/index.js are:**
+
+```
+
+var generator = require('yeoman-generator');
+var util = require('util');
+
+// Documentation: https://github.com/yeoman/generator/wiki/base
+
+var Generator = module.exports = function Generator() {
+  generator.Base.apply(this, arguments);
+  // this.option('flag', { desc: 'Desc for flag', ...})
+  // this.argument('filename', { desc: 'Desc for filename argument', ...})
+};
+
+util.inherits(Generator, generator.Base);
+
+// Copies the entire template directory (with `.`, meaning the
+// templates/ root) to the specified location
+Generator.prototype.scaffold = function scaffold() {
+  this.directory('.', 'place/to/generate');
+};
+
+```
+
+The Base class allows you to specify the expected options for the generator, 
+generally only to be used by the generator.
+
+The more interesting part of this code is near the end where you define a 
+scaffold method for taking the contents of the directory at your root (the 
+template directory) and placing them in a location with the users new project 
+workspace. You can of course customize the source and destination easily, making 
+it simple to say copy either all of a boilerplate (e.g '.') or just a portion 
+(e.g '/views').
+
+Now by default the `yo generate` command will only scaffold you out two files. 
+You may however be looking for something more fleshed out. 
+
+<h3 id="generator-bootstrap">Generator Bootstrap</h3>
+
+To better understand how generators are written, let's continue looking at them. 
+We're now going to review generator-bootstrap which is used for scaffolding 
+basic Twitter Bootstrap projects.
+
+It contains a number of files, but the important one is under app/index.js (our 
+entry point again):
+
+[https://github.com/yeoman/generator-bootstrap](https://github.com/yeoman/generator-bootstrap)
+
+**What is different about this generator?**
+
+* It includes use strict
+* It includes specific modules required for the generator
+* It includes the yeoman-generator as a dependency - why?
+* Nothing special is done in the module.exports, but it inherits the Yeoman 
+  generator base.vm
+* It uses prompts to prompt the user for some information used to customize the 
+  experience
+* Depending on their response, we this.install (using Bower) a specified package
+
+```
+'use strict';
+var path = require('path');
+var util = require('util');
+var yeoman = require('yeoman-generator');
+
+var Generator = module.exports = function Generator() {
+   yeoman.generators.Base.apply(this, arguments);
+};
 
 util.inherits(Generator, yeoman.generators.Base);
 
-Generator.prototype.createInitializerFile = function() {
-  this.write('app/js/initializer.js', "// Add initialization content here\n");
+Generator.prototype.askFor = function askFor(argument) {
+   var cb = this.async();
+
+   var formats = ['css', 'sass', 'less'];
+
+   var prompts = [{
+       name: 'format',
+       message: 'In what format would you like the Twitter Bootstrap 
+stylesheets?',
+       default: formats.join('/')
+   }];
+
+   this.format = formats[0];
+
+   this.prompt(prompts, function(err, props) {
+       if (err) {
+           return this.emit('error', err);
+       }
+
+       formats.forEach(function(opt) {
+           if ((new RegExp(opt, 'i')).test(props.format)) {
+               this.format = opt;
+           }
+       }, this);
+
+       cb();
+   }.bind(this));
+};
+
+Generator.prototype.bootstrapFiles = function bootstrapFiles() {
+
+   // map format -> package name
+   var packages = {
+       css: 'bootstrap.css',
+       sass: 'sass-bootstrap',
+       less: 'bootstrap'
+   };
+
+   this.install(packages[this.format]);
 };
 ```
 
-`write` is a method provided by `yeoman.generators.Base`, and is a basic facade to the `grunt.file` API. When we "write" things, this happen relative to the working directory (that is the Gruntfile location, the Gruntfile is resolved internally, walking up the FS until one is found. This is most likely the root
-of the yeoman application).
 
-Our new generator is quite simple: it inherits from `yeoman.generators.Base` and has one method definition. Each "public" method in the generator is executed when a generator is invoked (first level method in the prototype chain, eg.  `Base` class method are not called).
+For a more complete example look at 
+[https://github.com/yeoman/generator-webapp/blob/master/app/index.js](https://github.com/yeoman/generator-webapp/blob/master/app/index.js)
 
-There are two exceptions, generators won't run:
+<h3 id="generator-snippets">Generator snippets</h3>
 
-- any method beginning with the `_` prefix.
-- a `constructor` method, specifically used with generators written in
-  CoffeeScript
+The following section will help you get acquainted with some common actions you 
+might want to implement when writing your own generator.
 
-Finally, we invoke the `write` method that will create a file at the given destination with the given content.
+**Prompts**
 
-**Note**: Generators should execute their tasks synchronously. We currently lack the API to be able to do things asynchronously (which we might need). A
-`this.async()` method should be implemented, which returns a new handler to call on completion.
+The prompts system can be used to prompt the user for information when 
+scaffolding out a project using a generator or sub-generator. Prompts below take 
+the form of an array of objects, each of which specify:
 
-Now, we can see that the initializer generator available to use if we output
-the list of available generators in this application:
+* name: a prompt name (which can later be used to access data associated with 
+  the response)
+* message: the actual question to prompt the user with
+* default: the options available for answering the prompt question
+* warning: a warning displayed before continuing with a specific option
 
-    $ yeoman init generator
-
-    Usage: yeoman generate GENERATOR [args] [options]
-    ...
-
-    Please choose a generator below.
-
-    ...
-
-    Initializer:
-      initializer
-
-To invoke our new generator, we just need to do:
-
-    $ yeoman init initializer
-
-Before we go on, let’s see our brand new generator description:
-
-    $ yeoman generate initializer --help
-    .. Invoke initializer ..
-    Description:
-        Create files for initializer generator.
-
-Yeoman is usually able to generate good descriptions, but not in this particular case. We can solve this problem in two ways. The first one is calling desc inside our generator:
-
-```js
-var util = require('util'),
-    yeoman = require('../../../');
-
-module.exports = Generator;
-
-function Generator() {
-  yeoman.generators.Base.apply(this, arguments);
-
-  this.desc('This generator creates an initializer file at app/js/');
-}
-
-util.inherits(Generator, yeoman.generators.Base);
-
-Generator.prototype.createInitializerFile = function() {
-  this.write('app/js/initializer.js', "// Add initialization content here");
-};
 ```
 
-Now we can see the new description by invoking --help on the new generator. The second way to add a description is by creating a file named `USAGE` in the same directory as our generator. We are going to do that in the next step.
+var prompts = [{
+    name: 'compassBootstrap',
+    message: 'Would you like to include Twitter Bootstrap for Sass?',
+    default: 'Y/n',
+    warning: 'Yes: All Twitter Bootstrap files will be placed into the styles directory.'
+  },
+  {
+    name: 'includeRequireJS',
+    message: 'Would you like to include RequireJS (for AMD support)?',
+    default: 'Y/n',
+    warning: 'Yes: RequireJS will be placed into the JavaScript vendor directory.'
+  }];
 
-### Creating Generators with Generators
-
-Generators themselves have a generator:
-
-    $ yeoman init generator initializer
-      create  lib/generators/initializer
-      create  lib/generators/initializer/index.js
-      create  lib/generators/initializer/USAGE
-      create  lib/generators/initializer/templates
-
-This is the generator just created:
-
-```js
-var util = require('util'),
-    yeoman = require('../../../');
-
-module.exports = Generator;
-
-function Generator() {
-  yeoman.generators.NamedBase.apply(this, arguments);
-
-  this.sourceRoot(__dirname, 'templates');
-}
-
-util.inherits(Generator, yeoman.generators.NamedBase);
-```
-
-First, notice that we are inheriting from `yeoman.Generators.NamedBase` instead of `yeoman.Generators.Base`. This means that our generator expects at least one argument, which will be the name of the initializer, and will be available in our code in the variable `name`.
-
-We can see that by invoking the description of this new generator:
-
-    $ yeoman init initializer --help
-
-    Usage:
-      yeoman init initializer NAME [options]
-
-**Note**: The banner is not automatically generated yet for generators (the Usage: thing above). Same for options and arguments defined by the generator, they should show up during the help output. Right now, the USAGE file is dumped to the console as is.
-
-We can also see that our new generator has an instance method called `sourceRoot`.
-
-This method points to where our generator templates will be placed, if any, and by default it points to the created directory `lib/generators/initializer/templates` (so the `sourceRoot(__dirname, 'templates')` can be removed, this is the default).
-
-In order to understand what a generator template means, let’s create the file
-lib/generators/initializer/templates/initializer.js with the following content:
-
-    // Add initialization content here
-
-And now let’s change the generator to copy this template when invoked:
-
-```js
-var util = require('util'),
-    yeoman = require('yeoman');
-
-module.exports = Generator;
-
-function Generator() {
-  yeoman.generators.NamedBase.apply(this, arguments);
-  // if your templates/ location differ, feel free to set it with sourceRoot()
-}
-
-util.inherits(Generator, yeoman.generators.NamedBase);
-
-Generator.prototype.copyInitializerFile = function() {
-  this.copy('initializer.js', 'config/initializers/' + this.name + '.js');
-};
-```
-
-And let’s execute our generator:
-
-    $ yeoman init initializer core_extensions
-
-We can see that now an initializer named `core_extensions` was created at
-`config/initializers/core_extensions.js` with the contents of our template. That
-means that `copy` copied a file in our source root to the destination path
-we gave. The property `name` is automatically created when we inherit from
-`yeoman.Generators.NamedBase`, and match the value of the given argument
-(`NamedBase` automatically specify an argument via `this.argument`)
-
-### Generators Lookup
-
-When you run `yeoman init initializer core_extensions` yeoman requires these
-paths in turn until one is found:
-
-    lib/generators/initializer/index.js
-    lib/generators/initializer.js
-    lib/generators/yeoman/initializer/index.js
-    lib/generators/yeoman/initializer.js
-
-**Note**: `index.js` may be anything else, as long the module entry point is
-defined in a package.json.
-
-**Second Note**: While true, the help output might miss a generator. It looks
-for file below lib/generators at few locations, searching for `index.js` files.
-
-yeoman will do this lookup at few different places, in this order:
-
-- relative to the working directory, from within a yeoman application.
-- relative to any `node_modules/yeoman-*` module. These are called "yeoman
-  plugins", they should package up their generator in the `lib/generators`
-  directory.
-
-This mean that users may override part or the whole set of generator used by
-yeoman, either at an application level, with custom handcrafted generator or
-via "yeoman plugin" (a node package that defines a set of generators in their
-`lib/generators` directory).
-
-If none is found you get an error message.
-
-### Customizing your Workflow
-
-Yeoman own generators are flexible enough to let you customize scaffolding. They
-can be configured in your application Gruntfile, these are some defaults:
-
-```js
-generators: {
-  'template-engine': 'handlebars',
-  'test-framework': {
-    name: 'mocha',
-    options: {
-      ui: 'bdd'
+  this.prompt(prompts, function (err, props) {
+    if (err) {
+      return this.emit('error', err);
     }
+
+    // manually deal with the response, get back and store the results.
+    // we change a bit this way of doing to automatically do this in the self.prompt() method.
+    this.compassBootstrap = (/y/i).test(props.compassBootstrap);
+    this.includeRequireJS = (/y/i).test(props.includeRequireJS);
+
+    cb();
+  }.bind(this));
+};
+
+```
+
+**Using them in for conditionally including files later:**
+
+```
+AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
+  if (this.includeRequireJS) {
+    this.copy('bootstrap.js', 'app/scripts/vendor/bootstrap.js');
   }
-}
-```
-
-Looking at this output, it’s easy to understand how generators work in yeoman.
-
-Generator relies on hook and other generators, some don't actually generate anything, they just invokes others to do the work.
-
-This allows us to add/replace/remove any of those invocations. For instance, the `controller` generator invokes the `view` and `test-framework` hooks. These hooks tries to resolve their value from cli options first, then look at the Gruntfile for a generator property with the corresponding hook name, and finally defaults to the hook name if none were found.
-
-Since each generator has a single responsibility, they are easy to reuse,
-avoiding code duplication.
-
-**TBD** Finish up this section: example of running controller generator, see
-the hooks. etc.
-
-### Customizing Your Workflow by Changing Generators Templates
-
-In the step above we simply wanted to add a line to the generated helper, without adding any extra functionality. There is a simpler way to do that, and it’s by replacing the templates of already existing generators, in that case `yeoman.generators.HelperGenerator`.
-
-Generators don’t just look in the source root for templates, they also search for templates in other paths. And one of them is lib/templates. Since we want to customize `yeoman.generators.HelperGenerator`, we can do that by simply making a template copy inside lib/templates/yeoman/helper with the name helper.js.
-
-If you generate another resource, you can see that we get exactly the same result! This is useful if you want to customize your scaffold templates and/or layout by just creating edit.html.erb, index.html.erb and so on inside lib/templates/erb/scaffold.
-
-
-### More On Generators
-
-So we know that a typical generator looks like the following:
-
-```js
-var util = require('util'),
-    yeoman = require('../../../');
-
-module.exports = Generator;
-
-function Generator() {
-  yeoman.generators.NamedBase.apply(this, arguments);
-}
-
-util.inherits(Generator, yeoman.generators.NamedBase);
-
-Generator.prototype.createSomething = function() {
-  // code
-};
-
-// ... other methods ...
-```
-
-Generators can also be written in CoffeeScript, they just needs to be named with a `.coffee` extension (typically `lib/generators/generatorName/index.coffee`)
-
-```coffeescript
-yeoman = require 'yeoman'
-
-module.exports = class Generator extends yeoman.generators.NamedBase
-
-  constructor: (args, options, config) ->
-    super args, options, config
-
-  createSomething: ->
-    # code
-
-  # ... other method ...
-```
-
-They're usually layout like so:
-
-    lib/
-    └── generators
-        └── generatorName
-            ├── USAGE
-            ├── index.js
-            └── templates
-
-Generators extends either `yeoman.generators.Base` or `yeoman.generators.NamedBase`. `NamedBase` is suitable to use for generators that expects a "name" argument, such as `yeoman init model [NAME]`.
-
-Every public method in a generator are executed serially. Every first level method in the prototype chain, eg. inherited method in `Base` are not.
-
-Two exceptions:
-
-- any method beginning with `_` is not ran, you may use them as method
-  helper. They won't be called automatically on generator invocation.
-- a `constructor` method, most likely when using CoffeeScript to implement the generator
-
-Either `Name` or `BasedName` are EventEmitters, you may use the EventEmitter API if you wish to (emit / on / once / ...)
-
-grunt.file
-----------
-
-Generators get mixed into their prototype the [grunt.file](https://github.com/gruntjs/grunt/blob/master/docs/api_file.md#the-file-api) API. You can use read, readJSON, write, copy, mkdir, expandFiles, etc.
-
-Note that some of them have special additional logic attached, for `copy`, `read` and `write`.
-
-`copy` and `read` make sure to prefix the source filename to be within the generator's source root (usually a `templates/` folder next to the generator implementation).
-
-grunt.log
----------
-
-In addition to the grunt.file API directly available into your generators, you
-can use the [grunt.log](https://github.com/gruntjs/grunt/blob/master/docs/api_log.md#the-log-api) API as `this.log`
-
-
-```js
-Generator.prototype.doingSomething = function() {
-  this.log.writeln('I\'m doing something');
-  this.log.ok('.. And I think it's ok ..'');
 };
 ```
 
-sync vs async
--------------
+**Template/copy specific files:**
 
-Methods are expected to run synchronously by default. This is fine for most cases, and will be just what you need for most common operations. Every file system method (copy, write, read, etc.) available are borrowed to grunt's, where most of them are implemented synchronously for conveniency.
+Copying specific files for your generator output can be done using this.copy() 
+or this.template(). The latter will copy the files over from your generator's 
+templates directory to the directory the user is currently in. The second 
+argument to this.template() can be used to store a file with a custom filename 
+if required.
 
-If you wish to run your method in an asynchronous way, you should tell the system to do so. Very similarly to how you would handle async stuff in grunt tasks.
-
-If a method is asynchronous, `this.async` must be invoked to tell the system to wait. It returns a handle to a "done" function that should be called when the method has completed. Every non-falsy value (most likely an Error object) can be passed to the done function as a first argument to indicate a failure.
-
-It this method isn't invoked, the method executes synchronously.
-
-Generator methods
------------------
-
-The following are methods available for generators.
-
-NOTE: Methods provided by Grunt are not covered this guide and can be found in
-"Grunt's documentation":https://github.com/gruntjs/grunt/blob/master/docs/api_file.md#the-file-api
-
-**TBD**
-
-## Base Generator
-
-A `Base` generator has the following methods, members, and events.
-
-### generator.options
-
-A hash object holding all cli parsed options by nopt.
-
-### generator.argument(name, options)
-
-Adds an argument to the class and creates an instance property for it.
-
-Arguments are different from options in several aspects. The first one is how they are parsed from the command line, arguments are retrieved from position:
-
-    yeoman init NAME
-
-Instead of:
-
-    yeoman init --name NAME
-
-Besides, arguments are used inside your code as a property (this.argument), while options are all kept in a hash (this.options).
-
-Options:
-
-* desc     - Description for the argument.
-* required - If the argument is required or not.
-* optional - If the argument is optional or not.
-* type     - The type of the argument, can be String, Number, Array, Object
-           (in which case considered as an Hash object, key:value).
-* defaults - Default value for this argument. It cannot be required
-            and have default values.
-* banner   - String to show on usage notes.
-
-### generator.option(name, options)
-
-Adds an option to the set of generator expected options, only used to
-generate generator usage. By default, generators get all the cli option
-parsed by nopt as a this.options Hash object.
-
-- name       - The name of the argument
-- options    - Hash of configuration values where:
-- desc     - Description for the argument.
-- type     - Type for this argument, either Boolean, String or Number.
-- defaults - Default value for this argument.
-- banner   - String to show on usage notes.
-- hide     - If you want to hide this option from the help.
-
-### generator.sourceRoot([path])
-
-Stores and return the source root for this class. This is used with `copy()`, `template()`, `read()`, etc. to prefix the relative path.
-
-By default, takes the value of `templates/` next to the generator file.
-
-When no path is given, returns the value of `_sourceRoot`.
-
-### generator.destinationRoot([path])
-
-Sets the destination root for this class, ensure the directory is created and
-cd into it.
-
-### generator.hookFor(name, options)
-
-Must be called within the constructor only.
-
-Register a hook to invoke a generator based on the value supplied by the user to the given option named "name". An option is created when this method is invoked and you can set a hash to customize it.
-
-```js
-function MyGenerator(args, options, config) {
-  yeoman.generators.Base.apply(this, arguments);
-  // init a framework specific controller
-  this.hookFor('js-framework');
-}
 ```
 
-Hooks work in a way that you can delegate the groundwork of scaffolding to other generators. They're totally inspired by Rails 3 generators [`hook_for` method](http://apidock.com/rails/Rails/Generators/Base/hook_for/class).
-
-The example above will create a js framework option and will invoke a
-generator based on the user supplied value.
-
-For example, if the user invokes the controller generator as:
-
-    yeoman init controller Account --js-framework backbone
-
-The controller generator will then try to invoke the following generators:
-
-    "backbone:controller" "backbone"
-
-Notice that the value of a given hook can be defined in your application Gruntfile as well:
-
-```js
-// grunt config
-generators: {
-  'js-framework': 'backbone'
-}
-// ... more grunt config ...
+AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
+  if (this.includeRequireJS) {
+    this.copy('bootstrap.js', 'app/scripts/vendor/bootstrap.js');
+  }
+};
 ```
 
-This is what allows any js framework to hook into Yeoman as long as it provides any of the hooks above.
+**Writing content to files:**
 
-#### Options
+Sometimes you may wish to write custom content to a file as a part of your 
+generator's workflow. This can be done using this.write() which will save custom 
+content to a specified file.
 
-The first and last part used to find the generator to be invoked are guessed based on constructor's `hookFor` invokes, as noticed in the example above. This can be customized with the following options:
-
-- `as`      - the context to lookup, defaults to generator's name.
-- `args`    - arguments to pass through, defaults generator's arguments.
-- `options` - options to pass through, defaults to generator's options.
-- `config`  - Grunt config to pass through, defaults to generator's config.
-
-Let’s suppose you are creating a generator that needs to invoke the controller generator from a unit test. Your first attempt is:
-
-```js
-// in lib/generators/awesome/index.js generator's constructor.
-this.hookFor('test-framework');
+```
+AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
+    this.write('app/styles/main.scss', '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {\n    margin: 50px auto 0 auto;\n    width: 300px;\n}');
+};
 ```
 
-The lookup in this case for test_unit as input is:
+**Writing directories and file contents:**
 
-    "test_framework:awesome", "test_framework"
+this.write() and this.mkdir() can be similarly used to create new directories, 
+sub-directories and again, write custom content to a new file.
 
-(more specifically, `"jasmine:awesome", jasmine"` which is the default value
-for `test-framework` hook)
-
-Which is not the desired lookup. You can change it by providing the `as` option:
-
-```js
-// in lib/generators/awesome/index.js generator's constructor.
-this.hookFor('test-framework', { as: 'controller' });
+```
+AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
+    this.write('app/styles/main.scss', '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {\n    margin: 50px auto 0 auto;\n    width: 300px;\n}');
+};
 ```
 
-And now it will lookup at:
+**Scaffolding an index:**
 
-    "test_framework:controller", "test_framework"
+```
+AppGenerator.prototype.writeIndex = function writeIndex() {
+  // prepare default content text
+  var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
 
-### generator.copy(source, destination, options)
+  var contentText = [
+    '        <div class="container">',
+    '            <div class="hero-unit">',
+    '                <h1>\'Allo, \'Allo!</h1>',
+    '                <p>You now have</p>',
+    '                <ul>'
+  ];
 
-> Copy a source file to a destination path, creating intermediate directories if necessary.
+  if (!this.includeRequireJS) {
+    this.indexFile = this.appendScripts(this.indexFile, 'scripts/main.js', [
+      'components/jquery/jquery.js',
+      'scripts/main.js'
+    ]);
 
-Grunt's [`grunt.file.copy`](https://github.com/gruntjs/grunt/blob/master/docs/api_file.md#grunt-file-copy) is used, we simply make sure that relative path are prefixed by the generator's `sourceRoot` value.
+    this.indexFile = this.appendFiles({
+      html: this.indexFile,
+      fileType: 'js',
+      optimizedPath: 'scripts/coffee.js',
+      sourceFileList: ['scripts/hello.js'],
+      searchPath: '.tmp'
+    });
+  }
 
-```js
-// similar to
-var source = path.join(this.sourceRoot(), 'path/to/file.js');
-grunt.file.copy(source, destination, options);
+
+  if (this.includeRequireJS) {
+    defaults.push('RequireJS');
+  } else {
+    this.mainJsFile = 'console.log(\'\\\'Allo \\\'Allo!\');';
+  }
+
+  // iterate over defaults and create content string
+  defaults.forEach(function (el) {
+    contentText.push('                    <li>' + el  +'</li>');
+  });
+
+  contentText = contentText.concat([
+    '                </ul>',
+    '                <p>installed.</p>',
+    '                <h3>Enjoy coding! - Yeoman</h3>',
+    '            </div>',
+    '        </div>',
+    ''
+  ]);
+
+  // append the default content
+  this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
+};
+
 ```
 
-### generator.read(filepath, [encoding])
+**You can trigger the installation of Bower dependencies using:**
 
-Same as copy, `.read()` relative `filepath` are prefixed by `self.sourceRoot()`
-value.
-
-### generator.write(filepath, [encoding])
-
-> Write the specified contents to a file, creating intermediate directories if necessary.
-
-Just like
-[`grunt.file.write`](https://github.com/gruntjs/grunt/blob/master/docs/api_file.md#grunt-file-write),
-we simply ensure the log output of the files being written.
-
-```js
-// similar to
-grunt.option('verbose', true);
-grunt.file.write(filepath, encoding);
-grunt.option('verbose', false);
+```
+ this.on('end', function () {
+    this.installDependencies({ skipInstall: options['skip-install'] });
+  });
 ```
 
-### generator.template(source, [destination], [data])
+**Hooks for sub-generators (e.g common is the name of another generator, 
+considered a piece of an angular app).**
 
-Gets an underscore template at the relative source, executes it and makes a copy at the relative destination. If the destination is not given it's assumed to be equal to the source relative to destination.
+Occasionally, you may wish to provide sub-generators as a part of your generator 
+workflow. A sub-generator takes care of scaffolding one specific piece of an 
+application, such as a view or model. Crafting part of your workflow as a 
+sub-generators means that a broader generator could call them (using 
+`this.hookFor`) to create an initial application, but you can also later call the 
+sub-generator to just create that one piece (e.g a new view). This might be done 
+using `yo mygenerator:mysubgenerator`.
 
-```js
-this.template('Gruntfile.js');
+```
+AppGenerator.prototype.writeIndex = function writeIndex() {
+  // prepare default content text
+  var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
+
+  var contentText = [
+    '        <div class="container">',
+    '            <div class="hero-unit">',
+    '                <h1>\'Allo, \'Allo!</h1>',
+    '                <p>You now have</p>',
+    '                <ul>'
+  ];
+
+  if (!this.includeRequireJS) {
+    this.indexFile = this.appendScripts(this.indexFile, 'scripts/main.js', [
+      'components/jquery/jquery.js',
+      'scripts/main.js'
+    ]);
+
+    this.indexFile = this.appendFiles({
+      html: this.indexFile,
+      fileType: 'js',
+      optimizedPath: 'scripts/coffee.js',
+      sourceFileList: ['scripts/hello.js'],
+      searchPath: '.tmp'
+    });
+  }
+
+
+  if (this.includeRequireJS) {
+    defaults.push('RequireJS');
+  } else {
+    this.mainJsFile = 'console.log(\'\\\'Allo \\\'Allo!\');';
+  }
+
+  // iterate over defaults and create content string
+  defaults.forEach(function (el) {
+    contentText.push('                    <li>' + el  +'</li>');
+  });
+
+  contentText = contentText.concat([
+    '                </ul>',
+    '                <p>installed.</p>',
+    '                <h3>Enjoy coding! - Yeoman</h3>',
+    '            </div>',
+    '        </div>',
+    ''
+  ]);
+
+  // append the default content
+  this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
+};
+
 ```
 
-will copy and process the `templates/Gruntfile.js` file through `grunt.template.process`, and write the results to `./Gruntfile.js` relative the the application root.
+**Remotely pull in files:**
 
-Another example is using a `templates/model.js` template to write at the `app/js/models/{name}-model.js` location in a `NamedBase` generator.
+```
+Generator.prototype.bootstrapFiles = function bootstrapFiles() {
+  var appPath = this.appPath;
+  if (this.compassBootstrap) {
+    var cb = this.async();
 
-```js
-this.template('model.js', path.join('app/js/models', this.name + '-model.js'));
+    this.write(path.join(appPath, 'styles/main.scss'), '@import "compass_twitter_bootstrap";');
+    this.remote('vwall', 'compass-twitter-bootstrap', 'v2.2.2.2', function (err, remote) {
+      if (err) {
+        return cb(err);
+      }
+      remote.directory('stylesheets', path.join(appPath, 'styles') );
+      cb();
+    });
+  } else if (this.bootstrap) {
+    this.log.writeln('Writing compiled Bootstrap');
+    this.copy( 'bootstrap.css', path.join(appPath, 'styles/bootstrap.css') );
+  }
+
+  if (this.bootstrap || this.compassBootstrap) {
+    //this.directory( 'images', 'app/images' );
+  }
+};
 ```
 
-### generator.directory(source, [destination])
+<h2 id="generator-internals">Generator Internals</h2>
 
-Copies recursively the files from source directory to destination root directory. If the destination is not given it's assumed to be equal to the source relative to destination.
+If you wish to dive in further into how the Yo generator system works, 
+documentation on the system internals are also available. Read below for:
 
-Each file is copied and processed through `grunt.template.process`.
+[Generator API](https://github.com/yeoman/generator/wiki/base)
+[Environment](https://github.com/yeoman/generator/wiki/env)
+[Testing 
+generators](https://github.com/yeoman/generator/wiki/Testing-generators)
 
-```js
-this.directory('.', 'test');
-```
+Once you've grokked the basics, the best way to learn how to write your own 
+generators is taking look at generators other developers have written. The HTML5 
+Boilerplate and Mobile Boilerplate projects are good examples of simpler 
+generators whilst the AngularJS generator is one of the more advanced ones out 
+there. 
 
-The example above copies and process any files within generators `templates/`
-directory, and write them at the `test/` location.
+<h2 id="faq">Frequently asked questions</h2>
 
-### generator.tarball(url, destination, cb)
-
-Fetch a remote tarball, and untar at the given destination.
-
-```js
-this.tarball('https://github.com/twitter/bootstrap/tarball/master', 'vendor/bootstrap', this.async());
-```
-
-### generator.fetch(url, destination, cb)
-
-Download a single file at the given destination.
-
-```js
-this.fetch('http://zeptojs.com/zepto.js', 'js/vendor/zepto.js', this.async());
-```
-
-### generator.remote(username, repository, [branch], cb)
-
-Remotely fetch a package on github, store this into an internal `_cache/`
-folder, and invokes provided callback on completion with a "remote" object as
-the main API to interact with downloaded package.
-
-- username      - GitHub username
-- repository    - GitHub repository to fetch from
-- branch        - Optional branch or sha1, defaults to master
-- cb            - function to invoke on completion
-
-The example below downloads and cache the html5-boilerplate project, and use the `remote` object
-to copy the whole project into the `app/` folder.
-
-```js
-var cb = this.async();
-this.remote('h5bp', 'html5-boilerplate', 'master', function(err, remote) {
-  if(err) return cb(err);
-  // remote.copy('index.html', 'index.html');
-  // remote.template('index.html', 'will/be/templated/at/index.html');
-  remote.directory('.', 'app');
-  cb();
-});
-```
-
-`remote()` allows the download of full repositories and copying of single or
-multiple files. `remote` object is your API to access this fetched (and cached)
-package and copy / process files.
-
-#### remote.copy(source, destination, options)
-
-Same as `generator.copy()` but relative `source` is prefixed with the cache
-directory.
-
-#### remote.template(source, destination, options)
-
-Same as `generator.temlate()` but relative `source` is prefixed with the cache
-directory.
-
-#### remote.template(source, destination, options)
-
-Same as `generator.directory()` but relative `source` is prefixed with the cache directory.
-
-
-#### Prompt user before overwriting files with `--force`
-
-Generators also support a `warnOn` method, which allows developers to warn on global paths that are matching those paths or files which the generator is going to generate (e.g `self.warnOn('*')`.
-
-Where used, Yeoman will warn the user they if they proceed that a file will be overwritten and they may need to call the generator with the `--force` flag to proceed.
-
-`warnOn` is most likely to be used in constructors.
+* **How do I pull in dependencies using Bower? ** Place a component.json file 
+  filled out with Underscore templating in the /templates directory and then run 
+  `this.installDependencies` from within your generator's app/index.js. 
+  Alternatively they can install with `this.bowerInstall(['jquery', 
+  'underscore'], { save: true });`
+* **How do I unit test generators? ** If using the 
+  [generator-generator](https://github.com/passy/generator-generator), very 
+  basic Mocha unit tests will be scaffolded out for you. You can also take a 
+  look at the [unit 
+  tests](https://github.com/yeoman/generator-webapp/blob/master/test/test.js) 
+  written for generator-webapp for examples of what you probably want to be 
+  testing.
+* **How do I create sub-generators? **Again, the generator-generator now has 
+  support for [generating 
+  sub-generators](https://github.com/passy/generator-generator#commands) that is 
+  worth checking out. 
+* **How can I extend my generators to do more than what the system allows out of 
+  the box? **Generators are just Node.js and what's not available in the API can 
+  be found over on npmjs.org.
+* **How do I publish my generator to NPM?** Make sure you add relevant keywords 
+  to your package so that people can find your generator (e.g 
+  `yeoman-generator`) and then `npm publish`. 
