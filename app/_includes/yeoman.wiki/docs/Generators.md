@@ -5,7 +5,8 @@ This guide will help you get started with the Yeoman generator system. If you wa
 * [Introduction](#introduction)
 * [Types of generators](#generator-types)
 * [Creating a Boilerplate generator](#generator-boilerplate)
-* [Creating an Application scaffolding generator](#generator-application)	* [Using the Passy generator-generator](#passy-generator)
+* [Creating an Application scaffolding generator](#generator-application)	
+* [Using the Passy generator-generator](#passy-generator)
 	* [The built-in generator generator](#generator-generator)
 	* [Generator Bootstrap](#generator-bootstrap)
 * [Generator snippets](#generator-snippets)
@@ -55,7 +56,9 @@ git clone git://github.com/addyosmani/generator-boilerplate.git
 # Add your boilerplate to the templates directory
 git submodule add https://github.com/h5bp/html5-boilerplate app/templates
 
-# Edit package.json and README.md to customize the repository, author and dependencies as well as your instructions (here, our generator is called generator-awesome)
+# Edit package.json and README.md to customize the repository, author
+# and dependencies as well as your instructions (here, our generator is 
+# called generator-awesome)
 
 # Run `npm install` within the directory for your generator
 npm install
