@@ -517,12 +517,12 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
       if (err) {
         return cb(err);
       }
-      remote.directory('stylesheets', path.join(appPath, 'styles') );
+      remote.directory('stylesheets', path.join(appPath, 'styles'));
       cb();
     });
   } else if (this.bootstrap) {
     this.log.writeln('Writing compiled Bootstrap');
-    this.copy('bootstrap.css', path.join(appPath, 'styles/bootstrap.css') );
+    this.copy('bootstrap.css', path.join(appPath, 'styles/bootstrap.css'));
   }
 };
 ```
