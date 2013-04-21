@@ -1,7 +1,7 @@
 # MODERN WORKFLOWS FOR MODERN WEBAPPS
 
 <p class="toolset">
-<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png"/>
+<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png" alt="Yo, Grunt, Bower">
 </p>
 
 ## 1.0 beta 
