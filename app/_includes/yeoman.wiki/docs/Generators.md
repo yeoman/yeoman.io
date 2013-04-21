@@ -317,15 +317,6 @@ var prompts = [{
 };
 ```
 
-**Using them in for conditionally including files later:**
-
-```javascript
-AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
-  if (this.includeRequireJS) {
-    this.copy('bootstrap.js', 'app/scripts/vendor/bootstrap.js');
-  }
-};
-```
 
 **Template/copy specific files:**
 
