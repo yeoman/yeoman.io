@@ -576,4 +576,5 @@ there.
   be found over on npmjs.org.
 * **How do I publish my generator to NPM?** Make sure you add relevant keywords 
   to your package so that people can find your generator (e.g 
-  `yeoman-generator`) and then `npm publish`. 
+  `yeoman-generator`) and then run `npm publish`. Further information about using
+NPM and registering packages with it can be found in the [official docs](https://npmjs.org/doc/developers.html).
