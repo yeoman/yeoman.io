@@ -97,7 +97,6 @@ npm install -g generator-generator
 yo generator:app 
 
 # Be sure to include :app as generator alone is part of yeoman itself.
-  
 ```
 
 **How is this different from the built-in generator?**
@@ -142,8 +141,7 @@ get started with your own custom generator project:
 
 Running `yo` by itself gives a list of available generators.
 
-**Then to create a new generator call: `yo generate:generatorName`:
-
+**Then to create a new generator call: `yo generate:generatorName`**
 
 ```bash
 $ yo generator generator
@@ -211,7 +209,7 @@ entry point again):
 * It includes specific modules required for the generator
 * It includes the yeoman-generator as a dependency - why?
 * Nothing special is done in the module.exports, but it inherits the Yeoman 
-  generator base.vm
+  generator base
 * It uses prompts to prompt the user for some information used to customize the 
   experience
 * Depending on their response, we this.install (using Bower) a specified package
@@ -378,7 +376,7 @@ AppGenerator.prototype.app = function app() {
 
 **Scaffolding an index:**
 
-```
+```javascript
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -434,7 +432,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
 **You can trigger the installation of Bower dependencies using:**
 
-```
+```javascript
  this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
   });
@@ -451,7 +449,7 @@ sub-generators means that a broader generator could call them (using
 sub-generator to just create that one piece (e.g a new view). This might be done 
 using `yo mygenerator:mysubgenerator`.
 
-```
+```javascript
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
