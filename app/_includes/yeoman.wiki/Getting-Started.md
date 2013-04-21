@@ -81,7 +81,7 @@ Each framework generator has further documentation available noting what sub-gen
 
 ### Creating your own generators
 
-Link up.
+See [[Generators]].
 
 ## Bower 
 
