@@ -49,7 +49,6 @@ would like to expose via a generator called "awesome". For arguments sake, let's
 say it's HTML5 Boilerplate.
 
 ```bash
-
 # Grab the boilerplate generator project
 git clone git://github.com/addyosmani/generator-boilerplate.git
 
