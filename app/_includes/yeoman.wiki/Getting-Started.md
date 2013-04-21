@@ -153,7 +153,7 @@ We have an [upgrade guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.
 ### For those special Windows people
     
 - Install [node.js](http://nodejs.org)
-- Install tools with npm: `npm install -g yo grunt-cli bower`
+- Install tools with npm: `npm install -g yo`
 - Install [Ruby](http://rubyinstaller.org) and ensure Ruby is added to the path
 - Install the Compass gem if you want to use Compass: `gem install compass`
 
