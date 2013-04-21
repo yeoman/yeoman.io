@@ -29,7 +29,7 @@ First you'll need to install `yo` (the webapp generator is included):
 npm install -g yo
 ```
 
-This will automatically install `grunt` and `bower` for you, if you use a new enough version of npm. You can also install those manually: `npm install -g grunt-cli bower`.
+This will automatically install `grunt` and `bower` for you, if you are using npm 1.2.10 or above. You can also install those manually: `npm install -g grunt-cli bower`.
 
 If you have installed Grunt globally in the past, you will need to remove it first: `npm uninstall -g grunt`
 
