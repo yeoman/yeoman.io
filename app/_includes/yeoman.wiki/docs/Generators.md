@@ -465,7 +465,6 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   var contentText = [
     '        <div class="container">',
     '            <div class="hero-unit">',
-    '                <h1>Allo!</h1>',
     '                <p>You now have</p>',
     '                <ul>'
   ];
@@ -509,6 +508,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   // append the default content
   this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
 };
+
 ```
 
 
