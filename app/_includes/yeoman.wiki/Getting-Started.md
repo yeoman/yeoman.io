@@ -21,8 +21,6 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 
 ### Installing yo and some generators
 
-**This beta does not yet work on Windows. We'll be working hard to fix this towards the final release.**
-
 First you'll need to install `yo` (the webapp generator is included):
 
 ```
