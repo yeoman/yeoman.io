@@ -10,7 +10,6 @@ The Yeoman workflow is comprised of three core tools for improving your producti
 
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.
 
-
 <p class="toolset">
   <img class="full" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/workflow.jpg">
 </p>
@@ -31,7 +30,7 @@ This will automatically install `grunt` and `bower` for you, if you are using np
 
 If you have installed Grunt globally in the past, you will need to remove it first: `npm uninstall -g grunt`
 
-*Windows instructions at the bottom*
+On Windows we suggest you use an improved command line tool such as Console2 or PowerShell to improve the experience.
 
 ### Basic scaffolding
 
@@ -146,13 +145,3 @@ grunt
 ### I used Yeoman 0.9.x and would like to upgrade to 1.0. What do I do?
 
 We have an [upgrade guide](https://github.com/yeoman/yeoman/wiki/Migrate-from-0.9.6-to-1.0) to assist with moving your 0.9.x projects over to 1.0. Note that we no longer offer a yeoman binary which wraps both grunt and bower, but instead use a new yo binary for your scaffolding needs. The guide will explain how this workflow applies to upgrading in more detail.
-
-
-### For those special Windows people
-    
-- Install [node.js](http://nodejs.org)
-- Install tools with npm: `npm install -g yo`
-- Install [Ruby](http://rubyinstaller.org) and ensure Ruby is added to the path
-- Install the Compass gem if you want to use Compass: `gem install compass`
-
-Use an improved command line tool such as Console2 or PowerShell to improve the experience on Windows.
