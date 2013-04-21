@@ -1,5 +1,7 @@
 # Writing Custom Yo Generators
 
+*Correct as of yo 1.0 beta 4*
+
 This guide will help you get started with the Yeoman generator system. If you want to skip the explanations and just get started, you can.
 
 * [Introduction](#introduction)
