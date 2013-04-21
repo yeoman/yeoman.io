@@ -122,8 +122,8 @@ structure:
     └── test-load.js
 ```
 
-`yo generator:app` shows a wizard for generating a new generator whilst yo 
-`generator:subgenerator NAME` generates a sub-generator with the name NAME.
+`yo generator:app` shows a wizard for generating a new generator whilst `yo 
+generator:subgenerator NAME` generates a sub-generator with the name NAME.
 
 <h3 id="generator-generator">The built-in generator generator</h3>
 
