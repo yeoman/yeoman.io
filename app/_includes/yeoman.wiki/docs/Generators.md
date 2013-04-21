@@ -522,11 +522,7 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
     });
   } else if (this.bootstrap) {
     this.log.writeln('Writing compiled Bootstrap');
-    this.copy( 'bootstrap.css', path.join(appPath, 'styles/bootstrap.css') );
-  }
-
-  if (this.bootstrap || this.compassBootstrap) {
-    //this.directory( 'images', 'app/images' );
+    this.copy('bootstrap.css', path.join(appPath, 'styles/bootstrap.css') );
   }
 };
 ```
