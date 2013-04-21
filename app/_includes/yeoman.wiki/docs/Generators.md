@@ -509,8 +509,8 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   // append the default content
   this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
 };
-
 ```
+
 
 **Remotely pull in files:**
 
