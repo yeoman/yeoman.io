@@ -93,7 +93,7 @@ npm install -g yo
 # Install the generator
 npm install -g generator-generator
 
-#Run the generator
+# Run the generator
 yo generator:app 
 
 # Be sure to include :app as generator alone is part of yeoman itself.
@@ -125,7 +125,7 @@ structure:
 ```
 
 `yo generator:app` shows a wizard for generating a new generator whilst yo 
-`generator:subgenerator` NAME generates a sub-generator with the name NAME
+`generator:subgenerator NAME` generates a sub-generator with the name NAME
 
 <h3 id="generator-generator">The built-in generator generator</h3>
 
