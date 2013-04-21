@@ -407,7 +407,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   if (this.includeRequireJS) {
     defaults.push('RequireJS');
   } else {
-    this.mainJsFile = 'console.log('Allo!');';
+    this.mainJsFile = "console.log('Allo!');";
   }
 
   // iterate over defaults and create content string
@@ -479,7 +479,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   if (this.includeRequireJS) {
     defaults.push('RequireJS');
   } else {
-    this.mainJsFile = 'console.log(\'Allo!');';
+    this.mainJsFile = "console.log('Allo!');";
   }
 
   // iterate over defaults and create content string
