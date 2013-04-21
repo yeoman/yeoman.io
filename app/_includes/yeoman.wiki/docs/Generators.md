@@ -48,7 +48,7 @@ Let's say you have an existing boilerplate Grunt project hosted on GitHub you
 would like to expose via a generator called "awesome". For arguments sake, let's 
 say it's HTML5 Boilerplate.
 
-```
+```bash
 
 # Grab the boilerplate generator project
 git clone git://github.com/addyosmani/generator-boilerplate.git
@@ -86,7 +86,7 @@ includes editorconfig, package.json, tests and other sane defaults.
 
 **Writing your own new generator (with generator-generator)**
 
-```
+```bash
 # Make sure you have yo installed
 npm install -g yo
 
@@ -145,7 +145,7 @@ Running `yo` by itself gives a list of available generators.
 **Then to create a new generator call: `yo generate:generatorName`:
 
 
-```
+```bash
 $ yo generator generator
    create generator/index.js
    create generator/templates/readme.md
@@ -160,7 +160,7 @@ is where this would go. Same for a simple static site/page generator.
 
 **The contents of generator/index.js are:**
 
-```
+```javascript
 
 var generator = require('yeoman-generator');
 var util = require('util');
@@ -218,7 +218,8 @@ entry point again):
   experience
 * Depending on their response, we this.install (using Bower) a specified package
 
-```
+```javascript
+
 'use strict';
 var path = require('path');
 var util = require('util');
@@ -293,7 +294,7 @@ the form of an array of objects, each of which specify:
 * default: the options available for answering the prompt question
 * warning: a warning displayed before continuing with a specific option
 
-```
+```javascript
 
 var prompts = [{
     name: 'compassBootstrap',
@@ -326,7 +327,7 @@ var prompts = [{
 
 **Using them in for conditionally including files later:**
 
-```
+```javascript
 AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
   if (this.includeRequireJS) {
     this.copy('bootstrap.js', 'app/scripts/vendor/bootstrap.js');
@@ -342,7 +343,7 @@ templates directory to the directory the user is currently in. The second
 argument to this.template() can be used to store a file with a custom filename 
 if required.
 
-```
+```javascript
 
 AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
   if (this.includeRequireJS) {
@@ -357,7 +358,7 @@ Sometimes you may wish to write custom content to a file as a part of your
 generator's workflow. This can be done using this.write() which will save custom 
 content to a specified file.
 
-```
+```javascript
 AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
     this.write('app/styles/main.scss', 
     'MY SASS STYLESHEET CONTENT');
@@ -369,7 +370,7 @@ AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
 this.write() and this.mkdir() can be similarly used to create new directories, 
 sub-directories and again, write custom content to a new file.
 
-```
+```javascript
 AppGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/scripts');
@@ -383,7 +384,7 @@ AppGenerator.prototype.app = function app() {
 
 **Scaffolding an index:**
 
-```
+```javascript
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -440,7 +441,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
 **You can trigger the installation of Bower dependencies using:**
 
-```
+```javascript
  this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
   });
@@ -457,7 +458,7 @@ sub-generators means that a broader generator could call them (using
 sub-generator to just create that one piece (e.g a new view). This might be done 
 using `yo mygenerator:mysubgenerator`.
 
-```
+```javascript
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -514,7 +515,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
 **Remotely pull in files:**
 
-```
+```javascript
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   var appPath = this.appPath;
   if (this.compassBootstrap) {
