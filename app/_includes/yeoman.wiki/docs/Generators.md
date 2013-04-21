@@ -384,7 +384,8 @@ AppGenerator.prototype.app = function app() {
 
 **Scaffolding an index:**
 
-```javascript
+```
+
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -441,7 +442,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
 **You can trigger the installation of Bower dependencies using:**
 
-```javascript
+```
  this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
   });
@@ -458,7 +459,8 @@ sub-generators means that a broader generator could call them (using
 sub-generator to just create that one piece (e.g a new view). This might be done 
 using `yo mygenerator:mysubgenerator`.
 
-```javascript
+```
+
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -515,7 +517,9 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
 **Remotely pull in files:**
 
-```javascript
+
+```
+
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   var appPath = this.appPath;
   if (this.compassBootstrap) {
