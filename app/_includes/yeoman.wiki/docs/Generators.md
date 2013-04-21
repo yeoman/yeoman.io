@@ -125,7 +125,7 @@ structure:
 ```
 
 `yo generator:app` shows a wizard for generating a new generator whilst yo 
-`generator:subgenerator NAME` generates a sub-generator with the name NAME
+`generator:subgenerator NAME` generates a sub-generator with the name NAME.
 
 <h3 id="generator-generator">The built-in generator generator</h3>
 
@@ -161,7 +161,6 @@ is where this would go. Same for a simple static site/page generator.
 **The contents of generator/index.js are:**
 
 ```javascript
-
 var generator = require('yeoman-generator');
 var util = require('util');
 
@@ -180,7 +179,6 @@ util.inherits(Generator, generator.Base);
 Generator.prototype.scaffold = function scaffold() {
   this.directory('.', 'place/to/generate');
 };
-
 ```
 
 The Base class allows you to specify the expected options for the generator, 
@@ -219,7 +217,6 @@ entry point again):
 * Depending on their response, we this.install (using Bower) a specified package
 
 ```javascript
-
 'use strict';
 var path = require('path');
 var util = require('util');
@@ -295,7 +292,6 @@ the form of an array of objects, each of which specify:
 * warning: a warning displayed before continuing with a specific option
 
 ```javascript
-
 var prompts = [{
     name: 'compassBootstrap',
     message: 'Would you like to include Twitter Bootstrap for Sass?',
@@ -322,7 +318,6 @@ var prompts = [{
     cb();
   }.bind(this));
 };
-
 ```
 
 **Using them in for conditionally including files later:**
@@ -344,7 +339,6 @@ argument to this.template() can be used to store a file with a custom filename
 if required.
 
 ```javascript
-
 AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
   if (this.includeRequireJS) {
     this.copy('bootstrap.js', 'app/scripts/vendor/bootstrap.js');
@@ -385,7 +379,6 @@ AppGenerator.prototype.app = function app() {
 **Scaffolding an index:**
 
 ```
-
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -437,7 +430,6 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   // append the default content
   this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
 };
-
 ```
 
 **You can trigger the installation of Bower dependencies using:**
@@ -460,7 +452,6 @@ sub-generator to just create that one piece (e.g a new view). This might be done
 using `yo mygenerator:mysubgenerator`.
 
 ```
-
 AppGenerator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
@@ -511,15 +502,13 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
   // append the default content
   this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
 };
-
 ```
 
 
 **Remotely pull in files:**
 
 
-```
-
+```javascript
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   var appPath = this.appPath;
   if (this.compassBootstrap) {
