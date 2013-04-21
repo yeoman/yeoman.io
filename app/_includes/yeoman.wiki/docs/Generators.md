@@ -360,8 +360,7 @@ content to a specified file.
 ```
 AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
     this.write('app/styles/main.scss', 
-    '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {\n  
-     margin: 50px auto 0 auto;\n    width: 300px;\n}');
+    'MY SASS STYLESHEET CONTENT');
 };
 ```
 
@@ -371,10 +370,14 @@ this.write() and this.mkdir() can be similarly used to create new directories,
 sub-directories and again, write custom content to a new file.
 
 ```
-AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
-    this.write('app/styles/main.scss', 
-    '@import \'sass-bootstrap/lib/bootstrap\';\n\n.hero-unit {
-    \n    margin: 50px auto 0 auto;\n    width: 300px;\n}');
+AppGenerator.prototype.app = function app() {
+  this.mkdir('app');
+  this.mkdir('app/scripts');
+  this.mkdir('app/styles');
+  this.mkdir('app/images');
+  this.write('app/index.html', this.indexFile);
+  this.write('app/scripts/main.js', this.mainJsFile);
+  this.write('app/scripts/hello.coffee', this.mainCoffeeFile);
 };
 ```
 
