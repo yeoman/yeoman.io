@@ -373,6 +373,12 @@ AppGenerator.prototype.app = function app() {
 };
 ```
 
+**Importing file-content as a string**
+
+```javascript
+var indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'index.html'));
+```
+
 **Scaffolding an index:**
 
 ```javascript
