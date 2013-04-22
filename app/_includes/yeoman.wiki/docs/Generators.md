@@ -55,7 +55,7 @@ say it's HTML5 Boilerplate.
 git clone git://github.com/addyosmani/generator-boilerplate.git
 
 # Add your boilerplate to the templates directory
-git submodule add https://github.com/h5bp/html5-boilerplate app/templates
+git submodule add git://github.com/h5bp/html5-boilerplate.git app/templates
 
 # Edit package.json and README.md to customize the repository, author
 # and dependencies as well as your instructions (here, our generator is 
