@@ -112,7 +112,7 @@ The built-in yo generator command only generates an index.js file for you.
 generator-generator instead comes with a full project directory 
 structure:
 
-```
+```text
 ├── app
 │   ├── index.js
 │   └── templates
