@@ -1,4 +1,4 @@
-# Writing Custom Yo Generators
+# Writing Custom Yeoman Generators
 
 *Correct as of yo 1.0 beta 4*
 
@@ -454,56 +454,17 @@ sub-generator to just create that one piece (e.g a new view). This might be done
 using `yo mygenerator:mysubgenerator`.
 
 ```javascript
-AppGenerator.prototype.writeIndex = function writeIndex() {
-  // prepare default content text
-  var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
-
-  var contentText = [
-    '        <div class="container">',
-    '            <div class="hero-unit">',
-    '                <p>You now have</p>',
-    '                <ul>'
-  ];
-
-  if (!this.includeRequireJS) {
-    this.indexFile = this.appendScripts(this.indexFile, 'scripts/main.js', [
-      'components/jquery/jquery.js',
-      'scripts/main.js'
-    ]);
-
-    this.indexFile = this.appendFiles({
-      html: this.indexFile,
-      fileType: 'js',
-      optimizedPath: 'scripts/coffee.js',
-      sourceFileList: ['scripts/hello.js'],
-      searchPath: '.tmp'
-    });
-  }
-
-
-  if (this.includeRequireJS) {
-    defaults.push('RequireJS');
-  } else {
-    this.mainJsFile = "console.log('Allo!');";
-  }
-
-  // iterate over defaults and create content string
-  defaults.forEach(function (el) {
-    contentText.push('                    <li>' + el  +'</li>');
+this.hookFor('angular:common', {
+    args: args
   });
 
-  contentText = contentText.concat([
-    '                </ul>',
-    '                <p>installed.</p>',
-    '                <h3>Enjoy coding! - Yeoman</h3>',
-    '            </div>',
-    '        </div>',
-    ''
-  ]);
+  this.hookFor('angular:main', {
+    args: args
+  });
 
-  // append the default content
-  this.indexFile = this.indexFile.replace('<body>', '<body>\n' + contentText.join('\n'));
-};
+  this.hookFor('angular:controller', {
+    args: args
+  });
 ```
 
 
@@ -573,3 +534,5 @@ there.
   to your package so that people can find your generator (e.g 
   `yeoman-generator`) and then run `npm publish`. Further information about using
 NPM and registering packages with it can be found in the [official docs](https://npmjs.org/doc/developers.html).
+
+
