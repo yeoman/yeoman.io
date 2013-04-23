@@ -541,3 +541,4 @@ there.
   `yeoman-generator`) and then run `npm publish`. Further information about using
 NPM and registering packages with it can be found in the [official docs](https://npmjs.org/doc/developers.html).
 
+<p>&nbsp;</p>
