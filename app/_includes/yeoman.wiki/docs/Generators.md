@@ -23,6 +23,8 @@ of boilerplates, frameworks and dependencies. Think of them as a way to easily
 kick off a new project (or part of a project) without manually writing or 
 grabbing a random boilerplate.
 
+<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yobox.png" width="400px"/>
+
 The basic application generated when calling `yo webapp` actually uses a 
 generator itself and they can be quite powerful. A generator can simply copy an 
 existing set of files that make up a boilerplate or be more complex, offering 
@@ -43,6 +45,9 @@ project and write them to your application directory when calling them using
 
 Application scaffolders do a lot more and can cover build systems, 
 sub-generators, dependency management and automating workflow. 
+
+Note: If you would like to customize an existing generator to meet your own workflow, you're
+free to just fork one of our [official](https://github.com/yeoman) generators and add or remove as much as you would like. We have ones for Backbone, Angular, Ember and other frameworks.
 
 <h2 id="generator-boilerplate">Creating a Boilerplate generator</h2>
 
@@ -536,5 +541,4 @@ there.
   to your package so that people can find your generator (e.g 
   `yeoman-generator`) and then run `npm publish`. Further information about using
 NPM and registering packages with it can be found in the [official docs](https://npmjs.org/doc/developers.html).
-
 
