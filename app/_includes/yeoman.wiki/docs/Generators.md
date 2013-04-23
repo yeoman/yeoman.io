@@ -46,7 +46,7 @@ project and write them to your application directory when calling them using
 Application scaffolders do a lot more and can cover build systems, 
 sub-generators, dependency management and automating workflow. 
 
-Note: If you would like to customize an existing generator to meet your own workflow, you're
+**Note:** If you would like to customize an existing generator to meet your own workflow, you're
 free to just fork one of our [official](https://github.com/yeoman) generators and add or remove as much as you would like. We have ones for Backbone, Angular, Ember and other frameworks.
 
 <h2 id="generator-boilerplate">Creating a Boilerplate generator</h2>
