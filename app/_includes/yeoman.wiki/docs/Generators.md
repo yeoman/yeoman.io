@@ -1,4 +1,4 @@
-# Writing Custom Yeoman Generators
+# Writing Custom Yeoman App Generators
 
 *Correct as of yo 1.0 beta 4*
 
