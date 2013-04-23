@@ -140,9 +140,11 @@ command-line (without additional tools) which is useful for projects requiring
 more custom capabilities or build steps. The following steps will allow you to 
 get started with your own custom generator project:
 
-**Make sure you've installed yo**
+**Make sure you've installed yo:**
 
-`npm install -g yo`
+```bash
+npm install -g yo
+```
 
 **Then to see what has already been installed:**
 
