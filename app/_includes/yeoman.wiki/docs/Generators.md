@@ -5,13 +5,13 @@
 This guide will help you get started with the Yeoman generator system. If you want to skip the explanations and just get started, you can.
 
 * [Introduction](#introduction)
-* [Types of generators](#generator-types)
-* [Creating a Boilerplate generator](#generator-boilerplate)
-* [Creating an Application scaffolding generator](#generator-application)	
-* [Using the Passy generator-generator](#passy-generator)
-	* [The built-in generator generator](#generator-generator)
+* [Types Of Generators](#generator-types)
+* [Creating A Boilerplate Generator](#generator-boilerplate)
+* [Creating An Application Scaffolding generator](#generator-application)	
+* [Using The Passy generator-generator](#passy-generator)
+	* [The Built-in generator generator](#generator-generator)
 	* [Generator Bootstrap](#generator-bootstrap)
-* [Generator snippets](#generator-snippets)
+* [Generator Snippets](#generator-snippets)
 * [Generator Internals](#generator-internals)
 * [FAQ](#faq)
 
@@ -505,10 +505,9 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
 If you wish to dive in further into how the Yo generator system works, 
 documentation on the system internals are also available. Read below for:
 
-[Generator API](https://github.com/yeoman/generator/wiki/base)
-[Environment](https://github.com/yeoman/generator/wiki/env)
-[Testing 
-generators](https://github.com/yeoman/generator/wiki/Testing-generators)
+* [Generator API](https://github.com/yeoman/generator/wiki/base)
+* [Environment](https://github.com/yeoman/generator/wiki/env)
+* [Testing generators](https://github.com/yeoman/generator/wiki/Testing-generators)
 
 Once you've grokked the basics, the best way to learn how to write your own 
 generators is taking look at generators other developers have written. The HTML5 
