@@ -49,7 +49,7 @@ The webapp generator is considered the simplest possible start for a webapp. We 
 Before you can create an angular app you need to install the generator  
 
 ```
-npm install -g generator-angular generator-karma
+npm install -g generator-angular
 ```
 
 After that you can run
