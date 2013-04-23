@@ -71,11 +71,13 @@ cd app
 yo awesome 
 ```
 
-Alternatively, if you would just like to avoid working with submodules, you can easily pull in your existing boilerplate into the generator using a URL to the tarball as follows:
+Alternatively, if you would just like to avoid working with sub-modules, you can easily pull in your existing boilerplate into the generator using a URL to the tarball as follows:
 
 ```bash
 yo boilerplate https://github.com/h5bp/html5-boilerplate/archive/master.tar.gz
 ```
+
+This allows you to basically use `npm install generator-boilerplate && yo boilerplate [tarball]`.
 
 Note: By default, Yo will run the code located at `app/index.js` within your generator's 
 directory. This is the file that defines what should happen when a user calls 
