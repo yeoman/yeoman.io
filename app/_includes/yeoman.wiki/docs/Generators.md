@@ -31,7 +31,7 @@ existing set of files that make up a boilerplate or be more complex, offering
 customization prompts, unit tests and documentation.
 
 In case you think they're a Yeoman-only thing, they're not - anyone in the 
-community and write and published by anyone and there are already a number of 
+community can write and share their own generator. There are already a number of 
 them that have been published to npm: generators for HTML5 Boilerplate, Twitter 
 Bootstrap, Karma and so on.
 
