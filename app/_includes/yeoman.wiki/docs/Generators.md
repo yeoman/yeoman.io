@@ -7,10 +7,10 @@ This guide will help you get started with the Yeoman generator system. If you wa
 * [Introduction](#introduction)
 * [Types Of Generators](#generator-types)
 * [Creating A Boilerplate Generator](#generator-boilerplate)
-* [Creating An Application Scaffolding generator](#generator-application)	
+* [Creating An Application Scaffolding generator](#generator-application)   
 * [Using The Passy generator-generator](#passy-generator)
-	* [The Built-in generator generator](#generator-generator)
-	* [Generator Bootstrap](#generator-bootstrap)
+    * [The Built-in generator generator](#generator-generator)
+    * [Generator Bootstrap](#generator-bootstrap)
 * [Generator Snippets](#generator-snippets)
 * [Generator Internals](#generator-internals)
 * [FAQ](#faq)
@@ -155,14 +155,13 @@ npm install -g yo
 
 Running `yo` by itself gives a list of available generators.
 
-**Then to create a new generator call: `yo generate:generatorName`**
+**Then to create a new generator call: `yo generator [generatorName]`**
 
 ```bash
-$ yo generator generator
-   create generator/index.js
-   create generator/templates/readme.md
+$ yo generator foo
+   create foo/index.js
+   create foo/templates/readme.md
 ```
-
 
 The index.js file is the entry point for your generator whilst the templates 
 directory is the place to put the list of files /templates for the generator to 
@@ -170,7 +169,7 @@ consume. For example, if you have an existing boilerplate directory of files you
 want to just write out whenever a generator is called, the templates directory 
 is where this would go. Same for a simple static site/page generator.
 
-**The contents of generator/index.js are:**
+**The contents of index.js are:**
 
 ```javascript
 var generator = require('yeoman-generator');
@@ -203,7 +202,7 @@ workspace. You can of course customize the source and destination easily, making
 it simple to say copy either all of a boilerplate (e.g '.') or just a portion 
 (e.g '/views').
 
-Now by default the `yo generate` command will only scaffold you out two files. 
+Now by default the `yo generator` command will only scaffold you out two files. 
 You may however be looking for something more fleshed out. 
 
 <h3 id="generator-bootstrap">Generator Bootstrap</h3>
