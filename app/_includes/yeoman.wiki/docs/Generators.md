@@ -224,7 +224,7 @@ entry point again):
   generator base
 * It uses prompts to prompt the user for some information used to customize the 
   experience
-* Depending on their response, we use `this.bowerInstall` to install the desired package through Bower
+* Depending on their response, we use `this.bowerInstall()` to install the desired package through Bower
 
 ```javascript
 'use strict';
@@ -464,20 +464,17 @@ application, such as a view or model. Crafting part of your workflow as a
 sub-generators means that a broader generator could call them (using 
 `this.hookFor`) to create an initial application, but you can also later call the 
 sub-generator to just create that one piece (e.g a new view). This might be done 
-using `yo mygenerator:mysubgenerator`.
+using `yo myGenerator:mySubGenerator`.
 
 ```javascript
-this.hookFor('angular:common', {
-    args: args
-  });
-
-  this.hookFor('angular:main', {
-    args: args
-  });
-
-  this.hookFor('angular:controller', {
-    args: args
-  });
+this.hookFor('foo:app', {
+  args: args,
+  options: {
+    options: {
+        'skip-install': true;
+    }
+  }
+});
 ```
 
 **Remotely pull in files:**
@@ -524,8 +521,16 @@ there.
 * **How do I pull in dependencies using Bower?** Place a component.json file 
   filled out with Underscore templating in the /templates directory and then run 
   `this.installDependencies` from within your generator's app/index.js. 
-  Alternatively they can install with `this.bowerInstall(['jquery', 
-  'underscore'], { save: true });`
+  Alternatively they can be installed with the following:
+  ```javascript
+  this.bowerInstall([
+    'jquery', 
+    'underscore'
+  ], { 
+    save: true 
+  });
+  ```
+
 * **How do I unit test generators?** If using the 
   [generator-generator](https://github.com/passy/generator-generator), very 
   basic Mocha unit tests will be scaffolded out for you. You can also take a 
@@ -533,13 +538,16 @@ there.
   tests](https://github.com/yeoman/generator-webapp/blob/master/test/test.js) 
   written for generator-webapp for examples of what you probably want to be 
   testing.
+
 * **How do I create sub-generators?** Again, the generator-generator now has 
   support for [generating 
   sub-generators](https://github.com/passy/generator-generator#commands) that is 
-  worth checking out. 
+  worth checking out.
+
 * **How can I extend my generators to do more than what the system allows out of 
   the box?** Generators are just Node.js and what's not available in the API can 
   be found over on npmjs.org.
+
 * **How do I publish my generator to NPM?** Make sure you add relevant keywords 
   to your package so that people can find your generator (e.g 
   `yeoman-generator`) and then run `npm publish`. Further information about using
