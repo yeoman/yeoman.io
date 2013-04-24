@@ -70,7 +70,6 @@ git submodule add git://github.com/h5bp/html5-boilerplate.git app/templates
 npm install
 
 # Create a new directory and run the new generator
-
 mkdir app
 cd app
 yo awesome 
@@ -348,7 +347,7 @@ argument to this.template() can be used to store a file with a custom filename
 if required.
 
 ```javascript
-AppGenerator.prototype.bootstrapJs = function bootstrapJs() {
+Generator.prototype.bootstrapJs = function bootstrapJs() {
   if (this.includeRequireJS) {
     this.copy('bootstrap.js', 'app/scripts/vendor/bootstrap.js');
   }
@@ -362,7 +361,7 @@ generator's workflow. This can be done using this.write() which will save custom
 content to a specified file.
 
 ```javascript
-AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
+Generator.prototype.mainStylesheet = function mainStylesheet() {
     this.write('app/styles/main.scss', 
     'MY SASS STYLESHEET CONTENT');
 };
@@ -374,7 +373,7 @@ this.write() and this.mkdir() can be similarly used to create new directories,
 sub-directories and again, write custom content to a new file.
 
 ```javascript
-AppGenerator.prototype.app = function app() {
+Generator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/scripts');
   this.mkdir('app/styles');
@@ -394,7 +393,7 @@ var indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'index.html')
 **Scaffolding an index:**
 
 ```javascript
-AppGenerator.prototype.writeIndex = function writeIndex() {
+Generator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
   var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
 
