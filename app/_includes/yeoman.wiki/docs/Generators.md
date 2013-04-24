@@ -225,62 +225,70 @@ entry point again):
   generator base
 * It uses prompts to prompt the user for some information used to customize the 
   experience
-* Depending on their response, we this.install (using Bower) a specified package
+* Depending on their response, we use `this.bowerInstall` to install the desired package through Bower
 
 ```javascript
 'use strict';
+
 var path = require('path');
 var util = require('util');
 var yeoman = require('yeoman-generator');
 
-var Generator = module.exports = function Generator() {
-   yeoman.generators.Base.apply(this, arguments);
+var Generator = module.exports = function Generator(args, options) {
+  yeoman.generators.Base.apply(this, arguments);
+
+  this.option('format', {
+    desc: 'Select one of `css`, `sass`, `less` for the bootstrap format.',
+    type: String
+  });
+
+  this.format = options.format;
 };
 
 util.inherits(Generator, yeoman.generators.Base);
 
 Generator.prototype.askFor = function askFor(argument) {
-   var cb = this.async();
+  if (this.format) {
+    // Skip if already set.
+    return;
+  }
 
-   var formats = ['css', 'sass', 'less'];
+  var cb = this.async();
+  var formats = ['css', 'sass', 'less'];
+  var prompts = [{
+    name: 'format',
+    message: 'In what format would you like the Twitter Bootstrap stylesheets?',
+    default: formats.join('/')
+  }];
 
-   var prompts = [{
-       name: 'format',
-       message: 'In what format would you like the Twitter Bootstrap 
-stylesheets?',
-       default: formats.join('/')
-   }];
+  this.format = formats[0];
 
-   this.format = formats[0];
+  this.prompt(prompts, function (err, props) {
+    if (err) {
+      return this.emit('error', err);
+    }
 
-   this.prompt(prompts, function(err, props) {
-       if (err) {
-           return this.emit('error', err);
-       }
+    formats.forEach(function (opt) {
+      if ((new RegExp(opt, 'i')).test(props.format)) {
+        this.format = opt;
+      }
+    }, this);
 
-       formats.forEach(function(opt) {
-           if ((new RegExp(opt, 'i')).test(props.format)) {
-               this.format = opt;
-           }
-       }, this);
-
-       cb();
-   }.bind(this));
+    cb();
+  }.bind(this));
 };
 
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
+  // map format -> package name
+  var packages = {
+    css: 'bootstrap.css',
+    sass: 'sass-bootstrap',
+    less: 'bootstrap'
+  };
 
-   // map format -> package name
-   var packages = {
-       css: 'bootstrap.css',
-       sass: 'sass-bootstrap',
-       less: 'bootstrap'
-   };
-
-   this.install(packages[this.format]);
+  this.bowerInstall(packages[this.format]);
 };
 ```
-
 
 For a more complete example look at 
 [https://github.com/yeoman/generator-webapp/blob/master/app/index.js](https://github.com/yeoman/generator-webapp/blob/master/app/index.js)
@@ -330,7 +338,6 @@ var prompts = [{
   }.bind(this));
 };
 ```
-
 
 **Template/copy specific files:**
 
@@ -414,7 +421,6 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
     });
   }
 
-
   if (this.includeRequireJS) {
     defaults.push('RequireJS');
   } else {
@@ -444,7 +450,9 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
 ```javascript
  this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+    this.installDependencies({ 
+      skipInstall: options['skip-install'] 
+    });
   });
 ```
 
@@ -473,9 +481,7 @@ this.hookFor('angular:common', {
   });
 ```
 
-
 **Remotely pull in files:**
-
 
 ```javascript
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
