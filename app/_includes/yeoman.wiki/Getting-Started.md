@@ -81,7 +81,7 @@ Each framework generator has further documentation available noting what sub-gen
 
 ### Creating your own generators
 
-See [[Generators]].
+See [Generators](https://github.com/yeoman/yeoman/wiki/Generators).
 
 ## Bower 
 
