@@ -14,7 +14,7 @@ Our workflow is comprised of three tools for improving your **productivity** and
 
 * [Grunt](http://gruntjs.com) is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib. 
 
-* [Bower](http://twitter.github.com/bower) is used for dependency management, so that you no longer have to manually download and manage your scripts.
+* [Bower](http://bower.io) is used for dependency management, so that you no longer have to manually download and manage your scripts.
 
 All three of these tools are developed and maintained separately, but work well together as part of our prescribed workflow for keeping you effective.
 
