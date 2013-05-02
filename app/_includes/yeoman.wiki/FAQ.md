@@ -59,7 +59,7 @@ Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/is
 ### What tools do Yeoman make use of?
 
 * [Grunt](https://github.com/cowboy/grunt)
-* [Twitter Bower ](http://twitter.github.com/bower)
+* [Twitter Bower](http://bower.io)
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap)
 * [Node Build Script](https://github.com/h5bp/node-build-script)
 * [HTML5 Boilerplate](http://html5boilerplate.com)
