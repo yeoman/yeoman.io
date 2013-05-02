@@ -2,7 +2,7 @@
 
 Until now, client-side JavaScript has not benefited from a rich package management solution such as those found in other platforms (e.g NPM, RubyGems). By instead maintaining packages of packages in client-side JS, developers reduced the chances of using up-to-date versions of libraries.
 
-[Bower](http://github.com/twitter/bower) changes that.
+[Bower](http://bower.io) changes that.
 
 In Bower, dependencies are listed in a ‘component.json’ file, similar to Node’s package.json or the Ruby Gemfile. This is useful for locking down the dependencies a project has.
 
