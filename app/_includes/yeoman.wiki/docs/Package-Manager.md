@@ -4,7 +4,7 @@ Until now, client-side JavaScript has not benefited from a rich package manageme
 
 [Bower](http://bower.io) changes that.
 
-In Bower, dependencies are listed in a ‘component.json’ file, similar to Node’s package.json or the Ruby Gemfile. This is useful for locking down the dependencies a project has.
+In Bower, dependencies are listed in a ‘bower.json’ file, similar to Node’s package.json or the Ruby Gemfile. This is useful for locking down the dependencies a project has.
 
 
 ```json
@@ -17,11 +17,11 @@ In Bower, dependencies are listed in a ‘component.json’ file, similar to Nod
 }
 ```
 
-Dependencies are then installed locally via the `bower install` command. First they're resolved to find conflicts, then downloaded and unpacked in a local sub dir called components:
+Dependencies are then installed locally via the `bower install` command. First they're resolved to find conflicts, then downloaded and unpacked in a local sub dir called bower_components:
 
-    /component.json
-    /components/modernizr/index.js
-    /components/modernizr/modernizr.js
+    /bower.json
+    /bower_components/modernizr/index.js
+    /bower_components/modernizr/modernizr.js
 
 This approach has a number of benefits.
 
@@ -34,7 +34,7 @@ This approach has a number of benefits.
 The easiest approach is to use a Bower package statically is to then just reference the package manually from a script tag:
 
 ```html
-<script src="components/modernizr/modernizr.js"></script>
+<script src="bower_components/modernizr/modernizr.js"></script>
 ```
 
 Similar to NPM, our Bower integration also allows users to easily search for and update packages easily. e.g
@@ -45,7 +45,7 @@ To search for a package:
 
 To install a package:
 
-    bower install jquery
+    bower install --save jquery
 
 To update a package, you need to reference it by name:
 
@@ -62,7 +62,7 @@ and so on.
 
 It's easiest to think of Bower as a lower level component than Jam, Volo, or Ender.
 
-All Bower really does is install git paths, resolves dependencies from a component.json, checks versions, and then provides api which tells you what it did.
+All Bower really does is install git paths, resolves dependencies from a bower.json, checks versions, and then provides api which tells you what it did.
 
 The major diversion from past attempts at package management in the front-end, is that Bower is working under the assumption that there is a single, common problem in frontend application development which needs to be solved: resolving dependencies and managing components. Unfortunately, most other attempts tried to tackle this problem in such a way that it ends up alienating communities which develop using different transports (sprockets, commonjs, requirejs, regular script tags).
 
@@ -86,7 +86,7 @@ There's no redundancy planned at the moment, as Bower just installs git urls. It
 
 ## Isn't having a package.json file going to conflict with my npm's package.json? Will this be a problem?
 
-Don't use a package.json – use a component.json.
+Don't use a package.json – use a bower.json.
 
 ## Bower is an open-source Twitter project. How well can we expect it to be maintained in the future?
 
