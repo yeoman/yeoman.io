@@ -29,8 +29,6 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
    git subtree push --prefix dist origin gh-pages
    ```
 
-
-
 ### Some common errors
  * By default the ```dist``` directory is going to be ignored by git. It is important to remove it from the .gitignore file.
  * You must first commit your ```dist``` directory to the default (master) branch before running the git subtree command.
@@ -46,3 +44,5 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
  [Yeoman Build](https://github.com/yeoman/yeoman/wiki/yeoman-build)
 
  [Github Pages](https://help.github.com/articles/user-organization-and-project-pages)
+
+ [generator-heroku](https://github.com/passy/generator-heroku)
