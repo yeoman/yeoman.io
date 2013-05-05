@@ -49,8 +49,10 @@ The webapp generator is considered the simplest possible start for a webapp. We 
 Before you can create an angular app you need to install the generator  
 
 ```
-npm install -g generator-angular
+npm install generator-angular
 ```
+
+Generator must be installed locally unless you have upgraded to ```1.0.0-beta.4``` in which case you can install globally with ```-g``` switch - see [project updates](http://addyosmani.com/blog/yeoman-update-announcing-1-0-beta-4/).
 
 After that you can run
 ```
