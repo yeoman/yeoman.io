@@ -28,7 +28,7 @@ A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Start
 npm install -g yo 
 ```
 
-This will install the recommended tools globally. For scaffolding, our web app generator comes bundled with `yo`. You can install additional generators with npm. For example to install the [AngularJS](http://angularjs.org) generator, you do `npm install generator-angular`. Run `yo` for more info.
+This will install the recommended tools globally. For scaffolding, our web app generator comes bundled with `yo`. You can install additional generators with npm. For example to install the [AngularJS](http://angularjs.org) generator, you do `npm install -g generator-angular`. Run `yo` for more info.
 
 ### Usage
 
@@ -40,7 +40,7 @@ Then you would want to scaffold out a new project. For this you use `yo` the sca
 yo webapp
 ```
 
-You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator with the required Karma generator one would run: `npm install generator-angular generator-karma`.
+You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator with the required Karma generator one would run: `npm install -g generator-angular generator-karma`.
 
 A complete workflow might look like this:
 
