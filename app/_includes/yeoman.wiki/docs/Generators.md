@@ -108,7 +108,10 @@ npm install -g generator-generator
 yo generator:app 
 
 # Be sure to include :app as generator alone is part of yeoman itself.
+
 ```
+
+When naming your generator the `generator-` prefix to all generators is a prerequisite for it to be recognised by Yeoman.
 
 **How is this different from the built-in generator?**
 
