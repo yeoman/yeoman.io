@@ -1,5 +1,6 @@
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
+* [Building HTML5 Apps with Yeoman and Backbone](http://rockyj.in/2013/05/11/yeoman_and_backbone.html)
 * [NetTuts - Say Yo To Yeoman](http://net.tutsplus.com/tutorials/tools-and-tips/say-yo-to-yeoman/)
 * [Adobe - Yeoman at your service](http://www.adobe.com/devnet/html5/articles/yeoman-at-your-service.html)
 * [Installing Yeoman On Windows](http://www.decodize.com/css/installing-yeoman-front-end-development-stack-windows/)
