@@ -23,7 +23,7 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 First you'll need to install `yo` (the webapp generator is included):
 
 ```
-npm install -g yo
+npm install -g yo grunt-cli bower
 ```
 
 This will automatically install `grunt` and `bower` for you, if you are using npm 1.2.10 or above. You can also install those manually: `npm install -g grunt-cli bower`.
