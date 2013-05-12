@@ -25,7 +25,7 @@ All three of these tools are developed and maintained separately, but work well 
 A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Started) guide is available but for those looking to get up and running quickly. Make sure you have [Node.js](http://nodejs.org) and [Git](http://git-scm.org) installed (plus [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) too if you plan to use it) then install the recommended tools by running:
 
 ```
-npm install -g yo 
+npm install -g yo grunt-cli bower
 ```
 
 This will install the recommended tools globally. For scaffolding, our web app generator comes bundled with `yo`. You can install additional generators with npm. For example to install the [AngularJS](http://angularjs.org) generator, you do `npm install -g generator-angular`. Run `yo` for more info.
