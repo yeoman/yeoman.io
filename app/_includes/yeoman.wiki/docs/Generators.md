@@ -8,7 +8,7 @@ This guide will help you get started with the Yeoman generator system. If you wa
 * [Types Of Generators](#generator-types)
 * [Creating A Boilerplate Generator](#generator-boilerplate)
 * [Creating An Application Scaffolding generator](#generator-application)   
-* [Using The Passy generator-generator](#passy-generator)
+* [Using generator-generator](#passy-generator)
     * [The Built-in generator generator](#generator-generator)
     * [Generator Bootstrap](#generator-bootstrap)
 * [Generator Snippets](#generator-snippets)
@@ -23,7 +23,7 @@ of boilerplates, frameworks and dependencies. Think of them as a way to easily
 kick off a new project (or part of a project) without manually writing or 
 grabbing a random boilerplate.
 
-<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yobox.png" width="400px"/>
+<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yobox.png" width="400px">
 
 The basic application generated when calling `yo webapp` actually uses a 
 generator itself and they can be quite powerful. A generator can simply copy an 
@@ -89,9 +89,9 @@ your generator.
 
 <h2 id="generator-application">Creating an Application scaffolding generator</h2>
 
-<h3 id="passy-generator">Using the Passy generator-generator</h3>
+<h3 id="passy-generator">Using generator-generator</h3>
 
-The [generator-generator](https://github.com/passy/generator-generator) project 
+The [generator-generator](https://github.com/yeoman/generator-generator) project 
 can be used to create complete application scaffold generators, but also 
 includes editorconfig, package.json, tests and other sane defaults.
 
@@ -105,18 +105,14 @@ npm install -g yo
 npm install -g generator-generator
 
 # Run the generator
-yo generator:app 
-
-# Be sure to include :app as generator alone is part of yeoman itself.
-
+yo generator
 ```
 
 When naming your generator the `generator-` prefix to all generators is a prerequisite for it to be recognised by Yeoman.
 
-**How is this different from the built-in generator?**
+**What do you get?**
 
-The built-in yo generator command only generates an index.js file for you. 
-generator-generator instead comes with a full project directory 
+By running `yo generator`, you get a full project directory 
 structure:
 
 ```text
@@ -137,33 +133,8 @@ structure:
     └── test-load.js
 ```
 
-`yo generator:app` shows a wizard for generating a new generator whilst `yo 
+`yo generator` shows a wizard for generating a new generator whilst `yo 
 generator:subgenerator NAME` generates a sub-generator with the name NAME.
-
-<h3 id="generator-generator">The built-in generator generator</h3>
-
-Yo also includes the ability to create a new generator directly from the 
-command-line (without additional tools) which is useful for projects requiring 
-more custom capabilities or build steps. The following steps will allow you to 
-get started with your own custom generator project:
-
-**Make sure you've installed yo:**
-
-```bash
-npm install -g yo
-```
-
-**Then to see what has already been installed:**
-
-Running `yo` by itself gives a list of available generators.
-
-**Then to create a new generator call: `yo generator [generatorName]`**
-
-```bash
-$ yo generator foo
-   create foo/index.js
-   create foo/templates/readme.md
-```
 
 The index.js file is the entry point for your generator whilst the templates 
 directory is the place to put the list of files /templates for the generator to 
@@ -171,7 +142,7 @@ consume. For example, if you have an existing boilerplate directory of files you
 want to just write out whenever a generator is called, the templates directory 
 is where this would go. Same for a simple static site/page generator.
 
-**The contents of index.js are:**
+**The contents of a basic index.js are:**
 
 ```javascript
 var generator = require('yeoman-generator');
@@ -534,8 +505,8 @@ there.
   });
   ```
 
-* **How do I unit test generators?** If using the 
-  [generator-generator](https://github.com/passy/generator-generator), very 
+* **How do I unit test generators?** If using 
+  [generator-generator](https://github.com/yeoman/generator-generator), very 
   basic Mocha unit tests will be scaffolded out for you. You can also take a 
   look at the [unit 
   tests](https://github.com/yeoman/generator-webapp/blob/master/test/test.js) 
@@ -544,7 +515,7 @@ there.
 
 * **How do I create sub-generators?** Again, the generator-generator now has 
   support for [generating 
-  sub-generators](https://github.com/passy/generator-generator#commands) that is 
+  sub-generators](https://github.com/yeoman/generator-generator#commands) that is 
   worth checking out.
 
 * **How can I extend my generators to do more than what the system allows out of 
