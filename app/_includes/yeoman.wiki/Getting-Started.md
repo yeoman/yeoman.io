@@ -115,8 +115,8 @@ bower install jquery-bbq
 ```
 yo angular
 bower install angular-ui
-# then add &lt;script src="components/angular-ui/build/angular-ui.js"&gt;&lt;/script&gt;
-# and &lt;link rel="stylesheet" href="components/angular-ui/build/angular-ui.css"/&gt;
+# then add <script src="components/angular-ui/build/angular-ui.js"></script>
+# and <link rel="stylesheet" href="components/angular-ui/build/angular-ui.css"/>
 grunt
 ```
 
