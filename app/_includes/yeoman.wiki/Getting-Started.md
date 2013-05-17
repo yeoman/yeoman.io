@@ -110,11 +110,13 @@ bower install jquery-bbq
 > installs jquery, jquery-bbq
 ```
 
-### Create an AngularJS app, install Angular UI from Bower and build it.
+### Create an AngularJS app, install Angular UI from Bower, include in your page and build it.
 
 ```
 yo angular
 bower install angular-ui
+# then add &lt;script src="components/angular-ui/build/angular-ui.js"&gt;&lt;/script&gt;
+# and &lt;link rel="stylesheet" href="components/angular-ui/build/angular-ui.css"/&gt;
 grunt
 ```
 
