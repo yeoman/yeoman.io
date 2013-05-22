@@ -1,0 +1,61 @@
+---
+layout: default
+markdown: 0
+---
+
+  <h1>Yeoman Generators</h1>
+  <p>This plugin listing is automatically generated from the npm module database. In order for a Yeoman plugin to be listed here, it must be published on npm with the yeoman-generator keyword.</p>
+
+  <section class="main">
+    <div id="loading">
+      <p>Loading plugins...</p>
+    </div>
+    <div id="plugins-all"></div>
+    <p><small><i>Plugins must be published on NPM with the `yeoman-generator` keyword.</i></small></p>
+  </section>
+
+  <script type="text/template" id="plugins-latest-template">
+    <h4>Latest plugins</h4>
+    <dl class="dl-horizontal">
+      <% _.each(modules, function (el) { %>
+        <% var name = el.name.replace('grunt-', ''); %>
+        <dt><a href="https://npmjs.org/package/<%- el.name %>"><%- name %></a></dt>
+        <dd><%- el.description %></dd>
+      <% }); %>
+    </dl>
+  </script>​
+  <script type="text/template" id="plugins-all-template">
+    <table class="table">
+      <caption>
+        <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= modules.length %> plugins..." autofocus>
+      </caption>
+      <thead>
+        <tr>
+          <th class="sort" data-sort="name">Name</th>
+          <th class="sort" data-sort="desc">Description</th>
+          <th class="sort" data-sort="author">Author</th>
+          <th class="sort" data-sort="modified">Last modified</th>
+        </tr>
+      </thead>
+      <tbody class="list">
+        <% _.each(modules, function (el) { %>
+          <% var name = el.name.replace('generator-', ''); %>
+          <% var keywords = el.keywords %>
+          <tr>
+            <td class="name"><a href="https://npmjs.org/package/<%- el.name %>"><%- name %></a></td>
+            <td class="desc"><%- el.description %><div class="hidden"><%- keywords %></div></td>
+            <% if (el.author) { %>
+              <% if (el.author.url) { %>
+                <td class="author"><a href="<%- el.author.url %>"><%- el.author.name %></a></td>
+              <% } else { %>
+                <td class="author"><%- el.author.name %></td>
+              <% } %>
+            <% } else { %>
+                <td class="author"></td>
+            <% } %>
+            <td class="modified"><time datetime="<%- el.time.modified %>"><%- el.time.modified %></time></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </script>​
