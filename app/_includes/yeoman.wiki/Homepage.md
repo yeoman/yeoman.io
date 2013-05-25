@@ -40,7 +40,7 @@ Then you would want to scaffold out a new project. For this you use `yo` the sca
 yo webapp
 ```
 
-You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator with the required Karma generator one would run: `npm install -g generator-angular generator-karma`.
+You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator one would run: `npm install -g generator-angular`.
 
 A complete workflow might look like this:
 
@@ -53,7 +53,7 @@ grunt                          # build the application for deployment
 Or with the AngularJS generator:
 
 ```sh
-npm install -g generator-angular generator-karma  # install generators
+npm install -g generator-angular  # install generator
 yo angular                     # scaffold out a AngularJS project
 bower install angular-ui       # install a dependency for your project from Bower
 grunt test                     # test your app
