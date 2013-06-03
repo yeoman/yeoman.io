@@ -73,6 +73,7 @@ Here, we are first generating the file structure for a basic web application and
 yo angular:controller myController
 yo angular:directive myDirective
 yo angular:filter myFilter
+yo angular:service myService
 ```
 
 Yo scaffolds can also be used to scaffold further pieces of your application - we call these sub-generators. 
