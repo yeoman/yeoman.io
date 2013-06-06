@@ -189,12 +189,8 @@ var prompts = [{
 Next, you'll see something you'll start seeing a lot more of-- magic. Helper methods given to you from the Yeoman Generator itself.
 
 ```js
-this.prompt(prompts, function (err, props) {
-  if (err) {
-    return this.emit('error', err);
-  }
-
-  this.someOption = (/y/i).test(props.someOption);
+this.prompt(prompts, function (props) {
+  this.someOption = props.someOption;
 
   cb();
 }.bind(this));
@@ -205,11 +201,7 @@ this.prompt(prompts, function (err, props) {
 Let's switch this function up to make sense for our application.
 
 ```js
-this.prompt(prompts, function (err, props) {
-  if (err) {
-    return this.emit('error', err);
-  }
-
+this.prompt(prompts, function (props) {
   // `props` is an object passed in containing the response values, named in
   // accordance with the `name` property from your prompt object. So, for us:
   this.blogName = props.blogName;
@@ -265,7 +257,7 @@ BlogGenerator.prototype.askFor = function askFor() {
 
   // ...
 
-  this.prompt(prompts, function (err, props) {
+  this.prompt(prompts, function (props) {
     // ...
 
     cb();
@@ -682,15 +674,11 @@ var prompts = [{
     warning: 'Yes: RequireJS will be placed into the JavaScript vendor directory.'
   }];
 
-  this.prompt(prompts, function (err, props) {
-    if (err) {
-      return this.emit('error', err);
-    }
-
+  this.prompt(prompts, function (props) {
     // manually deal with the response, get back and store the results.
     // we change a bit this way of doing to automatically do this in the self.prompt() method.
-    this.compassBootstrap = (/y/i).test(props.compassBootstrap);
-    this.includeRequireJS = (/y/i).test(props.includeRequireJS);
+    this.compassBootstrap = props.compassBootstrap;
+    this.includeRequireJS = props.includeRequireJS;
 
     cb();
   }.bind(this));
