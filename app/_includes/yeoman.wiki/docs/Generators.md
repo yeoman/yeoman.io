@@ -170,10 +170,10 @@ But look, it's just a big string! With a bunch of `.color`s all over the place, 
 
 ```js
 var prompts = [{
+  type: 'confirm',
   name: 'someOption',
   message: 'Would you like to enable this option?',
-  default: 'Y/n',
-  warning: 'Yes: Enabling this will be totally awesome!'
+  default: true
 }];
 ```
 
@@ -654,34 +654,33 @@ The prompts system can be used to prompt the user for information when
 scaffolding out a project using a generator or sub-generator. Prompts below take 
 the form of an array of objects, each of which specify:
 
+* type: the type of prompt (defaults to "input")
 * name: a prompt name (which can later be used to access data associated with 
   the response)
 * message: the actual question to prompt the user with
-* default: the options available for answering the prompt question
-* warning: a warning displayed before continuing with a specific option
+* default: the default value
 
 ```javascript
 var prompts = [{
-    name: 'compassBootstrap',
-    message: 'Would you like to include Twitter Bootstrap for Sass?',
-    default: 'Y/n',
-    warning: 'Yes: All Twitter Bootstrap files will be placed into the styles directory.'
-  },
-  {
-    name: 'includeRequireJS',
-    message: 'Would you like to include RequireJS (for AMD support)?',
-    default: 'Y/n',
-    warning: 'Yes: RequireJS will be placed into the JavaScript vendor directory.'
-  }];
+  type: 'confirm',
+  name: 'compassBootstrap',
+  message: 'Would you like to include Twitter Bootstrap for Sass?',
+  default: true
+}, {
+  type: 'confirm',
+  name: 'includeRequireJS',
+  message: 'Would you like to include RequireJS (for AMD support)?',
+  default: false
+}];
 
-  this.prompt(prompts, function (props) {
-    // manually deal with the response, get back and store the results.
-    // we change a bit this way of doing to automatically do this in the self.prompt() method.
-    this.compassBootstrap = props.compassBootstrap;
-    this.includeRequireJS = props.includeRequireJS;
+this.prompt(prompts, function (props) {
+  // manually deal with the response, get back and store the results.
+  // we change a bit this way of doing to automatically do this in the self.prompt() method.
+  this.compassBootstrap = props.compassBootstrap;
+  this.includeRequireJS = props.includeRequireJS;
 
-    cb();
-  }.bind(this));
+  cb();
+}.bind(this));
 };
 ```
 
