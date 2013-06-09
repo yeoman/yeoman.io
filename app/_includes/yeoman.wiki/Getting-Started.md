@@ -44,7 +44,7 @@ Each project created with yo will also pull in relevant Grunt tasks which we fee
 
 The webapp generator is considered the simplest possible start for a webapp. We also provide some framework generators can be used to scaffold out a project and later views, models, controllers and so on. 
 
-### Scaffolding an AngularJS app
+#### Example: Scaffolding an AngularJS app
 
 Before you can create an angular app you need to install the generator  
 
@@ -67,7 +67,7 @@ yo angular --minsafe
 
 Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Karma unit tests.
 
-### Scaffolding out Angular pieces
+##### Scaffolding out your Angular app’s pieces
 
 ```
 yo angular:controller myController
