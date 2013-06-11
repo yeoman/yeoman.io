@@ -20,13 +20,13 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 
 ### Installing yo and some generators
 
-First you'll need to install `yo` (the webapp generator is included):
+First you'll need to install `yo`, and other required tools:
 
 ```
 npm install -g yo grunt-cli bower
 ```
 
-This will automatically install `grunt` and `bower` for you, if you are using npm 1.2.10 or above. You can also install those manually: `npm install -g grunt-cli bower`.
+In addition to `yo`, this will automatically install `grunt` and `bower` for you, if you are using npm 1.2.10 or above. You can also install those manually: `npm install -g grunt-cli bower`.
 
 If you have installed Grunt globally in the past, you will need to remove it first: `npm uninstall -g grunt`
 
@@ -34,15 +34,23 @@ On Windows we suggest you use an improved command line tool such as Console2 or 
 
 ### Basic scaffolding
 
+To scaffold a web application, you'll need to install the `generator-webapp` generator:
+
+```
+npm install -g generator-webapp
+```
+
+This is the default web application generator and will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com) and [Modernizr](http://modernizr.com). [Twitter Bootstrap](http://twitter.github.com/bootstrap) can be optionally installed from the prompt you will be presented.
+
+To run it:
+
 ```
 yo webapp
 ```
 
-This is the default generator and will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com) and [Modernizr](http://modernizr.com). [Twitter Bootstrap](http://twitter.github.com/bootstrap) can be optionally installed from the prompt you will be presented.
+Each project created with yo will also pull in relevant Grunt tasks which the community feels is needed or useful for your workflow.
 
-Each project created with yo will also pull in relevant Grunt tasks which we feel are needed or useful for your workflow.
-
-The webapp generator is considered the simplest possible start for a webapp. We also provide some framework generators can be used to scaffold out a project and later views, models, controllers and so on. 
+The webapp generator is considered the simplest possible start for a web app. We also provide some framework generators can be used to scaffold out a project and later views, models, controllers and so on. 
 
 #### Example: Scaffolding an AngularJS app
 
