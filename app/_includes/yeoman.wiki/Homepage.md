@@ -22,25 +22,21 @@ All three of these tools are developed and maintained separately, but work well 
 
 ### Installation
 
-A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Started) guide is available but for those looking to get up and running quickly. Make sure you have [Node.js](http://nodejs.org) and [Git](http://git-scm.org) installed (plus [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) too if you plan to use it) then install the recommended tools by running:
+A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Started) guide is available but for those looking to get up and running quickly, make sure you have [Node.js](http://nodejs.org) and [Git](http://git-scm.org) installed (plus [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) too if you plan to use it) then install the required tools globally by running:
 
 ```
 npm install -g yo grunt-cli bower
 ```
 
-This will install the recommended tools globally. For scaffolding, our web app generator comes bundled with `yo`. You can install additional generators with npm. For example to install the [AngularJS](http://angularjs.org) generator, you do `npm install -g generator-angular`. Run `yo` for more info.
+`yo` can generate several types of application, but it needs help from plug-ins, or "generators" to get the job done. To scaffold a web application, you'll need to grab the web app generator:
+
+```
+npm install -g generator-webapp
+```
+
+You can install additional generators with npm. For example, to install the [AngularJS](http://angularjs.org) generator: `npm install -g generator-angular`. Run `yo` for more information.
 
 ### Usage
-
-Run `yo` in your Terminal to see some help and get familiar with the tool.
-
-Then you would want to scaffold out a new project. For this you use `yo` the scaffolder. It comes bundled with the webapp generator by default, which scaffolds out a skeleton front-end web app:
-
-```
-yo webapp
-```
-
-You may also want to install and use additional generators. This is done through npm. For example, to install the Angular generator one would run: `npm install -g generator-angular`.
 
 A complete workflow might look like this:
 
@@ -54,11 +50,11 @@ Or with the AngularJS generator:
 
 ```sh
 npm install -g generator-angular  # install generator
-yo angular                     # scaffold out a AngularJS project
-bower install angular-ui       # install a dependency for your project from Bower
-grunt test                     # test your app
-grunt server                   # preview your app
-grunt                          # build the application for deployment
+yo angular                        # scaffold out a AngularJS project
+bower install angular-ui          # install a dependency for your project from Bower
+grunt test                        # test your app
+grunt server                      # preview your app
+grunt                             # build the application for deployment
 ```
 
 ## Migrating from earlier versions
