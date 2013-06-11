@@ -28,7 +28,7 @@ A complete [getting started](https://github.com/yeoman/yeoman/wiki/Getting-Start
 npm install -g yo grunt-cli bower
 ```
 
-`yo` can generate several types of application, but it needs help from plug-ins, or "generators" to get the job done. To scaffold a web application, you'll need to grab the web app generator:
+`yo` can generate several types of applications, but it needs help from plug-ins, or "generators" to get the job done. To scaffold a web application, you'll need to grab the web app generator:
 
 ```
 npm install -g generator-webapp
