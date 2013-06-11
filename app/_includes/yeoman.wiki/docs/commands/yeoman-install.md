@@ -4,7 +4,7 @@ Usage: `yeoman install <packageName>`, `yeoman install <package1> <package2>`
 
 Installs a package and any packages that this depends on using Twitter Bower. A package is a folder containing a resource described by a package.json file or a gzipped tarball containing this information.
 
-By default, running `yeoman install packageName` will install the dependency in your projects `app/components` folder.
+By default, running `yeoman install packageName` will install the dependency in your projects `app/bower_components` folder.
 
 Example:
 
@@ -15,12 +15,12 @@ yeoman install backbone
 yeoman install jquery spine
 ```
 
-As mentioned, the files for these dependencies will be added to `app/components`. If you wish to use any of them you will need to manually include a script/file reference to the relevant source files.
+As mentioned, the files for these dependencies will be added to `app/bower_components`. If you wish to use any of them you will need to manually include a script/file reference to the relevant source files.
 
 Example:
 
 ```html
-<script src="components/spine/lib/spine.js"></script>
+<script src="bower_components/spine/lib/spine.js"></script>
 ```
 
 If installing a dependency which has its own dependencies described, these dependencies will also be pulled in.
