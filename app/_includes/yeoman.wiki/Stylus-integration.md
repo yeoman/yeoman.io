@@ -1,4 +1,3 @@
-
 # Get the Gist of It
 Download [here](https://gist.github.com/ffcbf037e6e856e1010d)
 
@@ -48,7 +47,7 @@ The `paths` definition let you do `@import 'nib'` in stylesheets.
         files: [
           'app/styles/**/*.styl'
         ],
-        tasks: 'stylus reload'
+        tasks: ['stylus']
       },
 ```
 
