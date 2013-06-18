@@ -14,3 +14,7 @@ A community driven overview of Yeoman related projects. Feel free to add your ow
 
 - [foundation4-yeoman](https://github.com/lkbgift/foundation4-yeoman)
 An example of using the Foundation 4 framework with *Yeoman 1.0*
+
+- [Integrate grunt-haml](https://gist.github.com/simeonwillbanks/5810291)
+  Write app templates with HAML.
+  Example uses AngularJS, but other apps could use the same setup.
