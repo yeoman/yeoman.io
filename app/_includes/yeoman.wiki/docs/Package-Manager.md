@@ -31,7 +31,7 @@ This approach has a number of benefits.
 * The dependency tree is flat meaning that we don't ship multiple versions of say, Modernizr to clients
 
 
-The easiest approach is to use a Bower package statically is to then just reference the package manually from a script tag:
+The easiest approach to use a Bower package statically is to just reference the package manually from a script tag:
 
 ```html
 <script src="bower_components/modernizr/modernizr.js"></script>
@@ -68,7 +68,7 @@ The major diversion from past attempts at package management in the front-end, i
 
 For example, someone developing with sprockets, can't use volo packages, can't use jam packages, and so forth.
 
-Bower is trying to solve the common problem, in an unopinionated way, and leave the opinions your build stack.
+Bower is trying to solve the common problem, in an unopinionated way, and leave the opinions to your build stack.
 
 What's more, things like Ender can and will consume bower as a dependency for simple git installation and use the package api to build a commonjs style require api include for the browser.
 
