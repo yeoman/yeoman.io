@@ -2,18 +2,18 @@
 
 Home to the Yeoman.io site.
 
-Made with [Jekyll](https://github.com/mojombo/jekyll/), a static generator in Ruby.
-
 ## Attention
 
 If you want to create an issue about something of Yeoman's website you are in the right place! But if the problem is with Yeoman's source code, please visit the [yeoman/yeoman repository](https://github.com/yeoman/yeoman).
 
 ## Getting started
 
-The best way to install Jekyll is via RubyGems:
+The site is made with [Jekyll](https://github.com/mojombo/jekyll/), a static generator in Ruby. It also uses [redcarpet](https://github.com/vmg/redcarpet) to process the markdown in the site.
+
+The best way to install Jekyll and Redcarpet is via RubyGems:
 
 ```
-gem install jekyll
+gem install jekyll redcarpet
 ```
 
 Once Jekyll is installed, you just need to clone the project:
