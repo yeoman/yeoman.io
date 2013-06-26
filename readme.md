@@ -19,7 +19,7 @@ gem install jekyll
 Once Jekyll is installed, you just need to clone the project:
 
 ```
-git clone git@github.com:yeoman/yeoman.io.git
+git clone --recursive git@github.com:yeoman/yeoman.io.git
 ```
 
 Then go to the project's folder:
@@ -28,7 +28,7 @@ Then go to the project's folder:
 cd yeoman.io
 ```
 
-Initialize the submodule:
+If you are using Git 1.6.4 or earlier, you will manually need to initialize the submodules:
 
 ```
 git submodule update --init
