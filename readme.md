@@ -34,26 +34,26 @@ If you are using Git 1.6.4 or earlier, you will manually need to initialize the 
 git submodule update --init
 ```
 
-And finally run:
+You should now have a copy of the source files for the site that are ready for editing.
+
+## Jekyll commands
+
+Jekyll has three basic options used in this project:
+
+To generate the site and run it in a server, which can be viewed at `http://localhost:4000`, run:
 
 ```
-jekyll --server
+jekyll server
 ```
 
-Or this if you would like it to auto regenerate on changes:
+To regenerate the site as you edit and save files, run:
 
 ```
-jekyll --server --auto
+jekyll server --watch
 ```
 
-Now you can see the website running in `localhost:4000` :D
-
-## Build
-
-To generate the files, just run:
+To generate a static version of the site that is ready to upload to a server (it will create a folder called _site), run:
 
 ```
-jekyll
+jekyll build
 ```
-
-It will create a folder called `_site`. Upload it's content to your server.
