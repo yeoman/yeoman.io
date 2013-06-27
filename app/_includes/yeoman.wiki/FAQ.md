@@ -143,3 +143,17 @@ Insight: `--no-insight`
 Update Notifier: `--no-update-notifier`
 
 You can also add `yeoman_test` as an environment variable with any value to permanently disable both.
+
+### Can I use livereloading with a custom webserver?
+
+You bet! You can remove the `connect` task from your Gruntfile and manually insert this snippet into your HTML:
+
+```html
+<!-- livereload script -->
+<script type="text/javascript">document.write('<script src="http://'
+ + (location.host || 'localhost').split(':')[0]
+ + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+</script>
+```
+
+After that, simply run `grunt server` like you normally would and enjoy automatic page refreshes.
