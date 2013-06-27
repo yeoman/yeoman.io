@@ -150,7 +150,7 @@ You bet! You can remove the `connect` task from your Gruntfile and manually inse
 
 ```html
 <!-- livereload script -->
-<script type="text/javascript">document.write('<script src="http://'
+<script>document.write('<script src="http://'
  + (location.host || 'localhost').split(':')[0]
  + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
 </script>
