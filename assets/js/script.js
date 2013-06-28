@@ -36,14 +36,14 @@ var setMenuBackgroundHeight = function() {
 
   $(function () {
     $.getJSON('http://yeoman-plugin-list.herokuapp.com', function (modules) {
+
       var modules = _.filter(modules, function(el) {
         return (el !== null)
       });
 
       var allModules = _.sortBy(modules, function (el) {
-        // removing `grunt-` since some plugins don't contain it
-        return el.name.replace('grunt-', '');
-      });
+        return el.stars;
+      }).reverse();
 
       var allTpl = _.template($('#plugins-all-template').html(), {
         modules: allModules
