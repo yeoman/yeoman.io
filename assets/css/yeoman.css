@@ -171,6 +171,23 @@ article {
   max-width: 960px;
 }
 
+.discovery-page th {
+  cursor: pointer;
+}
+
+.discovery-page td {
+  min-width: 140px;
+}
+
+.discovery-page .name,
+.discovery-page .modified {
+  padding: 5px 0px;
+}
+
+.discovery-page .desc {
+  padding-right: 10px;
+}
+
 article header {
   text-align: center;
 }
