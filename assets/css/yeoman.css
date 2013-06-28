@@ -188,6 +188,12 @@ article {
   padding-right: 10px;
 }
 
+.search {
+  min-width: 35%;
+  line-height: 1.5em;
+  margin: 5px 0 10px;
+}
+
 article header {
   text-align: center;
 }
