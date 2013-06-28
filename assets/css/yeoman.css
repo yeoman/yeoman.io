@@ -167,6 +167,10 @@ article {
   margin: auto;
 }
 
+.discovery-page article {
+  max-width: 960px;
+}
+
 article header {
   text-align: center;
 }
