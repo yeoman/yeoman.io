@@ -35,6 +35,8 @@ class: discovery-page
           <th class="sort" data-sort="desc">Description</th>
           <th class="sort" data-sort="author">Author</th>
           <th class="sort" data-sort="modified">Last modified</th>
+          <th class="sort" data-sort="stars">Stars</th>
+          <th class="sort" data-sort="forks">Forks</th>
         </tr>
       </thead>
       <tbody class="list">
@@ -44,16 +46,14 @@ class: discovery-page
           <tr>
             <td class="name"><a href="https://npmjs.org/package/<%- el.name %>"><%- name %></a></td>
             <td class="desc"><%- el.description %><div class="hidden"><%- keywords %></div></td>
-            <% if (el.author) { %>
-              <% if (el.author.url) { %>
-                <td class="author"><a href="<%- el.author.url %>"><%- el.author.name %></a></td>
-              <% } else { %>
-                <td class="author"><%- el.author.name %></td>
-              <% } %>
+            <% if (el.owner) { %>
+              <td class="author"><%- el.owner %></td>
             <% } else { %>
                 <td class="author"></td>
             <% } %>
-            <td class="modified"><time datetime="<%- el.time.modified %>"><%- el.time.modified %></time></td>
+            <td class="modified"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
+            <td class="stars"><%- el.stars %></td>
+            <td class="forks"><%- el.forks %></td>
           </tr>
         <% }); %>
       </tbody>

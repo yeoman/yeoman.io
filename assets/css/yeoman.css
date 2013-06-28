@@ -175,17 +175,11 @@ article {
   cursor: pointer;
 }
 
-.discovery-page td {
-  min-width: 140px;
-}
-
-.discovery-page .name,
-.discovery-page .modified {
-  padding: 5px 0px;
-}
-
-.discovery-page .desc {
-  padding-right: 10px;
+.discovery-page .forks,
+.discovery-page .modified,
+[data-sort="forks"],
+[data-sort="modified"] {
+  display: none;
 }
 
 .search {
@@ -552,6 +546,32 @@ pre{
 
   .forkit-curtain .repo img {
     width: 165px;
+  }
+
+  .discovery-page .name,
+  .discovery-page .author,
+  .discovery-page .modified {
+    min-width: 140px;
+  }
+
+  .discovery-page .stars {
+    min-width: 50px;
+  }
+
+  .discovery-page .name,
+  .discovery-page .modified {
+    padding: 5px 0px;
+  }
+
+  .discovery-page .desc {
+    padding-right: 10px;
+  }
+
+  .discovery-page .forks,
+  .discovery-page .modified,
+  [data-sort="forks"],
+  [data-sort="modified"] {
+    display: block;
   }
 }
 
