@@ -37,11 +37,6 @@ var setMenuBackgroundHeight = function() {
   $(function () {
     $.getJSON('http://yeoman-plugin-list.herokuapp.com', function (modules) {
 
-      // only show plugins created after the specified date
-      modules = _.filter(modules, function (el) {
-        return Date.parse(el.time.created) > new Date('1800-01-01');
-      });
-
       var latestModules = _.sortBy(modules, function (el) {
         return -Date.parse(el.time.created);
       }).splice(0, 5);
