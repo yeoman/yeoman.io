@@ -1,5 +1,6 @@
 // Agency code.
 
+(function() {
 $( document ).ready( function() {
 
   //
@@ -25,4 +26,44 @@ var setMenuBackgroundHeight = function() {
     $( 'nav' ).css( { "min-height": (100) } );
   }
 
-}
+};
+
+})();
+
+/*global jQuery, _, List */
+(function (win, $) {
+  'use strict';
+
+  $(function () {
+    $.getJSON('http://yeoman-plugin-list.herokuapp.com', function (modules) {
+
+      var modules = _.filter(modules, function(el) {
+        return (el !== null)
+      });
+
+      var allModules = _.sortBy(modules, function (el) {
+        return el.stars;
+      }).reverse();
+
+      var allTpl = _.template($('#plugins-all-template').html(), {
+        modules: allModules
+      });
+
+      $('#loading').remove();
+      $('#plugins-all').append(allTpl).find('.search').show();
+
+      new List('plugins-all', {
+        valueNames: [
+          'name',
+          'desc',
+          'owner',
+          'updated',
+          'stars',
+          'forks'
+        ]
+      });
+
+      $('#plugins-all .modified time').timeago();
+    });
+  });
+})(window, jQuery);

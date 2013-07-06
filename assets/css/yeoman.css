@@ -167,6 +167,32 @@ article {
   margin: auto;
 }
 
+.discovery-page article {
+  max-width: 960px;
+}
+
+.discovery-page th {
+  cursor: pointer;
+}
+
+.discovery-page td {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.discovery-page .forks,
+.discovery-page .modified,
+[data-sort="forks"],
+[data-sort="modified"] {
+  display: none;
+}
+
+.search {
+  min-width: 35%;
+  line-height: 1.5em;
+  margin: 5px 0 10px;
+}
+
 article header {
   text-align: center;
 }
@@ -307,6 +333,14 @@ pre{
 
 .toolset .full{
   width:100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.sort {
+  text-align: left;
 }
 
 .icon-white {                       background-image: url("../img/glyphicons-halflings-white.png"); }
@@ -517,6 +551,27 @@ pre{
 
   .forkit-curtain .repo img {
     width: 165px;
+  }
+
+  .discovery-page .name,
+  .discovery-page .author,
+  .discovery-page .modified {
+    min-width: 140px;
+  }
+
+  .discovery-page .stars {
+    min-width: 50px;
+  }
+
+  .discovery-page .desc {
+    padding-right: 10px;
+  }
+
+  .discovery-page .forks,
+  .discovery-page .modified,
+  [data-sort="forks"],
+  [data-sort="modified"] {
+    display: block;
   }
 }
 
