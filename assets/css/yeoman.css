@@ -175,6 +175,11 @@ article {
   cursor: pointer;
 }
 
+.discovery-page td {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
 .discovery-page .forks,
 .discovery-page .modified,
 [data-sort="forks"],
@@ -556,11 +561,6 @@ pre{
 
   .discovery-page .stars {
     min-width: 50px;
-  }
-
-  .discovery-page .name,
-  .discovery-page .modified {
-    padding: 5px 0px;
   }
 
   .discovery-page .desc {
