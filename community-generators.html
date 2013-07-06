@@ -8,26 +8,16 @@ class: discovery-page
 
   <section class="main">
     <div id="loading">
-      <p>Loading plugins...</p>
+      <p>Loading generators...</p>
     </div>
     <div id="plugins-all"></div>
-    <p><small>This plugin listing is automatically generated from the npm module database. In order for a Yeoman plugin to be listed here, it must be published on npm with the "yeoman-generator" keyword.</small></p>
+    <p><small>This generator listing is automatically generated from the npm module database. In order for a Yeoman generator to be listed here, it must be published on npm with the "yeoman-generator" keyword.</small></p>
   </section>
 
-  <script type="text/template" id="plugins-latest-template">
-    <h4>Latest plugins</h4>
-    <dl class="dl-horizontal">
-      <% _.each(modules, function (el) { %>
-        <% var name = el.name.replace('grunt-', ''); %>
-        <dt><a href="https://npmjs.org/package/<%- el.name %>"><%- name %></a></dt>
-        <dd><%- el.description %></dd>
-      <% }); %>
-    </dl>
-  </script>​
   <script type="text/template" id="plugins-all-template">
     <table class="table">
       <caption>
-        <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= modules.length %> plugins..." autofocus>
+        <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= modules.length %> generators..." autofocus>
       </caption>
       <thead>
         <tr>
