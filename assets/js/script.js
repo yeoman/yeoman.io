@@ -46,8 +46,7 @@ var setMenuBackgroundHeight = function() {
         return el !== null && el.description && blocklist.indexOf(el.name) === -1;
       }).map(function (el) {
           el.description = el.description
-          .replace('Yeoman generator for ', '')
-          .replace('A Yeoman generator for ', '');
+          .replace(/^(A |)Yeoman generator (for|to) /i, '');
 
         return el;
       });
