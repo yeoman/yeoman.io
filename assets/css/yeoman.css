@@ -191,6 +191,8 @@ article {
   min-width: 35%;
   line-height: 1.5em;
   margin: 5px 0 10px;
+  font-size: 16px;
+  padding: 5px 10px;
 }
 
 article header {
