@@ -146,25 +146,7 @@ Not terribly useful, is it? But did you get a sense of the power you have and th
 
 If you were to leave your generator this way, you would have, like, 0 downloads per week. Let's make it do something useful!
 
-Open your `~/dev/generator-blog` folder in your favorite editor, and navigate to `app/index.js`.  This is the starting point for your generator. The first thing that might catch your eye is the handsome devil looking like he just got in a fight:
-
-```js
-// welcome message
-var welcome =
-'\n     _-----_' +
-'\n    |       |' +
-'\n    |' + '--(o)--'.red + '|   .--------------------------.' +
-'\n   `---------´  |    ' + 'Welcome to Yeoman,'.yellow.bold + '    |' +
-'\n    ' + '( '.yellow + '_' + '´U`'.yellow + '_' + ' )'.yellow + '   |   ' + 'ladies and gentlemen!'.yellow.bold + '  |' +
-'\n    /___A___\\   \'__________________________\'' +
-'\n     |  ~  |'.yellow +
-'\n   __' + '\'.___.\''.yellow + '__' +
-'\n ´   ' + '`  |'.red + '° ' + '´ Y'.red + ' `\n';
-
-console.log(welcome);
-```
-
-But look, it's just a big string! With a bunch of `.color`s all over the place, then a `console.log()`, that's how easy it is to present a message to guide your user while interacting with your generator.
+Open your `~/dev/generator-blog` folder in your favorite editor, and navigate to `app/index.js`.  This is the starting point for your generator.
 
 <h4 id="lets-explore-prompts-a-little-more">Let's explore prompts a little more.</h4>
 
