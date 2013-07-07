@@ -84,6 +84,10 @@ h2 {
   outline: none;
 }
 
+#plugins-all p {
+  text-align: center;
+}
+
 nav {
   background-image: url( '../img/nav-bg.png' );
   text-align: center;
@@ -190,7 +194,7 @@ article {
 .search {
   min-width: 35%;
   line-height: 1.5em;
-  margin: 5px 0 10px;
+  margin: 20px 0;
   font-size: 16px;
   padding: 5px 10px;
 }
