@@ -43,13 +43,11 @@ var setMenuBackgroundHeight = function() {
       ];
 
       var modules = _.filter(modules, function (el) {
-        return el !== null && blocklist.indexOf(el.name) === -1;
+        return el !== null && el.description && blocklist.indexOf(el.name) === -1;
       }).map(function (el) {
-        if (el.description) {
           el.description = el.description
           .replace('Yeoman generator for ', '')
           .replace('A Yeoman generator for ', '');
-        }
 
         return el;
       });
