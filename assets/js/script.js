@@ -61,8 +61,8 @@ var setMenuBackgroundHeight = function() {
         valueNames: [
           'name',
           'desc',
-          'owner',
-          'updated',
+          'author',
+          'modified',
           'stars',
           'forks'
         ]
