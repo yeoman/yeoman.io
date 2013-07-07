@@ -37,8 +37,13 @@ var setMenuBackgroundHeight = function() {
   $(function () {
     $.getJSON('http://yeoman-plugin-list.herokuapp.com', function (modules) {
 
+      var blocklist = [
+        'generator-express-angular', // haven't updated package.json
+        'ft-wp' // haven't updated package.json
+      ];
+
       var modules = _.filter(modules, function (el) {
-        return el !== null;
+        return el !== null && blocklist.indexOf(el.name) === -1;
       });
 
       var allModules = _.sortBy(modules, function (el) {
