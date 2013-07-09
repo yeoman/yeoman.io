@@ -75,12 +75,13 @@ var setMenuBackgroundHeight = function() {
         ]
       });
 
-      list.on('updated', function () {
-        // If empty show not found message and hide the table head.
-        $('.table thead').toggle(list.matchingItems.length !== 0);
-        $('#search-notfound').toggle(list.matchingItems.length === 0);
-      });
-
+      if (list.listContainer) {
+        list.on('updated', function () {
+          // If empty show not found message and hide the table head.
+          $('.table thead').toggle(list.matchingItems.length !== 0);
+          $('#search-notfound').toggle(list.matchingItems.length === 0);
+        });
+      }
     });
   });
 })(window, jQuery);
