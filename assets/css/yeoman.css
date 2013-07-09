@@ -175,6 +175,17 @@ article {
   max-width: 960px;
 }
 
+#search-notfound {
+  display: none;
+  font-size: 1.5em;
+  padding: 20px;
+  text-align: center;
+}
+
+#plugins-all > table {
+  width: 100%;
+}
+
 .discovery-page th {
   cursor: pointer;
 }
