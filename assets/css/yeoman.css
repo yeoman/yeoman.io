@@ -175,6 +175,10 @@ article {
   max-width: 960px;
 }
 
+#plugins-all > table {
+  width: 100%;
+}
+
 .discovery-page th {
   cursor: pointer;
 }
