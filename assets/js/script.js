@@ -61,8 +61,10 @@ var setMenuBackgroundHeight = function() {
 
       $('#loading').remove();
       $('#plugins-all').append(allTpl).find('.search').show();
+      $('#plugins-all .modified time').timeago();
 
-      new List('plugins-all', {
+
+      var list = new List('plugins-all', {
         valueNames: [
           'name',
           'desc',
@@ -73,7 +75,12 @@ var setMenuBackgroundHeight = function() {
         ]
       });
 
-      $('#plugins-all .modified time').timeago();
+      list.on('updated', function () {
+        // If empty show not found message and hide the table head.
+        $('.table thead').toggle(list.matchingItems.length !== 0);
+        $('#search-notfound').toggle(list.matchingItems.length === 0);
+      });
+
     });
   });
 })(window, jQuery);
