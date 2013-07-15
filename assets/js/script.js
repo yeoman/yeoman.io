@@ -61,7 +61,6 @@ var setMenuBackgroundHeight = function() {
 
       $('#loading').remove();
       $('#plugins-all').append(allTpl).find('.search').show();
-      $('#plugins-all .modified time').timeago();
 
 
       var list = new List('plugins-all', {
@@ -77,6 +76,7 @@ var setMenuBackgroundHeight = function() {
 
       if (list.listContainer) {
         list.on('updated', function () {
+          $('#plugins-all .modified time').timeago();
           // If empty show not found message and hide the table head.
           $('.table thead').toggle(list.matchingItems.length !== 0);
           $('#search-notfound').toggle(list.matchingItems.length === 0);
