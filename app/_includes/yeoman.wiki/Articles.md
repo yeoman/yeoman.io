@@ -1,5 +1,6 @@
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
+* [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow)
 * [Building HTML5 Apps with Yeoman and Backbone](http://rockyj.in/2013/05/11/yeoman_and_backbone.html)
 * [NetTuts - Say Yo To Yeoman](http://net.tutsplus.com/tutorials/tools-and-tips/say-yo-to-yeoman/)
 * [Adobe - Yeoman at your service](http://www.adobe.com/devnet/html5/articles/yeoman-at-your-service.html)
