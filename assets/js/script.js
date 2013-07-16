@@ -75,8 +75,8 @@ var setMenuBackgroundHeight = function() {
       });
 
       if (list.listContainer) {
+        $('#plugins-all .modified time').timeago();
         list.on('updated', function () {
-          $('#plugins-all .modified time').timeago();
           // If empty show not found message and hide the table head.
           $('.table thead').toggle(list.matchingItems.length !== 0);
           $('#search-notfound').toggle(list.matchingItems.length === 0);
