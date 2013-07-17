@@ -113,10 +113,10 @@ Bower can be used with a project scaffolded using yo.
 
 ```
 yo webapp
-bower search jquery-pjax
-> PJAX has been found. Let’s install it!
-bower install jquery-pjax
-> installs jquery, jquery-pjax
+bower search jquery-bbq
+> BBQ has been found. Let’s install it!
+bower install jquery-bbq
+> installs jquery, jquery-bbq
 ```
 
 ### Create an AngularJS app, install Angular UI from Bower, include in your page and build it.
