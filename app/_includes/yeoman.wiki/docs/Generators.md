@@ -846,7 +846,7 @@ this.bowerInstall([
 
 * **How do I create sub-generators?**  See the [generator-generator readme](https://github.com/yeoman/generator-generator#commands).
 
-* **How can I extend my generators to do more than what the system allows out of the box?** Generators are just Node.js and what's not available in the API can be found over on [npmjs.org](http://npmjs.org).
+* **How can I extend my generators to do more than what the system allows out of the box?** Generators are just Node.js and what's not available in the API can be found over on [nodejs.org](http://nodejs.org/api/).
 
 * **How do I publish my generator to NPM?** Make sure you add relevant keywords to your package so that people can find your generator (e.g `yeoman-generator`) and then run `npm publish`. Further information about using NPM and registering packages can be found in the [official docs](https://npmjs.org/doc/developers.html).
 
