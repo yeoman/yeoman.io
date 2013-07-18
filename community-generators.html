@@ -32,7 +32,7 @@ class: discovery-page
           <% var name = el.name.replace('generator-', ''); %>
           <% var keywords = el.keywords %>
           <tr>
-            <td class="name"><a href="https://npmjs.org/package/<%- el.name %>"><%- name %></a></td>
+            <td class="name"><a href="<%- el.website %>"><%- name %></a></td>
             <td class="desc"><%- el.description %><div class="hidden"><%- keywords %></div></td>
             <% if (el.ownerWebsite) { %>
               <td class="author"><a href="<%- el.ownerWebsite %>"><%- el.owner %></a></td>
