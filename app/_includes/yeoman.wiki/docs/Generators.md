@@ -614,7 +614,7 @@ Some tips going forward:
 
 <h2 id="get-help">Get Help</h2>
 
-Currently, there are over 90 generators available on NPM-- generators for [Angular](https://github.com/yeoman/generator-angular), [Backbone](https://github.com/yeoman/generator-backbone), [Ember](https://github.com/yeoman/generator-ember), [Chrome apps](https://github.com/yeoman/generator-chromeapp), [FireFox OS](https://github.com/zenorocha/generator-firefox-os), Express stacks, PHP frameworks, [and more](https://npmjs.org/search?q=yeoman-generator). You are joining a young, growing community of Generator developers when you enter the ring.
+Currently, there are over 90 generators available on NPM-- generators for [Angular](https://github.com/yeoman/generator-angular), [Backbone](https://github.com/yeoman/generator-backbone), [Ember](https://github.com/yeoman/generator-ember), [Chrome apps](https://github.com/yeoman/generator-chromeapp), [FireFox OS](https://github.com/zenorocha/generator-firefox-os), Express stacks, PHP frameworks, [and more](http://yeoman.io/community-generators.html). You are joining a young, growing community of Generator developers when you enter the ring.
 
 If you hang around the [Yeoman > Generator](https://github.com/yeoman/generator) GitHub long enough, you'll start to recognize some names. There is always a place to let your questions, opinions, and ideas be heard.
 
