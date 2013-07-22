@@ -558,6 +558,10 @@ pre{
     height: 146px;
   }
 
+  .yt{
+    width:100%;
+  }
+
   #content {
     padding: 30px 25px 0 25px;
     margin: 0 0 0 250px;
