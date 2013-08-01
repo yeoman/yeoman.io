@@ -11,3 +11,4 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Yeoman meets Jekyll](http://mklabs.github.com/yeoman/yeoman-meets-jekyll/)
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 * [Using Yeoman with Jade](https://gist.github.com/kevva/5201657)
+* [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
