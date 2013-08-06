@@ -408,6 +408,7 @@ For our generator, what the user decided to call their blog at our prompt will s
 Create/edit the following files from [this gist](https://gist.github.com/stephenplusplus/5647725).
 
 * `app/templates/_index.md`
+* `app/templates/Gruntfile.js`
 * `app/templates/index.html`
 * `app/templates/_bower.json`
 * `app/templates/_config.json`
