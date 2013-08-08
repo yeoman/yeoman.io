@@ -50,7 +50,7 @@ yo webapp
 
 Each project created with yo will also pull in relevant Grunt tasks which the community feels is needed or useful for your workflow.
 
-The webapp generator is considered the simplest possible start for a web app. We also provide some framework generators can be used to scaffold out a project and later views, models, controllers and so on. 
+The webapp generator is considered the simplest possible start for a web app. We also provide some framework generators which can be used to scaffold out a project and later views, models, controllers and so on. 
 
 #### Example: Scaffolding an AngularJS app
 
