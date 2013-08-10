@@ -194,6 +194,8 @@ this.prompt(prompts, function (props) {
 
 Above, we assigned the user's input to `this.blogName`. Because of the `.bind(this)` on the call to `this.prompt`, we save the context of the `BlogGenerator` function, so we can use the user's responses later.
 
+Yeoman generators rely on the Inquirer.js prompt system. Make sure to checkout the [full documentation over there](https://github.com/SBoudrias/Inquirer.js) to learn more about prompt types (checkboxes, lists, etc) and control helpers (validation, prompt hierarchy, filtering, etc).
+
 <h4 id="i-mentioned-magic-earlier-heres-some-more">I mentioned "magic" earlier. Here's some more.</h4>
 
 If you scroll back to the top of the file (`app/index.js`), you'll see:
