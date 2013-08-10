@@ -150,8 +150,6 @@ Open your `~/dev/generator-blog` folder in your favorite editor, and navigate to
 
 <h4 id="lets-explore-prompts-a-little-more">Let's explore prompts a little more.</h4>
 
-The prompts in the Yeoman generator system are powered by an external module called [Inquirer](https://github.com/SBoudrias/Inquirer.js). The full documentation for this module can be found over on the project repo, but we've included some sample prompts for reference below.
-
 ```js
 var prompts = [{
   type: 'confirm',
