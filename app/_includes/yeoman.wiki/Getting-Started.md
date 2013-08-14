@@ -27,7 +27,7 @@ npm install -g yo
 If you are using npm 1.2.10 or above, this will also automatically install `grunt` and `bower` for you. If you're on an older version of npm, you will need to install them manually:
 
 ```
-# older version of npm
+# For npm versions < 1.2.10.
 npm install -g grunt-cli bower
 ```
 
@@ -107,16 +107,16 @@ Bower is a package manager for the web which allows you to easily manage depende
 Managing packages using Bower can be done using the following commands:
 
 ```
-# search for a dependency in the Bower registry
+# Search for a dependency in the Bower registry.
 bower search <dep>
 
-# install one or more dependencies
+# Install one or more dependencies.
 bower install <dep>..<depN>
 
-# list out the dependencies you have installed for a project
+# List out the dependencies you have installed for a project.
 bower list
 
-# update a dependency to the latest version available
+# Update a dependency to the latest version available.
 bower update <dep>
 ```
 
