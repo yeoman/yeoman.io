@@ -143,7 +143,9 @@ grunt bower-install
 > Injects your dependencies into your index.html file.
 ```
 
-It’s as simple as that. 
+It’s as simple as that.
+
+*Your chosen generator may not include the grunt tasks "bower" and "bower-install". You can read more about how to install and use these at [grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs) and [grunt-bower-install](https://github.com/stephenplusplus/grunt-bower-install).*
 
 
 ## Grunt
