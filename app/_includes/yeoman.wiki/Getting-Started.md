@@ -20,13 +20,18 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 
 ### Installing yo and some generators
 
-First you'll need to install `yo`, and other required tools:
+First, you'll need to install `yo` and other required tools:
 
 ```
-npm install -g yo grunt-cli bower
+npm install -g yo
 ```
 
-In addition to `yo`, this will automatically install `grunt` and `bower` for you, if you are using npm 1.2.10 or above. You can also install those manually: `npm install -g grunt-cli bower`.
+If you are using npm 1.2.10 or above, this will also automatically install `grunt` and `bower` for you. If you're on an older version of npm, you will need to install them manually:
+
+```
+# older version of npm
+npm install -g grunt-cli bower
+```
 
 If you have installed Grunt globally in the past, you will need to remove it first: `npm uninstall -g grunt`
 
