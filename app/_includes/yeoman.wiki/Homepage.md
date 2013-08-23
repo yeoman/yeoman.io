@@ -4,7 +4,7 @@
 <img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png" alt="Yo, Grunt, Bower">
 </p>
 
-## 1.0 Release Candidate 1 
+## Yeoman 1.0
 
 Yeoman 1.0 is more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better. 
 
@@ -30,13 +30,15 @@ Then install the required tools globally by running:
 npm install -g yo
 ```
 
-This will install _Grunt_ and _Bower_ automatically.
+This will install _Grunt_ and _Bower_ automatically. 
 
 `yo` can generate several types of applications, but it needs help from plug-ins, or "generators" to get the job done. To scaffold a web application, you'll need to grab the web app generator:
 
 ```
 npm install -g generator-webapp
 ```
+
+**Note:** Many generators no longer require this installation step and will automatically install yo, grunt and bower just by installing the generator directly.
 
 You can install additional generators with npm. For example, to install the [AngularJS](http://angularjs.org) generator: `npm install -g generator-angular`. Run `yo` for more information.
 
