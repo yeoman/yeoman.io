@@ -13,6 +13,7 @@ layout: blog
 <section>
 
 	<h2>{{ page.title }}</h2>
+	<p class="meta">{{ page.date | date_to_string }}</p>
 
 	<div class="social">
 
@@ -26,9 +27,7 @@ layout: blog
 		<!--plus-->
 
 	</div>
-
-	<p class="meta">{{ page.date | date_to_string }}</p>
-
+	
 	<div class="post">
 	{{ content }}
 	</div>
