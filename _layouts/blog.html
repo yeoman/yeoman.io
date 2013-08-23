@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
-{% include blogskin.html %}
+{% include head.html %}
 <body class="{{page.class}}">
+   {% include sidebar.html %}
   <div id="content">
     <article>
       {% if page.markdown == 1 %}
