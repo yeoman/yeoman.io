@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+{% include blogskin.html %}
+<body class="{{page.class}}">
+  <div id="content">
+    <article>
+      {% if page.markdown == 1 %}
+        {{ content | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </article>
+  </div>
+  {% include foot.html %}
+</body>
+</html>
