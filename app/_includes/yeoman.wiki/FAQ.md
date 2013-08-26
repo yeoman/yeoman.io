@@ -60,7 +60,7 @@ Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/is
 
 * [Grunt](https://github.com/cowboy/grunt)
 * [Twitter Bower](http://bower.io)
-* [Twitter Bootstrap](http://twitter.github.com/bootstrap)
+* [Bootstrap](http://twbs.github.io/bootstrap)
 * [Node Build Script](https://github.com/h5bp/node-build-script)
 * [HTML5 Boilerplate](http://html5boilerplate.com)
 * [Compass](http://compass-style.org/)
