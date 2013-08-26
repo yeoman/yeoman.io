@@ -44,7 +44,7 @@ To scaffold a web application, you'll need to install the `generator-webapp` gen
 npm install -g generator-webapp
 ```
 
-This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Twitter Bootstrap](http://twitter.github.com/bootstrap). You'll have a choice during the interactive prompts to not include many of these.
+This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these.
 
 Now that the generator is installed, create a directory for your new project and run:
 
