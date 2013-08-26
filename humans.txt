@@ -48,7 +48,7 @@
     Components:
     * Grunt
     * node-build-script
-    * Twitter Bootstrap
+    * Bootstrap
     * HTML5 Boilerplate
     * Modernizr
     * Twitter Bower
