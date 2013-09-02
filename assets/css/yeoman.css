@@ -171,6 +171,10 @@ article {
   margin: auto;
 }
 
+.post img {
+  width: 100%;
+}
+
 .discovery-page article {
   max-width: 960px;
 }
