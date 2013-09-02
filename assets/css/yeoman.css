@@ -327,6 +327,11 @@ pre{
   top: 0;
 }
 
+.social {
+  width: 100%;
+  overflow: hidden;
+}
+
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
