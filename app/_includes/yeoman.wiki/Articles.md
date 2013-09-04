@@ -1,5 +1,6 @@
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
+* [Continuous Deployment with Yeoman and Jenkins Part II](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins-part-ii.html)
 * [Continuous Deployment with Yeoman and Jenkins](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins.html)
 * [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow)
 * [Building HTML5 Apps with Yeoman and Backbone](http://rockyj.in/2013/05/11/yeoman_and_backbone.html)
