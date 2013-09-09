@@ -157,3 +157,11 @@ You bet! You can remove the `connect` task from your Gruntfile and manually inse
 ```
 
 After that, simply run `grunt server` like you normally would and enjoy automatic page refreshes.
+
+### What should I do after cloning a web application generated with Yeoman?
+
+Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt server` and download the Javascript dependencies listed in the `bower.json` file, you need to run 
+```Bash
+npm install && bower install
+```
+And check if these folders are created correctly.
