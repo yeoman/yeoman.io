@@ -37,6 +37,8 @@ The recommended way of deploying the ```dist``` directory is using ```git subtre
  * GitHub Pages uses the ```gh-pages``` branch for deploying project pages. Users & Organization Pages use the ```master``` branch. This means you might want to use master as your subtree branch and set up a different branch for your app source.
  * You might get an error like this `Updates were rejected because the tip of your current branch is behind`. You can solve this by [force pushing to the remote](http://stackoverflow.com/a/13403588/64949) (be careful though, it will destroy whatever is already there).
 
+### Alternative approach
+If you'd prefer not to commit dist to master, you can use the script [git-directory-deploy](https://github.com/X1011/git-directory-deploy) to deploy the files directly from the work tree.
 
 ### Extra
  [Git Subtree Documentation](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
