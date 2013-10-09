@@ -8,7 +8,7 @@ Long-term, the project may also assist developers with creating applications usi
 
 ### What is a command-line interface?
 
-A command-line interface is a means for developers to interact with a system using text commands. On OSX this this is often done using the Terminal and on Windows we use the command shell or a third-party tool such as [Cygwin](http://www.cygwin.com).
+A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal and on Windows we use the command shell or a third-party tool such as [Cygwin](http://www.cygwin.com).
 
 
 ### What is a package manager?
