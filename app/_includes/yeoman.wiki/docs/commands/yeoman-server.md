@@ -1,5 +1,7 @@
 ## <a href="#server" name="server">server</a>
 
+**warning: `yeoman server` is now deprecated. http://yeoman.io/migrate.html**
+
 Usage: `yeoman server`
 
 Launches a preview server on port 3501 that allows you to access a running version of your application locally.
