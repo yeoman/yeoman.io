@@ -20,7 +20,7 @@ A package manager runs through a command-line interface and is a tool for automa
 
 Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily. [Grunt.js](http://gruntjs.com) is one of these tools and powers our underlying build process and task plugin architecture.
 
-On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Twitter Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js/r.js out of the box. With additional features like wiring, an improved `server` and `init`, we like to think of ourselves as a helper project on top of Grunt.
+On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Twitter Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js/r.js out of the box. With additional features like wiring, an improved `serve` and `init`, we like to think of ourselves as a helper project on top of Grunt.
 
 Developers are free to continue using any Grunt tasks with Yeoman and there should remain a good level of cross-tool task compatibility.
 
@@ -156,11 +156,11 @@ You bet! You can remove the `connect` task from your Gruntfile and manually inse
 </script>
 ```
 
-After that, simply run `grunt server` like you normally would and enjoy automatic page refreshes.
+After that, simply run `grunt serve` like you normally would and enjoy automatic page refreshes.
 
 ### What should I do after cloning a web application generated with Yeoman?
 
-Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt server` and download the Javascript dependencies listed in the `bower.json` file, you need to run 
+Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run 
 ```Bash
 npm install & bower install
 ```
