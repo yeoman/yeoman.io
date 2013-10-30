@@ -1,0 +1,17 @@
+---
+layout: blog
+title: Blog Archives
+category: blog
+---
+
+<div id="blog">
+  {% for post in site.categories.blog %}
+    <p>
+      <a href="{{ post.url }}" class="post-date">
+        &raquo; {{ post.title }}
+      </a>
+      - {{ post.date | date: "%B %e, %Y" }}
+    </p>
+  {% endfor %}
+</div>
+

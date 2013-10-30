@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="en">
-{% include blogskin.html %}
-<body class="{{page.class}}">
-   {% include sidebar.html %}
+{% include head-blog.html %}
+<body class="blog {{page.class}}">
+  {% include sidebar-blog.html %}
   <div id="content">
+
+    <h1 class="banner">
+      <span>{{ page.title }}</span>
+    </h1>
+
     <article>
       {% if page.markdown == 1 %}
         {{ content | markdownify }}
@@ -11,7 +16,8 @@
         {{ content }}
       {% endif %}
     </article>
+
   </div>
-  {% include foot.html %}
+  {% include foot-blog.html %}
 </body>
 </html>
