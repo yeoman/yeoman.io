@@ -2,7 +2,9 @@
 
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
-* [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow)
+*Feel free to add additional ones, but make sure it's something of value and include the date*
+
+* [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow) *2013-07-15*
 * [HTML5Rocks - Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/)
 * [Kickstart your AngularJS development with Yo, Grunt and Bower](http://www.sitepoint.com/kickstart-your-angularjs-development-with-yeoman-grunt-and-bower/)
 * [Automating AngularJS with Yo, Grunt and Bower](http://newtriks.com/2013/06/11/automating-angularjs-with-yeoman-grunt-and-bower/)
