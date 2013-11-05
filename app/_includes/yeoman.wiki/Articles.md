@@ -2,7 +2,7 @@
 
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
-*Feel free to add additional ones, but make sure it's something of value and include the date*
+*Feel free to add additional ones, but make sure it's something of value and include the date.*
 
 * [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow) *2013-07-15*
 * [HTML5Rocks - Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/)
