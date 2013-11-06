@@ -24,6 +24,8 @@ First, you'll need to install `yo` and other required tools:
 npm install -g yo
 ```
 
+*npm is the package manager for [Node.js](http://nodejs.org/) and comes bundled with it.*
+
 If you are using npm 1.2.10 or above, this will also automatically install `grunt` and `bower` for you. If you're on an older version of npm, you will need to install them manually:
 
 ```
