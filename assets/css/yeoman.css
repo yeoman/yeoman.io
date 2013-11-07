@@ -593,7 +593,8 @@ pre{
     min-width: 50px;
   }
 
-  .discovery-page .desc {
+  .discovery-page .desc,
+  .discovery-page [data-sort="downloads"] {
     padding-right: 10px;
   }
 

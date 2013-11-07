@@ -69,6 +69,7 @@ var setMenuBackgroundHeight = function() {
           'desc',
           'author',
           'modified',
+          'downloads',
           'stars',
           'forks'
         ]
