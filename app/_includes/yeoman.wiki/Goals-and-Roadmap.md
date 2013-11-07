@@ -1,4 +1,4 @@
-## Overall project goals
+# Overall project goals
 
 * improve developer productivity and happiness in building a web app
 * aggregate the best-in-class offerings to front-end devs
