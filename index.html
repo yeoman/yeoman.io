@@ -15,7 +15,7 @@ layout: default
 {% endcapture %}
 {{ homepage | markdownify }}
 
-    <h2 class="hero-title">My features</h2>
+    <h2 class="hero-title">My features <a href="#features-disclaimer">*</a></h2>
     <div class="row features">
       <ul class="span5">
         <li>
@@ -43,6 +43,7 @@ layout: default
           <i class="icon-ok"></i> <strong>PhantomJS Unit Testing</strong> — Easily run your unit tests in headless WebKit via PhantomJS. When you create a new application, I also include some test scaffolding for your app.<p></p>
         </li>
       </ul>
+      <em id="features-disclaimer">features are dependent on what the individual generators provide</em>
     </div>
   </section>
 
