@@ -1,6 +1,6 @@
 # Yeoman.io
 
-Home to the Yeoman.io site.
+Home to the [Yeoman.io](http://yeoman.io) site.
 
 ## Attention
 
