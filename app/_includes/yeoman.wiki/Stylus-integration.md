@@ -15,7 +15,7 @@ Run `npm install -D grunt-contrib-stylus`. This will add it to your `package.jso
 ### Declare the task in `Gruntfile.js`
 
 ```
-  grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-stylus'); // might not be necessary if you are using load-grunt-tasks
   grunt.registerTask('compass', ['stylus']);
 ```
 
