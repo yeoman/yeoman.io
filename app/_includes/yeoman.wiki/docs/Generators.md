@@ -340,7 +340,7 @@ Things are looking great for our blog generator. We have enough in place to star
 * Blog posts will be written in Markdown
 * NPM will install some Grunt tasks, and a few other helpers for two custom tasks we'll give the user:
   * `grunt build` - creates a "wordmap" of keywords from each blog post
-  * `grunt serve` - watches for changes to the Markdown, re-builds the project
+  * `grunt server` - watches for changes to the Markdown, re-builds the project
 * Bower will fetch two run-time dependencies:
   * [Showdown](https://github.com/coreyti/showdown) - translates Markdown into HTML
   * [Showup](https://github.com/stephenplusplus/showup) - a library written for the purposes of this generator
@@ -498,7 +498,7 @@ If you're curious to see more, just go look!
 That's the build task, which is also run from another grunt task; `serve`. Try that one out:
 
 ```bash
-$ grunt serve
+$ grunt server
 Running "build" task
 
 Running "connect:livereload" (connect) task
@@ -599,7 +599,7 @@ We made use of a new method here, `this.write`. As I'm sure you've guessed by no
 
 _I chose to remove the `templates` directory, as the file we're generating is quite small in content. Since it's just a `# Heading` based on the title of the post, I inlined it into this `PostGenerator.prototype.files` function. For a larger-scale application, well structured separation is indispensable._
 
-Holy moly, we have a blog generator! Try creating and editing posts. Play with `grunt serve` and `grunt build`, keeping `index.html` open to see the results. Did everything work?
+Holy moly, we have a blog generator! Try creating and editing posts. Play with `grunt server` and `grunt build`, keeping `index.html` open to see the results. Did everything work?
 
 
 <h2 id="writing-your-next-generator">Writing Your Next Generator</h2>
