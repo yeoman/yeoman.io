@@ -566,7 +566,7 @@ pre{
   .discovery-page .modified,
   [data-sort="forks"],
   [data-sort="modified"] {
-    display: block;
+    display: table-cell;
   }
 }
 
