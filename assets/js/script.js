@@ -39,8 +39,9 @@ var setMenuBackgroundHeight = function() {
 
       var blocklist = [
         'generator-express-angular', // haven't updated package.json
+        'ft-wp', // haven't updated package.json
         'generator-angular-phonegap', // haven't updated package.json
-        'ft-wp' // haven't updated package.json
+        'generator-angular-js', // haven't updated package.json
       ];
 
       var modules = _.filter(modules, function (el) {
