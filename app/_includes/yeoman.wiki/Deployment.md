@@ -2,51 +2,44 @@
 
 ## Deploying your application
 
-When you run ```grunt build```, it generates an optimized version of your application in the ```dist``` directory that can be deployed.
+Running `grunt build` generates an optimized version of your application in the `dist` directory. There are multiple ways to version and deploy this code to production.
 
-The recommended way of deploying the ```dist``` directory is using ```git subtree```.
+### grunt-build-control
 
-1. Remove the ```dist``` directory from the ```.gitignore``` file.
+[Grunt build control](https://github.com/robwierzbowski/grunt-build-control) is developed specifically to deploy Yeoman applications. It helps you version and deploy buitl code automatically with a grunt task. Configuration options include:
 
+- The name of the branch to commit to (e.g., prod, gh-pages)
+- Optionally a remote to push to (e.g., a Heroku instance, a GitHub remote, or the local source code repo)
+- Automatic commit messages that include the commit the code was built from
+- Safety checks to make sure the source repository is clean, so that built code always corresponds to a source code commit
 
-2. Add the ```dist``` directory to your repository and commit it with your project.
+Build control fetches prior to every commit and in general does a pretty good job of keeping code well versioned even with multiple contributors deploying independently. It will maintain a full revision history as long as you never manually force push. Complete documentation is available at the project's [GitHub page](https://github.com/robwierzbowski/grunt-build-control).
 
-   ```
-   git add dist && git commit -m "Initial dist subtree commit"
-   ```
+### git subtree
 
-3. Once the ```dist``` directory is part of your project we can use [```git subtree```](https://github.com/apenwarr/git-subtree) to set up a separate repository on a different branch.
+You can also maintain the source and built code on the same branch, and deploy only the `dist` directory's files and history with [`git subtree`](https://github.com/apenwarr/git-subtree).
 
-   ```
-   // Deploying dist to GitHub Pages
-   git subtree push --prefix dist origin gh-pages
-   ```
+1. Remove the `dist` directory from the `.gitignore` file. Yeoman projects ignore it by default.
+2. Add the `dist` directory to your repository:  
 
-   Note: prefix must be the relative path to your ```dist``` directory. This is assuming ```dist``` is in your root directory.
+        git add dist && git commit -m "Initial dist subtree commit
 
+3. Deploy the subtree to a different branch. Specify a relative path to your `dist` directory with `--prefix`:
 
-4. Now you can commit to your entire repository in your default (master) branch and whenever you want to deploy the ```dist``` directory you can run:
+        git subtree push --prefix dist origin gh-pages
 
-   ```
-   git subtree push --prefix dist origin gh-pages
-   ```
+4. Develop normally, committing your entire repository to your default (master) branch.
+5. To deploy the `dist` directory, run the `subtree push` command from the root directory:
 
-### Some common errors
- * By default the ```dist``` directory is going to be ignored by git. It is important to remove it from the .gitignore file.
- * You must first commit your ```dist``` directory to the default (master) branch before running the git subtree command.
- * The ```git subtree``` command must be called from the root directory.
- * The ```--prefix``` option must be the relative path to your ```dist``` directory.
- * GitHub Pages uses the ```gh-pages``` branch for deploying project pages. Users & Organization Pages use the ```master``` branch. This means you might want to use master as your subtree branch and set up a different branch for your app source.
- * You might get an error like this `Updates were rejected because the tip of your current branch is behind`. You can solve this by [force pushing to the remote](http://stackoverflow.com/a/13403588/64949) (be careful though, it will destroy whatever is already there).
+        git subtree push --prefix dist origin gh-pages
 
-### Alternative approach
-If you'd prefer not to commit dist to master, you can use the script [git-directory-deploy](https://github.com/X1011/git-directory-deploy) to deploy the files directly from the work tree.
+### git-directory-deploy script
 
-### Extra
- [Git Subtree Documentation](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
+[Git-directory-deploy](https://github.com/X1011/git-directory-deploy) is a less-automated script that works on similar principles to grunt build control.
 
- [Yeoman Build](https://github.com/yeoman/yeoman/wiki/yeoman-build)
+### Further reading
 
- [Github Pages](https://help.github.com/articles/user-organization-and-project-pages)
-
- [generator-heroku](https://github.com/passy/generator-heroku)
+- [Git Subtree docs](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
+- [Yeoman Build process docs](https://github.com/yeoman/yeoman/wiki/yeoman-build)
+- [Github Pages docs](https://help.github.com/articles/user-organization-and-project-pages)
+- [Generating a Heroku procfile with generator-heroku](https://github.com/passy/generator-heroku)
