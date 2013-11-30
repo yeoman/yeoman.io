@@ -14,7 +14,7 @@ This wiki is open for anyone to edit. Feel free to fix grammar and other things.
 - [[Articles]]
 - [[Related Projects]]
 - [[Deployment]]
-- [[Package Manager]]
+- [[Front end package management with Bower]]
 
 
 ---
