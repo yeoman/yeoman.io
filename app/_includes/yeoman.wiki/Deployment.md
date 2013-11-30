@@ -2,18 +2,18 @@ Running `grunt build` generates an optimized version of your application in the 
 
 ### grunt-build-control
 
-[Grunt build control](https://github.com/robwierzbowski/grunt-build-control) is developed specifically to deploy Yeoman applications. It helps you version and deploy buitl code automatically with a grunt task. Configuration options include:
+[Grunt build control](https://github.com/robwierzbowski/grunt-build-control) has been developed specifically to deploy Yeoman applications. It helps you version and deploy built code automatically with a grunt task. Configuration options include:
 
 - The name of the branch to commit to (e.g., prod, gh-pages)
-- Optionally a remote to push to (e.g., a Heroku instance, a GitHub remote, or the local source code repo)
-- Automatic commit messages that include the commit the code was built from
+- The remote to push to (e.g., a Heroku instance, a GitHub remote, or the local source code repo)
+- Automatic commit messages including the branch and commit the code was built from
 - Safety checks to make sure the source repository is clean, so that built code always corresponds to a source code commit
 
-Build control fetches prior to every commit and in general does a pretty good job of keeping code well versioned even with multiple contributors deploying independently. It will maintain a full revision history as long as you never manually force push. Complete documentation is available at the project's [GitHub page](https://github.com/robwierzbowski/grunt-build-control).
+Build control fetches prior to every commit and in general does a pretty good job of keeping code well versioned when with multiple contributors are deploying independently. It maintains full revision history as long as no user force pushes. Complete documentation is available at the project's [GitHub page](https://github.com/robwierzbowski/grunt-build-control).
 
 ### git subtree
 
-You can also maintain the source and built code on the same branch, and deploy only the `dist` directory's files and history with [`git subtree`](https://github.com/apenwarr/git-subtree).
+You can also maintain the source and built code on the same branch, and deploy only the `dist` directory files and history with [`git subtree`](https://github.com/apenwarr/git-subtree).
 
 1. Remove the `dist` directory from the `.gitignore` file. Yeoman projects ignore it by default.
 2. Add the `dist` directory to your repository:  
