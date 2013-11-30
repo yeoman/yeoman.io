@@ -1,5 +1,3 @@
-#The Road to 1.0
-
 Our initial release of Yeoman attempted to be a lot of things to a lot of people. We learned a number of lessons from this process, including the importance of clear messaging around the tools used in our toolbelt and how our workflow might be customized. We aim to make the experience of using Yeoman more streamlined in 1.0 keeping in mind the following:
 
 ## Yeoman 0.9 pain points
