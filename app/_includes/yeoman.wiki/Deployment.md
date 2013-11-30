@@ -11,7 +11,7 @@ Running `grunt build` generates an optimized version of your application in the 
 
 Build control fetches prior to every commit and in general does a pretty good job of keeping code well versioned when with multiple contributors are deploying independently. It maintains full revision history as long as no user force pushes. Complete documentation is available at the project's [GitHub page](https://github.com/robwierzbowski/grunt-build-control).
 
-### git subtree command
+### Git subtree command
 
 You can also maintain the source and built code on the same branch, and deploy only the `dist` directory with the [`git subtree`](https://github.com/apenwarr/git-subtree) command.
 
