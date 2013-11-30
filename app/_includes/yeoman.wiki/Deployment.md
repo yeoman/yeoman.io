@@ -1,6 +1,6 @@
 Running `grunt build` generates an optimized version of your application in the `dist` directory. There are multiple ways to version and deploy this code to production.
 
-### grunt-build-control
+### Grunt-build-control task
 
 [Grunt build control](https://github.com/robwierzbowski/grunt-build-control) has been developed specifically to deploy Yeoman applications. It helps you version and deploy built code automatically with a grunt task. Configuration options include:
 
@@ -11,9 +11,9 @@ Running `grunt build` generates an optimized version of your application in the 
 
 Build control fetches prior to every commit and in general does a pretty good job of keeping code well versioned when with multiple contributors are deploying independently. It maintains full revision history as long as no user force pushes. Complete documentation is available at the project's [GitHub page](https://github.com/robwierzbowski/grunt-build-control).
 
-### git subtree
+### git subtree command
 
-You can also maintain the source and built code on the same branch, and deploy only the `dist` directory files and history with [`git subtree`](https://github.com/apenwarr/git-subtree).
+You can also maintain the source and built code on the same branch, and deploy only the `dist` directory with the [`git subtree`](https://github.com/apenwarr/git-subtree) command.
 
 1. Remove the `dist` directory from the `.gitignore` file. Yeoman projects ignore it by default.
 2. Add the `dist` directory to your repository:  
@@ -29,9 +29,9 @@ You can also maintain the source and built code on the same branch, and deploy o
 
         git subtree push --prefix dist origin gh-pages
 
-### git-directory-deploy script
+### Git-directory-deploy script
 
-[Git-directory-deploy](https://github.com/X1011/git-directory-deploy) is a less-automated script that works on similar principles to grunt build control.
+[Git directory deploy](https://github.com/X1011/git-directory-deploy) is a less-automated script that works on similar principles to grunt build control.
 
 ### Further reading
 
