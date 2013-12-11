@@ -18,7 +18,7 @@ You can also maintain the source and built code on the same branch, and deploy o
 1. Remove the `dist` directory from the `.gitignore` file. Yeoman projects ignore it by default.
 2. Add the `dist` directory to your repository:  
 
-        git add dist && git commit -m "Initial dist subtree commit
+        git add dist && git commit -m "Initial dist subtree commit"
 
 3. Deploy the subtree to a different branch. Specify a relative path to your `dist` directory with `--prefix`:
 
