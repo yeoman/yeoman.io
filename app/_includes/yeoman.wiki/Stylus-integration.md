@@ -19,6 +19,8 @@ Run `npm install -D grunt-contrib-stylus`. This will add it to your `package.jso
   grunt.registerTask('compass', ['stylus']);
 ```
 
+Note: If the app wasn't using compass and you're not overwriting it, you will need to add 'stylus' (or 'stylus:compile' if you introduce other properties) to the array passed into the appropriate grunt.registerTask() functions
+
 ## Part II: Stylus
 
 ### Configure Compilation 
