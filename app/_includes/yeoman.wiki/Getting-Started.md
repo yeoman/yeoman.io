@@ -143,6 +143,7 @@ bower search jquery-pjax
 bower install jquery-pjax --save
 
 # If you're using RequireJS...
+# (be aware that currently the webapp generator does not include RequireJS and the following command only applies to generators that do)
 grunt bower
 > Injects your Bower dependencies into your RequireJS configuration.
 
