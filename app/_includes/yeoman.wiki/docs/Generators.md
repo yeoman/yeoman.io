@@ -495,7 +495,7 @@ The build task also performs the following sub-tasks:
 
 If you're curious to see more, just go look!
 
-That's the build task, which is also run from another grunt task; `serve`. Try that one out:
+That's the build task, which is also run from another grunt task; `server`. Try that one out:
 
 ```bash
 $ grunt server
