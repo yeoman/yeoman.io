@@ -52,7 +52,7 @@ You're set up!
 
 Now that you have `yo` and `generator-generator` installed, let's say we wanted to make a generator to help someone build a simple blog.
 
-We'll create a directory to work on our generator called `generator-blog`. It's important to follow this `generator-____` convention. You'll see why in a moment. Let's create the directory, and get going!
+We'll create a directory to work on our generator called `generator-blog`. **It's important to follow this `generator-____` convention**. You'll see why in a moment. Let's create the directory, and get going!
 
 ```bash
 $ mkdir ~/dev/generator-blog && cd $_
