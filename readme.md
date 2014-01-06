@@ -43,13 +43,13 @@ Jekyll has three basic options used in this project:
 To generate the site and run it in a server, which can be viewed at `http://localhost:4000`, run:
 
 ```
-jekyll server
+jekyll serve
 ```
 
 To regenerate the site as you edit and save files, run:
 
 ```
-jekyll server --watch
+jekyll serve --watch
 ```
 
 To generate a static version of the site that is ready to upload to a server (it will create a folder called _site), run:
