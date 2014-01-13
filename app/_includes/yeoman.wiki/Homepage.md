@@ -4,9 +4,9 @@
 <img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png" alt="Yo, Grunt, Bower">
 </p>
 
-## Yeoman 1.0
+## Yeoman
 
-Yeoman 1.0 is more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better. 
+Yeoman is more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better. 
 
 Our workflow is comprised of three tools for improving your **productivity** and **satisfaction** when building a web app: *yo* (the scaffolding tool), *grunt* (the build tool) and *bower* (for package management).
 
@@ -32,7 +32,7 @@ npm install -g yo
 
 This will install _Grunt_ and _Bower_ automatically. 
 
-`yo` can generate several types of applications, but it needs help from plug-ins, or "generators" to get the job done. To scaffold a web application, you'll need to grab the web app generator:
+`yo` can generate several types of applications, but it needs help from plug-ins, or "[generators](yeoman.io/community-generators.html)" to get the job done. To scaffold a web application, you'll need to grab the web app generator:
 
 ```
 npm install -g generator-webapp
