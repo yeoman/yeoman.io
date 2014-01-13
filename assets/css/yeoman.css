@@ -162,13 +162,26 @@ nav ul li img {
   background-position: 0px 10px;
 }
 
-.tools-list{
-  list-style-type:none;
+.tools-list{ list-style-type:none; padding:0px; }
+.tools-list li { 
+  height: 100px; 
+  padding-left: 80px;
+  background-repeat: no-repeat;
 }
 
-.yoyo {list-style-image: url(../../media/bullet-yo.gif);}
-.gruntjs {list-style-image: url(../../media/bullet-grunt.gif);}
-.bower {list-style-image: url(../../media/bullet-bower.gif);}
+.yoyo {
+  background-position: -4px 2px;
+  background-image:url('../../media/bullet-yo.gif');
+}
+
+.gruntjs {
+  background-position: -4px 2px;
+  background-image:url('../../media/bullet-grunt.gif');
+}
+.bower {
+  background-position: -4px 2px;
+  background-image:url('../../media/bullet-bower.gif');
+}
 
 
 #content {
