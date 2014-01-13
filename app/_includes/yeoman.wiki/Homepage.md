@@ -13,7 +13,7 @@ With so many great tools available to front-end web developers these days it can
 Our workflow is comprised of three tools for improving your **productivity** and **satisfaction** when building a web app: *yo* (the scaffolding tool), *grunt* (the build tool) and *bower* (for package management).
 
 <ul class="tools-list">
-<li class="yoyo"><a href="https://github.com/yeoman/yo">yo</a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build.</li>
+<li class="yoyo"><a href="https://github.com/yeoman/yo">yo</a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks and Bower dependencies that you might need for your build.</li>
 
 <li class="gruntjs"><a href="http://gruntjs.com">Grunt</a> is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib. </li>
 
