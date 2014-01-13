@@ -10,10 +10,9 @@ If you want to create an issue about something of Yeoman's website you are in th
 
 The site is made with [Jekyll](https://github.com/mojombo/jekyll/), a static generator in Ruby. It also uses [redcarpet](https://github.com/vmg/redcarpet) to process the markdown in the site.
 
-The best way to install Jekyll and Redcarpet is via RubyGems:
 
 ```
-gem install jekyll redcarpet
+gem install bundler && bundle install
 ```
 
 Once Jekyll is installed, you just need to clone the project:
