@@ -162,6 +162,15 @@ nav ul li img {
   background-position: 0px 10px;
 }
 
+.tools-list{
+  list-style-type:none;
+}
+
+.yoyo {list-style-image: url(../../media/bullet-yo.gif);}
+.gruntjs {list-style-image: url(../../media/bullet-grunt.gif);}
+.bower {list-style-image: url(../../media/bullet-bower.gif);}
+
+
 #content {
   padding: 10px 25px 0 25px;
 }
