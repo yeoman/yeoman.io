@@ -3,8 +3,8 @@
 <p class="toolset">
 <img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yeoman-horizontal.gif" alt="Yeoman">
 </p>
-<p>
-<a href="http://yeoman.io/gettingstarted.html">Get started></a> and then <a href="http://yeoman.io/community-generators.html">find a generator</a> for your webapp.
+<p class="strapline">
+<a href="http://yeoman.io/gettingstarted.html">Get started</a> and then <a href="http://yeoman.io/community-generators.html">find a generator</a> for your webapp.
 </p>
 
 ## Why use Yeoman?
