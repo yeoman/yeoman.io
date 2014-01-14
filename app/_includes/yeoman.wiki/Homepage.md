@@ -49,6 +49,8 @@ npm install -g generator-webapp
 
 You can install additional generators with npm. For example, to install the [AngularJS](http://angularjs.org) generator: `npm install -g generator-angular`. Run `yo` for more information.
 
+**Pro-tip:** Looking for a tutorial? We're happy to recommend [Building apps with the Yeoman workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/) on NetTuts.
+
 ### Usage
 
 A complete workflow might look like this:
