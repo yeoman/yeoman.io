@@ -37,6 +37,10 @@ hr {
   text-align: center;
 }
 
+.oneline {
+  font-weight: bold;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
