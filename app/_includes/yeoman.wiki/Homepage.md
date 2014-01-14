@@ -7,7 +7,7 @@
 <a href="http://yeoman.io/gettingstarted.html">Get started</a> and then <a href="http://yeoman.io/community-generators.html">find a generator</a> for your webapp. Generators are available for <a href="https://github.com/yeoman/genernator-angular">Angular</a>, <a href="https://github.com/yeoman/generator-backbone">Backbone</a>, <a href="https://github.com/yeoman/generator-ember">Ember</a> and many other frameworks. Read the <a href="http://updates.html5rocks.com/tag/front-end">Yeoman Monthly Digest</a> for our latest picks.
 </p>
 
-One-line install using [npm](http://npmjs.org]:
+One-line install using <a href="http://npmjs.org>npm</a>:
 ```
 npm install -g yo
 ```
