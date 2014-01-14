@@ -1,4 +1,4 @@
-# SCAFFOLD MODERN WORKFLOWS FOR MODERN WEBAPPS
+# THE WEB'S SCAFFOLDING TOOL FOR MODERN WEBAPPS
 
 <p class="toolset">
 <img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yeoman-horizontal.gif" alt="Yeoman">
