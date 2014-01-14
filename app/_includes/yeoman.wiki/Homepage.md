@@ -3,6 +3,9 @@
 <p class="toolset">
 <img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yeoman-horizontal.gif" alt="Yeoman">
 </p>
+<p>
+[Get started](http://yeoman.io/gettingstarted.html) and then [find a generator](http://yeoman.io/community-generators.html) for your webapp.
+</p>
 
 ## Why use Yeoman?
 
