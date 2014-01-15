@@ -1,4 +1,4 @@
-Yo! The Yeoman core team meet each week to discuss what we've been working on and the direction of the project. We've been using Google Docs for our meeting notes over the past year, but are experimenting with using the wiki for this. It improves openness and can be referenced more easily <3
+The Yeoman core team meet each week to discuss what we've been working on and the direction of the project. We've been using Google Docs for our meeting notes over the past year, but are experimenting with using the wiki for this. It improves openness and can be referenced more easily <3
 
 ## Wednesday, 15th Jan
 
