@@ -2,7 +2,7 @@ Note: we have been using Google Docs for our meeting notes over the past year, b
 
 ## Wednesday, 15th Jan
 
-* Simon started work on bringing [queues](https://github.com/yeoman/generator/pull/468) to the generator system. Next up is priority queues. Feedback would be appreciated on the [composability](https://github.com/yeoman/generator/issues/433) discussion thread. 
+* Simon started work on bringing [queues](https://github.com/yeoman/generator/pull/468) to the generator system. Next up is priority queues. Feedback would be appreciated on the [composability](https://github.com/yeoman/generator/issues/433) discussion thread. AI for the team: Provide feedback to Simon before next week. Right now we look to using the queue name as the namespace in the prototype, but there may be a cleaner solution we can think of. Otherwise, queues are great. We're not passing callbacks down the process anymore. 
 * `grunt serve` is the new hotness. Thanks to Eddie for his PRs, Sindre for merging. Tag/release new versions this week.
 * Official [generator](https://github.com/yeoman/yeoman/issues/1263) cleanup - can we add references to .yo-rc examples and start to break up tasks?
 * Addy is working on defining the [roadmap](https://github.com/yeoman/yeoman/issues/1264) for this quarter, how we might help [existing](https://github.com/yeoman/yeoman/issues/1265) projects. How important do we feel the [installers](https://github.com/yeoman/yeoman/issues/1262) are for our beginners? Also need to wrap up RequireJS PR.
