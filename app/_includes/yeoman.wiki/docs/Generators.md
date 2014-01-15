@@ -856,6 +856,5 @@ this.bowerInstall([
 
 <h2 id="reference-materials">Reference Materials</h2>
 
-* [Generator API](https://github.com/yeoman/generator/wiki/base)
-* [Environment](https://github.com/yeoman/generator/wiki/env)
+* [Generator API](http://yeoman.github.io/generator/)
 * [Testing generators](https://github.com/yeoman/generator/wiki/Testing-generators)
