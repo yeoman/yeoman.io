@@ -3,8 +3,8 @@ Note: we have been using Google Docs for our meeting notes over the past year, b
 ## Wednesday, 15th Jan
 
 * Simon started work on bringing [queues](https://github.com/yeoman/generator/pull/468) to the generator system. Next up is priority queues. Feedback would be appreciated on the [composability](https://github.com/yeoman/generator/issues/433) discussion thread. 
-* Addy is working on defining the [roadmap](https://github.com/yeoman/yeoman/issues/1264) for this quarter. PR for bringing back RequireJS and defining the roadmap for this quarter, how we might help [existing](https://github.com/yeoman/yeoman/issues/1265) projects. How important do we feel the [installers](https://github.com/yeoman/yeoman/issues/1262) are for our beginners?
 * Official [generator](https://github.com/yeoman/yeoman/issues/1263) cleanup - can we add references to .yo-rc examples and start to break up tasks?
+* Addy is working on defining the [roadmap](https://github.com/yeoman/yeoman/issues/1264) for this quarter, how we might help [existing](https://github.com/yeoman/yeoman/issues/1265) projects. How important do we feel the [installers](https://github.com/yeoman/yeoman/issues/1262) are for our beginners? Also need to wrap up RequireJS PR.
 * `grunt serve` is the new hotness. Thanks to Eddie for his PRs, Sindre for merging. Tag/release new versions this week.
 * Dynamically selecting the new available port for connection [PR](https://github.com/eddiemonge/grunt-contrib-connect/commit/7bd5022e4b5f53919f0fc94e0501548dd3ef666b) - changes of this landing upstream?
 * Is any more feedback required on the [Gruntfile API](https://github.com/yeoman/generator/issues/432) thread? If not, where does this fit in terms of the queues system? Does it need an implementation soon?
