@@ -46,7 +46,7 @@ This will install _Grunt_ and _Bower_ automatically.
 
 **Pro-tip:** A [5 Minute Introduction Video](http://www.youtube.com/watch?feature=player_embedded&v=zBt2g9ekiug) to Yeoman is available if you're a little more visually inclined :)
 
-`yo` can generate several types of applications, but it needs help from plug-ins, or generators to get the job done. To scaffold a web application, you'll need to grab the web app generator:
+`yo` can generate several types of applications, but it needs help from plug-ins, or [generators](http://yeoman.io/community-generators.html) to get the job done. To scaffold a web application, you'll need to grab the web app generator:
 
 ```
 npm install -g generator-webapp
