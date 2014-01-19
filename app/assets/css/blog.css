@@ -6,13 +6,13 @@ h1.banner {
   text-align: center;
 }
 h1.banner span {
-  background: url(/assets/img/banner-center.png) repeat-x;
+  background: url('/assets/img/banner-center.png') repeat-x;
   display: inline-block;
   height: 46px;
   padding: 10px 10px 0;
 }
 h1.banner span::before {
-  background: url(/assets/img/banner-left.png) no-repeat;
+  background: url('/assets/img/banner-left.png') no-repeat;
   content: " ";
   float: left;
   height: 46px;
@@ -21,7 +21,7 @@ h1.banner span::before {
   width: 28px;
 }
 h1.banner span::after {
-  background: url(/assets/img/banner-right.png) no-repeat;
+  background: url('/assets/img/banner-right.png') no-repeat;
   content: " ";
   float: right;
   height: 46px;

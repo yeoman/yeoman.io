@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background-image: url( '../img/content-bg.png' );
+  background-image: url('/assets/img/content-bg.png');
   font-family: 'Droid Sans', sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -96,7 +96,7 @@ h2 {
 }
 
 nav {
-  background-image: url( '../img/nav-bg.png' );
+  background-image: url('/assets/img/nav-bg.png');
   text-align: center;
   padding: 0 0 14px 0;
   font-family: 'Lekton', sans-serif;
@@ -115,7 +115,7 @@ nav header {
 .strikethrough h1 {
   position: relative;
   top: 30px;
-  background-image: url( '../img/content-bg.png' );
+  background-image: url('/assets/img/content-bg.png');
   display: inline-block;
   padding: 0 12px 0 12px;
 }
@@ -164,7 +164,7 @@ nav ul li img {
 
 .nav-sub {
   padding-left: 12px;
-  background-image: url( '../img/subnav-dot.png' );
+  background-image: url('/assets/img/subnav-dot.png');
   background-repeat: no-repeat;
   background-position: 0px 10px;
 }
@@ -181,16 +181,16 @@ nav ul li img {
 
 .yoyo {
   background-position: -4px 2px;
-  background-image:url('../img/bullet-yo.gif');
+  background-image:url('/assets/img/bullet-yo.gif');
 }
 
 .gruntjs {
   background-position: -4px 2px;
-  background-image:url('../img/bullet-grunt.gif');
+  background-image:url('/assets/img/bullet-grunt.gif');
 }
 .bower {
   background-position: -4px 2px;
-  background-image:url('../img/bullet-bower.gif');
+  background-image:url('/assets/img/bullet-bower.gif');
 }
 
 
@@ -337,7 +337,7 @@ pre{
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("/assets/img/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -366,7 +366,7 @@ pre{
   text-align: left;
 }
 
-.icon-white {                       background-image: url("../img/glyphicons-halflings-white.png"); }
+.icon-white {                       background-image: url("/assets/img/glyphicons-halflings-white.png"); }
 .icon-glass {                       background-position: 0      0; }
 .icon-music {                       background-position: -24px 0; }
 .icon-search {                       background-position: -48px 0; }
