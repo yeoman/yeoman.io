@@ -1,12 +1,12 @@
 #!/bin/sh
-# automating this repetitive step
+# Automating this repetitive step.
 
-git submodule update --init # just in case
+git submodule update --init # Just in case
 
-cd _includes/yeoman.wiki/
+cd app/_includes/yeoman.wiki/
 git pull origin master
-cd ../..
-git add _includes/yeoman.wiki/
-git commit -m "submodule bump."
+cd ../../..
+git add app/_includes/yeoman.wiki/
+git commit -m "Wiki submodule bump"
 
 echo "now please push this commit up! ..."
