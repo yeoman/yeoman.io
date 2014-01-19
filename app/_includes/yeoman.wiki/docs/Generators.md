@@ -24,7 +24,7 @@ By now, you've probably read the lovely [Getting Started](http://yeoman.io/getti
 
 The idea behind a generator can be simplified to sharing your ideas and best practices with others. It wasn't long ago using [HTML5 Boilerplate](http://html5boilerplate.com) was the best way to get your application off the ground. But now, even the act of cloning and customizing the boilerplate to work within your environment seems strenuous.
 
-<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/yobox.png" style="width: 100%; max-width: 400px;">
+<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/assets/img/yobox.png" style="width: 100%; max-width: 400px;">
 
 _And a day of good to you, sir._
 
