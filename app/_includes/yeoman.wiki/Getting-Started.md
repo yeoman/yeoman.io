@@ -9,7 +9,7 @@ The Yeoman workflow is comprised of three core tools for improving your producti
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.
 
 <p class="toolset">
-  <img class="full" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/media/workflow.jpg">
+  <img class="full" src="https://raw.github.com/yeoman/yeoman.io/gh-pages/assets/img/workflow.jpg">
 </p>
 
 ## yo 
