@@ -8,7 +8,7 @@ The Yeoman core team meet each week to discuss what we've been working on and th
 * Angular generator roadmap: https://github.com/yeoman/generator-angular/issues/553
 * Backbone release with test scaffold support: https://twitter.com/revathskumar/status/425503260829442049 - roadmap for what's next?
 * Generator roadmaps for other official generator projects? Do we need one for webapp?
-* Anyone want to implement silent support? https://github.com/yeoman/generator/issues/472
+* Anyone want to implement silent support? https://github.com/yeoman/generator/issues/472 AI: Hemanth would like to put some time against this.
 * yeoman.io updates - iconography for 'yo', discussion around site layout. Can we try to get the designer sync'd in on these somehow or will Simon be talking to him separately? 
 * Rob has a dogfood PR open. Waiting on some final changes before we merge it in: https://github.com/yeoman/yeoman.io/pull/120 
 * AssetGraph updates
