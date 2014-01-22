@@ -13,6 +13,8 @@ The Yeoman core team meet each week to discuss what we've been working on and th
 * Rob has a dogfood PR open. Waiting on some final changes before we merge it in: https://github.com/yeoman/yeoman.io/pull/120 
 * AssetGraph updates: Peter - There are a few bugs I know people will hit once it gets a broader usage. Have some experiments on those in the pipeline. We now have permission from One.com to move the project over into its own org. We're getting design resources to create an identity for assetgraph.org. Feature wise, ng-min and autoprefixer were added. Looking into cleaning code and fixing some bugs with requirejs config in nested files.
 * Rob gave a talk on Yeoman: https://twitter.com/refreshpitt/status/425783792310034433. Video?
+* Addy: Side note: in tooling discussions I have with other folks, the need for a Yeoman/Grunt/build GUI keeps coming up. CodeKit and the others don't quite handle this problem well yet. I know of the 2-3 efforts to build a Grunt GUI but nothing concrete has been released yet and I don't feel our team have bandwidth to work on a Yeoman one right now or in the next 6 months. Peter: IF we can remove lots of config (crossing fingers for grunt-reduce) that gui should be easier. Addy: .I could use us putting together a small node-webkit wrapper around something like that, at least for the build process side of things. 
+* Revath: in backbone should we remove coffee related grunt tasks when the user didn't use --coffee option?. Addy: I think that if the path you've chosen is JS only and you haven't said you'd like to opt for anything Coffee related, we should definitely be removing coffee related tasks. Revath: I think we already received a PR on it. will check and do the needful 
 
 ## Wednesday, 15th Jan
 
