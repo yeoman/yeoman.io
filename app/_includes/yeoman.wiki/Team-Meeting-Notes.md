@@ -2,7 +2,7 @@ The Yeoman core team meet each week to discuss what we've been working on and th
 
 ## Wednesday, 22nd Jan
 
-* Status of composable generators: next round of PRs for queue priority are in review. Simon is working through some final breaking changes. Does he need help with the docs?
+* Status of composable generators: next round of PRs for queue support (grouping) are in review: https://github.com/yeoman/generator/pull/475 Simon is working through some final breaking changes. Does he need help with the docs?
 * Angular generator roadmap: https://github.com/yeoman/generator-angular/issues/553
 * Backbone release with test scaffold support: https://twitter.com/revathskumar/status/425503260829442049 - roadmap for what's next?
 * Generator roadmaps for other official generator projects? Do we need one for webapp?
