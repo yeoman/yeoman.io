@@ -2,6 +2,7 @@ The Yeoman core team meet each week to discuss what we've been working on and th
 
 ## Wednesday, 22nd Jan
 
+* Increasing number of front-end build systems being released. Should support be delegated to generators until it's clear Gulp etc. are stable enough? https://twitter.com/software_craft/status/425593101647093761
 * Status of composable generators: next round of PRs for queue support (grouping) are in review: https://github.com/yeoman/generator/pull/475 Simon is working through some final breaking changes. Does he need help with the docs?
 * Angular generator roadmap: https://github.com/yeoman/generator-angular/issues/553
 * Backbone release with test scaffold support: https://twitter.com/revathskumar/status/425503260829442049 - roadmap for what's next?
