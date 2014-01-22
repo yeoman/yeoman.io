@@ -1,5 +1,18 @@
 The Yeoman core team meet each week to discuss what we've been working on and the direction of the project. We've been using Google Docs for our meeting notes over the past year, but are experimenting with using the wiki for this. It improves openness and can be referenced more easily <3
 
+## Wednesday, 22nd Jan
+
+* Status of composable generators: next round of PRs for queue priority are in review. Simon is working through some final breaking changes. Does he need help with the docs?
+* Angular generator roadmap: https://github.com/yeoman/generator-angular/issues/553
+* Backbone release with test scaffold support: https://twitter.com/revathskumar/status/425503260829442049 - roadmap for what's next?
+* Generator roadmaps for other official generator projects? Do we need one for webapp?
+* Anyone want to implement silent support? https://github.com/yeoman/generator/issues/472
+* Simon put together a new blog post on generator cleanups: https://github.com/yeoman/yeoman.io/pull/121 reviews welcome.
+* yeoman.io updates - iconography for 'yo', discussion around site layout. Can we try to get the designer sync'd in on these somehow or will Simon be talking to him separately? 
+* Rob has a dogfood PR open. Waiting on some final changes before we merge it in: https://github.com/yeoman/yeoman.io/pull/120 
+* AssetGraph updates
+* Rob gave a talk on Yeoman: https://twitter.com/refreshpitt/status/425783792310034433. Video?
+
 ## Wednesday, 15th Jan
 
 * Composable generators: Simon started work on bringing [queues](https://github.com/yeoman/generator/pull/468) to the generator system. Next up is priority queues which enable us to run Generators inside a loop with ordered execution of methods. Feedback would be appreciated on the [composability](https://github.com/yeoman/generator/issues/433) discussion thread. AI for the team: Provide feedback to Simon before next week. Right now we look to using the queue name as the namespace in the prototype, but there may be a cleaner solution we can think of. Otherwise, queues are great. We're not passing callbacks down the process anymore. 
