@@ -9,9 +9,9 @@ The Yeoman core team meet each week to discuss what we've been working on and th
 * Backbone release with test scaffold support: https://twitter.com/revathskumar/status/425503260829442049
 * Generator roadmaps for other official generator projects? Do we need one for webapp? Yes. Eddie: even if it just says improve testing we should do it.
 * Anyone want to implement silent support? https://github.com/yeoman/generator/issues/472 AI: Hemanth would like to put some time against this.
-* yeoman.io updates - iconography for 'yo', discussion around site layout. Can we try to get the designer sync'd in on these somehow or will Simon be talking to him separately? 
+* yeoman.io updates - iconography for 'yo', discussion around site layout. Can we try to get the designer sync'd in on these somehow or will Simon be talking to him separately? We'll create a new hangout that is design centric around the site. 
 * Rob has a dogfood PR open. Waiting on some final changes before we merge it in: https://github.com/yeoman/yeoman.io/pull/120 
-* AssetGraph updates: Peter - There are a few bugs I know people will hit once it gets a broader usage. Have some experiments on those in the pipeline.
+* AssetGraph updates: Peter - There are a few bugs I know people will hit once it gets a broader usage. Have some experiments on those in the pipeline. We now have permission from One.com to move the project over into its own org. We're getting design resources to create an identity for assetgraph.org. Feature wise, ng-min and autoprefixer were added. Looking into cleaning code and fixing some bugs with requirejs config in nested files.
 * Rob gave a talk on Yeoman: https://twitter.com/refreshpitt/status/425783792310034433. Video?
 
 ## Wednesday, 15th Jan
