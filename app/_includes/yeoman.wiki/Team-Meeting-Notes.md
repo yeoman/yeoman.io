@@ -2,9 +2,9 @@ The Yeoman core team meet each week to discuss what we've been working on and th
 
 ## Wednesday, 22nd Jan
 
-* Simon put together a new blog post on generator cleanups: https://github.com/yeoman/yeoman.io/pull/121 reviews welcome.
+* Simon put together a new blog post on generator cleanups: https://github.com/yeoman/yeoman.io/pull/121 reviews welcome. Part of our effort to increase how frequently the Yeoman blog gets updated. What about the monthly digests? We seem happy to continue posting http://updates.html5rocks.com/2013/12/The-Yeoman-Monthly-Digest-2 etc on H5R. We'll post more focused content on the blog. Things like best practices for generator authorship, how to stay in sync with an upstream generator you've forked etc are topics that may be of interest.
+* Status of composable generators: next round of PRs for queue support (grouping) are in review: https://github.com/yeoman/generator/pull/475 Simon is working through some final breaking changes - still one bug left, but should be good to merge after. Does he need help with the docs? Simon says he can write the docs but needs help with the current writing a generator doc. Document quite massive. Let's open an issue and we can figure out how to break it up accordingly.
 * Increasing number of front-end build systems being released. Should support be delegated to generators until it's clear Gulp etc. are stable enough? https://twitter.com/software_craft/status/425593101647093761
-* Status of composable generators: next round of PRs for queue support (grouping) are in review: https://github.com/yeoman/generator/pull/475 Simon is working through some final breaking changes. Does he need help with the docs?
 * Angular generator roadmap: https://github.com/yeoman/generator-angular/issues/553
 * Backbone release with test scaffold support: https://twitter.com/revathskumar/status/425503260829442049 - roadmap for what's next?
 * Generator roadmaps for other official generator projects? Do we need one for webapp?
