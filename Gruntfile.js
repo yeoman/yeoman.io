@@ -284,6 +284,11 @@ module.exports = function (grunt) {
             'yeoman-horizontal.gif'
           ],
           dest: '<%= yeoman.dist %>/assets/img'
+        }, {
+          expand: true,
+          cwd: 'media/yeoman-optimized',
+          src: ['yeoman-masthead.png'],
+          dest: '<%= yeoman.dist %>/assets/img'
         }]
       }
     },
