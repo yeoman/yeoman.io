@@ -22,7 +22,7 @@
   "star-property-hack": false,
   "outline-none": false,
   "import": true,
-  "ids": true,
+  "ids": false,
   "underscore-property-hack": false,
   "rules-count": false,
   "qualified-headings": false,
@@ -31,7 +31,7 @@
   "text-indent": false,
   "unique-headings": false,
   "universal-selector": false,
-  "unqualified-attributes": true,
+  "unqualified-attributes": false,
   "vendor-prefix": false,
   "zero-units": true
 }

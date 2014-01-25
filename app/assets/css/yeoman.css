@@ -166,17 +166,17 @@ nav ul li img {
   padding-left: 12px;
   background-image: url('/assets/img/subnav-dot.png');
   background-repeat: no-repeat;
-  background-position: 0px 10px;
+  background-position: 0 10px;
 }
 
-.tools-list{ list-style-type:none; padding:0px; }
+.tools-list{ list-style-type:none; padding: 0; }
 .tools-list li {
   padding-top: 29px;
   text-align: left;
   height: 77px;
   padding-left: 80px;
   background-repeat: no-repeat;
-  vertical-align: initial;
+  vertical-align: baseline;
 }
 
 .yoyo {
@@ -311,7 +311,7 @@ pre{
 }
 
 .share{
-  padding:0px;
+  padding: 0;
 }
 .quick-links {
   text-align: center;

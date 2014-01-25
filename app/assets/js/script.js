@@ -1,40 +1,40 @@
 // Agency code.
 
-(function() {
-$( document ).ready( function() {
+(function($) {
+  $( document ).ready( function() {
 
-  //
-  $('pre code').addClass('prettyprint');
-  //
-  $( window ).bind( 'load resize', setMenuBackgroundHeight );
+    //
+    $('pre code').addClass('prettyprint');
+    //
+    $( window ).bind( 'load resize', setMenuBackgroundHeight );
 
-  prettyPrint();
+    window.prettyPrint();
 
-  setMenuBackgroundHeight();
+    setMenuBackgroundHeight();
 
-});
+  });
 
 
-var setMenuBackgroundHeight = function() {
+  var setMenuBackgroundHeight = function() {
 
-  var d = $( document ).height();
-  var w = $( window ).width();
+    var d = $( document ).height();
+    var w = $( window ).width();
 
-  if( w > 760 ) {
-    $( 'nav' ).css( { "min-height": (d) } );
-  } else {
-    $( 'nav' ).css( { "min-height": (100) } );
-  }
+    if( w > 760 ) {
+      $( 'nav' ).css( { 'min-height': (d) } );
+    } else {
+      $( 'nav' ).css( { 'min-height': (100) } );
+    }
 
-};
+  };
 
-})();
+})(window.jQuery);
 
 /*global jQuery, _, List */
-(function (win, $) {
+(function (win) {
   'use strict';
 
-  $(function () {
+  jQuery(function ($) {
     $.getJSON('https://yeoman-generator-list.herokuapp.com', function (modules) {
 
       var blocklist = [
@@ -44,11 +44,11 @@ var setMenuBackgroundHeight = function() {
         'generator-angular-js', // haven't updated package.json
       ];
 
-      var modules = _.filter(modules, function (el) {
+      modules = _.filter(modules, function (el) {
         return el !== null && el.description && blocklist.indexOf(el.name) === -1;
       }).map(function (el) {
-          el.description = el.description
-          .replace(/^(A |)Yeoman generator (for|to) /i, '');
+        el.description = el.description
+        .replace(/^(A |)Yeoman generator (for|to) /i, '');
 
         return el;
       });
@@ -86,4 +86,4 @@ var setMenuBackgroundHeight = function() {
       }
     });
   });
-})(window, jQuery);
+})(window);
