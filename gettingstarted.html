@@ -1,6 +1,62 @@
----
-layout: default
-markdown: 1
----
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Yeoman - Modern workflows for modern webapps</title><meta name=viewport content="width=device-width"><link href="http://fonts.googleapis.com/css?family=Droid+Sans|Lekton|Ubuntu+Mono:400,700" rel=stylesheet><link rel=stylesheet href=/assets/css/main.8dfe.css><script src=//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js></script><script src=/assets/js/scripts.066a.js></script></head><body class=""><nav><header><a href=/index.html><img src=/assets/img/yeoman-logo.a053.png></a></header><ul><li class=nav-divider><a href=/index.html><img src=/assets/img/icon-home.e05d.png>Home</a></li><li class=nav-divider><a href=/whyyeoman.html><img src=/assets/img/icon-why-yeoman.d00f.png>Why Yeoman?</a></li><li><a href=/gettingstarted.html><img src=/assets/img/icon-getting-started.49a8.png>Getting Started</a></li><li class=nav-sub><a href=/videos.html>Videos</a></li><li class=nav-sub><a href=/about.html>About</a></li><li class=nav-sub><a href=/deployment.html>Deployment</a></li><li class=nav-sub><a href=/support.html>Support</a></li><li><a href=/blog>Blog</a></li><li class="nav-divider nav-sub"><a href=/articles.html>Articles</a></li><li><a href=/generators.html>Generators</a></li><li class=nav-sub><a href=/community-generators.html>Community Generators</a></li><li class=nav-sub><a href=/generators.html#writing-your-first-generator>Write Your First Generator</a></li><li class=nav-sub><a href=/generators.html#get-help>Get Help</a></li><li class=nav-sub><a href=/generators.html#reference-materials>Reference Materials</a></li><li class=nav-sub><a href=/generators.html#snippets>Snippets</a></li><li class="nav-divider nav-sub"><a href=/generators.html#frequently-asked-questions>FAQ</a></li><li><a href=https://github.com/yeoman/yeoman/wiki><img src=/assets/img/icon-documentation.eec7.png>Documentation</a></li><li><a href=/faq.html><img src=/assets/img/icon-faqs.9efe.png>FAQ</a></li><li class=nav-divider><a href=https://plus.google.com/101063139999404044459/posts><img src=/assets/img/icon-google-plus.4a25.png>Google&#43;</a></li><li class=nav-divider><a href=http://twitter.com/yeoman><img src=/assets/img/icon-twitter.0fb3.png>Twitter</a></li><li><a href=http://github.com/yeoman/yeoman><img src=/assets/img/icon-github.6fa5.png>GitHub</a></li><li><a href=https://github.com/yeoman/yeoman/blob/master/contributing.md><img src=/assets/img/icon-contributing.9ac9.png>Contributing</a></li></ul></nav><div id=content><article><h1>Getting started with Yeoman</h1><p>The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:</p><ul><li><a href=https://github.com/yeoman/yo>yo</a> - the scaffolding tool from Yeoman</li><li><a href=http://bower.io>bower</a> - the package management tool</li><li><a href=http://gruntjs.com>grunt</a> - the build tool</li></ul><p>Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.</p><p class=toolset><img class=full src=https://raw.github.com/yeoman/yeoman.io/gh-pages/assets/img/workflow.jpg></p><h2>yo</h2><p>Yo is maintained by the Yeoman project and offers web application scaffolding, utilizing scaffolding templates we refer to as generators. You typically install yo and any generators you think you might use via npm.</p><h3>Installing yo and some generators</h3><p>First, you&#39;ll need to install <code>yo</code> and other required tools:</p><div class=highlight><pre><code class="text language-text" data-lang=text>npm install -g yo
+</code></pre></div><p><em>npm is the package manager for <a href="http://nodejs.org/">Node.js</a> and comes bundled with it.</em></p><p>If you are using npm 1.2.10 or above, this will also automatically install <code>grunt</code> and <code>bower</code> for you. If you&#39;re on an older version of npm, you will need to install them manually:</p><div class=highlight><pre><code class="text language-text" data-lang=text># For npm versions &lt; 1.2.10.
+npm install -g grunt-cli bower
+</code></pre></div><p><em>If you have installed Grunt globally in the past, you will need to remove it first:</em> <code>npm uninstall -g grunt</code></p><p><em>On Windows, we suggest you use an improved command line tool such as Console2 or PowerShell to improve the experience.</em></p><h3>Basic scaffolding</h3><p>To scaffold a web application, you&#39;ll need to install the <code>generator-webapp</code> generator:</p><div class=highlight><pre><code class="text language-text" data-lang=text>npm install -g generator-webapp
+</code></pre></div><p>This is the default web application generator that will scaffold out a project containing <a href=http://html5boilerplate.com>HTML5 Boilerplate</a>, <a href=http://jquery.com>jQuery</a>, <a href=http://modernizr.com>Modernizr</a>, and <a href=http://twbs.github.io/bootstrap>Bootstrap</a>. You&#39;ll have a choice during the interactive prompts to not include many of these.</p><p>Now that the generator is installed, create a directory for your new project <code>mkdir my-yo-project cd my-yo-project</code></p><p>and then run:</p><div class=highlight><pre><code class="text language-text" data-lang=text>yo webapp
+</code></pre></div><p>Each project created with yo will also pull in relevant Grunt tasks which the community feels is needed or useful for your workflow.</p><p>The webapp generator is considered the simplest possible start for a web app. We also provide some framework generators which can be used to scaffold out a project and later views, models, controllers and so on.</p><h4>Example: Scaffolding an AngularJS app</h4><p>As always, before using a new generator, you must install it from npm first:</p><div class=highlight><pre><code class="text language-text" data-lang=text>npm install -g generator-angular
+</code></pre></div><p>After that, create a new directory for your application, then run:</p><div class=highlight><pre><code class="text language-text" data-lang=text>yo angular
+</code></pre></div><p>Many generators allow you to customize your application by using flags from the initial command. As an example, with <code>generator-angular</code>, you can enter:</p><div class=highlight><pre><code class="text language-text" data-lang=text>yo angular --minsafe
+</code></pre></div><p>Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Karma unit tests.</p><h5>Scaffolding out your Angular app’s pieces</h5><p>Some generators can also be used to scaffold further pieces of your application - we call these sub-generators.</p><p>In the AngularJS framework, for example, your application is made up of a number of pieces including controllers, directives and filters. You can actually scaffold out any of these pieces (and more) during your development workflow as shown below:</p><div class=highlight><pre><code class="text language-text" data-lang=text>yo angular:controller myController
+yo angular:directive myDirective
+yo angular:filter myFilter
+yo angular:service myService
+</code></pre></div><p>Each framework generator has further documentation available noting what sub-generators it supports.</p><h3>Creating your own generators</h3><p>See <a href=https://github.com/yeoman/yeoman/wiki/Generators>Generators</a>.</p><h2>Bower</h2><p>Bower is a package manager for the web which allows you to easily manage dependencies for your projects. This includes assets such as JavaScript, images and CSS. It is maintained by Twitter and the open-source community.</p><p>Managing packages using Bower can be done using the following commands:</p><div class=highlight><pre><code class="text language-text" data-lang=text># Search for a dependency in the Bower registry.
+bower search &lt;dep&gt;
 
-{% include yeoman.wiki/Getting-Started.md %}
+# Install one or more dependencies.
+bower install &lt;dep&gt;..&lt;depN&gt;
+
+# List out the dependencies you have installed for a project.
+bower list
+
+# Update a dependency to the latest version available.
+bower update &lt;dep&gt;
+</code></pre></div><h3>Using Bower with a project scaffolded using yo</h3><p>To create a basic web app with a dependency on a jQuery plug-in:</p><div class=highlight><pre><code class="text language-text" data-lang=text># Scaffold a new application.
+yo webapp
+
+# Search Bower&#39;s registry for the plug-in we want.
+bower search jquery-pjax
+
+# Install it and save it to bower.json
+bower install jquery-pjax --save
+
+# If you&#39;re using RequireJS...
+# (be aware that currently the webapp generator does not include RequireJS and the following command only applies to generators that do)
+grunt bower
+&gt; Injects your Bower dependencies into your RequireJS configuration.
+
+# If you&#39;re not using RequireJS...
+grunt bower-install
+&gt; Injects your dependencies into your index.html file.
+</code></pre></div><p>It’s as simple as that.</p><p><em>Your chosen generator may not include the grunt tasks &quot;bower&quot; and &quot;bower-install&quot;. You can read more about how to install and use these at <a href=https://github.com/yeoman/grunt-bower-requirejs>grunt-bower-requirejs</a> and <a href=https://github.com/stephenplusplus/grunt-bower-install>grunt-bower-install</a>.</em></p><h2>Grunt</h2><p>Grunt is a task-based command-line tool for JavaScript projects. It can be used to build projects, but also exposes several commands which you will want to use in your workflow. Many of these commands utilize Grunt tasks under the hood which are maintained by the Yeoman team.</p><h3>Grunt commands</h3><div class=highlight><pre><code class="text language-text" data-lang=text># Preview an app you have generated (with Livereload).
+grunt server
+
+# Run the unit tests for an app.
+grunt test
+
+# Build an optimized, production-ready version of your app.
+grunt
+</code></pre></div><p>These commands can be used together with the yo binary for a seamless development workflow:</p><div class=highlight><pre><code class="text language-text" data-lang=text>yo webapp
+grunt server
+grunt test
+grunt
+</code></pre></div></article></div><script>// $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','UA-32956520-1'],
+    ['_setDomainName', '.yeoman.io'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");</script></body></html>
