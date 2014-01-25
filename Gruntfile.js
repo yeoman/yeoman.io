@@ -271,6 +271,20 @@ module.exports = function (grunt) {
           src: '**/*.css',
           dest: '.tmp/assets/css'
         }]
+      },
+
+      // TEMPORARY FIX UNTIL THE WIKI PAGES ARE MERGED INTO THE SITE
+      tempImgs: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/assets/img',
+          src: [
+            'yobox.png',
+            'workflow.jpg',
+            'yeoman-horizontal.gif'
+          ],
+          dest: '<%= yeoman.dist %>/assets/img'
+        }]
       }
     },
     filerev: {
@@ -337,7 +351,7 @@ module.exports = function (grunt) {
   // Define Tasks
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['default', 'connect:dist:keepalive']);
     }
 
     grunt.task.run([
@@ -378,7 +392,8 @@ module.exports = function (grunt) {
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:tempImgs' // TEMPORARY FIX UNTIL THE WIKI PAGES ARE MERGED INTO THE SITE
   ]);
 
   grunt.registerTask('deploy', [
