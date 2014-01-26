@@ -54,7 +54,7 @@
       });
 
       var allModules = _.sortBy(modules, function (el) {
-        return el.stars;
+        return el.modified;
       }).reverse();
 
       var allTpl = _.template($('#plugins-all-template').html(), {
