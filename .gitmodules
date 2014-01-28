@@ -1,3 +1,0 @@
-[submodule "app/_includes/yeoman.wiki"]
-	path = app/_includes/yeoman.wiki
-	url = git://github.com/yeoman/yeoman.wiki.git
