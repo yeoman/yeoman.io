@@ -272,25 +272,6 @@ module.exports = function (grunt) {
           dest: '.tmp/assets/css'
         }]
       },
-
-      // TEMPORARY FIX UNTIL THE WIKI PAGES ARE MERGED INTO THE SITE
-      tempImgs: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/assets/img',
-          src: [
-            'yobox.png',
-            'workflow.jpg',
-            'yeoman-horizontal.gif'
-          ],
-          dest: '<%= yeoman.dist %>/assets/img'
-        }, {
-          expand: true,
-          cwd: 'media/optimized',
-          src: ['yeoman-masthead.png'],
-          dest: '<%= yeoman.dist %>/assets/img'
-        }]
-      }
     },
     filerev: {
       options: {
@@ -397,8 +378,7 @@ module.exports = function (grunt) {
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin',
-    'copy:tempImgs' // TEMPORARY FIX UNTIL THE WIKI PAGES ARE MERGED INTO THE SITE
+    'htmlmin'
   ]);
 
   grunt.registerTask('deploy', [
