@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="en">
 {% include head.html %}
-<body class="{{page.class}}">
+<body class="{{ page.class }}">
+
   {% include sidebar.html %}
+
   <div id="content">
-    <article>
+    {% if page.type == 'list' %}
       {% if page.markdown == 1 %}
         {{ content | markdownify }}
       {% else %}
         {{ content }}
       {% endif %}
-    </article>
+    {% else %}
+      <article>
+        {% if page.markdown == 1 %}
+          {{ content | markdownify }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </article>
+    {% endif %}
   </div>
+
   {% include foot.html %}
 </body>
 </html>
