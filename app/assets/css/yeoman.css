@@ -529,6 +529,7 @@ pre{
 
   nav ul li {
     display: inline;
+    white-space: normal;
     margin-right: 10px;
   }
 
