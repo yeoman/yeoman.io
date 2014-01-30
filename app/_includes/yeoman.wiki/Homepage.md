@@ -1,7 +1,7 @@
 # THE WEB'S SCAFFOLDING TOOL FOR MODERN WEBAPPS
 
 <p class="toolset">
-<img src="https://raw.github.com/yeoman/yeoman.io/gh-pages/assets/img/yeoman-horizontal.gif" alt="Yeoman">
+<img src="/assets/img/yeoman-horizontal.gif" alt="Yeoman">
 </p>
 <p class="strapline">
 <a href="http://yeoman.io/gettingstarted.html">Get started</a> and then <a href="http://yeoman.io/community-generators.html">find a generator</a> for your webapp. Generators are available for <a href="https://github.com/yeoman/generator-angular">Angular</a>, <a href="https://github.com/yeoman/generator-backbone">Backbone</a>, <a href="https://github.com/yeoman/generator-ember">Ember</a> and over 400 other projects. Read the <a href="http://updates.html5rocks.com/tag/front-end">Yeoman Monthly Digest</a> for our latest picks.
