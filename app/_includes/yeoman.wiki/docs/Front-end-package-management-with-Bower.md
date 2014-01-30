@@ -90,4 +90,4 @@ Don't use a package.json – use a bower.json.
 
 Twitter has a pretty good track record with their open source projects thus far, and has an entire engineer pool to work on it. Another good thing we can say is that Twitter.com is moving its frontend architecture onto Bower, so it's fairly safe to say it will be maintained.
 
-<img src="http://yeoman.io/assets/img/yeoman-005.png" class="character">
+<img src="/assets/img/yeoman-005.png" class="character">
