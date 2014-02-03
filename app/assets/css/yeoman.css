@@ -238,9 +238,9 @@ article {
 }
 
 .discovery-page .forks,
-.discovery-page .modified,
+.discovery-page .updated,
 [data-sort="forks"],
-[data-sort="modified"] {
+[data-sort="updated"] {
   display: none;
 }
 
@@ -589,7 +589,7 @@ pre{
 
   .discovery-page .name,
   .discovery-page .author,
-  .discovery-page .modified {
+  .discovery-page .updated {
     min-width: 140px;
   }
 
@@ -602,9 +602,9 @@ pre{
   }
 
   .discovery-page .forks,
-  .discovery-page .modified,
+  .discovery-page .updated,
   [data-sort="forks"],
-  [data-sort="modified"] {
+  [data-sort="updated"] {
     display: table-cell;
   }
 }

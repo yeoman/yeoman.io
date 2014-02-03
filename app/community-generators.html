@@ -22,7 +22,7 @@ class: discovery-page
           <th class="sort" data-sort="name">Name</th>
           <th class="sort" data-sort="desc">Description</th>
           <th class="sort" data-sort="author">Author</th>
-          <th class="sort asc" data-sort="modified">Last modified</th>
+          <th class="sort asc" data-sort="updated">Last updated</th>
           <th class="sort asc" data-sort="stars">Stars</th>
           <th class="sort asc" data-sort="forks">Forks</th>
         </tr>
@@ -39,7 +39,7 @@ class: discovery-page
             <% } else { %>
               <td class="author"><%- el.owner %></td>
             <% } %>
-            <td class="modified"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
+            <td class="updated"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
             <td class="stars"><%- el.stars %></td>
             <td class="forks"><%- el.forks %></td>
           </tr>

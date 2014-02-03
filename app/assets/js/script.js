@@ -70,17 +70,17 @@
           'name',
           'desc',
           'author',
-          'modified',
+          'updated',
           'stars',
           'forks'
         ]
       });
 
       if (list.listContainer) {
-        $('#plugins-all .modified time').timeago();
+        $('#plugins-all .updated time').timeago();
 
         list.on('updated', function () {
-          $('#plugins-all .modified time').timeago();
+          $('#plugins-all .updated time').timeago();
           // If empty show not found message and hide the table head.
           $('.table thead').toggle(list.matchingItems.length !== 0);
           $('#search-notfound').toggle(list.matchingItems.length === 0);
