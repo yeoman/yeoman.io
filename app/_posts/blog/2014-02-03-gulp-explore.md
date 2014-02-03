@@ -5,7 +5,7 @@ title: Exploring A Generator For Gulp.js
 
 <img src="http://i.imgur.com/TXdznhb.png" style="width:150px"/>
 
-Work has begun on our [first](https://github.com/yeoman/generator-gulp-webapp) official Yeoman generator for [Gulp.js](http://gulp.js). 
+Work has begun on our [first](https://github.com/yeoman/generator-gulp-webapp) official Yeoman generator for [Gulp.js](http://gulpjs.com). 
 
 Gulp is a [streaming](https://github.com/substack/stream-handbook) build system which focuses on code over configuration. By harnessing the power of Node streams, it enables faster build times by avoiding the need to write temporary files to disk. You simply put in a file and get a file out. 
 
