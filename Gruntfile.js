@@ -34,7 +34,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
           '!<%= yeoman.app %>/_bower_components/**/*'
         ],
-        tasks: ['jekyll:server']
+        tasks: ['jekyll:serve']
       },
       livereload: {
         options: {
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
         }
       },
-      server: {
+      serve: {
         options: {
           config: '_config.yml',
           dest: '.jekyll'
@@ -325,7 +325,7 @@ module.exports = function (grunt) {
       server: [
         'sass:server',
         'copy:stageCss',
-        'jekyll:server'
+        'jekyll:serve'
       ],
       dist: [
         'sass:dist',
