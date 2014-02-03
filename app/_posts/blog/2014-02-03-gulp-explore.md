@@ -3,7 +3,7 @@ layout: post
 title: Exploring A Generator For Gulp.js
 ---
 
-<img src="../assets/img/gulp-logo.png" style="width:150px"/>
+<img src="http://i.imgur.com/TXdznhb.png" style="width:150px"/>
 
 Work has begun on our [first](https://github.com/yeoman/generator-gulp-webapp) official Yeoman generator for [Gulp.js](http://gulp.js). 
 
