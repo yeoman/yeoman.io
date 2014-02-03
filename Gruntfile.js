@@ -170,6 +170,13 @@ module.exports = function (grunt) {
           dest: '.jekyll'
         }
       },
+      draft: {
+        options: {
+          config: '_config.yml',
+          dest: '.jekyll',
+          drafts: true
+        }
+      },
       check: {
         options: {
           doctor: true
@@ -327,6 +334,11 @@ module.exports = function (grunt) {
         'copy:stageCss',
         'jekyll:serve'
       ],
+      draft: [
+        'sass:server',
+        'copy:stageCss',
+        'jekyll:draft'
+      ],
       dist: [
         'sass:dist',
         'copy:dist'
@@ -340,9 +352,11 @@ module.exports = function (grunt) {
       return grunt.task.run(['default', 'connect:dist:keepalive']);
     }
 
+    target = target || 'server';
+
     grunt.task.run([
       'clean:server',
-      'concurrent:server',
+      'concurrent:' + target,
       'autoprefixer:server',
       'connect:livereload',
       'watch'
