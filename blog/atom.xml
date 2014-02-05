@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>Yeoman Blog Feed</title>
+  <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-02-05T13:35:05-08:00</updated>
+  <updated>2014-02-05T13:38:30-08:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
