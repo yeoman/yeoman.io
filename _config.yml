@@ -8,6 +8,9 @@ description: Yeoman website
 author:
   name: Yeoman.io
 
+url : http://yeoman.io
+atom_path : /blog/atom.xml
+
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
