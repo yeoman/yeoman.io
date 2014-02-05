@@ -514,6 +514,20 @@ pre{
 .icon-briefcase {                       background-position: -432px -144px; }
 .icon-fullscreen {                       background-position: -456px -144px; }
 
+.teamPage #content ul {
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.teamPage #content ul li {
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding: 10px;
+  width: 25%;
+}
+
 @media (min-width: 480px) and (max-width:760px) {
 
   nav header {
