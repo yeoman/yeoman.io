@@ -5,6 +5,10 @@
 
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Lekton|Ubuntu+Mono:400,700" rel="stylesheet">
 
+  {% if page.category == 'blog' %}
+    <link href="http://yeoman.io/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Yeoman Blog Atom Feed">
+  {% endif %}
+
   <!-- build:css({app,.tmp}) /assets/css/main.css -->
   <link href="/assets/css/normalize.css" rel="stylesheet">
   <link href="/assets/css/yeoman.css" rel="stylesheet">
