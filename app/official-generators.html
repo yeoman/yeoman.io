@@ -1,27 +1,24 @@
 ---
 layout: default
 markdown: 0
-class: discovery-page community-generators
+class: discovery-page official-generators
 ---
-  <h1>Yeoman Community Generators</h1>
+  <h1>Yeoman Official Generators</h1>
+  <p style="text-align:center"><small>The officially maintained (by the Yeoman team) generators. Use these as a base to create your own generators or to create your own project.</small></p>
   <section class="main">
-    <p>These are the community made generators that are pulled from the npm registry. Your generator must have the "yeoman-generator" keyword and a repo description to be listed. To view the official Yeoman generators, please visit the <a href="/official-generators.html">Official Generators page</a>.</p>
     <div id="loading">
       <p>Loading generators...</p>
     </div>
     <div id="plugins-all"></div>
     <div class="message" id="search-notfound">No matching generator found. Try something else.</div>
   </section>
+
   <script type="text/template" id="plugins-all-template">
     <table class="table">
-      <caption>
-        <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= modules.length %> generators..." autofocus>
-      </caption>
       <thead>
         <tr>
           <th class="sort" data-sort="name">Name</th>
           <th class="sort" data-sort="desc">Description</th>
-          <th class="sort" data-sort="author">Author</th>
           <th class="sort asc" data-sort="updated">Last updated</th>
           <th class="sort asc" data-sort="stars">Stars</th>
           <th class="sort asc" data-sort="forks">Forks</th>
@@ -34,11 +31,6 @@ class: discovery-page community-generators
           <tr>
             <td class="name"><a href="<%- el.website %>"><%- name %></a></td>
             <td class="desc"><%- el.description %><div class="hidden"><%- keywords %></div></td>
-            <% if (el.ownerWebsite) { %>
-              <td class="author"><a href="<%- el.ownerWebsite %>"><%- el.owner %></a></td>
-            <% } else { %>
-              <td class="author"><%- el.owner %></td>
-            <% } %>
             <td class="updated"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
             <td class="stars"><%- el.stars %></td>
             <td class="forks"><%- el.forks %></td>
@@ -46,4 +38,4 @@ class: discovery-page community-generators
         <% }); %>
       </tbody>
     </table>
-  </script>​
+  </script>
