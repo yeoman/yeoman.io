@@ -371,6 +371,28 @@ pre{
 .sort {
   text-align: left;
 }
+th.sort:before {
+  color: #999;
+  content: '\21C5';
+  display: inline-block;
+  font-size: 10px;
+  opacity: .6;
+  text-align: center;
+  vertical-align: middle;
+  width: 10px;
+}
+th.sort.asc:before{
+  color: #333;
+  content: '\2193';
+  opacity: 1;
+  text-align: left;
+}
+th.sort.desc:before{
+  color: #333;
+  content: '\2191';
+  opacity: 1;
+  text-align: right;
+}
 
 .icon-white {                       background-image: url("/assets/img/glyphicons-halflings-white.png"); }
 .icon-glass {                       background-position: 0      0; }
