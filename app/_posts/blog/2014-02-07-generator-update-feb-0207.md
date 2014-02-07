@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: Updates to some of our generators
 ---
 

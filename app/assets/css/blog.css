@@ -36,3 +36,12 @@ h1.banner span::after {
   padding-bottom: 20px;
   padding-top: 15px;
 }
+
+.blog a.active {
+  font-size: 14px;
+  font-weight: bold;
+}
+.blog a.active:before {
+  content: "\25B8";
+  margin-right: 3px;
+}
