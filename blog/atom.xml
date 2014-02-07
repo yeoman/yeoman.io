@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-02-07T13:10:15+00:00</updated>
+  <updated>2014-02-07T12:20:33-08:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>Updates to some of our generators</title>
     <link href="http://yeoman.io//blog/generator-update-feb-0207.html"/>
-    <updated>2014-02-07T00:00:00+00:00</updated>
+    <updated>2014-02-07T00:00:00-08:00</updated>
     <id>http://yeoman.io/blog/generator-update-feb-0207</id>
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/hSEppjX.gif&quot;/&gt;&lt;/p&gt;
 
@@ -111,7 +111,7 @@ yo bootstrap
   <entry>
     <title>Exploring A Generator For Gulp.js</title>
     <link href="http://yeoman.io//blog/gulp-explore.html"/>
-    <updated>2014-02-03T00:00:00+00:00</updated>
+    <updated>2014-02-03T00:00:00-08:00</updated>
     <id>http://yeoman.io/blog/gulp-explore</id>
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/TXdznhb.png&quot; style=&quot;width:150px&quot;/&gt;&lt;/p&gt;
 
@@ -223,7 +223,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Generators New Year Cleanup!</title>
     <link href="http://yeoman.io//blog/cleanup.html"/>
-    <updated>2014-01-21T00:00:00+00:00</updated>
+    <updated>2014-01-21T00:00:00-08:00</updated>
     <id>http://yeoman.io/blog/cleanup</id>
     <content type="html">&lt;p&gt;A lots of changes and new features have been introduced in the Generator System (&lt;code&gt;npm search yeoman-generator&lt;/code&gt;) lately. If you&amp;#39;re not watching the &lt;a href=&quot;https://github.com/yeoman/generator&quot;&gt;yeoman/generator&lt;/a&gt;, maybe you&amp;#39;ve been let down on the latest changes. Fear not, we &lt;a href=&quot;https://github.com/yeoman/generator/releases&quot;&gt;documented every recent release in our changelog&lt;/a&gt;!&lt;/p&gt;
 
@@ -299,7 +299,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Release the Kraken! - Announcing Yeoman 1.0</title>
     <link href="http://yeoman.io//blog/hello-1.0.html"/>
-    <updated>2013-08-23T00:00:00+01:00</updated>
+    <updated>2013-08-23T00:00:00-07:00</updated>
     <id>http://yeoman.io/blog/hello-1.0</id>
     <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0! &lt;img alt=&quot;The Yeoman 1.0 Team&quot; src=&quot;http://i.imgur.com/ckKa3jC.jpg&quot;&gt;&lt;/p&gt;
 
