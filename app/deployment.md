@@ -1,6 +1,13 @@
+---
+layout: default
+markdown: 1
+---
+
+# Deploying a Yeoman Site
+
 Running `grunt build` generates an optimized version of your application in the `dist` directory. There are multiple ways to version and deploy this code to production.
 
-### Grunt-build-control task
+## Grunt-build-control task
 
 [Grunt build control](https://github.com/robwierzbowski/grunt-build-control) has been developed specifically to deploy Yeoman applications. It helps you version and deploy built code automatically with a grunt task. Configuration options include:
 
@@ -11,12 +18,12 @@ Running `grunt build` generates an optimized version of your application in the 
 
 Build control fetches prior to every commit and in general does a pretty good job of keeping code well versioned when with multiple contributors are deploying independently. It maintains full revision history as long as no user force pushes. Complete documentation is available at the project's [GitHub page](https://github.com/robwierzbowski/grunt-build-control).
 
-### Git subtree command
+## Git subtree command
 
 You can also maintain the source and built code on the same branch, and deploy only the `dist` directory with the [`git subtree`](https://github.com/apenwarr/git-subtree) command.
 
 1. Remove the `dist` directory from the `.gitignore` file. Yeoman projects ignore it by default.
-2. Add the `dist` directory to your repository:  
+2. Add the `dist` directory to your repository:
 
         git add dist && git commit -m "Initial dist subtree commit"
 
@@ -29,11 +36,11 @@ You can also maintain the source and built code on the same branch, and deploy o
 
         git subtree push --prefix dist origin gh-pages
 
-### Git-directory-deploy script
+## Git-directory-deploy script
 
 [Git directory deploy](https://github.com/X1011/git-directory-deploy) is a less-automated script that works on similar principles to grunt build control.
 
-### Further reading
+## Further reading
 
 - [Git Subtree docs](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
 - [Yeoman Build process docs](https://github.com/yeoman/yeoman/wiki/yeoman-build)

@@ -4,7 +4,7 @@ markdown: 1
 class: teamPage
 ---
 
-#About
+# About
 
 If you're new to Yeoman and have been invited to contribute to the codebase or participate in discussions, welcome to the project!
 

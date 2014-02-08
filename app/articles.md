@@ -3,7 +3,7 @@ layout: default
 markdown: 1
 ---
 
-## Articles And Tutorials
+# Articles And Tutorials
 
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
