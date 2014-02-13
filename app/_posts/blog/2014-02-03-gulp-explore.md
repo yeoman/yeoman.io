@@ -3,11 +3,11 @@ layout: blog
 title: Exploring A Generator For Gulp.js
 ---
 
+Work has begun on our [first](https://github.com/yeoman/generator-gulp-webapp) official Yeoman generator for [Gulp.js](http://gulpjs.com).
+
 <img src="http://i.imgur.com/TXdznhb.png" style="width:150px"/>
 
-Work has begun on our [first](https://github.com/yeoman/generator-gulp-webapp) official Yeoman generator for [Gulp.js](http://gulpjs.com). 
-
-Gulp is a [streaming](https://github.com/substack/stream-handbook) build system which focuses on code over configuration. By harnessing the power of Node streams, it enables faster build times by avoiding the need to write temporary files to disk. You simply put in a file and get a file out. 
+Gulp is a [streaming](https://github.com/substack/stream-handbook) build system which focuses on code over configuration. By harnessing the power of Node streams, it enables faster build times by avoiding the need to write temporary files to disk. You simply put in a file and get a file out.
 
 The Yeoman team don't have any plans on dropping our support for [Grunt](http://gruntjs.com) at all. On the contrary, we feel that both Grunt and Gulp can [happily co-exist](https://github.com/yeoman/yeoman/issues/1232) and hope to support both communities with some automation tooling as best we can.
 
