@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-02-07T12:20:33-08:00</updated>
+  <updated>2014-02-13T12:45:11-08:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -12,13 +12,60 @@
 
   
   <entry>
+    <title>What's new in the Backbone generator</title>
+    <link href="http://yeoman.io//blog/whats-new-in-backbone-generator.html"/>
+    <updated>2014-02-11T00:00:00-08:00</updated>
+    <id>http://yeoman.io/blog/whats-new-in-backbone-generator</id>
+    <content type="html">&lt;p&gt;The Backbone generator has had a few major updates recently and we wanted to share these changes with the community. The theme of the changes is to make the generator more flexible. There is also some updates related to testing and styling we wanted to share.&lt;/p&gt;
+
+&lt;h2&gt;Custom app path&lt;/h2&gt;
+
+&lt;p&gt;Before, the scaffold generated the project&amp;#39;s application files into the app folder. Now you can customize it using the &lt;code&gt;--appPath&lt;/code&gt; option.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh language-sh&quot; data-lang=&quot;sh&quot;&gt;yo backbone --appPath&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will create a folder named &lt;code&gt;public&lt;/code&gt; instead of &lt;code&gt;app&lt;/code&gt;. It will then put the scaffolded code into that folder.  When you use a sub-generator, like &lt;code&gt;backbone:model&lt;/code&gt;, the scaffold will use the &lt;code&gt;public&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/backbone-app-path.png&quot; alt=&quot;app-path option&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;Generating &lt;a href=&quot;http://visionmedia.github.io/mocha/&quot;&gt;Mocha&lt;/a&gt; tests&lt;/h2&gt;
+
+&lt;p&gt;We have written a new generator named &lt;a href=&quot;https://github.com/revathskumar/generator-backbone-mocha&quot;&gt;generator-backbone-mocha&lt;/a&gt;. This will generate Mocha tests for your Backbone app. When you create new model with &lt;code&gt;yo backbone:model todo&lt;/code&gt;, this will create &lt;code&gt;todo.spec.js&lt;/code&gt; in your &lt;code&gt;test&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/yo-backbone-mocha.png&quot; alt=&quot;Backbone mocha&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;You can choose BDD/TDD when generating the new Backbone app with the &lt;code&gt;--ui&lt;/code&gt; option.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh language-sh&quot; data-lang=&quot;sh&quot;&gt;yo backbone --ui&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tdd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;By default the generator is setup to use BDD with Mocha.&lt;/p&gt;
+
+&lt;h2&gt;Added CoffeeScript support for RequireJS&lt;/h2&gt;
+
+&lt;p&gt;Another great addition to the Backbone generator (version 2.0), is CoffeeScript support for RequireJS. A lot of people have requested this and we are happy to announce support for it. Thanks to &lt;a href=&quot;https://github.com/stephanebachelier&quot;&gt;@stephanebachelier&lt;/a&gt; for the effort in getting this in.&lt;/p&gt;
+
+&lt;h2&gt;Bootstrap 3.0&lt;/h2&gt;
+
+&lt;p&gt;The last change we want to announce relates to Bootstrap. We have upgraded to Bootstrap 3.0! Now by default, Yeoman will install Bootstrap 3.0 when you generate a new application. Don&amp;#39;t fear though, projects can include Bootstrap 2.0 still. After project  generation, edit the bower.json file and change the version of (sass-)bootstrap required.&lt;/p&gt;
+
+&lt;h2&gt;Other minor updates&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dropped support for node 0.8&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grunt server&lt;/code&gt; task is now deprecated. &lt;code&gt;grunt serve&lt;/code&gt; has replaced it. For more information, see &lt;a href=&quot;https://github.com/yeoman/yeoman/issues/1183&quot;&gt;this issue explaining it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improved scaffolds&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We hope you like the new additions and enhancements we have made on the Backbone generator. We are looking for your feedback on keeping this project awesome.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>Updates to some of our generators</title>
     <link href="http://yeoman.io//blog/generator-update-feb-0207.html"/>
     <updated>2014-02-07T00:00:00-08:00</updated>
     <id>http://yeoman.io/blog/generator-update-feb-0207</id>
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/hSEppjX.gif&quot;/&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.&lt;/p&gt;
 
-&lt;p&gt;Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/hSEppjX.gif&quot;&gt;&lt;/p&gt;
 
 &lt;h2&gt;Scaffold a Gruntfile&lt;/h2&gt;
 
@@ -113,11 +160,11 @@ yo bootstrap
     <link href="http://yeoman.io//blog/gulp-explore.html"/>
     <updated>2014-02-03T00:00:00-08:00</updated>
     <id>http://yeoman.io/blog/gulp-explore</id>
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/TXdznhb.png&quot; style=&quot;width:150px&quot;/&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Work has begun on our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;first&lt;/a&gt; official Yeoman generator for &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp.js&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Work has begun on our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;first&lt;/a&gt; official Yeoman generator for &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp.js&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/TXdznhb.png&quot; style=&quot;width:150px&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt;Gulp is a &lt;a href=&quot;https://github.com/substack/stream-handbook&quot;&gt;streaming&lt;/a&gt; build system which focuses on code over configuration. By harnessing the power of Node streams, it enables faster build times by avoiding the need to write temporary files to disk. You simply put in a file and get a file out. &lt;/p&gt;
+&lt;p&gt;Gulp is a &lt;a href=&quot;https://github.com/substack/stream-handbook&quot;&gt;streaming&lt;/a&gt; build system which focuses on code over configuration. By harnessing the power of Node streams, it enables faster build times by avoiding the need to write temporary files to disk. You simply put in a file and get a file out.&lt;/p&gt;
 
 &lt;p&gt;The Yeoman team don&amp;#39;t have any plans on dropping our support for &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; at all. On the contrary, we feel that both Grunt and Gulp can &lt;a href=&quot;https://github.com/yeoman/yeoman/issues/1232&quot;&gt;happily co-exist&lt;/a&gt; and hope to support both communities with some automation tooling as best we can.&lt;/p&gt;
 
@@ -301,7 +348,9 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
     <link href="http://yeoman.io//blog/hello-1.0.html"/>
     <updated>2013-08-23T00:00:00-07:00</updated>
     <id>http://yeoman.io/blog/hello-1.0</id>
-    <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0! &lt;img alt=&quot;The Yeoman 1.0 Team&quot; src=&quot;http://i.imgur.com/ckKa3jC.jpg&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;The Yeoman 1.0 Team&quot; src=&quot;http://i.imgur.com/ckKa3jC.jpg&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;For those who haven&amp;#39;t tried Yeoman yet, or have been waiting for 1.0, just tell your terminal:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g yo
