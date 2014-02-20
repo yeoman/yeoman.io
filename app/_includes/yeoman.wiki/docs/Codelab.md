@@ -1,10 +1,19 @@
-# **CodeLab: Write A Web App With Yeoman**
+# Allo! Allo! Let's Scaffold A Web App
 
 <style>
+body { background: white; }
 img { max-width: 100%;}
 .mast-holder{ width:100%; text-align:center;}
 .mast { margin:0 auto; width:350px;}
+.note { background: #f2dede; padding: 15px; }
+.social { margin: 0 auto; }
 </style>
+
+<div class="social">
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title }}">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
+</div>
 
 <div class="mast-holder">
 	<img src="/assets/img/yeoman-008.png" class="mast"/>
@@ -13,7 +22,7 @@ img { max-width: 100%;}
 </div>
 
 
-In this code lab, you build a Todo application using Yeoman and AngularJS. The sample app provides a brief look at some Yeoman, Grunt and Bower features. This code lab assumes that you have some programming experience.
+In this code lab, you build a fully functional application using [Yeoman](http://yeoman.io) and [AngularJS](http://angularjs.org). The sample app provides a brief look at some Yeoman, [Grunt](http://gruntjs.com) and [Bower](http://bower.io) features. This code lab assumes that you have some programming experience.
 
 ## Meet Yeoman
 
@@ -41,18 +50,30 @@ Let’s dive right into building the below Todo app from scratch.
 
 ![](/assets/img/codelab/image_2.png)
 
-**Source code for the final project files**
 
-For your reference, the final sources for this exercise can be found over at [http://bit.ly/yoangular](http://bit.ly/yoangular) in the "angular-localStorage-todos" folder. Remember that you need to run `npm install` followed by `bower install` in the directory before you will be able to test the application out.
+<div class="note">
 
-If that sounds like too much work, here are some direct links to the files that we will be editing in the ‘angular-localStorage-todos/app’ folder. You can use them as a guide in case you get stuck. :) 
+<p><strong>Source code for the final project files</strong></p>
 
-* [index.html](https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/index.html)
-* [views/main.html](https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/views/main.html)
-* [scripts/app.js](https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/scripts/app.js)
-* [scripts/controllers/main.js](https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/scripts/controllers/main.js)
+<p>For your reference, the final sources for this exercise can be found over at <a href="http://bit.ly/yoangular">http://bit.ly/yoangular</a> in the &quot;angular-localStorage-todos&quot; folder. Remember that you need to run <code>npm install</code> followed by <code>bower install</code> in the directory before you will be able to test the application out.</p>
+
+<p>If that sounds like too much work, here are some direct links to the files that we will be editing in the ‘angular-localStorage-todos/app’ folder. You can use them as a guide in case you get stuck. :) </p>
+
+<ul>
+<li><a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/index.html">index.html</a></li>
+<li><a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/views/main.html">views/main.html</a></li>
+<li><a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/scripts/app.js">scripts/app.js</a></li>
+<li><a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/scripts/controllers/main.js">scripts/controllers/main.js</a></li>
+</ul>
+
+</div>
 
 # Getting set up
+
+
+<div class="mast-holder">
+  <img src="/assets/img/yeoman-004.png" class="mast"/>
+</div>
 
 Before installing Yeoman, you will need the following:
 
@@ -87,14 +108,17 @@ Running the above should output four separate version numbers:
 
 * Grunt CLI -- the command-line interface for Grunt
 
-***Versions of Yeoman, Bower, and Grunt that this codelab works with***
 
-Technology changes quickly! This tutorial has been tested with Yeoman 1.1.2, Bower 1.2.8, grunt-cli v0.1.11, and grunt v0.4.2.
+<div class="note">
 
-If you are running into issues with a newer version, we would like to hear about it. Please feel free to open up an issue on our tracker.
+<p><strong><em>Versions of Yeoman, Bower, and Grunt that this codelab works with</em></strong></p>
 
+<p>Technology changes quickly! This tutorial has been tested with Yeoman 1.1.2, Bower 1.2.8, grunt-cli v0.1.11, and grunt v0.4.2.</p>
 
-![](/assets/img/codelab/image_3.png)
+<p>If you are running into issues with a newer version, we would like to hear about it. Please feel free to open up an issue on our tracker.</p>
+
+<p><img src="/assets/img/codelab/image_3.png" alt=""></p>
+</div>
 
 ## Installing Yeoman generators
 
@@ -126,18 +150,17 @@ See below for a preview:
 
 ![](/assets/img/codelab/image_6.png)
 
-**Versions of generator-angular that this codelab works with**
+<div class="note">
+<p><strong>Versions of generator-angular that this codelab works with</strong></p>
 
-Technology changes quickly! This tutorial has been tested with generator-angular 0.7.1. You can check which version you are using by running "yo" at the command-line after you have installed Yeoman and the Angular generator.
+<p>Technology changes quickly! This tutorial has been tested with generator-angular 0.7.1. You can check which version you are using by running &quot;yo&quot; at the command-line after you have installed Yeoman and the Angular generator.</p>
 
-If you are running into issues with a newer version, we would like to hear about it. Please feel free to open up an issue on our tracker.
+<p>If you are running into issues with a newer version, we would like to hear about it. Please feel free to open up an issue on our tracker.</p>
 
-Otherwise, you can always install the same version of the generator we are using by running this command instead:
-
-```js
-$ npm install -g generator-angular@0.7.1
-```
-
+<p>Otherwise, you can always install the same version of the generator we are using by running this command instead:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">generator</span><span class="o">-</span><span class="nx">angular</span><span class="err">@</span><span class="mf">0.7</span><span class="p">.</span><span class="mi">1</span>
+</code></pre></div>
+</div>
 
 ## Use a generator to scaffold out your app
 
@@ -190,19 +213,12 @@ Open up your "mytodo" directory to take a look at what was actually scaffolded. 
 * **app**: a parent directory for our web application
 
     * **index.html**: the base html file for our Angular app
-
     * **404.html**, **favicon.ico**, and **robots.txt**: commonly used web files so you don’t have to create them yourself
-
     * **bower_components**: a home for our JavaScript/web dependencies, installed by Bower
-
     * **scripts**: our own JS files
-
         * **app.js**: our main application code
-
         * **controllers**: our Angular controllers
-
     * **styles**: our CSS files
-
     * **views**: a place for our Angular templates
 
 * **Gruntfile.js**, **package.json,** and **node_modules**: configuration and dependencies required by our Grunt tasks
@@ -435,6 +451,10 @@ You can now hit the ‘X’ button to remove the item from the Todo list. Fantas
 One thing you might notice is that although we’re able to add and remove items, we don’t have a way to persist them. Any time we refresh the page our todo items are reset back to the defaults in our todos array hardcoding in main.js. Don’t worry, we’ll fix this later after we learn more about installing packages with Bower.
 
 # Using Bower to install packages 
+
+<div class="mast-holder">
+  <img src="/assets/img/yeoman-005.png" class="mast"/>
+</div>
 
 Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install [AngularUI](http://angular-ui.github.io/), a companion suite to AngularJS, which has a "sortable" directive available. 
 
@@ -893,6 +913,10 @@ Writing unit tests make it easier to catch bugs as your app gets bigger and when
 
 ## Building files optimized for production
 
+<div class="mast-holder">
+  <img src="/assets/img/yeoman-009.png" class="mast"/>
+</div>
+
 Ready to show your beautiful todo app to the world? Let’s try to create a production version of our application. We’ll want to lint our code, run our tests, concatenate and minify our scripts and styles to save on those network requests, optimize images if we were using any, compile the output of any preprocessors we’re using and in general make our application really lean. Phew!
 
 Amazingly we can achieve all of this just by running:
@@ -928,6 +952,10 @@ For example, the Angular generator also supports creating new views, directives 
 To find out all the Yeoman commands for the Angular generator take a look at the [generator readme](https://github.com/yeoman/generator-angular#readme).
 
 # Where to go next
+
+<div class="mast-holder">
+  <img src="/assets/img/yeoman-003.png" class="mast"/>
+</div>
 
 * **Grunt** ([gruntjs.com](http://gruntjs.com)) has tasks for almost anything you might like to do with your app, whether it’s [compiling CoffeeScript](https://github.com/gruntjs/grunt-contrib-compass) or [hooking up your app to custom middleware](https://github.com/gruntjs/grunt-contrib-connect) like PHP or Express. Your Yeoman app already has a Gruntfile.js already set up for you so read up on how to configure more Grunt tasks [here](http://gruntjs.com/configuring-tasks).
 
