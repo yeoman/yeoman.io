@@ -10,7 +10,7 @@ img { max-width: 100%;}
 </style>
 
 <div class="social">
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://yeoman.io/codelab.html" data-text="Let's Scaffold A Web App With Yeoman!" data-via="addyosmani">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://yeoman.io/codelab.html" data-text="Let's Scaffold A Web App With Yeoman!">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
 </div>
