@@ -285,7 +285,7 @@ Then modify our view (views/main.html) to output our todos items as text input f
 <div class="container">
   <h2>My todos</h2>
   <p class="form-group” ng-repeat="todo in todos">
-    <input type="text" ng-model="todo">
+    <input type="text" ng-model="todo" class="form-control">
   </p>
 </div>
 
