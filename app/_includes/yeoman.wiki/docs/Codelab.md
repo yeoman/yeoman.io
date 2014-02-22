@@ -2,9 +2,9 @@
 
 <style>
 body { background: white; }
-img { max-width: 100%;}
-.mast-holder{ width:100%; text-align:center;}
-.mast { margin:0 auto; width:350px;}
+img { max-width: 100%; }
+.mast-holder{ width:100%; text-align:center; }
+.mast { margin:0 auto; width:350px; }
 .note { background: #f2dede; padding: 15px; }
 .social { margin: 0 auto; }
 </style>
