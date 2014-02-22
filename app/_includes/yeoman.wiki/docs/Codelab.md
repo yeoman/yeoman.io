@@ -515,7 +515,7 @@ Second, add the AngularUI and jQueryUI JavaScript. In the scripts section at the
 ```
   
 
-Note: Make sure to place the reference to angular-ui.js outside of the <!-- bower:js → block as this will otherwise not build correctly due to an issue with the AngularUI Bower package setup.
+Note: Make sure to place the reference to angular-ui.js outside of the `<!-- bower:js -->` block as this will otherwise not build correctly due to an issue with the AngularUI Bower package setup.
 
 Third, load the AngularUI module into our application by updating our Angular module definition in scripts/app.js. Currently it looks like this:
 
