@@ -190,7 +190,7 @@ $ yo angular
 
 Some generators will also provide optional settings to customize your app with common developer libraries and speed up the initial setup of your development environment. 
 
-The AngularJS generator provides options to include use [Sass](http://sass-lang.com/) (with Compass) and/or  [Twitter Bootstrap](http://getbootstrap.com/). Enter ‘n’ and ‘y’ respectively to these options.
+The AngularJS generator provides options to include use [Sass](http://sass-lang.com/) (with Compass) and/or [Bootstrap](http://getbootstrap.com/). Enter ‘n’ and ‘y’ respectively to these options.
 
 ![](/assets/img/codelab/image_8.png)
 
