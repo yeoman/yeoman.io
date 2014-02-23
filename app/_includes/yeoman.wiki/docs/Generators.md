@@ -649,7 +649,7 @@ the form of an array of objects, each of which specify:
 var prompts = [{
   type: 'confirm',
   name: 'compassBootstrap',
-  message: 'Would you like to include Twitter Bootstrap for Sass?',
+  message: 'Would you like to include Bootstrap for Sass?',
   default: true
 }, {
   type: 'confirm',
@@ -726,7 +726,7 @@ var indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'index.html')
 ```javascript
 Generator.prototype.writeIndex = function writeIndex() {
   // prepare default content text
-  var defaults = ['HTML5 Boilerplate', 'Twitter Bootstrap'];
+  var defaults = ['HTML5 Boilerplate', 'Bootstrap'];
 
   var contentText = [
     '        <div class="container">',

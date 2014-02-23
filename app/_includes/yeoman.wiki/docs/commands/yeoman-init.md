@@ -8,7 +8,7 @@ The default `init` template is based on:
 
 * HTML5 Boilerplate for the main base
 * Compass Twitter Bootstrap for the SASS files as the CSS files are authored in SASS
-* Twitter Bootstrap for the optional list of JavaScript plugins (optional)
+* Bootstrap for the optional list of JavaScript plugins (optional)
 * RequireJS for AMD module and script loading support (optional)
 * RequireHM for experimental EcmaScript 6 module syntax support on top of RequireJS (optional)
 
@@ -30,7 +30,7 @@ Out of the box I include HTML5 Boilerplate, jQuery and Modernizr.
 .. Invoke app ..
 
 Please answer the following:
-[?] Would you like to include Twitter Bootstrap for Compass? (Y/n)
+[?] Would you like to include Bootstrap for Compass? (Y/n)
 ```
 
 ### custom generators
