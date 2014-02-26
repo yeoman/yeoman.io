@@ -35,7 +35,7 @@ _And a day of good to you, sir._
 
 When developing a generator, having the option to "do this else that" based on the response of the user creates a whole new world of possibilities. You can conditionally fetch dependencies, create files, tests, configuration files for various tools (EditorConfig, git, JSHint), and anything else you dream up.
 
-Working with the terminal, worrying about spawning concurrent processes, creating race conditions, and other concerns you may have about the Node enviroment have been taken care of. Even for the unfamiliar, it's super easy to get started writing your own generator.
+Working with the terminal, worrying about spawning concurrent processes, creating race conditions, and other concerns you may have about the Node environment have been taken care of. Even for the unfamiliar, it's super easy to get started writing your own generator.
 
 So, let's do that.
 
@@ -143,7 +143,7 @@ Switch over to a new tab, create a new folder, and see what you get!
 Would you like to enable this option? (Y/n)
 ```
 
-There he is again with his silly questions. Play around for a bit, then come back when you're ready for a walkthrough of what's happening behind the scenes.
+There he is again with his silly questions. Play around for a bit, and then come back when you're ready for a walkthrough of what's happening behind the scenes.
 
 ...
 
@@ -173,7 +173,7 @@ var prompts = [{
 }];
 ```
 
-Next, you'll see something you'll start seeing a lot more of-- magic. Helper methods given to you from the Yeoman Generator itself.
+Next you'll see something you'll start seeing a lot more of-- magic. Helper methods given to you by the Yeoman Generator itself.
 
 ```js
 this.prompt(prompts, function (props) {
@@ -183,7 +183,7 @@ this.prompt(prompts, function (props) {
 }.bind(this));
 ```
 
-`this.prompt` ate up our prompts array for it's first argument, then a callback that will execute after all of the responses have come in.
+`this.prompt` ate up our prompts array for its first argument, then a callback that will execute after all of the responses have come in.
 
 Let's switch this function up to make sense for our application.
 
@@ -199,7 +199,7 @@ this.prompt(prompts, function (props) {
 
 Above, we assigned the user's input to `this.blogName`. Because of the `.bind(this)` on the call to `this.prompt`, we save the context of the `BlogGenerator` function, so we can use the user's responses later.
 
-Yeoman generators rely on the Inquirer.js prompt system. Make sure to checkout the [full documentation over there](https://github.com/SBoudrias/Inquirer.js) to learn more about prompt types (checkboxes, lists, etc) and control helpers (validation, prompt hierarchy, filtering, etc).
+Yeoman generators rely on the Inquirer.js prompt system. Make sure to check out the [full documentation over there](https://github.com/SBoudrias/Inquirer.js) to learn more about prompt types (checkboxes, lists, etc) and control helpers (validation, prompt hierarchy, filtering, etc).
 
 <h4 id="i-mentioned-magic-earlier-heres-some-more">I mentioned "magic" earlier. Here's some more.</h4>
 
@@ -254,7 +254,7 @@ BlogGenerator.prototype.askFor = function askFor() {
 };
 ```
 
-I've extracted the useful bits we haven't covered yet, just to point out one thing you may have been wondering: what if you need to execute an asynchronous task? Just call `this.async()`. This will return a function, that you then pass into your asynchronous task as a callback.
+I've extracted the useful bits we haven't covered yet, just to point out one thing you may have been wondering: what if you need to execute an asynchronous task? Just call `this.async()`. This will return a function that you then pass into your asynchronous task as a callback.
 
 `this.async()` tells the handsome devil he needs to hang on a sec, while we resolve something. Then when the callback is executed, it pokes him in the shoulder until he wakes up, and he's back on to the next method.
 
@@ -303,7 +303,7 @@ Note:
 
 <h2 id="okay-huddle-up">Okay, huddle up.</h2>
 
-Let's review what we're trying to do real quick, to make sure we're on the same page.
+Let's review what we're trying to do.
 
 <h3 id="where-we-are">Where we are.</h3>
 
@@ -378,7 +378,7 @@ Alright, I think it's time we go back and edit some more files from `~/dev/gener
 
 When our user runs `yo blog`, they will receive the files from `app/templates` in the directory they are working in at the time the command is run. Let's set up some more useful files.
 
-Remember those `_underscored` files? Think about it this way: they are lead by an "underscore", or "Lo-Dash" to indicate we will use [Lo-Dash](http://lodash.com) to process them.
+Remember those `_underscored` files? Think about it this way: they are led by an "underscore", or "Lo-Dash" to indicate we will use [Lo-Dash](http://lodash.com) to process them.
 
 Head back to `app/index.js`. Since it's been a while, scroll back to the `app` function, so we can see if we need to change anything.
 
