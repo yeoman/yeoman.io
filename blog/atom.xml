@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-04T19:26:42+00:00</updated>
+  <updated>2014-03-04T23:28:39+01:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>Grunt And Gulp Tasks For Performance Optimization</title>
     <link href="http://yeoman.io//blog/performance-optimization.html"/>
-    <updated>2014-03-04T00:00:00+00:00</updated>
+    <updated>2014-03-04T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/performance-optimization</id>
     <content type="html">&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -24,7 +24,7 @@ background: #f2dede;
 padding: 15px;
 }&lt;/style&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/YdZnuDG.jpg&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/tasks.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Delays in performance have the potential to impact user &lt;a href=&quot;https://twitter.com/igrigorik/status/300226402496704512&quot;&gt;engagement&lt;/a&gt;, &lt;a href=&quot;http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/&quot;&gt;experience&lt;/a&gt; and &lt;a href=&quot;https://speakerdeck.com/lara/design-for-performance&quot;&gt;revenue&lt;/a&gt;.
 Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommend a set of best-practice &lt;a href=&quot;https://developers.google.com/speed/docs/insights/rules&quot;&gt;rules&lt;/a&gt; for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.&lt;/p&gt;
@@ -98,8 +98,21 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt; &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Generate spritesheets with &lt;a href=&quot;https://www.npmjs.org/package/grunt-spritesmith&quot;&gt;grunt-spritesmith&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Generate spritesheets&lt;/h2&gt;
+
+&lt;h4&gt;Grunt&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/grunt-spritesmith&quot;&gt;grunt-spritesmith&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Gulp&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-sprite&quot;&gt;gulp-sprite&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Convert images to WebP&lt;/h2&gt;
@@ -296,7 +309,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-zopfli&quot;&gt;gulp-zopfli&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to &lt;a href=&quot;https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS&quot;&gt;Ilya Grigorik&lt;/a&gt;, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. &lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to &lt;a href=&quot;https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS&quot;&gt;Ilya Grigorik&lt;/a&gt;, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.&lt;/div&gt;
 
 &lt;h2&gt;Inline Critical path CSS&lt;/h2&gt;
 
@@ -326,7 +339,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 
 &lt;h2&gt;Benchmarking&lt;/h2&gt;
 
-&lt;p&gt;(Grunt only)&lt;/p&gt;
+&lt;p&gt;The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use &lt;a href=&quot;https://npmjs.org/package/gulp-grunt&quot;&gt;gulp-grunt&lt;/a&gt; to run Grunt tasks from Gulp. We recommend:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-pagespeed&quot;&gt;grunt-pagespeed&lt;/a&gt; - fantastic for automating checking your PageSpeed score as a part of CI.&lt;/li&gt;
@@ -375,7 +388,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
   <entry>
     <title>What's new in the Backbone generator</title>
     <link href="http://yeoman.io//blog/whats-new-in-backbone-generator.html"/>
-    <updated>2014-02-11T00:00:00+00:00</updated>
+    <updated>2014-02-11T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/whats-new-in-backbone-generator</id>
     <content type="html">&lt;p&gt;The Backbone generator has had a few major updates recently and we wanted to share these changes with the community. The theme of the changes is to make the generator more flexible. There is also some updates related to testing and styling we wanted to share.&lt;/p&gt;
 
@@ -422,7 +435,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
   <entry>
     <title>Updates to some of our generators</title>
     <link href="http://yeoman.io//blog/generator-update-feb-0207.html"/>
-    <updated>2014-02-07T00:00:00+00:00</updated>
+    <updated>2014-02-07T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/generator-update-feb-0207</id>
     <content type="html">&lt;p&gt;Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.&lt;/p&gt;
 
@@ -519,7 +532,7 @@ yo bootstrap
   <entry>
     <title>Exploring A Generator For Gulp.js</title>
     <link href="http://yeoman.io//blog/gulp-explore.html"/>
-    <updated>2014-02-03T00:00:00+00:00</updated>
+    <updated>2014-02-03T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/gulp-explore</id>
     <content type="html">&lt;p&gt;Work has begun on our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;first&lt;/a&gt; official Yeoman generator for &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp.js&lt;/a&gt;.&lt;/p&gt;
 
@@ -631,7 +644,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Generators New Year Cleanup!</title>
     <link href="http://yeoman.io//blog/cleanup.html"/>
-    <updated>2014-01-21T00:00:00+00:00</updated>
+    <updated>2014-01-21T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/cleanup</id>
     <content type="html">&lt;p&gt;A lots of changes and new features have been introduced in the Generator System (&lt;code&gt;npm search yeoman-generator&lt;/code&gt;) lately. If you&amp;#39;re not watching the &lt;a href=&quot;https://github.com/yeoman/generator&quot;&gt;yeoman/generator&lt;/a&gt;, maybe you&amp;#39;ve been let down on the latest changes. Fear not, we &lt;a href=&quot;https://github.com/yeoman/generator/releases&quot;&gt;documented every recent release in our changelog&lt;/a&gt;!&lt;/p&gt;
 
@@ -707,7 +720,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Release the Kraken! - Announcing Yeoman 1.0</title>
     <link href="http://yeoman.io//blog/hello-1.0.html"/>
-    <updated>2013-08-23T00:00:00+01:00</updated>
+    <updated>2013-08-23T00:00:00+02:00</updated>
     <id>http://yeoman.io/blog/hello-1.0</id>
     <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0!&lt;/p&gt;
 
