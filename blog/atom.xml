@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-04T16:54:39+00:00</updated>
+  <updated>2014-03-04T17:41:46+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -12,7 +12,7 @@
 
   
   <entry>
-    <title>Build Tasks For Performance Optimization</title>
+    <title>Grunt And Gulp Tasks For Performance Optimization</title>
     <link href="http://yeoman.io//blog/performance-optimization.html"/>
     <updated>2014-03-04T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/performance-optimization</id>
