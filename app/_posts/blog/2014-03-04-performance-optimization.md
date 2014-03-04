@@ -11,7 +11,7 @@ padding: 15px;
 }</style>
 
 
-<img src="http://i.imgur.com/YdZnuDG.jpg"/>
+![](/assets/img/blog/tasks.jpg)
 
 Delays in performance have the potential to impact user [engagement](https://twitter.com/igrigorik/status/300226402496704512), [experience](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/) and [revenue](https://speakerdeck.com/lara/design-for-performance).
 Thankfully, Google's 'Make The Web Faster' team recommend a set of best-practice [rules](https://developers.google.com/speed/docs/insights/rules) for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.
@@ -80,7 +80,15 @@ SVG files created with editors usually contain a large quantity of redundant inf
 
 * [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin) 
 
-* Generate spritesheets with [grunt-spritesmith](https://www.npmjs.org/package/grunt-spritesmith)
+## Generate spritesheets 
+
+#### Grunt
+
+* [grunt-spritesmith](https://www.npmjs.org/package/grunt-spritesmith)
+
+#### Gulp
+
+* [gulp-sprite](https://www.npmjs.org/package/gulp-sprite)
 
 ## Convert images to WebP
 
@@ -232,7 +240,7 @@ The Zopfli Compression Algorithm is an open-source compression library that gene
 
 * [gulp-zopfli](https://www.npmjs.org/package/gulp-zopfli)
 
-<div class="note"><strong>Note:</strong> When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to <a href="https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS">Ilya Grigorik</a>, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. </div>
+<div class="note"><strong>Note:</strong> When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to <a href="https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS">Ilya Grigorik</a>, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.</div>
 
 
 ## Inline Critical path CSS
@@ -263,7 +271,7 @@ Gulp users should just use AssetGraph directly.
 
 ## Benchmarking
 
-(Grunt only)
+The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use [gulp-grunt](https://npmjs.org/package/gulp-grunt) to run Grunt tasks from Gulp. We recommend:
 
 * [grunt-pagespeed](https://npmjs.org/package/grunt-pagespeed) - fantastic for automating checking your PageSpeed score as a part of CI.
 * [grunt-topcoat-telemetry](https://github.com/topcoat/topcoat-grunt-telemetry) - get smoothness, load time and other stats from Telemetry as part of CI. This could help you set up a performance benchmarking dashboard similar to the one used by [TopCoat](http://bench.topcoat.io/)
