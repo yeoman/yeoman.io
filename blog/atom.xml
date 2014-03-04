@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-04T17:41:46+00:00</updated>
+  <updated>2014-03-04T19:25:29+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -24,9 +24,12 @@ background: #f2dede;
 padding: 15px;
 }&lt;/style&gt;
 
-&lt;p&gt;Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommend a set of best-practice &lt;a href=&quot;https://developers.google.com/speed/docs/insights/rules&quot;&gt;rules&lt;/a&gt; for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/YdZnuDG.jpg&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have complete control over your server, an excellent PageSpeed &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module&quot;&gt;Module&lt;/a&gt; for Apache and Nginx exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.&lt;/p&gt;
+&lt;p&gt;Delays in performance have the potential to impact user &lt;a href=&quot;https://twitter.com/igrigorik/status/300226402496704512&quot;&gt;engagement&lt;/a&gt;, &lt;a href=&quot;http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/&quot;&gt;experience&lt;/a&gt; and &lt;a href=&quot;https://speakerdeck.com/lara/design-for-performance&quot;&gt;revenue&lt;/a&gt;.
+Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommend a set of best-practice &lt;a href=&quot;https://developers.google.com/speed/docs/insights/rules&quot;&gt;rules&lt;/a&gt; for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.&lt;/p&gt;
+
+&lt;p&gt;If you have complete control over your server, an excellent &lt;a href=&quot;https://developers.google.com/speed/pagespeed&quot;&gt;PageSpeed&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module&quot;&gt;Module&lt;/a&gt; for &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/download&quot;&gt;Apache&lt;/a&gt; and &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source&quot;&gt;Nginx&lt;/a&gt; exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.&lt;/p&gt;
 
 &lt;p&gt;The below represent &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp&lt;/a&gt; tasks the Yeoman team regularly use in our projects. We’ve tried our best to keep this list focused and exclude previous suggestions which no-longer offer as much value, but there’s plenty here to help you keep your pages and their resources as small as possible.&lt;/p&gt;
 
@@ -83,6 +86,8 @@ padding: 15px;
 &lt;/div&gt;
 
 &lt;h2&gt;Minify SVG images&lt;/h2&gt;
+
+&lt;p&gt;SVG files created with editors usually contain a large quantity of redundant information (metadata, comments, hidden elements and so forth). This content can be safely removed or converted to a more minimal form without imacting the final SVG that&amp;#39;s being rendered.&lt;/p&gt;
 
 &lt;h4&gt;Grunt&lt;/h4&gt;
 
@@ -165,6 +170,10 @@ padding: 15px;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ben-eb/gulp-uncss&quot;&gt;gulp-uncss&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div class=&quot;note&quot;&gt;
+    &lt;strong&gt;Note:&lt;/strong&gt; A question developers regularly ask is whether UnCSS, or the process of removing unused CSS can also work with styles injected into the page dynamically. The answer is &#39;yes&#39;. UnCSS works in tandem with PhantomJS in order to make this happen. Devs have seen anything between &lt;a href=&quot;https://twitter.com/efexen/status/438672726996574209&quot;&gt;10&lt;/a&gt;-&lt;a href=&quot;https://twitter.com/thisbetom/status/432575411138998273&quot;&gt;120KB&lt;/a&gt; in savings on a typical Bootrap page and UnCSS also works wel with other frameworks.
+&lt;/div&gt;
+
 &lt;h2&gt;Inline CSS&lt;/h2&gt;
 
 &lt;p&gt;If the external CSS resources for a particular page are small, you can inline those directly in your markup to save on additional requests. Inlining small CSS in this way allows the browser to proceed with rendering the page.&lt;/p&gt;
@@ -182,6 +191,8 @@ padding: 15px;
 &lt;/ul&gt;
 
 &lt;h2&gt;Combine media queries&lt;/h2&gt;
+
+&lt;p&gt;This isn&amp;#39;t a PageSpeed recommendation, but allows you to combine matching media queries into a single media query definition. We&amp;#39;ve found it useful for handling CSS generated by preprocessors which may use nested media queries.&lt;/p&gt;
 
 &lt;h4&gt;Grunt&lt;/h4&gt;
 
@@ -289,7 +300,7 @@ padding: 15px;
 
 &lt;h2&gt;Inline Critical path CSS&lt;/h2&gt;
 
-&lt;p&gt;The critical path represents the code and resources needed to render the &amp;quot;above-the-fold&amp;quot; content in the page - i.e what your users will first see when they load up your page. PageSpeed recommends inlining your critical path CSS for improved performance. Whilst tools like mod_pagespeed are highly efficient at achieving this, it’s more difficult to optimize for the critical path with other tooling.&lt;/p&gt;
+&lt;p&gt;The critical path represents the code and resources needed to render the &amp;quot;above-the-fold&amp;quot; content in the page - i.e what your users will first see when they load up your page. PageSpeed recommends inlining your critical path CSS for improved performance. Whilst tools like &lt;a href=&quot;https://code.google.com/p/modpagespeed/&quot;&gt;mod_pagespeed&lt;/a&gt; are highly efficient at achieving this, it’s more difficult to optimize for the critical path with other tooling.&lt;/p&gt;
 
 &lt;p&gt;You could probably use PhantomJS along with the above the fold scripts from &lt;a href=&quot;https://github.com/r3b/speedreport/&quot;&gt;speedreport&lt;/a&gt; to get an idea of what CSS is above the fold and can then work on optimizing this manually. &lt;/p&gt;
 
