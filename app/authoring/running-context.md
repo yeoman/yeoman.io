@@ -4,13 +4,13 @@ layout: default
 
 # Generator running context
 
-One of the most important concept to grasp when writing a Generator is how methods are run and in which context.
+One of the most important concepts to grasp when writing a Generator is how methods are run and in which context.
 
 ## Prototype methods as actions
 
-Each methods directly attached to a Generator prototype is considered to be an action. Each action are run in sequence by the Yeoman environment run loop.
+Each method directly attached to a Generator prototype is considered to be an action. Each action is run in sequence by the Yeoman environment run loop.
 
-In other words, each methods returned by `Object.getPrototypeOf(Generator)` will be automatically run.
+In other words, each method returned by `Object.getPrototypeOf(Generator)` will be automatically run.
 
 ### Helper and private methods
 
