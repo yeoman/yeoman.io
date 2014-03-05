@@ -24,12 +24,12 @@ describe('backbone:app', function () {
     before(function () {
       // Mock the options, set up an output folder and run the generator
     });
-    
+
     it('generate a router.js file', function () {
       // assert the file exist
       // assert the file uses AMD definition
     });
-    
+
     it('generate a view file');
     it('generate a base controller');
   });
@@ -87,4 +87,4 @@ assert.fileContent('controllers/user.js', /App\.UserController = Ember\.ObjectCo
 
 ### Others
 
-Refers to the [API documentation] for others methods.
+Refers to the [API documentation](http://yeoman.github.io/generator/helpers.html) for other methods.
