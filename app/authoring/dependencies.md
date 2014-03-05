@@ -4,13 +4,13 @@ layout: default
 
 # Managing dependencies
 
-Once you've run your generators, you'll often want to run npm and Bower installs.
+Once you've run your generators, you'll often want to run [npm](http://npmjs.org) and [Bower](http://bower.io) to install any additional dependencies your generators require.
 
-As these tasks are very frequent, Yeoman already abstract them away. We'll also cover how you can launch installation through other tools.
+As these tasks are very frequent, Yeoman already abstracts them away. We'll also cover how you can launch installation through other tools.
 
 ## NPM
 
-You just need to call `generator.npmInstall()` to launch the installation. You can call it anywhere in your code as Yeoman will automatically schedule the task to run once everything else is complete. Yeoman will also ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
+You just need to call `generator.npmInstall()` to run an `npm` installation. You can call it anywhere in your code as Yeoman will automatically schedule the task to run once everything else is complete. Yeoman will also ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
 
 ## Bower
 
@@ -22,9 +22,9 @@ Call `generator.installDependencies()` to run both npm and bower.
 
 ## Using other tools
 
-Yeoman provide an abstraction to allow user to `spawn` any CLI commands. This abstraction will normalize to command so it can run seamlessly in Linux, Mac and Windows system.
+Yeoman provides an abstraction to allow users to `spawn` any CLI commands. This abstraction will normalize to command so it can run seamlessly in Linux, Mac and Windows system.
 
-For example, if you're a PHP afondiacios and wished to run `composer`, you'd write it this way:
+For example, if you're a PHP afondiacio and wished to run `composer`, you'd write it this way:
 
 ```js
 yeoman.generators.Base.extend({
