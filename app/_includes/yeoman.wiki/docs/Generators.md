@@ -267,7 +267,7 @@ BlogGenerator.prototype.app = function app() {
 
 This is pretty cool stuff. `this.mkdir` creates a directory in the directory the user is running your generator from. So, the first two lines simply create some directories for the user. Directory directory directory.
 
-The last two lines call `this.copy`, which then removes the `_` and places the files to the user's root directory.
+The last two lines call `this.copy`, which then removes the `_` and places the files in the project's root directory.
 
 Let's rewrite this to something more sensible for a blog:
 
