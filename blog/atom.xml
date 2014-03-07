@@ -4,12 +4,58 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-04T22:29:58+00:00</updated>
+  <updated>2014-03-07T14:59:09+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
   </author>
 
+  
+  <entry>
+    <title>Yeoman updates for Friday, March 7th.</title>
+    <link href="http://yeoman.io//blog/releases-march-7th.html"/>
+    <updated>2014-03-07T00:00:00+00:00</updated>
+    <id>http://yeoman.io/blog/releases-march-7th</id>
+    <content type="html">&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;First off, Happy Friday!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/WHfJgag.jpg&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Today we released updates to six of our official generators. The complete changelogs can be found in our linked release pages lower down. &lt;/p&gt;
+
+&lt;p&gt;Sindre also released a new version of his &lt;a href=&quot;https://github.com/sindresorhus/generator-gulp-plugin-boilerplate&quot;&gt;Gulp plugin generator&lt;/a&gt;, Hemanth released an &lt;a href=&quot;https://github.com/hemanth/generator-atom&quot;&gt;Atom Editor package generator&lt;/a&gt; and Rob updated &lt;a href=&quot;https://github.com/yeoman/grunt-bower-requirejs&quot;&gt;grunt-bower-requirejs&lt;/a&gt;. Simon is almost ready shipping a huge new feature for &lt;code&gt;yo&lt;/code&gt; (&lt;a href=&quot;https://github.com/yeoman/generator/commits/master&quot;&gt;composability&lt;/a&gt;), which we hope to talk about in the next few weeks. Leonardo, Eddie and Rob have been working on a completely new mobile-first design for &lt;code&gt;yeoman.io&lt;/code&gt; which they hope to get out in the next month. Kevin has been helping out all over the place.&lt;/p&gt;
+
+&lt;p&gt;Peter has continued his work on &lt;a href=&quot;https://github.com/assetgraph/assetgraph&quot;&gt;AssetGraph&lt;/a&gt; and for the brave of heart there&amp;#39;s an experimental Yeoman &lt;a href=&quot;https://github.com/Munter/generator-webapp-assetgraph&quot;&gt;Webapp generator&lt;/a&gt; using it that&amp;#39;s available to play with.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Our Gulp WebApp generator now supports &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/commit/f594d53a2f558208ab011398a96a9de4b1f853b1&quot;&gt;wiredep&lt;/a&gt; so any dependencies installed with Bower will be automatically wired up to your index for you.&lt;/li&gt;
+&lt;li&gt;Our Backbone generator now provides more useful boilerplate scaffolding (thanks to the community, and Revath for maintaining)&lt;/li&gt;
+&lt;li&gt;Our Grunt WebApp generator gets a big update with numerous stability fixes. We&amp;#39;ve also switched to using the official Bootstrap Sass package.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Releases&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/releases/tag/v0.0.4&quot;&gt;Gulp WebApp generator -- 0.0.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/releases/tag/v0.0.4&quot;&gt;Grunt WebApp generator -- 0.4.8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-gruntplugin/releases/tag/v0.0.7&quot;&gt;Grunt Plugin generator -- 0.0.7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-generator/releases/tag/v0.4.3&quot;&gt;Generator generator -- 0.4.3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-backbone/releases/tag/v0.2.5&quot;&gt;Backbone generator -- 0.2.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-jquery/releases/tag/v0.0.9&quot;&gt;jQuery generator -- 0.0.9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Community&lt;/h2&gt;
+
+&lt;p&gt;On the community-front, we&amp;#39;ve started work on our next monthly digest but until then enjoy this quick video on &lt;a href=&quot;http://tagtree.tv/angular-with-yeoman&quot;&gt;building a budgeting webapp&lt;/a&gt; with Yo and Angular.&lt;/p&gt;
+
+&lt;p&gt;Until next time, have an awesome weekend!&lt;/p&gt;
+
+&lt;p&gt;~ Addy and the team&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Grunt And Gulp Tasks For Performance Optimization</title>
