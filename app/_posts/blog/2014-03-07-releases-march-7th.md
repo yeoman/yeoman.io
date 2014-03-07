@@ -26,7 +26,7 @@ Peter has continued his work on [AssetGraph](https://github.com/assetgraph/asset
 ## Releases
 
 * [Gulp WebApp generator -- 0.0.4](https://github.com/yeoman/generator-gulp-webapp/releases/tag/v0.0.4)
-* [Grunt WebApp generator -- 0.4.8](https://github.com/yeoman/generator-gulp-webapp/releases/tag/v0.0.4)
+* [Grunt WebApp generator -- 0.4.8](https://github.com/yeoman/generator-webapp/releases/tag/v0.4.8)
 * [Grunt Plugin generator -- 0.0.7](https://github.com/yeoman/generator-gruntplugin/releases/tag/v0.0.7)
 * [Generator generator -- 0.4.3](https://github.com/yeoman/generator-generator/releases/tag/v0.4.3)
 * [Backbone generator -- 0.2.5](https://github.com/yeoman/generator-backbone/releases/tag/v0.2.5)
