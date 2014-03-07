@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-07T14:59:09+00:00</updated>
+  <updated>2014-03-07T15:42:42+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -40,7 +40,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/releases/tag/v0.0.4&quot;&gt;Gulp WebApp generator -- 0.0.4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/releases/tag/v0.0.4&quot;&gt;Grunt WebApp generator -- 0.4.8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-webapp/releases/tag/v0.4.8&quot;&gt;Grunt WebApp generator -- 0.4.8&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-gruntplugin/releases/tag/v0.0.7&quot;&gt;Grunt Plugin generator -- 0.0.7&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-generator/releases/tag/v0.4.3&quot;&gt;Generator generator -- 0.4.3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/yeoman/generator-backbone/releases/tag/v0.2.5&quot;&gt;Backbone generator -- 0.2.5&lt;/a&gt;&lt;/li&gt;
