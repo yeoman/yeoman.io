@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 # Frequently Asked Questions
 
 ### What are the goals of the project?
@@ -160,8 +165,10 @@ After that, simply run `grunt serve` like you normally would and enjoy automatic
 
 ### What should I do after cloning a web application generated with Yeoman?
 
-Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run 
+Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run
 ```Bash
 npm install & bower install
 ```
 And check if these folders are created correctly.
+
+<img src="assets/img/yeoman-009.png" class="character"/>
