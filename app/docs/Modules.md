@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#modules" name="modules">EcmaScript 6 Modules And Module Support</a>
 
 Note: This content is subject to change and may be removed prior to launch.

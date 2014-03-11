@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#list" name="list">list</a>
 
 Usage: `yeoman list`

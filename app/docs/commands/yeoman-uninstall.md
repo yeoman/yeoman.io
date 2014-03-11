@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#uninstall" name="uninstall">uninstall</a>
 
 Usage: yeoman uninstall packageName

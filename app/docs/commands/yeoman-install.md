@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#install" name="install">install</a>
 
 Usage: `yeoman install <packageName>`, `yeoman install <package1> <package2>`

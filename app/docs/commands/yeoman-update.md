@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#update" name="update">update</a>
 
 Usage: `yeoman update <packageName>`

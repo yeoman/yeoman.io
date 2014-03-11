@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#search" name="search">search</a>
 
 Usage: `yeoman search <keyword>`

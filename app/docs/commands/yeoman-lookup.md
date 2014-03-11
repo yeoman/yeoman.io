@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#lookup" name="lookup">lookup</a>
 
 Usage: `yeoman lookup <packageName>`

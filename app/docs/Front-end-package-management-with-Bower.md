@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 Until now, client-side JavaScript has not benefited from a rich package management solution such as those found in other platforms (e.g NPM, RubyGems). By instead maintaining packages of packages in client-side JS, developers reduced the chances of using up-to-date versions of libraries.
 
 [Bower](http://bower.io) changes that.

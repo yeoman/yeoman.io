@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#test" name="test">test</a>
 
 Usage: `yeoman test`

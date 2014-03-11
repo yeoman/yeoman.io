@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#server" name="server">server</a>
 
 **warning: `yeoman server` is now deprecated. http://yeoman.io/migrate.html**

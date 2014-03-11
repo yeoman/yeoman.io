@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#help" name="help">help</a>
 
 * `yeoman --help` or `yeoman help`

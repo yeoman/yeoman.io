@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 ## <a href="#init" name="init">init</a>
 
 Usage: `yeoman init`, `yeoman init generatorName`, `yeoman init generatorName:subgenerator`
