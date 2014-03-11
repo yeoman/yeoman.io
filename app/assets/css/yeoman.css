@@ -201,7 +201,7 @@ nav ul li img {
 
 
 #content {
-  padding: 10px 25px 0 25px;
+  padding: 10px 25px;
 }
 
 article {
@@ -292,6 +292,12 @@ pre{
   -moz-border-radius: 5px;
   padding: 8px 14px 8px 14px;
   margin: 0 0 20px 0;
+}
+
+.contribute-doc {
+  border: 1px solid #ababab;
+  background-color: #eee;
+  padding: 10px;
 }
 
 .video-container {
@@ -612,7 +618,7 @@ th.sort.desc:before{
   }
 
   #content {
-    padding: 30px 25px 0 25px;
+    padding: 30px 25px;
     margin: 0 0 0 250px;
   }
   .forkit-curtain .repo {
