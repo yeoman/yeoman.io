@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 # Migrate from 0.9.6 to 1.0
 
 A lot has changed since our last release 0.9.6. We decided to make Yeoman more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better.
