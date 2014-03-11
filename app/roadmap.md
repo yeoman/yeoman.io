@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 #Goals and Roadmap
 
 ## Overall project goals
