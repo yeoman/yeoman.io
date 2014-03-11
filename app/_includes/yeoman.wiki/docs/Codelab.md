@@ -495,23 +495,22 @@ Take a look at your bower_components directory just to check that everything is 
 
 ## Make todos sortable (using AngularUI Sortable)
 
+(More information on Angular UI and the sortable UI-module can be found here: http://angular-ui.github.io/)
+
 References to these newly installed dependencies must be added to our index.html file:
 
-First, add a link to the angular-ui CSS file. In the document head, under where we include main.css:
+Add the AngularUI and jQueryUI JavaScript. Include jquery-ui.js and angular-ui-sortable.js in the scripts section at the bottom of index.html 
+
 
 ```html
-<link rel="stylesheet" href="styles/main.css">
-<link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.css">
-```
-
-
-Second, add the AngularUI and jQueryUI JavaScript. In the scripts section at the bottom of index.html include jquery-ui.js and angular-ui.js:
-
-```html
-<script src="bower_components/jquery/jquery.js"></script>
-<script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-ui/build/angular-ui.js"></script>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    ...
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <!-- endbower -->
+    
+    <script type="text/javascript" src="modules/directives/sortable/src/sortable.js"></script>
 ```
   
 
@@ -529,7 +528,7 @@ angular.module('mytodoApp', [
 ```
 
 
-Add the ‘ui’ dependency to that array list. Our complete todo module (scripts/app.js) should now look like this:
+Add the ‘ui.sortable’ dependency to that array list. Our complete todo module (scripts/app.js) should now look like this:
 
 ```js
 'use strict';
@@ -539,7 +538,7 @@ angular.module('mytodoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui'
+  'ui.sortable'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -605,16 +604,26 @@ Note: if using bower.json, you may need to Ctrl +C to exit the current `grunt se
 Your index.html scripts should now look like this:
 
 ```html
-<script src="bower_components/jquery/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-ui/angular-ui.js"></script>
-<script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
-<script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
+    
+    <script type="text/javascript" src="modules/directives/sortable/src/sortable.js"></script>
 ```
 
 Edit the todo module (scripts/app.js) to include the localStorage adapter:
@@ -625,7 +634,7 @@ angular.module('mytodoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui',
+  'ui.sortable',
   'LocalStorageModule'
 ])
 ```
@@ -650,7 +659,7 @@ angular.module('mytodoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui',
+  'ui.sortable',
   'LocalStorageModule'
 ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider){
@@ -776,11 +785,11 @@ When you run `grunt test`, you will see a new browser window open and close, and
 Our tests are currently failing as we haven’t updated the boilerplate test which still references awesomeThings.  We also need to update the Karma configuration to load the the new Bower components into the browser. Open karma.conf.js and replace the "files" array with:
 
 ```js
- files: [
+files: [
   'app/bower_components/jquery/jquery.js',
   'app/bower_components/jquery-ui/ui/jquery-ui.js',
   'app/bower_components/angular/angular.js',
-  'app/bower_components/angular-ui/build/angular-ui.js',
+  'app/bower_components/angular-ui-sortable/sortable.js',
   'app/bower_components/angular-mocks/angular-mocks.js',
   'app/bower_components/angular-local-storage/angular-local-storage.js',
   'app/scripts/*.js',
