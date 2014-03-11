@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 # Getting started with Yeoman
 
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:
@@ -12,7 +17,7 @@ Each of these projects are independently maintained by their respective communit
   <img class="full" src="/assets/img/workflow.jpg">
 </p>
 
-## yo 
+## yo
 
 Yo is maintained by the Yeoman project and offers web application scaffolding, utilizing scaffolding templates we refer to as generators. You typically install yo and any generators you think you might use via npm.
 
@@ -48,7 +53,7 @@ npm install -g generator-webapp
 
 This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these.
 
-Now that the generator is installed, create a directory for your new project 
+Now that the generator is installed, create a directory for your new project
 ```
 mkdir my-yo-project
 cd my-yo-project
@@ -62,7 +67,7 @@ yo webapp
 
 Each project created with yo will also pull in relevant Grunt tasks which the community feels is needed or useful for your workflow.
 
-The webapp generator is considered the simplest possible start for a web app. We also provide some framework generators which can be used to scaffold out a project and later views, models, controllers and so on. 
+The webapp generator is considered the simplest possible start for a web app. We also provide some framework generators which can be used to scaffold out a project and later views, models, controllers and so on.
 
 
 #### Example: Scaffolding an AngularJS app
