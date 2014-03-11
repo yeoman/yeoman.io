@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 Our initial release of Yeoman attempted to be a lot of things to a lot of people. We learned a number of lessons from this process, including the importance of clear messaging around the tools used in our toolbelt and how our workflow might be customized. We aim to make the experience of using Yeoman more streamlined in 1.0 keeping in mind the following:
 
 ## Yeoman 0.9 pain points
@@ -29,11 +34,11 @@ Our initial release of Yeoman attempted to be a lot of things to a lot of people
 * Improved package management story
 * Better stability
 * Less opinionated in some areas
-* Easier to work with existing projects 
+* Easier to work with existing projects
 
 ## Installation
 
-* Install time greatly reduced 
+* Install time greatly reduced
 * Less required dependencies
 * Only install something when it's needed (TM)
 * Python, which was slow but required, is gone
