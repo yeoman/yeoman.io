@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 #Support
 
 ## Getting Support
