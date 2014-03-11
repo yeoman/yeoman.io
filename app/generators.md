@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 # Generate a Generator
 
 * [What's a Generator?](#whats-a-generator)
@@ -630,17 +635,17 @@ We look forward to meeting you and your generator!
 
 <h3 id="snippets">Snippets</h3>
 
-The following section will help you get acquainted with some common actions you 
+The following section will help you get acquainted with some common actions you
 might want to implement when writing your own generator.
 
 **Prompts**
 
-The prompts system can be used to prompt the user for information when 
-scaffolding out a project using a generator or sub-generator. Prompts below take 
+The prompts system can be used to prompt the user for information when
+scaffolding out a project using a generator or sub-generator. Prompts below take
 the form of an array of objects, each of which specify:
 
 * type: the type of prompt (defaults to "input")
-* name: a prompt name (which can later be used to access data associated with 
+* name: a prompt name (which can later be used to access data associated with
   the response)
 * message: the actual question to prompt the user with
 * default: the default value
@@ -671,10 +676,10 @@ this.prompt(prompts, function (props) {
 
 **Template/copy specific files:**
 
-Copying specific files for your generator output can be done using this.copy() 
-or this.template(). The latter will copy the files over from your generator's 
-templates directory to the directory the user is currently in. The second 
-argument to this.template() can be used to store a file with a custom filename 
+Copying specific files for your generator output can be done using this.copy()
+or this.template(). The latter will copy the files over from your generator's
+templates directory to the directory the user is currently in. The second
+argument to this.template() can be used to store a file with a custom filename
 if required.
 
 ```javascript
@@ -687,20 +692,20 @@ Generator.prototype.bootstrapJs = function bootstrapJs() {
 
 **Writing content to files:**
 
-Sometimes you may wish to write custom content to a file as a part of your 
-generator's workflow. This can be done using this.write() which will save custom 
+Sometimes you may wish to write custom content to a file as a part of your
+generator's workflow. This can be done using this.write() which will save custom
 content to a specified file.
 
 ```javascript
 Generator.prototype.mainStylesheet = function mainStylesheet() {
-    this.write('app/styles/main.scss', 
+    this.write('app/styles/main.scss',
     'MY SASS STYLESHEET CONTENT');
 };
 ```
 
 **Writing directories and file contents:**
 
-this.write() and this.mkdir() can be similarly used to create new directories, 
+this.write() and this.mkdir() can be similarly used to create new directories,
 sub-directories and again, write custom content to a new file.
 
 ```javascript
@@ -780,21 +785,21 @@ Generator.prototype.writeIndex = function writeIndex() {
 
 ```javascript
  this.on('end', function () {
-    this.installDependencies({ 
-      skipInstall: options['skip-install'] 
+    this.installDependencies({
+      skipInstall: options['skip-install']
     });
   });
 ```
 
-**Hooks for sub-generators (e.g common is the name of another generator, 
+**Hooks for sub-generators (e.g common is the name of another generator,
 considered a piece of an angular app).**
 
-Occasionally, you may wish to provide sub-generators as a part of your generator 
-workflow. A sub-generator takes care of scaffolding one specific piece of an 
-application, such as a view or model. Crafting part of your workflow as a 
-sub-generators means that a broader generator could call them (using 
-`this.hookFor`) to create an initial application, but you can also later call the 
-sub-generator to just create that one piece (e.g a new view). This might be done 
+Occasionally, you may wish to provide sub-generators as a part of your generator
+workflow. A sub-generator takes care of scaffolding one specific piece of an
+application, such as a view or model. Crafting part of your workflow as a
+sub-generators means that a broader generator could call them (using
+`this.hookFor`) to create an initial application, but you can also later call the
+sub-generator to just create that one piece (e.g a new view). This might be done
 using `yo myGenerator:mySubGenerator`.
 
 ```javascript
@@ -838,10 +843,10 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
 * **How do I pull in dependencies using Bower?** Place a bower.json file filled out with Underscore templating in the /templates directory and then run `this.installDependencies` from within your generator's app/index.js. Alternatively they can be installed with the following:
 ```javascript
 this.bowerInstall([
-  'jquery', 
+  'jquery',
   'underscore'
-], { 
-  save: true 
+], {
+  save: true
 });
 ```
 
