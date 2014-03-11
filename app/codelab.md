@@ -1,3 +1,8 @@
+---
+layout: default
+markdown: 1
+---
+
 # Allo! Allo! Let's Scaffold A Web App
 
 <style>
@@ -30,7 +35,7 @@ In this code lab, you build a fully functional application using [Yeoman](http:/
 
 Yeoman is a man in a hat with three tools for improving your productivity:
 
-* [yo](http://yeoman.io) is a scaffolding tool that offers an ecosystem of framework-specific scaffolds, called generators, that can be used to perform some of the tedious tasks I mentioned earlier. 
+* [yo](http://yeoman.io) is a scaffolding tool that offers an ecosystem of framework-specific scaffolds, called generators, that can be used to perform some of the tedious tasks I mentioned earlier.
 
 * [grunt](http://gruntjs.com) is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and [grunt-contrib](https://github.com/gruntjs/grunt-contrib).
 
@@ -79,7 +84,7 @@ Before installing Yeoman, you will need the following:
 
 * [Node.js](http://nodejs.org/download/) version 0.10.x or greater and npm version 1.3.7 or higher (comes with latest Node.js) or greater
 
-Once you’ve got Node installed, you can install the Yeoman toolset using the command line. 
+Once you’ve got Node installed, you can install the Yeoman toolset using the command line.
 
 Note: Most of your interations with Yeoman will be through the command line. Run these commands in the Terminal app if you’re on Mac, your shell in Linux, or [Cygwin](http://www.cygwin.com/) if you are on Windows.
 
@@ -179,7 +184,7 @@ $ mkdir mytodo
 $ cd mytodo
 ```
 
-Run `yo` and highlight ‘Run the Angular generator’. Hit enter to run the generator. 
+Run `yo` and highlight ‘Run the Angular generator’. Hit enter to run the generator.
 
 As you become more familiar with Yo, you might want to run generators directly without the use of the interactive menu:
 
@@ -188,7 +193,7 @@ $ yo angular
 ```
 
 
-Some generators will also provide optional settings to customize your app with common developer libraries and speed up the initial setup of your development environment. 
+Some generators will also provide optional settings to customize your app with common developer libraries and speed up the initial setup of your development environment.
 
 The AngularJS generator provides options to include use [Sass](http://sass-lang.com/) (with Compass) and/or [Bootstrap](http://getbootstrap.com/). Enter ‘n’ and ‘y’ respectively to these options.
 
@@ -202,7 +207,7 @@ You can deselect options using the spacebar. Let’s roll with the defaults. (So
 
 Okay, hit enter. Yeoman will automatically scaffold out your app, grab your dependencies, and pull in a few useful Grunt tasks for your workflow. After a few minutes of we should be ready.
 
- 
+
 
 ![](/assets/img/codelab/image_10.png)
 
@@ -294,7 +299,7 @@ Then modify our view (views/main.html) to output our todos items as text input f
 
 The [ng-repeat](http://docs.angularjs.org/api/ng.directive:ngRepeat) attribute on the paragraph tag is an Angular [directive](http://docs.angularjs.org/guide/directive) that instantiates a template once per item from a collection. In our case, imagine that the paragraph element and its content is turned into a virtual rubber stamp by adding the `ng-repeat` attribute. For each item in the todos array, Angular will stamp out a new instance of the `<p><input></p>` HTML.
 
-The [ng-model](http://docs.angularjs.org/api/ng.directive:ngModel) attribute is another Angular directive that works with input, select, textarea and custom controls to create a two-way data binding. In our example, it populates a text input field with the value from the current todo item in the ng-repeat loop. 
+The [ng-model](http://docs.angularjs.org/api/ng.directive:ngModel) attribute is another Angular directive that works with input, select, textarea and custom controls to create a two-way data binding. In our example, it populates a text input field with the value from the current todo item in the ng-repeat loop.
 
 See `ng-repeat` and `ng-model` in action within the browser. Upon saving, our application should now look like this:
 
@@ -302,7 +307,7 @@ See `ng-repeat` and `ng-model` in action within the browser. Upon saving, our ap
 
 ## Adding a todo
 
-Let’s implement a way to add new todo items to the list of existing todos within the application. 
+Let’s implement a way to add new todo items to the list of existing todos within the application.
 
 Modify the views/main.html file by adding a form element in between the `<h2>` and `<p>` elements from the previous section. Your views/main.html should now look like this:
 
@@ -336,9 +341,9 @@ This adds a form with a submit button to the top of the page. It utilises anothe
 
 ![](/assets/img/codelab/image_16.png)
 
-If you click the Add button currently, nothing will happen - let’s change that. 
+If you click the Add button currently, nothing will happen - let’s change that.
 
-`ng-submit` binds an angular expression to the onsubmit event of the form. If no action attribute is applied to the form, it also prevents the default browser behaviour. In our example we’ve added an angular expression of ‘addTodo()’. 
+`ng-submit` binds an angular expression to the onsubmit event of the form. If no action attribute is applied to the form, it also prevents the default browser behaviour. In our example we’ve added an angular expression of ‘addTodo()’.
 
 The following `addTodo` function pushes new todo items onto the existing todo items array and then clears the text input field:
 
@@ -367,7 +372,7 @@ angular.module('mytodoApp')
  ```
 
 
-Note: if you encounter linting errors in the terminal/command-line, this may be due to indentation warnings being thrown from [jshint](http://www.jshint.com/). They are only warnings so your todo app will continue to work. However, do look at the suggestions made from jshint and adjust your code accordingly for clean and readable code. 
+Note: if you encounter linting errors in the terminal/command-line, this may be due to indentation warnings being thrown from [jshint](http://www.jshint.com/). They are only warnings so your todo app will continue to work. However, do look at the suggestions made from jshint and adjust your code accordingly for clean and readable code.
 
 View the app in the browser again. Type some text in the input field for a new todo item and hit the Add button. It will be immediately reflected in your todos list!
 
@@ -377,7 +382,7 @@ Note: if you enter in more than one blank todo item, or a todo item with the sam
 
 ## Removing a todo
 
-Let’s now add the ability to remove a todo item. We’ll need to add a new remove button alongside each todo item. 
+Let’s now add the ability to remove a todo item. We’ll need to add a new remove button alongside each todo item.
 
 Going back to our view template (views/main.html), add a button to the existing `ng-repeat` directive. And to make sure our input field and remove button line up nicely, change the class on the paragraph tag from "form-group" to “input-group”.
 
@@ -408,7 +413,7 @@ Your todo app is looking snazzy!
 
 ![](/assets/img/codelab/image_19.png)
 
-We introduced a new Angular directive above, [ng-click](http://docs.angularjs.org/api/ng.directive:ngClick). `ng-click` allows you to specify custom behaviours when an element is clicked. In this instance, we call `removeTodo()` and pass $index to the function. 
+We introduced a new Angular directive above, [ng-click](http://docs.angularjs.org/api/ng.directive:ngClick). `ng-click` allows you to specify custom behaviours when an element is clicked. In this instance, we call `removeTodo()` and pass $index to the function.
 
 The value of $index will be the array index of the current todo item within the ng-repeat directive. For example, the first item will have an array index of 0 and `removeTodo` will be passed the value of 0. Similarly, the last item of a todo list with 5 items will have an array index of 4 and `removeTodo` will be passed a value of 4.
 
@@ -444,19 +449,19 @@ Back in the browser, our app should look like this once the code has been update
 
 ![](/assets/img/codelab/image_20.png)
 
-You can now hit the ‘X’ button to remove the item from the Todo list. Fantastic! 
+You can now hit the ‘X’ button to remove the item from the Todo list. Fantastic!
 
 ![](/assets/img/codelab/image_21.png)
 
 One thing you might notice is that although we’re able to add and remove items, we don’t have a way to persist them. Any time we refresh the page our todo items are reset back to the defaults in our todos array hardcoding in main.js. Don’t worry, we’ll fix this later after we learn more about installing packages with Bower.
 
-# Using Bower to install packages 
+# Using Bower to install packages
 
 <div class="mast-holder">
   <img src="/assets/img/yeoman-005.png" class="mast"/>
 </div>
 
-Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install [AngularUI](http://angular-ui.github.io/), a companion suite to AngularJS, which has a "sortable" directive available. 
+Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install [AngularUI](http://angular-ui.github.io/), a companion suite to AngularJS, which has a "sortable" directive available.
 
 We can check what packages we have already installed with:
 
@@ -476,7 +481,7 @@ $ bower search angular-ui
 
 ![](/assets/img/codelab/image_23.png)
 
-Plain old `angular-ui` is the first option shown in the list. Let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui". 
+Plain old `angular-ui` is the first option shown in the list. Let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
 
 To install both at once, use `bower install`:
 
@@ -513,7 +518,7 @@ Second, add the AngularUI and jQueryUI JavaScript. In the scripts section at the
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui/build/angular-ui.js"></script>
 ```
-  
+
 
 Note: Make sure to place the reference to angular-ui.js outside of the `<!-- bower:js -->` block as this will otherwise not build correctly due to an issue with the AngularUI Bower package setup.
 
@@ -582,7 +587,7 @@ animated GIF:
 
 ## Persistence with Local Storage
 
-Let’s revisit the issue of items not persisting when the browser refreshes. 
+Let’s revisit the issue of items not persisting when the browser refreshes.
 
 To easily achieve this we can use another Angular module called ‘[angular-local-storage](http://gregpike.net/demos/angular-local-storage/demo.html)’ that will allow us to quickly implement [Local Storage](http://diveintohtml5.info/storage.html). Again, Bower comes to the rescue. Run the following command:
 
@@ -631,7 +636,7 @@ angular.module('mytodoApp', [
 ```
 
 
-While you’re in app.js, also configure 'localStorageServiceProvider' to use ‘todo’ as a localStorage name prefix so your app doesn’t accidently read todos from another app using the same variable names: 
+While you’re in app.js, also configure 'localStorageServiceProvider' to use ‘todo’ as a localStorage name prefix so your app doesn’t accidently read todos from another app using the same variable names:
 
 ```js
 .config(['localStorageServiceProvider', function(localStorageServiceProvider){
@@ -680,7 +685,7 @@ angular.module('mytodoApp')
   });
  ```
 
-So now, rather than reading our todos from a static array, we’ll be reading it from Local Storage and then storing it in `$scope.todos` instead. 
+So now, rather than reading our todos from a static array, we’ll be reading it from Local Storage and then storing it in `$scope.todos` instead.
 
 We’ll also use the angular [$watch](http://docs.angularjs.org/api/ng.$rootScope.Scope#methods_$watch) listener to watch for changes in the value of $scope.todos. If someone adds or removes a todo, it will then keep our localStorage `todos` datastore in sync:
 
@@ -711,7 +716,7 @@ We now have a controller that is as follows:
 
 angular.module('mytodoApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
-    
+
     var todosInStore = localStorageService.get('todos');
 
     $scope.todos = todosInStore && todosInStore.split('\n') || [];
@@ -733,7 +738,7 @@ angular.module('mytodoApp')
  ```
 
 
-If you look at your app in the browser now you’ll see that there are no items in the todo list. The app is initialising the todos array from localStorage and we haven’t given it any todo items yet. 
+If you look at your app in the browser now you’ll see that there are no items in the todo list. The app is initialising the todos array from localStorage and we haven’t given it any todo items yet.
 
 ![](/assets/img/codelab/image_30.png)
 
@@ -759,7 +764,7 @@ So to recap, in this section we:
 
 # Getting ready for production
 
-Now that we have a functional app, let’s try to test and build a production ready version of it which we can ship. 
+Now that we have a functional app, let’s try to test and build a production ready version of it which we can ship.
 
 ## Testing with Karma and Jasmine
 
@@ -811,7 +816,7 @@ angular.module('mytodoApp')
     $scope.todos.push($scope.todo);
     $scope.todo = '';
   };
-  
+
   $scope.removeTodo = function (index) {
     $scope.todos.splice(index, 1);
   };
@@ -819,7 +824,7 @@ angular.module('mytodoApp')
 ```
 
 
-Next, modify the unit test for your main.js. You’ll find the tests scaffolding out in the ‘test’ folder, so open up test/spec/controllers/main.js. 
+Next, modify the unit test for your main.js. You’ll find the tests scaffolding out in the ‘test’ folder, so open up test/spec/controllers/main.js.
 
 Delete the following:
 
@@ -930,7 +935,7 @@ This command will go through the Grunt tasks and configuration Yeoman has set up
 
 ![](/assets/img/codelab/image_35.png)
 
-Your lean, production ready application is now available in a ‘dist’ folder in the root of your ‘mytodo’ project. 
+Your lean, production ready application is now available in a ‘dist’ folder in the root of your ‘mytodo’ project.
 
 Want to preview your production app locally? That’s just another simple grunt command:
 
@@ -947,7 +952,7 @@ It will build your project and launch a local web server. Yo Hero!
 
 Yeoman supports scaffolding out a lot more for Angular and other frameworks than we’ve shown today.
 
-For example, the Angular generator also supports creating new views, directives and controllers for you. A new controller can be scaffolded by running `yo angular:controller controllerName`, which will create your controller files but also update the route in app.js for you. We also try scaffolding out unit tests where possible. 
+For example, the Angular generator also supports creating new views, directives and controllers for you. A new controller can be scaffolded by running `yo angular:controller controllerName`, which will create your controller files but also update the route in app.js for you. We also try scaffolding out unit tests where possible.
 
 To find out all the Yeoman commands for the Angular generator take a look at the [generator readme](https://github.com/yeoman/generator-angular#readme).
 
@@ -964,4 +969,3 @@ To find out all the Yeoman commands for the Angular generator take a look at the
 * Yeoman is always evolving. Be sure to checkout [yeoman.io](http://yeoman.io) for more information and follow [@yeoman](https://twitter.com/yeoman) and [+Yeoman](https://plus.sandbox.google.com/101063139999404044459/posts) to stay up to date.
 
 That’s it from your man-in-a-hat for now. Thanks!
-
