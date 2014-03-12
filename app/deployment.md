@@ -43,6 +43,6 @@ You can also maintain the source and built code on the same branch, and deploy o
 ## Further reading
 
 - [Git Subtree docs](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
-- [Yeoman Build process docs](https://github.com/yeoman/yeoman/wiki/yeoman-build)
+- [Yeoman Build process docs](/docs/commands/yeoman-build.html)
 - [Github Pages docs](https://help.github.com/articles/user-organization-and-project-pages)
 - [Generating a Heroku procfile with generator-heroku](https://github.com/passy/generator-heroku)

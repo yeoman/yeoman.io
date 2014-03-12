@@ -1,2 +1,0 @@
-* [[Stylus integration]]
-* [[Handlebars integration]]
