@@ -75,11 +75,11 @@ yeoman.generators.Base.extend({
 
 The available priorities are (in order):
 
-1. `initialize` - Your initialization methods (checking current project state, getting configs, etc)
-2. `prompt` - Where you prompt users for options (where you'd call `this.prompt()`)
-3. `configure` - Saving configurations and configure the project (creating `.editorconfig` files and other metadata files)
+1. `initializing` - Your initialization methods (checking current project state, getting configs, etc)
+2. `prompting` - Where you prompt users for options (where you'd call `this.prompt()`)
+3. `configuring` - Saving configurations and configure the project (creating `.editorconfig` files and other metadata files)
 4. `default`
-5. `write` - Where you write the generator specific files (routes, controllers, etc)
+5. `writing` - Where you write the generator specific files (routes, controllers, etc)
 6. `conflicts` - Where conflicts are handled (used internally)
 7. `install` - Where installation are run (npm, bower)
 8. `end` - Called last, cleanup, say _good bye_, etc
