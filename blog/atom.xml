@@ -4,12 +4,65 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-13T12:16:36-07:00</updated>
+  <updated>2014-03-20T12:27:15-07:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
   </author>
 
+  
+  <entry>
+    <title>Yeoman Generator 0.17.0 prerelease 1</title>
+    <link href="http://yeoman.io//blog/generator-0.17.html"/>
+    <updated>2014-03-11T00:00:00-07:00</updated>
+    <id>http://yeoman.io/blog/generator-0.17</id>
+    <content type="html">&lt;p&gt;Allo&amp;#39; allo&amp;#39; here&amp;#39;s &lt;a href=&quot;https://github.com/SBoudrias&quot;&gt;Simon&lt;/a&gt; for the Yeoman team.&lt;/p&gt;
+
+&lt;p&gt;After about a month without release of the core system, we&amp;#39;re really happy to announce &lt;a href=&quot;https://github.com/yeoman/generator/releases/tag/v0.17.0-pre.1&quot;&gt;yeoman-generator version 0.17.0-pre&lt;/a&gt;. Our release cycle have been delayed because this is a fairly big release!&lt;/p&gt;
+
+&lt;p&gt;First of all, we published &lt;code&gt;0.17.0-pre&lt;/code&gt; on NPM as a pre-release. Make sure to install it with &lt;code&gt;npm install yeoman-generator --tag pre&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Follow through for an overview of the major changes.&lt;/p&gt;
+
+&lt;h2&gt;Composability&lt;/h2&gt;
+
+&lt;p&gt;As stated on our &lt;a href=&quot;https://github.com/yeoman/yeoman/issues/1264&quot;&gt;2014 roadmap&lt;/a&gt;, composability is our next major core feature.&lt;/p&gt;
+
+&lt;p&gt;Composability will allow us to write smaller base generators for common needs, and enable generator authors to build higher-level generators which reuse them. That&amp;#39;ll make for more centralized works and improvements. For example, we&amp;#39;ll only need a single CSS or Bootstrap generator. Every other generator will be able to concentrate on their domain problems and rely on base generators to handle the rest.&lt;/p&gt;
+
+&lt;p&gt;With 0.17, we bring two major improvements to ease composability issues: a run loop and the &lt;code&gt;composeWith&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;h3&gt;Run loop&lt;/h3&gt;
+
+&lt;p&gt;With Yeoman each methods on a generator&amp;#39;s prototype is a task and run in a synchronous serie. In the current state, a generator will run all its methods; and then call another generator who&amp;#39;ll only run then.&lt;/p&gt;
+
+&lt;p&gt;To allow generators to really run side by side, we needed to allow them to run together instead of one after the other.&lt;/p&gt;
+
+&lt;p&gt;To make this happen, we implemented a run loop that registers task with particular priorities. Higher priorities will run first, and lower priorities would run at the end.&lt;/p&gt;
+
+&lt;p&gt;You can read the full documentation about the run loop inside our &lt;a href=&quot;https://github.com/yeoman/yeoman.io/blob/master/app/authoring/running-context.md#the-run-loop&quot;&gt;new documentation&lt;/a&gt;. This documentation is still WIP and will be released with 0.17.0 complete.&lt;/p&gt;
+
+&lt;h3&gt;&lt;code&gt;composeWith()&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;This new method is almost like the previous &lt;code&gt;invoke&lt;/code&gt; method. The only difference being it&amp;#39;ll add the composed generator to the run loop.&lt;/p&gt;
+
+&lt;p&gt;You can read more about &lt;code&gt;composeWith&lt;/code&gt; &lt;a href=&quot;https://github.com/yeoman/yeoman.io/blob/master/app/authoring/composability.md&quot;&gt;in our new documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Enjoy testing your Generators&lt;/h2&gt;
+
+&lt;p&gt;Unit testing a generator can be daunting. To ease the pain, this release include new tests helpers. These helpers creates a RunContext object who take care of setting and running a generator for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yeoman/yeoman.io/blob/master/app/authoring/testing.md&quot;&gt;Read the documentation&lt;/a&gt; to learn more about it!&lt;/p&gt;
+
+&lt;h2&gt;And then?&lt;/h2&gt;
+
+&lt;p&gt;As you can see, this is a pretty major release. The run loop is not exactly a breaking change, but it could cause issues if name &amp;quot;conflict&amp;quot; with a priority.&lt;/p&gt;
+
+&lt;p&gt;We launch this pre-release to allow you to test it and bring as much feedback as we can before carving 0.17 features into stone. Please update your generators and tell us how it&amp;#39;s been!&lt;/p&gt;
+
+&lt;p&gt;Until next time!&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Yeoman updates for Friday, March 7th.</title>
