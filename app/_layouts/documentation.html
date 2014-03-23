@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body class="{{ page.class }}">
+
+  {% include sidebar.html %}
+
+  <div id="content">
+    {% if page.type == 'list' %}
+      {% if page.markdown == 1 %}
+        {{ content | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    {% else %}
+      <article>
+        {% if page.markdown == 1 %}
+          {{ content | markdownify }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </article>
+    {% endif %}
+    <div class="contribute-doc">
+      Found a typo? An unclear example? Help us improve our documentation! All yeoman.io content can be found at <a href="https://github.com/yeoman/yeoman.io/tree/master/app">github.com/yeoman/yeoman.io</a>. Please fork and send your fixes and suggestions.
+    </div>
+  </div>
+
+  {% include foot.html %}
+</body>
+</html>
