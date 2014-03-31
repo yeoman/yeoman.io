@@ -87,6 +87,17 @@ var yeoman = require('yeoman-generator');
 module.exports = yeoman.generators.Base.extend();
 ```
 
+If you would like to require a `name` argument for your generator (for instance, `yo name:router foo` to require the `foo` and make it available from `this.name`), you can instead do the following:
+
+```js
+var yeoman = require('yeoman-generator');
+
+module.exports = yeoman.generators.NamedBase.extend();
+```
+
+Either type of generator can be used to create either your app your subcommand generator. The former is used most often for the app generator, the later most often used for your subcommand generator where a filename is required.
+
+
 The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
 
 We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](http://nodejs.org/api/modules.html#modules_module_exports).
