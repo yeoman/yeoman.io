@@ -22,7 +22,7 @@ img { max-width: 100%; }
 
 <div class="mast-holder">
 	<img src="/assets/img/yeoman-008.png" class="mast"/>
-	<p><strong> By Addy Osmani, James Cryer & Pearl Chen</strong></p>
+	<p><strong> By Addy Osmani, James Cryer &amp; Pearl Chen</strong></p>
 	<p><strong>Estimated time to complete:</strong> 60 minutes</p>
 </div>
 
@@ -261,7 +261,7 @@ The files that you see in the web browser can be found in the ‘app’ subfolde
 
 ## Create a new template to show a todo list
 
-To start from a cleaner slate, delete everything from your views/main.html file except for the div with a class of "jumbotron", which we will replace with the class “container”:
+To start from a cleaner slate, delete everything from your views/main.html file except for the div with a class of "jumbotron", which we will replace with the class "container":
 
 ```html
 <div class="container">
@@ -289,7 +289,7 @@ Then modify our view (views/main.html) to output our todos items as text input f
 
 <div class="container">
   <h2>My todos</h2>
-  <p class="form-group” ng-repeat="todo in todos">
+  <p class="form-group" ng-repeat="todo in todos">
     <input type="text" ng-model="todo" class="form-control">
   </p>
 </div>
@@ -384,7 +384,7 @@ Note: if you enter in more than one blank todo item, or a todo item with the sam
 
 Let’s now add the ability to remove a todo item. We’ll need to add a new remove button alongside each todo item.
 
-Going back to our view template (views/main.html), add a button to the existing `ng-repeat` directive. And to make sure our input field and remove button line up nicely, change the class on the paragraph tag from "form-group" to “input-group”.
+Going back to our view template (views/main.html), add a button to the existing `ng-repeat` directive. And to make sure our input field and remove button line up nicely, change the class on the paragraph tag from "form-group" to "input-group".
 
 Previous markup:
 
@@ -461,7 +461,7 @@ One thing you might notice is that although we’re able to add and remove items
   <img src="/assets/img/yeoman-005.png" class="mast"/>
 </div>
 
-Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install [AngularUI](http://angular-ui.github.io/), a companion suite to AngularJS, which has a "sortable" directive available.
+Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the [AngularUI Sortable module](https://github.com/angular-ui/ui-sortable), a directive component for AngularJS.
 
 We can check what packages we have already installed with:
 
@@ -472,57 +472,54 @@ $ bower list
 
 ![](/assets/img/codelab/image_22.png)
 
-To verify that there are AngularUI packages available, use Bower to search for "angular-ui":
+To verify that there are AngularUI packages available, use Bower to search for "angular-ui-sortable":
 
 ```
-$ bower search angular-ui
+$ bower search angular-ui-sortable
 ```
 
-
-![](/assets/img/codelab/image_23.png)
-
-Plain old `angular-ui` is the first option shown in the list. Let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
+There is one result for `angular-ui-sortable` so let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
 
 To install both at once, use `bower install`:
 
 ```
-$ bower install --save angular-ui jquery-ui
+$ bower install --save angular-ui-sortable jquery-ui
 ```
 
 
-The `--save` option updates the bower.json file with dependencies on angular-ui and jquery-ui which will save you from having to manually adding it to bower.json yourself.
+The `--save` option updates the bower.json file with dependencies on angular-ui-sortable and jquery-ui which will save you from having to manually add it to bower.json yourself.
 
 ![](/assets/img/codelab/image_24.png)
 
-Take a look at your bower_components directory just to check that everything is there as expected. You should see folders for ‘jquery-ui’ and ‘angular-ui’ alongside the previously installed angular packages:
+Take a look at your bower_components directory just to check that everything is there as expected. You should see folders for ‘jquery-ui’ and ‘angular-ui-sortable’ alongside the previously installed angular packages:
 
 ![](/assets/img/codelab/image_25.png)
 
-## Make todos sortable (using AngularUI Sortable)
+## Make todos sortable (using the AngularUI Sortable module)
 
-References to these newly installed dependencies must be added to our index.html file:
+References to these newly installed dependencies must be added to our index.html file. You _could_ manually add the AngularUI Sortable module and jQueryUI script files yourself but Yeoman will automate this for you.
 
-First, add a link to the angular-ui CSS file. In the document head, under where we include main.css:
+Quit your current command line process by using the `Ctrl+C` keyboard command. 
 
-```html
-<link rel="stylesheet" href="styles/main.css">
-<link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.css">
-```
-
-
-Second, add the AngularUI and jQueryUI JavaScript. In the scripts section at the bottom of index.html include jquery-ui.js and angular-ui.js:
+Run `grunt serve` again and you'll see that the scripts section at the bottom of index.html has automatically updated to include jquery-ui/ui/jquery-ui.js and angular-ui-sortable/sortable.js:
 
 ```html
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
 <script src="bower_components/jquery/jquery.js"></script>
-<script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-ui/build/angular-ui.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<script src="bower_components/angular-ui-sortable/sortable.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 ```
 
-
-Note: Make sure to place the reference to angular-ui.js outside of the `<!-- bower:js -->` block as this will otherwise not build correctly due to an issue with the AngularUI Bower package setup.
-
-Third, load the AngularUI module into our application by updating our Angular module definition in scripts/app.js. Currently it looks like this:
+In order to use the Sortable module, we must load it into our application by updating our Angular module definitions in scripts/app.js. Currently it looks like this:
 
 ```js
 angular.module('mytodoApp', [
@@ -534,7 +531,7 @@ angular.module('mytodoApp', [
 ```
 
 
-Add the ‘ui’ dependency to that array list. Our complete todo module (scripts/app.js) should now look like this:
+Add the ‘ui.sortable’ dependency to that array list. Our complete todo module (scripts/app.js) should now look like this:
 
 ```js
 'use strict';
@@ -544,7 +541,7 @@ angular.module('mytodoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui'
+  'ui.sortable'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -558,11 +555,24 @@ angular.module('mytodoApp', [
   });
 ```
 
-Finally, we need to add the ‘ui-sortable’ directive as a div wrapper around our ng-repeats in main.html. We’ll also add some inline css in order to show a move cursor so it’s clear that we can move todo items:
+Finally, we need to add the ‘ui-sortable’ directive as a div wrapper around our ng-repeats in main.html.
 
 ```html
 <!-- Todos list -->
-<div ui-sortable>
+<div ui-sortable ng-model="todos">
+  <p class="input-group" ng-repeat="todo in todos">
+```
+
+We’ll also add some inline css in order to show a move cursor so it’s clear that we can move todo items:
+
+```html
+<p class="input-group" ng-repeat="todo in todos" style="padding:5px 10px; cursor: move;">
+```
+The full todo list markup looks like this now:
+
+```html
+<!-- Todos list -->
+<div ui-sortable ng-model="todos">
   <p class="input-group" ng-repeat="todo in todos" style="padding:5px 10px; cursor: move;">
     <input type="text" ng-model="todo" class="form-control">
     <span class="input-group-btn">
@@ -598,18 +608,19 @@ $ bower install --save angular-local-storage
 
 ![](/assets/img/codelab/image_29.png)
 
-Modify index.html to include the new Angular module by add the following after the other Angular script tags:
+Similar to how we added jQueryUI and AngularUI Sortable, we need to add a reference to the angular-local-storage.js file in index.html:
 
 ```html
 <script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
 ```
 
-
-Note: if using bower.json, you may need to Ctrl +C to exit the current `grunt serve` instance, run `bower install` and then re-run `grunt serve` to get some automated magic in your index.html.
+Since we're using bower.json to keep track of our modules, `Ctrl+C` to exit the current command line process, then re-run `grunt serve` to get some automated magic in your index.html.
 
 Your index.html scripts should now look like this:
 
 ```html
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -617,9 +628,11 @@ Your index.html scripts should now look like this:
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-ui/angular-ui.js"></script>
 <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<script src="bower_components/angular-ui-sortable/sortable.js"></script>
 <script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 ```
 
 Edit the todo module (scripts/app.js) to include the localStorage adapter:
@@ -630,7 +643,7 @@ angular.module('mytodoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui',
+  'ui.sortable',
   'LocalStorageModule'
 ])
 ```
@@ -655,7 +668,7 @@ angular.module('mytodoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui',
+  'ui.sortable',
   'LocalStorageModule'
 ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider){
@@ -770,7 +783,7 @@ Now that we have a functional app, let’s try to test and build a production re
 
 For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](http://docs.angularjs.org/guide/dev_guide.e2e-testing) and [Jasmine](http://pivotal.github.io/jasmine/). When we ran `yo angular` earlier in this Codelab, the generator scaffolded a `test` directory in the root of the ‘mytodo’ folder, created a karma.conf file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
 
-Let’s go back to the command-line and kill our grunt server using Ctrl+C. There is already a grunt task scaffolded out in our Gruntfile.js for running tests. It can be run as follows:
+Let’s go back to the command-line and kill our grunt server using `Ctrl+C`. There is already a grunt task scaffolded out in our Gruntfile.js for running tests. It can be run as follows:
 
 ```js
 $ grunt test
@@ -785,7 +798,7 @@ Our tests are currently failing as we haven’t updated the boilerplate test whi
   'app/bower_components/jquery/jquery.js',
   'app/bower_components/jquery-ui/ui/jquery-ui.js',
   'app/bower_components/angular/angular.js',
-  'app/bower_components/angular-ui/build/angular-ui.js',
+  'app/bower_components/angular-ui-sortable/sortable.js',
   'app/bower_components/angular-mocks/angular-mocks.js',
   'app/bower_components/angular-local-storage/angular-local-storage.js',
   'app/scripts/*.js',
