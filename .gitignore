@@ -5,3 +5,5 @@ _includes
 dist
 .jekyll
 .tmp
+
+.DS_Store
