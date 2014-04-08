@@ -22,7 +22,7 @@ img { max-width: 100%; }
 
 <div class="mast-holder">
 	<img src="/assets/img/yeoman-008.png" class="mast"/>
-	<p><strong> By Addy Osmani, James Cryer & Pearl Chen</strong></p>
+	<p><strong> By Addy Osmani, James Cryer &amp; Pearl Chen</strong></p>
 	<p><strong>Estimated time to complete:</strong> 60 minutes</p>
 </div>
 
@@ -261,7 +261,7 @@ The files that you see in the web browser can be found in the ‘app’ subfolde
 
 ## Create a new template to show a todo list
 
-To start from a cleaner slate, delete everything from your views/main.html file except for the div with a class of "jumbotron", which we will replace with the class “container”:
+To start from a cleaner slate, delete everything from your views/main.html file except for the div with a class of "jumbotron", which we will replace with the class "container":
 
 ```html
 <div class="container">
@@ -289,7 +289,7 @@ Then modify our view (views/main.html) to output our todos items as text input f
 
 <div class="container">
   <h2>My todos</h2>
-  <p class="form-group” ng-repeat="todo in todos">
+  <p class="form-group" ng-repeat="todo in todos">
     <input type="text" ng-model="todo" class="form-control">
   </p>
 </div>
@@ -384,7 +384,7 @@ Note: if you enter in more than one blank todo item, or a todo item with the sam
 
 Let’s now add the ability to remove a todo item. We’ll need to add a new remove button alongside each todo item.
 
-Going back to our view template (views/main.html), add a button to the existing `ng-repeat` directive. And to make sure our input field and remove button line up nicely, change the class on the paragraph tag from "form-group" to “input-group”.
+Going back to our view template (views/main.html), add a button to the existing `ng-repeat` directive. And to make sure our input field and remove button line up nicely, change the class on the paragraph tag from "form-group" to "input-group".
 
 Previous markup:
 
