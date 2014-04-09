@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-03-20T12:27:15-07:00</updated>
+  <updated>2014-04-09T12:04:34+01:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>Yeoman Generator 0.17.0 prerelease 1</title>
     <link href="http://yeoman.io//blog/generator-0.17.html"/>
-    <updated>2014-03-11T00:00:00-07:00</updated>
+    <updated>2014-03-11T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/generator-0.17</id>
     <content type="html">&lt;p&gt;Allo&amp;#39; allo&amp;#39; here&amp;#39;s &lt;a href=&quot;https://github.com/SBoudrias&quot;&gt;Simon&lt;/a&gt; for the Yeoman team.&lt;/p&gt;
 
@@ -67,7 +67,7 @@
   <entry>
     <title>Yeoman updates for Friday, March 7th.</title>
     <link href="http://yeoman.io//blog/releases-march-7th.html"/>
-    <updated>2014-03-07T00:00:00-08:00</updated>
+    <updated>2014-03-07T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/releases-march-7th</id>
     <content type="html">&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -113,7 +113,7 @@
   <entry>
     <title>Grunt And Gulp Tasks For Performance Optimization</title>
     <link href="http://yeoman.io//blog/performance-optimization.html"/>
-    <updated>2014-03-04T00:00:00-08:00</updated>
+    <updated>2014-03-04T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/performance-optimization</id>
     <content type="html">&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -487,7 +487,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
   <entry>
     <title>What's new in the Backbone generator</title>
     <link href="http://yeoman.io//blog/whats-new-in-backbone-generator.html"/>
-    <updated>2014-02-11T00:00:00-08:00</updated>
+    <updated>2014-02-11T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/whats-new-in-backbone-generator</id>
     <content type="html">&lt;p&gt;The Backbone generator has had a few major updates recently and we wanted to share these changes with the community. The theme of the changes is to make the generator more flexible. There is also some updates related to testing and styling we wanted to share.&lt;/p&gt;
 
@@ -534,7 +534,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
   <entry>
     <title>Updates to some of our generators</title>
     <link href="http://yeoman.io//blog/generator-update-feb-0207.html"/>
-    <updated>2014-02-07T00:00:00-08:00</updated>
+    <updated>2014-02-07T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/generator-update-feb-0207</id>
     <content type="html">&lt;p&gt;Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.&lt;/p&gt;
 
@@ -631,7 +631,7 @@ yo bootstrap
   <entry>
     <title>Exploring A Generator For Gulp.js</title>
     <link href="http://yeoman.io//blog/gulp-explore.html"/>
-    <updated>2014-02-03T00:00:00-08:00</updated>
+    <updated>2014-02-03T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/gulp-explore</id>
     <content type="html">&lt;p&gt;Work has begun on our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;first&lt;/a&gt; official Yeoman generator for &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp.js&lt;/a&gt;.&lt;/p&gt;
 
@@ -743,7 +743,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Generators New Year Cleanup!</title>
     <link href="http://yeoman.io//blog/cleanup.html"/>
-    <updated>2014-01-21T00:00:00-08:00</updated>
+    <updated>2014-01-21T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/cleanup</id>
     <content type="html">&lt;p&gt;A lots of changes and new features have been introduced in the Generator System (&lt;code&gt;npm search yeoman-generator&lt;/code&gt;) lately. If you&amp;#39;re not watching the &lt;a href=&quot;https://github.com/yeoman/generator&quot;&gt;yeoman/generator&lt;/a&gt;, maybe you&amp;#39;ve been let down on the latest changes. Fear not, we &lt;a href=&quot;https://github.com/yeoman/generator/releases&quot;&gt;documented every recent release in our changelog&lt;/a&gt;!&lt;/p&gt;
 
@@ -819,7 +819,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Release the Kraken! - Announcing Yeoman 1.0</title>
     <link href="http://yeoman.io//blog/hello-1.0.html"/>
-    <updated>2013-08-23T00:00:00-07:00</updated>
+    <updated>2013-08-23T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/hello-1.0</id>
     <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0!&lt;/p&gt;
 
