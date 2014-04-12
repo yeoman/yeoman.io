@@ -9,6 +9,8 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 *Feel free to add additional ones, but make sure it's something of value and include the date.*
 
+* [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
+* [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
 * [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow) *2013-07-15*
 * [HTML5Rocks - Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/)
 * [Kickstart your AngularJS development with Yo, Grunt and Bower](http://www.sitepoint.com/kickstart-your-angularjs-development-with-yeoman-grunt-and-bower/)
