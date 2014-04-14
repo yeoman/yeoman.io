@@ -29,6 +29,11 @@ img { max-width: 100%; }
 
 In this code lab, you build a fully functional application using [Yeoman](http://yeoman.io) and [AngularJS](http://angularjs.org). The sample app provides a brief look at some Yeoman, [Grunt](http://gruntjs.com) and [Bower](http://bower.io) features. This code lab assumes that you have some programming experience.
 
+## A great way to run this tutorial
+You can run this entire tutorial in the Codio Web IDE. You'll get the complete Codelab instructions fully integrated into the IDE and a clean server ready to run everything on. If you want to see how it works, [check out this video](https://vimeo.com/88482886). 
+
+* [Run the tutorial in Codio](https://github.com/codio/tutorial_yo_angular)
+
 ## Meet Yeoman
 
 ![](/assets/img/codelab/image_1.png)
