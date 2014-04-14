@@ -2,21 +2,19 @@
 layout: documentation
 ---
 
-# Editing the Gruntfile
+# Managing a Yo Gruntfile
 
-Writing file is usually a simple task. You prepare a string and write it to an output file using the [file system api](/authoring/file-system.html).
+Writing to a file is usually a simple task: prepare a string and write it to an output file using the [file system api](/authoring/file-system.html). However, issues arise when different, (hopefully [compasable](/authoring/composability.html)) generators must write to the same file. A conflict prompt often appears on each write action. This does not make for a good end user experience.
 
-Issues arise when many generators must write to the same file; a conflict prompt appear on each write action. This doesn't make for good user experience.
-
-That's why Yeoman wrap the most commonly edited file, the `Gruntfile.js`, behind a façade.
+This is why Yeoman is wrapping the most commonly edited file, the `Gruntfile.js`, behind a façade. Introducing, the Yeoman Gruntfile editor API.
 
 ## The Gruntfile editor API
 
-Inside a generator context, you can access a `this.gruntfile` object. This object is a `GruntfileEditor` instance provided by the [gruntfile-editor](https://github.com/SBoudrias/gruntfile-editor) module.
+Inside of a generator context, a new object, the `this.gruntfile` object, is now accessible. This object is a `GruntfileEditor` instance provided by the [gruntfile-editor](https://github.com/SBoudrias/gruntfile-editor) module.
 
 As a quick example, you'd use it this way:
 
-``` javascript
+```javascript
 module.exports = Yeoman.generators.Base.extend({
   writing: function () {
     this.gruntfile.insertConfig("compass", "{ watch: { watch: true } }");
@@ -24,25 +22,27 @@ module.exports = Yeoman.generators.Base.extend({
 });
 ```
 
-Yeoman load the current project Gruntfile (or a default template) and write the file at the end. You only need to insert your config blocks, Yeoman take care everything else.
+Yeoman loads the current project's `Gruntfile.js` (or a default template), and writes the file to disk at the end of the generation process. Insert a config block and Yeoman will take care of everything else in the file.
 
 ## Gruntfile editor methods
 
 Please refer to the [gruntfile-editor](https://github.com/SBoudrias/gruntfile-editor) module documentation for the full API.
 
-### `this.gruntfile.insertConfig( name, config )`
+### insertConfig
 
-This method insert a configuration block inside the `grunt.initConfig()` call.
+`this.gruntfile.insertConfig( name, config )`
+
+This method inserts a configuration block inside the `grunt.initConfig()` call.
 
 For example:
 
-``` javascript
+```javascript
 this.gruntfile.insertConfig("compass", "{ watch: { watch: true } }");
 ```
 
 The previous line of code would output the following sections in the Gruntfile:
 
-``` javascript
+```javascript
 grunt.initConfig({
   compass: {
     watch: { watch: true }
@@ -50,9 +50,11 @@ grunt.initConfig({
 });
 ```
 
-### `this.gruntfile.registerTask( name, tasks )`
+### registerTask
 
-This method register a task inside a named task group. For example:
+`this.gruntfile.registerTask( name, tasks )`
+
+This method registers a task inside a named task group. For example:
 
 ```javascript
 this.gruntfile.registerTask('build', 'compass');
@@ -62,4 +64,4 @@ this.gruntfile.registerTask('build', ['compass', 'uglify']);
 // output: grunt.registerTask('build', ['compass', 'uglify']);
 ```
 
-If the named task already exist, we append it to the end of the task array.
+If the named task already exist, the tasks are appended to the end of that task array.
