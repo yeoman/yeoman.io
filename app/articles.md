@@ -9,6 +9,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 *Feel free to add additional ones, but make sure it's something of value and include the date.*
 
+* [Complete Yeoman tutorial in the Codio Web IDE (*2014-04-14*)](https://codio.com/s/blog/2014/04/yeoman-tut/)
 * [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
 * [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
 * [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow) *2013-07-15*
