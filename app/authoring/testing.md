@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Testing Generators
+category: authoring
+excerpt: Yeoman allows and promotes and encourages testing. This is how
 ---
-
-# Testing Generators
 
 Read on to learn more about the testing helpers Yeoman add to ease the pain of unit testing a generator.
 

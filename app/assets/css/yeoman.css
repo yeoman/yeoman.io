@@ -650,3 +650,11 @@ th.sort.desc:before{
     display: table-cell;
   }
 }
+
+code {
+  text-transform: none
+}
+
+h2 code {
+  font-weight: bold;
+}

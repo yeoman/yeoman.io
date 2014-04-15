@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Generator Runtime Context
+category: authoring
+excerpt: this, that, Yeoman. What is available when and where?
 ---
-
-# Generator running context
 
 One of the most important concepts to grasp when writing a Generator is how methods are run and in which context.
 
@@ -18,7 +19,7 @@ Now that you know the prototype methods are considered as action, you may wonder
 
 1. Prefix method name by an underscore (e.g. `_method`).
 2. Use instance methods:
-   
+
   ```js
     yeoman.generators.base.extend({
       init: function () {
@@ -27,23 +28,23 @@ Now that you know the prototype methods are considered as action, you may wonder
         };
       }
     });
-  ``` 
+  ```
 3. Extend a parent generator
- 
+
   ```js
     var MyBase = yeoman.generators.base.extend({
       helper: function () {
         console.log('won\'t be called automatically');
       }
     });
-    
+
     module.exports = MyBase.extend({
       exec: function () {
         this.helper();
       }
     });
   ```
-  
+
 ## The run loop
 
 Running methods sequentially is alright if there's a single generator. But it is not enough once you start composing generators together.

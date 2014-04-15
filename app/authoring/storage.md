@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Managing Configuration
+category: authoring
+excerpt: Making generators customizable through configuration and storage
 ---
-
-# Storing and sharing configuration
 
 Storing user configuration options and sharing them between sub-generator is a common task. For example, it is common to share preferences like the language (does the user use CoffeeScript?), style options (indenting with spaces or tabs), etc.
 

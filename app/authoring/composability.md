@@ -1,15 +1,16 @@
 ---
 layout: documentation
+title: Composability
+category: authoring
+excerpt: Sometimes generators should work together
 ---
-
-# Composability
 
 > Composability is a way to combine smaller parts to make one large thing. Sort of [like Voltron&reg;](http://25.media.tumblr.com/tumblr_m1zllfCJV21r8gq9go11_250.gif)
 
 Yeoman offers multiple ways for generators to build upon common ground. There's no sense in rewriting the same functionality, so an API is provided to use generators inside other generators.
 
 In Yeoman, composability can be initiated in two ways:
-* A generator can decide to compose itself with other generator (e.g., `generator-backbone` uses `generator-mocha`). 
+* A generator can decide to compose itself with other generator (e.g., `generator-backbone` uses `generator-mocha`).
 * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails).
 
 **Note:** The User composability feature hasn't landed in core as of Feb, 26, 2014. It is on the roadmap and will land sooner than later!
@@ -27,7 +28,7 @@ The `composeWith` method allows the generator to run side-by-side with another g
 3. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
     * `settings.local` - A String that defines a path to the requested generator. This allows the use of sub-generators. It also allows the use of a specific version of a generator. To do so, declare it in the [`dependencies` section inside `package.json`](https://www.npmjs.org/doc/files/package.json.html#dependencies). Then reference the path to that generator, usually `node_modules/generator-name`.
     * `settings.link` - A String that is either `weak` (default), or `strong`.
-    
+
       A `weak` link will not run when the composability is user initiated. A `strong` link will always run.
 
       A `weak` link is for features unrelated to the core of the generator like backend frameworks or CSS preprocessors. A`strong` link is for features requiring an action to occur. An example is scaffolding a _module_ by composing a _route_ generator and a _model_ generator.
