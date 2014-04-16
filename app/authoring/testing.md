@@ -51,7 +51,7 @@ The most useful method when unit testing a generator is `helpers.run()`. This me
 
 ```js
 before(function (done) {
-  helper.run('../generators/app')
+  helpers.run('../generators/app')
     .inDir('./tmp') // Clear the directory and set it as the CWD
     .withOptions({ foo: 'bar' }) // Mock options passed in
     .withArguments(['name-x']) // Mock the arguments
