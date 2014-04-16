@@ -79,7 +79,7 @@ The `options` hash (the second argument) accept multiples key/values:
 
 - `desc` Description for the option
 - `type` Either Boolean, String or Number
-- `default` Default value
+- `defaults` Default value
 - `banner` String to show on usage notes
 - `hide` Boolean whether to hide from help
 
