@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Managing a Yeoman Gruntfile
+category: authoring
+excerpt: Creating Gruntfiles and working with them through generation
 ---
-
-# Managing a Yo Gruntfile
 
 Writing to a file is usually a simple task: prepare a string and write it to an output file using the [file system api](/authoring/file-system.html). However, issues arise when different, (hopefully [compasable](/authoring/composability.html)) generators must write to the same file. A conflict prompt often appears on each write action. This does not make for a good end user experience.
 

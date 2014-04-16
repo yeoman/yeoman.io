@@ -21,6 +21,13 @@
         {% endif %}
       </article>
     {% endif %}
+
+    {% if page.class == 'documentation' %}
+      <div class="contribute-doc">
+        Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions.
+        <br><a href="https://github.com/yeoman/yeoman.io/tree/master/app{{ page.url | reverse | replace_first:'lmth','dm' | reverse }}">Improve this Page!</a>
+      </div>
+    {% endif %}
   </div>
 
   {% include foot.html %}

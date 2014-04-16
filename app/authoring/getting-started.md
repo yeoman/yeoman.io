@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Writing Your Own Yeoman Generator
+category: authoring
+excerpt: Just starting out with generators? Start here
 ---
-
-# Authoring a Yeoman generator
 
 Generators are the building blocks of the Yeoman ecosystem. They're the plugins runned by `yo` generating files for the end users.
 
@@ -172,5 +173,3 @@ So if you're generator is not running in your current working directory, make su
 After reading this you should be able to create a local generator and run it.
 
 If this is your first time writing a generator, you should definitely read the next section on the running context and the run loop. This section is a mandatory read to understand in what context your generator will run and to make sure it'll compose well with the other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available in the core to help you achieve your goals.
-
-

@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Managing Dependencies
+category: authoring
+excerpt: Working with npm and Bower to manage external dependencies
 ---
-
-# Managing dependencies
 
 Once you've run your generators, you'll often want to run [npm](http://npmjs.org) and [Bower](http://bower.io) to install any additional dependencies your generators require.
 

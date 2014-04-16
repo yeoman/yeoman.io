@@ -1,8 +1,9 @@
 ---
 layout: documentation
+title: Interacting With The User
+category: authoring
+excerpt: Its all about the users in the end
 ---
-
-# Interacting with the user
 
 Your generator will interact a lot with the end user. By default Yeoman runs on a terminal, but it also supports custom user interfaces different tools can provide. For example, nothing prevents a Yeoman generator from being run inside a graphical tool like an editor or a standalone app.
 

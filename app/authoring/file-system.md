@@ -1,10 +1,9 @@
 ---
 layout: documentation
+title: Working With The File System
+category: authoring
+excerpt: How to interact with the file system in efficient ways
 ---
-
-# Interacting with the file system
-
-In this section we'll review how to interact with the file system in efficient ways.
 
 ## Location contexts
 
