@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body class="{{ page.class }}">
+
+<style>
+body { background: white; }
+img { max-width: 100%; }
+img.spacer { margin: 0 auto; height: 250px; display: block; }
+.mast-holder { width: 100%; text-align: center; }
+.mast { margin: 0 auto; width: 350px; }
+.note { background: #f2dede; padding: 15px; }
+.social { margin: 0 auto; }
+.authors { text-align: center; font-style: italic; }
+ul, li {
+  -webkit-margin-before: 0;
+}
+.codelab-paging {
+  margin-top: 2em;
+  text-align: center;
+}
+.codelab-paging a {
+  margin: 0 1em;
+  font-weight: bold;
+}
+</style>
+
+  {% include sidebar.html %}
+
+  <div id="content">
+    {% if page.type == 'list' %}
+      {% if page.markdown == 1 %}
+        {{ content | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    {% else %}
+      <article>
+        <div class="social">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://yeoman.io/codelab.html" data-text="Let's Scaffold A Web App With Yeoman!">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
+        </div>
+        {% if page.markdown == 1 %}
+          {{ content | markdownify }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </article>
+    {% endif %}
+  </div>
+
+  {% include foot.html %}
+</body>
+</html>
