@@ -5,7 +5,9 @@ markdown: 1
 
 # Use a generator to scaffold out your app
 
-## Accessing the Yeoman menu
+We've used the word "scaffold" a few times but you might not know what that means. Scaffolding, in the Yeoman sense of the word, means generating files for your web app based on your specific configuration requests. In this step, you'll see how Yeoman can generate files specifically for Angular apps &mdash; with options for using other external libraries like SASS and Twitter Bootstrap &mdash; with minimal effort.  
+
+## Access generators via the Yeoman menu
 
 Once a generator has been installed it can be accessed via the Yeoman interactive menu:
 
@@ -13,55 +15,74 @@ Once a generator has been installed it can be accessed via the Yeoman interactiv
 $ yo
 ```
 
+If you have a few generators installed, you'll be able to interactively choose from them:
+
 ![](/assets/img/codelab/image_7.png)
 
-<strong>But wait!</strong> Don’t run a generator in any old place on your computer. Make a project directory where the generator will place your scaffolded project files.
+<div class="note important">
+
+  <h2>But wait!</h2>
+
+  <p>Don’t run a generator in any old place on your computer. First, make a project directory where the generator will place your scaffolded project files.</p>
+
+</div>
 
 Highlight **Get me out of here!** to exit the menu.
 
 ## Create a project folder
 
-To create a **mytodo** folder for all your code lab work:
+Create a ***mytodo*** folder for all your codelab work:
 
 ```js
 $ mkdir mytodo
 $ cd mytodo
 ```
 
-## Scaffold out your AngularJS app
+## Scaffold out your Angular app
 
-Now run `yo`:
+Now run `yo` again to see your generators:
 
-```
+```js
 $ yo
 ```
 
-And highlight **Run the Angular generator**. Hit enter to run the generator.
+Highlight **Run the Angular generator**. Hit **enter** to run the generator.
 
-## Advanced scaffolding
+<div class="note tip">
 
-As you become more familiar with `yo`, you might want to run generators directly without the use of the interactive menu, like so:
+  <h2>Use generators directly</h2>
 
-```js
+  <p>As you become more familiar with <code>yo</code>, you can run generators directly without the use of the interactive menu, like so:</p>
+
+<pre>
 $ yo angular
-```
-## Additional settings
+</pre>
 
-Some generators will also provide optional settings to customize your app with common developer libraries and speed up the initial setup of your development environment.
+</div>
 
-The AngularJS generator provides options to include use [Sass](http://sass-lang.com/) (with Compass) and/or [Bootstrap](http://getbootstrap.com/). Enter ‘n’ and ‘y’ respectively to these options.
+<h2 id="configure">Configure your generator</h2>
+
+Some generators will also provide optional settings to customize your app with common developer libraries to speed up the initial setup of your development environment.
+
+The AngularJS generator provides options to use [Sass](http://sass-lang.com/) (with [Compass](http://compass-style.org)) and include [Twitter Bootstrap](http://getbootstrap.com/). For this codelab, we **won't** use Sass but **will** use Bootstrap. Enter `n` then `y` respectively to these options.
 
 ![](/assets/img/codelab/image_8.png)
 
-Next you are prompted to select what Angular modules you would like to include as well. Angular modules are self-contained JavaScript files with helpful functionality. For example, the ngResource module (angular-resource.js) provides interaction support with RESTful services.
-
-You can deselect options using the spacebar. Let’s roll with the defaults. (So if you have been playing around with the spacebar, make sure that all the modules are marked as green.)
+Next, you are prompted to select what Angular modules you would like to include as well:
 
 ![](/assets/img/codelab/image_9.png)
 
-Okay, hit enter. Yeoman will automatically scaffold out your app, grab your dependencies, and pull in a few useful Grunt tasks for your workflow. After a few minutes of we should be ready.
+Angular modules are self-contained JavaScript files with helpful functionality. For example, the ngResource module (*angular-resource.js*) provides interaction support with RESTful services.
+
+You can deselect and select options using the spacebar.
+
+Let’s roll with the defaults. (So if you have been playing around with the spacebar, make sure that all the modules are marked as green.)
+
+Hit **enter** and watch the magic happen.
 
 ![](/assets/img/codelab/image_10.png)
+
+Yeoman will automatically scaffold out your app, grab your dependencies, and pull in a few useful Grunt tasks for your workflow. After a few minutes we should be ready to go onto the next step.
 
 <p class="codelab-paging">
   <a href="../codelab.html#toc">&laquo; Return to overview</a>

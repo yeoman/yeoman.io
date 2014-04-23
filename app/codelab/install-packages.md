@@ -6,19 +6,24 @@ markdown: 1
 # Use Bower to install packages
 
 <div class="mast-holder">
-  <img src="/assets/img/yeoman-005.png" class="mast"/>
+  <img src="/assets/img/yeoman-005.png">
 </div>
 
 Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the [AngularUI Sortable module](https://github.com/angular-ui/ui-sortable), a directive component for AngularJS.
 
-We can check what packages we have already installed with:
+## List current packages
+
+We can check what packages we have already installed with this command:
 
 ```
 $ bower list
 ```
 
-
 ![](/assets/img/codelab/image_22.png)
+
+You should see that you already have packages for angular-cookies, angular-resources, angular-route, plus others. Remember how we selected these as part of [Step 3](scaffold-app.html#configure) when we configured our generator?
+
+## Search for packages
 
 To verify that there are AngularUI packages available, use Bower to search for "angular-ui-sortable":
 
@@ -26,30 +31,48 @@ To verify that there are AngularUI packages available, use Bower to search for "
 $ bower search angular-ui-sortable
 ```
 
-There is one result for `angular-ui-sortable` so let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
+There is one result for "angular-ui-sortable" so let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
 
-To install both at once, use `bower install`:
+<h2 id="install">Install packages</h2>
+
+Use Bower to install both "angular-ui-sortable" and "jquery-ui":
 
 ```
+$ bower install --save angular-ui-sortable
+$ bower install --save jquery-ui
+```
+
+The `--save` option updates the ***bower.json*** file with dependencies on angular-ui-sortable and jquery-ui. This will save you from having to manually add it to *bower.json* yourself.
+
+<div class="note tip">
+
+  <h2>Install multiple Bower packages at once</h2>
+
+  <p>If you have multiple packages that you want to install, you can do it in one line:</p>
+
+<pre>
 $ bower install --save angular-ui-sortable jquery-ui
-```
+</pre> 
 
-
-The `--save` option updates the bower.json file with dependencies on angular-ui-sortable and jquery-ui which will save you from having to manually add it to bower.json yourself.
+</div>
 
 ![](/assets/img/codelab/image_24.png)
 
-Take a look at your bower_components directory just to check that everything is there as expected. You should see folders for ‘jquery-ui’ and ‘angular-ui-sortable’ alongside the previously installed angular packages:
+## Confirm installation
+
+Take a look at your ***bower_components*** directory just to check that everything is there as expected. You should see folders for "jquery-ui" and "angular-ui-sortable" alongside the previously installed angular packages:
 
 ![](/assets/img/codelab/image_25.png)
 
-## Make todos sortable (using the AngularUI Sortable module)
+<h2 id="implement">Make todos sortable</h2>
 
-References to these newly installed dependencies must be added to our index.html file. You _could_ manually add the AngularUI Sortable module and jQueryUI script files yourself but Yeoman will automate this for you.
+References to these newly installed dependencies must be added to our *index.html* file. You *could* manually add the AngularUI Sortable module and jQueryUI script files yourself but Yeoman will automate this for you!
 
-Quit your current command line process by using the `Ctrl+C` keyboard command. 
+Quit your current command line process by using the <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> keyboard command. 
 
-Run `grunt serve` again and you'll see that the scripts section at the bottom of index.html has automatically updated to include jquery-ui/ui/jquery-ui.js and angular-ui-sortable/sortable.js:
+Then run `grunt serve` again.
+
+You'll see that the `script` section at the bottom of *index.html* has automatically updated to include `jquery-ui/ui/jquery-ui.js` and `angular-ui-sortable/sortable.js`:
 
 ```html
 <!-- build:js scripts/vendor.js -->
@@ -67,7 +90,7 @@ Run `grunt serve` again and you'll see that the scripts section at the bottom of
 <!-- endbuild -->
 ```
 
-In order to use the Sortable module, we must load it into our application by updating our Angular module definitions in scripts/app.js. Currently it looks like this:
+In order to use the Sortable module, we must load it into our application by updating our Angular module definitions in *scripts/app.js*. Currently it looks like this:
 
 ```js
 angular.module('mytodoApp', [
@@ -78,8 +101,7 @@ angular.module('mytodoApp', [
 ])
 ```
 
-
-Add the ‘ui.sortable’ dependency to that array list. Our complete todo module (scripts/app.js) should now look like this:
+Add the `ui.sortable` dependency to the array list in the second paramater. Our complete todo module should now look like this:
 
 ```js
 'use strict';
@@ -103,7 +125,7 @@ angular.module('mytodoApp', [
   });
 ```
 
-Finally, we need to add the ‘ui-sortable’ directive as a div wrapper around our ng-repeats in main.html.
+Finally, we need to add the `ui-sortable` directive as a `div` wrapper around our `ng-repeat` in *main.html*:
 
 ```html
 <!-- Todos list -->
@@ -111,11 +133,12 @@ Finally, we need to add the ‘ui-sortable’ directive as a div wrapper around 
   <p class="input-group" ng-repeat="todo in todos">
 ```
 
-We’ll also add some inline css in order to show a move cursor so it’s clear that we can move todo items:
+Let's also add some inline css in order to show a move cursor so it’s clear that we can move todo items:
 
 ```html
 <p class="input-group" ng-repeat="todo in todos" style="padding:5px 10px; cursor: move;">
 ```
+
 The full todo list markup looks like this now:
 
 ```html
@@ -130,18 +153,12 @@ The full todo list markup looks like this now:
 </div>
 ```
 
+Back in the browser, we can now re-order our list:
 
-This allows us to take our ordered list that looks like:
-
-![](/assets/img/codelab/image_26.png)
-
-and sort it to look like this:
-
-![](/assets/img/codelab/image_27.png)
-
-animated GIF:
-
-![](/assets/img/codelab/image_28.gif)
+<div class="side-by-side">
+  <img src="/assets/img/codelab/image_26.png">
+  <img src="/assets/img/codelab/image_27.png">
+</div>
 
 Pat yourself on the back! You just used Yeoman to build a snazzy todo app in no time. Can you imagine doing front-end web development in any other way now?
 

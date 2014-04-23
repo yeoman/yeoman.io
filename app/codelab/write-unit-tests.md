@@ -5,17 +5,23 @@ markdown: 1
 
 # Test with Karma and Jasmine
 
-For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](http://docs.angularjs.org/guide/dev_guide.e2e-testing) and [Jasmine](http://pivotal.github.io/jasmine/). When we ran `yo angular` earlier in this Codelab, the generator scaffolded a `test` directory in the root of the ‘mytodo’ folder, created a karma.conf file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
+For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a ***test*** directory in the root of the ***mytodo*** folder, created a ***karma.conf*** file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
 
-Let’s go back to the command-line and kill our grunt server using `Ctrl+C`. There is already a grunt task scaffolded out in our Gruntfile.js for running tests. It can be run as follows:
+## Run unit tests
+
+Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our ***Gruntfile.js*** for running tests. It can be run as follows:
 
 ```js
 $ grunt test
 ```
 
-When you run `grunt test`, you will see a new browser window open and close, and some warnings in the Yeoman console. Don’t worry, that’s to be expected right now.
+When you run `grunt test`, you will see a new browser window quickly open and close, plus some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
 
-Our tests are currently failing as we haven’t updated the boilerplate test which still references awesomeThings.  We also need to update the Karma configuration to load the the new Bower components into the browser. Open karma.conf.js and replace the "files" array with:
+## Update unit tests
+
+First, we need to update the Karma configuration to load the the new Bower components we installed in the [Step 7](install-packages.html#install). 
+
+Open ***karma.conf.js*** and replace the `files` array with:
 
 ```js
  files: [
@@ -61,7 +67,9 @@ angular.module('mytodoApp')
 ```
 -->
 
-Modify the unit test for your main.js. You’ll find the tests scaffolding out in the ‘test’ folder, so open up test/spec/controllers/main.js.
+Second, we haven’t updated the boilerplate test which still references `awesomeThings`.
+
+You’ll find the tests scaffolded out in the ***test*** folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify. 
 
 Delete the following:
 
@@ -71,7 +79,6 @@ it('should attach a list of awesomeThings to the scope', function () {
 });
 ```
 
-
 And replace that test with the following:
 
 ```js
@@ -80,30 +87,28 @@ it('should have no items to start', function () {
 });
 ```
 
-
-Re-running our tests with `grunt test` should see our tests passing:
+Re-running our tests with `grunt test` should see our tests now passing:
 
 ![](/assets/img/codelab/image_33.png)
 
-Let’s add a couple of extra tests to test the adding and removing of items:
+The above test only covers part of our app's functionality so let’s add a couple of more tests to test the adding and removing of items:
 
 ```js
-  it('should add items to the list', function () {
-      scope.todo = 'Test 1';
-      scope.addTodo();
-      expect(scope.todos.length).toBe(1);
-    });
+it('should add items to the list', function () {
+    scope.todo = 'Test 1';
+    scope.addTodo();
+    expect(scope.todos.length).toBe(1);
+  });
 
-  it('should add items to the list', function () {
-      scope.todo = 'Test 1';
-      scope.addTodo();
-      scope.removeTodo(0);
-      expect(scope.todos.length).toBe(0);
-    });
+it('should add items to the list', function () {
+    scope.todo = 'Test 1';
+    scope.addTodo();
+    scope.removeTodo(0);
+    expect(scope.todos.length).toBe(0);
+  });
  ```
 
-
-Your full MainCtrl test script (test/spec/controllers/main.js) should now look like this:
+Your full MainCtrl test script (*test/spec/controllers/main.js*) should now look like this:
 
 ```js
 'use strict';
