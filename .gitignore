@@ -1,7 +1,6 @@
 node_modules
 app/bower_components
 _site
-_includes
 dist
 .jekyll
 .tmp
