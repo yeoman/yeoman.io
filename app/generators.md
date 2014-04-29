@@ -173,7 +173,7 @@ var prompts = [{
 }];
 ```
 
-Next you'll see something you'll start seeing a lot more of-- magic. Helper methods given to you by the Yeoman Generator itself.
+Next, you'll see something you'll start seeing a lot more of — magic. Helper methods given to you by the Yeoman Generator itself.
 
 ```js
 this.prompt(prompts, function (props) {
