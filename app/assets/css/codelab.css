@@ -34,7 +34,6 @@ article ul li ul {
 .keyboard {
   border: 1px solid #ccc;
   border-radius: 5px;
-  -moz-border-radius: 5px;
   padding: 2px 6px;
   font-style: normal;
 }
