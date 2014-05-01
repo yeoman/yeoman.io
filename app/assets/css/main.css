@@ -1,0 +1,1332 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 2em;
+}
+
+h5 ,h6 {
+    margin-bottom: 0;
+}
+
+p, pre {
+    margin-bottom: 1.3em;
+}
+
+code {
+    padding: 0.2em 0.4em;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    /* Border Radius */
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+}
+
+.btn {
+    padding: 0.8em 1.2em;
+    background: #5aadbb;
+    /* Border Radius */
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.btn:hover {
+    background: #3398a9;
+}
+
+
+/* Page header and nav
+   ========================================================================== */
+
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 3em;
+    background: #1f1f1f;
+}
+
+.page.header .container {
+    position: relative;
+}
+
+/*
+ Logo
+ */
+
+.logo {
+    position: absolute;
+    top: -0.05em;
+    left: 0.3em;
+    width: 3.5em;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+/*
+ Navigation
+ */
+
+.page-header nav {
+    position: absolute;
+    top: 3em;
+    right: 0;
+    width: 100%;
+    background: #000;
+}
+
+.page-header nav:before {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: -2em;
+    right: 0.8em;
+    width: 25px;
+    height: 16px;
+    background: url(../img/icon-menu.png) no-repeat;
+    content: "";
+}
+
+.page-header nav.open:before {
+    opacity: 0.3;
+}
+
+.page-header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    display: none;
+    font-size: 0.9em;
+}
+
+.open .main-nav {
+    display: block;
+}
+
+.open .main-nav {
+    display: block;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1em;
+    border-bottom: 1px dotted rgba(255,255,255,0.2);
+    color: #fff;
+    text-decoration: none;
+    /* Transitions */
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+}
+
+.main-nav .selected {
+    color: #5aadbb;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.main-nav a:active {
+    background: rgba(255,255,255,0.17);
+}
+
+.main-nav-sub a {
+    padding-left: 3em;
+}
+
+/* Jumbotron
+   ========================================================================== */
+
+.jumbotron {
+    margin: 0 0 3em;
+    padding-top: 4.3em;
+    text-align: center;
+    background: #5aadbb;
+}
+
+.jumbotron h2 {
+    margin: 0 1em;
+    font-weight: normal;
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.illustration {
+    position: relative;
+    top: 1.3em;
+    max-width: 100%;
+}
+
+/* Content
+   ========================================================================== */
+
+.main {
+    padding: 0 1.3em;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.main a {
+    color: #0096c7;
+}
+
+.main a:hover {
+    text-decoration: none;
+}
+
+.content-chunk {
+    margin-bottom: 4em;
+}
+
+.section-title {
+    padding: 0.3em 0;
+    border-bottom: 4px solid rgba(215,0,41,0.1);
+}
+
+/*
+ Excerpt
+ */
+
+.excerpt {
+    margin: 1.8em 0;
+    padding: 0 2em;
+    font-size: 1.2em;
+    color: #5aadbb;
+    font-style: italic;
+
+}
+
+.excerpt a {
+    color: #006080;
+}
+
+/*
+ Anchor Link Icon
+ */
+
+.content-chunk h1, .content-chunk h2, .content-chunk h3, .content-chunk h4, .content-chunk h5, .content-chunk h6 {
+    position: relative;
+}
+
+.content-chunk h1:hover, .content-chunk h2:hover, .content-chunk h3:hover, .content-chunk h4:hover, .content-chunk h5:hover, .content-chunk h6:hover {
+    color: #000;
+    border-color: rgba(215,0,41,0.2);
+}
+
+.anchor {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    margin-top: -18px;
+    padding-right: 15px;
+}
+
+*:hover > .anchor {
+    display: block;
+}
+
+/*
+ One Line Install
+ */
+
+ .one-line-install {
+    margin-bottom: 3em;
+ }
+
+ .one-line-install pre {
+    padding: 0.5em 1em;
+    background: #bfe6ed;
+    /* Border Radius */
+        -webkit-border-radius: 0.35em;
+        -moz-border-radius: 0.35em;
+        -ms-border-radius: 0.35em;
+        -o-border-radius: 0.35em;
+        border-radius: 0.35em;
+}
+
+/*
+ Basic Tools
+ */
+
+.basic-tools {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.basic-tools li {
+    margin-bottom: 2em;
+}
+
+.basic-tools li:last-child {
+    margin-bottom: 1em;
+}
+
+.basic-tools span {
+    font-size: 0.9em;
+}
+
+.basic-tools .tool-logo {
+    display: block;
+    margin-bottom: 0.5em;
+    padding: 1em;
+    text-align: center;
+    /* Transitions */
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+}
+
+.basic-tools .yo { background: rgba(240,240,240,1); }
+.basic-tools .yo:hover { background: rgba(240,240,240,0.6);; }
+.basic-tools .grunt { background: rgba(251,169,25,1); }
+.basic-tools .grunt:hover { background: rgba(251,169,25,0.6); }
+.basic-tools .bower { background: rgba(255,204,47,1); }
+.basic-tools .bower:hover { background: rgba(255,204,47,0.6); }
+
+.basic-tools .tool-logo:active {
+    /* Box Shadow */
+        -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+        -moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+        -ms-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+        -o-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+        box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+}
+
+.basic-tools .tool-logo img {
+    max-width: 7em;
+}
+
+/*
+ Yeoman Team
+ */
+
+.team {
+    margin: 0 0 1em;
+    padding: 0;
+    list-style: none;
+}
+
+.team a {
+    display: block;
+    padding: 0.5em 1.5em;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+    text-decoration: none;
+    /* Transitions */
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+}
+
+.team li:last-child a {
+    border: none;
+}
+
+.team a:hover,
+.team a:active {
+    background: #bfe6ed;
+    color: #207d8d;
+    text-decoration: none;
+}
+
+.team img {
+    max-width: 3em;
+    margin-right: 1em;
+    /* Border Radius */
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+}
+
+/* Inside Pages
+   ========================================================================== */
+
+.page-title {
+    margin-top: 0;
+    margin-bottom: 2em;
+    padding: 4.6em 0 2em;
+    background: #5aadbb;
+    font-size: 1em;
+    line-height: 1em;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/*
+ Context/Local Nav
+ */
+
+.context-nav {
+    margin-bottom: 2.2em;
+    padding: 0 1.2em;
+}
+
+.context-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.context-nav .nav-item {
+    display: none;
+}
+
+.context-nav.open .nav-item {
+    display: block;
+}
+
+.context-nav .nav-item-selected {
+    position: relative;
+}
+
+.context-nav .nav-item-selected:after {
+    top: 1.05em;
+    right: 1em;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: #fff;
+    border-width: 0.4em;
+}
+
+.context-nav.open .nav-item-selected:after {
+    opacity: 0.4;
+}
+
+.context-nav a {
+    display: block;
+    padding: 0.5em 1em;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: #0096c7;
+    /* Transitions */
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+}
+
+.context-nav a:hover,
+.context-nav a:active {
+    background: #bfe6ed;
+    color: #207d8d;
+    text-decoration: none;
+}
+
+.context-nav .nav-item-selected > a {
+    color: #fff;
+    background: #5aadbb;
+    font-style: italic;
+}
+
+.context-nav.open .nav-item-selected > a,
+.context-nav .nav-item-selected > a:hover {
+    background: #228596;
+}
+
+
+
+/* Page footer
+   ========================================================================== */
+
+.page-footer {
+    padding: 2em 0 0;
+    background: #1f1f1f;
+    text-align: center;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 1em 3em;
+}
+
+.footer-links .icon:hover {
+    opacity: 0.5;
+}
+
+.footer-links img {
+    max-width: 2.2em;
+}
+
+.footer-links .btn {
+    position: relative;
+    top: 0.2em;
+}
+
+
+/* Google Code Prettify
+   ========================================================================== */
+
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+
+pre .str, code .str { color: #65B042; } /* string  - green */
+pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #89bdff; } /* type - light blue */
+pre .lit, code .lit { color: #3387CC; } /* literal - blue */
+pre .pun, code .pun { color: #fff; } /* punctuation - white */
+pre .pln, code .pln { color: #fff; } /* plaintext - white */
+pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+        font-size: 0.95em;
+        background-color: #2e2e2e;
+        -webkit-border-radius: 0.35em;
+        -moz-border-radius: 0.35em;
+        -ms-border-radius: 0.35em;
+        -o-border-radius: 0.35em;
+        border-radius: 0.35em;
+}
+
+pre.prettyprint {
+        padding: 1em;
+        white-space: pre-wrap;
+}
+
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre .str, code .str { color: #060; }
+  pre .kwd, code .kwd { color: #006; font-weight: bold; }
+  pre .com, code .com { color: #600; font-style: italic; }
+  pre .typ, code .typ { color: #404; font-weight: bold; }
+  pre .lit, code .lit { color: #044; }
+  pre .pun, code .pun { color: #440; }
+  pre .pln, code .pln { color: #000; }
+  pre .tag, code .tag { color: #006; font-weight: bold; }
+  pre .atn, code .atn { color: #404; }
+  pre .atv, code .atv { color: #060; }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+@media only screen and (min-width: 20em) {
+
+    .logo a:before {
+        display: block;
+        top: -0.5em;
+        left: -1.3em;
+        position: absolute;
+        width: 2.35em;
+        height: 2.35em;
+        content: "";
+        background: url(../img/yeoman-02.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .logo img {
+        margin-left: 1.2em;
+    }
+
+    .page-title {
+        margin-bottom: 1.7em;
+    }
+
+    .context-nav {
+        margin-bottom: 2.6em;
+    }
+}
+
+
+@media only screen and (min-width: 28em) {
+
+    .jumbotron {
+        padding-top: 5em;
+    }
+
+    .jumbotron h2 {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .page-title {
+        margin-bottom: 1.4em;
+        padding: 3.5em 0 1.7em;
+        font-size: 1.5em;
+    }
+
+    .main {
+        font-size: 1.2em;
+    }
+
+    .basic-tools li {
+        overflow: hidden;
+    }
+
+    .basic-tools .tool-logo {
+        float: left;
+        width: 42%;
+        margin: 0 3% 0 0;
+        /* Box Sizing */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+    }
+
+    .basic-tools li span {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+
+
+    .team img {
+        max-width: 5em;
+    }
+
+    .footer-links img {
+        max-width: 3em;
+    }
+}
+
+@media only screen and (min-width: 35em) {
+
+    .jumbotron h2 {
+        font-size: 1.6em;
+    }
+
+    .illustration {
+        top: 1.5em;
+    }
+
+    .page-title {
+        margin-bottom: 1.2em;
+        padding: 2.3em 0 1em;
+        font-size: 2em;
+    }
+
+    .main {
+        font-size: 1.3em;
+    }
+
+    .team {
+        overflow: hidden;
+    }
+
+    .team li {
+        display: block;
+        float: left;
+        width: 30%;
+        margin-right: 3%;
+        margin-bottom: 2em;
+        font-size: 0.8em;
+    }
+
+    .team a {
+        padding: 0;
+        border: none;
+    }
+
+    .team a:hover {
+        background: none;
+    }
+
+    .team img {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        /* Border Radius */
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            border-radius: 0;
+    }
+
+    .context-nav {
+        max-width: 25em;
+    }
+}
+
+/* Menu gets to be displayed */
+@media only screen and (min-width: 46em) {
+
+    .page-header nav {
+        top: 0;
+        right: 0;
+        width: auto;
+        background: none;
+    }
+
+    .page-header nav:before {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+    }
+
+    .main-nav > li {
+        position: relative;
+        float: left;
+        vertical-align: bottom;
+    }
+
+    .main-nav > li:hover {
+        background: rgba(255,255,255,0.1);
+        /* Transitions */
+            -webkit-transition: all 0.8s ease;
+            -moz-transition: all 0.8s ease;
+            -ms-transition: all 0.8s ease;
+            -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+    }
+
+    .main-nav a {
+        border: none;
+    }
+
+    .main-nav-sub {
+        display: none;
+        position: absolute;
+        top: 3.2em;
+        left: 0;
+        min-width: 100%;
+        background: #000;
+    }
+
+    .main-nav > li:hover > .main-nav-sub {
+        display: block;
+    }
+
+    .main-nav-sub a {
+        padding-left: 1em;
+        white-space: nowrap;
+        /* Transitions */
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+    }
+
+    .main-nav-sub a:hover {
+        border-left: 1em solid rgba(221,0,42,1);
+    }
+
+    .jumbotron h2 {
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+
+    .page-title {
+        margin-bottom: 1.5em;
+        padding: 0;
+        text-align: left;
+        font-size: 2.4em;
+    }
+
+    .page-title .container {
+        display: block;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.5em 5em 1.6em 0.6em;
+        background: #5aadbb url(../img/rocket.png) 97% 70% no-repeat;
+        background-size: 4em auto;
+        /* Box Sizing */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+    }
+
+    .context-nav {
+        margin-bottom: 3.2em;
+    }
+}
+
+@media only screen and (min-width: 46em) {
+
+    .team li {
+        width: 23%;
+        margin-right: 2%;
+    }
+
+}
+
+@media only screen and (min-width: 50em) {
+
+    .jumbotron {
+        margin-bottom: 4em;
+    }
+
+    .illustration {
+        top: 2em;
+    }
+
+    .main {
+        font-size: 1.4em;
+    }
+}
+
+
+
+@media only screen and (min-width: 60em) {
+
+    .jumbotron {
+        padding-top: 6em;
+    }
+
+    .jumbotron h2 {
+        font-size: 2.6em;
+    }
+
+    .one-line-install {
+        padding: 2em 2em 1em;
+        vertical-align: top;
+        border: 1px dashed #ccc;
+        background: #eee;
+        /* Columns */
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            -webkit-column-width: 50%;
+            -moz-column-width: 50%;
+            -moz-column-width: 50%;
+            -webkit-column-gap: 3em;
+            -moz-column-gap: 3em;
+            column-gap: 3em;
+    }
+
+    .one-line-install p:first-child {
+        margin-top: 0;
+    }
+
+    .one-line-install pre {
+        background: #b2d7dd;
+    }
+
+    .main {
+        font-size: 1.1em;
+        padding: 1em 2em;
+    }
+
+    .main-container .main {
+        padding-top: 0;
+    }
+
+    .page-footer {
+        clear: both;
+        position: relative;
+        z-index: 11;
+        background: #131313;
+    }
+}
+
+@media only screen and (min-width: 70em) {
+
+
+    .container {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .has-sidebar {
+        padding-left: 20em;
+        /* Box Sizing */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+    }
+
+    .page-header {
+        height: 5em;
+    }
+
+    .logo {
+        top: 0.4em;
+        width: 4.5em;
+    }
+
+    .logo a:before {
+        top: -1em;
+        left: 0;
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    .logo img {
+        margin-left: 3.6em;
+    }
+
+    .page-header nav {
+        top: 0;
+    }
+
+    .main-nav > li > a {
+        padding: 2.1em 2em;
+    }
+
+    .main-nav-sub {
+        top: 5.2em;
+    }
+
+    .jumbotron {
+        position: relative;
+        padding-top: 8em;
+    }
+
+    .jumbotron h2 {
+        float: left;
+        width: 40%;
+        margin: 0 0 0 5%;
+        text-align: left;
+        font-size: 3em;
+    }
+
+    .illustration {
+        float: right;
+        width: 53%;
+        margin-right: 2%;
+    }
+
+    .page-title {
+        margin-bottom: 0.7em;
+    }
+
+    .page-title .container {
+        padding-top: 3.4em;
+        background-position: 97% 78%;
+        background-size: 5em auto;
+    }
+
+    .main {
+        line-height: 1.8em;
+    }
+
+    .context-nav {
+        position: absolute;
+        top: 1.3em;
+        left: 0;
+        width: 17em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .context-nav .nav-item {
+        display: block;
+    }
+
+    .context-nav .nav-item-selected:after {
+        display: none;
+    }
+
+    .basic-tools li {
+        float: left;
+        width: 31%;
+        margin-right: 2%;
+        margin-bottom: 0;
+        line-height: 1.5em;
+    }
+
+    .basic-tools .tool-logo,
+    .basic-tools li span {
+        float: none;
+        width: 100%;
+        margin: 0 0 1em;
+    }
+
+    .section-tools {
+        float: left;
+        width: 63%;
+    }
+
+    .section-team {
+        float: right;
+        width: 30%;
+    }
+
+    .basic-tools li {
+        width: 28%;
+        margin-right: 4%;
+    }
+
+    .team a {
+    display: block;
+    padding: 0.5em 1.5em;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+    text-decoration: none;
+    /* Transitions */
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .team li {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .team li:last-child a {
+        border: none;
+    }
+
+    .team a:hover,
+    .team a:active {
+        background: #bfe6ed;
+        color: #207d8d;
+        text-decoration: none;
+    }
+
+    .team img {
+        max-width: 5em;
+        margin-right: 1em;
+        /* Border Radius */
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+    }
+}
+
+
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
