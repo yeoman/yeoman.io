@@ -3,30 +3,29 @@
 {% include head.html %}
 <body class="{{ page.class }}">
 
-  {% include sidebar.html %}
+  {% include header.html %}
 
   <div id="content">
-    {% if page.type == 'list' %}
-      {% if page.markdown == 1 %}
-        {{ content | markdownify }}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    {% else %}
-      <article>
-        {% if page.markdown == 1 %}
-          {{ content | markdownify }}
-        {% else %}
-          {{ content }}
-        {% endif %}
-        {% if page.social_text %}
-          <div class="social">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{page.social_text}}" data-url="{{page.social_url}}">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
-          </div>
-        {% endif %}
+    <h2 class="page-title">
+      <div class="container">{{ page.title }}</div>
+    </h2>
+    <div class="container has-sidebar clearfix">
+      <article class="main">
+        <section class="content-chunk">
+          {% if page.markdown == 1 %}
+            {{ content | markdownify }}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </section>
       </article>
+    </div>
+    {% if page.social_text %}
+      <div class="social">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{page.social_text}}" data-url="{{page.social_url}}">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
+      </div>
     {% endif %}
 
     {% if page.class == 'documentation' %}
