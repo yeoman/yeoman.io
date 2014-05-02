@@ -1,22 +1,13 @@
 /*global jQuery, _, List */
-(function (win) {
+(function (win, $) {
   'use strict';
+  var $win = $(window);
+  var $doc = $(document);
 
-  jQuery(function($) {
-    var $win = $(window);
-    var $doc = $(document);
-    var $nav = $('nav');
-    var setMenuBackgroundHeight = function() {
-      var d = $doc.height();
-      var w = $win.width();
-      $nav.css({'min-height': w > 760 ? d : 100});
-    };
+  $(function() {
 
     $('pre code').addClass('prettyprint');
-    $win.bind('load resize', setMenuBackgroundHeight);
     window.prettyPrint();
-    setMenuBackgroundHeight();
-
 
     var getGenerators = function(url, official) {
       $.getJSON(url, function (modules) {
@@ -116,4 +107,4 @@
       getGenerators('https://api.github.com/search/repositories?q=generator+in:name+user:yeoman', true);
     }
   });
-})(window);
+})(window, jQuery);

@@ -123,19 +123,14 @@ code {
     padding: 0.2em 0.4em;
     background: #f8f8f8;
     border: 1px solid #ddd;
-    /* Border Radius */
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
+    line-height: 1;
+    border-radius: 3px;
 }
 
 .btn {
     padding: 0.8em 1.2em;
     background: #5aadbb;
-    /* Border Radius */
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
+    border-radius: 3px;
     color: #fff;
     text-decoration: none;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
@@ -153,7 +148,7 @@ code {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 12;
     width: 100%;
     height: 3em;
     background: #1f1f1f;
@@ -617,7 +612,8 @@ pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
 pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
 pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 
-pre.prettyprint, code.prettyprint {
+.highlight > pre,
+code.prettyprint {
         font-size: 0.95em;
         background-color: #2e2e2e;
         -webkit-border-radius: 0.35em;
@@ -627,11 +623,18 @@ pre.prettyprint, code.prettyprint {
         border-radius: 0.35em;
 }
 
-pre.prettyprint {
+.highlight > pre {
         padding: 1em;
-        white-space: pre-wrap;
+        overflow: auto;
+        word-wrap: normal;
 }
-
+.highlight > pre code {
+        font-size: 1em;
+        white-space: pre;
+        background-color: transparent;
+        border: none;
+        border-right: none;
+}
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
