@@ -668,7 +668,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 
 .discovery-page td {
-  padding: 10px 0;
+  padding: 10px 5px;
   border-top: 1px solid #ddd;
 }
 
@@ -678,14 +678,36 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 [data-sort="updated"] {
   display: none;
 }
-
-.search {
-  min-width: 35%;
+.sort {
+  text-align: left;
+  min-width: 100px;
+}
+th.sort:before {
+  content: '\21C5';
+  display: inline-block;
+  opacity: .6;
+  font-size: 0.8em;
+}
+th.sort.asc:before{
+  content: '\2193';
+  opacity: 1;
+  text-align: left;
+}
+th.sort.desc:before{
+  content: '\2191';
+  opacity: 1;
+  text-align: right;
+}
+input.search {
+  width: 100%;
   line-height: 1.5em;
   margin: 20px 0;
   font-size: 16px;
   padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 
 @media print {
   pre .str, code .str { color: #060; }
