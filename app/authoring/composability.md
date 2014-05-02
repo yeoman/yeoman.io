@@ -2,6 +2,7 @@
 layout: documentation
 title: Composability
 category: authoring
+sidebar: sidebars/authoring.html
 excerpt: Sometimes generators should work together
 ---
 
