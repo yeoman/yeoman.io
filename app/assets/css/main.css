@@ -642,6 +642,15 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
 /* Alternate shading for lines */
 li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
+.contribute-doc {
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+  background: #efefef;
+  border-radius: 0.35em;
+}
+
 @media print {
   pre .str, code .str { color: #060; }
   pre .kwd, code .kwd { color: #006; font-weight: bold; }
