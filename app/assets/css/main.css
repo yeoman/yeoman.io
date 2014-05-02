@@ -236,7 +236,7 @@ Navigation
   transition: all 0.8s ease;
 }
 
-.main-nav .selected {
+.main-nav a.active {
   color: #5aadbb;
   font-weight: bold;
 }
@@ -505,11 +505,11 @@ Context/Local Nav
   display: block;
 }
 
-.context-nav .nav-item-selected {
+.context-nav .nav-item .active {
   position: relative;
 }
 
-.context-nav .nav-item-selected:after {
+.context-nav .nav-item .active:after {
   top: 1.05em;
   right: 1em;
   border: solid transparent;
@@ -522,7 +522,7 @@ Context/Local Nav
   border-width: 0.4em;
 }
 
-.context-nav.open .nav-item-selected:after {
+.context-nav.open .nav-item .active:after {
   opacity: 0.4;
 }
 
@@ -547,14 +547,14 @@ Context/Local Nav
   text-decoration: none;
 }
 
-.context-nav .nav-item-selected > a {
+.context-nav .nav-item .active {
   color: #fff;
   background: #5aadbb;
   font-style: italic;
 }
 
-.context-nav.open .nav-item-selected > a,
-.context-nav .nav-item-selected > a:hover {
+.context-nav.open .nav-item .active,
+.context-nav .nav-item .active:hover {
   background: #228596;
 }
 
@@ -1244,7 +1244,7 @@ Modify as content requires.
     display: block;
   }
 
-  .context-nav .nav-item-selected:after {
+  .context-nav .nav-item .active:after {
     display: none;
   }
 
