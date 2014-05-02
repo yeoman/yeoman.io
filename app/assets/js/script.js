@@ -6,6 +6,16 @@
 
   $(function() {
 
+    // Open/close mobile menu
+    $('.page-header nav').click(function(){
+      $(this).toggleClass('open');
+    });
+
+    $('.context-nav').click(function(){
+      $(this).toggleClass('open');
+    });
+
+    // Beautify code blocks
     $('pre code').addClass('prettyprint');
     window.prettyPrint();
 

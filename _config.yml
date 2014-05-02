@@ -28,3 +28,6 @@ markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+
+gems:
+- jekyll-redirect-from
