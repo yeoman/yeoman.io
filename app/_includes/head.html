@@ -1,6 +1,10 @@
 <head>
   <meta charset="utf-8">
-  <title>Yeoman - Modern workflows for modern webapps</title>
+  {% if page.title %}
+    <title>{{page.title}} | Yeoman</title>
+  {% else %}
+    <title>Yeoman - Modern workflows for modern webapps</title>
+  {% endif %}
   <meta name="viewport" content="width=device-width">
 
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lekton|Ubuntu+Mono:400,700" rel="stylesheet">
