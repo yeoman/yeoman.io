@@ -2,6 +2,7 @@
 layout: documentation
 title: Managing Configuration
 category: authoring
+sidebar: sidebars/authoring.html
 excerpt: Making generators customizable through configuration and storage
 ---
 
