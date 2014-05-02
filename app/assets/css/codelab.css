@@ -40,7 +40,7 @@ article ul li ul {
 
 /* Note callouts */
 
-.note { 
+.note {
   padding: 15px;
   margin-bottom: 20px;
 }
@@ -50,8 +50,8 @@ article ul li ul {
 .note.tip {
   background: #d2e0d2;
 }
-.note p, 
-.note li { 
+.note p,
+.note li {
   font-size: 13px;
   line-height: 18px;
 }
@@ -63,11 +63,13 @@ article ul li ul {
 }
 
 /* Images */
+/*
+FIXME: Too generic, this have impact on other pages
 article img {
   max-width: 100%;
   margin: 0 auto;
   display: block;
-}
+}*/
 
 .mast-holder {
   width: 100%;
@@ -83,7 +85,7 @@ article img {
 
 @media (min-width: 761px) {
   .mast-intro > img {
-    float: left; 
+    float: left;
     margin: -10px 10px 0 0;
     display: block;
   }

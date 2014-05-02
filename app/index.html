@@ -1,178 +1,163 @@
 ---
-layout: default
+layout: base
 title: The web's scaffolding tool for modern webapps
 ---
 
-<article>
-  <section>
+<div class="content">
 
+  <div class="jumbotron clearfix">
+    <div class="container">
+      <h2>The web's scaffolding tool for modern webapps</h2>
 
-{% capture homepage %}
-
-<p class="toolset">
-<img src="/assets/img/yeoman-horizontal.gif" alt="Yeoman">
-</p>
-<p class="strapline">
-<a href="http://yeoman.io/gettingstarted.html">Get started</a> and then <a href="http://yeoman.io/community-generators.html">find a generator</a> for your webapp. Generators are available for <a href="https://github.com/yeoman/generator-angular">Angular</a>, <a href="https://github.com/yeoman/generator-backbone">Backbone</a>, <a href="https://github.com/yeoman/generator-ember">Ember</a> and over 400 other projects. Read the <a href="http://updates.html5rocks.com/tag/front-end">Yeoman Monthly Digest</a> for our latest picks.
-</p>
-<p class="strapline oneline">One-line install using <a href="http://npmjs.org">npm</a>:</p>
-
-```
-npm install -g yo
-```
-
-## Why use Yeoman?
-
-With so many great tools available to front-end web developers these days it can sometimes be difficult to understand how they all fit together. Deciding on a workflow that you’re happy with is often a very personal endeavour, but getting started isn’t always easy. Yeoman aims to solve this problem by scaffolding workflows for creating modern webapps, while at the same time mixing in many of the best practices that have evolved within the industry.
-
-## Yeoman
-
-Our workflow is comprised of three tools for improving your **productivity** and **satisfaction** when building a web app: *yo* (the scaffolding tool), *grunt* (the build tool) and *bower* (for package management).
-
-<ul class="tools-list">
-<li class="yoyo"><a href="https://github.com/yeoman/yo">yo</a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks and Bower dependencies that you might need for your build.</li>
-
-<li class="gruntjs"><a href="http://gruntjs.com">Grunt</a> is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib. </li>
-
-<li class="bower"><a href="http://bower.io">Bower</a> is used for dependency management, so that you no longer have to manually download and manage your scripts.</li>
-</ul>
-
-All three of these tools are developed and maintained separately, but work well together as part of our prescribed workflow for keeping you effective.
-
-## Getting started
-
-### Installation
-
-A complete [getting started](/gettingstarted.html) guide is available but for those looking to get up and running quickly, make sure you have installed [Node.js](http://nodejs.org), [Git](http://git-scm.org) and optionally, [Ruby](http://ruby-lang.org) and [Compass](http://compass-style.org/install) (if you plan to use Compass).
-
-Then install the required tools globally by running:
-
-```
-npm install -g yo
-```
-
-This will install _Grunt_ and _Bower_ automatically.
-
-**Pro-tip:** A [5 Minute Introduction Video](http://www.youtube.com/watch?feature=player_embedded&v=zBt2g9ekiug) to Yeoman is available if you're a little more visually inclined :)
-
-`yo` can generate several types of applications, but it needs help from plug-ins, or [generators](http://yeoman.io/community-generators.html) to get the job done. To scaffold a web application, you'll need to grab the web app generator:
-
-```
-npm install -g generator-webapp
-```
-
-**Note:** Many generators no longer require this installation step and will automatically install yo, grunt and bower just by installing the generator directly.
-
-You can install additional generators with npm. For example, to install the [AngularJS](http://angularjs.org) generator: `npm install -g generator-angular`. Run `yo` for more information.
-
-**Pro-tip:** Looking for a tutorial? We're happy to recommend [Building apps with the Yeoman workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/) on NetTuts.
-
-### Usage
-
-A complete workflow might look like this:
-
-```sh
-yo webapp                      # scaffold out a skeleton web app project
-bower install underscore       # install a dependency for your project from Bower
-grunt                          # build the application for deployment
-```
-
-Or with the AngularJS generator:
-
-```sh
-npm install -g generator-angular  # install generator
-yo angular                        # scaffold out a AngularJS project
-bower install angular-ui          # install a dependency for your project from Bower
-grunt test                        # test your app
-grunt serve                       # preview your app (formerly `grunt server`)
-grunt                             # build the application for deployment
-```
-
-## Migrating from earlier versions
-
-If you were previously using Yeoman 0.9.x, you may have noticed a few things have changed. A [migration guide](/migrate.html) is available to help you move over to 1.0. We've also written up some of the [reasons](/road.html) behind our move.
-
-## Contributing
-
-We are more than happy to accept external contributions to the project in the form of feedback, [bug reports](https://github.com/yeoman/yeoman) and even better - pull requests.
-
-At this time we are primarily focusing on improving the user-experience and stability of Yeoman for our 1.0 beta release. Please keep this in mind when submitting feature requests, which we're happy to consider for future versions.
-{% endcapture %}
-{{ homepage | markdownify }}
-
-    <h2 class="hero-title">My features <a href="#features-disclaimer">*</a></h2>
-    <div class="row features">
-      <ul class="span5">
-        <li>
-          <i class="icon-star"></i> <strong>Lightning-fast scaffolding</strong> — Easily scaffold new projects with customizable templates (e.g HTML5 Boilerplate, Bootstrap), RequireJS   and more.<p></p>
-        </li>
-        <li>
-          <i class="icon-tasks"></i> <strong>Great build process</strong> — Not only do you get minification and concatenation; I also optimize all your image files, HTML, compile your CoffeeScript and Compass files, if you're using AMD, I will pass those modules through r.js so you don't have to.<p></p>
-        </li>
-        <li>
-          <i class="icon-refresh"></i> <strong>Automatically compile CoffeeScript &amp; Compass</strong> — Our LiveReload watch process automatically compiles source files and refreshes your browser whenever a change is made so you don't have to.<p></p>
-        </li>
-        <li>
-          <i class="icon-cog"></i> <strong>Automatically lint your scripts</strong> — All your scripts are automatically run against JSHint to ensure they're following language best-practices.<p></p>
-        </li>
-        <li>
-          <i class="icon-upload"></i> <strong>Built-in preview server</strong> — No more having to fire up your own HTTP Server. My built-in one can be fired with just one command.<p></p>
-        </li>
-        <li>
-          <i class="icon-picture"></i> <strong>Awesome Image Optimization</strong> — I optimize all your images using OptiPNG and JPEGTran so your users can spend less time downloading assets and more time using your app.<p></p>
-        </li>
-        <li>
-          <i class="icon-inbox"></i> <strong>Killer package management</strong> — Need a dependency? It's just a keystroke away. I allow you to easily search for new packages via the command-line (e.g. `bower search jquery`), install them and keep them updated without needing to open your browser.<p></p>
-        </li>
-        <li>
-          <i class="icon-ok"></i> <strong>PhantomJS Unit Testing</strong> — Easily run your unit tests in headless WebKit via PhantomJS. When you create a new application, I also include some test scaffolding for your app.<p></p>
-        </li>
-      </ul>
-      <em id="features-disclaimer"><a href="#">*</a> features are dependent on what the individual generators provide</em>
+      <img src="/assets/img/illustration-home-inverted.png" alt="Yeoman and his fellow developers" class="illustration">
     </div>
-  </section>
+  </div><!-- /.jumbotron -->
 
+  <div class="container">
+    <article class="main clearfix">
 
+      <section class="one-line-install">
+        <p><a href="">Get started</a> and then <a href="">find a generator</a> for your webapp. Generators are available for <a href="">Angular</a>, <a href="">Backbone</a>, <a href="">Ember</a> and over 400 other projects. Read the <a href="">Yeoman Monthly Digest</a> for our latest picks.</p>
 
-  <hr>
+        <p><strong>One-line install using <a href="http://npmjs.org">npm</a>:</strong></p>
 
-  <section>
-    <ul class='quick-links'>
-      <li class="google-follow">
-        Follow +Yeoman on
-        <a href="https://plus.google.com/101063139999404044459?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:20px;height:20px;"/></a>
-      </li>
-      <li style="width: 120px; height: 25px;">
-        <g:plusone size="medium" annotation="inline" width="120" href="http://yeoman.io"></g:plusone>
-      </li>
-      <li style="width: 220px; height: 25px;">
-        <a href="https://twitter.com/yeoman" class="twitter-follow-button" data-show-count="true">Follow @yeoman</a>
-      </li>
-      <li style="width: 107px; height: 25px;">
-        <a href="https://twitter.com/share" class="twitter-share-button"
-           data-url="http://yeoman.io" data-text="Yeoman - Modern Workflows For Modern Web Apps">Tweet</a>
-      </li>
-    </ul>
-  </section>
+        <pre>npm install -g yo</pre>
+      </section><!-- /.content-chunk -->
 
-  <section>
-    <h2>About</h2>
-    <p class="credits">Yeoman is a project developed by
-      <a href="https://github.com/addyosmani">Addy Osmani</a>,
-      <a href="https://github.com/sindresorhus">Sindre Sorhus</a>,
-      <a href="https://github.com/passy">Pascal Hartig</a>,
-      <a href="https://github.com/stephenplusplus">Stephen Sawchuk</a>,
-      <a href="https://github.com/SBoudrias">Simon Boudrias</a>,
-      <a href="https://github.com/btford">Brian Ford</a>,
-      <a href="https://github.com/eddiemonge">Eddie Monge</a>,
-      <a href="https://github.com/paulirish">Paul Irish</a>,
-      <a href="https://github.com/hemanth">Hemanth.HM</a>,
-      <a href="https://github.com/revathskumar">Revath S Kumar</a>,
-      <a href="https://github.com/ragingwind">Jimmy Moon</a>,
-      <a href="https://github.com/sleeper">Frederick Ros</a>,
-      <a href="https://github.com/mklabs">Mickael Daniel</a>,
-      <a href="https://github.com/ebidel">Eric Bidelman</a>
-      and the <a href="https://github.com/yeoman/yeoman">Yeoman Community</a>.
-    </p>
-  </section>
-</article>
+      <section class="content-chunk section-tools">
+        <h1>Tools</h1>
+
+        <p>Our workflow is comprised of three tools for improving your productivity and satisfaction when building a web app: yo (the scaffolding tool), grunt (the build tool) and bower (for package management).</p>
+
+        <ul class="basic-tools clearfix">
+          <li>
+            <a href="" class="tool-logo yo"><img src="/assets/img/tool-yo.png" alt="YO"></a>
+            <span><a href=""><strong>YO</strong></a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks and Bower dependencies that you might need for your build.</span>
+          </li>
+          <li>
+            <a href="" class="tool-logo grunt"><img src="/assets/img/tool-grunt.png" alt="YO"></a>
+            <span><a href=""><strong>Grunt</strong></a> is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib.</span>
+          </li>
+          <li>
+            <a href="" class="tool-logo bower"><img src="/assets/img/tool-bower.png" alt="YO"></a>
+            <span><a href=""><strong>Bower</strong></a> is used for dependency management, so that you no longer have to manually download and manage your scripts.</span>
+          </li>
+        </ul><!-- /.basic-tools -->
+
+        <p>All three of these tools are developed and maintained separately, but work well together as part of our prescribed workflow for keeping you effective.</p>
+
+        <h2>Why Yeoman</h2>
+
+        <p>With so many great tools available to front-end web developers these days it can sometimes be difficult to understand how they all fit together. Deciding on a workflow that you’re happy with is often a very personal endeavour, but getting started isn’t always easy. Yeoman aims to solve this problem by scaffolding workflows for creating modern webapps, while at the same time mixing in many of the best practices that have evolved within the industry.</p>
+
+        <p>Yeoman is a robust and opinionated client-side stack, comprising tools and frameworks that can help developers quickly build beautiful web applications. We take care of providing everything needed to get started without any of the normal headaches associated with a manual setup.</p>
+
+        <p>With a modular architecture that can scale out of the box, we leverage the success and lessons learned from several open-source communities to ensure the stack developers use is as intelligent as possible.</p>
+
+        <p>As firm believers in good documentation and well thought out build processes, Yeoman includes support for linting, testing, minification and much more, so developers can focus on solutions rather than worrying about the little things.</p>
+
+        <p>Yeoman is fast, performant and is optimized to work best in modern browsers.</p>
+
+        <h3>More on Tooling</h3>
+
+        <p>To learn more about the current developer tooling eco-system, you may be interested in watching Paul's talk on <a href="">"Better Web App Development Through Tooling"</a> or Addy's Yeoman session on <a href="">Google Developers Live.</a></p>
+
+        <p>Read our <a href="">FAQ</a></p>
+
+      </section><!-- /.content-chunk -->
+
+      <section class="content-chunk section-team">
+        <h1>The Yeoman Team</h1>
+
+        <ul class="team">
+          <li>
+            <a href="http://addyosmani.com">
+              <img src="http://gravatar.com/avatar/96270e4c3e5e9806cf7245475c00b275?s=144" alt="Addy Osmani">
+              <span class="member">Addy Osmani</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://sindresorhus.com">
+              <img src="http://gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9?s=144" alt="Sindre Sorhus">
+              <span class="member">Sindre Sorhus</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://passy.me">
+              <img src="http://gravatar.com/avatar/be451fcdbf0e5ff07f23ed16cb5c90a3?s=144" alt="Pascal Hartig">
+              <span class="member">Pascal Hartig</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/stephenplusplus">
+              <img src="http://gravatar.com/avatar/098cfe2d360e77c3229f2cd5298354c4?s=144" alt="Stephen Sawchuk">
+              <span class="member">Stephen Sawchuk</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/SBoudrias">
+              <img src="http://gravatar.com/avatar/368346708a485060d31f77677a21d2a5?s=144" alt="Simon Boudrias">
+              <span class="member">Simon Boudrias</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://briantford.com">
+              <img src="http://gravatar.com/avatar/721cc7667947af96cc416729fc497107?s=144" alt="Brian Ford">
+              <span class="member">Brian Ford</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://eddiemonge.com">
+              <img src="https://s.gravatar.com/avatar/08a01ffbfa6e039295208f023dec0dae?s=144" alt="Eddie Monge">
+              <span class="member">Eddie Monge</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://paulirish.com">
+              <img src="http://gravatar.com/avatar/ffe68d6f71b225f7661d33f2a8908281?s=144" alt="Paul Irish">
+              <span class="member">Paul Irish</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://h3manth.com">
+              <img src="https://s.gravatar.com/avatar/d32a6bf2b43bf62a7212f0c793d76319?s=144" alt="Hemanth.HM">
+              <span class="member">Hemanth.HM</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.revathskumar.com">
+              <img src="https://s.gravatar.com/avatar/fb7edc7cc7a53c903af74d07dcecf9dc?s=144" alt="Revath S Kumar">
+              <span class="member">Revath S Kumar</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://ragingwind.org">
+              <img src="https://1.gravatar.com/avatar/687ac25540fe35fcb5e828f75c4a6079?s=144" alt="Jimmy Moon">
+              <span class="member">Jimmy Moon</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/sleeper">
+              <img src="http://gravatar.com/avatar/4605de69c4c3af3f48b8e829206cd4c2?s=144" alt="Frederick Ros">
+              <span class="member">Frederick Ros</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/mklabs">
+              <img src="http://gravatar.com/avatar/a23615915f0baf096b94cc9df93fc327?s=144" alt="Mickael Daniel">
+              <span class="member">Mickael Daniel</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://ericbidelman.com">
+              <img src="http://gravatar.com/avatar/e7948aac7c52b26470be80311873a398?s=144" alt="Eric Bidelman">
+              <span class="member">Eric Bidelman</span>
+            </a>
+          </li>
+        </ul>
+
+      </section><!-- /.content-chunk -->
+    </article><!-- /.main -->
+  </div><!-- /.container -->
+
+</div><!-- /.content -->
