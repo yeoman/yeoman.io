@@ -2,6 +2,7 @@
 layout: documentation
 title: Working With The File System
 category: authoring
+sidebar: sidebars/authoring.html
 excerpt: How to interact with the file system in efficient ways
 ---
 
