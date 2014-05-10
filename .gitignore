@@ -1,8 +1,6 @@
 node_modules
 app/bower_components
-_site
 dist
 .jekyll
 .tmp
-
 .DS_Store
