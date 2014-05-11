@@ -1,6 +1,7 @@
 ---
 layout: default
 markdown: 1
+title: Learning resources
 ---
 
 # Articles And Tutorials
@@ -25,3 +26,47 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 * [Using Yeoman with Jade](https://gist.github.com/kevva/5201657)
 * [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
+
+# Videos
+
+<p>Below you can find a selection of videos and tutorials recorded by members of the Yeoman community. Remember to check the <a href="http://updates.html5rocks.com/tag/front-end">Yeoman Monthly Digest</a> for the latest videos posted each month.</p>
+
+<section>
+  <h2 class="hero-title">A 5 Minute Introduction To Yeoman</h2>
+  <div class="row tutorial">
+  <div class="video-container">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/zBt2g9ekiug" frameborder="0" allowfullscreen class="yt"></iframe>
+  </div>
+  <p>We also have a video on scaffolding <a href="http://www.youtube.com/watch?v=RO8TdD5EuNs">Bootstrap</a> projects with Yeoman.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="hero-title">Tutorial: Building A WebApp With Yeoman</h2>
+  <div class="row tutorial">
+  <p>In this walkthrough we will author, build and deploy a complete application using the Yeoman workflow.</p>
+  <div class="video-container">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/iUQ1fvdO9GY" frameborder="0" allowfullscreen class="yt"></iframe>
+  </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="hero-title">An Intro To Yeoman Sub-generators</h2>
+  <div class="row tutorial">
+  <div class="video-container">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/rYwJ5-esSYE" frameborder="0" allowfullscreen class="yt"></iframe>
+  </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="hero-title">NebraskaJS: An Intro To Yo, Grunt and Bower</h2>
+  <div class="row tutorial">
+  <p>Tooling fan Andrew Wirick talks about Yeoman, Grunt, and Bower at the NebraskaJS meetup.</p>
+  <div class="video-container">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/TUk19YoP-oI" frameborder="0" allowfullscreen class="yt"></iframe>
+  </div>
+  <p>In case you're looking for some more persuation that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="http://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
+  </div>
+</section>
