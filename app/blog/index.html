@@ -6,32 +6,24 @@ class: blog
 type: list
 ---
 
-<header>
-  <h1 class="banner">
-    <span>Yeoman Team Blog</span>
-  </h1>
-</header>
-
-<div id="posts">
-  {% for post in site.posts limit:8 %}
-    <article>
-      <h2 class="post-title">
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h2>
-
-      <a href="{{ post.url }}" class="post-date">
-        Published: {{ post.date | date: "%B %e, %Y" }}
+{% for post in site.posts limit:8 %}
+  <article class="blog-post-preview">
+    <h2 class="blog-post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
       </a>
+    </h2>
 
-      <div class="post-content">{{ post.excerpt }}</div>
+    <a href="{{ post.url }}" class="blog-post-date">
+      Published: {{ post.date | date: "%B %e, %Y" }}
+    </a>
 
-      <a href="{{ post.url }}">Read more &raquo;</a>
-    </article>
-  {% endfor %}
+    <div class="blog-post-content">{{ post.excerpt }}</div>
 
-  <article>
-    <a href="/blog/archive.html">View the Archives</a></li>
+    <a href="{{ post.url }}">Read more &raquo;</a>
   </article>
+{% endfor %}
+
+<div class="blog-posts-extra">
+  <a href="/blog/archive.html">View the Archives</a></li>
 </div>

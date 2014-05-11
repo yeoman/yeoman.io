@@ -1,0 +1,11 @@
+<nav class="context-nav">
+  <ul>
+    {% for post in site.posts limit:8 %}
+      <li class="nav-item">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Exploring A Generator For Gulp.js
+sidebar: sidebars/blog.html
 ---
 
 Work has begun on our [first](https://github.com/yeoman/generator-gulp-webapp) official Yeoman generator for [Gulp.js](http://gulpjs.com).

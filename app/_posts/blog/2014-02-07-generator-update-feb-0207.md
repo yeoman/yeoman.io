@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Updates to some of our generators
+sidebar: sidebars/blog.html
 ---
 
 Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.
@@ -86,21 +87,14 @@ yo bootstrap
 
 ## Backbone and Ember generator updates
 
-In the past few weeks, we've also released updates to: 
+In the past few weeks, we've also released updates to:
 
 * [generator-backbone](https://github.com/yeoman/generator-backbone/releases) - including scaffolding out your mocha tests while generating models/views/collections.
 
 * [generator-ember](https://github.com/yeoman/generator-ember/releases) - better Compass defaults, updates to Ember 1.3.1, Ember Data 1.0.0beta.
 
-* [generator-polymer](https://github.com/yeoman/generator-polymer/releases) - a more Polymerized index.html with further element granularity, updated deps. 
+* [generator-polymer](https://github.com/yeoman/generator-polymer/releases) - a more Polymerized index.html with further element granularity, updated deps.
 
-We hope you find these updates useful! Happy Friday! 
+We hope you find these updates useful! Happy Friday!
 
 ~ Addy and the team.
-
-
-
-
-
-
-
