@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: What's new in the Backbone generator
+sidebar: sidebars/blog.html
 ---
 
 The Backbone generator has had a few major updates recently and we wanted to share these changes with the community. The theme of the changes is to make the generator more flexible. There is also some updates related to testing and styling we wanted to share.
@@ -42,4 +43,3 @@ The last change we want to announce relates to Bootstrap. We have upgraded to Bo
 * Improved scaffolds
 
 We hope you like the new additions and enhancements we have made on the Backbone generator. We are looking for your feedback on keeping this project awesome.
-

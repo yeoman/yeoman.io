@@ -705,6 +705,31 @@ input.search {
   box-sizing: border-box;
 }
 
+/* Blog */
+
+.blog-post-preview {
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.blog-post-preview .blog-post-title {
+  margin: 1em 0 0.2em;
+}
+.blog-post-preview .blog-post-title a {
+  color: #222;
+  text-decoration: none;
+}
+.blog-post-preview .blog-post-date {
+  margin: 0.2em 0 1em;
+  font-size: 0.8em;
+  color: #444;
+  text-decoration: none;
+}
+.note {
+  background: #f2dede;
+  padding: 15px;
+}
+
 
 @media print {
   pre .str, code .str { color: #060; }
@@ -852,6 +877,16 @@ Modify as content requires.
 
   .context-nav {
     margin-bottom: 2.6em;
+  }
+
+  .blog-post-meta {
+
+  }
+  .blog-post-meta .date {
+    float: left;
+  }
+  .blog-post-meta .social {
+    float: right;
   }
 }
 
@@ -1103,7 +1138,7 @@ Modify as content requires.
 
 
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 55em) {
 
   .jumbotron {
     padding-top: 6em;
@@ -1155,7 +1190,7 @@ Modify as content requires.
   }
 }
 
-@media only screen and (min-width: 70em) {
+@media only screen and (min-width: 60em) {
 
   .container {
     position: relative;
