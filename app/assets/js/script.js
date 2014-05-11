@@ -7,8 +7,8 @@
   $(function() {
 
     // Open/close mobile menu
-    $('.page-header nav').click(function(){
-      $(this).toggleClass('open');
+    $('.mobile-menu-toggle').click(function(){
+      $('.page-header').toggleClass('open');
     });
 
     $('.context-nav').click(function(){

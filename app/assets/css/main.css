@@ -144,7 +144,7 @@ code {
 /* Page header and nav
 ========================================================================== */
 
-.page-header {
+.page-header .mobile-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -180,28 +180,19 @@ Logo
 Navigation
 */
 
-.page-header nav {
-  position: absolute;
-  top: 3em;
-  right: 0;
-  width: 100%;
-  background: #000;
-}
-
-.page-header nav:before {
+.mobile-menu-toggle {
   display: block;
   position: absolute;
   z-index: 2;
-  top: -2em;
+  top: 1em;
   right: 0.8em;
   width: 25px;
   height: 16px;
   background: url(../img/icon-menu.png) no-repeat;
-  content: "";
 }
 
-.page-header nav.open:before {
-  opacity: 0.3;
+.open .mobile-menu-toggle {
+  opacity: 0.5;
 }
 
 .page-header ul {
@@ -209,17 +200,23 @@ Navigation
   padding: 0;
 }
 
-.main-nav {
+.main-menu {
   display: none;
+  position: fixed;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  overflow-y: scroll;
+}
+.open .main-menu {
+  display: block;
+}
+
+.main-nav {
   font-size: 0.9em;
-}
-
-.open .main-nav {
-  display: block;
-}
-
-.open .main-nav {
-  display: block;
+  background: #000;
 }
 
 .main-nav a {
@@ -250,7 +247,7 @@ Navigation
 }
 
 .main-nav-sub a {
-  padding-left: 3em;
+  padding: inherit 3em;
 }
 
 /* Jumbotron
@@ -902,7 +899,6 @@ Modify as content requires.
     width: 50%;
   }
 
-
   .team img {
     max-width: 5em;
   }
@@ -974,19 +970,30 @@ Modify as content requires.
 /* Menu gets to be displayed */
 @media only screen and (min-width: 46em) {
 
-  .page-header nav {
+  .main-menu {
+    position: relative;
+    z-index: 13;
     top: 0;
-    right: 0;
-    width: auto;
-    background: none;
-  }
-
-  .page-header nav:before {
-    display: none;
-  }
-
-  .main-nav {
     display: block;
+    float: right;
+    overflow: visible;
+  }
+
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1f1f1f;
+    z-index: 12;
+  }
+
+  .mobile-bar {
+    position: static;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
   }
 
   .main-nav > li {
@@ -1012,7 +1019,7 @@ Modify as content requires.
   .main-nav-sub {
     display: none;
     position: absolute;
-    top: 3.2em;
+    top: 100%;
     left: 0;
     min-width: 100%;
     background: #000;
@@ -1023,7 +1030,7 @@ Modify as content requires.
   }
 
   .main-nav-sub a {
-    padding-left: 1em;
+    padding: inherit 1em;
     white-space: nowrap;
     /* Transitions */
     -webkit-transition: all 0.3s ease;
@@ -1035,6 +1042,7 @@ Modify as content requires.
 
   .main-nav-sub a:hover {
     border-left: 1em solid rgba(221,0,42,1);
+    padding-right: 0;
   }
 
   .jumbotron h2 {
@@ -1149,7 +1157,6 @@ Modify as content requires.
 
 @media only screen and (min-width: 70em) {
 
-
   .container {
     position: relative;
     max-width: 1200px;
@@ -1166,7 +1173,7 @@ Modify as content requires.
     box-sizing: border-box;
   }
 
-  .page-header {
+  .main-menu {
     height: 5em;
   }
 
@@ -1195,7 +1202,8 @@ Modify as content requires.
   }
 
   .main-nav-sub {
-    top: 5.2em;
+    top: 100%
+    min-width: 200px;
   }
 
   .jumbotron {
