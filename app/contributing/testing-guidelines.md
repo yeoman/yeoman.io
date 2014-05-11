@@ -2,11 +2,9 @@
 layout: default
 title: Testing Guidelines
 category: contributing
+sidebar: sidebars/contributing.html
 excerpt: The yeoman project unit testing guidelines
 ---
-
-Yeoman Testing Guidelines
-====================
 
 This testing guide is based on Mocha BDD interface (`describe` / `it`).
 
