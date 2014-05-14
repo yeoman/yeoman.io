@@ -10,8 +10,9 @@ excerpt: Sometimes generators should work together
 Yeoman offers multiple ways for generators to build upon common ground. There's no sense in rewriting the same functionality, so an API is provided to use generators inside other generators.
 
 In Yeoman, composability can be initiated in two ways:
-* A generator can decide to compose itself with other generator (e.g., `generator-backbone` uses `generator-mocha`).
-* An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails).
+
+ * A generator can decide to compose itself with other generator (e.g., `generator-backbone` uses `generator-mocha`).
+ * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails).
 
 **Note:** The User composability feature hasn't landed in core as of Feb, 26, 2014. It is on the roadmap and will land sooner than later!
 
@@ -23,9 +24,9 @@ The `composeWith` method allows the generator to run side-by-side with another g
 
 `composeWith` takes three parameters.
 
-1. `namespace` - A String declaring the namespace of the generator to compose with. The default matches generators installed on the end user's system. Use [`peerDependencies`](http://blog.nodejs.org/2013/02/07/peer-dependencies/) to install needed generators with this one.
-2. `options` - An Object containing an `options` and/or an `arguments` property. The called generator will receive these when it runs.
-3. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
+ 1. `namespace` - A String declaring the namespace of the generator to compose with. The default matches generators installed on the end user's system. Use [`peerDependencies`](http://blog.nodejs.org/2013/02/07/peer-dependencies/) to install needed generators with this one.
+ 1. `options` - An Object containing an `options` and/or an `arguments` property. The called generator will receive these when it runs.
+ 1. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
     * `settings.local` - A String that defines a path to the requested generator. This allows the use of sub-generators. It also allows the use of a specific version of a generator. To do so, declare it in the [`dependencies` section inside `package.json`](https://www.npmjs.org/doc/files/package.json.html#dependencies). Then reference the path to that generator, usually `node_modules/generator-name`.
     * `settings.link` - A String that is either `weak` (default), or `strong`.
 
@@ -71,9 +72,10 @@ this.hookFor('test-framework', {
 ## dependencies or peerDependencies
 
 *npm* allows three types of dependencies:
-* `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
-* `peerDependencies` get installed alongside the generator, as a sibling. If `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
-* `devDependencies` for testing and development utility. This is not needed here.
+
+ * `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
+ * `peerDependencies` get installed alongside the generator, as a sibling. If `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
+ * `devDependencies` for testing and development utility. This is not needed here.
 
 ```
 ├───generator-backbone/
