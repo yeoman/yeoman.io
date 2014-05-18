@@ -18,9 +18,9 @@ In reading this section, you'll learn how to create and distribute your own.
 
 A generator is at its core a Node.js module.
 
-First, create a folder in which you'll write your generator. This folder need to be named `generator-name` (where name is the name of your generator). This is important as Yeoman rely on the file system to find available generators.
+First, create a folder in which you'll write your generator. This folder needs to be named `generator-name` (where name is the name of your generator). This is important as Yeoman relies on the file system to find available generators.
 
-Once inside your generator folder, create a `package.json` file. This file is a Node.js module manifest. You can generate this file running `npm init` from your command line or by entering the following manually:
+Once inside your generator folder, create a `package.json` file. This file is a Node.js module manifest. You can generate this file by running `npm init` from your command line or by entering the following manually:
 
 ```json
 {
@@ -46,7 +46,7 @@ Yeoman is deeply linked to the file system and how you lay out your directory tr
 
 The default generator, the one used when you call `yo name` is the `app` generator. This one must be contained within the `app/` directory.
 
-Sub-generators, the one used when you call `yo name:subcommand` are stored in folders named exactly like the sub command.
+Sub-generators, the ones used when you call `yo name:subcommand` are stored in folders named exactly like the sub command.
 
 In an example project, a directory tree could look like this:
 
@@ -60,7 +60,7 @@ In an example project, a directory tree could look like this:
 
 This generator will expose `yo name` and `yo name:router` commands.
 
-You may not like keeping all your code at the root of your folder. Luckily Yeoman allow two differents directory structures. It'll look in `./` and `generators/` to register available generators.
+You may not like keeping all your code at the root of your folder. Luckily Yeoman allows two different directory structures. It'll look in `./` and `generators/` to register available generators.
 
 The previous example can be written as follow:
 
@@ -96,7 +96,7 @@ var yeoman = require('yeoman-generator');
 module.exports = yeoman.generators.NamedBase.extend();
 ```
 
-Either type of generator can be used to create either your app your subcommand generator. The former is used most often for the app generator, the later most often used for your subcommand generator where a filename is required.
+Either type of generator can be used to create either your app or your subcommand generator. The former is used most often for the app generator, the later most often used for your subcommand generator where a filename is required.
 
 
 The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
@@ -124,7 +124,7 @@ module.exports = yeoman.generators.Base.extend({
 
 ### Adding our own functionality
 
-Every method added to the prototype is runned once the generator is called. Usually in sequence. But we'll see in the next section that some special method names will trigger specific run order.
+Every method added to the prototype is run once the generator is called. Usually in sequence. But we'll see in the next section that some special method names will trigger specific run order.
 
 Let's add some methods:
 
@@ -161,11 +161,11 @@ That'll install your project dependencies and symlink a global module to your lo
 
 When running a generator, Yeoman tries to figure out some things from the context it runs.
 
-The most important one is that Yeoman looks up the directory tree for a `.yo-rc.json` file. If found, it then consider the location of the file as the root of the project. Behind the scene, Yeoman will change the current directory to the `.yo-rc.json` file location and run the requested generator there.
+The most important one is that Yeoman looks up the directory tree for a `.yo-rc.json` file. If found, it then considers the location of the file as the root of the project. Behind the scene, Yeoman will change the current directory to the `.yo-rc.json` file location and run the requested generator there.
 
 The Storage module creates the `.yo-rc.json` file. Calling `this.config.save()` from a generator for the first time will create the file.
 
-So if you're generator is not running in your current working directory, make sure there's no `.yo-rc.json` somewhere up the directory tree.
+So if your generator is not running in your current working directory, make sure there's no `.yo-rc.json` somewhere up the directory tree.
 
 
 ## Where to go from here?
