@@ -142,7 +142,6 @@ nav ul {
 }
 
 nav ul li {
-  white-space: nowrap;
   line-height: 21px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -286,7 +285,7 @@ article p {
 
 pre{
   font-size: 13px;
-  padding: 2px; border: 1px solid #ccc;
+  border: 1px solid #ccc;
   background-color: #000;
   color: #ccc;
   border-radius: 5px;
@@ -580,7 +579,6 @@ th.sort.desc:before{
 
   nav ul li {
     display: inline;
-    white-space: normal;
     margin-right: 10px;
   }
 
