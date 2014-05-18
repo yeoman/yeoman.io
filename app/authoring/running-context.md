@@ -51,7 +51,7 @@ Running methods sequentially is alright if there's a single generator. But it is
 
 That's why Yeoman uses a run loop internally.
 
-The run loop is a queue system with priority support. We uses [Grouped-queue](https://github.com/SBoudrias/grouped-queue) module to handle the run loop.
+The run loop is a queue system with priority support. We use the [Grouped-queue](https://github.com/SBoudrias/grouped-queue) module to handle the run loop.
 
 Priorities are defined in your code as special prototype method name. When a method name is also a priority name, the run loop push the method into this special queue. If the method name doesn't match a priority, it is pushed in the `default` group.
 
