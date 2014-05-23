@@ -50,15 +50,19 @@ You can check [the full helpers API here](http://yeoman.github.io/generator/help
 The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](http://yeoman.github.io/generator/RunContext.html) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
 
 ```js
+var path = require('path');
+
 before(function (done) {
-  helpers.run('../generators/app')
-    .inDir('./tmp') // Clear the directory and set it as the CWD
-    .withOptions({ foo: 'bar' }) // Mock options passed in
-    .withArguments(['name-x']) // Mock the arguments
-    .withPrompt({ coffee: false }) // Mock the prompt answers
+  helpers.run(path.join( __dirname, '../app'))
+    .inDir(path.join( __dirname, './tmp'))
+    .withOptions({ foo: 'bar' })
+    .withArguments(['name-x'])
+    .withPrompt({ coffee: false })
     .onEnd(done)
 })
 ```
+
+You should always use ```path.join``` and ```__dirname``` when creating relative path because the Current Working Directory is dependent on where the node command was called.
 
 ## Assertions helpers
 
