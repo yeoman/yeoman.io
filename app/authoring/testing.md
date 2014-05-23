@@ -53,12 +53,13 @@ The most useful method when unit testing a generator is `helpers.run()`. This me
 var path = require('path');
 
 before(function (done) {
-  helpers.run(path.join( __dirname, '../app'))
-    .inDir(path.join( __dirname, './tmp'))
-    .withOptions({ foo: 'bar' })
-    .withArguments(['name-x'])
-    .withPrompt({ coffee: false })
+  helpers.run(path.join( __dirname, '../app')) 
+    .inDir(path.join( __dirname, './tmp'))  // Clear the directory and set it as the CWD
+    .withOptions({ foo: 'bar' })            // Mock options passed in
+    .withArguments(['name-x'])              // Mock the arguments
+    .withPrompt({ coffee: false })          // Mock the prompt answers
     .onEnd(done)
+
 })
 ```
 
