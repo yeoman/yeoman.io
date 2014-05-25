@@ -4,12 +4,89 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-05-18T10:59:39-07:00</updated>
+  <updated>2014-05-24T21:29:32-07:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
   </author>
 
+  
+  <entry>
+    <title>Karma Generator Rewrite 0.8.0</title>
+    <link href="http://yeoman.io//blog/generator-karma-rewrite.html"/>
+    <updated>2014-05-12T00:00:00-07:00</updated>
+    <id>http://yeoman.io/blog/generator-karma-rewrite</id>
+    <content type="html">&lt;p&gt;Allo&amp;#39; allo&amp;#39;! Here&amp;#39;s &lt;a href=&quot;https://github.com/eddiemonge&quot;&gt;Eddie&lt;/a&gt; from the Yeoman team on the recent changes to the Karma Generator. The changes focused on configuration and testing.&lt;/p&gt;
+
+&lt;h2&gt;Why was a Rewrite Necessary?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt;: a rewrite was not necessary. The &lt;a href=&quot;https://www.github.com/yeoman/generator&quot;&gt;Angular generator&lt;/a&gt; needed some changes to continue to work.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://karma-runner.github.io/&quot;&gt;Karma Team&lt;/a&gt; recently made some changes to the way Karma &lt;a href=&quot;https://github.com/karma-runner/karma/blob/master/CHANGELOG.md#breaking-changes&quot;&gt;installs its plugins&lt;/a&gt;. Before, it would install a lot of default plugins. Now it does not install any plugins. Many people viewed this as a pretty bad change. In fact it is a great change because bloatware is not included anymore. Only the plugins users want are now installed.&lt;/p&gt;
+
+&lt;p&gt;The Angular generator used the Karma generator to write its testing components. The Karma change led to testing not working out of the box. The tests complained about not being able to do some things like launch browsers. A quick fix was to install the missing plugins as part of the Angular generation process. This was not an ideal fix as it made the project more fragile and less composable. A better solution was to make the Karma generator be more customizable.&lt;/p&gt;
+
+&lt;p&gt;Also, this was a good project to test the new 0.17.0 changes to the &lt;a href=&quot;https://www.github.com/yeoman/generator&quot;&gt;Generator system&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;What was the Goal of the Rewrite?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the new 0.17.0 Yeoman Generator&lt;/li&gt;
+&lt;li&gt;Better testing overall&lt;/li&gt;
+&lt;li&gt;Support customizing almost everything in the Karma config&lt;/li&gt;
+&lt;li&gt;Install user requested Karma plugins (and required ones not explicitly specified)&lt;/li&gt;
+&lt;li&gt;Write Gruntfile.js config block and task&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;0.17.0 Yeoman Generator&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sboudrias&quot;&gt;Simon&lt;/a&gt; recently made a lot of changes to the Yeoman Generator system that needed some real world testing. While every new feature wasn&amp;#39;t tested, the core features got some exposure. This includes easier testing methods, simpler generator syntax and Gruntfile integration&lt;a href=&quot;#coffeescript-gruntfile-support&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Testing&lt;/h3&gt;
+
+&lt;p&gt;The new Generator system made testing the rewrite a pleasure instead of a dreaded task. It reduced the amount of code needed while making it more readable. That usually does not happen so it was a welcome change.&lt;/p&gt;
+
+&lt;p&gt;The generator tests now cover testing the options and file creation instead of doing both at the same time. This should ensure more accuracy from the tests as the pieces get tested on their own. Every source code change is verifiable; no more worrying about if this or that change will break the whole thing.&lt;/p&gt;
+
+&lt;h3&gt;Customizations&lt;/h3&gt;
+
+&lt;p&gt;There are few parts of the generator that are not customizable now. Here is a small list of the the options that are available:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Specify what browsers to run the tests in (defaults to PhantomJS)&lt;/li&gt;
+&lt;li&gt;What framework to use (defaults to Jasmine)&lt;/li&gt;
+&lt;li&gt;Which files to test&lt;/li&gt;
+&lt;li&gt;What plugins to use. Missing plugins, like a framework or browser, get added by the generator.&lt;/li&gt;
+&lt;li&gt;Where the config files get written to (including the name and path)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is not the complete list. For that, check out the project&amp;#39;s &lt;a href=&quot;https://www.github.com/yeoman/generator-karma&quot;&gt;README&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Gruntfile&lt;/h3&gt;
+
+&lt;p&gt;The generator also tries to add the appropriate Gruntfile configuration blocks and tasks. This is a welcome change from having to do it by hand and hoping to get it right. For Gruntfiles written in CoffeeScript, see the &lt;a href=&quot;#coffeescript-gruntfile-support&quot;&gt;CoffeeScript note&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h6&gt;CoffeeScript Gruntfile Support&lt;/h6&gt;
+
+&lt;p&gt;CoffeeScript does not have a parser to be able to read it programmatically and insert the config (if it does, pull requests are welcome). Because of this, the Generator system cannot write the configs. :(&lt;/p&gt;
+
+&lt;h2&gt;The Dark Side&lt;/h2&gt;
+
+&lt;p&gt;Not everything is peachy though; there are a few downsides to this rewrite. The first, which is also an upside, is that this is no longer Angular-centric. &lt;code&gt;angular-scenario&lt;/code&gt; and &lt;code&gt;angular-mock&lt;/code&gt; are no longer installed by default. To use them, add them as components in the &lt;code&gt;bower-components&lt;/code&gt; option. The other change is that there are not any more default plugins specified other than the two needed for Jasmine and PhantomJS.&lt;/p&gt;
+
+&lt;h2&gt;Vs &lt;code&gt;karma init&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;With &lt;code&gt;karma init&lt;/code&gt; isn&amp;#39;t this generator kind of pointless?&lt;/p&gt;
+
+&lt;p&gt;No. &lt;code&gt;karma init&lt;/code&gt; scaffolds out a basic configuration file but does not give the option to customize as much as this does. It also does not update the Gruntfile. This generator provides that, allows it to composed with other generators and installs dependencies.&lt;/p&gt;
+
+&lt;h2&gt;Wrap-Up&lt;/h2&gt;
+
+&lt;p&gt;Its my hope that this rewrite is a sign of things to come for the other Yeoman generators. If nothing else, at least the testing should bring smiles to many faces since it is better tested now.&lt;/p&gt;
+
+&lt;p&gt;As always, please file bug reports at the &lt;a href=&quot;https://github.com/yeoman/generator-karma/issues&quot;&gt;issues page&lt;/a&gt;. Pull requests are always welcome but be sure to start with an issue proposing the change(s).&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Yeoman Generator 0.17.0 prerelease 1</title>
