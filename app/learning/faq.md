@@ -1,9 +1,7 @@
 ---
 layout: default
-markdown: 1
+title: Frequently Asked Questions
 ---
-
-# Frequently Asked Questions
 
 ### What are the goals of the project?
 
@@ -11,54 +9,51 @@ The short-term goals for Yeoman are to provide developers with an improved tooli
 
 Long-term, the project may also assist developers with creating applications using modern technologies such as Web Components.
 
+
 ### What is a command-line interface?
 
-A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal and on Windows we use the command shell or a third-party tool such as [Cygwin](http://www.cygwin.com).
+A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal. On Windows, we use the command shell (`cmd.exe`) or PowerShell.
 
 
 ### What is a package manager?
 
-A package manager runs through a command-line interface and is a tool for automating the process of installing, upgrading, configuring and managing dependencies for projects. An example of a package management registry is NPM.
+A package manager is a tool for automating the process of installing, upgrading, configuring and managing dependencies for projects. Good examples of package manager would be NPM (Node.js), Bower (Web), Pypi (Python), Gem (Ruby), Composer (PHP), NuGet (.NET), etc.
 
 
 ### How does Yeoman differ from Grunt?
 
 Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily. [Grunt.js](http://gruntjs.com) is one of these tools and powers our underlying build process and task plugin architecture.
 
-On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Twitter Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js/r.js out of the box. With additional features like wiring, an improved `serve` and `init`, we like to think of ourselves as a helper project on top of Grunt.
+On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js out of the box. With additional features like wiring, an improved `serve` and `init`.
 
-Developers are free to continue using any Grunt tasks with Yeoman and there should remain a good level of cross-tool task compatibility.
+Developers are free to customize any Grunt tasks with configured by Yeoman.
+
 
 ### How does Yeoman differ from tools like Brunch or BBB?
 
 We love tools like Brunch and Grunt-BBB and feel that they offer a great solution for developers wishing to scaffold with frameworks like Backbone.js and Ember. With the Yeoman generator system, as we've ported over the Rails Generator system to work with Node, we feel we have an interesting opportunity to take application scaffolding in a new direction - one where it's easier for any developer to write scaffolds, support multiple testing frameworks, capture their own boilerplates and easily re-use them and so on.
 
+
 ### How do I register or unregister a package on Bower?
 
-Packages can be registered on Bower using the `register` command. e.g `bower register myawesomepackagename git://github.com/youraccount/yourrepo`. We recommend reading the Bower [documentation](https://github.com/twitter/bower) before doing this to ensure that your repo includes the necessary files to supporting being `install`ed.
+Packages can be registered on Bower using the `register` command. e.g `bower register myawesomepackagename git://github.com/youraccount/yourrepo`. We recommend reading the Bower [documentation](http://bower.io) before doing this to ensure that your repo includes the necessary files to supporting being `install`ed.
 
 
+### Will the Yeoman project be providing Generators for popular frameworks?
 
-### Will the project be providing Generators for popular frameworks?
+Our goal is to facilitate both developers and the community with the tools needed to create rich web applications easily. With that goal in mind, we'll be providing a great API (and docs) to our Generators system with examples of how to implement samples, but will rely on the community to create and maintain Generators for popular frameworks. This will allow us to focus on making Yeoman better without the distractions of maintaining a large number of Generators.
 
-Our goal is to facilitate both developers and the community with the tools needed to create rich web applications easily. With that goal in mind, we'll be providing a great API (and docs) to our Generators system with examples of how to implement samples, but will rely on the community to create and maintain Generators for popular frameworks. This will allow us to focus on making Yeoman better without he distractions of maintaining a large number of Generators.
+You can see the full [list of officially supported generators](https://github.com/yeoman) on Github.
 
 
 ### What license is Yeoman released under?
 
 Yeoman is released under a [BSD](http://opensource.org/licenses/bsd-license.php/) license.
 
+
 ### What should I do before submitting an issue through GitHub?
 
-Thanks for your interest in submitting an issue. In order for us to help you please check that you've completed the following steps:
-
-* Made sure you're on the latest version
-* Read our documentation and [README](https://github.com/yeoman/yeoman/blob/master/readme.md) to ensure the issue hasn't been noted or solved already
-* Used the search feature to ensure that the bug hasn't been reported before
-* Included as much information about the bug as possible, including any output you've received, what OS and version you're on.
-* Shared the output from `echo $PATH $NODE_PATH` and `brew doctor` as this can also help track down the issue.
-
-Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/issues) on our GitHub repo.
+Make sure you read the [Submitting an issue guide](http://localhost:9000/contributing/opening-issues.html).
 
 
 ### What tools do Yeoman make use of?
@@ -86,8 +81,10 @@ Issues can be submitted via the [issues tab](https://github.com/yeoman/yeoman/is
 * [clean-css](https://github.com/GoalSmashers/clean-css)
 * [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
 
+But remember every generator author is free to use or not any of these tools. So if you have special needs, make sure to checkout specific generator documentation.
 
-### NPM appears to have installed yeoman but `yeoman` still gives me "command not found".
+
+### NPM appears to have installed Yeoman but `yo` still gives me "command not found".
 
 It's likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read [this comment](https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733) and [this thread](https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663).
 
@@ -103,7 +100,7 @@ variable to have npm-installed binaries picked up:
   /usr/local/share/npm/bin
 ```
 
-Quick fix for advanced users is to put the following in your .bashrc/.zshrc file:
+Quick fix for advanced users is to put the following in your `.bashrc` file:
 `export PATH=/usr/local/share/npm/bin:$PATH`
 
 For beginners `brew uninstall node` and download and install Node from their [website](http://nodejs.org).
@@ -123,22 +120,6 @@ If you reach the OS hard limit, you can follow this [StackOverflow answer](http:
 
 View the details within [#152 ticket for recommended solutions for documentation generation](https://github.com/yeoman/yeoman/issues/152#issuecomment-7081670)
 
-### Why does Yeoman require a CLA?
-
-It keeps the IP clean and helps to prevent frivolous lawsuits around who owns what software. Basically the thing all of us want to avoid anyhow. In summary, the CLA asserts that when you donate fixes or documentation, you both own the code that you're submitting and that Google can in turn license that code to other people. (In this case, making it available under the BSD license)
-
-So yeah it's an extra hurdle, but it's something we can't avoid here. This is a Google open source project and thems are the rules.
-
-Just FWIW, here are some other projects that require a similar agreement, jQuery, Firefox, Sizzle, Dojo, Plone, Fedora, Cordova/Phonegap, Apache, Flex.
-
-More:
-* http://incubator.apache.org/ip-clearance/index.html
-* http://wiki.civiccommons.org/Contributor_Agreements
-
-### How do I use Compass sprites and the `image_url` helper with Yeoman?
-
-Follow the guide provided in [this gist](https://gist.github.com/passy/5270050).
-
 
 ### How can I disable Insight or Update Notifier?
 
@@ -148,6 +129,7 @@ Insight: `--no-insight`
 Update Notifier: `--no-update-notifier`
 
 You can also add `yeoman_test` as an environment variable with any value to permanently disable both.
+
 
 ### Can I use livereloading with a custom webserver?
 
@@ -163,12 +145,16 @@ You bet! You can remove the `connect` task from your Gruntfile and manually inse
 
 After that, simply run `grunt serve` like you normally would and enjoy automatic page refreshes.
 
+
 ### What should I do after cloning a web application generated with Yeoman?
 
-Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run
+Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run both:
+
 ```Bash
-npm install & bower install
+npm install
+bower install
 ```
+
 And check if these folders are created correctly.
 
-<img src="assets/img/yeoman-009.png" class="character"/>
+<img src="/assets/img/yeoman-009.png" class="character"/>
