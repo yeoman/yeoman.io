@@ -150,7 +150,7 @@ After that, simply run `grunt serve` like you normally would and enjoy automatic
 
 Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run both:
 
-```Bash
+```bash
 npm install
 bower install
 ```
