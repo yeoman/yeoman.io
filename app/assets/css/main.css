@@ -284,6 +284,11 @@ Navigation
   line-height: 1.6em;
 }
 
+.main img {
+  max-width: 100%;
+  height: auto;
+}
+
 .main a {
   color: #0096c7;
 }
