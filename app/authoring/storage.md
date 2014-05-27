@@ -7,7 +7,7 @@ excerpt: Making generators customizable through configuration and storage
 
 Storing user configuration options and sharing them between sub-generator is a common task. For example, it is common to share preferences like the language (does the user use CoffeeScript?), style options (indenting with spaces or tabs), etc.
 
-These configuration can be stored in the `.yo-rc.json` file through the [Yeoman Storage API]. This API is accessible through the `generator.config` object.
+These configuration can be stored in the `.yo-rc.json` file through the [Yeoman Storage API](http://yeoman.github.io/generator/Storage.html). This API is accessible through the `generator.config` object.
 
 Here's some common methods you'll use.
 
