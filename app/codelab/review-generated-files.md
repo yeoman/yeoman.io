@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Review the Yeoman-generated app
+# Step 4: Review the Yeoman-generated app
 
 Open up your ***mytodo*** directory to take a look at what was actually scaffolded. It'll look like this:
 
