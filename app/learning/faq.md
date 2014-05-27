@@ -29,9 +29,9 @@ On top of this architecture, we've highly customized tasks, profiles and systems
 Developers are free to customize any Grunt tasks with configured by Yeoman.
 
 
-### How does Yeoman differ from tools like Brunch or BBB?
+### How does Yeoman differ from tools like Brunch or Ember-cli?
 
-We love tools like Brunch and Grunt-BBB and feel that they offer a great solution for developers wishing to scaffold with frameworks like Backbone.js and Ember. With the Yeoman generator system, as we've ported over the Rails Generator system to work with Node, we feel we have an interesting opportunity to take application scaffolding in a new direction - one where it's easier for any developer to write scaffolds, support multiple testing frameworks, capture their own boilerplates and easily re-use them and so on.
+We love tools like Brunch and Ember-cli and feel that they offer a great solution for developers wishing to scaffold with frameworks like Backbone.js and Ember. With the Yeoman generator system, as we've ported over the Rails Generator system to work with Node, we feel we have an interesting opportunity to take application scaffolding in a new direction - one where it's easier for any developer to write scaffolds, support multiple testing frameworks, capture their own boilerplates and easily re-use them and so on.
 
 
 ### How do I register or unregister a package on Bower?
