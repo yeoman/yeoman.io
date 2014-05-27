@@ -3,6 +3,7 @@ layout: default
 title: Let's Scaffold a Web App with Yeoman
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
 <p class="authors">By Addy Osmani, James Cryer &amp; Pearl Chen</p>
@@ -68,11 +69,13 @@ It will take approximately 60 minutes to complete this codelab. By the end, you'
 
 </div>
 
+<hr>
+
 <div class="note tip">
 
   <p>Enjoy coding in the cloud? Don't have administrative access to your computer? <a href="https://github.com/codio/tutorial_yo_angular">Try this codelab in the Codio Web IDE</a>.</p>
 
-  <p>To keep your Yeoman environment set up on your local computer for future development, continue to Step 1.</p>
+  <p>To keep your Yeoman environment set up on your local computer for future development, continue with Step 1.</p>
 
 </div>
 

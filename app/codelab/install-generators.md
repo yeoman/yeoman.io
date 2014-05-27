@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Install a Yeoman generator
+# Step 2: Install a Yeoman generator
 
 In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for AngularJS projects.
 
@@ -43,6 +44,8 @@ $ npm install --global generator-angular
 </pre>
 
 </div>
+
+<hr>
 
 <div class="note important">
 

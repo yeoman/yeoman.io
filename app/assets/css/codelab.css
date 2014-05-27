@@ -1,34 +1,22 @@
 /* General Overrides */
 
-body {
-  background: white;
-}
-
 em {
   padding-right: 2px;
 }
 
-/* Codelab article */
+.highlight > pre,
+code.prettyprint {
+  color: white; /* default color in case offline */
+}
 
-article ul {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  padding-bottom: 20px; /* match paragraphs */
-}
-article li {
-  font-size: 14px;
-  line-height: 1.5;
-}
-article ul li ul {
-  padding-bottom: 0;
-}
+/* Codelab article */
 
 .social {
   margin-top: 25px;
 }
 
 .authors {
-  text-align: center; font-style: italic;
+  font-style: italic;
 }
 
 .keyboard {
@@ -41,8 +29,7 @@ article ul li ul {
 /* Note callouts */
 
 .note {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 25px;
 }
 .note.important {
   background: #f2dede;
@@ -52,24 +39,20 @@ article ul li ul {
 }
 .note p,
 .note li {
-  font-size: 13px;
-  line-height: 18px;
-}
-.note p {
-  padding-bottom: 10px;
+  font-size: 0.9em;
 }
 .note h2 {
-  font-size: 14px;
+  font-size: 1em;
+  margin-top: 1em;
+}
+.note *:first-child {
+  margin-top: 0;
+}
+.note *:last-child {
+  margin-bottom: 0;
 }
 
 /* Images */
-/*
-FIXME: Too generic, this have impact on other pages
-article img {
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
-}*/
 
 .mast-holder {
   width: 100%;

@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Preview your app in the browser
+# Step 5: Preview your app in the browser
 
 To preview your web app in your favourite web browser, you don't have to do anything special to set up a local web server on your computer &mdash; it's part of Yeoman.
 
