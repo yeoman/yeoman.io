@@ -36,6 +36,20 @@ angular.module('mytodoApp')
 
 ```
 
+We've also changed the name of the Angular module from the default 'yeomantutorialApp' to 'mytodoApp'. For the app to continue working, the references to the module must be consistent in two other places, *app.js*:
+```js
+'use strict';
+
+angular.module('mytodoApp', [
+  ...
+```
+
+and *index.html*:
+```html
+<body ng-app="mytodoApp">
+  ...
+```
+
 Then modify our view (*main.html*) to output our todos items as HTML text `input` fields:
 
 ```html
