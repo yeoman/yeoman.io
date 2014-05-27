@@ -386,7 +386,7 @@ Basic Tools
   margin-bottom: 1em;
 }
 
-.basic-tools span {
+.basic-tools .tool-content {
   font-size: 0.9em;
 }
 
@@ -924,6 +924,7 @@ Modify as content requires.
   .basic-tools .tool-logo {
     float: left;
     width: 42%;
+    padding: 14px;
     margin: 0 3% 0 0;
     /* Box Sizing */
     -webkit-box-sizing: border-box;
@@ -933,7 +934,7 @@ Modify as content requires.
     box-sizing: border-box;
   }
 
-  .basic-tools li span {
+  .basic-tools .tool-content {
     display: block;
     float: left;
     width: 50%;
@@ -1305,7 +1306,7 @@ Modify as content requires.
   }
 
   .basic-tools .tool-logo,
-  .basic-tools li span {
+  .basic-tools .tool-content {
     float: none;
     width: 100%;
     margin: 0 0 1em;
