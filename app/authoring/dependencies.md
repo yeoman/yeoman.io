@@ -11,15 +11,15 @@ As these tasks are very frequent, Yeoman already abstracts them away. We'll also
 
 ## NPM
 
-You just need to call `generator.npmInstall()` to run an `npm` installation. You can call it anywhere in your code as Yeoman will automatically schedule the task to run once everything else is complete. Yeoman will also ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
+You just need to call `generator.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
 
 ## Bower
 
-You just need to call `generator.bowerInstall()` to launch the installation. You can call it anywhere in your code as Yeoman will automatically schedule the task to run once everything else is complete. Yeoman will also ensure the `bower install` command is only run once even if it is called multiple time by multiple generators.
+You just need to call `generator.bowerInstall()` to launch the installation. Yeoman will ensure the `bower install` command is only run once even if it is called multiple time by multiple generators.
 
 ## Both?
 
-Call `generator.installDependencies()` to run both npm and bower.
+Call `generator.installDependencies()` to run both npm and bower. You can call it anywhere in your code as Yeoman will automatically schedule the tasks to run once everything else is complete.
 
 ## Using other tools
 
