@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Make Todos persistent with local storage
+# Step 9: Make Todos persistent with local storage
 
 Let’s revisit the issue of items not persisting when the browser refreshes.
 

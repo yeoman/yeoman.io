@@ -2,10 +2,9 @@
 layout: default
 title: Style guide
 category: contributing
+sidebar: sidebars/contributing.html
 excerpt: The yeoman project style guide
 ---
-
-# Style guide
 
 This project uses single-quotes, two space indentation, multiple var statements and whitespace around arguments. Use a single space after keywords like `function`. Ex:
 

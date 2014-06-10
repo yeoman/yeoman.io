@@ -1,24 +1,25 @@
-<!doctype html>
-<html lang="en">
-{% include head.html %}
-<body class="{{ page.class }}">
+---
+layout: base
+markdown: 0
+---
+<div id="content">
+  <h2 class="page-title">
+    <div class="container">{{ page.title }}</div>
+  </h2>
 
-  {% include sidebar.html %}
+  <div class="container has-sidebar clearfix">
+    {% if page.sidebar %}
+      {% include {{page.sidebar}} %}
+    {% endif %}
 
-  <div id="content">
-    {% if page.type == 'list' %}
-      {% if page.markdown == 1 %}
-        {{ content | markdownify }}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    {% else %}
-      <article>
+    <article class="main">
+      <section class="content-chunk">
         {% if page.markdown == 1 %}
           {{ content | markdownify }}
         {% else %}
           {{ content }}
         {% endif %}
+
         {% if page.social_text %}
           <div class="social">
             <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{page.social_text}}" data-url="{{page.social_url}}">Tweet</a>
@@ -26,17 +27,13 @@
             <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
           </div>
         {% endif %}
-      </article>
-    {% endif %}
 
-    {% if page.class == 'documentation' %}
-      <div class="contribute-doc">
-        Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions.
-        <br><a href="https://github.com/yeoman/yeoman.io/tree/master/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
-      </div>
-    {% endif %}
+        {% if page.class == 'documentation' %}
+          <div class="contribute-doc">
+            Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions. <a href="https://github.com/yeoman/yeoman.io/tree/master/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
+          </div>
+        {% endif %}
+      </section>
+    </article>
   </div>
-
-  {% include foot.html %}
-</body>
-</html>
+</div>

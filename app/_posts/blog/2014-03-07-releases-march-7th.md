@@ -1,15 +1,15 @@
 ---
 layout: blog
 title: Yeoman updates for Friday, March 7th.
+sidebar: sidebars/blog.html
+excerpt: Review project latest releases
 ---
-
-<p>&nbsp;</p>
 
 First off, Happy Friday!
 
 <img src="http://i.imgur.com/WHfJgag.jpg"/>
 
-Today we released updates to six of our official generators. The complete changelogs can be found in our linked release pages lower down. 
+Today we released updates to six of our official generators. The complete changelogs can be found in our linked release pages lower down.
 
 Sindre also released a new version of his [Gulp plugin generator](https://github.com/sindresorhus/generator-gulp-plugin-boilerplate), Hemanth released an [Atom Editor package generator](https://github.com/hemanth/generator-atom) and Rob updated [grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs). Simon is almost ready shipping a huge new feature for `yo` ([composability](https://github.com/yeoman/generator/commits/master)), which we hope to talk about in the next few weeks. Leonardo, Eddie and Rob have been working on a completely new mobile-first design for `yeoman.io` which they hope to get out in the next month. Kevin has been helping out all over the place.
 

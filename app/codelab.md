@@ -1,15 +1,14 @@
 ---
 layout: default
-markdown: 1
+title: Let's Scaffold a Web App with Yeoman
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
-
-# Let's Scaffold a Web App with Yeoman
 
 <p class="authors">By Addy Osmani, James Cryer &amp; Pearl Chen</p>
 
-Allo! Allo! In this 1-hour codelab, you build a fully functional web application from scratch with the help of [Yeoman](http://yeoman.io). You'll also use features from [Grunt](http://gruntjs.com) and [Bower](http://bower.io). The sample app will be written in [AngularJS](http://angularjs.org). 
+Allo! Allo! In this 1-hour codelab, you build a fully functional web application from scratch with the help of [Yeoman](http://yeoman.io). You'll also use features from [Grunt](http://gruntjs.com) and [Bower](http://bower.io). The sample app will be written in [AngularJS](http://angularjs.org).
 
 <p class="mast-intro"><img src="/assets/img/yeoman-008.png"></p>
 
@@ -27,7 +26,7 @@ The sample web app you'll build today will be a Todo app. You will be able to ad
 
 <h2 id="toc">What's in this codelab?</h2>
 
-We will build the above Todo app from scratch. Each step builds on the previous so go through each step one by one. 
+We will build the above Todo app from scratch. Each step builds on the previous so go through each step one by one.
 
 * **Step 1:** [Set up your dev environment &raquo;](codelab/setup.html)
 * **Step 2:** [Install a Yeoman generator &raquo;](codelab/install-generators.html)
@@ -54,11 +53,11 @@ It will take approximately 60 minutes to complete this codelab. By the end, you'
       <a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/index.html">index.html</a>
     </li>
     <li>
-      views &gt; 
+      views &gt;
       <a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/views/main.html">main.html</a>
     </li>
     <li>
-      scripts &gt; 
+      scripts &gt;
       <a href="https://github.com/addyosmani/yeoman-examples/blob/master/angular-localStorage-todos/app/scripts/app.js">app.js</a></li>
     <li>
       scripts &gt; controllers &gt;
@@ -70,12 +69,14 @@ It will take approximately 60 minutes to complete this codelab. By the end, you'
 
 </div>
 
+<hr>
+
 <div class="note tip">
 
   <p>Enjoy coding in the cloud? Don't have administrative access to your computer? <a href="https://github.com/codio/tutorial_yo_angular">Try this codelab in the Codio Web IDE</a>.</p>
 
-  <p>To keep your Yeoman environment set up on your local computer for future development, continue to Step 1.</p>
-  
+  <p>To keep your Yeoman environment set up on your local computer for future development, continue with Step 1.</p>
+
 </div>
 
 <p class="codelab-paging">

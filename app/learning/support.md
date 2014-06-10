@@ -1,9 +1,11 @@
 ---
 layout: default
-markdown: 1
+title: Support
 ---
 
-#Support
+## First step
+
+The first step should always be to run `yo doctor`. This command will troubleshoot your environment and find most installation/configuration error.
 
 ## Getting Support
 

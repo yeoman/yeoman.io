@@ -1,15 +1,8 @@
 ---
 layout: blog
 title: Grunt And Gulp Tasks For Performance Optimization
+sidebar: sidebars/blog.html
 ---
-
-<p>&nbsp;</p>
-<style>
-.note {
-background: #f2dede;
-padding: 15px;
-}</style>
-
 
 ![](/assets/img/blog/tasks.jpg)
 
@@ -32,7 +25,7 @@ With the right balance of compression and formatting it's possible to still ship
 
 #### Grunt
 
-* [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) 
+* [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
 * [grunt-imageoptim](https://github.com/JamieMason/grunt-imageoptim) (OSX only)
 
 Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.io/ImageOptim-CLI) of differences between the two. Choose the one that is most suitable for you.
@@ -50,7 +43,7 @@ Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.
 If you have a responsive site which is visually flexible on multiple devices, you'll want a strategy to make images flexible too.
 
 Serving unnecessarily large images to the browser can [impact](http://timkadlec.com/2013/11/why-we-need-responsive-images-part-deux/) both rendering and load performance, but these aren't the only metrics that can suffer when large images are shipped to the browser.
- 
+
 This is one reason we need responsive images, and it's great to see [srcset](http://blog.chromium.org/2014/02/chrome-34-responsive-images-and_9316.html?m=1) - hopefully leading to a full implementation of `<picture>` - is already in Chrome Beta.
 
 There are a number of Grunt tasks available that can help generate multi-resolution images as part of your build process.
@@ -58,9 +51,9 @@ There are a number of Grunt tasks available that can help generate multi-resolut
 #### Grunt
 
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images) - use this along with [Imager.js](https://github.com/BBC-News/Imager.js/), `<picture>` or the picturefill [polyfill](https://github.com/jansepar/picturefill).
-* [grunt-clowncar](https://npmjs.org/package/grunt-clowncar) 
+* [grunt-clowncar](https://npmjs.org/package/grunt-clowncar)
 
-In addition, if you need to just resize/normalize images that are large in dimension, you can use [grunt-image-resize](https://www.npmjs.org/package/grunt-image-resize). 
+In addition, if you need to just resize/normalize images that are large in dimension, you can use [grunt-image-resize](https://www.npmjs.org/package/grunt-image-resize).
 
 <div class="note">
 <strong>Note:</strong> Tim Kaldec's research into responsive images has <a href="http://timkadlec.com/2013/06/why-we-need-responsive-images/">suggested</a> a responsive images strategy could lead to savings of up to 72% on image weight. Whilst it is still early to opt for a spec-compatible, cross-browser approach to responsive images the BBC and Guardian have been using Imager.js for this successfully.
@@ -77,9 +70,9 @@ SVG files created with editors usually contain a large quantity of redundant inf
 
 #### Gulp
 
-* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin) 
+* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin)
 
-## Generate spritesheets 
+## Generate spritesheets
 
 #### Grunt
 
@@ -104,10 +97,10 @@ WebP is a recent image format that offers lossless and lossy compression for ima
 
 <div class="note">
 <strong>Note:</strong> This <a href="http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&thumbSize=200&ival=100&end=full">test</a> from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store <a href="http://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/">found</a> that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
-</div> 
+</div>
 
 
-## Build SVG sprites with support for various browsers 
+## Build SVG sprites with support for various browsers
 
 ### Grunt
 
@@ -115,11 +108,11 @@ WebP is a recent image format that offers lossless and lossy compression for ima
 
 ### Gulp
 
-* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin) 
+* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin)
 
 We consider inlining images using Data URIs to now be an anti-pattern given their [poor](http://www.mobify.com/blog/data-uris-are-slow-on-mobile/) performance on mobile.
 
-## Minify CSS 
+## Minify CSS
 
 Minification eliminates unnecessary space, line breaks, indendation and characters in your files, which are generally unnecessary in production. Compacting down your HTML, CSS and JS can improve on parsing, execution and doanload times. For CSS specifically, we recommend:
 
@@ -146,7 +139,7 @@ In projects using CSS frameworks like Bootstrap, Foundation and so forth you typ
     <strong>Note:</strong> A question developers regularly ask is whether UnCSS, or the process of removing unused CSS can also work with styles injected into the page dynamically. The answer is 'yes'. UnCSS works in tandem with PhantomJS in order to make this happen. Devs have seen anything between <a href="https://twitter.com/efexen/status/438672726996574209">10</a>-<a href="https://twitter.com/thisbetom/status/432575411138998273">120KB</a> in savings on a typical Bootrap page and UnCSS also works wel with other frameworks.
 </div>
 
-## Inline CSS 
+## Inline CSS
 
 If the external CSS resources for a particular page are small, you can inline those directly in your markup to save on additional requests. Inlining small CSS in this way allows the browser to proceed with rendering the page.
 
@@ -156,9 +149,9 @@ If the external CSS resources for a particular page are small, you can inline th
 
 #### Gulp
 
-* [gulp-inline-css](https://www.npmjs.org/package/gulp-inline-css/) 
+* [gulp-inline-css](https://www.npmjs.org/package/gulp-inline-css/)
 
-## Combine media queries 
+## Combine media queries
 
 This isn't a PageSpeed recommendation, but allows you to combine matching media queries into a single media query definition. We've found it useful for handling CSS generated by preprocessors which may use nested media queries.
 
@@ -173,17 +166,17 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 ## JavaScript
 
-### Minify, compress JS 
+### Minify, compress JS
 
 #### Grunt
 
 * [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
-* [grunt-closure-compiler](https://github.com/gmarty/grunt-closure-compiler) 
+* [grunt-closure-compiler](https://github.com/gmarty/grunt-closure-compiler)
 
 #### Gulp
 
 * [gulp-uglify](https://github.com/terinjokes/gulp-uglify)
-* [gulp-closure-compiler](https://github.com/sindresorhus/gulp-closure-compiler) 
+* [gulp-closure-compiler](https://github.com/sindresorhus/gulp-closure-compiler)
 
 
 ## RequireJS (optimization via r.js)
@@ -196,7 +189,7 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 * [RequireJS](http://requirejs.org)
 
-## Minify HTML 
+## Minify HTML
 
 #### Grunt
 
@@ -225,7 +218,7 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 #### Gulp
 
-* [gulp-zip](https://github.com/sindresorhus/gulp-zip) 
+* [gulp-zip](https://github.com/sindresorhus/gulp-zip)
 
 ## Zopfli compression
 
@@ -246,7 +239,7 @@ The Zopfli Compression Algorithm is an open-source compression library that gene
 
 The critical path represents the code and resources needed to render the "above-the-fold" content in the page - i.e what your users will first see when they load up your page. PageSpeed recommends inlining your critical path CSS for improved performance. Whilst tools like [mod_pagespeed](https://code.google.com/p/modpagespeed/) are highly efficient at achieving this, it’s more difficult to optimize for the critical path with other tooling.
 
-You could probably use PhantomJS along with the above the fold scripts from [speedreport](https://github.com/r3b/speedreport/) to get an idea of what CSS is above the fold and can then work on optimizing this manually. 
+You could probably use PhantomJS along with the above the fold scripts from [speedreport](https://github.com/r3b/speedreport/) to get an idea of what CSS is above the fold and can then work on optimizing this manually.
 
 <div class="note"><strong>Note:</strong> Paul Kinlan wrote a <a href="http://addyosmani.com/blog/detecting-critical-above-the-fold-css-with-paul-kinlan-video/">bookmarklet</a> for estimating the above-the-fold CSS for a page which is also worth checking out.</div>
 
@@ -255,7 +248,7 @@ You could probably use PhantomJS along with the above the fold scripts from [spe
 
 On the ‘tools to keep an eye on’ list is [AssetGraph](https://github.com/assetgraph/assetgraph).
 
-AssetGraph looks at projects as a set of graph problems where the nodes are considered assets (HTML, CSS, Images, JS) and edges, the relationships between them (image tags, anchor tag, script tags etc). 
+AssetGraph looks at projects as a set of graph problems where the nodes are considered assets (HTML, CSS, Images, JS) and edges, the relationships between them (image tags, anchor tag, script tags etc).
 
 As AssetGraph can determine how project assets relate to each other it can perform many of the common performance optimizations developers may want to achieve on their own automatically. This works particularly well on smaller projects and support for larger projects is being worked on.
 
@@ -264,7 +257,7 @@ As AssetGraph can determine how project assets relate to each other it can perfo
 
 #### Gulp
 
-Gulp users should just use AssetGraph directly. 
+Gulp users should just use AssetGraph directly.
 
 
 
@@ -294,8 +287,8 @@ The following benchmarking tasks are useful to integrate as a part of Continuous
 
 #### Misch
 
-* [gulp-google-cdn](https://github.com/sindresorhus/gulp-google-cdn) 
-* [gulp-size](https://github.com/sindresorhus/gulp-size) 
+* [gulp-google-cdn](https://github.com/sindresorhus/gulp-google-cdn)
+* [gulp-size](https://github.com/sindresorhus/gulp-size)
 
 ## Conclusions
 

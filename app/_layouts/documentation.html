@@ -3,21 +3,4 @@ layout: default
 class: documentation
 ---
 
-
-<header>
-  <h1 class="banner">
-    <span>{{ page.title }}</span>
-  </h1>
-</header>
-
-<section>
-  <div class="post">
-    {{ content }}
-  </div>
-
-  {% if page.type != 'list' %}
-  <hr>
-
-  <p><a href=".">&laquo; Back to the listing page</a></p>
-  {% endif %}
-</section>
+{{ content }}

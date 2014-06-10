@@ -1,6 +1,10 @@
 <head>
   <meta charset="utf-8">
-  <title>Yeoman - Modern workflows for modern webapps</title>
+  {% if page.title %}
+    <title>{{page.title}} | Yeoman</title>
+  {% else %}
+    <title>Yeoman - Modern workflows for modern webapps</title>
+  {% endif %}
   <meta name="viewport" content="width=device-width">
 
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lekton|Ubuntu+Mono:400,700" rel="stylesheet">
@@ -11,11 +15,11 @@
 
   <!-- build:css({app,.tmp}) /assets/css/main.css -->
   <link href="/assets/css/normalize.css" rel="stylesheet">
-  <link href="/assets/css/yeoman.css" rel="stylesheet">
-  <link href="/assets/css/blog.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/assets/css/codelab.css" rel="stylesheet">
   <link href="/assets/css/prettify.css" rel="stylesheet">
   <!-- endbuild -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 

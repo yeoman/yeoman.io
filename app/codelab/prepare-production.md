@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Get ready for production
+# Step 10: Get ready for production
 
 Ready to show your beautiful todo app to the world? Let’s try to build a production-ready version of it which we can ship.
 

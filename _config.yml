@@ -8,8 +8,8 @@ description: Yeoman website
 author:
   name: Yeoman.io
 
-url : http://yeoman.io
-atom_path : /blog/atom.xml
+url: http://yeoman.io
+atom_path: /blog/atom.xml
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -25,6 +25,8 @@ permalink: /blog/:title.html
 
 # Markdown library
 markdown: redcarpet
-#   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+
+gems:
+- jekyll-redirect-from

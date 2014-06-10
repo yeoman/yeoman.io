@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Use Bower to install packages
+# Step 7: Use Bower to install packages
 
 <div class="mast-holder">
   <img src="/assets/img/yeoman-005.png">

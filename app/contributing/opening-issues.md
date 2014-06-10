@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Opening an issue
+title: How to open an helpful issue
 category: contributing
+sidebar: sidebars/contributing.html
 excerpt: Guidelines to opening an issue on the Yeoman project
 ---
-
-# How to open an helpful issue
 
 In order for us to help you please check that you've completed the following steps:
 

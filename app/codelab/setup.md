@@ -3,9 +3,10 @@ layout: default
 markdown: 1
 social_text: "Let's Scaffold A Web App With @Yeoman!"
 social_url: http://yeoman.io/codelab.html
+sidebar: sidebars/codelab.html
 ---
 
-# Set up your dev environment
+# Step 1: Set up your dev environment
 
 <p class="mast-holder">
   <img src="/assets/img/yeoman-004.png">
