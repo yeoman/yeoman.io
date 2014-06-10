@@ -53,7 +53,7 @@ Yeoman is released under a [BSD](http://opensource.org/licenses/bsd-license.php/
 
 ### What should I do before submitting an issue through GitHub?
 
-Make sure you read the [Submitting an issue guide](http://localhost:9000/contributing/opening-issues.html).
+Make sure you read the [Submitting an issue guide](/contributing/opening-issues.html).
 
 
 ### What tools do Yeoman make use of?
