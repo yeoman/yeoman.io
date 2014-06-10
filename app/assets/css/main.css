@@ -1243,7 +1243,7 @@ Modify as content requires.
   }
 
   .main-nav-sub {
-    top: 100%
+    top: 100%;
     min-width: 200px;
   }
 
