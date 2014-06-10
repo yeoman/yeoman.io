@@ -224,7 +224,7 @@ Navigation
 
 .main-nav a.active {
   color: #5aadbb;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .main-nav a:hover {
@@ -251,7 +251,7 @@ Navigation
 
 .jumbotron h2 {
   margin: 0 1em;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1em;
   color: #fff;
   text-transform: uppercase;
@@ -469,7 +469,7 @@ Yeoman Team
   line-height: 1em;
   color: #fff;
   text-align: center;
-  font-weight: normal;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -727,13 +727,13 @@ input.search {
 
 @media print {
   pre .str, code .str { color: #060; }
-  pre .kwd, code .kwd { color: #006; font-weight: bold; }
+  pre .kwd, code .kwd { color: #006; font-weight: 700; }
   pre .com, code .com { color: #600; font-style: italic; }
-  pre .typ, code .typ { color: #404; font-weight: bold; }
+  pre .typ, code .typ { color: #404; font-weight: 700; }
   pre .lit, code .lit { color: #044; }
   pre .pun, code .pun { color: #440; }
   pre .pln, code .pln { color: #000; }
-  pre .tag, code .tag { color: #006; font-weight: bold; }
+  pre .tag, code .tag { color: #006; font-weight: 700; }
   pre .atn, code .atn { color: #404; }
   pre .atv, code .atv { color: #060; }
 }

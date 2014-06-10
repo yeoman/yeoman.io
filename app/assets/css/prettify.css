@@ -21,12 +21,12 @@
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
   .str { color: #060 }
-  .kwd { color: #006; font-weight: bold }
+  .kwd { color: #006; font-weight: 700 }
   .com { color: #600; font-style: italic }
-  .typ { color: #404; font-weight: bold }
+  .typ { color: #404; font-weight: 700 }
   .lit { color: #044 }
   .pun, .opn, .clo { color: #440 }
-  .tag { color: #006; font-weight: bold }
+  .tag { color: #006; font-weight: 700 }
   .atn { color: #404 }
   .atv { color: #060 }
 }
