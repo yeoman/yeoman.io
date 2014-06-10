@@ -555,7 +555,7 @@ Context/Local Nav
 ========================================================================== */
 
 .page-footer {
-  padding: 2em 0 0;
+  padding: 2em 0 1em;
   background: #1f1f1f;
   text-align: center;
 }
@@ -568,7 +568,7 @@ Context/Local Nav
 
 .footer-links li {
   display: inline-block;
-  margin: 0 1em 3em;
+  margin: 0 1em 2em;
 }
 
 .footer-links .icon:hover {
@@ -582,6 +582,16 @@ Context/Local Nav
 .footer-links .btn {
   position: relative;
   top: 0.2em;
+}
+
+.improve a {
+  color: #fff;
+  font-size: small;
+  opacity: 0.5;
+}
+
+.improve a:hover {
+  opacity: 1;
 }
 
 
