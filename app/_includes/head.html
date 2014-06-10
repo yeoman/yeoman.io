@@ -7,27 +7,20 @@
   {% endif %}
   <meta name="viewport" content="width=device-width">
 
-  <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lekton|Ubuntu+Mono:400,700" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 
-  {% if page.category == 'blog' %}
-    <link href="http://yeoman.io/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Yeoman Blog Atom Feed">
-  {% endif %}
-
+  {% if page.category == 404 %}
+  <link href="/assets/css/404.css" rel="stylesheet">
+  {% else %}
   <!-- build:css({app,.tmp}) /assets/css/main.css -->
   <link href="/assets/css/normalize.css" rel="stylesheet">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/assets/css/codelab.css" rel="stylesheet">
   <link href="/assets/css/prettify.css" rel="stylesheet">
   <!-- endbuild -->
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+  {% endif %}
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-  <!-- build:js(app) /assets/js/scripts.js -->
-  <script src="/assets/js/libs/prettify.js"></script>
-  <script src="/assets/js/libs/jquery.timeago.js"></script>
-  <script src="/assets/js/libs/list.js"></script>
-  <script src="/assets/js/libs/lodash.min.js"></script>
-  <script src="/assets/js/script.js"></script>
-  <!-- endbuild -->
+  {% if page.category == 'blog' %}
+    <link href="http://yeoman.io/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Yeoman Blog Atom Feed">
+  {% endif %}
 </head>
