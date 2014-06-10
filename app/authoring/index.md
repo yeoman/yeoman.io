@@ -63,7 +63,7 @@ In an example project, a directory tree could look like this:
 
 This generator will expose `yo name` and `yo name:router` commands.
 
-You may not like keeping all your generator code in the root directory. Luckily Yeoman allow two differents directory structures. It'll look in `./` and `generators/` to register available generators.
+You may not like keeping all your code at the root of your folder. Luckily Yeoman allow two differents directory structures. It'll look in `./` and `generators/` to register available generators.
 
 The previous example can be written as follow:
 
