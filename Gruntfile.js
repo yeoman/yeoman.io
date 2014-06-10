@@ -180,7 +180,10 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= yeoman.dist %>'
       },
-      html: '<%= yeoman.dist %>/index.html'
+      src: [
+        '<%= yeoman.dist %>/index.html',
+        '<%= yeoman.dist %>/404.html'
+      ]
     },
     usemin: {
       options: {
