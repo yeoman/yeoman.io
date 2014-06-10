@@ -1,41 +1,34 @@
-<!doctype html>
-<html lang="en">
-{% include head.html %}
-<body class="{{ page.class }}">
+---
+layout: base
+---
 
-  {% include header.html %}
-
-  <div id="content">
-    <h2 class="page-title">
-      <div class="container">{{ page.title }}</div>
-    </h2>
-    <div class="container clearfix">
-      <article class="main">
-        <section class="content-chunk">
-          {% if page.markdown == 1 %}
-            {{ content | markdownify }}
-          {% else %}
-            {{ content }}
-          {% endif %}
-        </section>
-      </article>
-    </div>
-    {% if page.social_text %}
-      <div class="social">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{page.social_text}}" data-url="{{page.social_url}}">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
-      </div>
-    {% endif %}
-
-    {% if page.class == 'documentation' %}
-      <div class="contribute-doc">
-        Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions.
-        <br><a href="https://github.com/yeoman/yeoman.io/tree/master/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
-      </div>
-    {% endif %}
+<div id="content">
+  <h2 class="page-title">
+    <div class="container">{{ page.title }}</div>
+  </h2>
+  <div class="container clearfix">
+    <article class="main">
+      <section class="content-chunk">
+        {% if page.markdown == 1 %}
+          {{ content | markdownify }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </section>
+    </article>
   </div>
+  {% if page.social_text %}
+    <div class="social">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{page.social_text}}" data-url="{{page.social_url}}">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
+    </div>
+  {% endif %}
 
-  {% include foot.html %}
-</body>
-</html>
+  {% if page.class == 'documentation' %}
+    <div class="contribute-doc">
+      Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions.
+      <br><a href="https://github.com/yeoman/yeoman.io/tree/master/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
+    </div>
+  {% endif %}
+</div>
