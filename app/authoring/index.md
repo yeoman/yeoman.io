@@ -6,7 +6,7 @@ sidebar: sidebars/authoring.html
 excerpt: Just starting out with generators? Start here
 ---
 
-Generators are the building blocks of the Yeoman ecosystem. They're the plugins runned by `yo` generating files for the end users.
+Generators are the building blocks of the Yeoman ecosystem. They're the plugins run by `yo` to generate files for end users.
 
 In reading this section, you'll learn how to create and distribute your own.
 
@@ -63,7 +63,7 @@ In an example project, a directory tree could look like this:
 
 This generator will expose `yo name` and `yo name:router` commands.
 
-You may not like keeping all your code at the root of your folder. Luckily Yeoman allow two differents directory structures. It'll look in `./` and `generators/` to register available generators.
+You may not like keeping all your generator code in the root directory. Luckily Yeoman allow two differents directory structures. It'll look in `./` and `generators/` to register available generators.
 
 The previous example can be written as follow:
 
@@ -110,7 +110,7 @@ We assign the extended generator to `module.exports` to make it available to the
 
 Some special generator methods can only be called inside the `constructor` function. These special methods usually set up important state controls that cannot work later on.
 
-This mean you may want to overwrite the default constructor from time to time. You can do it like this:
+This means you may want to overwrite the default constructor from time to time. You can do it like this:
 
 ```js
 module.exports = yeoman.generators.Base.extend({
@@ -127,17 +127,17 @@ module.exports = yeoman.generators.Base.extend({
 
 ### Adding our own functionality
 
-Every method added to the prototype is runned once the generator is called. Usually in sequence. But we'll see in the next section that some special method names will trigger specific run order.
+Every method added to the prototype is run once the generator is called, usually in sequence. But we'll see in the next section that some special method names will trigger specific run order.
 
 Let's add some methods:
 
 ```js
 module.exports = yeoman.generators.Base.extend({
   method1: function () {
-    console.log('method 1 just runned');
+    console.log('method 1 just ran');
   },
   method2: function () {
-    console.log('method 2 just runned');
+    console.log('method 2 just ran');
   }
 });
 ```
@@ -157,22 +157,22 @@ From the root of your generator project (in `generator-name/` folder). Open a te
 npm link
 ```
 
-That'll install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log` defined earlier outputted in the terminal. Congratulation, you just built your first generator!
+That'll install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log` defined earlier outputted in the terminal. Congratulations, you just built your first generator!
 
 
 ### Finding the project root
 
 When running a generator, Yeoman tries to figure out some things from the context it runs.
 
-The most important one is that Yeoman looks up the directory tree for a `.yo-rc.json` file. If found, it then consider the location of the file as the root of the project. Behind the scene, Yeoman will change the current directory to the `.yo-rc.json` file location and run the requested generator there.
+The most important one is that Yeoman looks up the directory tree for a `.yo-rc.json` file. If found, it then considers the location of the file as the root of the project. Behind the scenes, Yeoman will change the current directory to the `.yo-rc.json` file location and run the requested generator there.
 
 The Storage module creates the `.yo-rc.json` file. Calling `this.config.save()` from a generator for the first time will create the file.
 
-So if you're generator is not running in your current working directory, make sure there's no `.yo-rc.json` somewhere up the directory tree.
+So if your generator is not running in your current working directory, make sure there's no `.yo-rc.json` somewhere up the directory tree.
 
 
 ## Where to go from here?
 
 After reading this you should be able to create a local generator and run it.
 
-If this is your first time writing a generator, you should definitely read the next section on the running context and the run loop. This section is a mandatory read to understand in what context your generator will run and to make sure it'll compose well with the other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available in the core to help you achieve your goals.
+If this is your first time writing a generator, you should definitely read the next section on the [running context and the run loop](/authoring/running-context.html). This section is a mandatory read to understand in what context your generator will run and to make sure it'll compose well with the other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available in the core to help you achieve your goals.
