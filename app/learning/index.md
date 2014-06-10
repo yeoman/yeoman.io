@@ -1,6 +1,8 @@
 ---
 layout: default
+markdown: 1
 title: Getting started with Yeoman
+sidebar: sidebars/learning.html
 ---
 
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:

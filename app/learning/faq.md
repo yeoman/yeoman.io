@@ -1,6 +1,8 @@
 ---
 layout: default
+markdown: 1
 title: Frequently Asked Questions
+sidebar: sidebars/learning.html
 ---
 
 ### What are the goals of the project?
@@ -159,11 +161,11 @@ And check if these folders are created correctly.
 
 ### What can I do if _npm install -g yo_ fails on OS X with _sh: node: command not found_ ?
 
-Try 
+Try
 
 	sudo chmod a+rx /usr/local/bin /usr/local/bin/node
 
-Authenticate and run it again. 
+Authenticate and run it again.
 Explanation: NPM runs the installation as _nobody_ which may cause the installation to fail in a way that seems as if _node_ was not found if the binary cannot be accessed.
 
 <img src="/assets/img/yeoman-009.png" class="character"/>

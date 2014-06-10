@@ -1,9 +1,9 @@
 ---
 layout: default
 markdown: 1
+title: Deploying a Yeoman Site
+sidebar: sidebars/learning.html
 ---
-
-# Deploying a Yeoman Site
 
 Running `grunt build` generates an optimized version of your application in the `dist` directory. There are multiple ways to version and deploy this code to production.
 
