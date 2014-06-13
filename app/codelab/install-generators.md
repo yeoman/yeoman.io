@@ -59,6 +59,8 @@ $ sudo npm install --global generator-angular
 
 </div>
 
+<hr>
+
 <div class="note important">
   
   <h2>Versions of generator-angular that this codelab works with</h2>

@@ -10,28 +10,6 @@ sidebar: sidebars/codelab.html
 
 We've used the word "scaffold" a few times but you might not know what that means. Scaffolding, in the Yeoman sense of the word, means generating files for your web app based on your specific configuration requests. In this step, you'll see how Yeoman can generate files specifically for Angular apps &mdash; with options for using other external libraries like SASS and Twitter Bootstrap &mdash; with minimal effort.  
 
-## Access generators via the Yeoman menu
-
-Once a generator has been installed it can be accessed via the Yeoman interactive menu:
-
-```js
-$ yo
-```
-
-If you have a few generators installed, you'll be able to interactively choose from them:
-
-![](/assets/img/codelab/image_7.png)
-
-<div class="note important">
-
-  <h2>But wait!</h2>
-
-  <p>Don’t run a generator in any old place on your computer. First, make a project directory where the generator will place your scaffolded project files.</p>
-
-</div>
-
-Highlight **Get me out of here!** to exit the menu.
-
 ## Create a project folder
 
 Create a ***mytodo*** folder for all your codelab work:
@@ -41,15 +19,23 @@ $ mkdir mytodo
 $ cd mytodo
 ```
 
-## Scaffold out your Angular app
+This folder is where the generator will place your scaffolded project files. 
 
-Now run `yo` again to see your generators:
+<div class="note tip">
+As an added bonus, the Angular generator will dynamically use the name of your folder to make a namespace for your app. For example, <b>mytodo</b> will become <code>angular.module('mytodoApp', [])</code>. So make sure that you don't have any typos in <b>mytodo</b> before going onto the next step. 
+</div>
+
+## Access generators via the Yeoman menu
+
+Run `yo` again to see your generators:
 
 ```js
 $ yo
 ```
 
-Highlight **Run the Angular generator**. Hit **enter** to run the generator.
+If you have a few generators installed, you'll be able to interactively choose from them. Highlight **Run the Angular generator**. Hit **enter** to run the generator.
+
+![](/assets/img/codelab/image_7.png)
 
 <div class="note tip">
 

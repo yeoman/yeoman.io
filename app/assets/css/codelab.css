@@ -31,11 +31,25 @@ code.prettyprint {
 .note {
   padding: 25px;
 }
+.note pre,
+.note code {
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border-width: 0px;
+}
 .note.important {
   background: #f2dede;
 }
+.note.important code,
+.note.important pre {
+  background: #e2cbcb;
+}
 .note.tip {
   background: #d2e0d2;
+}
+.note.tip code,
+.note.tip pre {
+  background: #bed3be;
 }
 .note p,
 .note li {
