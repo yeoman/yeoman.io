@@ -5,7 +5,7 @@ category: authoring
 excerpt: Just starting out with generators? Start here
 ---
 
-Generators are the building blocks of the Yeoman ecosystem. They're the plugins runned by `yo` generating files for the end users.
+Generators are the building blocks of the Yeoman ecosystem. They're the plugins that are ran by `yo` to generate files for the end users.
 
 In reading this section, you'll learn how to create and distribute your own.
 
@@ -131,10 +131,10 @@ Let's add some methods:
 ```js
 module.exports = yeoman.generators.Base.extend({
   method1: function () {
-    console.log('method 1 just runned');
+    console.log('method 1 just ran');
   },
   method2: function () {
-    console.log('method 2 just runned');
+    console.log('method 2 just ran');
   }
 });
 ```

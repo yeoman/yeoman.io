@@ -18,7 +18,7 @@ This means prefer `beforeEach` to `before`. Re-instantiate objects before runnin
 
 #### Tests must be runnable in isolation
 
-Each test must pass if they're runned alone. You can run a single test by using `mocha test.js --grep 'test name'`.
+Each test must pass if they're ran alone. You can run a single test by using `mocha test.js --grep 'test name'`.
 
 #### Stub most performance heavy operation
 
