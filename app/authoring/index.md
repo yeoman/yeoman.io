@@ -21,9 +21,9 @@ In reading this section, you'll learn how to create and distribute your own.
 
 A generator is at its core a Node.js module.
 
-First, create a folder in which you'll write your generator. This folder need to be named `generator-name` (where name is the name of your generator). This is important as Yeoman rely on the file system to find available generators.
+First, create a folder in which you'll write your generator. This folder must be named `generator-name` (where name is the name of your generator). This is important as Yeoman relies on the file system to find available generators.
 
-Once inside your generator folder, create a `package.json` file. This file is a Node.js module manifest. You can generate this file running `npm init` from your command line or by entering the following manually:
+Once inside your generator folder, create a `package.json` file. This file is a Node.js module manifest. You can generate this file by running `npm init` from your command line or by entering the following manually:
 
 ```json
 {
@@ -37,7 +37,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
 }
 ```
 
-The `name` property must be prefixed by `generator-`. The `keywords` property must contains `"yeoman-generator"` to be indexed by our [community generator page](/community-generators.html).
+The `name` property must be prefixed by `generator-`. The `keywords` property must contain `"yeoman-generator"` to be indexed by our [community generator page](/community-generators.html).
 
 You should make sure you set the latest version of `yeoman-generator` as a dependency. You can do this by running: `npm install --save yeoman-generator`.
 
@@ -47,9 +47,9 @@ Add other [`package.json` properties](https://www.npmjs.org/doc/files/package.js
 
 Yeoman is deeply linked to the file system and how you lay out your directory tree. Each sub-generator is contained within its own folder.
 
-The default generator, the one used when you call `yo name` is the `app` generator. This one must be contained within the `app/` directory.
+The default generator used when you call `yo name` is the `app` generator. This must be contained within the `app/` directory.
 
-Sub-generators, the one used when you call `yo name:subcommand` are stored in folders named exactly like the sub command.
+Sub-generators, used when you call `yo name:subcommand` are stored in folders named exactly like the sub command.
 
 In an example project, a directory tree could look like this:
 
@@ -63,9 +63,9 @@ In an example project, a directory tree could look like this:
 
 This generator will expose `yo name` and `yo name:router` commands.
 
-You may not like keeping all your code at the root of your folder. Luckily Yeoman allow two differents directory structures. It'll look in `./` and `generators/` to register available generators.
+You may not like keeping all your code at the root of your folder. Luckily Yeoman allows for two different directory structures. It'll look in `./` and `generators/` to register available generators.
 
-The previous example can be written as follow:
+The previous example can be written as follows:
 
 ```
 ├───package.json
