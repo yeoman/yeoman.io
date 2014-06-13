@@ -173,11 +173,15 @@ Navigation
   display: block;
   position: absolute;
   z-index: 2;
-  top: 1em;
-  right: 0.8em;
-  width: 25px;
-  height: 16px;
-  background: url(/assets/img/icon-menu.png) no-repeat;
+  top: 0;
+  right: 0;
+  width: 3em;
+  height: 3em;
+  background: url(/assets/img/icon-menu.png) no-repeat 50% 50%;
+}
+
+.mobile-menu-toggle:active, .mobile-menu-toggle:focus {
+  outline: none;
 }
 
 .open .mobile-menu-toggle {
@@ -194,7 +198,6 @@ Navigation
   position: fixed;
   top: 48px;
   right: 0;
-  bottom: 0;
   left: 0;
   z-index: 10;
   overflow-y: scroll;
@@ -478,7 +481,6 @@ Context/Local Nav
 */
 
 .context-nav {
-  margin-bottom: 2.2em;
   padding: 0 1.2em;
 }
 
@@ -879,13 +881,10 @@ Modify as content requires.
     margin-bottom: 1.7em;
   }
 
-  .context-nav {
-    margin-bottom: 2.6em;
-  }
-
   .blog-post-meta {
 
   }
+
   .blog-post-meta .date {
     float: left;
   }
@@ -1111,10 +1110,6 @@ Modify as content requires.
     -ms-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-  .context-nav {
-    margin-bottom: 3.2em;
-  }
 }
 
 @media only screen and (min-width: 46em) {
@@ -1301,6 +1296,7 @@ Modify as content requires.
 
   .context-nav .nav-item {
     display: block;
+    margin-bottom: 2.2em;
   }
 
   .context-nav .nav-item .active:after {
