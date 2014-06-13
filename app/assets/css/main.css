@@ -116,6 +116,10 @@ code {
   border-radius: 3px;
 }
 
+code.prettyprint {
+  padding: 0; /* otherwise 1st line of multi-line code block is misaligned */
+}
+
 .btn {
   padding: 0.8em 1.2em;
   background: #5aadbb;
