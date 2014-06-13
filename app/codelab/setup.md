@@ -20,6 +20,7 @@ Before installing Yeoman, you will need the following:
 
 * NodeJS v0.10.x+
 * npm (which comes bundled with Node) v1.3.7+ 
+* Git
 
 You can check if you have Node and npm installed by typing:
 
@@ -28,6 +29,13 @@ $ node --version && npm --version
 ```
 
 If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](http://nodejs.org/download/).
+
+You can check if you have Git installed by typing:
+
+```js
+$ git --version
+```
+If you don't have Git, grab the installers from the [Git website](http://git-scm.com/).
 
 ## Install the Yeoman toolset 
 
@@ -57,20 +65,17 @@ It is a good idea to check that everything is installed as expected by running c
 $ yo --version && bower --version && grunt --version
 ```
 
-Running the above should output four separate version numbers:
+Running the above should output three separate version numbers:
 
 * Yeoman
 * Bower
-* Grunt
 * Grunt CLI (the command-line interface for Grunt)
-
-![](/assets/img/codelab/image_3.png)
 
 <div class="note important">
 
   <h2>Versions of the CLI tools that this codelab works with</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.1.2</strong>, <strong>Bower 1.2.8</strong>, <strong>grunt-cli v0.1.11</strong>, and <strong>grunt v0.4.2</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
+  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.1.2</strong>, <strong>Bower 1.3.3</strong>, and <strong>grunt-cli v0.1.11</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
 
 </div>
 
