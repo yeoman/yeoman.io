@@ -555,20 +555,25 @@ Context/Local Nav
 ========================================================================== */
 
 .page-footer {
-  padding: 2em 0 1em;
+  padding: 2em 2em 1em;
   background: #1f1f1f;
+  overflow: hidden;
   text-align: center;
 }
 
 .footer-links {
-  margin: 0;
+  margin: 0 0 1em;
   padding: 0;
   list-style: none;
 }
 
 .footer-links li {
   display: inline-block;
-  margin: 0 1em 2em;
+  margin: 0 0.8em;
+}
+
+.footer-links-contribute li {
+  margin: 0 0.2em;
 }
 
 .footer-links .icon:hover {
@@ -580,20 +585,15 @@ Context/Local Nav
 }
 
 .footer-links .btn {
+  display: block;
   position: relative;
   top: 0.2em;
 }
 
-.improve a {
-  color: #fff;
-  font-size: small;
-  opacity: 0.5;
+.footer-links .btn-improve {
+  background: #333;
+  color: #ccc;
 }
-
-.improve a:hover {
-  opacity: 1;
-}
-
 
 /* Google Code Prettify
 ========================================================================== */
@@ -1124,6 +1124,17 @@ Modify as content requires.
     margin-right: 2%;
   }
 
+  .footer-links-social {
+    float: left;
+    text-align: left;
+    width: 50%;
+  }
+
+  .footer-links-contribute {
+    float: right;
+    text-align: right;
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 50em) {
@@ -1367,8 +1378,6 @@ Modify as content requires.
     border-radius: 50%;
   }
 }
-
-
 
 @media print,
 (-o-min-device-pixel-ratio: 5/4),
