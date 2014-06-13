@@ -41,7 +41,7 @@ You can only deploy if you have push access to the Yeoman.io repository.
 
 
 ## Notes
- - If you're adding a Youtube embed iframe please wrap the iframe in a div with the ```video-container``` class in order to keep the site responsive.
+ - If you're adding a Youtube embed iframe please wrap the iframe in a div with the `video-container` class in order to keep the site responsive.
 
 
 ## License
