@@ -22,7 +22,7 @@ Now that you know the prototype methods are considered as action, you may wonder
 2. Use instance methods:
 
   ```js
-    yeoman.generators.base.extend({
+    yeoman.generators.Base.extend({
       init: function () {
         this.helperMethod = function () {
           console.log('won\'t be called automatically');
@@ -33,7 +33,7 @@ Now that you know the prototype methods are considered as action, you may wonder
 3. Extend a parent generator
 
   ```js
-    var MyBase = yeoman.generators.base.extend({
+    var MyBase = yeoman.generators.Base.extend({
       helper: function () {
         console.log('won\'t be called automatically');
       }
