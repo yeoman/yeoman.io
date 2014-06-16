@@ -14,6 +14,26 @@ As these tasks are very frequent, Yeoman already abstracts them away. We'll also
 
 You just need to call `generator.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
 
+For example you want to install lodash as a dev dependency:
+
+```js
+yeoman.generators.Base.extend({
+  installingLodash: function() {
+    var done = this.async();
+    this.npmInstall(['lodash'], { 'saveDev': true }, done);
+  }
+}):
+```
+
+This is aequivalent to call:
+
+```
+npm install lodash --save-dev
+```
+
+on the command line in your project.
+
+
 ## Bower
 
 You just need to call `generator.bowerInstall()` to launch the installation. Yeoman will ensure the `bower install` command is only run once even if it is called multiple time by multiple generators.
