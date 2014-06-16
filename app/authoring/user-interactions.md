@@ -22,7 +22,7 @@ You'll call the prompt method this way:
 
 ```js
 yeoman.generators.Base.extend({
-  prompt: function () {
+  promptTask: function () {
     var done = this.async();
     this.prompt({
       type    : "input",
