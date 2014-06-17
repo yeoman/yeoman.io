@@ -6,7 +6,7 @@ sidebar: sidebars/authoring.html
 excerpt: Creating Gruntfiles and working with them through generation
 ---
 
-Writing to a file is usually a simple task: prepare a string and write it to an output file using the [file system api](/authoring/file-system.html). However, issues arise when different, (hopefully [compasable](/authoring/composability.html)) generators must write to the same file. A conflict prompt often appears on each write action. This does not make for a good end user experience.
+Writing to a file is usually a simple task: prepare a string and write it to an output file using the [file system api](/authoring/file-system.html). However, issues arise when different, (hopefully [composable](/authoring/composability.html)) generators must write to the same file. A conflict prompt often appears on each write action. This does not make for a good end user experience.
 
 This is why Yeoman is wrapping the most commonly edited file, the `Gruntfile.js`, behind a façade. Introducing, the Yeoman Gruntfile editor API.
 
