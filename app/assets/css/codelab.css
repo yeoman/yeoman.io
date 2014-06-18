@@ -35,7 +35,7 @@ code.prettyprint {
 .note code {
   padding: 0.2em 0.4em;
   border-radius: 3px;
-  border-width: 0px;
+  border-width: 0;
 }
 .note.important {
   background: #f2dede;
