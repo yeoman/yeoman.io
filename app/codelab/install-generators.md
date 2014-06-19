@@ -65,14 +65,14 @@ $ sudo npm install --global generator-angular
   
   <h2>Versions of generator-angular that this codelab works with</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>generator-angular 0.7.1</strong>. You can check which version you are using by running <code>yo</code> at the command line after you have installed Yeoman and the Angular generator.</p>
+  <p>Technology changes quickly! This tutorial has been tested with <strong>generator-angular 0.9.0-1</strong>. You can check which version you are using by running <code>yo</code> at the command line after you have installed Yeoman and the Angular generator.</p>
 
   <p>If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
 
   <p>Otherwise, you can always install the same version of the generator we are using by running this command instead:</p>
 
 <pre>
-npm install --global generator-angular@0.7.1
+npm install --global generator-angular@0.9.0-1
 </pre>
 
 </div>
