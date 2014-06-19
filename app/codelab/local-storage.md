@@ -120,7 +120,7 @@ We’ll also use the angular [`$watch`](http://docs.angularjs.org/api/ng.$rootSc
 Therefore, we need to remove the current `$scope.todos` declaration:
 
 ```js
-$scope.todos = ['Item 1', 'Item 2', 'Item 3'];
+$scope.todos = [];
 ```
 
 And replace it with this:
