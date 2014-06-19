@@ -110,7 +110,7 @@ Each framework generator has further documentation available noting what sub-gen
 
 ### Creating your own generators
 
-See [Generators](/generators.html).
+See [Generators](/generators/official.html).
 
 
 ## Bower
