@@ -10,6 +10,16 @@ sidebar: sidebars/codelab.html
 
 For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a ***test*** directory in the root of the ***mytodo*** folder, created a ***karma.conf*** file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
 
+## Prep work
+
+Open ***scripts/controllers/main.js***.
+
+Remove the 3 items we added earlier from the `$scope.todos` declaration:
+
+```js
+$scope.todos = [];
+```
+
 ## Run unit tests
 
 Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our ***Gruntfile.js*** for running tests. It can be run as follows:
@@ -18,7 +28,7 @@ Let’s go back to the command line and kill our Grunt server using <span class=
 $ grunt test
 ```
 
-When you run `grunt test`, you will see a new browser window quickly open and close, plus some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
+When you run `grunt test`, some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
 
 ## Update unit tests
 
@@ -28,20 +38,20 @@ Open ***karma.conf.js*** and replace the `files` array with:
 
 ```js
  files: [
-  'app/bower_components/jquery/jquery.js',
-  'app/bower_components/jquery-ui/ui/jquery-ui.js',
-  'app/bower_components/angular/angular.js',
-  'app/bower_components/angular-ui-sortable/sortable.js',
-  'app/bower_components/angular-mocks/angular-mocks.js',
-  'app/bower_components/angular-local-storage/angular-local-storage.js',
+  'bower_components/jquery/dist/jquery.js',
+  'bower_components/jquery-ui/ui/jquery-ui.js',
+  'bower_components/angular/angular.js',
+  'bower_components/angular-ui-sortable/sortable.js',
+  'bower_components/angular-mocks/angular-mocks.js',
+  'bower_components/angular-local-storage/angular-local-storage.js',
+  'bower_components/angular-resource/angular-resource.js',
+  'bower_components/angular-cookies/angular-cookies.js',
+  'bower_components/angular-sanitize/angular-sanitize.js',
+  'bower_components/angular-route/angular-route.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
   'test/mock/**/*.js',
-  'test/spec/**/*.js',
-  'app/bower_components/angular-resource/angular-resource.js',
-  'app/bower_components/angular-cookies/angular-cookies.js',
-  'app/bower_components/angular-sanitize/angular-sanitize.js',
-  'app/bower_components/angular-route/angular-route.js'
+  'test/spec/**/*.js'
 ],
 ```
 
@@ -103,7 +113,7 @@ it('should add items to the list', function () {
     expect(scope.todos.length).toBe(1);
   });
 
-it('should add items to the list', function () {
+it('should add then remove an item from the list', function () {
     scope.todo = 'Test 1';
     scope.addTodo();
     scope.removeTodo(0);
@@ -142,7 +152,7 @@ describe('Controller: MainCtrl', function () {
     expect(scope.todos.length).toBe(1);
   });
 
-  it('should add items to the list', function () {
+  it('should add then remove an item from the list', function () {
     scope.todo = 'Test 1';
     scope.addTodo();
     scope.removeTodo(0);

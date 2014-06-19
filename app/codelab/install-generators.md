@@ -35,7 +35,7 @@ With **generator-angular** selected, hit enter to start installing.  This will s
 
 <div class="note tip">
 
-  <h2>Install generators using 'yo'</h2>
+  <h2>Install generators using 'npm'</h2>
 
   <p>Alternatively, if you already know the exact name of the generator you want to use, the generator can be installed directly using npm as follows:</p>
 

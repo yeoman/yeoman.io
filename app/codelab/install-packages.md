@@ -96,15 +96,20 @@ You'll see that the `script` section at the bottom of *index.html* has automatic
 In order to use the Sortable module, we must load it into our application by updating our Angular module definitions in *scripts/app.js*. Currently it looks like this:
 
 ```js
-angular.module('mytodoApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute'
-])
+angular
+  .module('mytodoApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
+  ])
+
+  ...
 ```
 
-Add the `ui.sortable` dependency to the array list in the second paramater. Our complete todo module should now look like this:
+Add the `ui.sortable` dependency to the array list in the second paramater. Our complete todo module should now look like this (replace any existing code):
 
 ```js
 'use strict';
