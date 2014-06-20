@@ -48,7 +48,6 @@ Open ***karma.conf.js*** and replace the `files` array with:
   'bower_components/angular-cookies/angular-cookies.js',
   'bower_components/angular-sanitize/angular-sanitize.js',
   'bower_components/angular-route/angular-route.js',
-  'app/scripts/*.js',
   'app/scripts/**/*.js',
   'test/mock/**/*.js',
   'test/spec/**/*.js'
