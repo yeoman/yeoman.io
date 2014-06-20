@@ -8,17 +8,7 @@ sidebar: sidebars/codelab.html
 
 # Step 8: Test with Karma and Jasmine
 
-For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a ***test*** directory in the root of the ***mytodo*** folder, created a ***karma.conf*** file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
-
-## Prep work
-
-Open ***scripts/controllers/main.js***.
-
-Remove the 3 items we added earlier from the `$scope.todos` declaration:
-
-```js
-$scope.todos = [];
-```
+For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a ***test*** directory in the root of the ***mytodo*** folder, created a ***karma.conf.js*** file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
 
 ## Run unit tests
 
@@ -30,24 +20,51 @@ $ grunt test
 
 When you run `grunt test`, some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
 
-## Update unit tests
+## Update Karma configuration
 
 First, we need to update the Karma configuration to load the the new Bower components we installed in the [Step 7](install-packages.html#install). 
 
-Open ***karma.conf.js*** and replace the `files` array with:
+Open ***karma.conf.js***. Currently the `files` array looks like this:
 
 ```js
- files: [
+files: [
+  'bower_components/angular/angular.js',
+  'bower_components/angular-mocks/angular-mocks.js',
+  'bower_components/angular-animate/angular-animate.js',
+  'bower_components/angular-cookies/angular-cookies.js',
+  'bower_components/angular-resource/angular-resource.js',
+  'bower_components/angular-route/angular-route.js',
+  'bower_components/angular-sanitize/angular-sanitize.js',
+  'bower_components/angular-touch/angular-touch.js',
+  'app/scripts/**/*.js',
+  'test/mock/**/*.js',
+  'test/spec/**/*.js'
+],
+```
+
+Add:
+
+```js
   'bower_components/jquery/dist/jquery.js',
   'bower_components/jquery-ui/ui/jquery-ui.js',
-  'bower_components/angular/angular.js',
   'bower_components/angular-ui-sortable/sortable.js',
+```
+
+So that the final `files` array looks like this:
+
+```js
+files: [
+  'bower_components/angular/angular.js',
   'bower_components/angular-mocks/angular-mocks.js',
-  'bower_components/angular-local-storage/angular-local-storage.js',
-  'bower_components/angular-resource/angular-resource.js',
+  'bower_components/angular-animate/angular-animate.js',
   'bower_components/angular-cookies/angular-cookies.js',
-  'bower_components/angular-sanitize/angular-sanitize.js',
+  'bower_components/angular-resource/angular-resource.js',
   'bower_components/angular-route/angular-route.js',
+  'bower_components/angular-sanitize/angular-sanitize.js',
+  'bower_components/angular-touch/angular-touch.js',
+  'bower_components/jquery/dist/jquery.js',
+  'bower_components/jquery-ui/ui/jquery-ui.js',
+  'bower_components/angular-ui-sortable/sortable.js',
   'app/scripts/**/*.js',
   'test/mock/**/*.js',
   'test/spec/**/*.js'
@@ -79,11 +96,11 @@ angular.module('mytodoApp')
 ```
 -->
 
-Second, we haven’t updated the boilerplate test which still references `awesomeThings`.
+## Update unit tests
 
-You’ll find the tests scaffolded out in the ***test*** folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify. 
+You’ll find unit tests scaffolded out in the ***test*** folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify. 
 
-Delete the following:
+Your boilerplate test still references `awesomeThings` so delete the following test:
 
 ```js
 it('should attach a list of awesomeThings to the scope', function () {
@@ -95,30 +112,40 @@ And replace that test with the following:
 
 ```js
 it('should have no items to start', function () {
-    expect(scope.todos.length).toBe(0);
+  expect(scope.todos.length).toBe(0);
 });
+```
+
+Open ***scripts/controllers/main.js***.
+
+Remove the 3 items we added earlier from the `$scope.todos` declaration:
+
+```js
+$scope.todos = [];
 ```
 
 Re-running our tests with `grunt test` should see our tests now passing:
 
 ![](/assets/img/codelab/image_33.png)
 
+## Add more unit tests
+
 The above test only covers part of our app's functionality so let’s add a couple of more tests to test the adding and removing of items:
 
 ```js
 it('should add items to the list', function () {
-    scope.todo = 'Test 1';
-    scope.addTodo();
-    expect(scope.todos.length).toBe(1);
-  });
+  scope.todo = 'Test 1';
+  scope.addTodo();
+  expect(scope.todos.length).toBe(1);
+});
 
 it('should add then remove an item from the list', function () {
-    scope.todo = 'Test 1';
-    scope.addTodo();
-    scope.removeTodo(0);
-    expect(scope.todos.length).toBe(0);
-  });
- ```
+  scope.todo = 'Test 1';
+  scope.addTodo();
+  scope.removeTodo(0);
+  expect(scope.todos.length).toBe(0);
+});
+```
 
 Your full MainCtrl test script (*test/spec/controllers/main.js*) should now look like this:
 
@@ -162,7 +189,7 @@ describe('Controller: MainCtrl', function () {
 ```
 
 
-Running the tests again, we should see everything pass with 3 tests being executed:
+Running the tests again, we should see everything pass with 4 tests being executed:
 
 ![](/assets/img/codelab/image_34.png)
 
@@ -173,5 +200,5 @@ Writing unit tests make it easier to catch bugs as your app gets bigger and when
 <p class="codelab-paging">
   <a href="../codelab.html#toc">&laquo; Return to overview</a>
   or
-  <a href="local-storage.html">Go to the next step &raquo;</a>
+  <a href="prepare-production.html">Go to the next step &raquo;</a>
 </p>

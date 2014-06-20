@@ -75,7 +75,7 @@ Running the above should output three separate version numbers:
 
   <h2>Versions of the CLI tools that this codelab works with</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.1.2</strong>, <strong>Bower 1.3.3</strong>, and <strong>grunt-cli v0.1.11</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
+  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.2.0</strong>, <strong>Bower 1.3.5</strong>, and <strong>grunt-cli v0.1.13</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
 
 </div>
 

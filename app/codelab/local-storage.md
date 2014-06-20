@@ -6,9 +6,13 @@ social_url: http://yeoman.io/codelab.html
 sidebar: sidebars/codelab.html
 ---
 
-# Step 9: Make Todos persistent with local storage
+# Step 10: Make Todos persistent with local storage
 
-Let’s revisit the issue of items not persisting when the browser refreshes.
+Let’s revisit the issue of items not persisting when the browser refreshes. 
+
+<div class="note tip">
+  If you had no issues with Step 7 and you're short on time, you can skip to the <a href="keep-going.html">codelab wrapup</a>.
+</div>
 
 ## Install Bower package
 
@@ -39,12 +43,14 @@ Your *index.html* scripts block should now look like this:
 ```html
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
 <script src="bower_components/angular-ui-sortable/sortable.js"></script>
@@ -56,13 +62,16 @@ Your *index.html* scripts block should now look like this:
 Edit the `mytodoApp` application module (*scripts/app.js*) to include the `LocalStorageModule` adapter:
 
 ```js
-angular.module('mytodoApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute',
-  'ui.sortable',
-  'LocalStorageModule'
+angular
+  .module('mytodoApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'ui.sortable'
+    'LocalStorageModule'
 ])
 ```
 
@@ -79,14 +88,17 @@ Our application module should now look like this:
 ```js
 'use strict';
 
-angular.module('mytodoApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute',
-  'ui.sortable',
-  'LocalStorageModule'
-])
+angular
+  .module('mytodoApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'ui.sortable',
+    'LocalStorageModule'
+  ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider){
     localStorageServiceProvider.setPrefix('ls');
   }])
@@ -95,6 +107,10 @@ angular.module('mytodoApp', [
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -190,5 +206,5 @@ We can confirm whether our data is being persisted to local storage by checking 
 <p class="codelab-paging">
   <a href="../codelab.html#toc">&laquo; Return to overview</a>
   or
-  <a href="prepare-production.html">Go to the next step &raquo;</a>
+  <a href="keep-going.html">You're done! Keep going &raquo;</a>
 </p>
