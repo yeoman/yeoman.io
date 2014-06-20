@@ -80,12 +80,14 @@ You'll see that the `script` section at the bottom of *index.html* has automatic
 ```html
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
 <script src="bower_components/angular-ui-sortable/sortable.js"></script>
@@ -105,32 +107,21 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-
-  ...
 ```
 
-Add the `ui.sortable` dependency to the array list in the second paramater. Our complete todo module should now look like this (replace any existing code):
+Add the `ui.sortable` dependency to the array list in the second parameter after `'ngTouch'`:
 
 ```js
-'use strict';
-
-angular.module('mytodoApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute',
-  'ui.sortable'
-])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+angular
+  .module('mytodoApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'ui.sortable'
+  ])
 ```
 
 Finally, we need to add the `ui-sortable` directive as a `div` wrapper around our `ng-repeat` in *main.html*:
