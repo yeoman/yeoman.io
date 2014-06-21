@@ -49,11 +49,11 @@ yo webapp my-project
 
 In this example, `my-project` would be the first argument.
 
-To notify the system we expect an argument, we use the `generator.argument()` method. This method accept a `name` (String) and an optional options hash.
+To notify the system we expect an argument, we use the `generator.argument()` method. This method accepts a `name` (String) and an optional options hash.
 
-The `name` value will be used to retrieve the argument at the matching key `generator.arguments[name]`.
+The `name` will be used to retrieve the argument at the matching key `generator.arguments[name]`.
 
-The `option` hash accept multiples key/values:
+The `option` hash accepts multiples key/values:
 
 - `desc` Description for the argument
 - `required` Boolean whether it is required
@@ -62,7 +62,7 @@ The `option` hash accept multiples key/values:
 - `defaults` Default value for this argument
 - `banner` String to show on usage notes (this one is provided by default)
 
-This method must be call inside the `constructor` method otherwise Yeoman won't be able to output relevant help information when a user call your generator with the help option. e.g.: `yo webapp --help`
+This method must be called inside the `constructor` method. Else Yeoman won't be able to output the relevant help information when a user calls your generator with the help option. e.g.: `yo webapp --help`
 
 ### Options
 
