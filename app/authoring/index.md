@@ -37,7 +37,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
 }
 ```
 
-The `name` property must be prefixed by `generator-`. The `keywords` property must contain `"yeoman-generator"` to be indexed by our [community generator page](/community-generators.html).
+The `name` property must be prefixed by `generator-`. The `keywords` property must contain `"yeoman-generator"` to be indexed by our [community generator page](/generators/community.html).
 
 You should make sure you set the latest version of `yeoman-generator` as a dependency. You can do this by running: `npm install --save yeoman-generator`.
 
