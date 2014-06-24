@@ -19,7 +19,7 @@ A command-line interface is a means for developers to interact with a system usi
 
 ### What is a package manager?
 
-A package manager is a tool for automating the process of installing, upgrading, configuring and managing dependencies for projects. Good examples of package manager would be NPM (Node.js), Bower (Web), Pypi (Python), Gem (Ruby), Composer (PHP), NuGet (.NET), etc.
+A package manager is a tool for automating the process of installing, upgrading, configuring and managing dependencies for projects. Good examples of package manager would be npm (Node.js), Bower (Web), Pypi (Python), Gem (Ruby), Composer (PHP), NuGet (.NET), etc.
 
 
 ### How does Yeoman differ from Grunt?
