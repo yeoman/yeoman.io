@@ -30,9 +30,8 @@ yeoman.generators.Base.extend({
       message : "Your project name",
       default : this.appname // Default to current folder name
     }, function (answers) {
-      // in this case `generator.log` is not available as `generator` is undefined
-      // so you must use `this.log` version.
-      this.log(answers.name);
+      // do not forget to bind to current context
+      this.log(answers.name).bind(this);
       done();
     });
   }
