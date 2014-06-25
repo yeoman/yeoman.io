@@ -51,7 +51,7 @@ In this example, `my-project` would be the first argument.
 
 To notify the system we expect an argument, we use the `generator.argument()` method. This method accepts a `name` (String) and an optional options hash.
 
-The `name` will be used to retrieve the argument at the matching key `generator.arguments[name]`.
+The `name` will be used to create a getter on the generator, `generator['name']`.
 
 The `option` hash accepts multiples key/values:
 
