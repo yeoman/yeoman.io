@@ -8,11 +8,11 @@ excerpt: How to interact with the file system in efficient ways
 
 ## Location contexts
 
-Yeoman file utility are based on the idea you always have two location context on disk. These contexts are important as most file utility methods will act on file path relative to these contexts.
+Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are important as most file utility methods will act on file path relative to these contexts.
 
-The first context is the _destination context_. The destination is the folder where you are writing, it is where you'll scaffold the application.
+The first context is the _destination context_. The destination is the folder in which yeoman will be scaffolding a new application.
 
-The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file define the root of a project, this allow the end user to run commands in subdirectories and have them works as expected.
+The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file define the root of a project, this allows the end user to run commands in subdirectories and have them works as expected.
 
 You can get the _destination path_ using `generator.destinationRoot()`. And you can change it using `generator.destinationRoot('new/path')`.
 
@@ -22,12 +22,12 @@ The source context is defined as `../templates` by default. You can get its valu
 
 ## File utilities
 
-Based on the two context described before, a Yeoman generator expose two file utilities objects.
+Based on the two context described before, a Yeoman generator exposes two file utilities objects.
 
-1. `this.dest` who's relative to `this.destinationRoot()`
-2. `this.src` who's relative to `this.sourceRoot()`
+1. `this.dest` which is relative to `this.destinationRoot()`
+2. `this.src` which is relative to `this.sourceRoot()`
 
-There's also a top level `file` property who's not linked to any path. You can require it this way: `var file = require('yeoman-generator').file`.
+There's also a top level `file` property which is not linked to any path. You can require it this way: `var file = require('yeoman-generator').file`.
 
 These three objects are instances of [File-utils module](https://github.com/SBoudrias/file-utils), a `grunt.file` like standalone API. Refer to their documentation for a list of available methods.
 
@@ -53,6 +53,6 @@ Our goal however is to eventually deprecate these legacy methods. If you find mi
 
 ## Writing existing files
 
-Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( [abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) ) and edit it. The issue here is that playing with AST is quite verbose and quite hard to grasp.
+Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( [abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) ) and edit it. The issue here is that playing with AST is verbose and quite hard to grasp.
 
-To help simplify such case, Yeoman provide some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+To help simplify such case, Yeoman provides some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
