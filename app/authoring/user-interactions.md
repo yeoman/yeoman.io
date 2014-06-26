@@ -16,7 +16,7 @@ For example, it is important to never use `console.log()` or `process.stdout.wri
 
 ### Prompts
 
-Prompts are the main way a generator interact with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer to the [module API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
+Prompts are the main way a generator interacts with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer to the [module API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
 
 You'll call the prompt method this way:
 
@@ -30,7 +30,7 @@ yeoman.generators.Base.extend({
       message : "Your project name",
       default : this.appname // Default to current folder name
     }, function (answers) {
-      console.log(answers.name);
+      generator.log(answers.name);
       done();
     });
   }
@@ -88,6 +88,6 @@ The `options` hash (the second argument) accept multiples key/values:
 
 Outputting information is handled by the `generator.log` module.
 
-The main method you'll use is simply `generator.log('Hey! Welcome to my awesome generator')`. It takes a string and output it to the user; basically it mimic `console.log()` when used inside a terminal.
+The main method you'll use is simply `generator.log('Hey! Welcome to my awesome generator')`. It takes a string and output it to the user; basically it mimics `console.log()` when used inside a terminal.
 
 There's also some other helper methods you can find in the [API documentation](http://yeoman.github.io/generator/TerminalAdapter.html).
