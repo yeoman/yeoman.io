@@ -30,7 +30,8 @@ yeoman.generators.Base.extend({
       message : "Your project name",
       default : this.appname // Default to current folder name
     }, function (answers) {
-      console.log(answers.name);
+      // do not forget to bind to current context
+      this.log(answers.name).bind(this);
       done();
     });
   }
