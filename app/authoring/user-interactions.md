@@ -30,9 +30,9 @@ yeoman.generators.Base.extend({
       message : "Your project name",
       default : this.appname // Default to current folder name
     }, function (answers) {
-      console.log(answers.name);
+      this.log(answers.name);
       done();
-    });
+    }.bind(this));
   }
 })
 ```
