@@ -6,15 +6,44 @@ sidebar: sidebars/contributing.html
 excerpt: The yeoman project pull request guidelines
 ---
 
-We are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests :) At this time we are primarily focusing on improving the user-experience and stability of Yeoman for our first release. Please keep this in mind if submitting feature requests, which we're happy to consider for future versions.
+Pull Request (_PR_) is the step where you submit patches to one of our repository. To prevent any frustration, you should make sure to **open an issue to discuss any new features** before working on it. This will prevent you waisting time on a feature the core team doesn't see fit for the project scope and goals.
 
-## Pull Request Guidelines
+Once you've worked on a feature or a bug, it is then time to send a PR. Make sure to follow these steps along the way to make sure your patch land as soon as possible!
 
-* Please check to make sure that there aren't existing pull requests attempting to address the issue mentioned. We also recommend checking for issues related to the issue on the tracker, as a team member may be working on the issue in a branch or fork.
-* Non-trivial changes should be discussed in an issue first
-* Develop in a topic branch, not master
-* Lint the code by running `grunt` or `gulp`
-* Add relevant tests to cover the change
-* Make sure test-suite passes: `npm test`
-* Squash your commits
-* Write a convincing description of your PR and why we should land it
+## Only touch relevant files
+
+Make sure your PR stay focused on a single features. Don't change project configs or any unrelevant files to the subject you're working. Open a single PR for each subjects.
+
+## Make sure your code is clean
+
+Checkout the project [style guide](/contributing/style-guide.html), make sure your code is conform and clean. Remove any debugging lines (`debuggers`, `console.log`).
+
+## Make sure you unit tested your changes
+
+Adding a feature? Make sure you add unit tests to support it.
+
+Fixing a bug? Make sure you added a test reproducing the issue.
+
+## Make sure tests passes
+
+All our projects units tests can be run by typing `npm test` at the root of the project. You may need to install dependencies like `mocha`, `grunt` or `gulp`.
+
+## Keep your commit history short and clean
+
+In a large project, it is very important to keep the git history clean and tidy. This help to find bug causes and finding the best fixes.
+
+Keeping history clean means making one commit per feature. It also means to squash every fixes you make on your branch after team review.
+
+Wondering why it matters to keep history clean? Read this [article from Isaac Schlueter (ex Node.js Lead)](http://blog.izs.me/post/37650663670/git-rebase). Remember _Git is an editor_.
+
+## Be descriptive
+
+Write a convincing description of your PR and why we should land it.
+
+## Hang on during code review
+
+It is important for us to keep the core code clean and consistent. This mean we're pretty hard on code review!
+
+Code reviews are the best way to improve ourselves as engineers. Don't take the reviews personnal, they're there to keep Yeoman clean and improve ourselves.
+
+Read more about [code review around here](http://blog.codinghorror.com/code-reviews-just-do-it/).
