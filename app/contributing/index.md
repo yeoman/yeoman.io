@@ -6,15 +6,50 @@ sidebar: sidebars/contributing.html
 excerpt: The yeoman project contribution guidelines
 ---
 
-We are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests :) At this time we are primarily focusing on improving the user-experience and stability of Yeoman for our first release. Please keep this in mind if submitting feature requests, which we're happy to consider for future versions.
+It can sometime be hard to know where to start contributing when looking at a large project like Yeoman. This document will try to layout the project organization and the different ways you can help us!
 
-## Pull Request Guidelines
+## Community
 
-* Please check to make sure that there aren't existing pull requests attempting to address the issue mentioned. We also recommend checking for issues related to the issue on the tracker, as a team member may be working on the issue in a branch or fork.
-* Non-trivial changes should be discussed in an issue first
-* Develop in a topic branch, not master
-* Lint the code by running `grunt` or `gulp`
-* Add relevant tests to cover the change
-* Make sure test-suite passes: `npm test`
-* Squash your commits
-* Write a convincing description of your PR and why we should land it
+The easiest way to start is probably to get involve with our community.
+
+* Hangout in our IRC channel (#yeoman on [Freenode](http://freenode.net/))
+* Answers question on [StackOverflow (#yeoman)](http://stackoverflow.com/questions/tagged/yeoman)
+* Attend local meetups and speak with your colleague!
+* Help people asking question in issues on [yeoman/yeoman](https://github.com/yeoman/yeoman) and generator's repositories.
+
+## Documentation
+
+The most time consuming task of most open source projects is writing and updating documentation. This include the core docs, but also help maintaining and updating the Website.
+
+Chances are you're probably a web developer. If so that's awesome because there's a lot to do making this website better.
+
+Head to [yeoman/yeoman.io](https://github.com/yeoman/yeoman.io) to works on the website and documentation.
+
+## Official Generators
+
+The core yeoman team maintain a lots of [officials generators](/generators/official.html). You like frameworks? You use one of our generator and have idea on how to improve it? Then really this is where you should start!
+
+Checkout out [our github organization](https://github.com/yeoman) to find the repository you'd like to contribute to.
+
+## The plugins and modules
+
+The core team maintains a couple node modules and a bunch of Grunt/Gulp plugins.
+
+- [grunt-usemin](https://github.com/yeoman/grunt-usemin)
+- [grunt-filerev](https://github.com/yeoman/grunt-filerev)
+- [yosay](https://github.com/yeoman/yosay)
+- [update-notifier](https://github.com/yeoman/update-notifier)
+- [configstore](https://github.com/yeoman/configstore)
+- [bower-requirejs](https://github.com/yeoman/bower-requirejs)
+- [stringify-object](https://github.com/yeoman/stringify-object)
+- [insight](https://github.com/yeoman/insight)
+
+## The core system
+
+Once you're familiar with the way Yeoman works - or if you just want to work with Node.js - then you might want to contribute to the core system.
+
+There's basically three components to the core system:
+
+1. [yo](https://github.com/yeoman/yo), the command line interface to use Yeoman.
+2. [The runner system](https://github.com/yeoman/generator) which allow to discover and run generators.
+2. [The base classes](https://github.com/yeoman/generator) you extends to create your own generators. Those classes contains the helpers methods to ease the authoring of your own generators.
