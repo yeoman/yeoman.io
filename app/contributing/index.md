@@ -6,16 +6,16 @@ sidebar: sidebars/contributing.html
 excerpt: The yeoman project contribution guidelines
 ---
 
-It can sometime be hard to know where to start contributing when looking at a large project like Yeoman. This document will try to layout the project organization and the different ways you can help us!
+It can sometimes be hard to know where to start contributing when looking at a large project like Yeoman. This document will try to layout the project organization and the different ways you can help us!
 
 ## Community
 
-The easiest way to start is probably to get involve with our community.
+The easiest way to start is probably to get involved with our community.
 
 * Hangout in our IRC channel (#yeoman on [Freenode](http://freenode.net/))
-* Answers question on [StackOverflow (#yeoman)](http://stackoverflow.com/questions/tagged/yeoman)
-* Attend local meetups and speak with your colleague!
-* Help people asking question in issues on [yeoman/yeoman](https://github.com/yeoman/yeoman) and generator's repositories.
+* Answer questions on [StackOverflow (#yeoman)](http://stackoverflow.com/questions/tagged/yeoman)
+* Attend local meetups and speak with your colleagues!
+* Help people asking questions in issues on [yeoman/yeoman](https://github.com/yeoman/yeoman) and generator's repositories.
 
 ## Documentation
 
@@ -23,11 +23,11 @@ The most time consuming task of most open source projects is writing and updatin
 
 Chances are you're probably a web developer. If so that's awesome because there's a lot to do making this website better.
 
-Head to [yeoman/yeoman.io](https://github.com/yeoman/yeoman.io) to works on the website and documentation.
+Head to [yeoman/yeoman.io](https://github.com/yeoman/yeoman.io) to work on the website and documentation.
 
 ## Official Generators
 
-The core yeoman team maintain a lots of [officials generators](/generators/official.html). You like frameworks? You use one of our generator and have idea on how to improve it? Then really this is where you should start!
+The core yeoman team maintains a lot of [officials generators](/generators/official.html). You like frameworks? You use one of our generators and have some ideas on how to improve it? Then really this is where you should start!
 
 Checkout out [our github organization](https://github.com/yeoman) to find the repository you'd like to contribute to.
 
