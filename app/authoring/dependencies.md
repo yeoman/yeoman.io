@@ -25,7 +25,7 @@ yeoman.generators.Base.extend({
 }):
 ```
 
-This is aequivalent to call:
+This is equivalent to call:
 
 ```
 npm install lodash --save-dev
@@ -46,7 +46,7 @@ Call `generator.installDependencies()` to run both npm and bower. You can call i
 
 Yeoman provides an abstraction to allow users to `spawn` any CLI commands. This abstraction will normalize to command so it can run seamlessly in Linux, Mac and Windows system.
 
-For example, if you're a PHP afondiacio and wished to run `composer`, you'd write it this way:
+For example, if you're a PHP aficionado and wished to run `composer`, you'd write it this way:
 
 ```js
 yeoman.generators.Base.extend({
