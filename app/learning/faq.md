@@ -28,7 +28,7 @@ Yeoman builds upon a number of open-source tools to offer an opinionated workflo
 
 On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js out of the box. With additional features like wiring, an improved `serve` and `init`.
 
-Developers are free to customize any Grunt tasks with configured by Yeoman.
+Developers are free to customize any Grunt tasks configured by Yeoman.
 
 
 ### How does Yeoman differ from tools like Brunch or Ember-cli?
@@ -83,7 +83,7 @@ Make sure you read the [Submitting an issue guide](/contributing/opening-issues.
 * [clean-css](https://github.com/GoalSmashers/clean-css)
 * [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
 
-But remember every generator author is free to use or not any of these tools. So if you have special needs, make sure to checkout specific generator documentation.
+But remember every generator author is free to use or not use any of these tools. So if you have special needs, make sure to checkout specific generator documentation.
 
 
 ### NPM appears to have installed Yeoman but `yo` still gives me "command not found".
