@@ -243,7 +243,7 @@ Navigation
 }
 
 .main-nav-sub a {
-  padding: 15px 20px;
+  padding: inherit 1em;
 }
 
 /* Jumbotron
@@ -1089,7 +1089,7 @@ Modify as content requires.
   }
 
   .main-nav-sub a {
-    padding: inherit 1em;
+    padding: 15px 20px;
     white-space: nowrap;
     /* Transitions */
     -webkit-transition: all 0.3s ease;
