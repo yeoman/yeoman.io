@@ -14,13 +14,13 @@ In a traditional web development workflow, you would need to spend a lot of time
 
 You can install Yeoman generators using the [npm](http://npmjs.org) command and there are over [800 generators](http://yeoman.io/generators/community.html) now available, many of which have been written by the open-source community.
 
-Install [generator-angular](https://www.npmjs.org/package/generator-angular) using this command: 
+Install [generator-angular](https://www.npmjs.org/package/generator-angular) using this command:
 
 ```html
-npm install --global generator-angular@0.9.0-1
+npm install --global generator-angular@0.9.2
 ```
 
-This will start to install the Node packages required for the generator. Using `@0.9.0-1` will request a specific version of the generator.
+This will start to install the Node packages required for the generator. Using `@0.9.2` will request a specific version of the generator.
 
 <div class="note important">
 
@@ -29,7 +29,7 @@ This will start to install the Node packages required for the generator. Using `
   <p>If you see permission or access errors, you will need to install the generator using <code>sudo</code>, like so:</p>
 
 <pre>
-$ sudo npm install --global generator-angular@0.9.0-1
+$ sudo npm install --global generator-angular@0.9.2
 </pre>
 
 </div>
