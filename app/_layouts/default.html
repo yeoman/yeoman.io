@@ -9,7 +9,9 @@ markdown: 0
 
   <div class="container has-sidebar clearfix">
     {% if page.sidebar %}
+      <nav class="context-nav">
       {% include {{page.sidebar}} %}
+      </nav>
     {% endif %}
 
     <article class="main">

@@ -242,7 +242,7 @@ Navigation
   background: rgba(255,255,255,0.17);
 }
 
-.main-nav-sub a {
+.main-nav > li > ul a {
   padding: inherit 1em;
 }
 
@@ -494,19 +494,19 @@ Context/Local Nav
   list-style: none;
 }
 
-.context-nav .nav-item {
+.context-nav ul > li {
   display: none;
 }
 
-.context-nav.open .nav-item {
+.context-nav.open ul > li {
   display: block;
 }
 
-.context-nav .nav-item .active {
+.context-nav ul > li .active {
   position: relative;
 }
 
-.context-nav .nav-item .active:after {
+.context-nav ul > li .active:after {
   top: 1.05em;
   right: 1em;
   border: solid transparent;
@@ -519,12 +519,13 @@ Context/Local Nav
   border-width: 0.4em;
 }
 
-.context-nav.open .nav-item .active:after {
+.context-nav.open ul > li .active:after {
   opacity: 0.4;
 }
 
 .context-nav a {
   display: block;
+  cursor: pointer;
   padding: 0.5em 1em;
   border-bottom: 1px dotted rgba(0,0,0,0.2);
   text-decoration: none;
@@ -544,14 +545,14 @@ Context/Local Nav
   text-decoration: none;
 }
 
-.context-nav .nav-item .active {
+.context-nav ul > li .active {
   color: #fff;
   background: #5aadbb;
   font-style: italic;
 }
 
-.context-nav.open .nav-item .active,
-.context-nav .nav-item .active:hover {
+.context-nav.open ul > li .active,
+.context-nav ul > li .active:hover {
   background: #228596;
 }
 
@@ -1086,7 +1087,7 @@ Modify as content requires.
     border: none;
   }
 
-  .main-nav-sub {
+  .main-nav > li > ul {
     display: none;
     position: absolute;
     top: 100%;
@@ -1095,11 +1096,11 @@ Modify as content requires.
     background: #000;
   }
 
-  .main-nav > li:hover > .main-nav-sub {
+  .main-nav > li:hover > ul {
     display: block;
   }
 
-  .main-nav-sub a {
+  .main-nav > li > ul a {
     padding: 15px 20px;
     white-space: nowrap;
     /* Transitions */
@@ -1110,7 +1111,7 @@ Modify as content requires.
     transition: all 0.3s ease;
   }
 
-  .main-nav-sub a:hover {
+  .main-nav > li > ul a:hover {
     border-left: 1em solid rgba(221,0,42,1);
     padding-right: 0;
   }
@@ -1278,7 +1279,7 @@ Modify as content requires.
     padding: 2.1em 2em;
   }
 
-  .main-nav-sub {
+  .main-nav > li > ul {
     top: 100%;
     min-width: 200px;
   }
@@ -1325,11 +1326,11 @@ Modify as content requires.
     padding: 0;
   }
 
-  .context-nav .nav-item {
+  .context-nav ul > li {
     display: block;
   }
 
-  .context-nav .nav-item .active:after {
+  .context-nav ul > li .active:after {
     display: none;
   }
 
