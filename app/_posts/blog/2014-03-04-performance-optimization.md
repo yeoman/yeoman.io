@@ -1,7 +1,6 @@
 ---
 layout: blog
 title: Grunt And Gulp Tasks For Performance Optimization
-sidebar: sidebars/blog.html
 ---
 
 ![](/assets/img/blog/tasks.jpg)

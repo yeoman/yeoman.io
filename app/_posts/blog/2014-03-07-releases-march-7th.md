@@ -1,7 +1,6 @@
 ---
 layout: blog
 title: Yeoman updates for Friday, March 7th.
-sidebar: sidebars/blog.html
 excerpt: Review project latest releases
 ---
 

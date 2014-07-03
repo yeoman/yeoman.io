@@ -1,7 +1,6 @@
 ---
 layout: blog
 title: Updates to some of our generators
-sidebar: sidebars/blog.html
 ---
 
 Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.

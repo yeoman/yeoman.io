@@ -1,7 +1,6 @@
 ---
 layout: blog
 title: What's new in the Backbone generator
-sidebar: sidebars/blog.html
 ---
 
 The Backbone generator has had a few major updates recently and we wanted to share these changes with the community. The theme of the changes is to make the generator more flexible. There is also some updates related to testing and styling we wanted to share.
