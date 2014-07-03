@@ -91,7 +91,7 @@ var yeoman = require('yeoman-generator');
 module.exports = yeoman.generators.Base.extend();
 ```
 
-If you would like to require a `name` argument for your generator (for instance, `yo name:router foo` to require the `foo` and make it available from `this.name`), you can instead do the following:
+If you would like to require a `name` argument for your generator (for example `foo` in `yo name:router foo`) that will be assigned to `this.name`,  you can instead do the following:
 
 ```js
 var yeoman = require('yeoman-generator');
@@ -99,7 +99,7 @@ var yeoman = require('yeoman-generator');
 module.exports = yeoman.generators.NamedBase.extend();
 ```
 
-Either type of generator can be used to create either your app your subcommand generator. The former is used most often for the app generator, the later most often used for your subcommand generator where a filename is required.
+Either type of generator can be extended to create an app generator or a subcommand generator. `Base` is extended most often for an app generator and `NamedBase` for a subcommand generator where a filename is required.
 
 
 The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
@@ -108,9 +108,9 @@ We assign the extended generator to `module.exports` to make it available to the
 
 ### Overwriting the constructor
 
-Some special generator methods can only be called inside the `constructor` function. These special methods usually set up important state controls that cannot work later on.
+Some generator methods can only be called inside the `constructor` function. These special methods may do things like set up important state controls and may not function outside of the constructor.
 
-This means you may want to overwrite the default constructor from time to time. You can do it like this:
+To override the generator constructor you pass a constructor function to `extend()` like so:
 
 ```js
 module.exports = yeoman.generators.Base.extend({
