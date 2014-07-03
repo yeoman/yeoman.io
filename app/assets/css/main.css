@@ -555,6 +555,17 @@ Context/Local Nav
   background: #228596;
 }
 
+.year_divider > ul {
+  display: none;
+}
+
+.year_divider.open > ul {
+  display: block;
+}
+
+.year_divider li a {
+  padding-left: 1.5em;
+}
 
 
 /* Page footer

@@ -27,7 +27,7 @@
       }
     });
 
-    $('.context-nav').click(function() {
+    $('.context-nav, .year_divider').click(function() {
       $(this).toggleClass('open');
     });
 
