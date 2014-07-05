@@ -34,17 +34,23 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-<!-- build:js(app) /assets/js/scripts.js -->
 <script src="/assets/js/libs/prettify.js"></script>
 <script src="/assets/js/script.js"></script>
-<!-- endbuild -->
 
 {% if page.title == 'Generators' %}
-  <!-- build:js(app) /assets/js/generators.js -->
+  <!-- The #bootstrapper script will be removed by grunt-reduce during build. -->
+  <!-- Use GETSTATIURL to indicate that manually loaded strings are actually URLs -->
+  <script id="bootstrapper">
+    window.GETSTATICURL = function (url) { // , placeHolderValue1, placeHolderValue2, ...
+      var placeHolderValues = Array.prototype.slice.call(arguments, 1);
+      return url.replace(/\*\*?|\{[^\}]*\}/g, function () {
+        return placeHolderValues.shift();
+      });
+    };
+  </script>
   <script src="/assets/js/libs/lodash.min.js"></script>
   <script src="/assets/js/libs/list.js"></script>
   <script src="/assets/js/generator.js"></script>
-  <!-- endbuild -->
 {% endif %}
 
 <script>
