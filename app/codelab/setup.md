@@ -19,7 +19,7 @@ Most of your interactions with Yeoman will be through the command line. Run comm
 Before installing Yeoman, you will need the following:
 
 * NodeJS v0.10.x+
-* npm (which comes bundled with Node) v1.3.7+ 
+* npm (which comes bundled with Node) v1.4.3+ 
 * Git
 
 You can check if you have Node and npm installed by typing:
