@@ -10,16 +10,12 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 
   {% if page.category == 404 %}
-  <!-- build:css({app,.tmp}) /assets/css/404.css -->
-  <link href="/assets/css/404.css" rel="stylesheet">
-  <!-- endbuild -->
+    <link href="/assets/css/404.css" rel="stylesheet">
   {% else %}
-  <!-- build:css({app,.tmp}) /assets/css/main.css -->
-  <link href="/assets/css/normalize.css" rel="stylesheet">
-  <link href="/assets/css/main.css" rel="stylesheet">
-  <link href="/assets/css/codelab.css" rel="stylesheet">
-  <link href="/assets/css/prettify.css" rel="stylesheet">
-  <!-- endbuild -->
+    <link href="/assets/css/normalize.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/codelab.css" rel="stylesheet">
+    <link href="/assets/css/prettify.css" rel="stylesheet">
   {% endif %}
 
   <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Yeoman Blog Atom Feed">
