@@ -6,7 +6,7 @@ sidebar: sidebars/contributing.html
 excerpt: The yeoman project pull request guidelines
 ---
 
-Pull Request (_PR_) is the step where you submit patches to one of our repository. To prevent any frustration, you should make sure to **open an issue to discuss any new features** before working on it. This will prevent you waisting time on a feature the core team doesn't see fit for the project scope and goals.
+Pull Request (_PR_) is the step where you submit patches to one of our repository. To prevent any frustration, you should make sure to **open an issue to discuss any new features** before working on it. This will prevent you wasting time on a feature the core team doesn't see fit for the project scope and goals.
 
 Once you've worked on a feature or a bug, it is then time to send a PR. Make sure to follow these steps along the way to make sure your patch land as soon as possible!
 
