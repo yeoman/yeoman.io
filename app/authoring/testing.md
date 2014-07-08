@@ -59,12 +59,68 @@ before(function (done) {
     .withOptions({ foo: 'bar' })            // Mock options passed in
     .withArguments(['name-x'])              // Mock the arguments
     .withPrompt({ coffee: false })          // Mock the prompt answers
-    .onEnd(done)
-
+    .on('ready', function (generator) {
+      // this is called right before `generator.run()` is called
+    })
+    .on('end', done);
 })
 ```
 
 You should always use ```path.join``` and ```__dirname``` when creating relative path because the Current Working Directory is dependent on where the node command was called.
+
+Sometimes you may want to construct a test scenario for the generator to run with existing contents in the target directory. In which case, you could invoke `inDir()` with an optional second parameter (a callback function), like so:
+
+```js
+var path = require('path');
+var fs = require('fs-extra');
+
+helpers.run(path.join( __dirname, '../app')) 
+  .inDir(path.join( __dirname, './tmp'), function (dir) {
+    // `dir` is the resolved target directory (or `path.join( __dirname, './tmp')` in this example)
+    fs.copySync(path.join(__dirname, '../templates/common'), dir)
+  })
+  .withPrompt({ coffee: false })
+  .on('end', function () {
+    // assert something
+  });
+```
+
+You can also perform asynchronous task in your callback:
+
+```js
+var path = require('path');
+var fs = require('fs-extra');
+
+helpers.run(path.join( __dirname, '../app')) 
+  .inDir(path.join( __dirname, './tmp'), function (dir) {
+    var done = this.async(); // `this` is the RunContext object.
+    fs.copy(path.join(__dirname, '../templates/common'), dir, done);
+  })
+  .withPrompt({ coffee: false })
+  .on('end', function () {
+    // assert something
+  });
+```
+
+If your generator calls `composeWith()`, you may want to mock those dependent generators. Here's how:
+
+```js
+var deps = ['../../common',
+             '../../controller',
+             '../../main',
+             [helpers.createDummyGenerator(), 'karma:app']
+           ];
+var angular = new RunContext('../../app');
+angular.withGenerators(deps);
+angular.withPrompt({
+  compass: true,
+  bootstrap: true
+});
+angular.on('end', function () {
+  // assert something
+});
+```
+
 
 ## Assertions helpers
 
