@@ -120,7 +120,7 @@ module.exports = yeoman.generators.Base.extend({
     yeoman.generators.Base.apply(this, arguments);
 
     // And next add your custom code
-    this.option('coffee'); // This method add support for a `--coffee` flag
+    this.option('coffee'); // This method adds support for a `--coffee` flag
   }
 });
 ```
