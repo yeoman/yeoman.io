@@ -70,7 +70,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.sortable'
+    'ui.sortable',
     'LocalStorageModule'
 ])
 ```
