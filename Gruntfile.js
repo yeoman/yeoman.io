@@ -250,6 +250,7 @@ module.exports = function (grunt) {
           dot: true,
           cwd: '<%= yeoman.app %>',
           src: [
+            'favicon.ico',
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
@@ -259,7 +260,6 @@ module.exports = function (grunt) {
             '!**/_*{,/**}'
             // Explicitly add any files your site needs for distribution here.
             //'_bower_components/jquery/jquery.js',
-            //'favicon.ico',
             //'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
