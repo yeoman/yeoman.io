@@ -32,7 +32,6 @@ Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.
 #### Gulp
 
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
-* [gulp-imageoptim](https://github.com/JamieMason/gulp-imageoptim)
 
 <div class="note"><strong>Note:</strong> Etsy found that just by <a href="http://programming.oreilly.com/2014/01/web-performance-is-user-experience.html">adding</a> 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.</div>
 
