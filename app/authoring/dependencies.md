@@ -56,4 +56,4 @@ yeoman.generators.Base.extend({
 });
 ```
 
-Make sure to call the `spawnCommand` method inside the `end` queue. Your user don't want to wait for an installation command to complete.
+Make sure to call the `spawnCommand` method inside the `end` queue. Your users don't want to wait for an installation command to complete.
