@@ -17,7 +17,7 @@ You can install Yeoman generators using the [npm](http://npmjs.org) command and 
 Install [generator-angular](https://www.npmjs.org/package/generator-angular) using this command:
 
 ```html
-npm install --global generator-angular@0.9.2
+$ npm install --global generator-angular@0.9.2
 ```
 
 This will start to install the Node packages required for the generator. Using `@0.9.2` will request a specific version of the generator.
