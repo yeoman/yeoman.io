@@ -15,8 +15,7 @@ We've used the word "scaffold" a few times but you might not know what that mean
 Create a ***mytodo*** folder for all your codelab work:
 
 ```js
-$ mkdir mytodo
-$ cd mytodo
+$ mkdir mytodo && cd mytodo
 ```
 
 This folder is where the generator will place your scaffolded project files. 
