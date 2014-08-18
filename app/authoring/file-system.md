@@ -36,7 +36,7 @@ These three objects are instances of [File-utils module](https://github.com/SBou
 To copy a file from your `templates/` folder to the destination folder:
 
 ```js
-this.dest.copy('Gruntfile.js', 'Gruntfile.js');
+this.src.copy('Gruntfile.js', 'Gruntfile.js');
 ```
 
 ### Reading a json file
