@@ -8,7 +8,7 @@ excerpt: Its all about the users in the end
 
 Your generator will interact a lot with the end user. By default Yeoman runs on a terminal, but it also supports custom user interfaces different tools can provide. For example, nothing prevents a Yeoman generator from being run inside a graphical tool like an editor or a standalone app.
 
-To allow this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only uses those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
+To allow this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only use those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
 
 For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from user not using a terminal. Instead, always rely on the UI generic `generator.log()` method.
 
