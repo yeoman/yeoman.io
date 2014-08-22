@@ -10,7 +10,7 @@ Your generator will interact a lot with the end user. By default Yeoman runs on 
 
 To allow this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only use those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
 
-For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from user not using a terminal. Instead, always rely on the UI generic `generator.log()` method.
+For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from users not using a terminal. Instead, always rely on the UI generic `generator.log()` method, where `generator` is the context of your current generator.
 
 ## User interactions
 
@@ -21,7 +21,7 @@ Prompts are the main way a generator interact with a user. The prompt module is 
 You'll call the prompt method this way:
 
 ```js
-yeoman.generators.Base.extend({
+module.exports = yeoman.generators.Base.extend({
   promptTask: function () {
     var done = this.async();
     this.prompt({
@@ -88,6 +88,14 @@ The `options` hash (the second argument) accept multiples key/values:
 
 Outputting information is handled by the `generator.log` module.
 
-The main method you'll use is simply `generator.log('Hey! Welcome to my awesome generator')`. It takes a string and output it to the user; basically it mimic `console.log()` when used inside a terminal.
+The main method you'll use is simply `generator.log('Hey! Welcome to my awesome generator')`. It takes a string and output it to the user; basically it mimic `console.log()` when used inside a terminal. You can use it in this way:
+
+```js
+module.exports = yeoman.generators.Base.extend({
+  myAction: function () {
+    this.log('Something has gone wrong!');
+  }
+});
+```
 
 There's also some other helper methods you can find in the [API documentation](http://yeoman.github.io/generator/TerminalAdapter.html).
