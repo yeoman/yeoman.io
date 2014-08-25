@@ -4,6 +4,10 @@
   var $win = $(window);
   var $doc = $(document);
 
+  function capitalize(str) {
+    return str[0].toUpperCase() + str.slice(1);
+  }
+
   $(function() {
 
     // Open/close mobile menu
@@ -50,6 +54,7 @@
         el.official = el.ownerWebsite === 'https://github.com/yeoman';
         el.name = el.name.replace('generator-', '');
         el.description = el.description.replace(/^(A |)Yeoman generator (for|to) /i, '');
+        el.description = capitalize(el.description);
         el.stars = el.stars || el.watchers || 0;
         el.website = el.website || el.html_url;
         el.created = el.created || el.created_at;
