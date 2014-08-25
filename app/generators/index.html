@@ -25,7 +25,6 @@ class: discovery-page
           <th class="sort" data-sort="author">Author</th>
           <th class="sort" data-sort="updated">Last updated</th>
           <th class="sort" data-sort="stars">Stars</th>
-          <th class="sort" data-sort="forks">Forks</th>
         </tr>
       </thead>
       <tbody class="list">
@@ -40,7 +39,6 @@ class: discovery-page
             <% } %>
             <td class="updated"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
             <td class="stars"><%- el.stars %></td>
-            <td class="forks"><%- el.forks %></td>
           </tr>
         <% }); %>
       </tbody>

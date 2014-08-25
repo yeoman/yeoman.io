@@ -711,9 +711,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   position: relative;
 }
 
-.discovery-page .forks,
 .discovery-page .updated,
-[data-sort="forks"],
 [data-sort="updated"] {
   display: none;
 }

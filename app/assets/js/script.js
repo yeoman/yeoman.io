@@ -74,8 +74,7 @@
           'desc',
           'author',
           'updated',
-          'stars',
-          'forks'
+          'stars'
         ]
       });
 
