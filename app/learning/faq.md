@@ -45,7 +45,7 @@ Packages can be registered on Bower using the `register` command. e.g `bower reg
 
 Our goal is to facilitate both developers and the community with the tools needed to create rich web applications easily. With that goal in mind, we'll be providing a great API (and docs) to our Generators system with examples of how to implement samples, but will rely on the community to create and maintain Generators for popular frameworks. This will allow us to focus on making Yeoman better without the distractions of maintaining a large number of Generators.
 
-You can see the full [list of officially supported generators](https://github.com/yeoman) on Github.
+You can see the full [list of officially supported generators](https://github.com/yeoman?query=generator-) on Github.
 
 
 ### What license is Yeoman released under?
