@@ -57,7 +57,7 @@
         el.official = el.ownerWebsite === 'https://github.com/yeoman';
         el.name = el.name.replace('generator-', '');
         el.description = el.description.replace(/^(A |)Yeoman generator (for|to) /i, '');
-        el.description = capitalize(el.description);
+        el.description = capitalize(el.description).trim().replace(/\.$/, '');
         el.stars = el.stars || el.watchers || 0;
         el.website = el.website || el.html_url;
         el.created = el.created || el.created_at;
