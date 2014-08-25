@@ -1121,7 +1121,7 @@ Modify as content requires.
   .main-nav > li > ul a {
     padding: 15px 20px;
     white-space: nowrap;
-    border-left: 0 solid rgba(221,0,42,1);
+    border-left: 10px solid rgba(221,0,42,0);
     /* Transitions */
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1131,8 +1131,7 @@ Modify as content requires.
   }
 
   .main-nav > li > ul a:hover {
-    border-left-width: 1em;
-    padding-right: 0;
+    border-left-color: rgba(221,0,42,1);
   }
 
   .jumbotron h2 {
