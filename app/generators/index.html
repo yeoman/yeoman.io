@@ -1,18 +1,15 @@
 ---
 layout: single-column
 markdown: 0
-title: Yeoman Community Generators
-class: discovery-page community-generators
+title: Generators
+class: discovery-page
 ---
   <section class="main">
-    <p>These are the community made generators that are pulled from the npm registry. Your generator must have the "yeoman-generator" keyword and a repo description to be listed. To view the official Yeoman generators, please visit the {% link /generators/official.html Official Generators page %}.</p>
-
+    <p><small>Your generator must have the "yeoman-generator" keyword and a repo description to be listed. Official ones are marked with <img src="/assets/img/mustache.svg" width="20px"></small></p>
     <div id="loading">
       <p>Loading generators...</p>
     </div>
-
     <div id="plugins-all"></div>
-
     <div class="message" id="search-notfound">No matching generator found. Try something else.</div>
   </section>
 
@@ -33,11 +30,9 @@ class: discovery-page community-generators
       </thead>
       <tbody class="list">
         <% _.each(modules, function (el) { %>
-          <% var name = el.name.replace('generator-', ''); %>
-          <% var keywords = el.keywords %>
-          <tr>
-            <td class="name"><a href="<%- el.website %>"><%- name %></a></td>
-            <td class="desc"><%- el.description %><div class="hidden"><%- keywords %></div></td>
+          <tr class="<%= el.official ? 'official' : '' %>">
+            <td class="name"><a href="<%- el.website %>"><%- el.name %></a></td>
+            <td class="desc"><%- el.description %><div class="hidden"><%- el.keywords %></div></td>
             <% if (el.ownerWebsite) { %>
               <td class="author"><a href="<%- el.ownerWebsite %>"><%- el.owner %></a></td>
             <% } else { %>

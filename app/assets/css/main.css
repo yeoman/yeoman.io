@@ -708,6 +708,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 .discovery-page td {
   padding: 10px 5px;
   border-top: 1px solid #ddd;
+  position: relative;
 }
 
 .discovery-page .forks,
@@ -716,6 +717,19 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 [data-sort="updated"] {
   display: none;
 }
+
+.discovery-page .official .name::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 7px;
+  background: url(/assets/img/mustache.svg) no-repeat;
+  opacity: 0.5;
+}
+
 .sort {
   text-align: left;
   min-width: 100px;
