@@ -1121,7 +1121,7 @@ Modify as content requires.
   .main-nav > li > ul a {
     padding: 15px 20px;
     white-space: nowrap;
-    border-left: 0em solid rgba(221,0,42,1);
+    border-left: 0 solid rgba(221,0,42,1);
     /* Transitions */
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
