@@ -12,11 +12,11 @@ The first step should always be to run `yo doctor`. This command will troublesho
 
 Yeoman provides an optimized **scaffolding** and workflow experience for creating compelling web applications. Developers use Yeoman together with Grunt, for **building** their projects and Bower for **package management**. A typical workflow between this trinity of tools might look like:
 
-```
-yo webapp
-yo angular
-bower install angular-directives
-grunt
+```sh
+$ yo webapp
+$ yo angular
+$ bower install angular-directives
+$ grunt
 ```
 
 ### Binary issues

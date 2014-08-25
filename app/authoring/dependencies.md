@@ -10,7 +10,7 @@ Once you've run your generators, you'll often want to run [npm](http://npmjs.org
 
 As these tasks are very frequent, Yeoman already abstracts them away. We'll also cover how you can launch installation through other tools.
 
-## NPM
+## npm
 
 You just need to call `generator.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
 

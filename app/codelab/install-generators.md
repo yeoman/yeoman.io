@@ -12,11 +12,11 @@ In a traditional web development workflow, you would need to spend a lot of time
 
 ## Install an AngularJS generator
 
-You can install Yeoman generators using the [npm](http://npmjs.org) command and there are over [800 generators](http://yeoman.io/generators/community.html) now available, many of which have been written by the open-source community.
+You can install Yeoman generators using the [npm](https://www.npmjs.org) command and there are over [1000+ generators](http://yeoman.io/generators) now available, many of which have been written by the open-source community.
 
 Install [generator-angular](https://www.npmjs.org/package/generator-angular) using this command:
 
-```html
+```sh
 $ npm install --global generator-angular@0.9.2
 ```
 

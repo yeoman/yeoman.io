@@ -15,7 +15,7 @@ Open up a terminal and enter in the following:
 $ curl -L get.yeoman.io | bash
 ```
 
-This will audit your system and see what of Yeoman's dependencies are currently installed, such as Node, NPM and Ruby.
+This will audit your system and see what of Yeoman's dependencies are currently installed, such as Node, npm and Ruby.
 
 This script will give you instructions on how to install what's missing. You're welcome to follow along at the more detailed [Yeoman install procedure](https://github.com/yeoman/yeoman/wiki/Manual-Install).
 

@@ -14,7 +14,7 @@ The files that you see in the web browser can be found in the ***app*** subfolde
 
 Open ***views/main.html***.
 
-To start from a cleaner slate, delete everything from your *main.html* file except for the `div` with a class of `"jumbotron"`. Replace `"jumbotron"` with the class name `"container"`. 
+To start from a cleaner slate, delete everything from your *main.html* file except for the `div` with a class of `"jumbotron"`. Replace `"jumbotron"` with the class name `"container"`.
 
 This is all you should have in *main.html* now:
 
@@ -23,7 +23,7 @@ This is all you should have in *main.html* now:
 </div>
 ```
 
-Open ***scripts/controllers/main.js***. 
+Open ***scripts/controllers/main.js***.
 
 Modify this boilerplate Angular Controller to contain a list of `todos` instead of `awesomeThings`:
 
@@ -48,7 +48,7 @@ Then modify our view (*main.html*) to output our todos items as HTML text `input
 </div>
 ```
 
-The [`ng-repeat`](http://docs.angularjs.org/api/ng.directive:ngRepeat) attribute on the paragraph tag is an Angular [directive](http://docs.angularjs.org/guide/directive) that instantiates a template once per item from a collection. 
+The [`ng-repeat`](http://docs.angularjs.org/api/ng.directive:ngRepeat) attribute on the paragraph tag is an Angular [directive](http://docs.angularjs.org/guide/directive) that instantiates a template once per item from a collection.
 
 In our case, imagine that the paragraph element and its content is turned into a virtual rubber stamp by adding the `ng-repeat` attribute. For each item in the `todos` array, Angular will stamp out a new instance of the `<p><input></p>` HTML block.
 
@@ -75,7 +75,6 @@ Let’s implement a way for the user to add new todo items to the list.
 Modify *main.html* by adding a `form` element in between the `<h2>` and `<p>` elements from the previous section. Your *main.html* should now look like this:
 
 ```html
-
 <div class="container">
   <h2>My todos</h2>
 
@@ -97,7 +96,6 @@ Modify *main.html* by adding a `form` element in between the `<h2>` and `<p>` el
     <input type="text" ng-model="todo" class="form-control">
   </p>
 </div>
-
 ```
 
 This adds a HTML form with a submit button to the top of the page. It utilises another Angular directive, [`ng-submit`](http://docs.angularjs.org/api/ng.directive:ngSubmit) which we’ll get to next. Return to your browser and the UI should now look similar to this:

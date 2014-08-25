@@ -20,7 +20,7 @@ To easily achieve this we can use another Angular module called "[angular-local-
 
 Run the following command:
 
-```js
+```sh
 $ bower install --save angular-local-storage
 ```
 

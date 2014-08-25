@@ -14,17 +14,17 @@ sidebar: sidebars/codelab.html
 
 Most of your interactions with Yeoman will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or `cmd.exe` if you are on Windows.
 
-## Install prerequisites 
+## Install prerequisites
 
 Before installing Yeoman, you will need the following:
 
-* NodeJS v0.10.x+
-* npm (which comes bundled with Node) v1.4.3+ 
-* Git
+* Node.js v0.10.x+
+* npm (which comes bundled with Node) v1.4.3+
+* git
 
 You can check if you have Node and npm installed by typing:
 
-```js
+```sh
 $ node --version && npm --version
 ```
 
@@ -32,16 +32,16 @@ If you need to upgrade or install Node, the easiest way is to use an installer f
 
 You can check if you have Git installed by typing:
 
-```js
+```sh
 $ git --version
 ```
-If you don't have Git, grab the installers from the [Git website](http://git-scm.com/).
+If you don't have Git, grab the installers from the [git website](http://git-scm.com/).
 
-## Install the Yeoman toolset 
+## Install the Yeoman toolset
 
 Once you’ve got Node installed, install the Yeoman toolset:
 
-```js
+```sh
 $ npm install --global yo
 ```
 
@@ -61,7 +61,7 @@ $ sudo npm install --global yo
 
 It is a good idea to check that everything is installed as expected by running commonly used Yeoman commands like `yo`, `bower`, and `grunt` with the `--version` flag as follows:
 
-```js
+```sh
 $ yo --version && bower --version && grunt --version
 ```
 

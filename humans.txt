@@ -1,71 +1,3 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
-
-/* TEAM */
-
-    Addy Osmani
-    Site: http://addyosmani.com
-    Twitter: addyosmani
-    Location: London, UK
-
-    Brian Ford
-    Site: http://briantford.com
-    Twitter: briantford
-    Location: Ann Arbor, MI
-
-    Eric Bidelman
-    Site: http://ericbidelman.com
-    Twitter: ebidel
-    Location: San Francisco, USA
-
-    Frederick Ros
-    Site: https://github.com/sleeper
-    Twitter: sl33p3r
-    Location: Mouans-Sartoux, France
-
-    Mickael Daniel
-    Site: http://blog.mklog.fr
-    Twitter: mklabs
-    Location: Lyon, France
-
-    Paul Irish
-    Site: http://paulirish.com
-    Twitter: paul_irish
-    Location: San Francisco, USA
-
-    Sindre Sorhus
-    Site: http://sindresorhus.com
-    Twitter: sindresorhus
-    Location: Norway
-
-
-/* THANKS */
-
-
-/* PROJECT */
-
-    Standards: HTML5, CSS3, JS
-    Components:
-    * Grunt
-    * node-build-script
-    * Bootstrap
-    * HTML5 Boilerplate
-    * Modernizr
-    * Twitter Bower
-    * Node.js
-    * NPM
-    * Compass
-    * Socket.IO
-    * CoffeeScript
-    * Mocha
-    * Jasmine
-    * PhantomJS
-
-    Source: https://github.com/yeoman/yeoman
-
-
-
-
                                        ....
                                 ... ,+$Z8O$?: ......
                           .....ID8D7:. .... .ID88O.....
@@ -112,5 +44,3 @@
     . .?$. . .  Z+   ..D..DO..   .D$. .D: ,8.D= .8. .   O.....D~. ..87 ..,O:8
     ..8888   . 8D888888D....D88888. .?8D88..O,.O8D87..8888...8DD8::8D88 ...OD
     ........ ............. .............................................  ....
-
-

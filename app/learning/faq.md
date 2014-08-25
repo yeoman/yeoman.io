@@ -58,35 +58,7 @@ Yeoman is released under a [BSD](http://opensource.org/licenses/bsd-license.php/
 Make sure you read the [Submitting an issue guide](/contributing/opening-issues.html).
 
 
-### What tools do Yeoman make use of?
-
-* [Grunt](https://github.com/cowboy/grunt)
-* [Twitter Bower](http://bower.io)
-* [Bootstrap](http://twbs.github.io/bootstrap)
-* [Node Build Script](https://github.com/h5bp/node-build-script)
-* [HTML5 Boilerplate](http://html5boilerplate.com)
-* [Compass](http://compass-style.org/)
-* [Modernizr](https://github.com/Modernizr/Modernizr/)
-* [Node](http://nodejs.org)
-* [NPM](http://npmjs.org)
-* [socket.io](http://socket.io)
-* [CoffeeScript](http://coffeescript.org)
-* [Mocha](http://visionmedia.github.com/mocha/)
-* [Jasmine](http://pivotal.github.com/jasmine/)
-* [PhantomJS](http://phantomjs.org/)
-* [Require.js](http://requirejs.org/)
-* [RequireHM](https://github.com/jrburke/require-hm)
-* [optipng](http://optipng.sourceforge.net/)
-* [JPEGTran](http://jpegclub.org/jpegtran/)
-* [connect](https://npmjs.org/package/connect)
-* [html-minifier](https://npmjs.org/package/html-minifier)
-* [clean-css](https://github.com/GoalSmashers/clean-css)
-* [compass_bootstrap](https://github.com/vwall/compass-twitter-bootstrap/)
-
-But remember every generator author is free to use or not use any of these tools. So if you have special needs, make sure to checkout specific generator documentation.
-
-
-### NPM appears to have installed Yeoman but `yo` still gives me "command not found".
+### `npm` appears to have installed Yeoman but `yo` still gives me "command not found".
 
 It's likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read [this comment](https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733) and [this thread](https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663).
 
@@ -152,7 +124,7 @@ After that, simply run `grunt serve` like you normally would and enjoy automatic
 
 Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run both:
 
-```bash
+```sh
 npm install
 bower install
 ```
@@ -163,9 +135,11 @@ And check if these folders are created correctly.
 
 Try
 
-	sudo chmod a+rx /usr/local/bin /usr/local/bin/node
+```sh
+sudo chmod a+rx /usr/local/bin /usr/local/bin/node
+```
 
 Authenticate and run it again.
 Explanation: NPM runs the installation as _nobody_ which may cause the installation to fail in a way that seems as if _node_ was not found if the binary cannot be accessed.
 
-<img src="/assets/img/yeoman-009.png" class="character"/>
+<img src="/assets/img/yeoman-009.png" class="character">

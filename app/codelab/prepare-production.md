@@ -23,11 +23,11 @@ To create a production version of our application, we’ll want to:
 * concatenate and minify our scripts and styles to save on those network requests,
 * optimize images if we were using any,
 * compile the output of any preprocessors we’re using, and
-* generally make our application really lean. 
+* generally make our application really lean.
 
 Phew! Amazingly we can achieve all of this just by running:
 
-```js
+```sh
 $ grunt
 ```
 
@@ -41,7 +41,7 @@ Your lean, production-ready application is now available in a ***dist*** folder 
 
 Want to preview your production app locally? That’s just another simple grunt command:
 
-```js
+```sh
 $ grunt serve:dist
 ```
 

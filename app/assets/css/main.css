@@ -140,6 +140,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -148,6 +149,7 @@ blockquote:before {
   margin-right: 0.05em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }
@@ -342,11 +344,21 @@ Excerpt
 Anchor Link Icon
 */
 
-.content-chunk h1, .content-chunk h2, .content-chunk h3, .content-chunk h4, .content-chunk h5, .content-chunk h6 {
+.content-chunk h1,
+.content-chunk h2,
+.content-chunk h3,
+.content-chunk h4,
+.content-chunk h5,
+.content-chunk h6 {
   position: relative;
 }
 
-.content-chunk h1:hover, .content-chunk h2:hover, .content-chunk h3:hover, .content-chunk h4:hover, .content-chunk h5:hover, .content-chunk h6:hover {
+.content-chunk h1:hover,
+.content-chunk h2:hover,
+.content-chunk h3:hover,
+.content-chunk h4:hover,
+.content-chunk h5:hover,
+.content-chunk h6:hover {
   color: #000;
   border-color: rgba(215,0,41,0.2);
 }
@@ -689,7 +701,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   border-radius: 0.35em;
 }
 
-
 #search-notfound {
   display: none;
   font-size: 1.5em;
@@ -741,22 +752,26 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   text-align: left;
   min-width: 80px;
 }
+
 th.sort:before {
   content: '\21C5';
   display: inline-block;
   opacity: .4;
   font-size: 0.8em;
 }
+
 th.sort.asc:before{
   content: '\2193';
   opacity: 1;
   text-align: left;
 }
+
 th.sort.desc:before{
   content: '\2191';
   opacity: 1;
   text-align: right;
 }
+
 input.search {
   width: 100%;
   line-height: 1.5em;
@@ -774,19 +789,23 @@ input.search {
   padding-bottom: 1em;
   margin-bottom: 1em;
 }
+
 .blog-post-preview .blog-post-title {
   margin: 1em 0 0.2em;
 }
+
 .blog-post-preview .blog-post-title a {
   color: #222;
   text-decoration: none;
 }
+
 .blog-post-preview .blog-post-date {
   margin: 0.2em 0 1em;
   font-size: 0.8em;
   color: #444;
   text-decoration: none;
 }
+
 .note {
   background: #f2dede;
   padding: 15px;
@@ -930,9 +949,7 @@ These examples override the primary ('mobile first') styles.
 Modify as content requires.
 ========================================================================== */
 
-
 @media only screen and (min-width: 20em) {
-
   .logo a:before {
     display: block;
     top: -0.5em;
@@ -953,13 +970,10 @@ Modify as content requires.
     margin-bottom: 1.7em;
   }
 
-  .blog-post-meta {
-
-  }
-
   .blog-post-meta .date {
     float: left;
   }
+
   .blog-post-meta .social {
     float: right;
   }
@@ -967,7 +981,6 @@ Modify as content requires.
 
 
 @media only screen and (min-width: 28em) {
-
   .jumbotron {
     padding-top: 5em;
   }
@@ -1020,7 +1033,6 @@ Modify as content requires.
 }
 
 @media only screen and (min-width: 35em) {
-
   .jumbotron h2 {
     font-size: 1.6em;
   }
@@ -1079,7 +1091,6 @@ Modify as content requires.
 
 /* Menu gets to be displayed */
 @media only screen and (min-width: 46em) {
-
   .main-menu {
     position: relative;
     z-index: 13;
@@ -1184,7 +1195,6 @@ Modify as content requires.
 }
 
 @media only screen and (min-width: 46em) {
-
   .team li {
     width: 23%;
     margin-right: 2%;
@@ -1204,7 +1214,6 @@ Modify as content requires.
 }
 
 @media only screen and (min-width: 50em) {
-
   .jumbotron {
     margin-bottom: 4em;
   }
@@ -1218,10 +1227,7 @@ Modify as content requires.
   }
 }
 
-
-
 @media only screen and (min-width: 55em) {
-
   .jumbotron {
     padding-top: 6em;
   }
@@ -1273,7 +1279,6 @@ Modify as content requires.
 }
 
 @media only screen and (min-width: 60em) {
-
   .container {
     position: relative;
     max-width: 1200px;

@@ -18,7 +18,7 @@ Let’s add some order to our list and make it sortable. For this we’re going 
 
 We can check what packages we have already installed with this command:
 
-```
+```sh
 $ bower list
 ```
 
@@ -30,7 +30,7 @@ You should see that you already have packages for angular-cookies, angular-resou
 
 To verify that there are AngularUI packages available, use Bower to search for "angular-ui-sortable":
 
-```
+```sh
 $ bower search angular-ui-sortable
 ```
 
@@ -40,7 +40,7 @@ There is one result for "angular-ui-sortable" so let’s install it along with [
 
 Use Bower to install both "angular-ui-sortable" and "jquery-ui":
 
-```
+```sh
 $ bower install --save angular-ui-sortable
 $ bower install --save jquery-ui
 ```
@@ -55,7 +55,7 @@ The `--save` option updates the ***bower.json*** file with dependencies on angul
 
 <pre>
 $ bower install --save angular-ui-sortable jquery-ui
-</pre> 
+</pre>
 
 </div>
 
@@ -71,7 +71,7 @@ Take a look at your ***bower_components*** directory just to check that everythi
 
 References to these newly installed dependencies must be added to our *index.html* file. You *could* manually add the AngularUI Sortable module and jQueryUI script files yourself but Yeoman will automate this for you!
 
-Quit your current command line process by using the <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> keyboard command. 
+Quit your current command line process by using the <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> keyboard command.
 
 Then run `grunt serve` again.
 

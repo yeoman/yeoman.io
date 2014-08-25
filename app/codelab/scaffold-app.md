@@ -8,27 +8,27 @@ sidebar: sidebars/codelab.html
 
 # Step 3: Use a generator to scaffold out your app
 
-We've used the word "scaffold" a few times but you might not know what that means. Scaffolding, in the Yeoman sense of the word, means generating files for your web app based on your specific configuration requests. In this step, you'll see how Yeoman can generate files specifically for Angular apps &mdash; with options for using other external libraries like SASS and Twitter Bootstrap &mdash; with minimal effort.  
+We've used the word "scaffold" a few times but you might not know what that means. Scaffolding, in the Yeoman sense of the word, means generating files for your web app based on your specific configuration requests. In this step, you'll see how Yeoman can generate files specifically for Angular apps &mdash; with options for using other external libraries like SASS and Twitter Bootstrap &mdash; with minimal effort.
 
 ## Create a project folder
 
 Create a ***mytodo*** folder for all your codelab work:
 
-```js
+```sh
 $ mkdir mytodo && cd mytodo
 ```
 
-This folder is where the generator will place your scaffolded project files. 
+This folder is where the generator will place your scaffolded project files.
 
 <div class="note tip">
-As an added bonus, the Angular generator will dynamically use the name of your folder to make a namespace for your app. For example, <b>mytodo</b> will become <code>angular.module('mytodoApp', [])</code>. So make sure that you don't have any typos in <b>mytodo</b> before going onto the next step. 
+As an added bonus, the Angular generator will dynamically use the name of your folder to make a namespace for your app. For example, <b>mytodo</b> will become <code>angular.module('mytodoApp', [])</code>. So make sure that you don't have any typos in <b>mytodo</b> before going onto the next step.
 </div>
 
 ## Access generators via the Yeoman menu
 
 Run `yo` again to see your generators:
 
-```js
+```sh
 $ yo
 ```
 

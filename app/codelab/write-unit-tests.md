@@ -14,7 +14,7 @@ For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaSc
 
 Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our ***Gruntfile.js*** for running tests. It can be run as follows:
 
-```js
+```sh
 $ grunt test
 ```
 
@@ -22,7 +22,7 @@ When you run `grunt test`, some warnings in the Yeoman console. Don’t worry, t
 
 ## Update Karma configuration
 
-First, we need to update the Karma configuration to load the the new Bower components we installed in the [Step 7](install-packages.html#install). 
+First, we need to update the Karma configuration to load the the new Bower components we installed in the [Step 7](install-packages.html#install).
 
 Open ***karma.conf.js***. Currently the `files` array looks like this:
 
@@ -98,7 +98,7 @@ angular.module('mytodoApp')
 
 ## Update unit tests
 
-You’ll find unit tests scaffolded out in the ***test*** folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify. 
+You’ll find unit tests scaffolded out in the ***test*** folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify.
 
 Your boilerplate test still references `awesomeThings` so delete the following test:
 
