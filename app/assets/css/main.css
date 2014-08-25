@@ -296,7 +296,7 @@ Navigation
 .main {
   padding: 0 1.3em;
   font-size: 1em;
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 
 .main img {
@@ -711,9 +711,18 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   position: relative;
 }
 
+/* TODO: remove when #194 is fixed */
 .discovery-page .updated,
 [data-sort="updated"] {
   display: none;
+}
+
+.discovery-page .name {
+  min-width: 200px;
+}
+
+.discovery-page .author {
+  min-width: 150px;
 }
 
 .discovery-page .official .name::before {
@@ -730,12 +739,12 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 .sort {
   text-align: left;
-  min-width: 100px;
+  min-width: 80px;
 }
 th.sort:before {
   content: '\21C5';
   display: inline-block;
-  opacity: .6;
+  opacity: .4;
   font-size: 0.8em;
 }
 th.sort.asc:before{
@@ -752,8 +761,8 @@ input.search {
   width: 100%;
   line-height: 1.5em;
   margin: 20px 0;
-  font-size: 16px;
-  padding: 5px 10px;
+  font-size: 20px;
+  padding: 10px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1344,7 +1353,7 @@ Modify as content requires.
   }
 
   .main {
-    line-height: 1.8em;
+    line-height: 1.6;
   }
 
   .context-nav {
