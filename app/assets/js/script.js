@@ -44,7 +44,10 @@
         'generator-express-angular', // haven't updated package.json
         'ft-wp', // haven't updated package.json
         'generator-angular-phonegap', // haven't updated package.json
-        'generator-angular-js', // haven't updated package.json
+        'generator-angular-js', // haven't updated package.json,
+        'generator-ionicjs', // duplicate entry of generator-ionic
+        'generator-charcoal', // deprecated,
+        'generator-react-coffee-webpack', // duplicate entry of generator-react-webpack
       ];
 
       modules = _.filter(modules, function (el) {
