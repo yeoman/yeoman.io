@@ -12,7 +12,7 @@ Yeoman file utilities are based on the idea you always have two location context
 
 The first context is the _destination context_. The destination is the folder in which yeoman will be scaffolding a new application.
 
-The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file define the root of a project, this allows the end user to run commands in subdirectories and have them works as expected.
+The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file define the root of a project, this allows the end user to run commands in subdirectories and have them work as expected.
 
 You can get the _destination path_ using `generator.destinationRoot()`. And you can change it using `generator.destinationRoot('new/path')`.
 
@@ -55,4 +55,4 @@ Our goal however is to eventually deprecate these legacy methods. If you find mi
 
 Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( [abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) ) and edit it. The issue here is that playing with AST is verbose and quite hard to grasp.
 
-To help simplify such case, Yeoman provides some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+To help simplify such a case, Yeoman provides some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
