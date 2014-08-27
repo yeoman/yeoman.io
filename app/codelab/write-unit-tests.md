@@ -18,7 +18,7 @@ Let’s go back to the command line and kill our Grunt server using <span class=
 $ grunt test
 ```
 
-When you run `grunt test`, some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
+When you run `grunt test`, you'll see some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
 
 ## Update Karma configuration
 
