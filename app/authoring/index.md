@@ -32,7 +32,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   "description": "",
   "keywords": ["yeoman-generator"],
   "dependencies": {
-    "yeoman-generator": "^0.16.0"
+    "yeoman-generator": "^0.17.3"
   }
 }
 ```
