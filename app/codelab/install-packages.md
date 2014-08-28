@@ -16,7 +16,7 @@ Let’s add some order to our list and make it sortable. For this we’re going 
 
 ## List current packages
 
-We can check what packages we have already installed with this command:
+We can check what packages we have already installed by running this command from within the myTodo project directory created earlier:
 
 ```sh
 $ bower list
