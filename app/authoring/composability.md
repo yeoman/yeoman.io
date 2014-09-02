@@ -76,12 +76,12 @@ this.hookFor('test-framework', {
 
  * `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
  * `peerDependencies` get installed alongside the generator, as a sibling. If `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
- * `devDependencies` for testing and development utility. This is not needed here.
 
-```
-├───generator-backbone/
-└───generator-gruntfile/
-```
+    ```
+    ├───generator-backbone/
+    └───generator-gruntfile/
+    ```
+ * `devDependencies` for testing and development utility. This is not needed here.
 
 When using `peerDependencies`, be aware other modules may also need the requested module. Take care not to create version conflicts by requesting a specific version (or a narrow range of versions). Yeoman's recommendation with `peerDependencies` is to always request _higher or equal to (>=)_ or _any (*)_ available versions. For example:
 
