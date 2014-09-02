@@ -56,3 +56,6 @@ Our goal however is to eventually deprecate these legacy methods. If you find mi
 Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( [abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) ) and edit it. The issue here is that playing with AST is verbose and quite hard to grasp.
 
 To help simplify such a case, Yeoman provides some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+
+
+[API  documentation]: http://yeoman.github.io/generator/
