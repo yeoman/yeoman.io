@@ -47,7 +47,7 @@ var pkg = this.dest.readJSON('package.json');
 
 ## Legacy utilities
 
-Yeoman also expose a set of legacy file utilities. You can refer to the [API documentation] to learn more about them. Some feature of the legacy system may still be missing from [File-utils](https://github.com/SBoudrias/file-utils), so feel free to rely on these methods when necessary.
+Yeoman also expose a set of legacy file utilities. You can refer to the [API documentation](http://yeoman.github.io/generator/) to learn more about them. Some feature of the legacy system may still be missing from [File-utils](https://github.com/SBoudrias/file-utils), so feel free to rely on these methods when necessary.
 
 Our goal however is to eventually deprecate these legacy methods. If you find missing methods you need, then please consider sending a Pull Request to [File-utils](https://github.com/SBoudrias/file-utils) and help us close the bridge between our legacy and our new system!
 
@@ -56,6 +56,3 @@ Our goal however is to eventually deprecate these legacy methods. If you find mi
 Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( [abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) ) and edit it. The issue here is that playing with AST is verbose and quite hard to grasp.
 
 To help simplify such a case, Yeoman provides some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
-
-
-[API  documentation]: http://yeoman.github.io/generator/
