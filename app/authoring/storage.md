@@ -48,7 +48,7 @@ Accept a hash of options to use as defaults values. If a key/value pair already 
 
 ## `.yo-rc.json` structure
 
-The `.yo-rc.json` file is a JSON file where configuration objects from multiples generators are stored. Each generator configuration is namespaced to ensure no naming conflicts will occur between generators.
+The `.yo-rc.json` file is a JSON file where configuration objects from multiple generators are stored. Each generator configuration is namespaced to ensure no naming conflicts will occur between generators.
 
 This also mean each generator configuration is sandboxed and can only be shared between sub-generators. You cannot share configuration between different generator using the storage API. Use options and arguments during invocation to share data between different generators.
 
