@@ -52,4 +52,4 @@ There's basically three components to the core system:
 
 1. [yo](https://github.com/yeoman/yo), the command line interface to use Yeoman.
 2. [The runner system](https://github.com/yeoman/generator) which allow to discover and run generators.
-2. [The base classes](https://github.com/yeoman/generator) you extends to create your own generators. Those classes contains the helpers methods to ease the authoring of your own generators.
+3. [The base classes](https://github.com/yeoman/generator) you extend to create your own generators. Those classes contain the helper methods to ease the authoring of your own generators.
