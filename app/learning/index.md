@@ -31,15 +31,6 @@ $ npm install -g yo
 
 *npm is the package manager for [Node.js](http://nodejs.org/) and comes bundled with it.*
 
-If you are using npm 1.2.10 or above, this will also automatically install `grunt` and `bower` for you. If you're on an older version of npm, you will need to install them manually:
-
-```
-# For npm versions < 1.2.10.
-npm install -g grunt-cli bower
-```
-
-*If you have installed Grunt globally in the past, you will need to remove it first:* `npm uninstall -g grunt`
-
 *On Windows, we suggest you use an improved command line tool such as Console2 or PowerShell to improve the experience.*
 
 
@@ -48,7 +39,7 @@ npm install -g grunt-cli bower
 To scaffold a web application, you'll need to install the `generator-webapp` generator:
 
 ```sh
-$ npm install --global generator-webapp
+$ npm install -g generator-webapp
 ```
 
 This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these.
