@@ -1208,7 +1208,11 @@ Modify as content requires.
     text-align: left;
     width: 50%;
   }
-
+  
+  .footer-links-social li {
+    display: inline !important;
+  }
+  
   .footer-links-contribute {
     float: right;
     text-align: right;
