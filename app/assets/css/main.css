@@ -621,7 +621,7 @@ Context/Local Nav
 
 .footer-links li {
   display: inline-block;
-  margin: 0 1.8em;
+  margin: 0 0.8em;
 }
 
 .footer-links-contribute li {
@@ -634,6 +634,7 @@ Context/Local Nav
 
 .footer-links img {
   max-width: 2.2em;
+  width: 69px;
 }
 
 .footer-links .btn {
