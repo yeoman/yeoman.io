@@ -1061,10 +1061,14 @@ Modify as content requires.
 
   .team li {
     display: inline-block;
-    width: 30%;
-    margin-right: 3%;
+    width: 32%;
+    margin-right: 2%;
     margin-bottom: 2em;
     font-size: 0.8em;
+  }
+
+  .team li:nth-child(3n) {
+    margin-right: 0;
   }
 
   .team a {
@@ -1139,6 +1143,7 @@ Modify as content requires.
 
   .main-nav a {
     border: none;
+    padding: 1em 0.70em;
   }
 
   .main-nav > li > ul {
@@ -1148,6 +1153,11 @@ Modify as content requires.
     left: 0;
     min-width: 100%;
     background: #000;
+  }
+
+  .main-nav > li:last-child > ul {
+    left: auto;
+    right: 0;
   }
 
   .main-nav > li:hover > ul {
@@ -1196,12 +1206,18 @@ Modify as content requires.
     -ms-box-sizing: border-box;
     box-sizing: border-box;
   }
-}
 
-@media only screen and (min-width: 46em) {
   .team li {
-    width: 23%;
+    width: 23.5%;
     margin-right: 2%;
+  }
+
+  .team li:nth-child(3n) {
+   margin-right: 2%;
+  }
+
+  .team li:nth-child(4n) {
+   margin-right: 0;
   }
 
   .footer-links-social {
@@ -1218,6 +1234,10 @@ Modify as content requires.
 }
 
 @media only screen and (min-width: 50em) {
+  .main-nav a {
+    padding: 1em;
+  }
+
   .jumbotron {
     margin-bottom: 4em;
   }
@@ -1324,7 +1344,7 @@ Modify as content requires.
   }
 
   .main-nav > li > a {
-    padding: 2.1em 2em;
+    padding: 2.1em 1.4em;
   }
 
   .main-nav > li > ul {
@@ -1431,6 +1451,11 @@ Modify as content requires.
     margin: 0;
   }
 
+  .team li:nth-child(3n),
+  .team li:nth-child(4n) {
+    margin: 0; /* its actually better to keep this separately from selector above, so we don't break some legacy browsers */
+  }
+
   .team li:last-child a {
     border: none;
   }
@@ -1451,6 +1476,12 @@ Modify as content requires.
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  .main-nav > li > a {
+    padding: 2.1em 2em;
   }
 }
 
