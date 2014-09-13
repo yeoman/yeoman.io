@@ -1445,12 +1445,15 @@ Modify as content requires.
     transition: all 0.3s ease;
   }
 
-  .team li,
-  .team li:nth-child(3n),
-  .team li:nth-child(4n){
+  .team li {
     float: none;
     width: 100%;
     margin: 0;
+  }
+
+  .team li:nth-child(3n),
+  .team li:nth-child(4n) {
+    margin: 0; /* its actually better to keep this separately from selector above, so we don't break some legacy browsers */
   }
 
   .team li:last-child a {
