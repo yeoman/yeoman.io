@@ -6,9 +6,9 @@ sidebar: sidebars/authoring.html
 excerpt: Its all about the users in the end
 ---
 
-Your generator will interact a lot with the end user. By default Yeoman runs on a terminal, but it also supports custom user interfaces different tools can provide. For example, nothing prevents a Yeoman generator from being run inside a graphical tool like an editor or a standalone app.
+Your generator will interact a lot with the end user. By default Yeoman runs on a terminal, but it also supports custom user interfaces that different tools can provide. For example, nothing prevents a Yeoman generator from being run inside of a graphical tool like an editor or a standalone app.
 
-To allow this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only use those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
+To allow for this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only use those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
 
 For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from users not using a terminal. Instead, always rely on the UI generic `generator.log()` method, where `generator` is the context of your current generator.
 
@@ -16,7 +16,7 @@ For example, it is important to never use `console.log()` or `process.stdout.wri
 
 ### Prompts
 
-Prompts are the main way a generator interact with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer to the [module API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
+Prompts are the main way a generator interacts with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer to the [module API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
 
 You'll call the prompt method this way:
 
@@ -37,7 +37,7 @@ module.exports = yeoman.generators.Base.extend({
 })
 ```
 
-Note here that we use the `prompt` queue to ask feedback from the user.
+Note here that we use the `prompt` queue to ask for feedback from the user.
 
 ### Arguments
 
@@ -49,11 +49,11 @@ yo webapp my-project
 
 In this example, `my-project` would be the first argument.
 
-To notify the system we expect an argument, we use the `generator.argument()` method. This method accepts a `name` (String) and an optional options hash.
+To notify the system that we expect an argument, we use the `generator.argument()` method. This method accepts a `name` (String) and an optional hash of options.
 
-The `name` will be used to create a getter on the generator, `generator['name']`.
+The `name` will be used to create a getter on the generator: `generator['name']`.
 
-The `option` hash accepts multiples key/values:
+The options hash accepts multiple key-value pairs:
 
 - `desc` Description for the argument
 - `required` Boolean whether it is required
@@ -62,7 +62,7 @@ The `option` hash accepts multiples key/values:
 - `defaults` Default value for this argument
 - `banner` String to show on usage notes (this one is provided by default)
 
-This method must be called inside the `constructor` method. Else Yeoman won't be able to output the relevant help information when a user calls your generator with the help option. e.g.: `yo webapp --help`
+This method must be called inside the `constructor` method. Otherwise Yeoman won't be able to output the relevant help information when a user calls your generator with the help option: e.g. `yo webapp --help`.
 
 ### Options
 
@@ -72,11 +72,11 @@ Options look a lot like arguments, but they are written as command line _flags_.
 yo webapp --coffee
 ```
 
-To notify the system we expect an option, we use the `generator.option()` method. This method accept a `name` (String) and an optional options hash.
+To notify the system we expect an option, we use the `generator.option()` method. This method accepts a `name` (String) and an optional hash of options.
 
 The `name` value will be used to retrieve the argument at the matching key `generator.options[name]`.
 
-The `options` hash (the second argument) accept multiples key/values:
+The options hash (the second argument) accepts multiple key-value pairs:
 
 - `desc` Description for the option
 - `type` Either Boolean, String or Number
@@ -84,11 +84,11 @@ The `options` hash (the second argument) accept multiples key/values:
 - `banner` String to show on usage notes
 - `hide` Boolean whether to hide from help
 
-## Outputting informations
+## Outputting Information
 
 Outputting information is handled by the `generator.log` module.
 
-The main method you'll use is simply `generator.log('Hey! Welcome to my awesome generator')`. It takes a string and output it to the user; basically it mimic `console.log()` when used inside a terminal. You can use it in this way:
+The main method you'll use is simply `generator.log` (e.g. `generator.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
 
 ```js
 module.exports = yeoman.generators.Base.extend({
