@@ -175,7 +175,7 @@ These commands can be used together with the yo binary for a seamless developmen
 
 ```sh
 $ yo webapp
-$grunt serve
-$grunt test
-$grunt
+$ grunt serve
+$ grunt test
+$ grunt
 ```
