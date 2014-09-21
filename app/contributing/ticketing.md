@@ -35,7 +35,7 @@ The first category checks if an issue is _actionnable_. It answer the question:
 We have 4 possible tags describing an issue life cycle:
 
 - `actionable`: This issue can be resolved right now by anyone. If an issue is actionable, just take it and [send a PR](/contributing/pull-request.html).
-- `to-organize`: The issue is either too large and should be broken down into smaller ones, or in need of an accepted solution/fix. An issue `to-organize` is a good place to discuss implementation details of a feature.
+- `to-split`: The issue is too large (in scope) and should be broken down into smaller actionnable parts. An issue `to-split` is a good place to discuss implementation details of a feature.
 - `to-discuss`: This mean the issue needs discussion and the Yeoman team needs to decide wether or not they want to add this feature to a project.
 - `to-confirm`: This tag is mainly used on `bug` type issues until someone can reproduce the issue. Make sure to add steps to reproduce each bug so the issue can be tagged as `actionable` right away.
 
