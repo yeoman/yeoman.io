@@ -145,7 +145,7 @@ $ grunt bower
 # Injects your Bower dependencies into your RequireJS configuration.
 
 # If you're not using RequireJS...
-$ grunt bowerInstall
+$ grunt wiredep
 # Injects your dependencies into your index.html file.
 ```
 
