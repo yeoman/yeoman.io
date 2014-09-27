@@ -162,7 +162,7 @@ Grunt is a task-based command-line tool for JavaScript projects. It can be used 
 
 ```sh
 # Preview an app you have generated (with Livereload).
-$ grunt serve
+$ grunt server
 
 # Run the unit tests for an app.
 $ grunt test
@@ -175,7 +175,7 @@ These commands can be used together with the yo binary for a seamless developmen
 
 ```sh
 $ yo webapp
-$ grunt serve
+$ grunt server
 $ grunt test
 $ grunt
 ```
