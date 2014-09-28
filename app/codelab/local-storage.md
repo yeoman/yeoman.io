@@ -144,10 +144,10 @@ And replace it with this:
 ```js
 var todosInStore = localStorageService.get('todos');
 
-$scope.todos = todosInStore && todosInStore.split('\n') || [];
+$scope.todos = todosInStore || [];
 
 $scope.$watch('todos', function () {
-  localStorageService.add('todos', $scope.todos.join('\n'));
+  localStorageService.set('todos', $scope.todos);
 }, true);
 ```
 
@@ -161,10 +161,10 @@ angular.module('mytodoApp')
 
     var todosInStore = localStorageService.get('todos');
 
-    $scope.todos = todosInStore && todosInStore.split('\n') || [];
+    $scope.todos = todosInStore || [];
 
     $scope.$watch('todos', function () {
-      localStorageService.add('todos', $scope.todos.join('\n'));
+      localStorageService.set('todos', $scope.todos);
     }, true);
 
     $scope.addTodo = function () {
