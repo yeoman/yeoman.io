@@ -22,7 +22,7 @@ When you run `grunt test`, you'll see some warnings in the Yeoman console. Donâ€
 
 ## Update Karma configuration
 
-First, we need to update the Karma configuration to load the the new Bower components we installed in the [Step 7](install-packages.html#install).
+First, we need to update the Karma configuration to load the new Bower components we installed in the [Step 7](install-packages.html#install).
 
 Open ***karma.conf.js***. Currently the `files` array looks like this:
 
