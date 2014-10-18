@@ -1,0 +1,168 @@
+<h1>Step 8: Test with Karma and Jasmine</h1>
+
+<p>For those unfamiliar with <a href="http://karma-runner.github.io">Karma</a>, it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: <a href="https://code.angularjs.org/1.2.16/docs/guide/e2e-testing">ngScenario</a> and <a href="http://jasmine.github.io/">Jasmine</a>. When we ran <code>yo angular</code> earlier in this codelab the generator scaffolded a <strong><em>test</em></strong> directory in the root of the <strong><em>mytodo</em></strong> folder, created a <strong><em>karma.conf.js</em></strong> file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.</p>
+
+<h2>Run unit tests</h2>
+
+<p>Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our <strong><em>Gruntfile.js</em></strong> for running tests. It can be run as follows:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>grunt <span class="nb">test</span>
+</code></pre></div>
+<p>When you run <code>grunt test</code>, you&#39;ll see some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let&#39;s fix that.</p>
+
+<h2>Update Karma configuration</h2>
+
+<p>First, we need to update the Karma configuration to load the new Bower components we installed in the <a href="install-packages.html#install">Step 7</a>.</p>
+
+<p>Open <strong><em>karma.conf.js</em></strong>. Currently the <code>files</code> array looks like this:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">files</span><span class="o">:</span> <span class="p">[</span>
+  <span class="s1">&#39;bower_components/angular/angular.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-mocks/angular-mocks.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-animate/angular-animate.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-cookies/angular-cookies.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-resource/angular-resource.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-route/angular-route.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-sanitize/angular-sanitize.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-touch/angular-touch.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;app/scripts/**/*.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;test/mock/**/*.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;test/spec/**/*.js&#39;</span>
+<span class="p">],</span>
+</code></pre></div>
+<p>Add:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js">  <span class="s1">&#39;bower_components/jquery/dist/jquery.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/jquery-ui/ui/jquery-ui.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-ui-sortable/sortable.js&#39;</span><span class="p">,</span>
+</code></pre></div>
+<p>So that the final <code>files</code> array looks like this:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">files</span><span class="o">:</span> <span class="p">[</span>
+  <span class="s1">&#39;bower_components/angular/angular.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-mocks/angular-mocks.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-animate/angular-animate.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-cookies/angular-cookies.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-resource/angular-resource.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-route/angular-route.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-sanitize/angular-sanitize.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-touch/angular-touch.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/jquery/dist/jquery.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/jquery-ui/ui/jquery-ui.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bower_components/angular-ui-sortable/sortable.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;app/scripts/**/*.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;test/mock/**/*.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;test/spec/**/*.js&#39;</span>
+<span class="p">],</span>
+</code></pre></div>
+<!--
+So remember that we previously changed app/scripts/controllers/main.js to load items from localStorage? To keep your head from exploding, let’s work with some static todo items to keep things simple for these unit tests.
+
+Replace the contents of main.js with the following:
+
+```js
+'use strict';
+
+angular.module('mytodoApp')
+  .controller('MainCtrl', function ($scope) {
+
+  $scope.todos = [];
+
+  $scope.addTodo = function () {
+    $scope.todos.push($scope.todo);
+    $scope.todo = '';
+  };
+
+  $scope.removeTodo = function (index) {
+    $scope.todos.splice(index, 1);
+  };
+});
+```
+-->
+
+<h2>Update unit tests</h2>
+
+<p>You’ll find unit tests scaffolded out in the <strong><em>test</em></strong> folder, so open up <strong>test/spec/controllers/main.js</strong>. This is the unit test for your Angular MainCtrl controller that we need to modify.</p>
+
+<p>Your boilerplate test still references <code>awesomeThings</code> so delete the following test:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should attach a list of awesomeThings to the scope&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">awesomeThings</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>And replace that test with the following:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have no items to start&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Open <strong><em>scripts/controllers/main.js</em></strong>.</p>
+
+<p>Remove the 3 items we added earlier from the <code>$scope.todos</code> declaration:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">$scope</span><span class="p">.</span><span class="nx">todos</span> <span class="o">=</span> <span class="p">[];</span>
+</code></pre></div>
+<p>Re-running our tests with <code>grunt test</code> should see our tests now passing:</p>
+
+<p><img src="/assets/img/codelab/image_33.png" alt=""></p>
+
+<h2>Add more unit tests</h2>
+
+<p>The above test only covers part of our app&#39;s functionality so let’s add a couple of more tests to test the adding and removing of items:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should add items to the list&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">scope</span><span class="p">.</span><span class="nx">todo</span> <span class="o">=</span> <span class="s1">&#39;Test 1&#39;</span><span class="p">;</span>
+  <span class="nx">scope</span><span class="p">.</span><span class="nx">addTodo</span><span class="p">();</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should add then remove an item from the list&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">scope</span><span class="p">.</span><span class="nx">todo</span> <span class="o">=</span> <span class="s1">&#39;Test 1&#39;</span><span class="p">;</span>
+  <span class="nx">scope</span><span class="p">.</span><span class="nx">addTodo</span><span class="p">();</span>
+  <span class="nx">scope</span><span class="p">.</span><span class="nx">removeTodo</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Your full MainCtrl test script (<em>test/spec/controllers/main.js</em>) should now look like this:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Controller: MainCtrl&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// load the controller&#39;s module</span>
+  <span class="nx">beforeEach</span><span class="p">(</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;mytodoApp&#39;</span><span class="p">));</span>
+
+  <span class="kd">var</span> <span class="nx">MainCtrl</span><span class="p">,</span>
+    <span class="nx">scope</span><span class="p">;</span>
+
+  <span class="c1">// Initialize the controller and a mock scope</span>
+  <span class="nx">beforeEach</span><span class="p">(</span><span class="nx">inject</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$controller</span><span class="p">,</span> <span class="nx">$rootScope</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">scope</span> <span class="o">=</span> <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">$new</span><span class="p">();</span>
+    <span class="nx">MainCtrl</span> <span class="o">=</span> <span class="nx">$controller</span><span class="p">(</span><span class="s1">&#39;MainCtrl&#39;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">$scope</span><span class="o">:</span> <span class="nx">scope</span>
+    <span class="p">});</span>
+  <span class="p">}));</span>
+
+  <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have no items to start&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should add items to the list&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">scope</span><span class="p">.</span><span class="nx">todo</span> <span class="o">=</span> <span class="s1">&#39;Test 1&#39;</span><span class="p">;</span>
+    <span class="nx">scope</span><span class="p">.</span><span class="nx">addTodo</span><span class="p">();</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should add then remove an item from the list&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">scope</span><span class="p">.</span><span class="nx">todo</span> <span class="o">=</span> <span class="s1">&#39;Test 1&#39;</span><span class="p">;</span>
+    <span class="nx">scope</span><span class="p">.</span><span class="nx">addTodo</span><span class="p">();</span>
+    <span class="nx">scope</span><span class="p">.</span><span class="nx">removeTodo</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">scope</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">});</span>
+
+<span class="p">});</span>
+</code></pre></div>
+<p>Running the tests again, we should see everything pass with 4 tests being executed:</p>
+
+<p><img src="/assets/img/codelab/image_34.png" alt=""></p>
+
+<p>Fantastic!</p>
+
+<p>Writing unit tests make it easier to catch bugs as your app gets bigger and when more developers join your team. The scaffolding feature of Yeoman makes writing unit tests easier so no excuse for not writing your own tests! ;)</p>
+
+<p class="codelab-paging">
+  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  or
+  <a href="prepare-production.html">Go to the next step &raquo;</a>
+</p>

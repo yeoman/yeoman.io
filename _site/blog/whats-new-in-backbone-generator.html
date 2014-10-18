@@ -1,0 +1,39 @@
+<p>The Backbone generator has had a few major updates recently and we wanted to share these changes with the community. The theme of the changes is to make the generator more flexible. There is also some updates related to testing and styling we wanted to share.</p>
+
+<h2>Custom app path</h2>
+
+<p>Before, the scaffold generated the project&#39;s application files into the app folder. Now you can customize it using the <code>--appPath</code> option.</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh">yo backbone --appPath<span class="o">=</span>public
+</code></pre></div>
+<p>This will create a folder named <code>public</code> instead of <code>app</code>. It will then put the scaffolded code into that folder.  When you use a sub-generator, like <code>backbone:model</code>, the scaffold will use the <code>public</code> directory.</p>
+
+<p><img src="/assets/img/blog/backbone-app-path.png" alt="app-path option"></p>
+
+<h2>Generating <a href="http://visionmedia.github.io/mocha/">Mocha</a> tests</h2>
+
+<p>We have written a new generator named <a href="https://github.com/revathskumar/generator-backbone-mocha">generator-backbone-mocha</a>. This will generate Mocha tests for your Backbone app. When you create new model with <code>yo backbone:model todo</code>, this will create <code>todo.spec.js</code> in your <code>test</code> folder.</p>
+
+<p><img src="/assets/img/blog/yo-backbone-mocha.png" alt="Backbone mocha"></p>
+
+<p>You can choose BDD/TDD when generating the new Backbone app with the <code>--ui</code> option.</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh">yo backbone --ui<span class="o">=</span>tdd
+</code></pre></div>
+<p>By default the generator is setup to use BDD with Mocha.</p>
+
+<h2>Added CoffeeScript support for RequireJS</h2>
+
+<p>Another great addition to the Backbone generator (version 2.0), is CoffeeScript support for RequireJS. A lot of people have requested this and we are happy to announce support for it. Thanks to <a href="https://github.com/stephanebachelier">@stephanebachelier</a> for the effort in getting this in.</p>
+
+<h2>Bootstrap 3.0</h2>
+
+<p>The last change we want to announce relates to Bootstrap. We have upgraded to Bootstrap 3.0! Now by default, Yeoman will install Bootstrap 3.0 when you generate a new application. Don&#39;t fear though, projects can include Bootstrap 2.0 still. After project  generation, edit the bower.json file and change the version of (sass-)bootstrap required.</p>
+
+<h2>Other minor updates</h2>
+
+<ul>
+<li>Dropped support for node 0.8</li>
+<li><code>grunt server</code> task is now deprecated. <code>grunt serve</code> has replaced it. For more information, see <a href="https://github.com/yeoman/yeoman/issues/1183">this issue explaining it</a></li>
+<li>Improved scaffolds</li>
+</ul>
+
+<p>We hope you like the new additions and enhancements we have made on the Backbone generator. We are looking for your feedback on keeping this project awesome.</p>

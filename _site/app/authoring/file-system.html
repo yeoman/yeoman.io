@@ -1,0 +1,46 @@
+<h2>Location contexts</h2>
+
+<p>Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are important as most file utility methods will act on file path relative to these contexts.</p>
+
+<p>The first context is the <em>destination context</em>. The destination is the folder in which yeoman will be scaffolding a new application.</p>
+
+<p>The destination context is defined as either the current working directory or the closest parent folder containing a <code>.yo-rc.json</code> file. The <code>.yo-rc.json</code> file define the root of a project, this allows the end user to run commands in subdirectories and have them work as expected.</p>
+
+<p>You can get the <em>destination path</em> using <code>generator.destinationRoot()</code>. And you can change it using <code>generator.destinationRoot(&#39;new/path&#39;)</code>.</p>
+
+<p>The second context is the <em>source context</em>. This is the folder in which you store your templates files. It is usually the folder from which you&#39;ll read.</p>
+
+<p>The source context is defined as <code>../templates</code> by default. You can get its value using <code>generator.sourceRoot()</code>, and you can change it using <code>generator.sourceRoot(&#39;new/path&#39;)</code>.</p>
+
+<h2>File utilities</h2>
+
+<p>Based on the two context described before, a Yeoman generator exposes two file utilities objects.</p>
+
+<ol>
+<li><code>this.dest</code> which is relative to <code>this.destinationRoot()</code></li>
+<li><code>this.src</code> which is relative to <code>this.sourceRoot()</code></li>
+</ol>
+
+<p>There&#39;s also a top level <code>file</code> property which is not linked to any path. You can require it this way: <code>var file = require(&#39;yeoman-generator&#39;).file</code>.</p>
+
+<p>These three objects are instances of <a href="https://github.com/SBoudrias/file-utils">File-utils module</a>, a <code>grunt.file</code> like standalone API. Refer to their documentation for a list of available methods.</p>
+
+<h3>Copying a file</h3>
+
+<p>To copy a file from your <code>templates/</code> folder to the destination folder:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="k">this</span><span class="p">.</span><span class="nx">src</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3>Reading a json file</h3>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="kd">var</span> <span class="nx">pkg</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dest</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h2>Legacy utilities</h2>
+
+<p>Yeoman also expose a set of legacy file utilities. You can refer to the <a href="http://yeoman.github.io/generator/">API documentation</a> to learn more about them. Some feature of the legacy system may still be missing from <a href="https://github.com/SBoudrias/file-utils">File-utils</a>, so feel free to rely on these methods when necessary.</p>
+
+<p>Our goal however is to eventually deprecate these legacy methods. If you find missing methods you need, then please consider sending a Pull Request to <a href="https://github.com/SBoudrias/file-utils">File-utils</a> and help us close the bridge between our legacy and our new system!</p>
+
+<h2>Writing existing files</h2>
+
+<p>Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( <a href="http://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax tree</a> ) and edit it. The issue here is that playing with AST is verbose and quite hard to grasp.</p>
+
+<p>To help simplify such a case, Yeoman provides some common helper methods. Refer to the <a href="http://yeoman.github.io/generator/wiring.html">API documentation</a> for the list of available methods.</p>

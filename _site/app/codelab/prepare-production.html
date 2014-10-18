@@ -1,0 +1,44 @@
+<h1>Step 9: Get ready for production</h1>
+
+<p>Ready to show your beautiful todo app to the world? Let’s try to build a production-ready version of it which we can ship.</p>
+
+<div class="mast-holder">
+  <img src="/assets/img/yeoman-009.png">
+</div>
+
+<h2>Optimize files for production</h2>
+
+<p>To create a production version of our application, we’ll want to:</p>
+
+<ul>
+<li>lint our code,</li>
+<li>run our tests,</li>
+<li>concatenate and minify our scripts and styles to save on those network requests,</li>
+<li>optimize images if we were using any,</li>
+<li>compile the output of any preprocessors we’re using, and</li>
+<li>generally make our application really lean.</li>
+</ul>
+
+<p>Phew! Amazingly we can achieve all of this just by running:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>grunt
+</code></pre></div>
+<p>This command will go through the Grunt tasks and configuration Yeoman has set up for you in <em>Gruntfile.js</em> and create a version of your app we can ship. Give it a minute and you should be presented with a completed build and a report of how long the build took to complete and where time was spent:</p>
+
+<p><img src="/assets/img/codelab/image_35.png" alt=""></p>
+
+<p>Your lean, production-ready application is now available in a <strong><em>dist</em></strong> folder in the root of your <strong><em>mytodo</em></strong> project. These are the files that you can put on your server using FTP or any other deployment service.</p>
+
+<h2>Build and preview the production-ready app</h2>
+
+<p>Want to preview your production app locally? That’s just another simple grunt command:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>grunt serve:dist
+</code></pre></div>
+<p>It will build your project and launch a local web server. Yo Hero!</p>
+
+<p><img src="/assets/img/codelab/image_36.png" alt=""></p>
+
+<p class="codelab-paging">
+  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  or
+  <a href="local-storage.html">Go to the next step &raquo;</a>
+</p>

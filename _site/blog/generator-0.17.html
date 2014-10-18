@@ -1,0 +1,45 @@
+<p>Allo&#39; allo&#39; here&#39;s <a href="https://github.com/SBoudrias">Simon</a> for the Yeoman team.</p>
+
+<p>After about a month without release of the core system, we&#39;re really happy to announce <a href="https://github.com/yeoman/generator/releases/tag/v0.17.0-pre.1">yeoman-generator version 0.17.0-pre</a>. Our release cycle have been delayed because this is a fairly big release!</p>
+
+<p>First of all, we published <code>0.17.0-pre</code> on NPM as a pre-release. Make sure to install it with <code>npm install yeoman-generator --tag pre</code>.</p>
+
+<p>Follow through for an overview of the major changes.</p>
+
+<h2>Composability</h2>
+
+<p>As stated on our <a href="https://github.com/yeoman/yeoman/issues/1264">2014 roadmap</a>, composability is our next major core feature.</p>
+
+<p>Composability will allow us to write smaller base generators for common needs, and enable generator authors to build higher-level generators which reuse them. That&#39;ll make for more centralized works and improvements. For example, we&#39;ll only need a single CSS or Bootstrap generator. Every other generator will be able to concentrate on their domain problems and rely on base generators to handle the rest.</p>
+
+<p>With 0.17, we bring two major improvements to ease composability issues: a run loop and the <code>composeWith</code> method.</p>
+
+<h3>Run loop</h3>
+
+<p>With Yeoman each methods on a generator&#39;s prototype is a task and run in a synchronous serie. In the current state, a generator will run all its methods; and then call another generator who&#39;ll only run then.</p>
+
+<p>To allow generators to really run side by side, we needed to allow them to run together instead of one after the other.</p>
+
+<p>To make this happen, we implemented a run loop that registers task with particular priorities. Higher priorities will run first, and lower priorities would run at the end.</p>
+
+<p>You can read the full documentation about the run loop inside our <a href="https://github.com/yeoman/yeoman.io/blob/master/app/authoring/running-context.md#the-run-loop">new documentation</a>. This documentation is still WIP and will be released with 0.17.0 complete.</p>
+
+<h3><code>composeWith()</code></h3>
+
+<p>This new method is almost like the previous <code>invoke</code> method. The only difference being it&#39;ll add the composed generator to the run loop.</p>
+
+<p>You can read more about <code>composeWith</code> <a href="https://github.com/yeoman/yeoman.io/blob/master/app/authoring/composability.md">in our new documentation</a>.</p>
+
+<h2>Enjoy testing your Generators</h2>
+
+<p>Unit testing a generator can be daunting. To ease the pain, this release include new tests helpers. These helpers creates a RunContext object who take care of setting and running a generator for you.</p>
+
+<p><a href="https://github.com/yeoman/yeoman.io/blob/master/app/authoring/testing.md">Read the documentation</a> to learn more about it!</p>
+
+<h2>And then?</h2>
+
+<p>As you can see, this is a pretty major release. The run loop is not exactly a breaking change, but it could cause issues if name &quot;conflict&quot; with a priority.</p>
+
+<p>We launch this pre-release to allow you to test it and bring as much feedback as we can before carving 0.17 features into stone. Please update your generators and tell us how it&#39;s been!</p>
+
+<p>Until next time!</p>

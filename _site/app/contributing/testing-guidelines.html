@@ -1,0 +1,76 @@
+<p>This testing guide is based on Mocha BDD interface (<code>describe</code> / <code>it</code>).</p>
+
+<h2>Main principles</h2>
+
+<h4>Tests must be always start with a clean state</h4>
+
+<p>This means prefer <code>beforeEach</code> to <code>before</code>. Re-instantiate objects before running each <code>it</code> blocks. Create every files required by a test in a <code>beforeEach</code> (or commit them in <code>fixtures/</code>). Reset any side effets done on the test environment after each test.</p>
+
+<h4>Tests must be runnable in isolation</h4>
+
+<p>Each test must pass if they&#39;re ran alone. You can run a single test by using <code>mocha test.js --grep &#39;test name&#39;</code>.</p>
+
+<h4>Stub most performance heavy operation</h4>
+
+<p>When possible, always stub networks or other long operations.</p>
+
+<p>We use <a href="http://sinonjs.org/">sinon.js</a> for most stubbing needs.</p>
+
+<h2>Naming convention</h2>
+
+<p><code>describe</code> blocks should cover three types of information: Object to be tested, method/property, circumstantial group (basically, &quot;when <em>this</em>&quot;).</p>
+
+<p><code>it</code> blocks cover assertions. They should use as few lines of code as possible. There should be as many <code>it</code> block as there is assertion on a method effect.</p>
+
+<p>Instances methods and property should be prefixed by a bang sign (<code>#find()</code>). Static methods and property should be prefixed by a dot (<code>.exclude()</code>).</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="c1">// Given this object</span>
+<span class="kd">function</span> <span class="nx">Class</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">args</span> <span class="o">=</span> <span class="nx">nopt</span><span class="p">();</span>
+<span class="p">};</span>
+<span class="nx">Class</span><span class="p">.</span><span class="nx">exclude</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
+<span class="nx">Class</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Yeoman&#39;</span><span class="p">;</span>
+<span class="nx">Class</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">find</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
+
+<span class="c1">// We&#39;d had this test structure</span>
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;.exclude()&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;.name&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;#find()&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;#args&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Methods should end using parentheses, but should not include expected parameters (parameters should be cover in documentation comments).</p>
+
+<p><code>it</code> blocks should be declarative.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="c1">// BAD</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should find generators&#39;</span><span class="p">);</span>
+
+<span class="c1">// GOOD</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;find generators&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h2>Assertion</h2>
+
+<p>Don&#39;t add <code>message</code> to assertions unless the error thrown makes it unclear what failed.</p>
+
+<p>If you must add a message, then describe the expected outcome and why it failed. For example:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="c1">// BAD</span>
+<span class="nx">assert</span><span class="p">(</span><span class="nx">Generator</span><span class="p">.</span><span class="nx">appname</span><span class="p">,</span> <span class="s1">&#39;Generator have an `appname` property&#39;</span><span class="p">);</span>
+
+<span class="c1">// GOOD</span>
+<span class="nx">assert</span><span class="p">(</span><span class="nx">Generator</span><span class="p">.</span><span class="nx">appname</span><span class="p">,</span> <span class="s1">&#39;Expected Generator to have an `appname` property&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>Remember that these message are the error message thrown with the failure. Let those be useful in these occasions.</p>
+
+<h2>Stylistic preferences</h2>
+
+<h4><code>.bind()</code> throwing assertions</h4>
+
+<p>When testing that a method throw with invalid parameters, prefer binding the parameters to creating an anonymous function.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="c1">// BAD</span>
+<span class="nx">assert</span><span class="p">.</span><span class="kr">throws</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kr">class</span><span class="p">.</span><span class="nx">method</span><span class="p">(</span><span class="s1">&#39;Invalid param&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// GOOD</span>
+<span class="nx">assert</span><span class="p">.</span><span class="kr">throws</span><span class="p">(</span><span class="kr">class</span><span class="p">.</span><span class="nx">method</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kr">class</span><span class="p">,</span> <span class="s1">&#39;Invalid param&#39;</span><span class="p">));</span>
+</code></pre></div>

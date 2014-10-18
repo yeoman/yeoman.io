@@ -1,0 +1,133 @@
+<h1>Step 7: Use Bower to install packages</h1>
+
+<div class="mast-holder">
+  <img src="/assets/img/yeoman-005.png">
+</div>
+
+<p>Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the <a href="https://github.com/angular-ui/ui-sortable">AngularUI Sortable module</a>, a directive component for AngularJS.</p>
+
+<h2>List current packages</h2>
+
+<p>We can check what packages we have already installed by running this command from within the myTodo project directory created earlier:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>bower list
+</code></pre></div>
+<p><img src="/assets/img/codelab/image_22.png" alt=""></p>
+
+<p>You should see that you already have packages for angular-cookies, angular-resources, angular-route, plus others. Remember how we selected these as part of <a href="scaffold-app.html#configure">Step 3</a> when we configured our generator?</p>
+
+<h2>Search for packages</h2>
+
+<p>To verify that there are AngularUI packages available, use Bower to search for &quot;angular-ui-sortable&quot;:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>bower search angular-ui-sortable
+</code></pre></div>
+<p>There is one result for &quot;angular-ui-sortable&quot; so let’s install it along with <a href="http://jqueryui.com/">jQuery UI</a> as we already have jQuery installed. To save you from searching, the package name for jQuery UI is &quot;jquery-ui&quot;.</p>
+
+<h2 id="install">Install packages</h2>
+
+<p>Use Bower to install both &quot;angular-ui-sortable&quot; and &quot;jquery-ui&quot;:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>bower install --save angular-ui-sortable
+<span class="nv">$ </span>bower install --save jquery-ui
+</code></pre></div>
+<p>The <code>--save</code> option updates the <strong><em>bower.json</em></strong> file with dependencies on angular-ui-sortable and jquery-ui. This will save you from having to manually add it to <em>bower.json</em> yourself.</p>
+
+<div class="note tip">
+
+  <h2>Install multiple Bower packages at once</h2>
+
+  <p>If you have multiple packages that you want to install, you can do it in one line:</p>
+
+<pre>
+$ bower install --save angular-ui-sortable jquery-ui
+</pre>
+
+</div>
+
+<p><img src="/assets/img/codelab/image_24.png" alt=""></p>
+
+<h2>Confirm installation</h2>
+
+<p>Take a look at your <strong><em>bower_components</em></strong> directory just to check that everything is there as expected. You should see folders for &quot;jquery-ui&quot; and &quot;angular-ui-sortable&quot; alongside the previously installed angular packages:</p>
+
+<p><img src="/assets/img/codelab/image_25.png" alt=""></p>
+
+<h2 id="implement">Make todos sortable</h2>
+
+<p>References to these newly installed dependencies must be added to our <em>index.html</em> file. You <em>could</em> manually add the AngularUI Sortable module and jQueryUI script files yourself but Yeoman will automate this for you!</p>
+
+<p>Quit your current command line process by using the <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> keyboard command.</p>
+
+<p>Then run <code>grunt serve</code> again.</p>
+
+<p>You&#39;ll see that the <code>script</code> section at the bottom of <em>index.html</em> has automatically updated to include <code>jquery-ui/ui/jquery-ui.js</code> and <code>angular-ui-sortable/sortable.js</code>:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="c">&lt;!-- build:js scripts/vendor.js --&gt;</span>
+<span class="c">&lt;!-- bower:js --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/jquery/dist/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular/angular.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/bootstrap/dist/js/bootstrap.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-resource/angular-resource.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-cookies/angular-cookies.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-sanitize/angular-sanitize.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-animate/angular-animate.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-touch/angular-touch.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-route/angular-route.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/jquery-ui/ui/jquery-ui.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular-ui-sortable/sortable.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!-- endbower --&gt;</span>
+<span class="c">&lt;!-- endbuild --&gt;</span>
+</code></pre></div>
+<p>In order to use the Sortable module, we must load it into our application by updating our Angular module definitions in <em>scripts/app.js</em>. Currently it looks like this:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">angular</span>
+  <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;mytodoApp&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s1">&#39;ngAnimate&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngCookies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngResource&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngRoute&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngSanitize&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngTouch&#39;</span>
+  <span class="p">])</span>
+</code></pre></div>
+<p>Add the <code>ui.sortable</code> dependency to the array list in the second parameter after <code>&#39;ngTouch&#39;</code>:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">angular</span>
+  <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;mytodoApp&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s1">&#39;ngAnimate&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngCookies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngResource&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngRoute&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngSanitize&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngTouch&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ui.sortable&#39;</span>
+  <span class="p">])</span>
+</code></pre></div>
+<p>Finally, we need to add the <code>ui-sortable</code> directive as a <code>div</code> wrapper around our <code>ng-repeat</code> in <em>main.html</em>:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="c">&lt;!-- Todos list --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">ui-sortable</span> <span class="na">ng-model=</span><span class="s">&quot;todos&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span> <span class="na">ng-repeat=</span><span class="s">&quot;todo in todos&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Let&#39;s also add some inline css in order to show a move cursor so it’s clear that we can move todo items:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span> <span class="na">ng-repeat=</span><span class="s">&quot;todo in todos&quot;</span> <span class="na">style=</span><span class="s">&quot;padding:5px 10px; cursor: move;&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>The full todo list markup looks like this now:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="c">&lt;!-- Todos list --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">ui-sortable</span> <span class="na">ng-model=</span><span class="s">&quot;todos&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span> <span class="na">ng-repeat=</span><span class="s">&quot;todo in todos&quot;</span> <span class="na">style=</span><span class="s">&quot;padding:5px 10px; cursor: move;&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;todo&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-danger&quot;</span> <span class="na">ng-click=</span><span class="s">&quot;removeTodo($index)&quot;</span> <span class="na">aria-label=</span><span class="s">&quot;Remove&quot;</span><span class="nt">&gt;</span>X<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>Back in the browser, we can now re-order our list:</p>
+
+<div class="side-by-side">
+  <img src="/assets/img/codelab/image_26.png">
+  <img src="/assets/img/codelab/image_27.png">
+</div>
+
+<p>Pat yourself on the back! You just used Yeoman to build a snazzy todo app in no time. Can you imagine doing front-end web development in any other way now?</p>
+
+<p class="codelab-paging">
+  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  or
+  <a href="write-unit-tests.html">Go to the next step &raquo;</a>
+</p>
