@@ -5,20 +5,35 @@ title: Frequently Asked Questions
 sidebar: sidebars/learning.html
 ---
 [What are the goals of the project?](#project-goals)
+
 [What is a command-line interface?](#what-is-CLI)
+
 [What is a package manager?](#what-is-pkg-manager)
+
 [How does Yeoman differ from Grunt?](#yeoman-vs-grunt)
+
 [How does Yeoman differ from tools like Brunch or Ember-cli](#yeoman-vs-Ember-Brunch)
+
 [How do I register or unregister a package on Bower?](#register-unregister-pkg)
+
 [Will the Yeoman project be providing Generators for popular frameworks?</a>](#frameworks-generators)
+
 [What license is Yeoman released under?</a>](#license)
+
 [What should I do before submitting an issue through GitHub?</a>](#submit-issue)
+
 [`npm` appears to have installed Yeoman but `yo` still gives me "command not found".</a>](#yo-command-not-found)
+
 [I'm getting `EMFILE, too many open files`</a>](#too-many-files)
+
 [What should I use for documenting my app?</a>](#documenting-app)
+
 [How can I disable Insight or Update Notifier?</a>](#disable-notifier)
+
 [Can I use livereloading with a custom webserver?</a>](#livereloading)
+
 [What should I do after cloning a web application generated with Yeoman?</a>](#cloning)
+
 
 ### <a name="project-goals"> What are the goals of the project?</a>
 
