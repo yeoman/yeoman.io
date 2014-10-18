@@ -1,0 +1,75 @@
+<p>One of the most important concepts to grasp when writing a Generator is how methods are run and in which context.</p>
+
+<h2>Prototype methods as actions</h2>
+
+<p>Each method directly attached to a Generator prototype is considered to be an action. Each action is run in sequence by the Yeoman environment run loop.</p>
+
+<p>In other words, each method returned by <code>Object.getPrototypeOf(Generator)</code> will be automatically run.</p>
+
+<h3>Helper and private methods</h3>
+
+<p>Now that you know the prototype methods are considered as action, you may wonder how to define helper or private methods that won&#39;t be called automatically. There&#39;s three different methods to achieve this.</p>
+
+<ol>
+<li>Prefix method name by an underscore (e.g. <code>_method</code>).</li>
+<li><p>Use instance methods:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">helperMethod</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;won\&#39;t be called automatically&#39;</span><span class="p">);</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></li>
+<li><p>Extend a parent generator</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="kd">var</span> <span class="nx">MyBase</span> <span class="o">=</span> <span class="nx">yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">helper</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;won\&#39;t be called automatically&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">MyBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">exec</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">helper</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></li>
+</ol>
+
+<h2>The run loop</h2>
+
+<p>Running methods sequentially is alright if there&#39;s a single generator. But it is not enough once you start composing generators together.</p>
+
+<p>That&#39;s why Yeoman uses a run loop internally.</p>
+
+<p>The run loop is a queue system with priority support. We use the <a href="https://github.com/SBoudrias/grouped-queue">Grouped-queue</a> module to handle the run loop.</p>
+
+<p>Priorities are defined in your code as special prototype method name. When a method name is also a priority name, the run loop pushes the method into this special queue. If the method name doesn&#39;t match a priority, it is pushed in the <code>default</code> group.</p>
+
+<p>In code, it will look this way:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">priorityName</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>You can also group multiple methods to be run together in a queue by using a hash instead of a single method:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">priorityName</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">method2</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The available priorities are (in order):</p>
+
+<ol>
+<li><code>initializing</code> - Your initialization methods (checking current project state, getting configs, etc)</li>
+<li><code>prompting</code> - Where you prompt users for options (where you&#39;d call <code>this.prompt()</code>)</li>
+<li><code>configuring</code> - Saving configurations and configure the project (creating <code>.editorconfig</code> files and other metadata files)</li>
+<li><code>default</code></li>
+<li><code>writing</code> - Where you write the generator specific files (routes, controllers, etc)</li>
+<li><code>conflicts</code> - Where conflicts are handled (used internally)</li>
+<li><code>install</code> - Where installation are run (npm, bower)</li>
+<li><code>end</code> - Called last, cleanup, say <em>good bye</em>, etc</li>
+</ol>
+
+<p>Follow these priorities guidelines and your generator will play nice with others.</p>

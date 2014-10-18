@@ -1,0 +1,44 @@
+<h2>First step</h2>
+
+<p>The first step should always be to run <code>yo doctor</code>. This command will troubleshoot your environment and find most installation/configuration error.</p>
+
+<h2>Getting Support</h2>
+
+<p>Yeoman provides an optimized <strong>scaffolding</strong> and workflow experience for creating compelling web applications. Developers use Yeoman together with Grunt, for <strong>building</strong> their projects and Bower for <strong>package management</strong>. A typical workflow between this trinity of tools might look like:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>yo webapp
+<span class="nv">$ </span>yo angular
+<span class="nv">$ </span>bower install angular-directives
+<span class="nv">$ </span>grunt
+</code></pre></div>
+<h3>Binary issues</h3>
+
+<p>For issues with the Yeoman binary, such as being unable to run Yeoman at all you should submit a bug ticket to the <a href="https://github.com/yeoman/yeoman/issues">Yeoman issue tracker</a> for further help.</p>
+
+<h3>Scaffold issues</h3>
+
+<p>Our scaffolds (such as angular above) are community-driven, with several of our default ones living under the <a href="https://github.com/yeoman">Yeoman organization</a> on GitHub. These are maintained by developers in the community around a particular framework. Issue trackers for some of our popular generators can be found below</p>
+
+<ul>
+<li><a href="https://github.com/yeoman/generator-webapp">WebApp</a></li>
+<li><a href="https://github.com/yeoman/generator-angular">AngularJS</a></li>
+<li><a href="https://github.com/yeoman/generator-backbone">Backbone</a></li>
+<li><a href="https://github.com/yeoman/generator-chromeapp">Chrome App</a></li>
+<li><a href="https://github.com/yeoman/generator-ember">Ember</a></li>
+</ul>
+
+<h3>Build issues</h3>
+
+<p>As we recommend using Grunt for building your projects, the <a href="https://github.com/gruntjs/grunt/issues">Grunt issue tracker</a> should be used for support issues around building projects. Keep in mind however that if you have an issue with a specific task (e.g CoffeeScript compilation) it probably makes more sense to submit a bug report to <a href="https://github.com/gruntjs/grunt-contrib">grunt-contrib</a> to address this as the official Grunt tracker should not be used for such issues.</p>
+
+<p>Issue trackers for some of the common tasks used in the Yeoman workflow can be found below:</p>
+
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-coffee/">coffee</a></li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-compress/">compress</a></li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-handlebars/">handlebars</a></li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-requirejs/">requirejs</a></li>
+</ul>
+
+<h3>Package management issues</h3>
+
+<p>If you have installed a package using Bower, updated a package or are experiencing issues managing packages, the <a href="https://github.com/twitter/bower">Bower issue tracker</a> should be used for submitting bug reports. The Yeoman workflow typically relies on Grunt for minification/concat of such dependencies, however we will let you know if an issue submitted is a Bower issue or a Yeoman issue.</p>

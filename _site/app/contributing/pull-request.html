@@ -1,0 +1,41 @@
+<p>Pull Request (<em>PR</em>) is the step where you submit patches to one of our repository. To prevent any frustration, you should make sure to <strong>open an issue to discuss any new features</strong> before working on it. This will prevent you wasting time on a feature the core team doesn&#39;t see fit for the project scope and goals.</p>
+
+<p>Once you&#39;ve worked on a feature or a bug, it is then time to send a PR. Make sure to follow these steps along the way to make sure your patch land as soon as possible!</p>
+
+<h2>Only touch relevant files</h2>
+
+<p>Make sure your PR stay focused on a single features. Don&#39;t change project configs or any unrelevant files to the subject you&#39;re working. Open a single PR for each subjects.</p>
+
+<h2>Make sure your code is clean</h2>
+
+<p>Checkout the project <a href="/contributing/style-guide.html">style guide</a>, make sure your code is conform and clean. Remove any debugging lines (<code>debuggers</code>, <code>console.log</code>).</p>
+
+<h2>Make sure you unit tested your changes</h2>
+
+<p>Adding a feature? Make sure you add unit tests to support it.</p>
+
+<p>Fixing a bug? Make sure you added a test reproducing the issue.</p>
+
+<h2>Make sure tests passes</h2>
+
+<p>All our projects units tests can be run by typing <code>npm test</code> at the root of the project. You may need to install dependencies like <code>mocha</code>, <code>grunt</code> or <code>gulp</code>.</p>
+
+<h2>Keep your commit history short and clean</h2>
+
+<p>In a large project, it is very important to keep the git history clean and tidy. This help to find bug causes and finding the best fixes.</p>
+
+<p>Keeping history clean means making one commit per feature. It also means to squash every fixes you make on your branch after team review.</p>
+
+<p>Wondering why it matters to keep history clean? Read this <a href="http://blog.izs.me/post/37650663670/git-rebase">article from Isaac Schlueter (ex Node.js Lead)</a>. Remember <em>Git is an editor</em>.</p>
+
+<h2>Be descriptive</h2>
+
+<p>Write a convincing description of your PR and why we should land it.</p>
+
+<h2>Hang on during code review</h2>
+
+<p>It is important for us to keep the core code clean and consistent. This mean we&#39;re pretty hard on code review!</p>
+
+<p>Code reviews are the best way to improve ourselves as engineers. Don&#39;t take the reviews personnal, they&#39;re there to keep Yeoman clean and improve ourselves.</p>
+
+<p>Read more about <a href="http://blog.codinghorror.com/code-reviews-just-do-it/">code review around here</a>.</p>

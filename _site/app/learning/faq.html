@@ -1,0 +1,127 @@
+<p><a href="#project-goals">What are the goals of the project?</a>
+<a href="#what-is-CLI">What is a command-line interface?</a>
+<a href="#what-is-pkg-manager">What is a package manager?</a>
+<a href="#yeoman-vs-grunt">How does Yeoman differ from Grunt?</a>
+<a href="#yeoman-vs-Ember-Brunch">How does Yeoman differ from tools like Brunch or Ember-cli</a>
+<a href="#register-unregister-pkg">How do I register or unregister a package on Bower?</a>
+<a href="#frameworks-generators">Will the Yeoman project be providing Generators for popular frameworks?</a></a>
+<a href="#license">What license is Yeoman released under?</a></a>
+<a href="#submit-issue">What should I do before submitting an issue through GitHub?</a></a>
+<a href="#yo-command-not-found"><code>npm</code> appears to have installed Yeoman but <code>yo</code> still gives me &quot;command not found&quot;.</a></a>
+<a href="#too-many-files">I&#39;m getting <code>EMFILE, too many open files</code></a></a>
+<a href="#documenting-app">What should I use for documenting my app?</a></a>
+<a href="#disable-notifier">How can I disable Insight or Update Notifier?</a></a>
+<a href="#livereloading">Can I use livereloading with a custom webserver?</a></a>
+<a href="#cloning">What should I do after cloning a web application generated with Yeoman?</a></a></p>
+
+<h3><a name="project-goals"> What are the goals of the project?</a></h3>
+
+<p>The short-term goals for Yeoman are to provide developers with an improved tooling workflow so that they can spend less time on process and more time focusing on building beautiful web applications. Initially, we hope to make it as easy as possible to work with existing frameworks and tools developers are used to using.</p>
+
+<p>Long-term, the project may also assist developers with creating applications using modern technologies such as Web Components.</p>
+
+<h3><a name="what-is-CLI"> What is a command-line interface?</a></h3>
+
+<p>A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal. On Windows, we use the command shell (<code>cmd.exe</code>) or PowerShell.</p>
+
+<h3><a name="what-is-pkg-manager"> What is a package manager?</a></h3>
+
+<p>A package manager is a tool for automating the process of installing, upgrading, configuring and managing dependencies for projects. Good examples of package manager would be npm (Node.js), Bower (Web), Pypi (Python), Gem (Ruby), Composer (PHP), NuGet (.NET), etc.</p>
+
+<h3><a name="yeoman-vs-grunt"> How does Yeoman differ from Grunt?</a></h3>
+
+<p>Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily. <a href="http://gruntjs.com">Grunt.js</a> is one of these tools and powers our underlying build process and task plugin architecture.</p>
+
+<p>On top of this architecture, we&#39;ve highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js out of the box. With additional features like wiring, an improved <code>serve</code> and <code>init</code>.</p>
+
+<p>Developers are free to customize any Grunt tasks configured by Yeoman.</p>
+
+<h3><a name="yeoman-vs-Ember-Brunch"> How does Yeoman differ from tools like Brunch or Ember-cli?</a></h3>
+
+<p>We love tools like Brunch and Ember-cli and feel that they offer a great solution for developers wishing to scaffold with frameworks like Backbone.js and Ember. With the Yeoman generator system, as we&#39;ve ported over the Rails Generator system to work with Node, we feel we have an interesting opportunity to take application scaffolding in a new direction - one where it&#39;s easier for any developer to write scaffolds, support multiple testing frameworks, capture their own boilerplates and easily re-use them and so on.</p>
+
+<h3><a name="register-unregister-pkg"> How do I register or unregister a package on Bower?</a></h3>
+
+<p>Packages can be registered on Bower using the <code>register</code> command. e.g <code>bower register myawesomepackagename git://github.com/youraccount/yourrepo</code>. We recommend reading the Bower <a href="http://bower.io">documentation</a> before doing this to ensure that your repo includes the necessary files to supporting being <code>install</code>ed.</p>
+
+<h3><a name="frameworks-generators"> Will the Yeoman project be providing Generators for popular frameworks?</a></h3>
+
+<p>Our goal is to facilitate both developers and the community with the tools needed to create rich web applications easily. With that goal in mind, we&#39;ll be providing a great API (and docs) to our Generators system with examples of how to implement samples, but will rely on the community to create and maintain Generators for popular frameworks. This will allow us to focus on making Yeoman better without the distractions of maintaining a large number of Generators.</p>
+
+<p>You can see the full <a href="https://github.com/yeoman?query=generator-">list of officially supported generators</a> on Github.</p>
+
+<h3><a name="license"> What license is Yeoman released under?</a></h3>
+
+<p>Yeoman is released under a <a href="http://opensource.org/licenses/bsd-license.php/">BSD</a> license.</p>
+
+<h3><a name="submit-issue"> What should I do before submitting an issue through GitHub?</a></h3>
+
+<p>Make sure you read the <a href="/contributing/opening-issues.html">Submitting an issue guide</a>.</p>
+
+<h3><a name="yo-command-not-found"> <code>npm</code> appears to have installed Yeoman but <code>yo</code> still gives me &quot;command not found&quot;.</a></h3>
+
+<p>It&#39;s likely your PATH does not account for global NPM modules just yet. Better documentation forthcoming but until then, read <a href="https://github.com/yeoman/yeoman/issues/466#issuecomment-8602733">this comment</a> and <a href="https://github.com/yeoman/yeoman/issues/430#issuecomment-8597663">this thread</a>.</p>
+
+<p>This usually happens when you install Node through Homebrew, since it puts Node modules in a directory that&#39;s not in your PATH.</p>
+
+<p>From Homebrew:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">==&gt; Caveats
+Homebrew installed npm.
+We recommend prepending the following path to your PATH environment
+variable to have npm-installed binaries picked up:
+  /usr/local/share/npm/bin
+</code></pre></div>
+<p>Quick fix for advanced users is to put the following in your <code>.bashrc</code> file:
+<code>export PATH=/usr/local/share/npm/bin:$PATH</code></p>
+
+<p>For beginners <code>brew uninstall node</code> and download and install Node from their <a href="http://nodejs.org">website</a>.</p>
+
+<h3><a name="too-many-files"> I&#39;m getting <code>EMFILE, too many open files</code></a></h3>
+
+<p>EMFILE mean you&#39;ve reached the OS limit of concurrently open files. There aren&#39;t much we can do about it, however you can increase the limit yourself.</p>
+
+<p>Add <code>ulimit -n [number of files]</code> to your .bashrc/.zshrc file to increase the soft limit.</p>
+
+<p>If you reach the OS hard limit, you can follow this <a href="http://stackoverflow.com/a/34645/64949">StackOverflow answer</a> to increase it.</p>
+
+<h3><a name="documenting-app"> What should I use for documenting my app</a></h3>
+
+<p>View the details within <a href="https://github.com/yeoman/yeoman/issues/152#issuecomment-7081670">#152 ticket for recommended solutions for documentation generation</a></p>
+
+<h3><a name="disable-notifier"> How can I disable Insight or Update Notifier?</a></h3>
+
+<p>You can use use a command line flag to disable them. Eg. <code>yo webapp --no-insight</code></p>
+
+<p>Insight: <code>--no-insight</code><br>
+Update Notifier: <code>--no-update-notifier</code></p>
+
+<p>You can also add <code>yeoman_test</code> as an environment variable with any value to permanently disable both.</p>
+
+<h3><a name="livereloading"> Can I use livereloading with a custom webserver?</a></h3>
+
+<p>You bet! You can remove the <code>connect</code> task from your Gruntfile and manually insert this snippet into your HTML:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="c">&lt;!-- livereload script --&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&quot;http://&#39;</span>
+ <span class="o">+</span> <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span> <span class="o">||</span> <span class="s1">&#39;localhost&#39;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+ <span class="o">+</span> <span class="s1">&#39;:35729/livereload.js?snipver=1&quot; type=&quot;text/javascript&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>After that, simply run <code>grunt serve</code> like you normally would and enjoy automatic page refreshes.</p>
+
+<h3><a name="cloning"> What should I do after cloning a web application generated with Yeoman?</a></h3>
+
+<p>Yeoman creates a <code>.gitignore</code> file for you. This file adds <code>node_modules</code> and <code>bower_components</code> folders to the blacklist. So, to run <code>grunt serve</code> and download the Javascript dependencies listed in the <code>bower.json</code> file, you need to run both:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh">npm install
+bower install
+</code></pre></div>
+<p>And check if these folders are created correctly.</p>
+
+<h3>What can I do if <em>npm install -g yo</em> fails on OS X with <em>sh: node: command not found</em> ?</h3>
+
+<p>Try</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh">sudo chmod a+rx /usr/local/bin /usr/local/bin/node
+</code></pre></div>
+<p>Authenticate and run it again.
+Explanation: NPM runs the installation as <em>nobody</em> which may cause the installation to fail in a way that seems as if <em>node</em> was not found if the binary cannot be accessed.</p>
+
+<p><img src="/assets/img/yeoman-009.png" class="character"></p>

@@ -1,0 +1,49 @@
+<p>Writing to a file is usually a simple task: prepare a string and write it to an output file using the <a href="/authoring/file-system.html">file system api</a>. However, issues arise when different, (hopefully <a href="/authoring/composability.html">composable</a>) generators must write to the same file. A conflict prompt often appears on each write action. This does not make for a good end user experience.</p>
+
+<p>This is why Yeoman is wrapping the most commonly edited file, the <code>Gruntfile.js</code>, behind a façade. Introducing, the Yeoman Gruntfile editor API.</p>
+
+<h2>The Gruntfile editor API</h2>
+
+<p>Inside of a generator context, a new object, the <code>this.gruntfile</code> object, is now accessible. This object is a <code>GruntfileEditor</code> instance provided by the <a href="https://github.com/SBoudrias/gruntfile-editor">gruntfile-editor</a> module.</p>
+
+<p>As a quick example, you&#39;d use it this way:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">writing</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gruntfile</span><span class="p">.</span><span class="nx">insertConfig</span><span class="p">(</span><span class="s2">&quot;compass&quot;</span><span class="p">,</span> <span class="s2">&quot;{ watch: { watch: true } }&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Yeoman loads the current project&#39;s <code>Gruntfile.js</code> (or a default template), and writes the file to disk at the end of the generation process. Insert a config block and Yeoman will take care of everything else in the file.</p>
+
+<h2>Gruntfile editor methods</h2>
+
+<p>Please refer to the <a href="https://github.com/SBoudrias/gruntfile-editor">gruntfile-editor</a> module documentation for the full API.</p>
+
+<h3>insertConfig</h3>
+
+<p><code>this.gruntfile.insertConfig( name, config )</code></p>
+
+<p>This method inserts a configuration block inside the <code>grunt.initConfig()</code> call.</p>
+
+<p>For example:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">gruntfile</span><span class="p">.</span><span class="nx">insertConfig</span><span class="p">(</span><span class="s2">&quot;compass&quot;</span><span class="p">,</span> <span class="s2">&quot;{ watch: { watch: true } }&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>The previous line of code would output the following sections in the Gruntfile:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+  <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span> <span class="nx">watch</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3>registerTask</h3>
+
+<p><code>this.gruntfile.registerTask( name, tasks )</code></p>
+
+<p>This method registers a task inside a named task group. For example:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">gruntfile</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">);</span>
+<span class="c1">// output: grunt.registerTask(&#39;build&#39;, [&#39;compass&#39;]);</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">gruntfile</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
+<span class="c1">// output: grunt.registerTask(&#39;build&#39;, [&#39;compass&#39;, &#39;uglify&#39;]);</span>
+</code></pre></div>
+<p>If the named task already exist, the tasks are appended to the end of that task array.</p>

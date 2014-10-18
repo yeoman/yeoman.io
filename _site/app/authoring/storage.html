@@ -1,0 +1,58 @@
+<p>Storing user configuration options and sharing them between sub-generator is a common task. For example, it is common to share preferences like the language (does the user use CoffeeScript?), style options (indenting with spaces or tabs), etc.</p>
+
+<p>These configuration can be stored in the <code>.yo-rc.json</code> file through the <a href="http://yeoman.github.io/generator/Storage.html">Yeoman Storage API</a>. This API is accessible through the <code>generator.config</code> object.</p>
+
+<p>Here&#39;s some common methods you&#39;ll use.</p>
+
+<h2>Methods</h2>
+
+<h3><code>generator.config.save()</code></h3>
+
+<p>This method will write the configuration to the <code>.yo-rc.json</code> file. If the file doesn&#39;t exist yet, the <code>save</code> method will create it.</p>
+
+<p>The <code>.yo-rc.json</code> file is also determining the root of a project. Because of that, even if you&#39;re not using storage for anything, it is considered to be a best practice to always call <code>save</code> inside your <code>:app</code> generator.</p>
+
+<p>Also note that the <code>save</code> method is called automatically each time you <code>set</code> a configuration option. So you usually won&#39;t need to call it explicitly.</p>
+
+<h3><code>generator.config.set()</code></h3>
+
+<p><code>set</code> either take a key and an associated value, or an object hash of multiple key/values.</p>
+
+<p>Note that values must be JSON serializable (String, Number or non-recursive objects).</p>
+
+<h3><code>generator.config.get()</code></h3>
+
+<p><code>get</code> takes a <code>String</code> key as parameter and return the associated value.</p>
+
+<h3><code>generator.config.getAll()</code></h3>
+
+<p>Return an object of the full available configuration.</p>
+
+<p>The returned object is passed by value, not reference. This mean you still need to use the <code>set</code> method to update the configuration store.</p>
+
+<h3><code>generator.config.delete()</code></h3>
+
+<p>Delete a key.</p>
+
+<h3><code>generator.config.defaults()</code></h3>
+
+<p>Accept a hash of options to use as defaults values. If a key/value pair already exist, the value will remains untouched. If a key is missing, it&#39;ll be added.</p>
+
+<h2><code>.yo-rc.json</code> structure</h2>
+
+<p>The <code>.yo-rc.json</code> file is a JSON file where configuration objects from multiple generators are stored. Each generator configuration is namespaced to ensure no naming conflicts will occur between generators.</p>
+
+<p>This also mean each generator configuration is sandboxed and can only be shared between sub-generators. You cannot share configuration between different generator using the storage API. Use options and arguments during invocation to share data between different generators.</p>
+
+<p>Here&#39;s what a <code>.yo-rc.json</code> file looks like internally:</p>
+<div class="highlight"><pre><code class="json language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;generator-backbone&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;requirejs&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;coffee&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;generator-gruntfile&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;compass&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The structure is pretty comprehensive for your end user. This mean, you may wish to store advanced configurations inside this file and ask advanced users to edit the file directly when it doesn&#39;t make sense to use prompts for every options.</p>

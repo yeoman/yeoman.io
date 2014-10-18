@@ -1,0 +1,38 @@
+<h1>Step 5: Preview your app in the browser</h1>
+
+<p>To preview your web app in your favourite web browser, you don&#39;t have to do anything special to set up a local web server on your computer &mdash; it&#39;s part of Yeoman.</p>
+
+<h2>Start the server</h2>
+
+<p>Run a Grunt task to create a local, Node-based http server on <a href="http://localhost:9000">localhost:9000</a> (or <a href="http://127.0.0.1:9000">127.0.0.1:9000</a> for some configurations) by typing:</p>
+<div class="highlight"><pre><code class="sh language-sh" data-lang="sh"><span class="nv">$ </span>grunt serve
+</code></pre></div>
+<p>Your web browser will launch your newly scaffolded application in a new tab:</p>
+
+<p><img src="/assets/img/codelab/image_12.png" alt=""></p>
+
+<h2>Stop the server</h2>
+
+<p>If you ever need to stop the server, use the <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> keyboard command to quit your current CLI process.</p>
+
+<p>Note: You can&#39;t have more than one http server running on the same port (default 9000).</p>
+
+<h2>Watch your files</h2>
+
+<p>Open up your favourite text editor and start making changes. Each save will automatically force a browser refresh so you don’t have to do this yourself. This is called <em>live reloading</em> and it’s a nice way of getting a real-time view of your application state.</p>
+
+<p>Live reloading is made available to your application through a set of Grunt tasks configured in <strong><em>Gruntfile.js</em></strong>; it watches for changes to your files and automatically reloads them if it detects a change.</p>
+
+<p>Below, we edited <em>main.html</em> in the <em>views</em> directory. Thanks to live reload we go from this:</p>
+
+<p><img src="/assets/img/codelab/image_13.png" alt=""></p>
+
+<p>To this instantly:</p>
+
+<p><img src="/assets/img/codelab/image_14.png" alt=""></p>
+
+<p class="codelab-paging">
+  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  or
+  <a href="write-app.html">Go to the next step &raquo;</a>
+</p>

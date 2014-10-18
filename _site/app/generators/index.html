@@ -1,0 +1,40 @@
+  <section class="main">
+    <small>Your generator must have the "yeoman-generator" keyword and a repo description to be listed. Official generators are marked with <img src="/assets/img/mustache.svg" width="20px"></small>
+    <div id="loading">
+      <p>Loading generators...</p>
+    </div>
+    <div id="plugins-all"></div>
+    <div class="message" id="search-notfound">No matching generator found. Try something else.</div>
+  </section>
+
+  <script type="text/template" id="plugins-all-template">
+    <table class="table">
+      <caption>
+        <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= modules.length %> generators..." autofocus>
+      </caption>
+      <thead>
+        <tr>
+          <th class="sort" data-sort="name">Name</th>
+          <th class="sort" data-sort="desc">Description</th>
+          <th class="sort" data-sort="author">Author</th>
+          <th class="sort" data-sort="updated">Updated</th>
+          <th class="sort" data-sort="stars">Stars</th>
+        </tr>
+      </thead>
+      <tbody class="list">
+        <% _.each(modules, function (el) { %>
+          <tr class="<%= el.official ? 'official' : '' %>">
+            <td class="name"><a href="<%- el.website %>"><%- el.name %></a></td>
+            <td class="desc"><%- el.description %><div class="hidden"><%- el.keywords %></div></td>
+            <% if (el.ownerWebsite) { %>
+              <td class="author"><a href="<%- el.ownerWebsite %>"><%- el.owner %></a></td>
+            <% } else { %>
+              <td class="author"><%- el.owner %></td>
+            <% } %>
+            <td class="updated"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
+            <td class="stars"><%- el.stars %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </script>​

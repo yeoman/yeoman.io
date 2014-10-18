@@ -1,0 +1,41 @@
+<p>Once you&#39;ve run your generators, you&#39;ll often want to run <a href="http://npmjs.org">npm</a> and <a href="http://bower.io">Bower</a> to install any additional dependencies your generators require.</p>
+
+<p>As these tasks are very frequent, Yeoman already abstracts them away. We&#39;ll also cover how you can launch installation through other tools.</p>
+
+<h2>npm</h2>
+
+<p>You just need to call <code>generator.npmInstall()</code> to run an <code>npm</code> installation. Yeoman will ensure the <code>npm install</code> command is only run once even if it is called multiple time by multiple generators.</p>
+
+<p>For example you want to install lodash as a dev dependency:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">installingLodash</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">done</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">async</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">npmInstall</span><span class="p">([</span><span class="s1">&#39;lodash&#39;</span><span class="p">],</span> <span class="p">{</span> <span class="s1">&#39;saveDev&#39;</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="nx">done</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">})</span><span class="o">:</span>
+</code></pre></div>
+<p>This is equivalent to call:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">npm install lodash --save-dev
+</code></pre></div>
+<p>on the command line in your project.</p>
+
+<h2>Bower</h2>
+
+<p>You just need to call <code>generator.bowerInstall()</code> to launch the installation. Yeoman will ensure the <code>bower install</code> command is only run once even if it is called multiple time by multiple generators.</p>
+
+<h2>Both?</h2>
+
+<p>Call <code>generator.installDependencies()</code> to run both npm and bower. You can call it anywhere in your code as Yeoman will automatically schedule the tasks to run once everything else is complete.</p>
+
+<h2>Using other tools</h2>
+
+<p>Yeoman provides an abstraction to allow users to <code>spawn</code> any CLI commands. This abstraction will normalize to command so it can run seamlessly in Linux, Mac and Windows system.</p>
+
+<p>For example, if you&#39;re a PHP aficionado and wished to run <code>composer</code>, you&#39;d write it this way:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">yeoman</span><span class="p">.</span><span class="nx">generators</span><span class="p">.</span><span class="nx">Base</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">end</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">spawnCommand</span><span class="p">(</span><span class="s1">&#39;composer&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;install&#39;</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Make sure to call the <code>spawnCommand</code> method inside the <code>end</code> queue. Your users don&#39;t want to wait for an installation command to complete.</p>

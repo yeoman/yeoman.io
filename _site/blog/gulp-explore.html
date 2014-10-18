@@ -1,0 +1,104 @@
+<p>Work has begun on our <a href="https://github.com/yeoman/generator-gulp-webapp">first</a> official Yeoman generator for <a href="http://gulpjs.com">Gulp.js</a>.</p>
+
+<p><img src="http://i.imgur.com/TXdznhb.png" style="width:150px"/></p>
+
+<p>Gulp is a <a href="https://github.com/substack/stream-handbook">streaming</a> build system which focuses on code over configuration. By harnessing the power of Node streams, it enables faster build times by avoiding the need to write temporary files to disk. You simply put in a file and get a file out.</p>
+
+<p>The Yeoman team don&#39;t have any plans on dropping our support for <a href="http://gruntjs.com">Grunt</a> at all. On the contrary, we feel that both Grunt and Gulp can <a href="https://github.com/yeoman/yeoman/issues/1232">happily co-exist</a> and hope to support both communities with some automation tooling as best we can.</p>
+
+<p>Our Gulp generator based on our Grunt generator for <a href="http://github.com/yeoman/generator-webapp">web apps</a> and you can follow along our progress at <a href="https://github.com/yeoman/generator-gulp-webapp">generator-gulp-webapp</a>. It&#39;s still early days, but our <a href="https://github.com/yeoman/generator-gulp-webapp/blob/master/app/templates/gulpfile.js">gulpfile</a> already contains early work for handling HTML, CSS, JS and images. See the samples below for a peek at what we&#39;re doing:</p>
+
+<p>Require Gulp and load our Gulp plugins:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">var gulp = require(&#39;gulp&#39;);
+
+// Load plugins
+var $ = require(&#39;gulp-load-plugin&#39;)({camelize: true});
+var server = $.tinyLr();
+</code></pre></div>
+<p>Styles:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">gulp.task(&#39;styles&#39;, function () {
+    return gulp.src(&#39;app/styles/main.scss&#39;)
+        .pipe($.sass({
+          style: &#39;expanded&#39;,
+          loadPath: [&#39;app/bower_components&#39;]
+        }))
+        .pipe($.livereload(server))
+        .pipe($.autoprefixer(&#39;last 1 version&#39;))
+        .pipe($.csso())
+        .pipe(gulp.dest(&#39;dist/styles&#39;))
+        .pipe($.size());
+});
+</code></pre></div>
+<p>Scripts:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">gulp.task(&#39;scripts&#39;, function () {
+    return gulp.src(&#39;app/scripts/**/*.js&#39;)
+        .pipe($.jshint(&#39;.jshintrc&#39;))
+        .pipe($.jshint.reporter(&#39;default&#39;))
+        .pipe($.concat(&#39;main.js&#39;))
+        .pipe($.livereload(server))
+        .pipe($.uglify())
+        .pipe(gulp.dest(&#39;dist/scripts&#39;))
+        .pipe($.size());
+});
+</code></pre></div>
+<p>Images:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">gulp.task(&#39;images&#39;, function () {
+    return gulp.src(&#39;app/images/**/*&#39;)
+        .pipe($.livereload(server))
+        .pipe($.cache($.imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
+        })))
+        .pipe(gulp.dest(&#39;dist/images&#39;))
+        .pipe($.size());
+});
+</code></pre></div>
+<p>Watch:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">gulp.task(&#39;watch&#39;, function () {
+    // Listen on port 35729
+    server.listen(35729, function (err) {
+        if (err) {
+            return console.error(err);
+        };
+
+        // Watch .html files
+        gulp.watch(&#39;app/*.html&#39;);
+
+        // Watch .scss files
+        gulp.watch(&#39;app/styles/**/*.scss&#39;, [&#39;styles&#39;]);
+
+        // Watch .js files
+        gulp.watch(&#39;app/scripts/**/*.js&#39;, [&#39;scripts&#39;]);
+
+        // Watch image files
+        gulp.watch(&#39;app/images/**/*&#39;, [&#39;images&#39;]);
+    });
+});
+</code></pre></div>
+<p>Clean:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">gulp.task(&#39;clean&#39;, function () {
+    return gulp.src([&#39;dist/styles&#39;, &#39;dist/scripts&#39;, &#39;dist/images&#39;], {read: false}).pipe($.clean());
+});
+</code></pre></div>
+<p>Build:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">// Build
+gulp.task(&#39;build&#39;, [&#39;html&#39;, &#39;styles&#39;, &#39;scripts&#39;, &#39;images&#39;]);
+
+// Default task
+gulp.task(&#39;default&#39;, [&#39;clean&#39;], function () {
+    gulp.start(&#39;build&#39;);
+});
+</code></pre></div>
+<p>At this time, we welcome community contributions which help us fill in the feature gap in our new generator. Feel free to watch the project repo. We&#39;ll let you know as soon as it&#39;s finished cooking.</p>
+
+<h2>Further reading</h2>
+
+<p>The below are some of the recent articles on Gulp we&#39;ve enjoyed reading:</p>
+
+<ul>
+<li><a href="http://blog.ponyfoo.com/2014/01/27/my-first-gulp-adventure">My First Gulp Adventure</a></li>
+<li><a href="http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever">Gulp, Grunt, Whatever</a></li>
+<li><a href="http://travismaynard.com/writing/no-need-to-grunt-take-a-gulp-of-fresh-air">No Need To Grunt, Take A Gulp Of Fresh Air</a></li>
+<li><a href="http://jaysoo.ca/2014/01/27/gruntjs-vs-gulpjs/">Grunt vs Gulp - Beyond the Numbers</a></li>
+</ul>
