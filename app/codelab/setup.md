@@ -43,17 +43,18 @@ Once you’ve got Node installed, install the Yeoman toolset:
 
 ```sh
 $ npm install --global yo
+$ npm install --global bower
+$ npm install --global grunt
+$ npm install --global grunt-cli
 ```
 
 <div class="note important">
 
   <h2>Errors?</h2>
 
-  <p>If you see permission or access errors, you will need to prepend <code>sudo</code> to the above command, like so:</p>
+  <p>If you see permission or access errors, do not use <code>sudo</code> as a work-around. <br>
+  Consult [this page](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo-linux.md) for a more robust solution to the permissions errors.</p>
 
-<pre>
-$ sudo npm install --global yo
-</pre>
 
 </div>
 
