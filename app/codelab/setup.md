@@ -42,18 +42,16 @@ If you don't have Git, grab the installers from the [git website](http://git-scm
 Once you’ve got Node installed, install the Yeoman toolset:
 
 ```sh
-$ npm install --global yo
+$ npm install --global yo bower grunt-cli
 ```
 
 <div class="note important">
 
   <h2>Errors?</h2>
 
-  <p>If you see permission or access errors, you will need to prepend <code>sudo</code> to the above command, like so:</p>
+  <p>If you see permission or access errors, such as permission (`EPERM`) or access errors (`EACCESS`), do not use <code>sudo</code> as a work-around. <br>
+  Consult [this page](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo-linux.md) for a more robust solution to the permissions errors.</p>
 
-<pre>
-$ sudo npm install --global yo
-</pre>
 
 </div>
 
@@ -75,7 +73,7 @@ Running the above should output three separate version numbers:
 
   <h2>Versions of the CLI tools that this codelab works with</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.2.0</strong>, <strong>Bower 1.3.5</strong>, and <strong>grunt-cli v0.1.13</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
+  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.3.2</strong>, <strong>Bower 1.3.12</strong>, and <strong>grunt-cli v0.1.13</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.io/issues">tracker</a>.</p>
 
 </div>
 
