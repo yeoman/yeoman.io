@@ -17,7 +17,7 @@ Inside of a generator context, a new object, the `this.gruntfile` object, is now
 As a quick example, you'd use it this way:
 
 ```javascript
-module.exports = Yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
   writing: function () {
     this.gruntfile.insertConfig("compass", "{ watch: { watch: true } }");
   }

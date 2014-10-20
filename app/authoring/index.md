@@ -86,17 +86,17 @@ Yeoman offers base generators which you can extend to implement your own behavio
 Here's how you'd extend a base generator:
 
 ```js
-var yeoman = require('yeoman-generator');
+var generators = require('yeoman-generator');
 
-module.exports = yeoman.generators.Base.extend();
+module.exports = generators.Base.extend();
 ```
 
 If you'd like to require a `name` argument for your generator (for example `foo` in `yo name:router foo`) that will be assigned to `this.name`,  you can instead do the following:
 
 ```js
-var yeoman = require('yeoman-generator');
+var generators = require('yeoman-generator');
 
-module.exports = yeoman.generators.NamedBase.extend();
+module.exports = generators.NamedBase.extend();
 ```
 
 Either type of generator can be extended to create an app generator or a subcommand generator. `Base` is extended, most often, for an app generator and `NamedBase` for a subcommand generator where a filename is required.
@@ -113,11 +113,11 @@ Some generator methods can only be called inside the `constructor` function. The
 To override the generator constructor, you pass a constructor function to `extend()` like so:
 
 ```js
-module.exports = yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
   // The name `constructor` is important here
   constructor: function () {
     // Calling the super constructor is important so our generator is correctly setup
-    yeoman.generators.Base.apply(this, arguments);
+    generators.Base.apply(this, arguments);
 
     // And next add your custom code
     this.option('coffee'); // This method adds support for a `--coffee` flag
@@ -132,7 +132,7 @@ Every method added to the prototype is run, once the generator is called--and us
 Let's add some methods:
 
 ```js
-module.exports = yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
   method1: function () {
     console.log('method 1 just ran');
   },

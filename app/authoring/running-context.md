@@ -22,7 +22,7 @@ Now that you know the prototype methods are considered as action, you may wonder
 2. Use instance methods:
 
   ```js
-    yeoman.generators.Base.extend({
+    generators.Base.extend({
       init: function () {
         this.helperMethod = function () {
           console.log('won\'t be called automatically');
@@ -33,7 +33,7 @@ Now that you know the prototype methods are considered as action, you may wonder
 3. Extend a parent generator
 
   ```js
-    var MyBase = yeoman.generators.Base.extend({
+    var MyBase = generators.Base.extend({
       helper: function () {
         console.log('won\'t be called automatically');
       }
@@ -59,7 +59,7 @@ Priorities are defined in your code as special prototype method name. When a met
 In code, it will look this way:
 
 ```js
-yeoman.generators.Base.extend({
+generators.Base.extend({
   priorityName: function () {}
 });
 ```
@@ -67,7 +67,7 @@ yeoman.generators.Base.extend({
 You can also group multiple methods to be run together in a queue by using a hash instead of a single method:
 
 ```js
-yeoman.generators.Base.extend({
+generators.Base.extend({
   priorityName: {
     method: function () {},
     method2: function () {}

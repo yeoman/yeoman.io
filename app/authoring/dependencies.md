@@ -17,7 +17,7 @@ You just need to call `generator.npmInstall()` to run an `npm` installation. Yeo
 For example you want to install lodash as a dev dependency:
 
 ```js
-yeoman.generators.Base.extend({
+generators.Base.extend({
   installingLodash: function() {
     var done = this.async();
     this.npmInstall(['lodash'], { 'saveDev': true }, done);
@@ -49,7 +49,7 @@ Yeoman provides an abstraction to allow users to `spawn` any CLI commands. This 
 For example, if you're a PHP aficionado and wished to run `composer`, you'd write it this way:
 
 ```js
-yeoman.generators.Base.extend({
+generators.Base.extend({
   end: function () {
     this.spawnCommand('composer', ['install']);
   }

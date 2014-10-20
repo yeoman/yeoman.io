@@ -21,7 +21,7 @@ Prompts are the main way a generator interacts with a user. The prompt module is
 You'll call the prompt method this way:
 
 ```js
-module.exports = yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
   promptTask: function () {
     var done = this.async();
     this.prompt({
@@ -91,7 +91,7 @@ Outputting information is handled by the `generator.log` module.
 The main method you'll use is simply `generator.log` (e.g. `generator.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
 
 ```js
-module.exports = yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
   myAction: function () {
     this.log('Something has gone wrong!');
   }
