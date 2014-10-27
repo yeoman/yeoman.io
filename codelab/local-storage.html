@@ -69,10 +69,10 @@
 </code></pre></div><p>So now, rather than reading our todos from a static array, we’ll be reading it from local storage and then storing it in <code>$scope.todos</code> instead.</p><p>We’ll also use the angular <a href=http://docs.angularjs.org/api/ng.$rootScope.Scope#methods_$watch><code>$watch</code></a> listener to watch for changes in the value of <code>$scope.todos</code>. If someone adds or removes a todo, it will then keep our local storage <code>todos</code> datastore in sync.</p><p>Therefore, we need to remove the current <code>$scope.todos</code> declaration:</p><div class=highlight><pre><code class="js language-js" data-lang=js><span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span> <span class=o>=</span> <span class=p>[];</span>
 </code></pre></div><p>And replace it with this:</p><div class=highlight><pre><code class="js language-js" data-lang=js><span class=kd>var</span> <span class=nx>todosInStore</span> <span class=o>=</span> <span class=nx>localStorageService</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>);</span>
 
-<span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span> <span class=o>=</span> <span class=nx>todosInStore</span> <span class=o>&amp;&amp;</span> <span class=nx>todosInStore</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39;\n&#39;</span><span class=p>)</span> <span class=o>||</span> <span class=p>[];</span>
+<span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span> <span class=o>=</span> <span class=nx>todosInStore</span> <span class=o>||</span> <span class=p>[];</span>
 
 <span class=nx>$scope</span><span class=p>.</span><span class=nx>$watch</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-  <span class=nx>localStorageService</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>,</span> <span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=s1>&#39;\n&#39;</span><span class=p>));</span>
+  <span class=nx>localStorageService</span><span class=p>.</span><span class=nx>set</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>,</span> <span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span><span class=p>);</span>
 <span class=p>},</span> <span class=kc>true</span><span class=p>);</span>
 </code></pre></div><p>We now have a controller that is as follows:</p><div class=highlight><pre><code class="js language-js" data-lang=js><span class=s1>&#39;use strict&#39;</span><span class=p>;</span>
 
@@ -81,10 +81,10 @@
 
     <span class=kd>var</span> <span class=nx>todosInStore</span> <span class=o>=</span> <span class=nx>localStorageService</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>);</span>
 
-    <span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span> <span class=o>=</span> <span class=nx>todosInStore</span> <span class=o>&amp;&amp;</span> <span class=nx>todosInStore</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39;\n&#39;</span><span class=p>)</span> <span class=o>||</span> <span class=p>[];</span>
+    <span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span> <span class=o>=</span> <span class=nx>todosInStore</span> <span class=o>||</span> <span class=p>[];</span>
 
     <span class=nx>$scope</span><span class=p>.</span><span class=nx>$watch</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>localStorageService</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>,</span> <span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=s1>&#39;\n&#39;</span><span class=p>));</span>
+      <span class=nx>localStorageService</span><span class=p>.</span><span class=nx>set</span><span class=p>(</span><span class=s1>&#39;todos&#39;</span><span class=p>,</span> <span class=nx>$scope</span><span class=p>.</span><span class=nx>todos</span><span class=p>);</span>
     <span class=p>},</span> <span class=kc>true</span><span class=p>);</span>
 
     <span class=nx>$scope</span><span class=p>.</span><span class=nx>addTodo</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
