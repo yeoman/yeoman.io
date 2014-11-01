@@ -151,7 +151,7 @@ $ grunt wiredep
 
 It’s as simple as that.
 
-*Your chosen generator may not include the grunt tasks "bower" and "bowerInstall". You can read more about how to install and use these at [grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs) and [grunt-bower-install](https://github.com/stephenplusplus/grunt-bower-install).*
+*Your chosen generator may not include the grunt tasks "bower" and "wiredep". You can read more about how to install and use these at [grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs) and [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep).*
 
 
 ## Grunt
