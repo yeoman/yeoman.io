@@ -12,7 +12,5 @@
   "noarg": true,
   "quotmark": "single",
   "undef": true,
-  "strict": false,
-  "trailing": true,
-  "smarttabs": true
+  "strict": false
 }
