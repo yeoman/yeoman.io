@@ -88,13 +88,13 @@ Modify *main.html* by adding a `form` element in between the `<h2>` and `<p>` el
         </span>
       </div>
     </div>
-  </form>
   <p></p>
 
   <!-- Todos list -->
   <p class="form-group" ng-repeat="todo in todos">
     <input type="text" ng-model="todo" class="form-control">
   </p>
+  </form>
 </div>
 ```
 
