@@ -8,7 +8,7 @@ excerpt: Yeoman allows and promotes and encourages testing. This is how
 
 Read on to learn more about the testing helpers Yeoman add to ease the pain of unit testing a generator.
 
-The examples below assume you uses [Mocha](http://visionmedia.github.io/mocha/) in BDD mode. The global concept should apply easily to your unit testing framework of choice.
+The examples below assume you uses [Mocha](http://mochajs.org/) in BDD mode. The global concept should apply easily to your unit testing framework of choice.
 
 ## Organizing your tests
 
