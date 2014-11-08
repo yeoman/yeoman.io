@@ -14,11 +14,14 @@ With just a command or two, Yeoman can write boilerplate code for your entire we
 
 ![](/assets/img/codelab/image_1.png)
 
-Yeoman comes with three tools for improving your productivity:
 
 * [**yo**](http://yeoman.io) is a scaffolding tool that offers an ecosystem of framework-specific scaffolds, called generators, that can be used to perform some of the tedious tasks mentioned earlier.
 
+Yeoman also works with other tools for improving your productivity:
+
 * [**grunt**](http://gruntjs.com) is used to build, preview, and test your project, thanks to help from tasks curated by the Yeoman team and [grunt-contrib](https://github.com/gruntjs/grunt-contrib).
+
+* [**gulp**](http://gulpjs.com/) is an alternative to GruntJS that favors code over configuration.
 
 * [**bower**](http://bower.io) is used for dependency management, so that you no longer have to manually download your front-end libraries.
 
