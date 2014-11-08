@@ -66,6 +66,13 @@ The webapp generator is considered the simplest possible start for a web app. We
 
 #### Example: Scaffolding an AngularJS app
 
+Generating an angular app requires Bower, you must install it from npm first:
+
+```sh
+$ npm install -g bower
+```
+
+
 As always, before using a new generator, you must install it from npm first:
 
 ```sh
