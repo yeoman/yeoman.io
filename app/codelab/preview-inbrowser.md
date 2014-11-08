@@ -15,7 +15,7 @@ To preview your web app in your favourite web browser, you don't have to do anyt
 Run a Grunt task to create a local, Node-based http server on [localhost:9000](http://localhost:9000) (or [127.0.0.1:9000](http://127.0.0.1:9000) for some configurations) by typing:
 
 ```sh
-$ grunt serve
+grunt serve
 ```
 
 Your web browser will launch your newly scaffolded application in a new tab:

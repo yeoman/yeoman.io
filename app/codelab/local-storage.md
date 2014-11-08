@@ -8,7 +8,7 @@ sidebar: sidebars/codelab.html
 
 # Step 10: Make Todos persistent with local storage
 
-Let’s revisit the issue of items not persisting when the browser refreshes. 
+Let’s revisit the issue of items not persisting when the browser refreshes.
 
 <div class="note tip">
   If you had no issues with Step 7 and you're short on time, you can skip to the <a href="keep-going.html">codelab wrapup</a>.
@@ -16,19 +16,19 @@ Let’s revisit the issue of items not persisting when the browser refreshes.
 
 ## Install Bower package
 
-To easily achieve this we can use another Angular module called "[angular-local-storage](http://gregpike.net/demos/angular-local-storage/demo.html)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html). Again, Bower comes to the rescue. 
+To easily achieve this we can use another Angular module called "[angular-local-storage](http://gregpike.net/demos/angular-local-storage/demo.html)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html). Again, Bower comes to the rescue.
 
 Run the following command:
 
 ```sh
-$ bower install --save angular-local-storage
+bower install --save angular-local-storage
 ```
 
 ![](/assets/img/codelab/image_29.png)
 
 ## Add local storage
 
-Similar to how we added jQueryUI and AngularUI Sortable in [Step 7](install-packages.html#implement) to make todos sortable, we need to add a reference to the *angular-local-storage.js* file in *index.html*. 
+Similar to how we added jQueryUI and AngularUI Sortable in [Step 7](install-packages.html#implement) to make todos sortable, we need to add a reference to the *angular-local-storage.js* file in *index.html*.
 
 Since we're using *bower.json* to keep track of our modules, <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> to exit the current command line process, then re-run `grunt serve` to get some automated magic in your *index.html*.
 

@@ -15,7 +15,7 @@ For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaSc
 Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our ***Gruntfile.js*** for running tests. It can be run as follows:
 
 ```sh
-$ grunt test
+grunt test
 ```
 
 When you run `grunt test`, you'll see some warnings in the Yeoman console. Don’t worry, that’s to be expected right now since our tests are currently failing for two reasons. Let's fix that.
