@@ -26,8 +26,10 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 First, you'll need to install `yo` and other required tools:
 
 ```sh
-$ npm install -g yo
+$ npm install -g yo bower
 ```
+
+*see the section about **Bower** below for more information*
 
 *npm is the package manager for [Node.js](http://nodejs.org/) and comes bundled with it.*
 
