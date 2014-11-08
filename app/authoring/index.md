@@ -116,10 +116,10 @@ To override the generator constructor, you pass a constructor function to `exten
 module.exports = generators.Base.extend({
   // The name `constructor` is important here
   constructor: function () {
-    // Calling the super constructor is important so our generator is correctly setup
+    // Calling the super constructor is important so our generator is correctly set up
     generators.Base.apply(this, arguments);
 
-    // And next add your custom code
+    // Next, add your custom code
     this.option('coffee'); // This method adds support for a `--coffee` flag
   }
 });
@@ -127,7 +127,7 @@ module.exports = generators.Base.extend({
 
 ### Adding our own functionality
 
-Every method added to the prototype is run, once the generator is called--and usually in sequence. But, as we'll see in the next section, some special method names will trigger a specific run order.
+Every method added to the prototype is run once the generator is called--and usually in sequence. But, as we'll see in the next section, some special method names will trigger a specific run order.
 
 Let's add some methods:
 
@@ -157,22 +157,22 @@ On the command line, from the root of your generator project (in the `generator-
 npm link
 ```
 
-That'll install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
+That will install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
 
 
 ### Finding the project root
 
-When running a generator, Yeoman tries to figure out some things from the context within which it runs.
+While running a generator, Yeoman will try to figure some things out based on the context of the folder it's running from.
 
-The most important one is that Yeoman searches the directory tree for a `.yo-rc.json` file. If found, it then considers the location of the file as the root of the project. Behind the scenes, Yeoman will change the current directory to the `.yo-rc.json` file location and will run the requested generator there.
+Most importantly, Yeoman searches the directory tree for a `.yo-rc.json` file. If found, it considers the location of the file as the root of the project. Behind the scenes, Yeoman will change the current directory to the `.yo-rc.json` file location and run the requested generator there.
 
 The Storage module creates the `.yo-rc.json` file. Calling `this.config.save()` from a generator for the first time will create the file.
 
-So if your generator is not running in your current working directory, make sure there's no `.yo-rc.json` somewhere up the directory tree.
+So, if your generator is not running in your current working directory, make sure you don't have a `.yo-rc.json` somewhere up the directory tree.
 
 
 ## Where to go from here?
 
 After reading this, you should be able to create a local generator and run it.
 
-If this is your first time writing a generator, you should definitely read the next section on the [running context and the run loop](/authoring/running-context.html). This section is a mandatory read to understand in what context your generator will run in, and to make sure it'll compose well with the other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available in the core to help you achieve your goals.
+If this is your first time writing a generator, you should definitely read the next section on [running context and the run loop](/authoring/running-context.html). This section is vital to understanding the context in which your generator will run, and to ensure that it will compose well with other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available within the Yeoman core to help you achieve your goals.
