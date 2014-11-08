@@ -19,7 +19,7 @@ Let’s add some order to our list and make it sortable. For this we’re going 
 We can check what packages we have already installed by running this command from within the myTodo project directory created earlier:
 
 ```sh
-$ bower list
+bower list
 ```
 
 ![](/assets/img/codelab/image_22.png)
@@ -31,7 +31,7 @@ You should see that you already have packages for angular-cookies, angular-resou
 To verify that there are AngularUI packages available, use Bower to search for "angular-ui-sortable":
 
 ```sh
-$ bower search angular-ui-sortable
+bower search angular-ui-sortable
 ```
 
 There is one result for "angular-ui-sortable" so let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
@@ -41,8 +41,10 @@ There is one result for "angular-ui-sortable" so let’s install it along with [
 Use Bower to install both "angular-ui-sortable" and "jquery-ui":
 
 ```sh
-$ bower install --save angular-ui-sortable
-$ bower install --save jquery-ui
+bower install --save angular-ui-sortable
+```
+```sh
+bower install --save jquery-ui
 ```
 
 The `--save` option updates the ***bower.json*** file with dependencies on angular-ui-sortable and jquery-ui. This will save you from having to manually add it to *bower.json* yourself.
@@ -54,7 +56,7 @@ The `--save` option updates the ***bower.json*** file with dependencies on angul
   <p>If you have multiple packages that you want to install, you can do it in one line:</p>
 
 <pre>
-$ bower install --save angular-ui-sortable jquery-ui
+<code class="language-sh">bower install --save angular-ui-sortable jquery-ui</code>
 </pre>
 
 </div>

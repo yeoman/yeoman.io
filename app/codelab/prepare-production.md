@@ -28,7 +28,7 @@ To create a production version of our application, we’ll want to:
 Phew! Amazingly we can achieve all of this just by running:
 
 ```sh
-$ grunt
+grunt
 ```
 
 This command will go through the Grunt tasks and configuration Yeoman has set up for you in *Gruntfile.js* and create a version of your app we can ship. Give it a minute and you should be presented with a completed build and a report of how long the build took to complete and where time was spent:
@@ -42,7 +42,7 @@ Your lean, production-ready application is now available in a ***dist*** folder 
 Want to preview your production app locally? That’s just another simple grunt command:
 
 ```sh
-$ grunt serve:dist
+grunt serve:dist
 ```
 
 It will build your project and launch a local web server. Yo Hero!

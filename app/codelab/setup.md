@@ -19,13 +19,13 @@ Most of your interactions with Yeoman will be through the command line. Run comm
 Before installing Yeoman, you will need the following:
 
 * Node.js v0.10.x+
-* npm (which comes bundled with Node) v1.4.3+
+* npm (which comes bundled with Node) v2.1.0+
 * git
 
 You can check if you have Node and npm installed by typing:
 
 ```sh
-$ node --version && npm --version
+node --version && npm --version
 ```
 
 If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](http://nodejs.org/download/).
@@ -33,7 +33,7 @@ If you need to upgrade or install Node, the easiest way is to use an installer f
 You can check if you have Git installed by typing:
 
 ```sh
-$ git --version
+git --version
 ```
 If you don't have Git, grab the installers from the [git website](http://git-scm.com/).
 
@@ -42,7 +42,7 @@ If you don't have Git, grab the installers from the [git website](http://git-scm
 Once you’ve got Node installed, install the Yeoman toolset:
 
 ```sh
-$ npm install --global yo bower grunt-cli
+npm install --global yo bower grunt-cli
 ```
 
 <div class="note important">
@@ -60,7 +60,7 @@ $ npm install --global yo bower grunt-cli
 It is a good idea to check that everything is installed as expected by running commonly used Yeoman commands like `yo`, `bower`, and `grunt` with the `--version` flag as follows:
 
 ```sh
-$ yo --version && bower --version && grunt --version
+yo --version && bower --version && grunt --version
 ```
 
 Running the above should output three separate version numbers:

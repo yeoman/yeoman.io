@@ -15,7 +15,7 @@ We've used the word "scaffold" a few times but you might not know what that mean
 Create a ***mytodo*** folder for all your codelab work:
 
 ```sh
-$ mkdir mytodo && cd mytodo
+mkdir mytodo && cd mytodo
 ```
 
 This folder is where the generator will place your scaffolded project files.
@@ -29,7 +29,7 @@ As an added bonus, the Angular generator will dynamically use the name of your f
 Run `yo` again to see your generators:
 
 ```sh
-$ yo
+yo
 ```
 
 If you have a few generators installed, you'll be able to interactively choose from them. Highlight **Run the Angular generator**. Hit **enter** to run the generator.
@@ -43,7 +43,7 @@ If you have a few generators installed, you'll be able to interactively choose f
   <p>As you become more familiar with <code>yo</code>, you can run generators directly without the use of the interactive menu, like so:</p>
 
 <pre>
-$ yo angular
+<code class="language-sh">yo angular</code>
 </pre>
 
 </div>
