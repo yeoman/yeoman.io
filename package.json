@@ -1,4 +1,5 @@
 {
+  "name": "Yeoman.io",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
