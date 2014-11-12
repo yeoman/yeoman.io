@@ -35,7 +35,7 @@ Since we're using *bower.json* to keep track of our modules, <span class="keyboa
 At the bottom of *index.html*, this should have been added:
 
 ```html
-<script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 ```
 
 Your *index.html* scripts block should now look like this:
@@ -54,7 +54,7 @@ Your *index.html* scripts block should now look like this:
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
 <script src="bower_components/angular-ui-sortable/sortable.js"></script>
-<script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 ```
