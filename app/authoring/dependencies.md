@@ -12,7 +12,7 @@ As these tasks are very frequent, Yeoman already abstracts them away. We'll also
 
 ## npm
 
-You just need to call `generator.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple time by multiple generators.
+You just need to call `generator.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple times by multiple generators.
 
 For example you want to install lodash as a dev dependency:
 
