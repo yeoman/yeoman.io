@@ -299,6 +299,14 @@ module.exports = function (grunt) {
           commit: true,
           push: true
         }
+      },
+      travis: {
+        options: {
+          remote: 'https://SBoudrias:' + process.env.GH_TOKEN + '@github.com/yeoman/yeoman.io.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
       }
     },
     jshint: {
@@ -389,6 +397,13 @@ module.exports = function (grunt) {
     'test',
     'build',
     'buildcontrol'
+  ]);
+
+  grunt.registerTask('deploy-travis', [
+    'check',
+    'test',
+    'build',
+    'buildcontrol:travis'
   ]);
 
   grunt.registerTask('default', [

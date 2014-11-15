@@ -9,7 +9,7 @@ before_script:
   - git config --global user.email "travis@yeoman.io"
   - gem install bundler
   - bundle install
-script: npm run-script deploy
+script: npm run-script deploy > /dev/null 2>&1
 env:
   global:
-    secure: Zbi0oCstuAbZIVqiwEeHU5iPI/OfMDjYg/aOgcJYU0cUVxiPW/wDOOQ4fEeWZgcKsMW6QMsD0bra2A7ai9PA6pEUCfypAjZVPDws9NtElVEfOIswCaFXiJMR5gd7+NDSmscYXG29ilVOxJMJQARv3OfLoEnuPBsr2slPFJKqySY=
+    secure: vIyvkwsHFpHc6MhCsMyXLtz1hSASYmJ4C6DPMU5+w9unRNSxaDBnVt8jE5PM7/avX1psrVPZU0r8vn1LQLeZTGcz9fgr/PNLg4Gu54lcoi3UdVyZYV8R+3J5AMqKgpyFQliaoSQ5qP9FuE0tnpQrACgpFn7HrhpeFJvxVX3IL5c=
