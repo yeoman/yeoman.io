@@ -4,12 +4,135 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-11-09T16:51:03-08:00</updated>
+  <updated>2014-11-14T22:30:53-08:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
   </author>
 
+  
+  <entry>
+    <title>Yeoman generator version 0.18.0 - Release announcement</title>
+    <link href="http://yeoman.io/blog/release-0.18.html"/>
+    <updated>2014-10-14T00:00:00-07:00</updated>
+    <id>http://yeoman.io/blog/release-0.18</id>
+    <content type="html">&lt;p&gt;Allo&amp;#39; Allo&amp;#39; today we&amp;#39;re happy to announce the release of &lt;a href=&quot;https://www.npmjs.org/package/yeoman-generator&quot;&gt;yeoman-generator@0.18.0&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s been multiple months since our last minor version bump. This new release bring lots of new features and strive at improving the composability features (first introduced in 0.17).&lt;/p&gt;
+
+&lt;h2&gt;New features!&lt;/h2&gt;
+
+&lt;h3&gt;Storing prompt answers&lt;/h3&gt;
+
+&lt;p&gt;Using the &lt;code&gt;{store: true}&lt;/code&gt; property on a prompt will store the user answers in a machine global storage. This mean next time the user run a generator, the default answer will be filled with the value previously stored.&lt;/p&gt;
+
+&lt;p&gt;Careful notice, providing a default value prevent user from returning empty answers.&lt;/p&gt;
+
+&lt;p&gt;Huge thanks to @stefanbuck for the PR https://github.com/yeoman/generator/pull/688&lt;/p&gt;
+
+&lt;h3&gt;New File System&lt;/h3&gt;
+
+&lt;p&gt;Since version 0.17, the Yeoman file system proved to be poorly designed to attack composability issues. That&amp;#39;s why with 0.18 we release a completely rethought file system abstraction. You can see the discussion and design process &lt;a href=&quot;https://github.com/yeoman/generator/issues/658&quot;&gt;taking place in this issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Every legacy methods (&lt;code&gt;this.write&lt;/code&gt;, &lt;code&gt;this.copy&lt;/code&gt;, &lt;a href=&quot;http://yeoman.github.io/generator/actions.html&quot;&gt;etc&lt;/a&gt;) have been back ported to use this new system. So updating to 0.18.0 should magically improve your generator.&lt;/p&gt;
+
+&lt;h4&gt;New &lt;code&gt;fs&lt;/code&gt; methods&lt;/h4&gt;
+
+&lt;p&gt;The core system can be accessed on &lt;code&gt;generator.fs&lt;/code&gt;. This object is an instance of &lt;a href=&quot;https://github.com/SBoudrias/mem-fs-editor&quot;&gt;mem-fs-editor&lt;/a&gt; and provide the same methods.&lt;/p&gt;
+
+&lt;p&gt;This system is way simpler than the current legacy method and doesn&amp;#39;t do any kind of magic. It won&amp;#39;t automatically compile templates (use &lt;code&gt;this.fs.copyTpl()&lt;/code&gt; for this), it won&amp;#39;t pass &lt;code&gt;this&lt;/code&gt; as template context, and it won&amp;#39;t automatically assume paths are relative to anything.&lt;/p&gt;
+
+&lt;p&gt;An example/usual usage would be:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt; js
+this.fs.copyTpl(
+  this.templatePath(&amp;#39;mocha/base-test.js&amp;#39;),
+  this.destinationPath(&amp;#39;test/index.js&amp;#39;),
+  { projectName: &amp;#39;my-awesome-module&amp;#39; }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you can see, we also added two new paths helpers:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;this.templatePath()&lt;/code&gt; which is: &lt;code&gt;path.join(this.sourceRoot(), ...rest)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;this.destinationPath()&lt;/code&gt; which is: &lt;code&gt;path.join(this.destinationRoot(), ...rest)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Try it out and please give us feedback on how you like this new API. It is more verbose than our legacy methods, but it is clearer and less magical.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that the legacy system will remain available at least until version 1.0.0&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4&gt;What about the 0.17.0 &lt;code&gt;this.src&lt;/code&gt; and &lt;code&gt;this.dest&lt;/code&gt; file utils&lt;/h4&gt;
+
+&lt;p&gt;These should be considered deprecated. The design decision they make isn&amp;#39;t a good fit with composability and will create issues on the long run.&lt;/p&gt;
+
+&lt;h4&gt;File writing filters&lt;/h4&gt;
+
+&lt;p&gt;Ever wished to apply custom filters on every file write? Beautifying files, normalizing whitespace, etc, is now possible.&lt;/p&gt;
+
+&lt;p&gt;Once per Yeoman process, we will write every modified files to disk. This process is passed through a &lt;a href=&quot;https://github.com/wearefractal/vinyl&quot;&gt;vinyl&lt;/a&gt; object stream (just like &lt;a href=&quot;http://gulpjs.com/&quot;&gt;gulp&lt;/a&gt;). Any author can register a &lt;code&gt;transformStream&lt;/code&gt; to modify the file path or content.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;beautify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-beautify&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;registerTransformStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;beautify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indentSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that &lt;strong&gt;every file type will be passed through this stream&lt;/strong&gt;. So make sure any transform stream passthrough unsupported files. Tools like &lt;a href=&quot;https://github.com/robrich/gulp-if&quot;&gt;gulp-if&lt;/a&gt; or &lt;a href=&quot;https://github.com/sindresorhus/gulp-filter&quot;&gt;gulp-filter&lt;/a&gt; will help filter invalid type and pass them through.&lt;/p&gt;
+
+&lt;p&gt;This new feature means you can basically use any &lt;em&gt;gulp&lt;/em&gt; plugins to process generated files during the writing phase.&lt;/p&gt;
+
+&lt;h2&gt;Improvements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tests &lt;a href=&quot;http://yeoman.io/authoring/testing.html&quot;&gt;using &lt;code&gt;helpers.run()&lt;/code&gt;&lt;/a&gt; won&amp;#39;t output to the console keeping the test output clean. Every log method is now a &lt;code&gt;sinon.stub()&lt;/code&gt; making it easy to assert your generator outputted the correct content.&lt;/li&gt;
+&lt;li&gt;Testing run context now automatically run your tests in a unique tmpdir. No need to manually call &lt;code&gt;helper.run().inDir()&lt;/code&gt; anymore.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assert.fileContent&lt;/code&gt; and &lt;code&gt;assert.noFileContent&lt;/code&gt; accept a String as arguments (before we just accepted Regex)&lt;/li&gt;
+&lt;li&gt;The Conflicter have been refactored to be simple and easy to use.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Installation methods only running once&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;npm&lt;/code&gt; and &lt;code&gt;bower&lt;/code&gt; installation helpers are now always running once per process. This was a change made in 0.17, but we extended the feature to cover every use/methods who could launch these process.&lt;/p&gt;
+
+&lt;p&gt;This was a breaking an edge case in 0.17. But for the sake of clarity, let&amp;#39;s be clear. The following construct will break:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;installDependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// This will block the process forever, and node will fail&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Every install method will be registered on the &lt;a href=&quot;http://yeoman.io/authoring/running-context.html&quot;&gt;&lt;code&gt;install&lt;/code&gt; run queue&lt;/a&gt;. Using &lt;code&gt;this.async()&lt;/code&gt; as a callback will create a deadlock.&lt;/p&gt;
+
+&lt;h2&gt;Fixes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Installation methods (npm, bower helpers) now correctly pass the options to the spawn process.&lt;/li&gt;
+&lt;li&gt;When a conflict occurs on a directory, we don&amp;#39;t show the &lt;code&gt;diff&lt;/code&gt; option anymore. (selecting diff on directory threw an error)&lt;/li&gt;
+&lt;li&gt;You can now correctly overwrite the &lt;code&gt;stdio&lt;/code&gt; with &lt;code&gt;generator.spawnCommand()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;generator.composeWith()&lt;/code&gt; now correctly resolve the &lt;code&gt;local&lt;/code&gt; option path.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Meta&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We&amp;#39;ve extracted &lt;a href=&quot;https://github.com/yeoman/environment&quot;&gt;yeoman-environment&lt;/a&gt; on it&amp;#39;s own repository. This mean these two core Yeoman parts can now evolve at their own pace.&lt;/li&gt;
+&lt;li&gt;All our tests now uses tmpdir for testing making them more reliable.&lt;/li&gt;
+&lt;li&gt;Completely remove network connection from our test suite - it is now way faster.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Potentially breaking change&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We stopped manually mocking Inquirer in tests. Mainly because Inquirer parses values in ways we didn&amp;#39;t imitate and this caused too much issue. Now we rely more on Inquirer and only mock the minimum. This also mean we don&amp;#39;t create the magic &lt;code&gt;errors&lt;/code&gt; property during test. You can listen for generator errors instead.&lt;/li&gt;
+&lt;li&gt;We removed &lt;code&gt;require(&amp;#39;yeoman-generator&amp;#39;).inquirer&lt;/code&gt;. Require your own version from now on.&lt;/li&gt;
+&lt;li&gt;We removed &lt;code&gt;generator.shell&lt;/code&gt; and &lt;code&gt;generator.request&lt;/code&gt;. Require your own version.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;In conclusion&lt;/h2&gt;
+
+&lt;p&gt;The work is still not completed. We still need to update some of our website documentation to include the new APIs methods. And we&amp;#39;ll need to update our core generators to this new version. These should come soon, in the meantime refer to this post about the new features.&lt;/p&gt;
+
+&lt;p&gt;So, enjoy this new release! Please upgrade and let us know how the API feels, and as usual feel free to report any bug you encounter!&lt;/p&gt;
+
+&lt;p&gt;Cheers&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Karma Generator Rewrite 0.8.0</title>
