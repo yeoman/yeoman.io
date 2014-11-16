@@ -64,6 +64,22 @@ The options hash accepts multiple key-value pairs:
 
 This method must be called inside the `constructor` method. Otherwise Yeoman won't be able to output the relevant help information when a user calls your generator with the help option: e.g. `yo webapp --help`.
 
+Here is an example:
+
+```js
+module.exports = generators.Base.extend({
+  // note: arguments and options should be defined in the constructor.
+  constructor: function () {
+    generators.Base.apply(this, arguments);
+
+    // This makes `appname` a required argument.
+    this.argument('appname', { type: String, required: true });
+    // And you can then access it later on this way; e.g. CamelCased
+    this.appname = this._.camelize(this.appname);
+  }
+});
+```
+
 ### Options
 
 Options look a lot like arguments, but they are written as command line _flags_.
@@ -82,6 +98,22 @@ The options hash (the second argument) accepts multiple key-value pairs:
 - `type` Either Boolean, String or Number
 - `defaults` Default value
 - `hide` Boolean whether to hide from help
+
+Here is an example:
+
+```js
+module.exports = generators.Base.extend({
+  // note: arguments and options should be defined in the constructor.
+  constructor: function () {
+    generators.Base.apply(this, arguments);
+
+    // This method adds support for a `--coffee` flag
+    this.option('coffee');
+    // And you can then access it later on this way; e.g.
+    this.scriptSuffix = (this.options.coffee ? ".coffee", ".js");
+  }
+});
+```
 
 ## Outputting Information
 
