@@ -9,7 +9,8 @@ before_script:
   - git config --global user.email "travis@yeoman.io"
   - gem install bundler
   - bundle install
+# Silent the script output, we don't want any key made public in the Travis log
 script: npm run-script deploy > /dev/null 2>&1
 env:
   global:
-    secure: vIyvkwsHFpHc6MhCsMyXLtz1hSASYmJ4C6DPMU5+w9unRNSxaDBnVt8jE5PM7/avX1psrVPZU0r8vn1LQLeZTGcz9fgr/PNLg4Gu54lcoi3UdVyZYV8R+3J5AMqKgpyFQliaoSQ5qP9FuE0tnpQrACgpFn7HrhpeFJvxVX3IL5c=
+    secure: bAdIqjrnU4Vcsa1vF7svhbOq4FRkPUbmbELjMmOdU+nxdZNRQozc6ioVNa/mQZOlW33vgSiFfS9V+qJdWsEe4UjlTlwD5CHXnvc0+279wRhFSZ+MyM3M+YEE1/sMX7dRxHCamSwbz3OSYTatte4yTzt4VnW9eoBYq347aBvw5Fc=
