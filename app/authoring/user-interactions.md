@@ -110,7 +110,7 @@ module.exports = generators.Base.extend({
     // This method adds support for a `--coffee` flag
     this.option('coffee');
     // And you can then access it later on this way; e.g.
-    this.scriptSuffix = (this.options.coffee ? ".coffee", ".js");
+    this.scriptSuffix = (this.options.coffee ? ".coffee": ".js");
   }
 });
 ```
