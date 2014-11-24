@@ -16,13 +16,13 @@ For example, it is important to never use `console.log()` or `process.stdout.wri
 
 ### Prompts
 
-Prompts are the main way a generator interacts with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer to the [module API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
+Prompts are the main way a generator interacts with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer [to its API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
 
-You'll call the prompt method this way:
+You call the prompt method this way:
 
 ```js
 module.exports = generators.Base.extend({
-  promptTask: function () {
+  prompting: function () {
     var done = this.async();
     this.prompt({
       type    : 'input',
@@ -37,7 +37,26 @@ module.exports = generators.Base.extend({
 })
 ```
 
-Note here that we use the `prompt` queue to ask for feedback from the user.
+Note here that we use the [`prompting` queue](/authoring/running-context.html) to ask for feedback from the user.
+
+#### Remembering user preferences
+
+A user give the same input to some questions every time he run your generator. For these questions, you probably want to remember what the user answered previously and use that answer as the new `default`.
+
+Yeoman extend Inquirer.js API by adding a `store` property to question objects. This property allow you to specify that from now on you want to use the answer as the default value. This can be done this way:
+
+```js
+this.prompt({
+  type    : 'input',
+  name    : 'username',
+  message : 'What\'s your Github username',
+  store   : true
+}, callback);
+```
+
+_Note:_ Providing a default value will prevent the user from returning an empty answers.
+
+If you're only looking to store data without being directly tied to the prompt, make sure to checkout [the Yeoman storage documentation](/authoring/storage.html).
 
 ### Arguments
 
