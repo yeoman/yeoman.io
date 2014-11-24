@@ -6,53 +6,127 @@ sidebar: sidebars/authoring.html
 excerpt: How to interact with the file system in efficient ways
 ---
 
-## Location contexts
+## Location contexts and paths
 
-Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are important as most file utility methods will act on file path relative to these contexts.
+Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are folders your generator will most likely read from and write to.
 
-The first context is the _destination context_. The destination is the folder in which yeoman will be scaffolding a new application.
+### Destination context
 
-The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file define the root of a project, this allows the end user to run commands in subdirectories and have them work as expected.
+The first context is the _destination context_. The destination is the folder in which Yeoman will be scaffolding a new application. It is your user project folder, it is where you'll write most of the scaffolding.
 
-You can get the _destination path_ using `generator.destinationRoot()`. And you can change it using `generator.destinationRoot('new/path')`.
+The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file define the root of a Yeoman project. This file allows your user to run commands in subdirectories and have them work on the project. This ensure a consistent behaviour for the end user.
 
-The second context is the _source context_. This is the folder in which you store your templates files. It is usually the folder from which you'll read.
+You can **get** the _destination path_ using `generator.destinationRoot()` or by joining a path using `generator.destinationPath('sub/path')`.
 
-The source context is defined as `../templates` by default. You can get its value using `generator.sourceRoot()`, and you can change it using `generator.sourceRoot('new/path')`.
+```js
+// Given destination root is ~/projects
+generators.Base.extend({
+  paths: function () {
+    this.destinationRoot();
+    // returns '~/projects'
+
+    this.destinationPath('index.js');
+    // returns '~/projects/index.js'
+  }
+});
+```
+
+And you can manually set it using `generator.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
+
+### Template context
+
+The template context is the folder in which you store your templates files. It is usually the folder from which you'll read and copy.
+
+The template context is defined as `./templates/` by default. You can overwrite this default by using `generator.sourceRoot('new/template/path')`.
+
+You can get the path value using `generator.sourceRoot()` or by joining a path using `generator.templatePath('app/index.js')`.
+
+```js
+generators.Base.extend({
+  paths: function () {
+    this.sourceRoot();
+    // returns './templates'
+
+    this.templatePath('index.js');
+    // returns '~/templates/index.js'
+  }
+});
+```
+
+## An "in memory" file system
+
+Yeoman is very careful when in comes to overwriting users files. Basically, every write happening on a pre-exiting file will go through a conflict resolution process. This process require the user validate every file write overwriting content to its file.
+
+This behaviour prevent bad surprises and limit the risk of errors. On the other hand, this mean every file is written asynchronously to the disk.
+
+As asynchronous API are harder to use, Yeoman provide a synchronous file-system API where every files get written to an [in-memory file system](https://github.com/sboudrias/mem-fs) and are only written to disk once when Yeoman is done running.
+
+This memory file system is shared between all [composed generators](/authoring/composability.html).
 
 ## File utilities
 
-Based on the two context described before, a Yeoman generator exposes two file utilities objects.
+Generators expose every file methods on `this.fs`. This object is an instance of [mem-fs editor](https://github.com/sboudrias/mem-fs-editor) - make sure to check the [module documentation](https://github.com/sboudrias/mem-fs-editor) for every methods available.
 
-1. `this.dest` which is relative to `this.destinationRoot()`
-2. `this.src` which is relative to `this.sourceRoot()`
+### Example: Copying a template file
 
-There's also a top level `file` property which is not linked to any path. You can require it this way: `var file = require('yeoman-generator').file`.
+Here's an example where we'd want to copy and process a template file.
 
-These three objects are instances of [File-utils module](https://github.com/SBoudrias/file-utils), a `grunt.file` like standalone API. Refer to their documentation for a list of available methods.
+Given the content of `./templates/index.html` is:
 
-### Copying a file
-
-To copy a file from your `templates/` folder to the destination folder:
-
-```js
-this.src.copy('Gruntfile.js', 'Gruntfile.js');
+```html
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+</html>
 ```
 
-### Reading a json file
+We'll then use the [`copyTpl`](https://github.com/sboudrias/mem-fs-editor#copytplfrom-to-context-settings) method to copy the file while processing the content as a template. `copyTpl` is using [Lodash template syntax](https://lodash.com/docs#template).
 
 ```js
-var pkg = this.dest.readJSON('package.json');
+generators.Base.extend({
+  writing: function () {
+    this.fs.copyTpl(
+      this.templatePath('index.html'),
+      this.destinationPath('public/index.html'),
+      { title: 'Templating with Yeoman' }
+    );
+  }
+});
 ```
 
-## Legacy utilities
+Once the generator is done running, `public/index.html` will contains:
 
-Yeoman also expose a set of legacy file utilities. You can refer to the [API documentation](http://yeoman.github.io/generator/) to learn more about them. Some feature of the legacy system may still be missing from [File-utils](https://github.com/SBoudrias/file-utils), so feel free to rely on these methods when necessary.
+```html
+<html>
+  <head>
+    <title>Templating with Yeoman</title>
+  </head>
+</html>
+```
 
-Our goal however is to eventually deprecate these legacy methods. If you find missing methods you need, then please consider sending a Pull Request to [File-utils](https://github.com/SBoudrias/file-utils) and help us close the bridge between our legacy and our new system!
+## Legacy File utilities
 
-## Writing existing files
+Yeoman also expose a set of older file utilities. You can refer to the [API documentation](http://yeoman.github.io/generator/actions.html) to learn more about them.
 
-Updating an existing file is not always a simple task. The most reliable way to do so is to parse the file AST ( [abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) ) and edit it. The issue here is that playing with AST is verbose and quite hard to grasp.
+The legacy file utilities have been back ported to use the in memory file system. As so, they're safe to use. Although be careful, these methods make a lot of assumptions and as a result will produce edge cases. When possible, prefer the more explicit new `fs` API.
 
-To help simplify such a case, Yeoman provides some common helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+The legacy file system make the assumption you want to write to the _destination context_ and you want to read from the _template context_. As so, they don't require you to pass in a complete path, they'll resolve them automatically.
+
+Also, legacy methods like `template` and `copy` will automatically process some templates passing the generator (e.g. `this`) as the data object.
+
+## Tip: Writing existing files
+
+Updating a pre-existing file is not always a simple task. The most reliable way to do so is to parse the file AST ([abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree)) and edit it. The main issue with this solution is that editing an AST can be verbose and a bit hard to grasp.
+
+Some popular AST parsers are:
+
+- [Cheerio](https://github.com/cheeriojs/cheerio) for parsing HTML.
+- [Esprima](https://github.com/ariya/esprima) for parsing JavaScript - you might be interested in [AST-Query](https://github.com/SBoudrias/ast-query) which provide a lower level API to edit Esprima syntax tree.
+- For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
+
+Yeoman also provides some common existing file edition helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+
+## Tip: Writing a Gruntfile
+
+Refer to the dedicated [Gruntfile documentation](/authoring/gruntfile.html).
