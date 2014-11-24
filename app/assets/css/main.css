@@ -741,6 +741,16 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   min-width: 200px;
 }
 
+.discovery-page .desc {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .discovery-page .author {
   min-width: 150px;
 }
