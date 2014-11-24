@@ -115,7 +115,7 @@ The legacy file system make the assumption you want to write to the _destination
 
 Also, legacy methods like `template` and `copy` will automatically process some templates passing the generator (e.g. `this`) as the data object.
 
-## Tip: Writing existing files
+## Tip: Update existing files content
 
 Updating a pre-existing file is not always a simple task. The most reliable way to do so is to parse the file AST ([abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree)) and edit it. The main issue with this solution is that editing an AST can be verbose and a bit hard to grasp.
 
@@ -125,7 +125,9 @@ Some popular AST parsers are:
 - [Esprima](https://github.com/ariya/esprima) for parsing JavaScript - you might be interested in [AST-Query](https://github.com/SBoudrias/ast-query) which provide a lower level API to edit Esprima syntax tree.
 - For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
-Yeoman also provides some common existing file edition helper methods. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+Yeoman also provides some common html file edition helpers. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
+
+Parsing code file with RegEx is perilous path, and before choosing to do so, you should read [this CS anthopological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If even then you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users code.
 
 ## Tip: Writing a Gruntfile
 
