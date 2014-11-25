@@ -302,8 +302,10 @@ module.exports = function (grunt) {
       },
       travis: {
         options: {
-          remote: 'https://SBoudrias:' + process.env.GH_TOKEN + '@github.com/yeoman/yeoman.io.git',
+          remote: 'https://github.com/yeoman/yeoman.io.git',
           branch: 'gh-pages',
+          login: 'SBoudrias',
+          token: process.env.GH_TOKEN,
           commit: true,
           push: true
         }
