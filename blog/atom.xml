@@ -4,12 +4,86 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-11-25T19:15:58+00:00</updated>
+  <updated>2014-12-02T23:04:07+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
   </author>
 
+  
+  <entry>
+    <title>Why Bower_Components was moved to a Project's Root Directory</title>
+    <link href="http://yeoman.io/blog/bower_components-in-project-root.html"/>
+    <updated>2014-12-01T00:00:00+00:00</updated>
+    <id>http://yeoman.io/blog/bower_components-in-project-root</id>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;this is a post by team member &lt;a href=&quot;https://github.com/eddiemonge&quot;&gt;Eddie Monge Jr&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; Because I said so. lol j/k. &lt;code&gt;/app&lt;/code&gt; should be for your files, not third party libraries.&lt;/p&gt;
+
+&lt;p&gt;There has been a few questions and discussions regarding the decision to move the &lt;strong&gt;bower_components&lt;/strong&gt; folder outside of the &lt;code&gt;/app&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Matija (&lt;a href=&quot;https://github.com/silvenon&quot;&gt;silvenon&lt;/a&gt;) summarized some of the thoughts nicely:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I want the &lt;code&gt;/app&lt;/code&gt; folder to be for user-generated stuff&lt;/li&gt;
+&lt;li&gt;As external dependencies, I feel they are better located externally. Next to node_modules&lt;/li&gt;
+&lt;li&gt;It&amp;#39;s hard to run any command in the terminal which goes through all files, (like tree), because you always have to ignore bower_components&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here are those reasons point by point with some explanations.&lt;/p&gt;
+
+&lt;h2&gt;User Generated Files&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I want the &lt;code&gt;/app&lt;/code&gt; folder to be for user-generated stuff&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are people who edit files in the &lt;code&gt;/app&lt;/code&gt; folder then wonder why their changes disappear when they do a &lt;code&gt;bower update/install&lt;/code&gt;. Not just beginners but also people who should know better. They think &amp;quot;oh its in the &lt;code&gt;/app&lt;/code&gt; folder so I can freely edit it without worrying about it&amp;quot;. That was the main expectation this change wanted to make true.&lt;/p&gt;
+
+&lt;h2&gt;External Dependencies&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;As external dependencies, I feel they are better located externally. Next to node_modules&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This was the single biggest reason for this change. &lt;code&gt;/app&lt;/code&gt; should be for the &lt;em&gt;user&lt;/em&gt; web app/site files, emphasis on &lt;strong&gt;user&lt;/strong&gt;. It shouldn&amp;#39;t be for external or third-party files. It is the responsibility of the tool authors to make having the files located elsewhere completely painless (and even transparent) to end users. Make the tools deal with the complexity, and give the users an easy workflow.&lt;/p&gt;
+
+&lt;p&gt;There is already a paradigm of this existing in Ruby on Rails. Not saying RoR is a good example to follow, but it is popular enough to say its what the community expects to see. It has also been in the &lt;a href=&quot;https://github.com/yeoman/generator-angular&quot;&gt;Angular generator&lt;/a&gt; for awhile now and there haven&amp;#39;t been problems or complaints about it for a long time. Some people try to PR (pull request) moving it into the &lt;code&gt;/app&lt;/code&gt; folder because they think it is supposed to be there but when pointed out how it works, they generally seem to be happy with the change.&lt;/p&gt;
+
+&lt;h2&gt;Tooling&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It&amp;#39;s hard to run any command in the terminal which goes through all files, (like tree), because you always have to ignore bower_components&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It is easier to do a global search in the &lt;code&gt;/app&lt;/code&gt; folder when it isn&amp;#39;t cluttered with external libraries. Although a counter to that is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If your command line tools give you data you don&amp;#39;t need I&amp;#39;d say you should use them properly - &lt;a href=&quot;https://github.com/Munter&quot;&gt;Peter Müller&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Which is a valid point. It is easy enough to set up a filter to exclude those files. But this kind of goes with the point that tools should get out of the way of the user. Bower is another tool and having it put its files in the users files is not getting out of the way, it&amp;#39;s adding complexity.&lt;/p&gt;
+
+&lt;h2&gt;Downsides&lt;/h2&gt;
+
+&lt;p&gt;Nothing is perfect (well almost nothing) so some downsides should be mentioned.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Requires a build/serve system to work (like the one generated by the official Yeoman generators).&lt;/p&gt;
+
+&lt;p&gt;Counter argument: if Sass/Coffee/Autoprefixer/whatever else is needed then a build system is probably required anyway. If not, or if a pure flat site is wanted, then &lt;code&gt;grunt/gulp/whatever build&lt;/code&gt; the site and use the outputted files. Yeoman is supposed to be a starting point, not the be-all-end-all build system/workflow.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Requires more configuration complexity.&lt;/p&gt;
+
+&lt;p&gt;Counter argument: Doesn&amp;#39;t Sass require some setup? Doesn&amp;#39;t asset-graph require some complexity? Complexity in the initial setup isn&amp;#39;t bad because once configured, it usually doesn&amp;#39;t change much or often later. The tools could also be made to be smarted about figuring things out so configuration might not even be required (convention over configuration).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Hopefully some compelling reasons have been provided for the change and persuaded some, if not all, nay-sayers as to the wisdom of the change. If not, well this change isn&amp;#39;t the only way to do things. If an individual generator wanted to do things differently thats acceptable, if not encouraged. Trying new things is the way change happens and can sometimes lead to better ways of doing things. Sometimes trying a different way will lead you back to the original way and further reinforce why it was that way to begin with.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Yeoman generator version 0.18.0 - Release announcement</title>
