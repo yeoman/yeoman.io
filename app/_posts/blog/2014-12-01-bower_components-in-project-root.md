@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Bower Components in Project Root
+title: Why Bower_Components was moved to a Project's Root Directory
 author: Eddie Monge Jr
 ---
 
