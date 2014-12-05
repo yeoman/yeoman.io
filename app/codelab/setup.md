@@ -12,7 +12,7 @@ sidebar: sidebars/codelab.html
   <img src="/assets/img/yeoman-004.png">
 </p>
 
-Most of your interactions with Yeoman will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or `cmd.exe` if you are on Windows.
+Most of your interactions with Yeoman will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or [`cmder`](http://bliker.github.io/cmder/) *(preferably)* / PowerShell / `cmd.exe` if you are on Windows.
 
 ## Install prerequisites
 

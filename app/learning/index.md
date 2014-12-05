@@ -33,7 +33,7 @@ $ npm install -g yo bower
 
 *npm is the package manager for [Node.js](http://nodejs.org/) and comes bundled with it.*
 
-*On Windows, we suggest you use an improved command line tool such as Console2 or PowerShell to improve the experience.*
+*On Windows, we suggest you use an improved command line tool such as [`cmder`](http://bliker.github.io/cmder/) or PowerShell to improve the experience.*
 
 
 ### Basic scaffolding
