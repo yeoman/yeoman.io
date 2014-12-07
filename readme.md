@@ -27,7 +27,6 @@ cd yeoman.io
 npm install
 gem install bundler
 bundle install
-bower install
 ```
 
 Now you're ready to do some work!
