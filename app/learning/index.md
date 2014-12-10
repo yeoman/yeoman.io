@@ -26,7 +26,7 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 First, you'll need to install `yo` and other required tools:
 
 ```sh
-$ npm install -g yo bower
+npm install -g yo bower
 ```
 
 *see the section about **Bower** below for more information*
@@ -41,7 +41,7 @@ $ npm install -g yo bower
 To scaffold a web application, you'll need to install the `generator-webapp` generator:
 
 ```sh
-$ npm install -g generator-webapp
+npm install -g generator-webapp
 ```
 
 This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these.
@@ -49,14 +49,14 @@ This is the default web application generator that will scaffold out a project c
 Now that the generator is installed, create a directory for your new project
 
 ```sh
-$ mkdir my-yo-project
+mkdir my-yo-project
 $ cd my-yo-project
 ```
 
 and then run:
 
 ```sh
-$ yo webapp
+yo webapp
 ```
 
 Each project created with yo will also pull in relevant Grunt tasks which the community feels is needed or useful for your workflow.
@@ -69,19 +69,19 @@ The webapp generator is considered the simplest possible start for a web app. We
 As always, before using a new generator, you must install it from npm first:
 
 ```sh
-$ npm install -g generator-angular
+npm install -g generator-angular
 ```
 
 After that, create a new directory for your application, then run:
 
 ```sh
-$ yo angular
+yo angular
 ```
 
 Many generators allow you to customize your application by using flags from the initial command. As an example, with `generator-angular`, you can enter:
 
 ```sh
-$ yo angular --minsafe
+yo angular --minsafe
 ```
 
 Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Karma unit tests.
@@ -94,7 +94,7 @@ Some generators can also be used to scaffold further pieces of your application 
 In the AngularJS framework, for example, your application is made up of a number of pieces including controllers, directives and filters. You can actually scaffold out any of these pieces (and more) during your development workflow as shown below:
 
 ```sh
-$ yo angular:controller myController
+ yo angular:controller myController
 $ yo angular:directive myDirective
 $ yo angular:filter myFilter
 $ yo angular:service myService
@@ -176,7 +176,7 @@ $ grunt
 These commands can be used together with the yo binary for a seamless development workflow:
 
 ```sh
-$ yo webapp
+yo webapp
 $ grunt serve
 $ grunt test
 $ grunt
