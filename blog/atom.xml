@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2014-12-17T04:24:39+00:00</updated>
+  <updated>2014-12-17T12:31:03+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -117,12 +117,11 @@
 &lt;p&gt;This system is way simpler than the current legacy method and doesn&amp;#39;t do any kind of magic. It won&amp;#39;t automatically compile templates (use &lt;code&gt;this.fs.copyTpl()&lt;/code&gt; for this), it won&amp;#39;t pass &lt;code&gt;this&lt;/code&gt; as template context, and it won&amp;#39;t automatically assume paths are relative to anything.&lt;/p&gt;
 
 &lt;p&gt;An example/usual usage would be:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt; js
-this.fs.copyTpl(
-  this.templatePath(&amp;#39;mocha/base-test.js&amp;#39;),
-  this.destinationPath(&amp;#39;test/index.js&amp;#39;),
-  { projectName: &amp;#39;my-awesome-module&amp;#39; }
-)
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;copyTpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;templatePath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mocha/base-test.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;destinationPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;test/index.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;projectName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;my-awesome-module&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As you can see, we also added two new paths helpers:&lt;/p&gt;
 
