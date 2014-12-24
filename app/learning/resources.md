@@ -25,7 +25,6 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Adobe - Yeoman at your service](http://www.adobe.com/devnet/html5/articles/yeoman-at-your-service.html)
 * [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/html/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
-* [Using Yeoman with Jade](https://gist.github.com/kevva/5201657)
 * [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
 
 # Videos
