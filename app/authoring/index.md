@@ -83,7 +83,7 @@ Once you have this structure in place, it's time to write the actual generator.
 
 Yeoman offers base generators which you can extend to implement your own behavior. These base generators will add most of the functionality you'd expect to ease your task.
 
-Here's how you'd extend a base generator in app/index.js:
+Here's how you'd extend a base generator in app/index.js or sub-generator/index.js:
 
 ```js
 var generators = require('yeoman-generator');
