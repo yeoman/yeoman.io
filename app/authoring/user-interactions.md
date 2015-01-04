@@ -41,9 +41,9 @@ Note here that we use the [`prompting` queue](/authoring/running-context.html) t
 
 #### Remembering user preferences
 
-A user give the same input to some questions every time he run your generator. For these questions, you probably want to remember what the user answered previously and use that answer as the new `default`.
+A user may give the same input to certain questions every time he runs your generator. For these questions, you probably want to remember what the user answered previously and use that answer as the new `default`.
 
-Yeoman extend Inquirer.js API by adding a `store` property to question objects. This property allow you to specify that from now on you want to use the answer as the default value. This can be done this way:
+Yeoman extends the Inquirer.js API by adding a `store` property to question objects. This property allow you to specify that from now on you want to use the answer as the default value. This can be done as follows:
 
 ```js
 this.prompt({
