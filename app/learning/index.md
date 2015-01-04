@@ -9,7 +9,7 @@ The Yeoman workflow is comprised of three core tools for improving your producti
 
 * [yo](https://github.com/yeoman/yo) - the scaffolding tool from Yeoman
 * [bower](http://bower.io) - the package management tool
-* [grunt](http://gruntjs.com) - the build tool
+* A build tool, such as [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/).
 
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.
 
@@ -26,10 +26,10 @@ Yo is maintained by the Yeoman project and offers web application scaffolding, u
 First, you'll need to install `yo` and other required tools:
 
 ```sh
-npm install -g yo bower grunt-cli
+npm install -g yo bower grunt-cli gulp
 ```
 
-*see the sections about __Bower__ and __Grunt__ below for more information*
+*see the sections about __Bower__, __Gulp__ and __Grunt__ below for more information*
 
 *npm is the package manager for [Node.js](http://nodejs.org/) and comes bundled with it.*
 
@@ -44,7 +44,7 @@ To scaffold a web application, you'll need to install the `generator-webapp` gen
 npm install -g generator-webapp
 ```
 
-This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these.
+This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these. This generator will use __Grunt__, while others may use __Gulp__ or other alternative set of build tools.
 
 Now that the generator is installed, create a directory for your new project
 
@@ -155,6 +155,31 @@ It’s as simple as that.
 
 *Your chosen generator may not include the grunt tasks "bower" and "wiredep". You can read more about how to install and use these at [grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs) and [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep).*
 
+## Gulp
+
+Gulp is a task-based command-line tool for JavaScript projects. It can be used to build projects, but also exposes several commands which you will want to use in your workflow. Many of these commands utilize Grunt tasks under the hood which are maintained by the Yeoman team.
+
+### Gulp commands
+
+```sh
+# Preview an app you have generated (with Livereload).
+$ gulp serve
+
+# Run the unit tests for an app.
+$ gulp test
+
+# Build an optimized, production-ready version of your app.
+$ gulp
+```
+
+These commands can be used together with the yo CLI for a seamless development workflow:
+
+```sh
+yo webapp
+$ gulp serve
+$ gulp test
+$ gulp
+```
 
 ## Grunt
 
@@ -173,7 +198,7 @@ $ grunt test
 $ grunt
 ```
 
-These commands can be used together with the yo binary for a seamless development workflow:
+These commands can be used together with the yo CLI for a seamless development workflow:
 
 ```sh
 yo webapp
