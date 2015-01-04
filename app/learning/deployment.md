@@ -5,7 +5,18 @@ title: Deploying a Yeoman Site
 sidebar: sidebars/learning.html
 ---
 
-Running `grunt build` generates an optimized version of your application in the `dist` directory. There are multiple ways to version and deploy this code to production.
+Running the `build` task generates an optimized version of your application in the `dist` directory. There are multiple ways to version and deploy this code to production.
+
+## Gulp-gh-pages
+
+Using [the `gulp-gh-pages` Gulp plugin](https://www.npmjs.com/package/gulp-gh-pages), you can let your application deploy using a specific task, such as `gulp deploy`. It takes various options:
+
+* The Git origin, this defaults to `origin`.
+* The branch to push to, defaults to `gh-pages`.
+* The commit message.
+* An option to specify if the branch should be pushed to the origin automatically.
+
+For more information you can always checkout [its readme](https://github.com/rowoot/gulp-gh-pages#readme).
 
 ## Grunt-build-control task
 

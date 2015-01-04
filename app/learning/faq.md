@@ -10,7 +10,7 @@ sidebar: sidebars/learning.html
 
 [What is a package manager?](#what-is-pkg-manager)
 
-[How does Yeoman differ from Grunt?](#yeoman-vs-grunt)
+[How does Yeoman differ from build tools, such as Grunt or Gulp?](#yeoman-vs-builders)
 
 [How does Yeoman differ from tools like Brunch or Ember-cli](#yeoman-vs-Ember-Brunch)
 
@@ -52,13 +52,13 @@ A command-line interface is a means for developers to interact with a system usi
 A package manager is a tool for automating the process of installing, upgrading, configuring and managing dependencies for projects. Good examples of package manager would be npm (Node.js), Bower (Web), Pypi (Python), Gem (Ruby), Composer (PHP), NuGet (.NET), etc.
 
 
-### <a name="yeoman-vs-grunt"> How does Yeoman differ from Grunt?</a>
+### <a name="yeoman-vs-builders"> How does Yeoman differ from build tools, such as Grunt or Gulp?</a>
 
-Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily. [Grunt.js](http://gruntjs.com) is one of these tools and powers our underlying build process and task plugin architecture.
+Yeoman builds upon a number of open-source tools to offer an opinionated workflow that helps developers achieve common tasks more easily. [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/) are task runners we use. These power our underlying build process and task plugin architecture.
 
-On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Bower integration. Yeoman takes care of configuring your Gruntfile and setup to support Sass, CoffeeScript and Require.js out of the box. With additional features like wiring, an improved `serve` and `init`.
+On top of this architecture, we've highly customized tasks, profiles and systems which work well together and also provide developers with features like our generator system and Bower integration. Yeoman takes care of configuring your config files and setups Sass, CoffeeScript and Require.js out of the box. With additional features like wiring, an improved `serve` and `init`.
 
-Developers are free to customize any Grunt tasks configured by Yeoman.
+Developers are free to customize any configurations initialized by Yeoman.
 
 
 ### <a name="yeoman-vs-Ember-Brunch"> How does Yeoman differ from tools like Brunch or Ember-cli?</a>
@@ -138,7 +138,7 @@ You can also add `yeoman_test` as an environment variable with any value to perm
 
 ### <a name="livereloading"> Can I use livereloading with a custom webserver?</a>
 
-You bet! You can remove the `connect` task from your Gruntfile and manually insert this snippet into your HTML:
+You bet! You can remove the `connect` task from your Gruntfile/Gulpfile and manually insert this snippet into your HTML:
 
 ```html
 <!-- livereload script -->
@@ -148,16 +148,16 @@ You bet! You can remove the `connect` task from your Gruntfile and manually inse
 </script>
 ```
 
-After that, simply run `grunt serve` like you normally would and enjoy automatic page refreshes.
+After that, simply run the `serve` task like you normally would and enjoy automatic page refreshes.
 
 
 ### <a name="cloning"> What should I do after cloning a web application generated with Yeoman?</a>
 
-Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run `grunt serve` and download the Javascript dependencies listed in the `bower.json` file, you need to run both:
+Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run the `serve` task and download the Javascript dependencies listed in the `bower.json` file, you need to run both:
 
 ```sh
 npm install
-bower install
+$ bower install
 ```
 
 And check if these folders are created correctly.
