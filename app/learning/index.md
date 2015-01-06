@@ -81,7 +81,7 @@ yo angular
 Many generators allow you to customize your application by using flags from the initial command. As an example, with `generator-angular`, you can enter:
 
 ```sh
-yo angular --minsafe
+yo angular --coffee
 ```
 
 Here, we are first generating the file structure for a basic web application and then writing a number of boilerplate files for a new AngularJS application on top of it. This includes boilerplate directives and controllers as well as scaffolded Karma unit tests.
