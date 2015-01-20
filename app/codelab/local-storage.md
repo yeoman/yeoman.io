@@ -78,9 +78,9 @@ angular
 While you’re in *app.js*, also configure `localStorageServiceProvider` to use `"ls"` as a localStorage name prefix so your app doesn’t accidently read todos from another app using the same variable names:
 
 ```js
-.config(['localStorageServiceProvider', function(localStorageServiceProvider){
+.config(function (localStorageServiceProvider) {
   localStorageServiceProvider.setPrefix('ls');
-}])
+})
 ```
 
 Our application module should now look like this:
@@ -99,9 +99,9 @@ angular
     'ui.sortable',
     'LocalStorageModule'
   ])
-  .config(['localStorageServiceProvider', function(localStorageServiceProvider){
+  .config(function (localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('ls');
-  }])
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
