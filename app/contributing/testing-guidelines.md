@@ -44,7 +44,7 @@ Class.exclude = function () {};
 Class.name = 'Yeoman';
 Class.prototype.find = function () {};
 
-// We'd had this test structure
+// We'd have this test structure
 describe('Class', function () {
   describe('.exclude()', function () {});
   describe('.name', function () {});
