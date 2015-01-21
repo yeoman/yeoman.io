@@ -57,9 +57,9 @@ generators.Base.extend({
 
 Yeoman is very careful when in comes to overwriting users files. Basically, every write happening on a pre-existing file will go through a conflict resolution process. This process require the user validate every file write overwriting content to its file.
 
-This behaviour prevent bad surprises and limit the risk of errors. On the other hand, this mean every file is written asynchronously to the disk.
+This behaviour prevents bad surprises and limits the risk of errors. On the other hand, this means every file is written asynchronously to the disk.
 
-As asynchronous API are harder to use, Yeoman provide a synchronous file-system API where every files get written to an [in-memory file system](https://github.com/sboudrias/mem-fs) and are only written to disk once when Yeoman is done running.
+As asynchronous APIs are harder to use, Yeoman provide a synchronous file-system API where every files get written to an [in-memory file system](https://github.com/sboudrias/mem-fs) and are only written to disk once when Yeoman is done running.
 
 This memory file system is shared between all [composed generators](/authoring/composability.html).
 
