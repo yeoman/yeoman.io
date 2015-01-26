@@ -48,7 +48,7 @@ generators.Base.extend({
     // returns './templates'
 
     this.templatePath('index.js');
-    // returns '~/templates/index.js'
+    // returns './templates/index.js'
   }
 });
 ```
