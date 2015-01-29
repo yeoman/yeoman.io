@@ -246,11 +246,11 @@ Navigation
   color: #fff;
   text-decoration: none;
   /* Transitions */
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .main-nav a.active {
@@ -267,8 +267,13 @@ Navigation
 }
 
 .main-nav > li > ul a {
-  padding: inherit 1em;
+  padding: .75em 1em .75em 2em;
 }
+
+.main-nav > li > ul a:before {
+  content: ' - '
+}
+
 
 /* Jumbotron
 ========================================================================== */
@@ -1193,6 +1198,10 @@ Modify as content requires.
 
   .main-nav > li > ul a:hover {
     border-left-color: rgba(221,0,42,1);
+  }
+
+  .main-nav > li > ul a:before {
+    content: '';
   }
 
   .jumbotron h2 {
