@@ -245,11 +245,7 @@ Navigation
   border-bottom: 1px dotted rgba(255,255,255,0.2);
   color: #fff;
   text-decoration: none;
-  /* Transitions */
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -395,11 +391,6 @@ One Line Install
 .one-line-install pre {
   padding: 0.5em 1em;
   background: #bfe6ed;
-  /* Border Radius */
-  -webkit-border-radius: 0.35em;
-  -moz-border-radius: 0.35em;
-  -ms-border-radius: 0.35em;
-  -o-border-radius: 0.35em;
   border-radius: 0.35em;
 }
 
@@ -430,11 +421,7 @@ Basic Tools
   margin-bottom: 0.5em;
   padding: 1em;
   text-align: center;
-  /* Transitions */
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -446,11 +433,7 @@ Basic Tools
 .basic-tools .bower:hover { background: rgba(255,204,47,0.6); }
 
 .basic-tools .tool-logo:active {
-  /* Box Shadow */
   -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
-  -moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
-  -ms-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
-  -o-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
   box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -473,11 +456,7 @@ Yeoman Team
   padding: 0.5em 1.5em;
   border-bottom: 1px dotted rgba(0,0,0,0.2);
   text-decoration: none;
-  /* Transitions */
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -495,11 +474,6 @@ Yeoman Team
 .team img {
   max-width: 3em;
   margin-right: 1em;
-  /* Border Radius */
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -569,11 +543,7 @@ Context/Local Nav
   border-bottom: 1px dotted rgba(0,0,0,0.2);
   text-decoration: none;
   color: #0096c7;
-  /* Transitions */
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -675,10 +645,6 @@ pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 code.prettyprint {
   font-size: 0.95em;
   background-color: #2e2e2e;
-  -webkit-border-radius: 0.35em;
-  -moz-border-radius: 0.35em;
-  -ms-border-radius: 0.35em;
-  -o-border-radius: 0.35em;
   border-radius: 0.35em;
 }
 
@@ -802,7 +768,6 @@ input.search {
   margin: 20px 0;
   font-size: 20px;
   padding: 10px;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1033,11 +998,6 @@ Modify as content requires.
     width: 42%;
     padding: 14px;
     margin: 0 3% 0 0;
-    /* Box Sizing */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -1104,11 +1064,6 @@ Modify as content requires.
     float: none;
     width: 100%;
     max-width: 100%;
-    /* Border Radius */
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
   }
 
@@ -1153,11 +1108,7 @@ Modify as content requires.
 
   .main-nav > li:hover {
     background: rgba(255,255,255,0.1);
-    /* Transitions */
     -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
-    -ms-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
     transition: all 0.8s ease;
   }
 
@@ -1188,11 +1139,7 @@ Modify as content requires.
     padding: 15px 20px;
     white-space: nowrap;
     border-left: 10px solid rgba(221,0,42,0);
-    /* Transitions */
     -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
@@ -1223,11 +1170,6 @@ Modify as content requires.
     padding: 2.5em 5em 1.6em 0.6em;
     background: #5aadbb url(/assets/img/rocket.png) 97% 70% no-repeat;
     background-size: 4em auto;
-    /* Box Sizing */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -1335,11 +1277,6 @@ Modify as content requires.
 
   .has-sidebar {
     padding-left: 20em;
-    /* Box Sizing */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -1461,12 +1398,6 @@ Modify as content requires.
     padding: 0.5em 1.5em;
     border-bottom: 1px dotted rgba(0,0,0,0.2);
     text-decoration: none;
-    /* Transitions */
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
   }
 
   .team li {
@@ -1494,11 +1425,6 @@ Modify as content requires.
   .team img {
     max-width: 5em;
     margin-right: 1em;
-    /* Border Radius */
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
   }
 }
