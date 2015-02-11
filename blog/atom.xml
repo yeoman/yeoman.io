@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2015-02-08T12:12:34+00:00</updated>
+  <updated>2015-02-11T17:37:54+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -721,7 +721,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/gulp-ngmin&quot;&gt;gulp-ngmin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Kagami/gulp-ng-annotate&quot;&gt;gulp-ng-annotate&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/gulp-react&quot;&gt;gulp-react&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/gulp-vulcanize&quot;&gt;gulp-vulcanize&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
