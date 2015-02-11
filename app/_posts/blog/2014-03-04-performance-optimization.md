@@ -279,7 +279,7 @@ The following benchmarking tasks are useful to integrate as a part of Continuous
 
 #### Gulp
 
-* [gulp-ngmin](https://github.com/sindresorhus/gulp-ngmin)
+* [gulp-ng-annotate](https://github.com/Kagami/gulp-ng-annotate)
 * [gulp-react](https://github.com/sindresorhus/gulp-react)
 * [gulp-vulcanize](https://github.com/sindresorhus/gulp-vulcanize)
 
