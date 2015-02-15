@@ -35,63 +35,66 @@
     $('pre code').addClass('prettyprint');
     window.prettyPrint();
 
-    $.getJSON('https://yeoman-generator-list.herokuapp.com', function (modules) {
-      var blocklist = [
-        'generator-express-angular', // haven't updated package.json
-        'ft-wp', // haven't updated package.json
-        'generator-angular-phonegap', // haven't updated package.json
-        'generator-angular-js', // haven't updated package.json,
-        'generator-ionicjs', // duplicate entry of generator-ionic
-        'generator-charcoal', // deprecated,
-        'generator-react-coffee-webpack', // duplicate entry of generator-react-webpack
-      ];
+    function getGeneratorList() {
+      return $.getJSON('https://yeoman-generator-list.herokuapp.com');
+    }
 
-      modules = _.filter(modules, function (el) {
-        return el !== null && el.description &&
-          blocklist.indexOf(el.name) === -1;
-      }).map(function (el) {
-        el.official = el.ownerWebsite === 'https://github.com/yeoman';
-        el.name = el.name.replace('generator-', '');
-        el.description = el.description.replace(/^(A |)Yeoman generator (for|to) /i, '');
-        el.description = capitalize(el.description).trim().replace(/\.$/, '');
-        el.stars = el.stars || el.watchers || 0;
-        el.website = el.website || el.html_url;
-        el.created = el.created || el.created_at;
-        el.updated = el.updated || el.updated_at;
-        return el;
-      });
+    function getBlackList() {
+      return $.getJSON('/blacklist.json');
+    }
 
-      var allModules = _.sortBy(modules, function (el) {
-        return el.stars;
-      }).reverse();
+    $.when(getGeneratorList(), getBlackList())
+      .done(function (getGeneratorListArgs, getBlackListArgs) {
 
-      var allTpl = _.template($('#plugins-all-template').html(), {
-        modules: allModules
-      });
+        var modules = getGeneratorListArgs[0];
+        var blocklist = getBlackListArgs[0];
 
-      $('#loading').remove();
-      $('#plugins-all').append(allTpl).find('.search').show();
-
-      var list = new List('plugins-all', {
-        valueNames: [
-          'name',
-          'desc',
-          'author',
-          'updated',
-          'stars'
-        ]
-      });
-
-      if (list.listContainer) {
-        $('#plugins-all .updated time').timeago();
-
-        list.on('updated', function () {
-          $('#plugins-all .updated time').timeago();
-          // If empty show not found message and hide the table head.
-          $('.table thead').toggle(list.matchingItems.length !== 0);
-          $('#search-notfound').toggle(list.matchingItems.length === 0);
+        modules = _.filter(modules, function (el) {
+          return el !== null && el.description && blocklist.indexOf(el.name) === -1;
+        }).map(function (el) {
+          el.official = el.ownerWebsite === 'https://github.com/yeoman';
+          el.name = el.name.replace('generator-', '');
+          el.description = el.description.replace(/^(A |)Yeoman generator (for|to) /i, '');
+          el.description = capitalize(el.description).trim().replace(/\.$/, '');
+          el.stars = el.stars || el.watchers || 0;
+          el.website = el.website || el.html_url;
+          el.created = el.created || el.created_at;
+          el.updated = el.updated || el.updated_at;
+          return el;
         });
-      }
-    });
+
+        var allModules = _.sortBy(modules, function (el) {
+          return el.stars;
+        }).reverse();
+
+        var allTpl = _.template($('#plugins-all-template').html(), {
+          modules: allModules
+        });
+
+        $('#loading').remove();
+        $('#plugins-all').append(allTpl).find('.search').show();
+
+        var list = new List('plugins-all', {
+          valueNames: [
+            'name',
+            'desc',
+            'author',
+            'updated',
+            'stars'
+          ]
+        });
+
+        if (list.listContainer) {
+          $('#plugins-all .updated time').timeago();
+
+          list.on('updated', function () {
+            $('#plugins-all .updated time').timeago();
+            // If empty show not found message and hide the table head.
+            $('.table thead').toggle(list.matchingItems.length !== 0);
+            $('#search-notfound').toggle(list.matchingItems.length === 0);
+          });
+        }
+
+      });
   });
 })(window, jQuery);
