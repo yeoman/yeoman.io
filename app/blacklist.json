@@ -5,5 +5,8 @@
   "generator-angular-js",
   "generator-ionicjs",
   "generator-charcoal",
-  "generator-react-coffee-webpack"
+  "generator-react-coffee-webpack",
+  "generator-onereq",
+  "generator-mtb-app",
+  "generator-meteor-abtx"
 ]
