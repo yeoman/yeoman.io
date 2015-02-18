@@ -67,7 +67,7 @@ This memory file system is shared between all [composed generators](/authoring/c
 
 Generators expose all file methods on `this.fs`, which is an instance of [mem-fs editor](https://github.com/sboudrias/mem-fs-editor) - make sure to check the [module documentation](https://github.com/sboudrias/mem-fs-editor) for all available methods.
 
-It is worth noting that although `this.fs` exposes `commit`, Yeoman doesn't support calling this method.  Yeoman calls this internally after the conflicts stage of the run loop.
+It is worth noting that although `this.fs` exposes `commit`, you should not call it in your generator.  Yeoman calls this internally after the conflicts stage of the run loop.
 
 ### Example: Copying a template file
 
