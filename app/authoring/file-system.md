@@ -55,7 +55,7 @@ generators.Base.extend({
 
 ## An "in memory" file system
 
-Yeoman is very careful when in comes to overwriting users files. Basically, every write happening on a pre-existing file will go through a conflict resolution process. This process require the user validate every file write overwriting content to its file.
+Yeoman is very careful when it comes to overwriting users files. Basically, every write happening on a pre-existing file will go through a conflict resolution process. This process require the user validate every file write overwriting content to its file.
 
 This behaviour prevents bad surprises and limits the risk of errors. On the other hand, this means every file is written asynchronously to the disk.
 
