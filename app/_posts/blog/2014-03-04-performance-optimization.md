@@ -134,7 +134,7 @@ In projects using CSS frameworks like Bootstrap, Foundation and so forth you typ
 * [gulp-uncss](https://github.com/ben-eb/gulp-uncss)
 
 <div class="note">
-    <strong>Note:</strong> A question developers regularly ask is whether UnCSS, or the process of removing unused CSS can also work with styles injected into the page dynamically. The answer is 'yes'. UnCSS works in tandem with PhantomJS in order to make this happen. Devs have seen anything between <a href="https://twitter.com/efexen/status/438672726996574209">10</a>-<a href="https://twitter.com/thisbetom/status/432575411138998273">120KB</a> in savings on a typical Bootstrap page and UnCSS also works wel with other frameworks.
+    <strong>Note:</strong> A question developers regularly ask is whether UnCSS, or the process of removing unused CSS can also work with styles injected into the page dynamically. The answer is 'yes'. UnCSS works in tandem with PhantomJS in order to make this happen. Devs have seen anything between <a href="https://twitter.com/efexen/status/438672726996574209">10</a>-<a href="https://twitter.com/thisbetom/status/432575411138998273">120KB</a> in savings on a typical Bootstrap page and UnCSS also works well with other frameworks.
 </div>
 
 ## Inline CSS
