@@ -30,6 +30,10 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   "name": "generator-name",
   "version": "0.1.0",
   "description": "",
+  "files": [
+    "app",
+    "router"
+  ],
   "keywords": ["yeoman-generator"],
   "dependencies": {
     "yeoman-generator": "^0.17.3"
@@ -40,6 +44,8 @@ Once inside your generator folder, create a `package.json` file. This file is a 
 The `name` property must be prefixed by `generator-`. The `keywords` property must contain `"yeoman-generator"` and the repo must have a description to be indexed by our [generators page](/generators).
 
 You should make sure you set the latest version of `yeoman-generator` as a dependency. You can do this by running: `npm install --save yeoman-generator`.
+
+The `files` property must be an array of files and directories that is used by your generator.
 
 Add other [`package.json` properties](https://www.npmjs.org/doc/files/package.json.html) as needed.
 
