@@ -85,7 +85,7 @@ The previous example can be written as follows:
 
 ## Extending generator
 
-Once you have this structure in place, it's time to write the actual generator.
+Once you have this structure in place, it's time to write the actual generator in `app/index.js`.
 
 Yeoman offers base generators which you can extend to implement your own behavior. These base generators will add most of the functionality you'd expect to ease your task.
 
