@@ -97,7 +97,7 @@ generators.Base.extend({
 });
 ```
 
-Once the generator is done running, `public/index.html` will contains:
+Once the generator is done running, `public/index.html` will contain:
 
 ```html
 <html>
