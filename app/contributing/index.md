@@ -33,7 +33,7 @@ Checkout out [our github organization](https://github.com/yeoman) to find the re
 
 ## The plugins and modules
 
-The core team maintains a couple node modules and a bunch of Grunt/Gulp plugins.
+The core team maintains a couple node modules and a bunch of Grunt plugins.
 
 - [grunt-usemin](https://github.com/yeoman/grunt-usemin)
 - [grunt-filerev](https://github.com/yeoman/grunt-filerev)
