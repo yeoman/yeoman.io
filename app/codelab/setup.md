@@ -30,6 +30,12 @@ node --version && npm --version
 
 If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](http://nodejs.org/download/).
 
+The [npm](https://www.npmjs.com/) package manager is bundled with Node, although you might need to update it. Some Node versions ship with rather old versions of npm. You can update npm using this command:
+
+```sh
+npm install --global npm@latest
+```
+
 You can check if you have Git installed by typing:
 
 ```sh
