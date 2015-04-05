@@ -54,22 +54,6 @@ this.composeWith('backbone:route', {}, {
 
 `require.resolve()` returns the path from where Node.js would load the provided module.
 
-## `generator.hookFor()`
-
-`hookFor` is like `composeWith()` except that `hookFor` is overridable by the end user.
-
-When creating a `hookFor`, give it a name like `test-framework`. With this name, the user can specify a custom generator to run as a command line option. For example, the user would run `yo generator --test-framework=jasmine` to compose with the `generator-jasmine`. If the user does not provide an option, then a default generator runs.
-
-As `hookFor` defines new command line options, it can **only run inside the constructor** method.
-
-The API looks like this:
-
-```js
-this.hookFor('test-framework', {
-  as: 'mocha' // In this case, `mocha` will be the default
-});
-```
-
 ## dependencies or peerDependencies
 
 *npm* allows three types of dependencies:
