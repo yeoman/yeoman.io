@@ -49,9 +49,9 @@ There are a number of Grunt tasks available that can help generate multi-resolut
 #### Grunt
 
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images) - use this along with [Imager.js](https://github.com/BBC-News/Imager.js/), `<picture>` or the picturefill [polyfill](https://github.com/jansepar/picturefill).
-* [grunt-clowncar](https://npmjs.org/package/grunt-clowncar)
+* [grunt-clowncar](https://www.npmjs.com/package/grunt-clowncar)
 
-In addition, if you need to just resize/normalize images that are large in dimension, you can use [grunt-image-resize](https://www.npmjs.org/package/grunt-image-resize).
+In addition, if you need to just resize/normalize images that are large in dimension, you can use [grunt-image-resize](https://www.npmjs.com/package/grunt-image-resize).
 
 <div class="note">
 <strong>Note:</strong> Tim Kaldec's research into responsive images has <a href="http://timkadlec.com/2013/06/why-we-need-responsive-images/">suggested</a> a responsive images strategy could lead to savings of up to 72% on image weight. Whilst it is still early to opt for a spec-compatible, cross-browser approach to responsive images the BBC and Guardian have been using Imager.js for this successfully.
@@ -68,17 +68,17 @@ SVG files created with editors usually contain a large quantity of redundant inf
 
 #### Gulp
 
-* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin)
+* [gulp-svgmin](https://www.npmjs.com/package/gulp-svgmin)
 
 ## Generate spritesheets
 
 #### Grunt
 
-* [grunt-spritesmith](https://www.npmjs.org/package/grunt-spritesmith)
+* [grunt-spritesmith](https://www.npmjs.com/package/grunt-spritesmith)
 
 #### Gulp
 
-* [gulp-sprite](https://www.npmjs.org/package/gulp-sprite)
+* [gulp-sprite](https://www.npmjs.com/package/gulp-sprite)
 
 ## Convert images to WebP
 
@@ -106,7 +106,7 @@ WebP is a recent image format that offers lossless and lossy compression for ima
 
 ### Gulp
 
-* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin)
+* [gulp-svgmin](https://www.npmjs.com/package/gulp-svgmin)
 
 We consider inlining images using Data URIs to now be an anti-pattern given their [poor](http://www.mobify.com/blog/data-uris-are-slow-on-mobile/) performance on mobile.
 
@@ -120,7 +120,7 @@ Minification eliminates unnecessary space, line breaks, indendation and characte
 
 #### Gulp
 
-* [gulp-cssmin](https://www.npmjs.org/package/gulp-cssmin)
+* [gulp-cssmin](https://www.npmjs.com/package/gulp-cssmin)
 
 ## Remove unused CSS
 
@@ -147,7 +147,7 @@ If the external CSS resources for a particular page are small, you can inline th
 
 #### Gulp
 
-* [gulp-inline-css](https://www.npmjs.org/package/gulp-inline-css/)
+* [gulp-inline-css](https://www.npmjs.com/package/gulp-inline-css/)
 
 ## Combine media queries
 
@@ -156,11 +156,11 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 #### Grunt
 
-* [grunt-combine-media-queries](https://npmjs.org/package/grunt-combine-media-queries)
+* [grunt-combine-media-queries](https://www.npmjs.com/package/grunt-combine-media-queries)
 
 #### Gulp
 
-* [gulp-combine-media-queries](https://www.npmjs.org/package/gulp-combine-media-queries)
+* [gulp-combine-media-queries](https://www.npmjs.com/package/gulp-combine-media-queries)
 
 ## JavaScript
 
@@ -205,14 +205,14 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 #### Gulp
 
-* [gulp-concat](https://www.npmjs.org/package/gulp-concat)
+* [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 
 
 ## General compression for files/folders
 
 #### Grunt
 
- * [grunt-contrib-compress](https://www.npmjs.org/package/grunt-contrib-compress)
+ * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
 
 #### Gulp
 
@@ -228,7 +228,7 @@ The Zopfli Compression Algorithm is an open-source compression library that gene
 
 #### Gulp
 
-* [gulp-zopfli](https://www.npmjs.org/package/gulp-zopfli)
+* [gulp-zopfli](https://www.npmjs.com/package/gulp-zopfli)
 
 <div class="note"><strong>Note:</strong> When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to <a href="https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS">Ilya Grigorik</a>, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.</div>
 
@@ -261,21 +261,21 @@ Gulp users should just use AssetGraph directly.
 
 ## Benchmarking
 
-The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use [gulp-grunt](https://npmjs.org/package/gulp-grunt) to run Grunt tasks from Gulp. We recommend:
+The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use [gulp-grunt](https://www.npmjs.com/package/gulp-grunt) to run Grunt tasks from Gulp. We recommend:
 
-* [grunt-pagespeed](https://npmjs.org/package/grunt-pagespeed) - fantastic for automating checking your PageSpeed score as a part of CI.
+* [grunt-pagespeed](https://www.npmjs.com/package/grunt-pagespeed) - fantastic for automating checking your PageSpeed score as a part of CI.
 * [grunt-topcoat-telemetry](https://github.com/topcoat/topcoat-grunt-telemetry) - get smoothness, load time and other stats from Telemetry as part of CI. This could help you set up a performance benchmarking dashboard similar to the one used by [TopCoat](http://bench.topcoat.io/)
-* [grunt-wpt](https://npmjs.org/package/grunt-wpt) - CI for WebPageTest scores
-* [grunt-phantomas](https://www.npmjs.org/package/grunt-phantomas) - response times for requests, responses, time to first image/CSS/JS, onDOMReady and more.
+* [grunt-wpt](https://www.npmjs.com/package/grunt-wpt) - CI for WebPageTest scores
+* [grunt-phantomas](https://www.npmjs.com/package/grunt-phantomas) - response times for requests, responses, time to first image/CSS/JS, onDOMReady and more.
 
 ## Framework Optimization
 
 
 #### Grunt
 
-* [grunt-ngmin](https://npmjs.org/package/grunt-ngmin)
-* [grunt-react](https://npmjs.org/package/grunt-react)
-* [grunt-vulcanize](https://npmjs.org/package/grunt-vulcanize) - excellent for concatenating and flatening Web Components.
+* [grunt-ngmin](https://www.npmjs.com/package/grunt-ngmin)
+* [grunt-react](https://www.npmjs.com/package/grunt-react)
+* [grunt-vulcanize](https://www.npmjs.com/package/grunt-vulcanize) - excellent for concatenating and flatening Web Components.
 
 #### Gulp
 

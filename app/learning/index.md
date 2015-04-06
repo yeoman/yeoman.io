@@ -8,7 +8,7 @@ sidebar: sidebars/learning.html
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:
 
 * [yo](https://github.com/yeoman/yo) - the scaffolding tool from Yeoman
-* A package manager, such as [bower](http://bower.io) or [npm](http://npmjs.org).
+* A package manager, such as [bower](http://bower.io) or [npm](https://www.npmjs.com/).
 * A build tool, such as [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/).
 
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.

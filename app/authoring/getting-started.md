@@ -38,7 +38,7 @@ The `name` property must be prefixed by `generator-`. The `keywords` property mu
 
 You should make sure you set the latest version of `yeoman-generator` as a dependency. You can do this by running: `npm install --save yeoman-generator`.
 
-Add other [`package.json` properties](https://www.npmjs.org/doc/files/package.json.html) as needed.
+Add other [`package.json` properties](https://www.npmjs.com/doc/files/package.json.html) as needed.
 
 ### Folder tree
 

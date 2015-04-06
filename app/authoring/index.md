@@ -47,7 +47,7 @@ You should make sure you set the latest version of `yeoman-generator` as a depen
 
 The `files` property must be an array of files and directories that is used by your generator.
 
-Add other [`package.json` properties](https://www.npmjs.org/doc/files/package.json.html) as needed.
+Add other [`package.json` properties](https://www.npmjs.com/doc/files/package.json.html) as needed.
 
 ### Folder tree
 

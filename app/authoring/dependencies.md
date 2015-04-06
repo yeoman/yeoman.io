@@ -6,7 +6,7 @@ sidebar: sidebars/authoring.html
 excerpt: Working with npm and Bower to manage external dependencies
 ---
 
-Once you've run your generators, you'll often want to run [npm](http://npmjs.org) and [Bower](http://bower.io) to install any additional dependencies your generators require.
+Once you've run your generators, you'll often want to run [npm](https://www.npmjs.com/) and [Bower](http://bower.io) to install any additional dependencies your generators require.
 
 As these tasks are very frequent, Yeoman already abstracts them away. We'll also cover how you can launch installation through other tools.
 
