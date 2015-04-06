@@ -8,12 +8,12 @@ title: Grunt And Gulp Tasks For Performance Optimization
 Delays in performance have the potential to impact user [engagement](https://twitter.com/igrigorik/status/300226402496704512), [experience](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/) and [revenue](https://speakerdeck.com/lara/design-for-performance).
 Thankfully, Google's 'Make The Web Faster' team recommend a set of best-practice [rules](https://developers.google.com/speed/docs/insights/rules) for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.
 
-If you have complete control over your server, an excellent [PageSpeed](https://developers.google.com/speed/pagespeed) [Module](https://developers.google.com/speed/pagespeed/module) for [Apache](https://developers.google.com/speed/pagespeed/module/download) and [Nginx](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source) exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.
+If you have complete control over your server, an excellent [PageSpeed](https://developers.google.com/speed/pagespeed/) [Module](https://developers.google.com/speed/pagespeed/module) for [Apache](https://developers.google.com/speed/pagespeed/module/download) and [Nginx](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source) exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.
 
 The below represent [Grunt](http://gruntjs.com) and [Gulp](http://gulpjs.com) tasks the Yeoman team regularly use in our projects. We’ve tried our best to keep this list focused and exclude previous suggestions which no-longer offer as much value, but there’s plenty here to help you keep your pages and their resources as small as possible.
 
 <div class="note">
-<strong>Note:</strong> Yeoman's <a href="http://github.com/yeoman/generator-webapp">Grunt</a> and <a href="http://github.com/yeoman/generator-gulp-webapp">Gulp</a> webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
+<strong>Note:</strong> Yeoman's <a href="https://github.com/yeoman/generator-webapp">Grunt</a> and <a href="https://github.com/yeoman/generator-gulp-webapp">Gulp</a> webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
 </div>
 
 ## Compress & optimize images
@@ -27,13 +27,13 @@ With the right balance of compression and formatting it's possible to still ship
 * [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
 * [grunt-imageoptim](https://github.com/JamieMason/grunt-imageoptim) (OSX only)
 
-Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.io/ImageOptim-CLI) of differences between the two. Choose the one that is most suitable for you.
+Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.io/ImageOptim-CLI/) of differences between the two. Choose the one that is most suitable for you.
 
 #### Gulp
 
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 
-<div class="note"><strong>Note:</strong> Etsy found that just by <a href="http://programming.oreilly.com/2014/01/web-performance-is-user-experience.html">adding</a> 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.</div>
+<div class="note"><strong>Note:</strong> Etsy found that just by <a href="http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html">adding</a> 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.</div>
 
 
 ## Generate responsive images for the `<picture>` element
@@ -94,7 +94,7 @@ WebP is a recent image format that offers lossless and lossy compression for ima
 
 
 <div class="note">
-<strong>Note:</strong> This <a href="http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&thumbSize=200&ival=100&end=full">test</a> from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store <a href="http://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/">found</a> that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
+<strong>Note:</strong> This <a href="http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&thumbSize=200&ival=100&end=full">test</a> from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store <a href="https://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/">found</a> that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
 </div>
 
 

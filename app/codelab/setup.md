@@ -12,7 +12,7 @@ sidebar: sidebars/codelab.html
   <img src="/assets/img/yeoman-004.png">
 </p>
 
-Most of your interactions with Yeoman will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or [`cmder`](http://bliker.github.io/cmder/) *(preferably)* / PowerShell / `cmd.exe` if you are on Windows.
+Most of your interactions with Yeoman will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or [`cmder`](http://gooseberrycreative.com/cmder/) *(preferably)* / PowerShell / `cmd.exe` if you are on Windows.
 
 ## Install prerequisites
 
@@ -28,7 +28,7 @@ You can check if you have Node and npm installed by typing:
 node --version && npm --version
 ```
 
-If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](http://nodejs.org/download/).
+If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](https://nodejs.org/download/).
 
 The [npm](https://www.npmjs.com/) package manager is bundled with Node, although you might need to update it. Some Node versions ship with rather old versions of npm. You can update npm using this command:
 

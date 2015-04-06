@@ -11,7 +11,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 *Feel free to add additional ones, but make sure it's something of value and include the date.*
 
-* [Complete Yeoman Codelab tutorial in the Codio Web IDE (*2014-04-14*)](https://codio.com/s/blog/2014/04/yeoman-tut/)
+* [Complete Yeoman Codelab tutorial in the Codio Web IDE (*2014-04-14*)](https://codio.com/blog/2014/04/yeoman-tut/)
 * [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
 * [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
 * [NetTuts - Building Apps With the Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow) *2013-07-15*
@@ -22,7 +22,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Continuous Deployment with Yeoman and Jenkins Part II](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins-part-ii.html)
 * [Speed up your framework workflow with Yeoman](http://shoogledesigns.com/blog/blog/2013/08/02/speed-up-your-css-framework-install-with-yeoman/)
 * [Continuous Deployment with Yeoman and Jenkins](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins.html)
-* [Adobe - Yeoman at your service](http://www.adobe.com/devnet/html5/articles/yeoman-at-your-service.html)
+* [Adobe - Yeoman at your service](http://www.adobe.com/devnet/archive/html5/articles/yeoman-at-your-service.html)
 * [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/html/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 * [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
@@ -37,7 +37,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
   <div class="video-container">
     <iframe width="640" height="360" src="//www.youtube.com/embed/zBt2g9ekiug" frameborder="0" allowfullscreen class="yt"></iframe>
   </div>
-  <p>We also have a video on scaffolding <a href="http://www.youtube.com/watch?v=RO8TdD5EuNs">Bootstrap</a> projects with Yeoman.</p>
+  <p>We also have a video on scaffolding <a href="https://www.youtube.com/watch?v=RO8TdD5EuNs">Bootstrap</a> projects with Yeoman.</p>
   </div>
 </section>
 
@@ -67,6 +67,6 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
   <div class="video-container">
     <iframe width="640" height="360" src="//www.youtube.com/embed/TUk19YoP-oI" frameborder="0" allowfullscreen class="yt"></iframe>
   </div>
-  <p>In case you're looking for some more persuation that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="http://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
+  <p>In case you're looking for some more persuation that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
   </div>
 </section>

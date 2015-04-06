@@ -8,7 +8,7 @@ sidebar: sidebars/learning.html
 The Yeoman workflow is comprised of three core tools for improving your productivity and satisfaction when building a web app. These tools are:
 
 * [yo](https://github.com/yeoman/yo) - the scaffolding tool from Yeoman
-* A package manager, such as [bower](http://bower.io) or [npm](https://www.npmjs.com/).
+* A package manager, such as [bower](http://bower.io/) or [npm](https://www.npmjs.com/).
 * A build tool, such as [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/).
 
 Each of these projects are independently maintained by their respective communities, but work well together as a part of a prescriptive workflow for keeping you effective. Let’s walk through what these binaries can do.
@@ -31,9 +31,9 @@ npm install -g yo bower grunt-cli gulp
 
 *see the sections about __Bower__, __Gulp__ and __Grunt__ below for more information*
 
-*npm is the package manager for [Node.js](http://nodejs.org/) and comes bundled with it.*
+*npm is the package manager for [Node.js](https://nodejs.org/) and comes bundled with it.*
 
-*On Windows, we suggest you use an improved command line tool such as [`cmder`](http://bliker.github.io/cmder/) or PowerShell to improve the experience.*
+*On Windows, we suggest you use an improved command line tool such as [`cmder`](http://gooseberrycreative.com/cmder/) or PowerShell to improve the experience.*
 
 
 ### Basic scaffolding
@@ -44,7 +44,7 @@ To scaffold a web application, you'll need to install the `generator-webapp` gen
 npm install -g generator-webapp
 ```
 
-This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](http://html5boilerplate.com), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap). You'll have a choice during the interactive prompts to not include many of these. This generator will use __Grunt__, while others may use __Gulp__ or other alternative set of build tools.
+This is the default web application generator that will scaffold out a project containing [HTML5 Boilerplate](https://html5boilerplate.com/), [jQuery](http://jquery.com), [Modernizr](http://modernizr.com), and [Bootstrap](http://twbs.github.io/bootstrap/). You'll have a choice during the interactive prompts to not include many of these. This generator will use __Grunt__, while others may use __Gulp__ or other alternative set of build tools.
 
 Now that the generator is installed, create a directory for your new project
 

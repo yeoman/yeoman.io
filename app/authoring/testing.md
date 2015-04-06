@@ -117,7 +117,7 @@ helpers.run(path.join( __dirname, '../app'))
 
 ## Assertions helpers
 
-Yeoman extends the [native assert module](http://nodejs.org/api/assert.html) with generator related assertions helpers. You can see the full list of assertions helpers in our [API documentation](http://yeoman.github.io/generator/assert.html).
+Yeoman extends the [native assert module](https://nodejs.org/api/assert.html) with generator related assertions helpers. You can see the full list of assertions helpers in our [API documentation](http://yeoman.github.io/generator/assert.html).
 
 Require the assertion helpers:
 

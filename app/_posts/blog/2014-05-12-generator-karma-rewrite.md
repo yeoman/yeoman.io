@@ -7,13 +7,13 @@ Allo' allo'! Here's [Eddie](https://github.com/eddiemonge) from the Yeoman team 
 
 ## Why was a Rewrite Necessary?
 
-**tl;dr**: a rewrite was not necessary. The [Angular generator](https://www.github.com/yeoman/generator) needed some changes to continue to work.
+**tl;dr**: a rewrite was not necessary. The [Angular generator](https://github.com/yeoman/generator) needed some changes to continue to work.
 
 The [Karma Team](http://karma-runner.github.io/) recently made some changes to the way Karma [installs its plugins](https://github.com/karma-runner/karma/blob/master/CHANGELOG.md#breaking-changes). Before, it would install a lot of default plugins. Now it does not install any plugins. Many people viewed this as a pretty bad change. In fact it is a great change because bloatware is not included anymore. Only the plugins users want are now installed.
 
 The Angular generator used the Karma generator to write its testing components. The Karma change led to testing not working out of the box. The tests complained about not being able to do some things like launch browsers. A quick fix was to install the missing plugins as part of the Angular generation process. This was not an ideal fix as it made the project more fragile and less composable. A better solution was to make the Karma generator be more customizable.
 
-Also, this was a good project to test the new 0.17.0 changes to the [Generator system](https://www.github.com/yeoman/generator).
+Also, this was a good project to test the new 0.17.0 changes to the [Generator system](https://github.com/yeoman/generator).
 
 ## What was the Goal of the Rewrite?
 
@@ -43,7 +43,7 @@ There are few parts of the generator that are not customizable now. Here is a sm
  * What plugins to use. Missing plugins, like a framework or browser, get added by the generator.
  * Where the config files get written to (including the name and path)
 
-This is not the complete list. For that, check out the project's [README](https://www.github.com/yeoman/generator-karma).
+This is not the complete list. For that, check out the project's [README](https://github.com/yeoman/generator-karma).
 
 ### Gruntfile
 

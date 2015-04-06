@@ -12,7 +12,7 @@ Gulp is a [streaming](https://github.com/substack/stream-handbook) build system 
 The Yeoman team don't have any plans on dropping our support for [Grunt](http://gruntjs.com) at all. On the contrary, we feel that both Grunt and Gulp can [happily co-exist](https://github.com/yeoman/yeoman/issues/1232) and hope to support both communities with some automation tooling as best we can.
 
 
-Our Gulp generator based on our Grunt generator for [web apps](http://github.com/yeoman/generator-webapp) and you can follow along our progress at [generator-gulp-webapp](https://github.com/yeoman/generator-gulp-webapp). It's still early days, but our [gulpfile](https://github.com/yeoman/generator-gulp-webapp/blob/master/app/templates/gulpfile.js) already contains early work for handling HTML, CSS, JS and images. See the samples below for a peek at what we're doing:
+Our Gulp generator based on our Grunt generator for [web apps](https://github.com/yeoman/generator-webapp) and you can follow along our progress at [generator-gulp-webapp](https://github.com/yeoman/generator-gulp-webapp). It's still early days, but our [gulpfile](https://github.com/yeoman/generator-gulp-webapp/blob/master/app/templates/gulpfile.js) already contains early work for handling HTML, CSS, JS and images. See the samples below for a peek at what we're doing:
 
 Require Gulp and load our Gulp plugins:
 
@@ -123,7 +123,7 @@ At this time, we welcome community contributions which help us fill in the featu
 
 The below are some of the recent articles on Gulp we've enjoyed reading:
 
-* [My First Gulp Adventure](http://blog.ponyfoo.com/2014/01/27/my-first-gulp-adventure)
-* [Gulp, Grunt, Whatever](http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever)
+* [My First Gulp Adventure](http://ponyfoo.com/articles/my-first-gulp-adventure)
+* [Gulp, Grunt, Whatever](http://ponyfoo.com/articles/gulp-grunt-whatever)
 * [No Need To Grunt, Take A Gulp Of Fresh Air](http://travismaynard.com/writing/no-need-to-grunt-take-a-gulp-of-fresh-air)
 * [Grunt vs Gulp - Beyond the Numbers](http://jaysoo.ca/2014/01/27/gruntjs-vs-gulpjs/)

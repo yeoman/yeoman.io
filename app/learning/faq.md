@@ -44,7 +44,7 @@ Long-term, the project may also assist developers with creating applications usi
 
 ### <a name="what-is-CLI"> What is a command-line interface?</a>
 
-A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal. On Windows, the command shell (`cmd.exe`) or PowerShell, but we recommend you use [`cmder`](http://bliker.github.io/cmder/) instead for an improved experience.
+A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal. On Windows, the command shell (`cmd.exe`) or PowerShell, but we recommend you use [`cmder`](http://gooseberrycreative.com/cmder/) instead for an improved experience.
 
 
 ### <a name="what-is-pkg-manager"> What is a package manager?</a>
@@ -68,7 +68,7 @@ We love tools like Brunch and Ember-cli and feel that they offer a great solutio
 
 ### <a name="register-unregister-pkg"> How do I register or unregister a package on Bower?</a>
 
-Packages can be registered on Bower using the `register` command. e.g `bower register myawesomepackagename git://github.com/youraccount/yourrepo`. We recommend reading the Bower [documentation](http://bower.io) before doing this to ensure that your repo includes the necessary files to supporting being `install`ed.
+Packages can be registered on Bower using the `register` command. e.g `bower register myawesomepackagename git://github.com/youraccount/yourrepo`. We recommend reading the Bower [documentation](http://bower.io/) before doing this to ensure that your repo includes the necessary files to supporting being `install`ed.
 
 
 ### <a name="frameworks-generators"> Will the Yeoman project be providing Generators for popular frameworks?</a>
@@ -107,7 +107,7 @@ variable to have npm-installed binaries picked up:
 Quick fix for advanced users is to put the following in your `.bashrc` file:
 `export PATH=/usr/local/share/npm/bin:$PATH`
 
-For beginners `brew uninstall node` and download and install Node from their [website](http://nodejs.org).
+For beginners `brew uninstall node` and download and install Node from their [website](https://nodejs.org/).
 
 
 ### <a name="too-many-files"> I'm getting `EMFILE, too many open files`</a>
@@ -116,7 +116,7 @@ EMFILE mean you've reached the OS limit of concurrently open files. There aren't
 
 Add `ulimit -n [number of files]` to your .bashrc/.zshrc file to increase the soft limit.
 
-If you reach the OS hard limit, you can follow this [StackOverflow answer](http://stackoverflow.com/a/34645/64949) to increase it.
+If you reach the OS hard limit, you can follow this [StackOverflow answer](http://stackoverflow.com/questions/34588/how-do-i-change-the-number-of-open-files-limit-in-linux/34645#34645) to increase it.
 
 
 

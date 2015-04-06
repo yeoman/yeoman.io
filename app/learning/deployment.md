@@ -16,7 +16,7 @@ Using [the `gulp-gh-pages` Gulp plugin](https://www.npmjs.com/package/gulp-gh-pa
 * The commit message.
 * An option to specify if the branch should be pushed to the origin automatically.
 
-For more information you can always checkout [its readme](https://github.com/rowoot/gulp-gh-pages#readme).
+For more information you can always checkout [its readme](https://github.com/shinnn/gulp-gh-pages#readme).
 
 ## Grunt-build-control task
 
@@ -54,5 +54,5 @@ You can also maintain the source and built code on the same branch, and deploy o
 ## Further reading
 
 - [Git Subtree docs](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt)
-- [Github Pages docs](https://help.github.com/articles/user-organization-and-project-pages)
+- [Github Pages docs](https://help.github.com/articles/user-organization-and-project-pages/)
 - [Generating a Heroku procfile with generator-heroku](https://github.com/passy/generator-heroku)
