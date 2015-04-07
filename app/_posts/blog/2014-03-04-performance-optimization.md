@@ -8,12 +8,12 @@ title: Grunt And Gulp Tasks For Performance Optimization
 Delays in performance have the potential to impact user [engagement](https://twitter.com/igrigorik/status/300226402496704512), [experience](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/) and [revenue](https://speakerdeck.com/lara/design-for-performance).
 Thankfully, Google's 'Make The Web Faster' team recommend a set of best-practice [rules](https://developers.google.com/speed/docs/insights/rules) for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.
 
-If you have complete control over your server, an excellent [PageSpeed](https://developers.google.com/speed/pagespeed) [Module](https://developers.google.com/speed/pagespeed/module) for [Apache](https://developers.google.com/speed/pagespeed/module/download) and [Nginx](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source) exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.
+If you have complete control over your server, an excellent [PageSpeed](https://developers.google.com/speed/pagespeed/) [Module](https://developers.google.com/speed/pagespeed/module) for [Apache](https://developers.google.com/speed/pagespeed/module/download) and [Nginx](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source) exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.
 
 The below represent [Grunt](http://gruntjs.com) and [Gulp](http://gulpjs.com) tasks the Yeoman team regularly use in our projects. We’ve tried our best to keep this list focused and exclude previous suggestions which no-longer offer as much value, but there’s plenty here to help you keep your pages and their resources as small as possible.
 
 <div class="note">
-<strong>Note:</strong> Yeoman's <a href="http://github.com/yeoman/generator-webapp">Grunt</a> and <a href="http://github.com/yeoman/generator-gulp-webapp">Gulp</a> webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
+<strong>Note:</strong> Yeoman's <a href="https://github.com/yeoman/generator-webapp">Grunt</a> and <a href="https://github.com/yeoman/generator-gulp-webapp">Gulp</a> webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
 </div>
 
 ## Compress & optimize images
@@ -27,13 +27,13 @@ With the right balance of compression and formatting it's possible to still ship
 * [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
 * [grunt-imageoptim](https://github.com/JamieMason/grunt-imageoptim) (OSX only)
 
-Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.io/ImageOptim-CLI) of differences between the two. Choose the one that is most suitable for you.
+Why two tasks? Well, here’s an excellent [breakdown](http://jamiemason.github.io/ImageOptim-CLI/) of differences between the two. Choose the one that is most suitable for you.
 
 #### Gulp
 
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 
-<div class="note"><strong>Note:</strong> Etsy found that just by <a href="http://programming.oreilly.com/2014/01/web-performance-is-user-experience.html">adding</a> 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.</div>
+<div class="note"><strong>Note:</strong> Etsy found that just by <a href="http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html">adding</a> 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.</div>
 
 
 ## Generate responsive images for the `<picture>` element
@@ -49,9 +49,9 @@ There are a number of Grunt tasks available that can help generate multi-resolut
 #### Grunt
 
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images) - use this along with [Imager.js](https://github.com/BBC-News/Imager.js/), `<picture>` or the picturefill [polyfill](https://github.com/jansepar/picturefill).
-* [grunt-clowncar](https://npmjs.org/package/grunt-clowncar)
+* [grunt-clowncar](https://www.npmjs.com/package/grunt-clowncar)
 
-In addition, if you need to just resize/normalize images that are large in dimension, you can use [grunt-image-resize](https://www.npmjs.org/package/grunt-image-resize).
+In addition, if you need to just resize/normalize images that are large in dimension, you can use [grunt-image-resize](https://www.npmjs.com/package/grunt-image-resize).
 
 <div class="note">
 <strong>Note:</strong> Tim Kaldec's research into responsive images has <a href="http://timkadlec.com/2013/06/why-we-need-responsive-images/">suggested</a> a responsive images strategy could lead to savings of up to 72% on image weight. Whilst it is still early to opt for a spec-compatible, cross-browser approach to responsive images the BBC and Guardian have been using Imager.js for this successfully.
@@ -68,17 +68,17 @@ SVG files created with editors usually contain a large quantity of redundant inf
 
 #### Gulp
 
-* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin)
+* [gulp-svgmin](https://www.npmjs.com/package/gulp-svgmin)
 
 ## Generate spritesheets
 
 #### Grunt
 
-* [grunt-spritesmith](https://www.npmjs.org/package/grunt-spritesmith)
+* [grunt-spritesmith](https://www.npmjs.com/package/grunt-spritesmith)
 
 #### Gulp
 
-* [gulp-sprite](https://www.npmjs.org/package/gulp-sprite)
+* [gulp-sprite](https://www.npmjs.com/package/gulp-sprite)
 
 ## Convert images to WebP
 
@@ -94,7 +94,7 @@ WebP is a recent image format that offers lossless and lossy compression for ima
 
 
 <div class="note">
-<strong>Note:</strong> This <a href="http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&thumbSize=200&ival=100&end=full">test</a> from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store <a href="http://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/">found</a> that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
+<strong>Note:</strong> This <a href="http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&thumbSize=200&ival=100&end=full">test</a> from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store <a href="https://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/">found</a> that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
 </div>
 
 
@@ -106,7 +106,7 @@ WebP is a recent image format that offers lossless and lossy compression for ima
 
 ### Gulp
 
-* [gulp-svgmin](https://www.npmjs.org/package/gulp-svgmin)
+* [gulp-svgmin](https://www.npmjs.com/package/gulp-svgmin)
 
 We consider inlining images using Data URIs to now be an anti-pattern given their [poor](http://www.mobify.com/blog/data-uris-are-slow-on-mobile/) performance on mobile.
 
@@ -120,7 +120,7 @@ Minification eliminates unnecessary space, line breaks, indendation and characte
 
 #### Gulp
 
-* [gulp-cssmin](https://www.npmjs.org/package/gulp-cssmin)
+* [gulp-cssmin](https://www.npmjs.com/package/gulp-cssmin)
 
 ## Remove unused CSS
 
@@ -147,7 +147,7 @@ If the external CSS resources for a particular page are small, you can inline th
 
 #### Gulp
 
-* [gulp-inline-css](https://www.npmjs.org/package/gulp-inline-css/)
+* [gulp-inline-css](https://www.npmjs.com/package/gulp-inline-css/)
 
 ## Combine media queries
 
@@ -156,11 +156,11 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 #### Grunt
 
-* [grunt-combine-media-queries](https://npmjs.org/package/grunt-combine-media-queries)
+* [grunt-combine-media-queries](https://www.npmjs.com/package/grunt-combine-media-queries)
 
 #### Gulp
 
-* [gulp-combine-media-queries](https://www.npmjs.org/package/gulp-combine-media-queries)
+* [gulp-combine-media-queries](https://www.npmjs.com/package/gulp-combine-media-queries)
 
 ## JavaScript
 
@@ -205,14 +205,14 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 
 #### Gulp
 
-* [gulp-concat](https://www.npmjs.org/package/gulp-concat)
+* [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 
 
 ## General compression for files/folders
 
 #### Grunt
 
- * [grunt-contrib-compress](https://www.npmjs.org/package/grunt-contrib-compress)
+ * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
 
 #### Gulp
 
@@ -228,7 +228,7 @@ The Zopfli Compression Algorithm is an open-source compression library that gene
 
 #### Gulp
 
-* [gulp-zopfli](https://www.npmjs.org/package/gulp-zopfli)
+* [gulp-zopfli](https://www.npmjs.com/package/gulp-zopfli)
 
 <div class="note"><strong>Note:</strong> When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to <a href="https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS">Ilya Grigorik</a>, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.</div>
 
@@ -261,21 +261,21 @@ Gulp users should just use AssetGraph directly.
 
 ## Benchmarking
 
-The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use [gulp-grunt](https://npmjs.org/package/gulp-grunt) to run Grunt tasks from Gulp. We recommend:
+The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use [gulp-grunt](https://www.npmjs.com/package/gulp-grunt) to run Grunt tasks from Gulp. We recommend:
 
-* [grunt-pagespeed](https://npmjs.org/package/grunt-pagespeed) - fantastic for automating checking your PageSpeed score as a part of CI.
+* [grunt-pagespeed](https://www.npmjs.com/package/grunt-pagespeed) - fantastic for automating checking your PageSpeed score as a part of CI.
 * [grunt-topcoat-telemetry](https://github.com/topcoat/topcoat-grunt-telemetry) - get smoothness, load time and other stats from Telemetry as part of CI. This could help you set up a performance benchmarking dashboard similar to the one used by [TopCoat](http://bench.topcoat.io/)
-* [grunt-wpt](https://npmjs.org/package/grunt-wpt) - CI for WebPageTest scores
-* [grunt-phantomas](https://www.npmjs.org/package/grunt-phantomas) - response times for requests, responses, time to first image/CSS/JS, onDOMReady and more.
+* [grunt-wpt](https://www.npmjs.com/package/grunt-wpt) - CI for WebPageTest scores
+* [grunt-phantomas](https://www.npmjs.com/package/grunt-phantomas) - response times for requests, responses, time to first image/CSS/JS, onDOMReady and more.
 
 ## Framework Optimization
 
 
 #### Grunt
 
-* [grunt-ngmin](https://npmjs.org/package/grunt-ngmin)
-* [grunt-react](https://npmjs.org/package/grunt-react)
-* [grunt-vulcanize](https://npmjs.org/package/grunt-vulcanize) - excellent for concatenating and flatening Web Components.
+* [grunt-ngmin](https://www.npmjs.com/package/grunt-ngmin)
+* [grunt-react](https://www.npmjs.com/package/grunt-react)
+* [grunt-vulcanize](https://www.npmjs.com/package/grunt-vulcanize) - excellent for concatenating and flatening Web Components.
 
 #### Gulp
 

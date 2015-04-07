@@ -16,7 +16,7 @@ Let’s revisit the issue of items not persisting when the browser refreshes.
 
 ## Install Bower package
 
-To easily achieve this we can use another Angular module called "[angular-local-storage](http://gregpike.net/demos/angular-local-storage/demo.html)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html). Again, Bower comes to the rescue.
+To easily achieve this we can use another Angular module called "[angular-local-storage](http://gregpike.net/demos/angular-local-storage/demo/demo.html)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html). Again, Bower comes to the rescue.
 
 Run the following command:
 
@@ -131,7 +131,7 @@ angular.module('mytodoApp')
 
 So now, rather than reading our todos from a static array, we’ll be reading it from local storage and then storing it in `$scope.todos` instead.
 
-We’ll also use the angular [`$watch`](http://docs.angularjs.org/api/ng.$rootScope.Scope#methods_$watch) listener to watch for changes in the value of `$scope.todos`. If someone adds or removes a todo, it will then keep our local storage `todos` datastore in sync.
+We’ll also use the angular [`$watch`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#methods_$watch) listener to watch for changes in the value of `$scope.todos`. If someone adds or removes a todo, it will then keep our local storage `todos` datastore in sync.
 
 Therefore, we need to remove the current `$scope.todos` declaration:
 

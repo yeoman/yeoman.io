@@ -47,7 +47,7 @@ You should make sure you set the latest version of `yeoman-generator` as a depen
 
 The `files` property must be an array of files and directories that is used by your generator.
 
-Add other [`package.json` properties](https://www.npmjs.org/doc/files/package.json.html) as needed.
+Add other [`package.json` properties](https://docs.npmjs.com/files/package.json) as needed.
 
 ### Folder tree
 
@@ -110,7 +110,7 @@ Either type of generator can be extended to create an app generator or a subcomm
 
 The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
 
-We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](http://nodejs.org/api/modules.html#modules_module_exports).
+We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](https://nodejs.org/api/modules.html#modules_module_exports).
 
 ### Overwriting the constructor
 

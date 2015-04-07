@@ -48,11 +48,11 @@ Then modify our view (*main.html*) to output our todos items as HTML text `input
 </div>
 ```
 
-The [`ng-repeat`](http://docs.angularjs.org/api/ng.directive:ngRepeat) attribute on the paragraph tag is an Angular [directive](http://docs.angularjs.org/guide/directive) that instantiates a template once per item from a collection.
+The [`ng-repeat`](https://docs.angularjs.org/api/ng/directive/ngRepeat) attribute on the paragraph tag is an Angular [directive](https://docs.angularjs.org/guide/directive) that instantiates a template once per item from a collection.
 
 In our case, imagine that the paragraph element and its content is turned into a virtual rubber stamp by adding the `ng-repeat` attribute. For each item in the `todos` array, Angular will stamp out a new instance of the `<p><input></p>` HTML block.
 
-The [`ng-model`](http://docs.angularjs.org/api/ng.directive:ngModel) attribute is another Angular directive that works with `input`, `select`, `textarea`, and custom directives to create a [two-way data binding](http://docs.angularjs.org/guide/databinding). In our example, it populates a text `input` field with the value from the current `todo` item in the `ng-repeat` loop.
+The [`ng-model`](https://docs.angularjs.org/api/ng/directive/ngModel) attribute is another Angular directive that works with `input`, `select`, `textarea`, and custom directives to create a [two-way data binding](https://docs.angularjs.org/guide/databinding). In our example, it populates a text `input` field with the value from the current `todo` item in the `ng-repeat` loop.
 
 Let's see `ng-repeat` and `ng-model` in action within the browser. Upon saving, our application should now look like this:
 
@@ -97,7 +97,7 @@ Modify *main.html* by adding a `form` element in between the `<h2>` and `<p>` el
 </div>
 ```
 
-This adds a HTML form with a submit button to the top of the page. It utilises another Angular directive, [`ng-submit`](http://docs.angularjs.org/api/ng.directive:ngSubmit) which we’ll get to next. Return to your browser and the UI should now look similar to this:
+This adds a HTML form with a submit button to the top of the page. It utilises another Angular directive, [`ng-submit`](https://docs.angularjs.org/api/ng/directive/ngSubmit) which we’ll get to next. Return to your browser and the UI should now look similar to this:
 
 ![](/assets/img/codelab/image_16.png)
 
@@ -130,7 +130,7 @@ angular.module('mytodoApp')
  ```
 
 <div class="note tip">
-Note: If you encounter linting errors in the command line window, this may be due to indentation warnings being thrown from <a href="http://www.jshint.com/">jshint</a>. They are only warnings so your todo app will continue to work. However, do look at the suggestions made from jshint and adjust your code accordingly for clean and readable code.
+Note: If you encounter linting errors in the command line window, this may be due to indentation warnings being thrown from <a href="http://jshint.com/">jshint</a>. They are only warnings so your todo app will continue to work. However, do look at the suggestions made from jshint and adjust your code accordingly for clean and readable code.
 </div>
 
 View the app in the browser again. Type some text in the input field for a new todo item and hit **Add**. It will be immediately reflected in your todos list!
@@ -175,7 +175,7 @@ Have a look at your browser. Your todo app is looking snazzy!
 
 ![](/assets/img/codelab/image_19.png)
 
-We introduced a new Angular directive above, [`ng-click`](http://docs.angularjs.org/api/ng.directive:ngClick). `ng-click` allows you to specify custom behaviours when an element is clicked. In this instance, we call `removeTodo()` and pass `$index` to the function.
+We introduced a new Angular directive above, [`ng-click`](https://docs.angularjs.org/api/ng/directive/ngClick). `ng-click` allows you to specify custom behaviours when an element is clicked. In this instance, we call `removeTodo()` and pass `$index` to the function.
 
 The value of `$index` will be the array index of the current `todo` item within the `ng-repeat` directive. For example, the first item will have an array index of 0 and `removeTodo()` will be passed the value of 0. Similarly, the last item of a todo list with 5 items will have an array index of 4 and `removeTodo()` will be passed a value of 4.
 

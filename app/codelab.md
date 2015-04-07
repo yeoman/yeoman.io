@@ -8,7 +8,7 @@ sidebar: sidebars/codelab.html
 
 <p class="authors">By Addy Osmani, James Cryer &amp; Pearl Chen</p>
 
-Allo! Allo! In this 1-hour codelab, you build a fully functional web application from scratch with the help of [Yeoman](http://yeoman.io). You'll also use features from [Grunt](http://gruntjs.com) and [Bower](http://bower.io). The sample app will be written in [AngularJS](http://angularjs.org).
+Allo! Allo! In this 1-hour codelab, you build a fully functional web application from scratch with the help of [Yeoman](http://yeoman.io). You'll also use features from [Grunt](http://gruntjs.com) and [Bower](http://bower.io/). The sample app will be written in [AngularJS](https://angularjs.org/).
 
 <p class="mast-intro"><img src="/assets/img/yeoman-008.png"></p>
 
@@ -46,7 +46,7 @@ It will take approximately 60 minutes to complete this codelab. By the end, you'
 
   <h2>View the final source code</h2>
 
-  <p>The finished app can be found at <a href="http://bit.ly/yoangular">bit.ly/yoangular</a>. In case you get stuck, these are the specific files that we will be editing in the <strong>angular-localStorage-todos &gt; app</strong> folder:</p>
+  <p>The finished app can be found at <a href="https://github.com/addyosmani/yeoman-examples/tree/master/angular-localStorage-todos">bit.ly/yoangular</a>. In case you get stuck, these are the specific files that we will be editing in the <strong>angular-localStorage-todos &gt; app</strong> folder:</p>
 
   <ul>
     <li>

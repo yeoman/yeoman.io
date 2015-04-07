@@ -44,4 +44,4 @@ Issue trackers for some of the common tasks used in the Yeoman workflow can be f
 
 ### Package management issues
 
-If you have installed a package using Bower, updated a package or are experiencing issues managing packages, the [Bower issue tracker](https://github.com/twitter/bower) should be used for submitting bug reports. The Yeoman workflow typically relies on Grunt or Gulp for minification/concat of such dependencies, however we will let you know if an issue submitted is a Bower issue or a Yeoman issue.
+If you have installed a package using Bower, updated a package or are experiencing issues managing packages, the [Bower issue tracker](https://github.com/bower/bower) should be used for submitting bug reports. The Yeoman workflow typically relies on Grunt or Gulp for minification/concat of such dependencies, however we will let you know if an issue submitted is a Bower issue or a Yeoman issue.
