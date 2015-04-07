@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2015-04-05T21:54:36+00:00</updated>
+  <updated>2015-04-07T00:22:14+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -90,7 +90,7 @@
     <link href="http://yeoman.io/blog/release-0.18.html"/>
     <updated>2014-10-14T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/release-0.18</id>
-    <content type="html">&lt;p&gt;Allo&amp;#39; Allo&amp;#39; today we&amp;#39;re happy to announce the release of &lt;a href=&quot;https://www.npmjs.org/package/yeoman-generator&quot;&gt;yeoman-generator@0.18.0&lt;/a&gt;!&lt;/p&gt;
+    <content type="html">&lt;p&gt;Allo&amp;#39; Allo&amp;#39; today we&amp;#39;re happy to announce the release of &lt;a href=&quot;https://www.npmjs.com/package/yeoman-generator&quot;&gt;yeoman-generator@0.18.0&lt;/a&gt;!&lt;/p&gt;
 
 &lt;p&gt;It&amp;#39;s been multiple months since our last minor version bump. This new release bring lots of new features and strive at improving the composability features (first introduced in 0.17).&lt;/p&gt;
 
@@ -216,13 +216,13 @@
 
 &lt;h2&gt;Why was a Rewrite Necessary?&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt;: a rewrite was not necessary. The &lt;a href=&quot;https://www.github.com/yeoman/generator&quot;&gt;Angular generator&lt;/a&gt; needed some changes to continue to work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt;: a rewrite was not necessary. The &lt;a href=&quot;https://github.com/yeoman/generator&quot;&gt;Angular generator&lt;/a&gt; needed some changes to continue to work.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&quot;http://karma-runner.github.io/&quot;&gt;Karma Team&lt;/a&gt; recently made some changes to the way Karma &lt;a href=&quot;https://github.com/karma-runner/karma/blob/master/CHANGELOG.md#breaking-changes&quot;&gt;installs its plugins&lt;/a&gt;. Before, it would install a lot of default plugins. Now it does not install any plugins. Many people viewed this as a pretty bad change. In fact it is a great change because bloatware is not included anymore. Only the plugins users want are now installed.&lt;/p&gt;
 
 &lt;p&gt;The Angular generator used the Karma generator to write its testing components. The Karma change led to testing not working out of the box. The tests complained about not being able to do some things like launch browsers. A quick fix was to install the missing plugins as part of the Angular generation process. This was not an ideal fix as it made the project more fragile and less composable. A better solution was to make the Karma generator be more customizable.&lt;/p&gt;
 
-&lt;p&gt;Also, this was a good project to test the new 0.17.0 changes to the &lt;a href=&quot;https://www.github.com/yeoman/generator&quot;&gt;Generator system&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, this was a good project to test the new 0.17.0 changes to the &lt;a href=&quot;https://github.com/yeoman/generator&quot;&gt;Generator system&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt;What was the Goal of the Rewrite?&lt;/h2&gt;
 
@@ -256,7 +256,7 @@
 &lt;li&gt;Where the config files get written to (including the name and path)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This is not the complete list. For that, check out the project&amp;#39;s &lt;a href=&quot;https://www.github.com/yeoman/generator-karma&quot;&gt;README&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is not the complete list. For that, check out the project&amp;#39;s &lt;a href=&quot;https://github.com/yeoman/generator-karma&quot;&gt;README&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Gruntfile&lt;/h3&gt;
 
@@ -391,12 +391,12 @@
 &lt;p&gt;Delays in performance have the potential to impact user &lt;a href=&quot;https://twitter.com/igrigorik/status/300226402496704512&quot;&gt;engagement&lt;/a&gt;, &lt;a href=&quot;http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/&quot;&gt;experience&lt;/a&gt; and &lt;a href=&quot;https://speakerdeck.com/lara/design-for-performance&quot;&gt;revenue&lt;/a&gt;.
 Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommend a set of best-practice &lt;a href=&quot;https://developers.google.com/speed/docs/insights/rules&quot;&gt;rules&lt;/a&gt; for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.&lt;/p&gt;
 
-&lt;p&gt;If you have complete control over your server, an excellent &lt;a href=&quot;https://developers.google.com/speed/pagespeed&quot;&gt;PageSpeed&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module&quot;&gt;Module&lt;/a&gt; for &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/download&quot;&gt;Apache&lt;/a&gt; and &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source&quot;&gt;Nginx&lt;/a&gt; exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.&lt;/p&gt;
+&lt;p&gt;If you have complete control over your server, an excellent &lt;a href=&quot;https://developers.google.com/speed/pagespeed/&quot;&gt;PageSpeed&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module&quot;&gt;Module&lt;/a&gt; for &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/download&quot;&gt;Apache&lt;/a&gt; and &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source&quot;&gt;Nginx&lt;/a&gt; exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.&lt;/p&gt;
 
 &lt;p&gt;The below represent &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp&lt;/a&gt; tasks the Yeoman team regularly use in our projects. We’ve tried our best to keep this list focused and exclude previous suggestions which no-longer offer as much value, but there’s plenty here to help you keep your pages and their resources as small as possible.&lt;/p&gt;
 
 &lt;div class=&quot;note&quot;&gt;
-&lt;strong&gt;Note:&lt;/strong&gt; Yeoman's &lt;a href=&quot;http://github.com/yeoman/generator-webapp&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;http://github.com/yeoman/generator-gulp-webapp&quot;&gt;Gulp&lt;/a&gt; webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
+&lt;strong&gt;Note:&lt;/strong&gt; Yeoman's &lt;a href=&quot;https://github.com/yeoman/generator-webapp&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;Gulp&lt;/a&gt; webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
 &lt;/div&gt;
 
 &lt;h2&gt;Compress &amp;amp; optimize images&lt;/h2&gt;
@@ -412,7 +412,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;li&gt;&lt;a href=&quot;https://github.com/JamieMason/grunt-imageoptim&quot;&gt;grunt-imageoptim&lt;/a&gt; (OSX only)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Why two tasks? Well, here’s an excellent &lt;a href=&quot;http://jamiemason.github.io/ImageOptim-CLI&quot;&gt;breakdown&lt;/a&gt; of differences between the two. Choose the one that is most suitable for you.&lt;/p&gt;
+&lt;p&gt;Why two tasks? Well, here’s an excellent &lt;a href=&quot;http://jamiemason.github.io/ImageOptim-CLI/&quot;&gt;breakdown&lt;/a&gt; of differences between the two. Choose the one that is most suitable for you.&lt;/p&gt;
 
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
@@ -420,7 +420,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/gulp-imagemin&quot;&gt;gulp-imagemin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Etsy found that just by &lt;a href=&quot;http://programming.oreilly.com/2014/01/web-performance-is-user-experience.html&quot;&gt;adding&lt;/a&gt; 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.&lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Etsy found that just by &lt;a href=&quot;http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html&quot;&gt;adding&lt;/a&gt; 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.&lt;/div&gt;
 
 &lt;h2&gt;Generate responsive images for the &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt; element&lt;/h2&gt;
 
@@ -436,10 +436,10 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/andismith/grunt-responsive-images&quot;&gt;grunt-responsive-images&lt;/a&gt; - use this along with &lt;a href=&quot;https://github.com/BBC-News/Imager.js/&quot;&gt;Imager.js&lt;/a&gt;, &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt; or the picturefill &lt;a href=&quot;https://github.com/jansepar/picturefill&quot;&gt;polyfill&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-clowncar&quot;&gt;grunt-clowncar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-clowncar&quot;&gt;grunt-clowncar&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In addition, if you need to just resize/normalize images that are large in dimension, you can use &lt;a href=&quot;https://www.npmjs.org/package/grunt-image-resize&quot;&gt;grunt-image-resize&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In addition, if you need to just resize/normalize images that are large in dimension, you can use &lt;a href=&quot;https://www.npmjs.com/package/grunt-image-resize&quot;&gt;grunt-image-resize&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;note&quot;&gt;
 &lt;strong&gt;Note:&lt;/strong&gt; Tim Kaldec's research into responsive images has &lt;a href=&quot;http://timkadlec.com/2013/06/why-we-need-responsive-images/&quot;&gt;suggested&lt;/a&gt; a responsive images strategy could lead to savings of up to 72% on image weight. Whilst it is still early to opt for a spec-compatible, cross-browser approach to responsive images the BBC and Guardian have been using Imager.js for this successfully.
@@ -458,7 +458,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Generate spritesheets&lt;/h2&gt;
@@ -466,13 +466,13 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Grunt&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/grunt-spritesmith&quot;&gt;grunt-spritesmith&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-spritesmith&quot;&gt;grunt-spritesmith&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-sprite&quot;&gt;gulp-sprite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-sprite&quot;&gt;gulp-sprite&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Convert images to WebP&lt;/h2&gt;
@@ -492,7 +492,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;/ul&gt;
 
 &lt;div class=&quot;note&quot;&gt;
-&lt;strong&gt;Note:&lt;/strong&gt; This &lt;a href=&quot;http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&amp;thumbSize=200&amp;ival=100&amp;end=full&quot;&gt;test&lt;/a&gt; from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store &lt;a href=&quot;http://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/&quot;&gt;found&lt;/a&gt; that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
+&lt;strong&gt;Note:&lt;/strong&gt; This &lt;a href=&quot;http://www.webpagetest.org/video/compare.php?tests=130125_6N_KZA%2C130125_NH_KZ8&amp;thumbSize=200&amp;ival=100&amp;end=full&quot;&gt;test&lt;/a&gt; from WebPageTest suggests that compared to JPEG, WebP encoded images complete loading much quicker due to their smaller filesizes. The Chrome Web Store &lt;a href=&quot;https://www.igvita.com/2013/03/07/faster-smaller-and-more-beautiful-web-with-webp/&quot;&gt;found&lt;/a&gt; that switching to WebP saw a 30% average saving on bytes, saving them several terabytes of bandwidth a day.
 &lt;/div&gt;
 
 &lt;h2&gt;Build SVG sprites with support for various browsers&lt;/h2&gt;
@@ -506,7 +506,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h3&gt;Gulp&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;We consider inlining images using Data URIs to now be an anti-pattern given their &lt;a href=&quot;http://www.mobify.com/blog/data-uris-are-slow-on-mobile/&quot;&gt;poor&lt;/a&gt; performance on mobile.&lt;/p&gt;
@@ -524,7 +524,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-cssmin&quot;&gt;gulp-cssmin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-cssmin&quot;&gt;gulp-cssmin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Remove unused CSS&lt;/h2&gt;
@@ -560,7 +560,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-inline-css/&quot;&gt;gulp-inline-css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-inline-css/&quot;&gt;gulp-inline-css&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Combine media queries&lt;/h2&gt;
@@ -570,13 +570,13 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Grunt&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-combine-media-queries&quot;&gt;grunt-combine-media-queries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-combine-media-queries&quot;&gt;grunt-combine-media-queries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-combine-media-queries&quot;&gt;gulp-combine-media-queries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-combine-media-queries&quot;&gt;gulp-combine-media-queries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;JavaScript&lt;/h2&gt;
@@ -636,7 +636,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-concat&quot;&gt;gulp-concat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-concat&quot;&gt;gulp-concat&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;General compression for files/folders&lt;/h2&gt;
@@ -644,7 +644,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Grunt&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/grunt-contrib-compress&quot;&gt;grunt-contrib-compress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-contrib-compress&quot;&gt;grunt-contrib-compress&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;Gulp&lt;/h4&gt;
@@ -666,7 +666,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Gulp&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/gulp-zopfli&quot;&gt;gulp-zopfli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-zopfli&quot;&gt;gulp-zopfli&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to &lt;a href=&quot;https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS&quot;&gt;Ilya Grigorik&lt;/a&gt;, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.&lt;/div&gt;
@@ -699,13 +699,13 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 
 &lt;h2&gt;Benchmarking&lt;/h2&gt;
 
-&lt;p&gt;The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use &lt;a href=&quot;https://npmjs.org/package/gulp-grunt&quot;&gt;gulp-grunt&lt;/a&gt; to run Grunt tasks from Gulp. We recommend:&lt;/p&gt;
+&lt;p&gt;The following benchmarking tasks are useful to integrate as a part of Continuous Integration. Although the following are currently only available for Grunt, you can use &lt;a href=&quot;https://www.npmjs.com/package/gulp-grunt&quot;&gt;gulp-grunt&lt;/a&gt; to run Grunt tasks from Gulp. We recommend:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-pagespeed&quot;&gt;grunt-pagespeed&lt;/a&gt; - fantastic for automating checking your PageSpeed score as a part of CI.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-pagespeed&quot;&gt;grunt-pagespeed&lt;/a&gt; - fantastic for automating checking your PageSpeed score as a part of CI.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/topcoat/topcoat-grunt-telemetry&quot;&gt;grunt-topcoat-telemetry&lt;/a&gt; - get smoothness, load time and other stats from Telemetry as part of CI. This could help you set up a performance benchmarking dashboard similar to the one used by &lt;a href=&quot;http://bench.topcoat.io/&quot;&gt;TopCoat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-wpt&quot;&gt;grunt-wpt&lt;/a&gt; - CI for WebPageTest scores&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/grunt-phantomas&quot;&gt;grunt-phantomas&lt;/a&gt; - response times for requests, responses, time to first image/CSS/JS, onDOMReady and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-wpt&quot;&gt;grunt-wpt&lt;/a&gt; - CI for WebPageTest scores&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-phantomas&quot;&gt;grunt-phantomas&lt;/a&gt; - response times for requests, responses, time to first image/CSS/JS, onDOMReady and more.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Framework Optimization&lt;/h2&gt;
@@ -713,9 +713,9 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h4&gt;Grunt&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-ngmin&quot;&gt;grunt-ngmin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-react&quot;&gt;grunt-react&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://npmjs.org/package/grunt-vulcanize&quot;&gt;grunt-vulcanize&lt;/a&gt; - excellent for concatenating and flatening Web Components.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-ngmin&quot;&gt;grunt-ngmin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-react&quot;&gt;grunt-react&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-vulcanize&quot;&gt;grunt-vulcanize&lt;/a&gt; - excellent for concatenating and flatening Web Components.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;Gulp&lt;/h4&gt;
@@ -902,7 +902,7 @@ yo bootstrap
 
 &lt;p&gt;The Yeoman team don&amp;#39;t have any plans on dropping our support for &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; at all. On the contrary, we feel that both Grunt and Gulp can &lt;a href=&quot;https://github.com/yeoman/yeoman/issues/1232&quot;&gt;happily co-exist&lt;/a&gt; and hope to support both communities with some automation tooling as best we can.&lt;/p&gt;
 
-&lt;p&gt;Our Gulp generator based on our Grunt generator for &lt;a href=&quot;http://github.com/yeoman/generator-webapp&quot;&gt;web apps&lt;/a&gt; and you can follow along our progress at &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;generator-gulp-webapp&lt;/a&gt;. It&amp;#39;s still early days, but our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/blob/master/app/templates/gulpfile.js&quot;&gt;gulpfile&lt;/a&gt; already contains early work for handling HTML, CSS, JS and images. See the samples below for a peek at what we&amp;#39;re doing:&lt;/p&gt;
+&lt;p&gt;Our Gulp generator based on our Grunt generator for &lt;a href=&quot;https://github.com/yeoman/generator-webapp&quot;&gt;web apps&lt;/a&gt; and you can follow along our progress at &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;generator-gulp-webapp&lt;/a&gt;. It&amp;#39;s still early days, but our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/blob/master/app/templates/gulpfile.js&quot;&gt;gulpfile&lt;/a&gt; already contains early work for handling HTML, CSS, JS and images. See the samples below for a peek at what we&amp;#39;re doing:&lt;/p&gt;
 
 &lt;p&gt;Require Gulp and load our Gulp plugins:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
@@ -993,8 +993,8 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;p&gt;The below are some of the recent articles on Gulp we&amp;#39;ve enjoyed reading:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.ponyfoo.com/2014/01/27/my-first-gulp-adventure&quot;&gt;My First Gulp Adventure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever&quot;&gt;Gulp, Grunt, Whatever&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ponyfoo.com/articles/my-first-gulp-adventure&quot;&gt;My First Gulp Adventure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ponyfoo.com/articles/gulp-grunt-whatever&quot;&gt;Gulp, Grunt, Whatever&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://travismaynard.com/writing/no-need-to-grunt-take-a-gulp-of-fresh-air&quot;&gt;No Need To Grunt, Take A Gulp Of Fresh Air&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jaysoo.ca/2014/01/27/gruntjs-vs-gulpjs/&quot;&gt;Grunt vs Gulp - Beyond the Numbers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1113,7 +1113,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The Yeoman &lt;a href=&quot;http://yeoman.io/gettingstarted.html&quot;&gt;Getting Started Guide&lt;/a&gt; will help understand how to use Yo, Grunt, and Bower together efficiently.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Addy&amp;#39;s &lt;a href=&quot;http://www.youtube.com/watch?v=iUQ1fvdO9GY&quot;&gt;Video&lt;/a&gt; will walk you through using Yeoman to build an application with AngularJS.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Addy&amp;#39;s &lt;a href=&quot;https://www.youtube.com/watch?v=iUQ1fvdO9GY&quot;&gt;Video&lt;/a&gt; will walk you through using Yeoman to build an application with AngularJS.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Stephen&amp;#39;s &lt;a href=&quot;http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/&quot;&gt;Building Apps With The Yeoman Workflow&lt;/a&gt; will show you how to build a Backbone.js application.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1123,7 +1123,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 
 &lt;p&gt;These days, Yeoman powers the tooling behind popular open-source projects like &lt;a href=&quot;https://github.com/yeoman/generator-angular&quot;&gt;Angular&lt;/a&gt;, can scaffold out &lt;a href=&quot;https://github.com/yeoman/generator-jquery&quot;&gt;jQuery plugins&lt;/a&gt;, full-stack solutions with &lt;a href=&quot;https://github.com/hoodiehq/generator-hoodie&quot;&gt;Hood.ie&lt;/a&gt; and &lt;a href=&quot;https://github.com/petecoop/generator-express&quot;&gt;Express&lt;/a&gt; and is now even used to create complete &lt;a href=&quot;https://github.com/wesleytodd/YeoPress&quot;&gt;Wordpress&lt;/a&gt; and &lt;a href=&quot;https://github.com/robwierzbowski/generator-jekyllrb&quot;&gt;Jekyll&lt;/a&gt; sites.&lt;/p&gt;
 
-&lt;p&gt;Yeoman can be used for applications of any size-- from &lt;a href=&quot;http://gifalicious.net/&quot;&gt;a gif maker&lt;/a&gt; to &lt;a href=&quot;https://www.slidecaptain.com/&quot;&gt;a slide deck&lt;/a&gt;, &lt;a href=&quot;http://rdbk.net/&quot;&gt;a news site&lt;/a&gt; or even &lt;a href=&quot;http://rtorruellas.com/vim-cheat-sheet/&quot;&gt;a VIM cheat sheet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Yeoman can be used for applications of any size-- from &lt;a href=&quot;http://gifalicious.net/&quot;&gt;a gif maker&lt;/a&gt; to &lt;a href=&quot;https://www.slidecaptain.com/&quot;&gt;a slide deck&lt;/a&gt;, &lt;a href=&quot;http://rdbk.net/&quot;&gt;a news site&lt;/a&gt; or even &lt;a href=&quot;http://vim.rtorr.com/&quot;&gt;a VIM cheat sheet&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Have your own? Leave us a message and show it off!&lt;/em&gt;&lt;/p&gt;
 
@@ -1178,7 +1178,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;br&gt;Mickael Daniel { &lt;a href=&quot;https://twitter.com/mklabs&quot;&gt;@mklabs&lt;/a&gt; },
 &lt;br&gt;Eric Bidelman { &lt;a href=&quot;https://twitter.com/ebidel&quot;&gt;@ebidel&lt;/a&gt; }&lt;/p&gt;
 
-&lt;p&gt;and the rest of the &lt;a href=&quot;https://github.com/yeoman?tab=members&quot;&gt;Yeoman&lt;/a&gt; team.&lt;/p&gt;
+&lt;p&gt;and the rest of the &lt;a href=&quot;https://github.com/orgs/yeoman/people&quot;&gt;Yeoman&lt;/a&gt; team.&lt;/p&gt;
 </content>
   </entry>
   
