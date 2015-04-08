@@ -43,6 +43,11 @@ You can only deploy if you have push access to the Yeoman.io repository.
  - If you're adding a Youtube embed iframe please wrap the iframe in a div with the `video-container` class in order to keep the site responsive.
 
 
+## Media
+
+You can find the logo and artwork [here](https://github.com/yeoman/media).
+
+
 ## License
 
 [BSD license](http://opensource.org/licenses/bsd-license.php)
