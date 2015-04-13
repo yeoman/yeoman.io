@@ -138,7 +138,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>/assets/css',
-          src: '**/*.css',
+          src: '{**/,}*.css',
           dest: '<%= yeoman.dist %>/assets/css'
         }]
       },
@@ -381,8 +381,8 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
-    'autoprefixer:dist',
     'cssmin',
+    'autoprefixer:dist',
     'uglify',
     'imagemin',
     'svgmin',
