@@ -245,7 +245,6 @@ Navigation
   border-bottom: 1px dotted rgba(255,255,255,0.2);
   color: #fff;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -421,7 +420,6 @@ Basic Tools
   margin-bottom: 0.5em;
   padding: 1em;
   text-align: center;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -433,7 +431,6 @@ Basic Tools
 .basic-tools .bower:hover { background: rgba(255,204,47,0.6); }
 
 .basic-tools .tool-logo:active {
-  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
   box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -456,7 +453,6 @@ Yeoman Team
   padding: 0.5em 1.5em;
   border-bottom: 1px dotted rgba(0,0,0,0.2);
   text-decoration: none;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -543,7 +539,6 @@ Context/Local Nav
   border-bottom: 1px dotted rgba(0,0,0,0.2);
   text-decoration: none;
   color: #0096c7;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -713,12 +708,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 
 .discovery-page .desc {
-  -ms-word-break: break-all;
   word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto;
 }
 
@@ -1108,7 +1098,6 @@ Modify as content requires.
 
   .main-nav > li:hover {
     background: rgba(255,255,255,0.1);
-    -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
   }
 
@@ -1139,7 +1128,6 @@ Modify as content requires.
     padding: 15px 20px;
     white-space: nowrap;
     border-left: 10px solid rgba(221,0,42,0);
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
@@ -1232,14 +1220,7 @@ Modify as content requires.
     border: 1px dashed #ccc;
     background: #eee;
     /* Columns */
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
     column-count: 2;
-    -webkit-column-width: 50%;
-    -moz-column-width: 50%;
-    -moz-column-width: 50%;
-    -webkit-column-gap: 3em;
-    -moz-column-gap: 3em;
     column-gap: 3em;
   }
 
