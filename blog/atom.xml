@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2015-04-13T20:51:28+00:00</updated>
+  <updated>2015-04-16T07:46:58+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -120,7 +120,7 @@
 &lt;p&gt;This system is way simpler than the current legacy method and doesn&amp;#39;t do any kind of magic. It won&amp;#39;t automatically compile templates (use &lt;code&gt;this.fs.copyTpl()&lt;/code&gt; for this), it won&amp;#39;t pass &lt;code&gt;this&lt;/code&gt; as template context, and it won&amp;#39;t automatically assume paths are relative to anything.&lt;/p&gt;
 
 &lt;p&gt;An example/usual usage would be:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;copyTpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;copyTpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;templatePath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mocha/base-test.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;destinationPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;test/index.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;projectName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;my-awesome-module&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -148,7 +148,7 @@
 &lt;p&gt;Once per Yeoman process, we will write every modified files to disk. This process is passed through a &lt;a href=&quot;https://github.com/wearefractal/vinyl&quot;&gt;vinyl&lt;/a&gt; object stream (just like &lt;a href=&quot;http://gulpjs.com/&quot;&gt;gulp&lt;/a&gt;). Any author can register a &lt;code&gt;transformStream&lt;/code&gt; to modify the file path or content.&lt;/p&gt;
 
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;beautify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-beautify&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;beautify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-beautify&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;registerTransformStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;beautify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indentSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Note that &lt;strong&gt;every file type will be passed through this stream&lt;/strong&gt;. So make sure any transform stream passthrough unsupported files. Tools like &lt;a href=&quot;https://github.com/robrich/gulp-if&quot;&gt;gulp-if&lt;/a&gt; or &lt;a href=&quot;https://github.com/sindresorhus/gulp-filter&quot;&gt;gulp-filter&lt;/a&gt; will help filter invalid type and pass them through.&lt;/p&gt;
@@ -169,7 +169,7 @@
 &lt;p&gt;&lt;code&gt;npm&lt;/code&gt; and &lt;code&gt;bower&lt;/code&gt; installation helpers are now always running once per process. This was a change made in 0.17, but we extended the feature to cover every use/methods who could launch these process.&lt;/p&gt;
 
 &lt;p&gt;This was a breaking an edge case in 0.17. But for the sake of clarity, let&amp;#39;s be clear. The following construct will break:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;installDependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;installDependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// This will block the process forever, and node will fail&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -399,7 +399,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;p&gt;The below represent &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp&lt;/a&gt; tasks the Yeoman team regularly use in our projects. We’ve tried our best to keep this list focused and exclude previous suggestions which no-longer offer as much value, but there’s plenty here to help you keep your pages and their resources as small as possible.&lt;/p&gt;
 
 &lt;div class=&quot;note&quot;&gt;
-&lt;strong&gt;Note:&lt;/strong&gt; Yeoman's &lt;a href=&quot;https://github.com/yeoman/generator-webapp&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;Gulp&lt;/a&gt; webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
+&lt;strong&gt;Note:&lt;/strong&gt; Yeoman&#39;s &lt;a href=&quot;https://github.com/yeoman/generator-webapp&quot;&gt;Grunt&lt;/a&gt; and &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;Gulp&lt;/a&gt; webapp generators include tasks for optimizing images and concatenating and minifying HTML/CSS/JS. We feel that this provides a healthy baseline, but this post will cover tasks which go further.
 &lt;/div&gt;
 
 &lt;h2&gt;Compress &amp;amp; optimize images&lt;/h2&gt;
@@ -423,7 +423,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/gulp-imagemin&quot;&gt;gulp-imagemin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Etsy found that just by &lt;a href=&quot;http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html&quot;&gt;adding&lt;/a&gt; 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can't cut down on the images used in your pages, at least run them through an optimizer.&lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Etsy found that just by &lt;a href=&quot;http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html&quot;&gt;adding&lt;/a&gt; 160KB of images to their pages on mobile, their bounce rate increased by 12%. If you can&#39;t cut down on the images used in your pages, at least run them through an optimizer.&lt;/div&gt;
 
 &lt;h2&gt;Generate responsive images for the &lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt; element&lt;/h2&gt;
 
@@ -445,7 +445,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;p&gt;In addition, if you need to just resize/normalize images that are large in dimension, you can use &lt;a href=&quot;https://www.npmjs.com/package/grunt-image-resize&quot;&gt;grunt-image-resize&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;note&quot;&gt;
-&lt;strong&gt;Note:&lt;/strong&gt; Tim Kaldec's research into responsive images has &lt;a href=&quot;http://timkadlec.com/2013/06/why-we-need-responsive-images/&quot;&gt;suggested&lt;/a&gt; a responsive images strategy could lead to savings of up to 72% on image weight. Whilst it is still early to opt for a spec-compatible, cross-browser approach to responsive images the BBC and Guardian have been using Imager.js for this successfully.
+&lt;strong&gt;Note:&lt;/strong&gt; Tim Kaldec&#39;s research into responsive images has &lt;a href=&quot;http://timkadlec.com/2013/06/why-we-need-responsive-images/&quot;&gt;suggested&lt;/a&gt; a responsive images strategy could lead to savings of up to 72% on image weight. Whilst it is still early to opt for a spec-compatible, cross-browser approach to responsive images the BBC and Guardian have been using Imager.js for this successfully.
 &lt;/div&gt;
 
 &lt;h2&gt;Minify SVG images&lt;/h2&gt;
@@ -547,7 +547,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;/ul&gt;
 
 &lt;div class=&quot;note&quot;&gt;
-    &lt;strong&gt;Note:&lt;/strong&gt; A question developers regularly ask is whether UnCSS, or the process of removing unused CSS can also work with styles injected into the page dynamically. The answer is 'yes'. UnCSS works in tandem with PhantomJS in order to make this happen. Devs have seen anything between &lt;a href=&quot;https://twitter.com/efexen/status/438672726996574209&quot;&gt;10&lt;/a&gt;-&lt;a href=&quot;https://twitter.com/thisbetom/status/432575411138998273&quot;&gt;120KB&lt;/a&gt; in savings on a typical Bootstrap page and UnCSS also works well with other frameworks.
+    &lt;strong&gt;Note:&lt;/strong&gt; A question developers regularly ask is whether UnCSS, or the process of removing unused CSS can also work with styles injected into the page dynamically. The answer is &#39;yes&#39;. UnCSS works in tandem with PhantomJS in order to make this happen. Devs have seen anything between &lt;a href=&quot;https://twitter.com/efexen/status/438672726996574209&quot;&gt;10&lt;/a&gt;-&lt;a href=&quot;https://twitter.com/thisbetom/status/432575411138998273&quot;&gt;120KB&lt;/a&gt; in savings on a typical Bootstrap page and UnCSS also works well with other frameworks.
 &lt;/div&gt;
 
 &lt;h2&gt;Inline CSS&lt;/h2&gt;
@@ -758,7 +758,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;h2&gt;Custom app path&lt;/h2&gt;
 
 &lt;p&gt;Before, the scaffold generated the project&amp;#39;s application files into the app folder. Now you can customize it using the &lt;code&gt;--appPath&lt;/code&gt; option.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh language-sh&quot; data-lang=&quot;sh&quot;&gt;yo backbone --appPath&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;yo backbone --appPath&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This will create a folder named &lt;code&gt;public&lt;/code&gt; instead of &lt;code&gt;app&lt;/code&gt;. It will then put the scaffolded code into that folder.  When you use a sub-generator, like &lt;code&gt;backbone:model&lt;/code&gt;, the scaffold will use the &lt;code&gt;public&lt;/code&gt; directory.&lt;/p&gt;
 
@@ -771,7 +771,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;p&gt;&lt;img src=&quot;/assets/img/blog/yo-backbone-mocha.png&quot; alt=&quot;Backbone mocha&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;You can choose BDD/TDD when generating the new Backbone app with the &lt;code&gt;--ui&lt;/code&gt; option.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh language-sh&quot; data-lang=&quot;sh&quot;&gt;yo backbone --ui&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tdd
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;yo backbone --ui&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tdd
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;By default the generator is setup to use BDD with Mocha.&lt;/p&gt;
 
@@ -816,7 +816,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 &lt;/ul&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-gruntfile
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-gruntfile
 yo gruntfile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Scaffold a Grunt plugin&lt;/h2&gt;
@@ -829,7 +829,7 @@ yo gruntfile
 &lt;/ul&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-gruntplugin
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-gruntplugin
 yo gruntplugin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Scaffold a new Node module&lt;/h2&gt;
@@ -844,7 +844,7 @@ yo gruntplugin
 &lt;/ul&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-node
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-node
 yo node
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Scaffold a new yo generator&lt;/h2&gt;
@@ -860,7 +860,7 @@ yo node
 &lt;/ul&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-generator
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-generator
 yo generator
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Scaffold a project using Bootstrap&lt;/h2&gt;
@@ -873,7 +873,7 @@ yo generator
 &lt;/ul&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-bootstrap
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g generator-bootstrap
 yo bootstrap
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Backbone and Ember generator updates&lt;/h2&gt;
@@ -908,14 +908,14 @@ yo bootstrap
 &lt;p&gt;Our Gulp generator based on our Grunt generator for &lt;a href=&quot;https://github.com/yeoman/generator-webapp&quot;&gt;web apps&lt;/a&gt; and you can follow along our progress at &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp&quot;&gt;generator-gulp-webapp&lt;/a&gt;. It&amp;#39;s still early days, but our &lt;a href=&quot;https://github.com/yeoman/generator-gulp-webapp/blob/master/app/templates/gulpfile.js&quot;&gt;gulpfile&lt;/a&gt; already contains early work for handling HTML, CSS, JS and images. See the samples below for a peek at what we&amp;#39;re doing:&lt;/p&gt;
 
 &lt;p&gt;Require Gulp and load our Gulp plugins:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
 
 // Load plugins
 var $ = require(&amp;#39;gulp-load-plugin&amp;#39;)({camelize: true});
 var server = $.tinyLr();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Styles:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;styles&amp;#39;, function () {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;styles&amp;#39;, function () {
     return gulp.src(&amp;#39;app/styles/main.scss&amp;#39;)
         .pipe($.sass({
           style: &amp;#39;expanded&amp;#39;,
@@ -929,7 +929,7 @@ var server = $.tinyLr();
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Scripts:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;scripts&amp;#39;, function () {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;scripts&amp;#39;, function () {
     return gulp.src(&amp;#39;app/scripts/**/*.js&amp;#39;)
         .pipe($.jshint(&amp;#39;.jshintrc&amp;#39;))
         .pipe($.jshint.reporter(&amp;#39;default&amp;#39;))
@@ -941,7 +941,7 @@ var server = $.tinyLr();
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Images:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;images&amp;#39;, function () {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;images&amp;#39;, function () {
     return gulp.src(&amp;#39;app/images/**/*&amp;#39;)
         .pipe($.livereload(server))
         .pipe($.cache($.imagemin({
@@ -954,7 +954,7 @@ var server = $.tinyLr();
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Watch:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;watch&amp;#39;, function () {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;watch&amp;#39;, function () {
     // Listen on port 35729
     server.listen(35729, function (err) {
         if (err) {
@@ -976,12 +976,12 @@ var server = $.tinyLr();
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Clean:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;clean&amp;#39;, function () {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;gulp.task(&amp;#39;clean&amp;#39;, function () {
     return gulp.src([&amp;#39;dist/styles&amp;#39;, &amp;#39;dist/scripts&amp;#39;, &amp;#39;dist/images&amp;#39;], {read: false}).pipe($.clean());
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Build:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;// Build
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;// Build
 gulp.task(&amp;#39;build&amp;#39;, [&amp;#39;html&amp;#39;, &amp;#39;styles&amp;#39;, &amp;#39;scripts&amp;#39;, &amp;#39;images&amp;#39;]);
 
 // Default task
@@ -1022,14 +1022,14 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;p&gt;It is also how composed generators will know what is the root of a project.&lt;/p&gt;
 
 &lt;p&gt;Simply add this line somewhere in your generator to generate the file at least once:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Of course, if you&amp;#39;re using the config object to store datas, it&amp;#39;ll already be created. &lt;a href=&quot;http://yeoman.github.io/generator/Storage.html&quot;&gt;Read more on the config Storage in our API reference&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Use the new &lt;code&gt;.extend()&lt;/code&gt; method instead of &lt;code&gt;util.inherit&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;Until recently, you&amp;#39;d extend the Base generator this way:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BlogGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BlogGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;generators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
@@ -1037,7 +1037,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inherits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;BlogGenerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can now do the same in a fashion similar to Backbone.js:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BlogGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BlogGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
     &lt;span class=&quot;cm&quot;&gt;/* prototype methods goes here */&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1060,7 +1060,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;p&gt;NPM &lt;code&gt;peerDependencies&lt;/code&gt; are tricky to get right. As they&amp;#39;re installed in the global &lt;code&gt;node_modules&lt;/code&gt; folder, they&amp;#39;re often the cause of installation errors due to incompatible version required between differents packages. Please, be a good citizen and don&amp;#39;t make the issue worse by using restrictive version requirement.&lt;/p&gt;
 
 &lt;p&gt;So, make it a rule to always defines &lt;code&gt;peerDependencies&lt;/code&gt; version using a minimum range (&lt;code&gt;&amp;gt;=&lt;/code&gt;), or using any available version (&lt;code&gt;*&lt;/code&gt;).&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;json language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;quot;peerDependencies&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;GOOD&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;quot;grunt-cli&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt;= 0.1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -1090,10 +1090,10 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;p&gt;&lt;img alt=&quot;The Yeoman 1.0 Team&quot; src=&quot;http://i.imgur.com/ckKa3jC.jpg&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;For those who haven&amp;#39;t tried Yeoman yet, or have been waiting for 1.0, just tell your terminal:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g yo
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g yo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you&amp;#39;ve already used any of the 1.0 Release Candidates, you&amp;#39;ll feel right at home with this upgrade. You&amp;#39;re in for more of the same stable, happy relationships you&amp;#39;ve had with yo and your favorite generators.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;npm update -g yo
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm update -g yo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Remember, you&amp;#39;ll need to install a generator using &lt;code&gt;yo&lt;/code&gt; or &lt;code&gt;yo&lt;/code&gt; followed by a generator name like &lt;code&gt;yo angular&lt;/code&gt; before you see the options below :)&lt;/p&gt;
 
