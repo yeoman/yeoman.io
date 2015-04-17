@@ -58,7 +58,7 @@ before(function (done) {
     .inDir(path.join( __dirname, './tmp'))  // Clear the directory and set it as the CWD
     .withOptions({ foo: 'bar' })            // Mock options passed in
     .withArguments(['name-x'])              // Mock the arguments
-    .withPrompt({ coffee: false })          // Mock the prompt answers
+    .withPrompts({ coffee: false })          // Mock the prompt answers
     .on('ready', function (generator) {
       // this is called right before `generator.run()` is called
     })
@@ -79,7 +79,7 @@ helpers.run(path.join( __dirname, '../app'))
     // `dir` is the resolved target directory (or `path.join( __dirname, './tmp')` in this example)
     fs.copySync(path.join(__dirname, '../templates/common'), dir)
   })
-  .withPrompt({ coffee: false })
+  .withPrompts({ coffee: false })
   .on('end', function () {
     // assert something
   });
@@ -96,7 +96,7 @@ helpers.run(path.join( __dirname, '../app'))
     var done = this.async(); // `this` is the RunContext object.
     fs.copy(path.join(__dirname, '../templates/common'), dir, done);
   })
-  .withPrompt({ coffee: false })
+  .withPrompts({ coffee: false })
   .on('end', function () {
     // assert something
   });
