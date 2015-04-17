@@ -21,7 +21,7 @@
     <span class=p>.</span><span class=nx>inDir</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span> <span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;./tmp&#39;</span><span class=p>))</span>  <span class=c1>// Clear the directory and set it as the CWD</span>
     <span class=p>.</span><span class=nx>withOptions</span><span class=p>({</span> <span class=nx>foo</span><span class=o>:</span> <span class=s1>&#39;bar&#39;</span> <span class=p>})</span>            <span class=c1>// Mock options passed in</span>
     <span class=p>.</span><span class=nx>withArguments</span><span class=p>([</span><span class=s1>&#39;name-x&#39;</span><span class=p>])</span>              <span class=c1>// Mock the arguments</span>
-    <span class=p>.</span><span class=nx>withPrompt</span><span class=p>({</span> <span class=nx>coffee</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>          <span class=c1>// Mock the prompt answers</span>
+    <span class=p>.</span><span class=nx>withPrompts</span><span class=p>({</span> <span class=nx>coffee</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>          <span class=c1>// Mock the prompt answers</span>
     <span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s1>&#39;ready&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>generator</span><span class=p>)</span> <span class=p>{</span>
       <span class=c1>// this is called right before `generator.run()` is called</span>
     <span class=p>})</span>
@@ -35,7 +35,7 @@
     <span class=c1>// `dir` is the resolved target directory (or `path.join( __dirname, &#39;./tmp&#39;)` in this example)</span>
     <span class=nx>fs</span><span class=p>.</span><span class=nx>copySync</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;../templates/common&#39;</span><span class=p>),</span> <span class=nx>dir</span><span class=p>)</span>
   <span class=p>})</span>
-  <span class=p>.</span><span class=nx>withPrompt</span><span class=p>({</span> <span class=nx>coffee</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>
+  <span class=p>.</span><span class=nx>withPrompts</span><span class=p>({</span> <span class=nx>coffee</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>
   <span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s1>&#39;end&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
     <span class=c1>// assert something</span>
   <span class=p>});</span>
@@ -47,7 +47,7 @@
     <span class=kd>var</span> <span class=nx>done</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>async</span><span class=p>();</span> <span class=c1>// `this` is the RunContext object.</span>
     <span class=nx>fs</span><span class=p>.</span><span class=nx>copy</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;../templates/common&#39;</span><span class=p>),</span> <span class=nx>dir</span><span class=p>,</span> <span class=nx>done</span><span class=p>);</span>
   <span class=p>})</span>
-  <span class=p>.</span><span class=nx>withPrompt</span><span class=p>({</span> <span class=nx>coffee</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>
+  <span class=p>.</span><span class=nx>withPrompts</span><span class=p>({</span> <span class=nx>coffee</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>
   <span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s1>&#39;end&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
     <span class=c1>// assert something</span>
   <span class=p>});</span>
