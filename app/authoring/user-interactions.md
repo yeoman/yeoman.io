@@ -114,6 +114,7 @@ The `name` value will be used to retrieve the argument at the matching key `gene
 The options hash (the second argument) accepts multiple key-value pairs:
 
 - `desc` Description for the option
+- `alias` Short name for option
 - `type` Either Boolean, String or Number
 - `defaults` Default value
 - `hide` Boolean whether to hide from help
