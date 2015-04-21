@@ -42,7 +42,7 @@ Your lean, production-ready application is now available in a ***dist*** folder 
 Want to preview your production app locally? That’s just another simple grunt command:
 
 ```sh
-grunt serve:dist
+grunt server:dist
 ```
 
 It will build your project and launch a local web server. Yo Hero!
