@@ -58,3 +58,22 @@ generators.Base.extend({
 ```
 
 Make sure to call the `spawnCommand` method inside the `install` queue. Your users don't want to wait for an installation command to complete.
+
+## Using dependencies inside generator code
+
+So far we've described how to make yeoman install dependencies that will be eventually used by the project that will get generated. But how about using dependencies inside (sub)generator code?
+
+It may happen that your generators need to use 3rd party libraries to perform complex tasks, such as generating a slug based on a user provided input. You don't need to install the dependencies into the project you're working on, since it is the generator, who uses it. Add the libraries to the `dependencies` map in the `package.json` file of your generator project. The dependency will be fetched during your generator installation (`npm install -g generator-name`) and used when running your (sub)generators.
+
+For example, run `npm install --save slug` inside the main directory of the generator to install the dependency and save it to your `package.json` file. The file should look like this:
+
+```json
+{
+  "name": "generator-name",
+  // ...
+  "dependencies": {
+    "yeoman-generator": "^0.16.0",
+    "slug": "^0.9.1",
+  }
+}
+```
