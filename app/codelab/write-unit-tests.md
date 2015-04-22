@@ -22,54 +22,34 @@ When you run `grunt test`, you'll see some warnings in the Yeoman console. Donâ€
 
 ## Update Karma configuration
 
-First, we need to update the Karma configuration to load the new Bower components we installed in the [Step 7](install-packages.html#install).
+First, we need to check the Karma configuration to see if it is loading the new Bower components we installed in [Step 7](install-packages.html#install).
 
-Open ***karma.conf.js***. Currently the `files` array looks like this:
-
-```js
-files: [
-  'bower_components/angular/angular.js',
-  'bower_components/angular-mocks/angular-mocks.js',
-  'bower_components/angular-animate/angular-animate.js',
-  'bower_components/angular-cookies/angular-cookies.js',
-  'bower_components/angular-resource/angular-resource.js',
-  'bower_components/angular-route/angular-route.js',
-  'bower_components/angular-sanitize/angular-sanitize.js',
-  'bower_components/angular-touch/angular-touch.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
-],
-```
-
-Add:
+Open ***karma.conf.js***. Currently the `files` array should look like this:
 
 ```js
-  'bower_components/jquery/dist/jquery.js',
-  'bower_components/jquery-ui/jquery-ui.js',
-  'bower_components/angular-ui-sortable/sortable.js',
+    files: [
+      // bower:js
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/angular/angular.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/angular-animate/angular-animate.js',
+      'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-sanitize/angular-sanitize.js',
+      'bower_components/angular-touch/angular-touch.js',
+      'bower_components/jquery-ui/jquery-ui.js',
+      'bower_components/angular-ui-sortable/sortable.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      // endbower
+      "app/scripts/**/*.js",
+      "test/mock/**/*.js",
+      "test/spec/**/*.js"
+    ],
 ```
 
-So that the final `files` array looks like this:
+Bower has read in the newly added dependencies ('bower_components/jquery-ui/jquery-ui.js', 'bower_components/angular-touch/angular-touch.js') and automatically added them to the karma.conf.js file for you.
 
-```js
-files: [
-  'bower_components/angular/angular.js',
-  'bower_components/angular-mocks/angular-mocks.js',
-  'bower_components/angular-animate/angular-animate.js',
-  'bower_components/angular-cookies/angular-cookies.js',
-  'bower_components/angular-resource/angular-resource.js',
-  'bower_components/angular-route/angular-route.js',
-  'bower_components/angular-sanitize/angular-sanitize.js',
-  'bower_components/angular-touch/angular-touch.js',
-  'bower_components/jquery/dist/jquery.js',
-  'bower_components/jquery-ui/jquery-ui.js',
-  'bower_components/angular-ui-sortable/sortable.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
-],
-```
 
 <!--
 So remember that we previously changed app/scripts/controllers/main.js to load items from localStorage? To keep your head from exploding, letâ€™s work with some static todo items to keep things simple for these unit tests.
