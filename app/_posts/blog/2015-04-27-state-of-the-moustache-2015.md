@@ -4,7 +4,7 @@ title: State of the Moustache
 excerpt: Digest of what's new in the Yeoman ecosystem
 ---
 
-> this is a post by team member [Addy Osmani](https://github.com/addyosmani). <br>In this issue we cover generators for React, ES6, desktop apps and more.
+> This is a post by team member [Addy Osmani](https://github.com/addyosmani). <br>In this issue we cover generators for React, ES6, desktop apps and more.
 
 ## Intro
 
@@ -37,7 +37,7 @@ A number of new generators are also now available for quickly turning your ES6+ 
 
 ### Spotlight: Electron
 
-[Electron](http://electron.atom.io/), formerly atom-shell, allows you to build cross-platform desktop apps using JS/CSS/HTML. Some of the apps built using it that you may already be using include [Slack](https://slack.com/), [Atom Editor](https://atom.io) (of course) and PhotoShop/Sketch export tool [Avocode](http://avocode.com/).
+[Electron](http://electron.atom.io/), formerly atom-shell, allows you to build cross-platform desktop apps using JS/CSS/HTML. Some of the apps built using it that you may already be using include [Slack](https://slack.com/), [Atom Editor](https://atom.io) (of course) and Photoshop/Sketch export tool [Avocode](http://avocode.com/).
 
 Electron is based on [io.js](http://iojs.org/) and Chromium and to help you get started with projects using it, Sindre Sorhus has written a quick Electron [generator](https://github.com/sindresorhus/generator-electron) you can try out. He also maintains a list of [awesome-electron](https://github.com/sindresorhus/awesome-electron) projects in case you're looking for inspiration.
 
@@ -61,18 +61,17 @@ Below is a round-up of community authored articles about or mentioning Yeoman wh
 
 [Putting your bot on #Slack using Yeoman](http://blog.pandorabots.com/putting-your-bot-on-slack/)
 
-[How to Build an App With AngularJS, Node.js and Stormpath in 15 Minutes](https://stormpath.com/blog/angular-node-15-
-minutes)
+[How to Build an App With AngularJS, Node.js and Stormpath in 15 Minutes](https://stormpath.com/blog/angular-node-15-minutes)
 
 [Worflow automation for Wordpress Theme Developers with Yeoman](https://speakerdeck.com/artificermil/front-end-workflow-automation-for-wordpress-theme-and-plugin-development)
 
-[A Baseline for Front-End [JS] Developers: 2015](http://rmurphey.com/blog/2015/03/23/a-baseline-for-front-end-developers-2015)
+[A Baseline for Front-End \[JS\] Developers: 2015](http://rmurphey.com/blog/2015/03/23/a-baseline-for-front-end-developers-2015)
 
 [Yeoman, Polymer and Gulp](http://robdodson.me/yeoman-polymer-and-gulp)
 
 [Integrating Yeoman with third-party tools](http://yeoman.io/authoring/integrating-yeoman.html)
 
-[Using yo webapp via Docker](https://asciinema.org/a/13240)
+[Using `yo webapp` via Docker](https://asciinema.org/a/13240)
 
 [Node, Yeoman, Bower, and Gulp with PostCSS on OS X Yosemite](http://itmustbe.com/code/2015/04/04/node-yeoman-bower-gulp-postcss-os-x-yosemite/)
 
@@ -92,7 +91,7 @@ minutes)
 
 [A new generator for Django projects](http://axiacore.github.io/generator-django-axiacore/)
 
-[Mobile Chrome Apps Starter Kit with Polymer](http://goo.gl/3MdaIk)
+[Mobile Chrome Apps Starter Kit with Polymer](https://github.com/ragingwind/mobile-chrome-apps-starter-kit)
 
 [Angular + Gulp generator has a new release](https://github.com/Swiip/generator-gulp-angular/releases)
 
@@ -116,5 +115,7 @@ It's been pleasant to see an [increasing](https://twitter.com/tomwayson/status/5
 
 ## Tipping our hat
 
-That's about it for this round-up. We would like to remind folks that we're always checking out [@yeoman](http://twitter.com/yeoman) and enjoy hearing suggestions for anything we can be doing better, news, new generators you've written or even just [doodles](https://twitter.com/kittytail38/status/573522972528373761) of your favorite man in a hat. Until next time, `yo awesomeness`.
+That's about it for this round-up. We would like to remind folks that we're always checking out [@yeoman](http://twitter.com/yeoman) and enjoy hearing suggestions for anything we can be doing better, news, new generators you've written or even just [doodles](https://twitter.com/kittytail38/status/573522972528373761) of your favorite man in a hat. If you have ideas for the next post, you can also drop em' in this [thread](https://github.com/yeoman/yeoman/issues/1411).
+
+Until next time, `yo awesomeness`.
 
