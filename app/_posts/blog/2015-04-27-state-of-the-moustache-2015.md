@@ -8,7 +8,7 @@ excerpt: Digest of what's new in the Yeoman ecosystem
 
 ## Intro
 
-Allo! Allo! April is a special month for us as it represents 3 years since the project first started and almost 2 years since we decided to rename the binary from [yeoman](github.com/yeoman/yeoman) to [yo](github.com/yeoman/yo). This month also saw Yeoman grow to [94,000](npmjs.com/package/yo) monthly installs and 1635 community [generators](http://yeoman.io/generators/).
+Allo! Allo! April is a special month for us as it represents 3 years since the project first started and almost 2 years since we decided to rename the binary from [yeoman](http://github.com/yeoman/yeoman) to [yo](http://github.com/yeoman/yo). This month also saw Yeoman grow to [1.3 million](http://www.npm-stats.com/~packages/yo) total installs and 1635 community [generators](http://yeoman.io/generators/).
 
 A huge thank you to all our contributors and a special call-out to all the global event organisers that featured Yeoman at their events. [YeomanTO](https://twitter.com/YeomanTO), the [Codepen Meetups](https://twitter.com/Smartass_io/status/580501962527010816), [IBM Design Camp](https://twitter.com/kevinSuttle/status/568811512938127361), [OttawaJS](https://twitter.com/solanojuan/status/575807587095990272), [JSMontreal](https://twitter.com/jsmontreal) and others all have our ❤. We couldn't be doing this without you.
 
