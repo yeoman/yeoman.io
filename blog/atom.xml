@@ -4,12 +4,135 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2015-04-22T18:23:49+00:00</updated>
+  <updated>2015-04-27T09:41:13+01:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
   </author>
 
+  
+  <entry>
+    <title>State of the Moustache</title>
+    <link href="http://yeoman.io/blog/state-of-the-moustache-2015.html"/>
+    <updated>2015-04-27T00:00:00+01:00</updated>
+    <id>http://yeoman.io/blog/state-of-the-moustache-2015</id>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;This is a post by team member &lt;a href=&quot;https://github.com/addyosmani&quot;&gt;Addy Osmani&lt;/a&gt;. &lt;br&gt;In this issue we cover generators for React, ES6, desktop apps and more.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;Allo! Allo! April is a special month for us as it represents 3 years since the project first started and almost 2 years since we decided to rename the binary from &lt;a href=&quot;github.com/yeoman/yeoman&quot;&gt;yeoman&lt;/a&gt; to &lt;a href=&quot;github.com/yeoman/yo&quot;&gt;yo&lt;/a&gt;. This month also saw Yeoman grow to &lt;a href=&quot;npmjs.com/package/yo&quot;&gt;94,000&lt;/a&gt; monthly installs and 1635 community &lt;a href=&quot;http://yeoman.io/generators/&quot;&gt;generators&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A huge thank you to all our contributors and a special call-out to all the global event organisers that featured Yeoman at their events. &lt;a href=&quot;https://twitter.com/YeomanTO&quot;&gt;YeomanTO&lt;/a&gt;, the &lt;a href=&quot;https://twitter.com/Smartass_io/status/580501962527010816&quot;&gt;Codepen Meetups&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/kevinSuttle/status/568811512938127361&quot;&gt;IBM Design Camp&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/solanojuan/status/575807587095990272&quot;&gt;OttawaJS&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/jsmontreal&quot;&gt;JSMontreal&lt;/a&gt; and others all have our ❤. We couldn&amp;#39;t be doing this without you.&lt;/p&gt;
+
+&lt;h2&gt;Highlights&lt;/h2&gt;
+
+&lt;p&gt;Some of our recent highlights have been increased use of Yeoman for scaffolding in the React community, folks trying out ES6 to write their own &lt;a href=&quot;http://mammal.io/articles/yeoman-generators-es6&quot;&gt;generators&lt;/a&gt; and Internet Explorer PM Ade Bateman using yo to scaffold out &lt;a href=&quot;http://adrianba.net/archive/2015/03/14/using-yeoman-to-start-writing-technical-specifications-with-respec.aspx&quot;&gt;technical specifications&lt;/a&gt;. Crazy cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/april-es6.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;re excited to see so much passion for project scaffolding and are working on some new features to enable generators to extend and build on top of each other.&lt;/p&gt;
+
+&lt;h3&gt;Spotlight: React&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://reactjs.com&quot;&gt;React&lt;/a&gt; is a library for creating user-interfaces by Facebook. It creates its own Virtual DOM, where components live. This approach provides the potential for performance gains as React calculates what work needs to be done in the DOM beforehand, updating the DOM tree in a batch accordingly. React avoids costly DOM operations and aims to update in an efficient way.&lt;/p&gt;
+
+&lt;p&gt;Three new generators for quickly getting started with React are out: &lt;a href=&quot;https://github.com/newtriks/generator-react-webpack&quot;&gt;React and WebPack&lt;/a&gt; (recommended, with support for Flux and react-router), &lt;a href=&quot;https://github.com/banderson/generator-flux-react&quot;&gt;React and Flux&lt;/a&gt; (with Browserify), and &lt;a href=&quot;https://github.com/payner35/generator-meteor-react&quot;&gt;React and Meteor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/april-react.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;Spotlight: ES6&lt;/h3&gt;
+
+&lt;p&gt;A number of new generators are also now available for quickly turning your ES6+ code into ES5 code. There are generators available for &lt;a href=&quot;https://github.com/thejameskyle/generator-es6-library-boilerplate&quot;&gt;Babel&lt;/a&gt;, &lt;a href=&quot;https://github.com/swirlycheetah/generator-angular2&quot;&gt;Angular2&lt;/a&gt; and &lt;a href=&quot;https://github.com/zewa666/generator-aurelia&quot;&gt;Aurelia&lt;/a&gt; - a new framework using ES6 and Web Components. A few more ES6 generators can be found over on my &lt;a href=&quot;https://github.com/addyosmani/es6-tools#code-generation&quot;&gt;es6-tools&lt;/a&gt; project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/april-es62.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;Spotlight: Electron&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://electron.atom.io/&quot;&gt;Electron&lt;/a&gt;, formerly atom-shell, allows you to build cross-platform desktop apps using JS/CSS/HTML. Some of the apps built using it that you may already be using include &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt;, &lt;a href=&quot;https://atom.io&quot;&gt;Atom Editor&lt;/a&gt; (of course) and Photoshop/Sketch export tool &lt;a href=&quot;http://avocode.com/&quot;&gt;Avocode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Electron is based on &lt;a href=&quot;http://iojs.org/&quot;&gt;io.js&lt;/a&gt; and Chromium and to help you get started with projects using it, Sindre Sorhus has written a quick Electron &lt;a href=&quot;https://github.com/sindresorhus/generator-electron&quot;&gt;generator&lt;/a&gt; you can try out. He also maintains a list of &lt;a href=&quot;https://github.com/sindresorhus/awesome-electron&quot;&gt;awesome-electron&lt;/a&gt; projects in case you&amp;#39;re looking for inspiration.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/april-electron.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;Spotlight: Node&lt;/h3&gt;
+
+&lt;p&gt;While many of us are used to just using &lt;code&gt;npm init&lt;/code&gt; for fleshing out our new Node modules, some might prefer a more opinionated alternative.  Cue &lt;a href=&quot;https://github.com/sindresorhus/node-module-boilerplate&quot;&gt;node-module-boilerplate&lt;/a&gt; and &lt;a href=&quot;https://github.com/sindresorhus/generator-nm&quot;&gt;generator-nm&lt;/a&gt; by Sindre Sorhus. His starting point includes EditorConfig, Travis and a unit testing starting point out of the box. &lt;/p&gt;
+
+&lt;p&gt;On a related note, if you find yourself needing to automate debugging a Yeoman generator with node-inspector, Hemanth on the team has written up a useful &lt;a href=&quot;https://github.com/hemanth/debug-yeoman-generator&quot;&gt;script&lt;/a&gt; you can also check out.&lt;/p&gt;
+
+&lt;h2&gt;Community&lt;/h2&gt;
+
+&lt;p&gt;Below is a round-up of community authored articles about or mentioning Yeoman which we enjoyed reading this month. Learn how to build a complete WebRTC client, a Slack bot or automate your Wordpress theme tooling workflow. This and more below.&lt;/p&gt;
+
+&lt;h3&gt;Articles&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.mgechev.com/2014/12/26/multi-user-video-conference-webrtc-angularjs-yeoman&quot;&gt;Multi-User Video Conference with WebRTC and Yeoman&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mammal.io/articles/yeoman-generators-es6&quot;&gt;Writing Yeoman generators in ES6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.pandorabots.com/putting-your-bot-on-slack/&quot;&gt;Putting your bot on #Slack using Yeoman&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stormpath.com/blog/angular-node-15-minutes&quot;&gt;How to Build an App With AngularJS, Node.js and Stormpath in 15 Minutes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/artificermil/front-end-workflow-automation-for-wordpress-theme-and-plugin-development&quot;&gt;Worflow automation for Wordpress Theme Developers with Yeoman&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rmurphey.com/blog/2015/03/23/a-baseline-for-front-end-developers-2015&quot;&gt;A Baseline for Front-End [JS] Developers: 2015&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://robdodson.me/yeoman-polymer-and-gulp&quot;&gt;Yeoman, Polymer and Gulp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yeoman.io/authoring/integrating-yeoman.html&quot;&gt;Integrating Yeoman with third-party tools&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asciinema.org/a/13240&quot;&gt;Using &lt;code&gt;yo webapp&lt;/code&gt; via Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://itmustbe.com/code/2015/04/04/node-yeoman-bower-gulp-postcss-os-x-yosemite/&quot;&gt;Node, Yeoman, Bower, and Gulp with PostCSS on OS X Yosemite&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtube.com/watch?list=PLpP9FLMkNf54AFwvRgYb8KMbKCaqqopsl&amp;amp;v=bqTLJi086Po&quot;&gt;Yeoman Tutorial video series&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://scotch.io/tutorials/internationalization-of-angularjs-applications&quot;&gt;Internationalization of AngularJS Applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.drissamri.be/blog/technology/starting-modern-java-project-with-jhipster/&quot;&gt;Starting modern Java projects with JHipster and Yeoman&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://khmylov.com/blog/2015/02/build-web-app-and-survive/&quot;&gt;How to set up a modern web app and stay sane&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://angularonrails.com/how-to-wire-up-ruby-on-rails-and-angularjs-as-a-single-page-application-gulp-version/?utm_medium=email&amp;amp;utm_source=rubyweekly&quot;&gt;How to Wire Up Ruby on Rails and AngularJS as a Single-Page Application (Gulp Version)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://airpair.com/typescript/posts/typescript-development-with-gulp-and-sublime-text?utm_medium=email&amp;amp;utm_source=javascriptweekly&quot;&gt;Practical TypeScript Development with Gulp and Sublime Text 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Some generators we liked&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://axiacore.github.io/generator-django-axiacore/&quot;&gt;A new generator for Django projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ragingwind/mobile-chrome-apps-starter-kit&quot;&gt;Mobile Chrome Apps Starter Kit with Polymer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Swiip/generator-gulp-angular/releases&quot;&gt;Angular + Gulp generator has a new release&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bezoerb/generator-grunt-symfony&quot;&gt;Symphony2 with JSPM and critical-CSS optimisation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sixertoy/generator-brackextension&quot;&gt;Generator for Adobe Brackets extensions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Announcements from core&lt;/h2&gt;
+
+&lt;h3&gt;Exploring npm3&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/npm/npm/wiki/Roadmap&quot;&gt;npm@3&lt;/a&gt; plans to introduce a number of improvements, including a caching rewrite and no longer installing &lt;code&gt;peerDependencies&lt;/code&gt; by default. This particular change will have an impact on &lt;code&gt;yo&lt;/code&gt; as it means you end up needing to resolve peerDep conflicts yourself manually. We may end up having our sub-generators in &lt;code&gt;dependencies&lt;/code&gt; instead, but look forward to taking full advantage of npm@3 where it&amp;#39;ll benefit our users.&lt;/p&gt;
+
+&lt;h3&gt;Deprecations&lt;/h3&gt;
+
+&lt;p&gt;As Simon mentioned in our &lt;a href=&quot;https://github.com/yeoman/generator/releases/tag/v0.19.0&quot;&gt;0.19 release notes&lt;/a&gt; for the generator system, we&amp;#39;re currently looking to deprecate a set of methods as we work on cleaning up our API towards an eventual 1.0 release. As always, please test your generators against the latest version of &lt;code&gt;yeoman-generator&lt;/code&gt; to ensure everything continues to run smoothly.&lt;/p&gt;
+
+&lt;h3&gt;Composition FTW&lt;/h3&gt;
+
+&lt;p&gt;It&amp;#39;s been pleasant to see an &lt;a href=&quot;https://twitter.com/tomwayson/status/588564830665084930&quot;&gt;increasing&lt;/a&gt; number of developers using our &lt;a href=&quot;http://yeoman.io/authoring/composability.html&quot;&gt;composability&lt;/a&gt; feature for their generators. This enables building upon common ground so that a generator can be run inside another generator, rather than having to replicate functionality. E.g call out to a generator for scaffolding Karma tests rather than doing this inside your AngularApp one.&lt;/p&gt;
+
+&lt;h2&gt;Tipping our hat&lt;/h2&gt;
+
+&lt;p&gt;That&amp;#39;s about it for this round-up. We would like to remind folks that we&amp;#39;re always checking out &lt;a href=&quot;http://twitter.com/yeoman&quot;&gt;@yeoman&lt;/a&gt; and enjoy hearing suggestions for anything we can be doing better, news, new generators you&amp;#39;ve written or even just &lt;a href=&quot;https://twitter.com/kittytail38/status/573522972528373761&quot;&gt;doodles&lt;/a&gt; of your favorite man in a hat. If you have ideas for the next post, you can also drop &amp;#39;em in this &lt;a href=&quot;https://github.com/yeoman/yeoman/issues/1411&quot;&gt;thread&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Until next time, &lt;code&gt;yo awesomeness&lt;/code&gt;.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Why Bower_Components was moved to a Project's Root Directory</title>
@@ -91,7 +214,7 @@
   <entry>
     <title>Yeoman generator version 0.18.0 - Release announcement</title>
     <link href="http://yeoman.io/blog/release-0.18.html"/>
-    <updated>2014-10-14T00:00:00+00:00</updated>
+    <updated>2014-10-14T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/release-0.18</id>
     <content type="html">&lt;p&gt;Allo&amp;#39; Allo&amp;#39; today we&amp;#39;re happy to announce the release of &lt;a href=&quot;https://www.npmjs.com/package/yeoman-generator&quot;&gt;yeoman-generator@0.18.0&lt;/a&gt;!&lt;/p&gt;
 
@@ -213,7 +336,7 @@
   <entry>
     <title>Karma Generator Rewrite 0.8.0</title>
     <link href="http://yeoman.io/blog/generator-karma-rewrite.html"/>
-    <updated>2014-05-12T00:00:00+00:00</updated>
+    <updated>2014-05-12T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/generator-karma-rewrite</id>
     <content type="html">&lt;p&gt;Allo&amp;#39; allo&amp;#39;! Here&amp;#39;s &lt;a href=&quot;https://github.com/eddiemonge&quot;&gt;Eddie&lt;/a&gt; from the Yeoman team on the recent changes to the Karma Generator. The changes focused on configuration and testing.&lt;/p&gt;
 
@@ -1083,7 +1206,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Release the Kraken! - Announcing Yeoman 1.0</title>
     <link href="http://yeoman.io/blog/hello-1.0.html"/>
-    <updated>2013-08-23T00:00:00+00:00</updated>
+    <updated>2013-08-23T00:00:00+01:00</updated>
     <id>http://yeoman.io/blog/hello-1.0</id>
     <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0!&lt;/p&gt;
 
