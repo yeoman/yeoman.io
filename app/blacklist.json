@@ -8,5 +8,6 @@
   "generator-react-coffee-webpack",
   "generator-onereq",
   "generator-mtb-app",
-  "generator-meteor-abtx"
+  "generator-meteor-abtx",
+  "generator-angular-sparkstack"
 ]
