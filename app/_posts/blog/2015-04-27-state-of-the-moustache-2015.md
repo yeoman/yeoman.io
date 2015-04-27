@@ -115,7 +115,7 @@ It's been pleasant to see an [increasing](https://twitter.com/tomwayson/status/5
 
 ## Tipping our hat
 
-That's about it for this round-up. We would like to remind folks that we're always checking out [@yeoman](http://twitter.com/yeoman) and enjoy hearing suggestions for anything we can be doing better, news, new generators you've written or even just [doodles](https://twitter.com/kittytail38/status/573522972528373761) of your favorite man in a hat. If you have ideas for the next post, you can also drop em' in this [thread](https://github.com/yeoman/yeoman/issues/1411).
+That's about it for this round-up. We would like to remind folks that we're always checking out [@yeoman](http://twitter.com/yeoman) and enjoy hearing suggestions for anything we can be doing better, news, new generators you've written or even just [doodles](https://twitter.com/kittytail38/status/573522972528373761) of your favorite man in a hat. If you have ideas for the next post, you can also drop 'em in this [thread](https://github.com/yeoman/yeoman/issues/1411).
 
 Until next time, `yo awesomeness`.
 
