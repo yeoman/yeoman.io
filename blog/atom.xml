@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2015-04-27T15:28:23+01:00</updated>
+  <updated>2015-04-27T14:37:15+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>State of the Moustache</title>
     <link href="http://yeoman.io/blog/state-of-the-moustache-2015.html"/>
-    <updated>2015-04-27T00:00:00+01:00</updated>
+    <updated>2015-04-27T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/state-of-the-moustache-2015</id>
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;This is a post by team member &lt;a href=&quot;https://github.com/addyosmani&quot;&gt;Addy Osmani&lt;/a&gt;. &lt;br&gt;In this issue we cover generators for React, ES6, desktop apps and more.&lt;/p&gt;
@@ -214,7 +214,7 @@
   <entry>
     <title>Yeoman generator version 0.18.0 - Release announcement</title>
     <link href="http://yeoman.io/blog/release-0.18.html"/>
-    <updated>2014-10-14T00:00:00+01:00</updated>
+    <updated>2014-10-14T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/release-0.18</id>
     <content type="html">&lt;p&gt;Allo&amp;#39; Allo&amp;#39; today we&amp;#39;re happy to announce the release of &lt;a href=&quot;https://www.npmjs.com/package/yeoman-generator&quot;&gt;yeoman-generator@0.18.0&lt;/a&gt;!&lt;/p&gt;
 
@@ -336,7 +336,7 @@
   <entry>
     <title>Karma Generator Rewrite 0.8.0</title>
     <link href="http://yeoman.io/blog/generator-karma-rewrite.html"/>
-    <updated>2014-05-12T00:00:00+01:00</updated>
+    <updated>2014-05-12T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/generator-karma-rewrite</id>
     <content type="html">&lt;p&gt;Allo&amp;#39; allo&amp;#39;! Here&amp;#39;s &lt;a href=&quot;https://github.com/eddiemonge&quot;&gt;Eddie&lt;/a&gt; from the Yeoman team on the recent changes to the Karma Generator. The changes focused on configuration and testing.&lt;/p&gt;
 
@@ -1206,7 +1206,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
   <entry>
     <title>Release the Kraken! - Announcing Yeoman 1.0</title>
     <link href="http://yeoman.io/blog/hello-1.0.html"/>
-    <updated>2013-08-23T00:00:00+01:00</updated>
+    <updated>2013-08-23T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/hello-1.0</id>
     <content type="html">&lt;p&gt;Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0!&lt;/p&gt;
 
