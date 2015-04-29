@@ -5,7 +5,19 @@
   var $doc = $(document);
 
   function capitalize(str) {
-    return str[0].toUpperCase() + str.slice(1);
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  function cleanupDescription(str) {
+    str = str.trim()
+      .replace(/:\w+:/, '') // remove GitHub emojis
+      .replace(/ ?generator for (?:yeoman|yo) ?/i, '')
+      .replace(/(?:a )?(?:yeoman|yo) (?:generator (?:for|to|that|which)?)?/i, '')
+      .replace(/(?:yeoman|yo) generator$/i, '')
+      .replace(/ ?application ?/i, 'app')
+      .trim();
+
+    return capitalize(str).trim().replace(/\.$/, '');
   }
 
   $(function() {
@@ -54,8 +66,7 @@
         }).map(function (el) {
           el.official = el.ownerWebsite === 'https://github.com/yeoman';
           el.name = el.name.replace('generator-', '');
-          el.description = el.description.replace(/^(A |)Yeoman generator (for|to) /i, '');
-          el.description = capitalize(el.description).trim().replace(/\.$/, '');
+          el.description = cleanupDescription(el.description);
           el.stars = el.stars || el.watchers || 0;
           el.website = el.website || el.html_url;
           el.created = el.created || el.created_at;
