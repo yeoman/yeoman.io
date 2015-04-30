@@ -64,7 +64,7 @@ Angular modules are self-contained JavaScript files with helpful functionality. 
 
 You can deselect and select options using the spacebar.
 
-Let’s roll with the defaults. (So if you have been playing around with the spacebar, make sure that all the modules are marked as green.)
+Let’s roll with the defaults. (So if you have been playing around with the spacebar, make sure that all the modules selected match the above screenshot.)
 
 Hit **enter** and watch the magic happen.
 

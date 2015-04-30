@@ -12,7 +12,7 @@ sidebar: sidebars/codelab.html
   <img src="/assets/img/yeoman-005.png">
 </div>
 
-Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the [AngularUI Sortable module](https://github.com/angular-ui/ui-sortable), a directive component for AngularJS.
+Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the [AngularUI Sortable module](https://github.com/angular-ui/ui-sortable), a directive component for AngularJS. If you are continuing from the last step you will have to stop your site in the terminal by pressing ctrl-C or open a new termininal window and navigate to your project directory.
 
 ## List current packages
 
@@ -85,15 +85,15 @@ You'll see that the `script` section at the bottom of *index.html* has automatic
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="bower_components/angular-ui-sortable/sortable.js"></script>
-<!-- endbower -->
+    <!-- endbower -->
 <!-- endbuild -->
 ```
 
@@ -154,7 +154,7 @@ The full todo list markup looks like this now:
 </div>
 ```
 
-Back in the browser, we can now re-order our list:
+Run "grunt serve" again and back in the browser, we can now re-order our list:
 
 <div class="side-by-side">
   <img src="/assets/img/codelab/image_26.png">
