@@ -26,6 +26,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/html/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 * [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
+* Arabic article series introducing [Bower](http://blog.guestra.net/1940/front-end-dev-1-bower/), [Grunt](http://blog.guestra.net/1956/front-end-dev-2-grunt/) and [Yeoman](http://blog.guestra.net/1958/front-end-dev-3-yeoman/). 
 
 # Videos
 
