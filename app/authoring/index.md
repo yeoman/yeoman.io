@@ -131,7 +131,7 @@ module.exports = generators.Base.extend({
 });
 ```
 
-### Adding our own functionality
+### Adding your own functionality
 
 Every method added to the prototype is run once the generator is called--and usually in sequence. But, as we'll see in the next section, some special method names will trigger a specific run order.
 
