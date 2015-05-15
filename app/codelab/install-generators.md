@@ -26,11 +26,7 @@ This will start to install the Node packages required for the generator. Using `
 
   <h2>Errors?</h2>
 
-  <p>If you see permission or access errors, you will need to install the generator using <code>sudo</code>, like so:</p>
-
-<pre>
-<code class="language-sh">sudo npm install --global generator-angular@0.11.1</code>
-</pre>
+  <p>If you see permission or access errors, such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. You can consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this guide</a> for a more robust solution.</p>
 
 </div>
 

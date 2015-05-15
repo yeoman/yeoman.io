@@ -55,9 +55,7 @@ npm install --global yo bower grunt-cli
 
   <h2>Errors?</h2>
 
-  <p>If you see permission or access errors, such as permission (`EPERM`) or access errors (`EACCESS`), do not use <code>sudo</code> as a work-around. <br>
-  Consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this page</a> for a more robust solution to the permissions errors.</p>
-
+  <p>If you see permission or access errors, such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. You can consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this guide</a> for a more robust solution.</p>
 
 </div>
 
