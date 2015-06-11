@@ -54,7 +54,7 @@ this.prompt({
 }, callback);
 ```
 
-_Note:_ Providing a default value will prevent the user from returning an empty answers.
+_Note:_ Providing a default value will prevent the user from returning any empty answers.
 
 If you're only looking to store data without being directly tied to the prompt, make sure to checkout [the Yeoman storage documentation](/authoring/storage.html).
 
