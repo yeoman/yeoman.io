@@ -9,5 +9,6 @@
   "generator-onereq",
   "generator-mtb-app",
   "generator-meteor-abtx",
-  "generator-angular-sparkstack"
+  "generator-angular-sparkstack",
+  "generator-ayrofast"
 ]
