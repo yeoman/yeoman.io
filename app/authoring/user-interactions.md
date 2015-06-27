@@ -86,6 +86,8 @@ This method must be called inside the `constructor` method. Otherwise Yeoman won
 Here is an example:
 
 ```js
+var _ = require('lodash');
+
 module.exports = generators.Base.extend({
   // note: arguments and options should be defined in the constructor.
   constructor: function () {
@@ -94,7 +96,7 @@ module.exports = generators.Base.extend({
     // This makes `appname` a required argument.
     this.argument('appname', { type: String, required: true });
     // And you can then access it later on this way; e.g. CamelCased
-    this.appname = this._.camelize(this.appname);
+    this.appname = _.camelCase(this.appname);
   }
 });
 ```
