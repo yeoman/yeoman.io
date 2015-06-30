@@ -3,9 +3,9 @@ layout: default
 title: Migrate Yeoman
 ---
 
-Hi there time traveler
+Hi there, time traveler.
 
-The package named `yeoman` have been deprecated multiple years ago, it is now called `yo`. To install, run:
+The package named `yeoman` was deprecated several years ago. It is now called `yo`. To install, run:
 
 ```sh
 npm -g install yo
