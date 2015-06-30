@@ -48,7 +48,7 @@ Open ***karma.conf.js***. Currently the `files` array should look like this:
     ],
 ```
 
-Bower has read in the newly added dependencies ('bower_components/jquery-ui/jquery-ui.js', 'bower_components/angular-touch/angular-touch.js') and automatically added them to the karma.conf.js file for you.
+Bower has read in the newly added dependencies ('bower_components/jquery-ui/jquery-ui.js', 'bower_components/angular-ui-sortable/sortable.js') and automatically added them to the karma.conf.js file for you.
 
 
 <!--
