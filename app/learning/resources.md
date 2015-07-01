@@ -11,7 +11,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 *Feel free to add additional ones, but make sure it's something of value and include the date.*
 
-* [Complete Yeoman Codelab tutorial in the Codio Web IDE (*2014-04-14*)](https://codio.com/docs/DEL-specifics/yeoman/)
+* [Complete Yeoman Codelab tutorial in the Codio Web IDE](https://codio.com/docs/DEL-specifics/yeoman/) *2014-04-14*
 * [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
 * [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
 * [NetTuts - Building Apps With the Yeoman Workflow](http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254) *2013-07-15*
