@@ -4,7 +4,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2015-06-30T11:25:47+00:00</updated>
+  <updated>2015-07-01T21:59:52+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman.io</name>
@@ -514,7 +514,7 @@
     <id>http://yeoman.io/blog/performance-optimization</id>
     <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/tasks.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;Delays in performance have the potential to impact user &lt;a href=&quot;https://twitter.com/igrigorik/status/300226402496704512&quot;&gt;engagement&lt;/a&gt;, &lt;a href=&quot;http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/&quot;&gt;experience&lt;/a&gt; and &lt;a href=&quot;https://speakerdeck.com/lara/design-for-performance&quot;&gt;revenue&lt;/a&gt;.
+&lt;p&gt;Delays in performance have the potential to impact user &lt;a href=&quot;https://twitter.com/igrigorik/status/300226402496704512&quot;&gt;engagement&lt;/a&gt;, &lt;a href=&quot;http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/&quot;&gt;experience&lt;/a&gt; and &lt;a href=&quot;https://speakerdeck.com/lara/designing-for-performance&quot;&gt;revenue&lt;/a&gt;.
 Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommend a set of best-practice &lt;a href=&quot;https://developers.google.com/speed/docs/insights/rules&quot;&gt;rules&lt;/a&gt; for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.&lt;/p&gt;
 
 &lt;p&gt;If you have complete control over your server, an excellent &lt;a href=&quot;https://developers.google.com/speed/pagespeed/&quot;&gt;PageSpeed&lt;/a&gt; &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module&quot;&gt;Module&lt;/a&gt; for &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/download&quot;&gt;Apache&lt;/a&gt; and &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source&quot;&gt;Nginx&lt;/a&gt; exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.&lt;/p&gt;
@@ -720,7 +720,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/terinjokes/gulp-uglify&quot;&gt;gulp-uglify&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/gulp-closure-compiler&quot;&gt;gulp-closure-compiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/steida/gulp-closure-compiler&quot;&gt;gulp-closure-compiler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;RequireJS (optimization via r.js)&lt;/h2&gt;
@@ -887,7 +887,7 @@ Thankfully, Google&amp;#39;s &amp;#39;Make The Web Faster&amp;#39; team recommen
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/blog/backbone-app-path.png&quot; alt=&quot;app-path option&quot;&gt;&lt;/p&gt;
 
-&lt;h2&gt;Generating &lt;a href=&quot;http://visionmedia.github.io/mocha/&quot;&gt;Mocha&lt;/a&gt; tests&lt;/h2&gt;
+&lt;h2&gt;Generating &lt;a href=&quot;http://mochajs.org/&quot;&gt;Mocha&lt;/a&gt; tests&lt;/h2&gt;
 
 &lt;p&gt;We have written a new generator named &lt;a href=&quot;https://github.com/revathskumar/generator-backbone-mocha&quot;&gt;generator-backbone-mocha&lt;/a&gt;. This will generate Mocha tests for your Backbone app. When you create new model with &lt;code&gt;yo backbone:model todo&lt;/code&gt;, this will create &lt;code&gt;todo.spec.js&lt;/code&gt; in your &lt;code&gt;test&lt;/code&gt; folder.&lt;/p&gt;
 
@@ -1121,7 +1121,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://ponyfoo.com/articles/my-first-gulp-adventure&quot;&gt;My First Gulp Adventure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://ponyfoo.com/articles/gulp-grunt-whatever&quot;&gt;Gulp, Grunt, Whatever&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://travismaynard.com/writing/no-need-to-grunt-take-a-gulp-of-fresh-air&quot;&gt;No Need To Grunt, Take A Gulp Of Fresh Air&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://travismaynard.com/writing/no-need-to-grunt-take-a-gulp-of-fresh-air&quot;&gt;No Need To Grunt, Take A Gulp Of Fresh Air&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jaysoo.ca/2014/01/27/gruntjs-vs-gulpjs/&quot;&gt;Grunt vs Gulp - Beyond the Numbers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -1238,9 +1238,9 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;clean&amp;#39;], function () {
 &lt;p&gt;If you&amp;#39;re new to Yeoman, you&amp;#39;ll have &lt;em&gt;a lot&lt;/em&gt; of power at your fingertips with just one &lt;code&gt;yo ____&lt;/code&gt; command. For help getting started, try out these resources:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The Yeoman &lt;a href=&quot;http://yeoman.io/gettingstarted.html&quot;&gt;Getting Started Guide&lt;/a&gt; will help understand how to use Yo, Grunt, and Bower together efficiently.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The Yeoman &lt;a href=&quot;http://yeoman.io/learning/index.html&quot;&gt;Getting Started Guide&lt;/a&gt; will help understand how to use Yo, Grunt, and Bower together efficiently.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Addy&amp;#39;s &lt;a href=&quot;https://www.youtube.com/watch?v=iUQ1fvdO9GY&quot;&gt;Video&lt;/a&gt; will walk you through using Yeoman to build an application with AngularJS.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Stephen&amp;#39;s &lt;a href=&quot;http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/&quot;&gt;Building Apps With The Yeoman Workflow&lt;/a&gt; will show you how to build a Backbone.js application.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stephen&amp;#39;s &lt;a href=&quot;http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254&quot;&gt;Building Apps With The Yeoman Workflow&lt;/a&gt; will show you how to build a Backbone.js application.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Even for experienced developers, Yeoman will still improve your workflow. One of the ways Yeoman helps out of the box is by providing a finely-tuned Grunt configuration. What can take hours to setup-- LiveReload, Sass, Uglify, CoffeeScript-- is done in under a minute. If you wish to customize this even futher, nothing is stopping you!&lt;/p&gt;
