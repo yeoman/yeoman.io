@@ -16,7 +16,7 @@ This will create a folder named `public` instead of `app`. It will then put the 
 
 ![app-path option](/assets/img/blog/backbone-app-path.png)
 
-## Generating [Mocha](http://visionmedia.github.io/mocha/) tests
+## Generating [Mocha](http://mochajs.org/) tests
 We have written a new generator named [generator-backbone-mocha](https://github.com/revathskumar/generator-backbone-mocha). This will generate Mocha tests for your Backbone app. When you create new model with `yo backbone:model todo`, this will create `todo.spec.js` in your `test` folder.
 
 ![Backbone mocha](/assets/img/blog/yo-backbone-mocha.png)

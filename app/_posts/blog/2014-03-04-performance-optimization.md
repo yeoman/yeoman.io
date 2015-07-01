@@ -5,7 +5,7 @@ title: Grunt And Gulp Tasks For Performance Optimization
 
 ![](/assets/img/blog/tasks.jpg)
 
-Delays in performance have the potential to impact user [engagement](https://twitter.com/igrigorik/status/300226402496704512), [experience](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/) and [revenue](https://speakerdeck.com/lara/design-for-performance).
+Delays in performance have the potential to impact user [engagement](https://twitter.com/igrigorik/status/300226402496704512), [experience](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/) and [revenue](https://speakerdeck.com/lara/designing-for-performance).
 Thankfully, Google's 'Make The Web Faster' team recommend a set of best-practice [rules](https://developers.google.com/speed/docs/insights/rules) for keeping your pages lean, fast and smooth. These include minifying resources like CSS and JavaScript, optimizing images, inlining and removing unused styles and so on.
 
 If you have complete control over your server, an excellent [PageSpeed](https://developers.google.com/speed/pagespeed/) [Module](https://developers.google.com/speed/pagespeed/module) for [Apache](https://developers.google.com/speed/pagespeed/module/download) and [Nginx](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source) exists with filters for many of these tasks. If not however, or you feel the module isn’t quite for you, a number of build-tasks exist for tools you’re probably already using to fill in the gaps with more granular control.
@@ -174,7 +174,7 @@ This isn't a PageSpeed recommendation, but allows you to combine matching media 
 #### Gulp
 
 * [gulp-uglify](https://github.com/terinjokes/gulp-uglify)
-* [gulp-closure-compiler](https://github.com/sindresorhus/gulp-closure-compiler)
+* [gulp-closure-compiler](https://github.com/steida/gulp-closure-compiler)
 
 
 ## RequireJS (optimization via r.js)
