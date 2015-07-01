@@ -26,9 +26,11 @@ For issues with the Yeoman binary, such as being unable to run Yeoman at all you
 Our scaffolds (such as angular above) are community-driven, with several of our default ones living under the [Yeoman organization](https://github.com/yeoman) on GitHub. These are maintained by developers in the community around a particular framework. Issue trackers for some of our popular generators can be found below
 
 * [WebApp](https://github.com/yeoman/generator-webapp)
+* [Gulp WebApp](https://github.com/yeoman/generator-gulp-webapp)
 * [AngularJS](https://github.com/yeoman/generator-angular)
 * [Backbone](https://github.com/yeoman/generator-backbone)
 * [Chrome App](https://github.com/yeoman/generator-chromeapp)
+* [Polymer](https://github.com/yeoman/generator-polymer)
 
 ### Build issues
 
