@@ -29,7 +29,6 @@ Our scaffolds (such as angular above) are community-driven, with several of our 
 * [AngularJS](https://github.com/yeoman/generator-angular)
 * [Backbone](https://github.com/yeoman/generator-backbone)
 * [Chrome App](https://github.com/yeoman/generator-chromeapp)
-* [Ember](https://github.com/yeoman/generator-ember)
 
 ### Build issues
 

@@ -25,7 +25,7 @@ Yeoman also works with other tools for improving your productivity:
 
 * [**bower**](http://bower.io/) is used for dependency management, so that you no longer have to manually download your front-end libraries.
 
-You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [500 generators](http://yeoman.io/generators/) now available, many of which have been written by the open-source community. Popular generators include [generator-angular](https://github.com/yeoman/generator-angular), [generator-backbone](https://github.com/yeoman/generator-backbone), and [generator-ember](https://github.com/yeoman/generator-ember).
+You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [500 generators](http://yeoman.io/generators/) now available, many of which have been written by the open-source community. Popular generators include [generator-angular](https://github.com/yeoman/generator-angular), [generator-backbone](https://github.com/yeoman/generator-backbone), and [generator-polymer](https://github.com/yeoman/generator-polymer).
 
 
 ## Why use Yeoman?
