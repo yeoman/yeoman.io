@@ -6,7 +6,7 @@ sidebar: sidebars/authoring.html
 excerpt: How to integrate the Yeoman system in your own tools
 ---
 
-Everytime you run a generator, you're actually using the `yeoman-environment`. This environment is a base system who's decoupled from any UI component and can be abstracted away by any tool. When you run `yo`, you're basically just running a terminal UI façade on top of the core Yeoman environment.
+Everytime you run a generator, you're actually using the `yeoman-environment`. The environment is a base system that is decoupled from any UI component and can be abstracted away by any tool. When you run `yo`, you're basically just running a terminal UI façade on top of the core Yeoman environment.
 
 ## The basics
 
@@ -16,7 +16,7 @@ The first thing you need to know is the environment system is contained in the `
 npm install --save yeoman-environment
 ```
 
-This module provide methods to retrieve installed generators, register and run generators. It also provide the user interfaces adapter generators are using. We provide a [full API documentation](http://yeoman.github.io/environment/) (which is the terse list of methods available.)
+This module provides methods to retrieve installed generators, register and run generators. It also provides the user interfaces adapter that generators are using. We provide a [full API documentation](http://yeoman.github.io/environment/) (which is the terse list of methods available.)
 
 ## Using `yeoman-environment`
 
