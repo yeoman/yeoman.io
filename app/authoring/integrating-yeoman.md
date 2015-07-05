@@ -6,7 +6,7 @@ sidebar: sidebars/authoring.html
 excerpt: How to integrate the Yeoman system in your own tools
 ---
 
-Everytime you run a generator, you're actually using the `yeoman-environment`. The environment is a base system that is decoupled from any UI component and can be abstracted away by any tool. When you run `yo`, you're basically just running a terminal UI façade on top of the core Yeoman environment.
+Every time you run a generator, you're actually using the `yeoman-environment`. The environment is a base system that is decoupled from any UI component and can be abstracted away by any tool. When you run `yo`, you're basically just running a terminal UI façade on top of the core Yeoman environment.
 
 ## The basics
 
@@ -111,7 +111,7 @@ An adapter should provide at least three methods.
 It provides the question-answer functionality (for instance, when you start `yo`, a set of possible actions is prompted to the user). Its signature and behavior follows these of [Inquirer.js](https://github.com/SBoudrias/Inquirer.js). When a generators call `this.prompt`, the call is in the end handled by the adapter.
 
 ### `Adapter#diff()`
-Called internally when a conflict is encountered and the user ask for a diff between the old and the new file (both files content is passed as aguments).
+Called internally when a conflict is encountered and the user ask for a diff between the old and the new file (both files content is passed as arguments).
 
 ### `Adapter#log()`
 It's both a function and an object intended for generic output.

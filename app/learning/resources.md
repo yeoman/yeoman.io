@@ -67,6 +67,6 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
   <div class="video-container">
     <iframe width="640" height="360" src="//www.youtube.com/embed/TUk19YoP-oI" frameborder="0" allowfullscreen class="yt"></iframe>
   </div>
-  <p>In case you're looking for some more persuation that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
+  <p>In case you're looking for some more persuasion that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
   </div>
 </section>

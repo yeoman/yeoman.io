@@ -6,13 +6,13 @@ sidebar: sidebars/contributing.html
 excerpt: Overview of the tickets/issues organization inside the Yeoman project
 ---
 
-Yeoman use each projects [Github issue tracker](https://guides.github.com/features/issues/). We uses the feature provided by Github to classify our issues so they're easily manageable and help contributors finding tasks to complete.
+Yeoman use each projects [Github issue tracker](https://guides.github.com/features/issues/). We use the feature provided by Github to classify our issues so they're easily manageable and help contributors find tasks to complete.
 
 <aside class="excerpt">
   Disclaimer: The workflow described below is our ideal goal. It is still new (not all of our projects use it at the moment) and some projects may diverge to better fit their specific needs.
 </aside>
 
-Throughout Yeoman, we uses mainly three features:
+Throughout Yeoman, we use mainly three features:
 
 1. Labels
 2. Milestones
@@ -26,17 +26,17 @@ Just help us resolve issues labeled `actionable`. They're the one you can code r
 
 Labels are used to classify issues. We use three categories of tags to describe each issue - most of the time an issue is going to have at least one tag of each category:
 
-### Life cycle (Feasability)
+### Life cycle (Feasibility)
 
-The first category checks if an issue is _actionnable_. It answer the question:
+The first category checks if an issue is _actionable_. It answer the question:
 
 > Can this issue be resolved right now?
 
 We have 4 possible tags describing an issue life cycle:
 
 - `actionable`: This issue can be resolved right now by anyone. If an issue is actionable, just take it and [send a PR](/contributing/pull-request.html).
-- `to-split`: The issue is too large (in scope) and should be broken down into smaller actionnable parts. An issue `to-split` is a good place to discuss implementation details of a feature.
-- `to-discuss`: This mean the issue needs discussion and the Yeoman team needs to decide wether or not they want to add this feature to a project.
+- `to-split`: The issue is too large (in scope) and should be broken down into smaller actionable parts. An issue `to-split` is a good place to discuss implementation details of a feature.
+- `to-discuss`: This means the issue needs discussion and the Yeoman team needs to decide whether or not they want to add this feature to a project.
 - `to-confirm`: This tag is mainly used on `bug` type issues until someone can reproduce the issue. Make sure to add steps to reproduce each bug so the issue can be tagged as `actionable` right away.
 
 ### Type
@@ -65,7 +65,7 @@ Yeoman versions follow as close as possible the [semver specification](http://se
 
 This means some issues might be delayed until we're ready to publish a version in which the changes can be incorporated.
 
-Here's some examples:
+Here are some examples:
 
 1. A Pull Request adding a new feature might be delayed until the current Yeoman version is stable enough so we can concentrate on the next minor release.
 2. Some issues might not be suitable to fix until a major release because they imply breaking backwards compatibility.
