@@ -14,7 +14,7 @@ Main principles
 
 #### Tests must be always start with a clean state
 
-This means prefer `beforeEach` to `before`. Re-instantiate objects before running each `it` blocks. Create every files required by a test in a `beforeEach` (or commit them in `fixtures/`). Reset any side effets done on the test environment after each test.
+This means prefer `beforeEach` to `before`. Re-instantiate objects before running each `it` blocks. Create every files required by a test in a `beforeEach` (or commit them in `fixtures/`). Reset any side effects done on the test environment after each test.
 
 #### Tests must be runnable in isolation
 

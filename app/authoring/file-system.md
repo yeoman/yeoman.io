@@ -129,7 +129,7 @@ Some popular AST parsers are:
 
 Yeoman also provides some common html file edition helpers. Refer to the [API documentation](http://yeoman.github.io/generator/wiring.html) for the list of available methods.
 
-Parsing code file with RegEx is perilous path, and before choosing to do so, you should read [this CS anthopological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If even then you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users code.
+Parsing code file with RegEx is perilous path, and before choosing to do so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If even then you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users code.
 
 ## Tip: Writing a Gruntfile
 

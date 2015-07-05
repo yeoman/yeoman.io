@@ -12,7 +12,7 @@ sidebar: sidebars/codelab.html
   <img src="/assets/img/yeoman-005.png">
 </div>
 
-Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the [AngularUI Sortable module](https://github.com/angular-ui/ui-sortable), a directive component for AngularJS. If you are continuing from the last step you will have to stop your site in the terminal by pressing ctrl-C or open a new termininal window and navigate to your project directory.
+Let’s add some order to our list and make it sortable. For this we’re going to use Bower to install the [AngularUI Sortable module](https://github.com/angular-ui/ui-sortable), a directive component for AngularJS. If you are continuing from the last step you will have to stop your site in the terminal by pressing ctrl-C or open a new terminal window and navigate to your project directory.
 
 ## List current packages
 
