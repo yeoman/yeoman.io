@@ -107,6 +107,23 @@ Once the generator is done running, `public/index.html` will contain:
 </html>
 ```
 
+## Transform output files through streams
+
+The generator system allow you to apply custom filters on every file writes. Automatically beautifying files, normalizing whitespace, etc, is totally possible.
+
+Once per Yeoman process, we will write every modified files to disk. This process is passed through a [vinyl](https://github.com/wearefractal/vinyl) object stream (just like [gulp](http://gulpjs.com/)). Any generator author can register a `transformStream` to modify the file path and/or the content.
+
+Registering a new modifier is done through the `registerTransformStream()` method. Here's an example:
+
+```js
+var beautify = require('gulp-beautify');
+this.registerTransformStream(beautify({indentSize: 2 }));
+```
+
+Note that **every file of any type will be passed through this stream**. Make sure any transform stream will passthrough the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.
+
+You can basically use any _gulp_ plugins with the Yeoman transform stream to process generated files during the writing phase.
+
 ## Legacy File utilities
 
 Yeoman also expose a set of older file utilities. You can refer to the [API documentation](http://yeoman.github.io/generator/actions.html) to learn more about them.
