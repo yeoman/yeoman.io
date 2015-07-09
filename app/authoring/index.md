@@ -165,6 +165,7 @@ npm link
 
 That will install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
 
+If you make changes, you must uninstall it from the global cache with `npm uninstall -g` then link it again. Once you're ready to rely on a version hosted publicly, be sure to also uninstall first.
 
 ### Finding the project root
 
