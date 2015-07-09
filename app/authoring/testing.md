@@ -55,28 +55,25 @@ var path = require('path');
 
 before(function (done) {
   helpers.run(path.join( __dirname, '../app'))
-    .inDir(path.join( __dirname, './tmp'))  // Clear the directory and set it as the CWD
-    .withOptions({ foo: 'bar' })            // Mock options passed in
-    .withArguments(['name-x'])              // Mock the arguments
-    .withPrompts({ coffee: false })          // Mock the prompt answers
+    .withOptions({ foo: 'bar' })    // Mock options passed in
+    .withArguments(['name-x'])      // Mock the arguments
+    .withPrompts({ coffee: false }) // Mock the prompt answers
     .on('ready', function (generator) {
-      // this is called right before `generator.run()` is called
+      // This is called right before `generator.run()` is called
     })
     .on('end', done);
 })
 ```
 
-You should always use ```path.join``` and ```__dirname``` when creating relative path because the Current Working Directory is dependent on where the node command was called.
-
-Sometimes you may want to construct a test scenario for the generator to run with existing contents in the target directory. In which case, you could invoke `inDir()` with an optional second parameter (a callback function), like so:
+Sometimes you may want to construct a test scenario for the generator to run with existing contents in the target directory. In which case, you could invoke `inTmpDir()` with a callback function, like so:
 
 ```js
 var path = require('path');
 var fs = require('fs-extra');
 
 helpers.run(path.join( __dirname, '../app'))
-  .inDir(path.join( __dirname, './tmp'), function (dir) {
-    // `dir` is the resolved target directory (or `path.join( __dirname, './tmp')` in this example)
+  .inTmpDir(function (dir) {
+    // `dir` is the path to the new temporary directory
     fs.copySync(path.join(__dirname, '../templates/common'), dir)
   })
   .withPrompts({ coffee: false })
@@ -92,7 +89,7 @@ var path = require('path');
 var fs = require('fs-extra');
 
 helpers.run(path.join( __dirname, '../app'))
-  .inDir(path.join( __dirname, './tmp'), function (dir) {
+  .inTmpDir(function (dir) {
     var done = this.async(); // `this` is the RunContext object.
     fs.copy(path.join(__dirname, '../templates/common'), dir, done);
   })
@@ -109,7 +106,6 @@ var deps = [
   [helpers.createDummyGenerator(), 'karma:app']
 ];
 helpers.run(path.join( __dirname, '../app'))
-  .inDir(path.join( __dirname, './tmp'))
   .withGenerators(deps)
   .on('end', done);
 ```
