@@ -21,30 +21,31 @@ Now that you know the prototype methods are considered as action, you may wonder
 1. Prefix method name by an underscore (e.g. `_method`).
 2. Use instance methods:
 
-  ```js
-    generators.Base.extend({
-      init: function () {
-        this.helperMethod = function () {
-          console.log('won\'t be called automatically');
-        };
-      }
-    });
-  ```
+    ```js
+      generators.Base.extend({
+        init: function () {
+          this.helperMethod = function () {
+            console.log('won\'t be called automatically');
+          };
+        }
+      });
+    ```
+
 3. Extend a parent generator
 
-  ```js
-    var MyBase = generators.Base.extend({
-      helper: function () {
-        console.log('won\'t be called automatically');
-      }
-    });
+    ```js
+      var MyBase = generators.Base.extend({
+        helper: function () {
+          console.log('won\'t be called automatically');
+        }
+      });
 
-    module.exports = MyBase.extend({
-      exec: function () {
-        this.helper();
-      }
-    });
-  ```
+      module.exports = MyBase.extend({
+        exec: function () {
+          this.helper();
+        }
+      });
+    ```
 
 ## The run loop
 
