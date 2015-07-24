@@ -21,67 +21,22 @@ module.exports = function (grunt) {
       app: 'app',
       dist: 'dist'
     },
-    watch: {
-      sass: {
-        files: ['<%= yeoman.app %>/assets/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer:server']
-      },
-      jekyll: {
-        files: [
-          '<%= yeoman.app %>/**/*.{html,js,yml,md,mkd,markdown,xml}'
-        ],
-        tasks: ['jekyll:serve']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '.jekyll/**/*.html',
-          '.tmp/assets/css/**/*.css',
-          '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-        ]
-      }
-    },
-    connect: {
-      options: {
-        port: 9000,
-        livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
-      },
-      livereload: {
-        options: {
-          open: true,
-          base: [
-            '.tmp',
-            '.jekyll',
-            '<%= yeoman.app %>'
-          ]
-        }
-      },
-      dist: {
-        options: {
-          open: true,
-          base: [
-            '<%= yeoman.dist %>'
-          ]
-        }
-      },
-      test: {
-        options: {
-          base: [
-            '.tmp',
-            '.jekyll',
-            'test',
-            '<%= yeoman.app %>'
-          ]
-        }
-      }
-    },
 
     livestyle: {
-      root: '.tmp'
+      root: '.tmp',
+
+      browsers: ['last 2 versions'],
+
+      // Watch HTML-files and livereload on changes
+      watchHtml: true,
+
+      // Watch CSS bakground images and livereload on changes
+      watchCssImages: true,
+
+      // Run each image through the image processing pipeline exposed by express-processimage
+      // Allows you to resize, recompress, change image format, rasterize SVG and much more
+      // Reading the documentation is highly recommended: https://github.com/papandreou/express-processimage#express-processimage
+      processimage: true,
     },
 
     clean: {
@@ -98,54 +53,21 @@ module.exports = function (grunt) {
         }]
       },
       server: [
-        '.tmp',
-        '.jekyll'
+        '.tmp'
       ]
     },
-    sass: {
-      options: {
-        bundleExec: true,
-        debugInfo: false,
-        lineNumbers: false
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/assets/_scss',
-          src: '**/*.{scss,sass}',
-          dest: '.tmp/assets/css',
-          ext: '.css'
-        }]
-      },
-      server: {
-        options: {
-          debugInfo: true,
-          lineNumbers: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/assets/_scss',
-          src: '**/*.{scss,sass}',
-          dest: '.tmp/assets/css',
-          ext: '.css'
-        }]
-      }
-    },
+
     jekyll: {
       options: {
         bundleExec: true,
         config: '_config.yml,_config.build.yml',
         src: '<%= yeoman.app %>'
       },
-      dist: {
-        options: {
-          dest: '.tmp',
-        }
-      },
+      dist: {},
       serve: {
         options: {
           config: '_config.yml',
-          dest: '.jekyll'
+          watch: true
         }
       },
       check: {
@@ -154,6 +76,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
     reduce: {
       root: '.tmp',
       outroot: '<%= yeoman.dist %>',
@@ -169,6 +92,7 @@ module.exports = function (grunt) {
         'last 2 versions'
       ]
     },
+
     buildcontrol: {
       dist: {
         options: {
@@ -189,6 +113,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -201,6 +126,7 @@ module.exports = function (grunt) {
         'test/spec/**/*.js'
       ]
     },
+
     csslint: {
       options: {
         csslintrc: '.csslintrc'
@@ -212,16 +138,22 @@ module.exports = function (grunt) {
         ]
       }
     },
+
     concurrent: {
-      server: [
-        'sass:server',
-        'jekyll:serve'
-      ]
+      server: {
+        tasks: [
+          'livestyle',
+          'jekyll:serve'
+        ],
+        logConcurrentOutput: true
+      }
     }
   });
 
   // Define Tasks
-  grunt.registerTask('serve', ['livestyle']);
+  grunt.registerTask('serve', [
+     'concurrent:server'
+  ]);
 
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
@@ -233,7 +165,6 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'sass:server',
     'jshint:all',
     'csslint:check'
   ]);
