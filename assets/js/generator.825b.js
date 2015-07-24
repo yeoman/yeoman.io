@@ -4,10 +4,6 @@
   var $win = $(window);
   var $doc = $(document);
 
-  function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   function cleanupDescription(str) {
     str = str.trim()
       .replace(/:\w+:/, '') // remove GitHub emojis
@@ -15,46 +11,21 @@
       .replace(/(?:a )?(?:yeoman|yo) (?:generator (?:for|to|that|which)?)?/i, '')
       .replace(/(?:yeoman|yo) generator$/i, '')
       .replace(/ ?application ?/i, 'app')
-      .trim();
+      .trim()
+      .replace(/\.$/, '');
+    str = str.charAt(0).toUpperCase() + str.slice(1);
+    return str;
+  }
 
-    return capitalize(str).trim().replace(/\.$/, '');
+  function getGeneratorList() {
+    return $.getJSON('https://yeoman-generator-list.herokuapp.com');
+  }
+
+  function getBlackList() {
+    return $.getJSON('/blacklist.json');
   }
 
   $(function() {
-    // Open/close mobile menu
-    var $menu = $('.mobile-menu-toggle').on('click.menu', function () {
-      var $pageHeader = $('.page-header').toggleClass('open');
-      var $body = $(document.body);
-      if ($pageHeader.hasClass('open')) {
-        setTimeout(function () {
-          $body.on('click.menu', function (e) {
-            var $target = $(e.target);
-            if (!$target.is($menu) && !$target.closest('.main-menu').length) {
-              $menu.trigger('click.menu');
-            }
-          });
-        }, 0);
-      } else {
-        $body.off('click.menu');
-      }
-    });
-
-    $('.context-nav, .year_divider').click(function () {
-      $(this).toggleClass('open');
-    });
-
-    // Beautify code blocks
-    $('pre code').addClass('prettyprint');
-    window.prettyPrint();
-
-    function getGeneratorList() {
-      return $.getJSON('https://yeoman-generator-list.herokuapp.com');
-    }
-
-    function getBlackList() {
-      return $.getJSON('/blacklist.json');
-    }
-
     $.when(getGeneratorList(), getBlackList())
       .done(function (getGeneratorListArgs, getBlackListArgs) {
 
@@ -105,7 +76,6 @@
             $('#search-notfound').toggle(list.matchingItems.length === 0);
           });
         }
-
       });
   });
 })(window, jQuery);
