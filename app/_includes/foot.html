@@ -36,11 +36,17 @@
 
 <!-- build:js(app) /assets/js/scripts.js -->
 <script src="/assets/js/libs/prettify.js"></script>
-<script src="/assets/js/libs/jquery.timeago.js"></script>
-<script src="/assets/js/libs/list.js"></script>
-<script src="/assets/js/libs/lodash.min.js"></script>
 <script src="/assets/js/script.js"></script>
 <!-- endbuild -->
+
+{% if page.title == 'Generators' %}
+  <!-- build:js(app) /assets/js/generators.js -->
+  <script src="/assets/js/libs/lodash.min.js"></script>
+  <script src="/assets/js/libs/list.js"></script>
+  <script src="/assets/js/libs/jquery.timeago.js"></script>
+  <script src="/assets/js/generator.js"></script>
+  <!-- endbuild -->
+{% endif %}
 
 <script>
   // $script.js - github.com/ded/script.js
