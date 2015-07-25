@@ -6,10 +6,9 @@ class: discovery-page
 ---
   <section class="main">
     <small>Your generator must have a GitHub repository description, the `yeoman-generator` keyword and a description in `package.json` to be listed. Official generators are marked with <img src="/assets/img/mustache.svg" width="20px"></small>
-    <div id="loading">
+    <div id="plugins-all">
       <p>Loading generators...</p>
     </div>
-    <div id="plugins-all"></div>
     <div class="message" id="search-notfound">No matching generator found. Try something else.</div>
   </section>
 
@@ -28,14 +27,16 @@ class: discovery-page
       </thead>
       <tbody class="list">
         <% _.each(modules, function (el) { %>
-          <tr class="<%= el.official ? 'official' : '' %>">
+          <tr class="<%= el.official %>">
             <td class="name"><a href="<%- el.website %>"><%- el.name %></a></td>
-            <td class="desc"><%- el.description %><div class="hidden"><%- el.keywords %></div></td>
-            <% if (el.ownerWebsite) { %>
-              <td class="author"><a href="<%- el.ownerWebsite %>"><%- el.owner %></a></td>
-            <% } else { %>
-              <td class="author"><%- el.owner %></td>
-            <% } %>
+            <td class="desc"><%- el.description %></td>
+            <td class="author">
+              <% if (el.ownerWebsite) { %>
+                <a href="<%- el.ownerWebsite %>"><%- el.owner %></a>
+              <% } else { %>
+                <%- el.owner %>
+              <% } %>
+            </td>
             <td class="stars"><%- el.stars %></td>
           </tr>
         <% }); %>

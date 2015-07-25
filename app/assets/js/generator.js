@@ -28,32 +28,26 @@
   $(function() {
     $.when(getGeneratorList(), getBlackList())
       .done(function (getGeneratorListArgs, getBlackListArgs) {
-
-        var modules = getGeneratorListArgs[0];
-        var blocklist = getBlackListArgs[0];
-
-        modules = _.filter(modules, function (el) {
-          return el !== null && el.description && blocklist.indexOf(el.name) === -1;
+        var blocked = getBlackListArgs[0];
+        var modules = getGeneratorListArgs[0].filter(function (el) {
+          return el !== null && el.description && blocked.indexOf(el.name) < 0;
         }).map(function (el) {
-          el.official = el.ownerWebsite === 'https://github.com/yeoman';
+          el.official = el.ownerWebsite === 'https://github.com/yeoman' ? 'official' : '';
           el.name = el.name.replace('generator-', '');
           el.description = cleanupDescription(el.description);
           el.stars = el.stars || el.watchers || 0;
           el.website = el.website || el.html_url;
           el.created = el.created || el.created_at;
           return el;
+        }).sort(function (a, b) {
+          return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
         });
-
-        var allModules = _.sortBy(modules, function (el) {
-          return el.stars;
-        }).reverse();
 
         var allTpl = _.template($('#plugins-all-template').html(), {
-          modules: allModules
+          modules: modules
         });
 
-        $('#loading').remove();
-        $('#plugins-all').append(allTpl).find('.search').show();
+        $('#plugins-all').html(allTpl).find('.search').show();
 
         var list = new List('plugins-all', {
           valueNames: [
