@@ -31,7 +31,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: [
-          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown,xml}'
+          '<%= yeoman.app %>/**/*.{html,js,yml,md,mkd,markdown,xml}'
         ],
         tasks: ['jekyll:serve']
       },
@@ -42,7 +42,6 @@ module.exports = function (grunt) {
         files: [
           '.jekyll/**/*.html',
           '.tmp/assets/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
           '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
       }
