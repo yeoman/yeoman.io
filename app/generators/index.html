@@ -23,7 +23,6 @@ class: discovery-page
           <th class="sort" data-sort="name">Name</th>
           <th class="sort" data-sort="desc">Description</th>
           <th class="sort" data-sort="author">Author</th>
-          <th class="sort" data-sort="updated">Updated</th>
           <th class="sort" data-sort="stars">Stars</th>
         </tr>
       </thead>
@@ -37,7 +36,6 @@ class: discovery-page
             <% } else { %>
               <td class="author"><%- el.owner %></td>
             <% } %>
-            <td class="updated"><time datetime="<%- el.updated %>"><%- el.updated %></time></td>
             <td class="stars"><%- el.stars %></td>
           </tr>
         <% }); %>

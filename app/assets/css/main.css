@@ -697,12 +697,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   position: relative;
 }
 
-/* TODO: remove when #194 is fixed */
-.discovery-page .updated,
-[data-sort="updated"] {
-  display: none;
-}
-
 .discovery-page .name {
   min-width: 200px;
 }

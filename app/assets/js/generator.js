@@ -41,7 +41,6 @@
           el.stars = el.stars || el.watchers || 0;
           el.website = el.website || el.html_url;
           el.created = el.created || el.created_at;
-          el.updated = el.updated || el.updated_at;
           return el;
         });
 
@@ -61,16 +60,12 @@
             'name',
             'desc',
             'author',
-            'updated',
             'stars'
           ]
         });
 
         if (list.listContainer) {
-          $('#plugins-all .updated time').timeago();
-
           list.on('updated', function () {
-            $('#plugins-all .updated time').timeago();
             // If empty show not found message and hide the table head.
             $('.table thead').toggle(list.matchingItems.length !== 0);
             $('#search-notfound').toggle(list.matchingItems.length === 0);
