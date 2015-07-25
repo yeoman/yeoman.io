@@ -34,7 +34,7 @@ To verify that there are AngularUI packages available, use Bower to search for "
 bower search angular-ui-sortable
 ```
 
-There is one result for "angular-ui-sortable" so let’s install it along with [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. To save you from searching, the package name for jQuery UI is "jquery-ui".
+There is one result for "angular-ui-sortable" which will also install [jQuery UI](http://jqueryui.com/) as we already have jQuery installed. If it didn't include JQuery UI the package is "jquery-ui".
 
 <h2 id="install">Install packages</h2>
 
@@ -43,9 +43,7 @@ Use Bower to install both "angular-ui-sortable" and "jquery-ui":
 ```sh
 bower install --save angular-ui-sortable
 ```
-```sh
-bower install --save jquery-ui
-```
+
 
 The `--save` option updates the ***bower.json*** file with dependencies on angular-ui-sortable and jquery-ui. This will save you from having to manually add it to *bower.json* yourself.
 
