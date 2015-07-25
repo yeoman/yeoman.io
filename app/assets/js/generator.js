@@ -21,6 +21,11 @@
     return $.getJSON('https://yeoman-generator-list.herokuapp.com');
   }
 
+  // For assetgraph to pick up strings as urls
+  function GETSTATICURL(url) {
+    return url;
+  }
+
   function getBlackList() {
     return $.getJSON('/blacklist.json');
   }
