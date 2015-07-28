@@ -30,7 +30,7 @@ module.exports = function (grunt) {
       watchHtml: true,
 
       // Watch CSS bakground images and livereload on changes
-      watchCssImages: true,
+      watchCssImages: false,
 
       // Run each image through the image processing pipeline exposed by express-processimage
       // Allows you to resize, recompress, change image format, rasterize SVG and much more
