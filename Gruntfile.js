@@ -13,7 +13,6 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // Load all Grunt tasks
   require('load-grunt-tasks')(grunt);
-  grunt.loadNpmTasks('grunt-livestyle');
 
   grunt.initConfig({
     // Configurable paths
