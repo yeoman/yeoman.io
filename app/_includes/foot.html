@@ -38,11 +38,13 @@
 <script src="/assets/js/script.js"></script>
 
 {% if page.title == 'Generators' %}
+  <!-- The #bootstrapper script will be removed by grunt-reduce during build. -->
+  <!-- Use GETSTATIURL to indicate that manually loaded strings are actually URLs -->
   <script id="bootstrapper">
-      window.GETSTATICURL = function (url) { // , placeHolderValue1, placeHolderValue2, ...
-          var placeHolderValues = Array.prototype.slice.call(arguments, 1);
-          return url.replace(/\*\*?|\{[^\}]*\}/g, function () {
-          return placeHolderValues.shift();
+    window.GETSTATICURL = function (url) { // , placeHolderValue1, placeHolderValue2, ...
+      var placeHolderValues = Array.prototype.slice.call(arguments, 1);
+      return url.replace(/\*\*?|\{[^\}]*\}/g, function () {
+        return placeHolderValues.shift();
       });
     };
   </script>
