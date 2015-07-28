@@ -20,7 +20,7 @@ Install [generator-angular](https://www.npmjs.com/package/generator-angular) usi
 npm install --global generator-angular@0.11.1
 ```
 
-This will start to install the Node packages required for the generator. Using `@0.11.1` will request a specific version of the generator.
+This will start to install the Node packages required for the generator. Using `@0.12.1` will request a specific version of the generator.
 
 <div class="note important">
 

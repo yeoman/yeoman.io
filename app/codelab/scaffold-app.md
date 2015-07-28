@@ -72,6 +72,23 @@ Hit **enter** and watch the magic happen.
 
 Yeoman will automatically scaffold out your app, grab your dependencies, and pull in a few useful Grunt tasks for your workflow. After a few minutes we should be ready to go onto the next step.
 
+
+<div class="note important">
+
+  <h2>Errors?</h2>
+
+  <p>
+     If you see <code>conflict package.json</code>, it is a temporary error. Hit <strong>y</strong> and then <strong>enter</strong> to continue.
+  </p>
+  <p>
+     <img src="/assets/img/codelab/conflict.png">
+  </p>
+
+</div>
+
+<hr>
+
+
 <p class="codelab-paging">
   <a href="../codelab.html#toc">&laquo; Return to overview</a>
   or
