@@ -1,4 +1,4 @@
-/*global jQuery, _, List */
+/*global jQuery, _, List, GETSTATICURL */
 (function (win, $) {
   'use strict';
   var $win = $(window);
@@ -21,13 +21,8 @@
     return $.getJSON('https://yeoman-generator-list.herokuapp.com');
   }
 
-  // For assetgraph to pick up strings as urls
-  function GETSTATICURL(url) {
-    return url;
-  }
-
   function getBlackList() {
-    return $.getJSON('/blacklist.json');
+    return $.getJSON(GETSTATICURL('/blacklist.json'));
   }
 
   $(function() {
