@@ -11,7 +11,7 @@ Generators are the building blocks of the Yeoman ecosystem. They're the plugins 
 In reading this section, you'll learn how to create and distribute your own.
 
 <aside class="excerpt">
-  Note: We built a [generator-generator](https://github.com/yeoman/generator-generator) to help users get started with their own generator. Feel free to use it to bootstrap your own generator once you understand the below concepts.
+  Note: We built a <a href='https://github.com/yeoman/generator-generator'>generator-generator</a> to help users get started with their own generator. Feel free to use it to bootstrap your own generator once you understand the below concepts.
 </aside>
 
 
