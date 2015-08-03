@@ -94,7 +94,7 @@ Some generators can also be used to scaffold further pieces of your application 
 In the AngularJS framework, for example, your application is made up of a number of pieces including controllers, directives and filters. You can actually scaffold out any of these pieces (and more) during your development workflow as shown below:
 
 ```sh
- yo angular:controller myController
+$ yo angular:controller myController
 $ yo angular:directive myDirective
 $ yo angular:filter myFilter
 $ yo angular:service myService
