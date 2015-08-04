@@ -81,8 +81,8 @@ module.exports = function (grunt) {
       outroot: '<%= yeoman.dist %>',
 
       include: [
-        '*.html',
-        '*.txt',
+        '**/*.html',
+        '**/*.txt',
         '*.ico',
         'CNAME'
       ],
@@ -121,8 +121,7 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= yeoman.app %>/assets/js/**/*.js',
-        '!<%= yeoman.app %>/assets/js/libs/*.js',
-        'test/spec/**/*.js'
+        '!<%= yeoman.app %>/assets/js/libs/*.js'
       ]
     },
 
@@ -132,8 +131,7 @@ module.exports = function (grunt) {
       },
       check: {
         src: [
-          '<%= yeoman.app %>/assets/css/**/*.css',
-          '<%= yeoman.app %>/assets/_scss/**/*.scss'
+          '<%= yeoman.app %>/assets/css/**/*.css'
         ]
       }
     },
@@ -154,13 +152,6 @@ module.exports = function (grunt) {
      'concurrent:server'
   ]);
 
-  // No real tests yet. Add your own.
-  grunt.registerTask('test', [
-    //   'clean:server',
-    //   'concurrent:test',
-    //   'connect:test'
-  ]);
-
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
@@ -177,21 +168,18 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'check',
-    'test',
     'build',
     'buildcontrol'
   ]);
 
   grunt.registerTask('deploy-travis', [
     'check',
-    'test',
     'build',
     'buildcontrol:travis'
   ]);
 
   grunt.registerTask('default', [
     'check',
-    'test',
     'build'
   ]);
 };
