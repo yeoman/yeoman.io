@@ -19,23 +19,28 @@ class: discovery-page
       </caption>
       <thead>
         <tr>
-          <th class="sort" data-sort="name">Name</th>
-          <th class="sort" data-sort="desc">Description</th>
-          <th class="sort" data-sort="author">Author</th>
+          <th class="sort" data-sort="name">Generator</th>
           <th class="sort" data-sort="stars">Stars</th>
         </tr>
       </thead>
       <tbody class="list">
         <% _.each(modules, function (el) { %>
           <tr class="<%= el.official %>">
-            <td class="name"><a href="<%- el.website %>"><%- el.name %></a></td>
-            <td class="desc"><%- el.description %></td>
-            <td class="author">
-              <% if (el.ownerWebsite) { %>
-                <a href="<%- el.ownerWebsite %>"><%- el.owner %></a>
-              <% } else { %>
-                <%- el.owner %>
-              <% } %>
+            <td class="name">
+              <span class="name-info">
+                <span class="name-website">
+                  <a href="<%- el.website %>"><%- el.name %></a>
+                </span>
+                <span class="name-author">
+                  <% if (el.ownerWebsite) { %>
+                    <a href="<%- el.ownerWebsite %>"><%- el.owner %></a>
+                  <% } else { %>
+                    <%- el.owner %>
+                  <% } %>
+                </span>
+              </span>
+              <br>
+              <span class="desc"><%- el.description %></span>
             </td>
             <td class="stars"><%- el.stars %></td>
           </tr>
