@@ -1,8 +1,6 @@
 /*global jQuery, _, List, GETSTATICURL */
 (function (win, $) {
   'use strict';
-  var $win = $(window);
-  var $doc = $(document);
 
   function cleanupDescription(str) {
     str = str.trim()
@@ -35,9 +33,7 @@
           el.official = el.ownerWebsite === 'https://github.com/yeoman' ? 'official' : '';
           el.name = el.name.replace('generator-', '');
           el.description = cleanupDescription(el.description);
-          el.stars = el.stars || el.watchers || 0;
-          el.website = el.website || el.html_url;
-          el.created = el.created || el.created_at;
+          el.stars = el.stars || 0;
           return el;
         }).sort(function (a, b) {
           return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
@@ -52,8 +48,6 @@
         var list = new List('plugins-all', {
           valueNames: [
             'name',
-            'desc',
-            'author',
             'stars'
           ]
         });
