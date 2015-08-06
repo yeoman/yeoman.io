@@ -29,7 +29,11 @@ class: discovery-page
             <td class="name">
               <span class="name-info">
                 <span class="name-website">
-                  <a href="<%- el.website %>"><%- el.name %></a>
+                  <% if (el.website) { %>
+                    <a href="<%- el.website %>"><%- el.name %></a>
+                  <% } else { %>
+                    <%- el.name %>
+                  <% } %>
                 </span>
                 <span class="name-author">
                   <% if (el.ownerWebsite) { %>
