@@ -42,6 +42,14 @@ To this instantly:
 
 ![](/assets/img/codelab/image_14.png)
 
+<div class="note important">
+
+  <h2>Formatting issue?</h2>
+
+  <p>If the page formatting is not similar to the one displayed above, it is probably due to Bootstrap not being installed properly. Change the <code>bootstrap</code> line in <code>bower.json</code> as this:</p>
+  <p><code>"bootstrap": "3.3.4",</code></p>
+</div>
+
 <p class="codelab-paging">
   <a href="../codelab.html#toc">&laquo; Return to overview</a>
   or
