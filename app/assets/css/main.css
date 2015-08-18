@@ -23,6 +23,9 @@ html {
   line-height: 1.4;
 }
 
+h3 {
+  padding-top: 60px;
+}
 /*
 * Remove text-shadow in selection highlight: h5bp.com/i
 * These selection rule sets have to be separate.
@@ -96,9 +99,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h4, h5, h6 {
   margin-top: 2em;
 }
+
 
 h5 ,h6 {
   margin-bottom: 0;
