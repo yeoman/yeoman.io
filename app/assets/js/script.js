@@ -3,7 +3,17 @@
   'use strict';
   var $win = $(window);
   var $doc = $(document);
-
+  
+  $(document).ready(function() {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 148) {
+        $('.context-nav').addClass('navbar-fixed');
+      }
+      if ($(window).scrollTop() < 149) {
+        $('.context-nav').removeClass('navbar-fixed');
+      }
+    });
+  });
   $(function() {
     // Open/close mobile menu
     var $menu = $('.mobile-menu-toggle').on('click.menu', function () {
