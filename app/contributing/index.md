@@ -2,7 +2,7 @@
 layout: default
 title: Contributing
 category: contributing
-sidebar: sidebars/contributing.html
+sidebar: sidebars/contributing.md
 excerpt: The yeoman project contribution guidelines
 ---
 

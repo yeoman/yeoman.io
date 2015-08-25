@@ -2,7 +2,7 @@
 layout: documentation
 title: Testing Generators
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: Yeoman allows and promotes and encourages testing. This is how
 ---
 

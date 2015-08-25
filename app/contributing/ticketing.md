@@ -2,7 +2,7 @@
 layout: default
 title: Issue system overview
 category: contributing
-sidebar: sidebars/contributing.html
+sidebar: sidebars/contributing.md
 excerpt: Overview of the tickets/issues organization inside the Yeoman project
 ---
 

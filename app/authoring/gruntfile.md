@@ -2,7 +2,7 @@
 layout: documentation
 title: Managing a Yeoman Gruntfile
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: Creating Gruntfiles and working with them through generation
 ---
 

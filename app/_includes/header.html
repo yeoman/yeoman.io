@@ -1,3 +1,6 @@
+{% capture learning %}{% include sidebars/learning.md %}{% endcapture %}
+{% capture authoring %}{% include sidebars/authoring.md %}{% endcapture %}
+{% capture contrib %}{% include sidebars/contributing.md %}{% endcapture %}
 <header class="page-header">
   <div class="container">
     <div class="mobile-bar">
@@ -10,21 +13,21 @@
       <ul class="main-nav">
         <li>
           {% link /learning Using Yeoman %}
-          {% include sidebars/learning.html %}
+          {{ learning | markdownify }}
         </li>
         <li>
           {% link /generators Discovering generators %}
         </li>
         <li>
           {% link /authoring Creating a generator %}
-          {% include sidebars/authoring.html %}
+          {{ authoring | markdownify }}
         </li>
         <li>
           {% link /blog Blog %}
         </li>
         <li>
           {% link /contributing Contributing %}
-          {% include sidebars/contributing.html %}
+          {{ contrib | markdownify }}
         </li>
       </ul>
     </nav>

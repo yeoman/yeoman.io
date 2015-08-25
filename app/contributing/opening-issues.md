@@ -2,7 +2,7 @@
 layout: default
 title: How to open an helpful issue
 category: contributing
-sidebar: sidebars/contributing.html
+sidebar: sidebars/contributing.md
 excerpt: Guidelines to opening an issue on the Yeoman project
 ---
 

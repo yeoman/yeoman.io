@@ -2,7 +2,7 @@
 layout: documentation
 title: Generator Runtime Context
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: this, that, Yeoman. What is available when and where?
 ---
 

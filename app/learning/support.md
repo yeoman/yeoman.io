@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Support
-sidebar: sidebars/learning.html
+sidebar: sidebars/learning.md
 ---
 
 ## First step

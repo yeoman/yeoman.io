@@ -2,7 +2,7 @@
 layout: documentation
 title: Integrating Yeoman
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: How to integrate the Yeoman system in your own tools
 ---
 

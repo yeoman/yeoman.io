@@ -2,7 +2,7 @@
 layout: documentation
 title: Interacting With The User
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: Its all about the users in the end
 ---
 

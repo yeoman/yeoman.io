@@ -2,7 +2,7 @@
 layout: default
 title: Pull Request Guidelines
 category: contributing
-sidebar: sidebars/contributing.html
+sidebar: sidebars/contributing.md
 excerpt: The yeoman project pull request guidelines
 ---
 

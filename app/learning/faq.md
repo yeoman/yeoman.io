@@ -2,7 +2,7 @@
 layout: default
 markdown: 1
 title: Frequently Asked Questions
-sidebar: sidebars/learning.html
+sidebar: sidebars/learning.md
 ---
 [What are the goals of the project?](#project-goals)
 

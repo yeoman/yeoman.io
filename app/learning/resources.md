@@ -2,7 +2,7 @@
 layout: default
 markdown: 1
 title: Learning resources
-sidebar: sidebars/learning.html
+sidebar: sidebars/learning.md
 ---
 
 # Articles And Tutorials

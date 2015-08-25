@@ -2,7 +2,7 @@
 layout: documentation
 title: Managing Dependencies
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: Working with npm and Bower to manage external dependencies
 ---
 

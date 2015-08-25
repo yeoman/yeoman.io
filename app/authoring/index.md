@@ -2,7 +2,7 @@
 layout: documentation
 title: Writing Your Own Yeoman Generator
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: Just starting out with generators? Start here
 ---
 

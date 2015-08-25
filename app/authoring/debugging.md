@@ -2,7 +2,7 @@
 layout: documentation
 title: Debugging Generators
 category: authoring
-sidebar: sidebars/authoring.html
+sidebar: sidebars/authoring.md
 excerpt: Not everyone always writes perfect code. Learn how to debug Generators
 ---
 
