@@ -3,11 +3,15 @@
   'use strict';
   var $win = $(window);
   var $doc = $(document);
-  
+
   $(function() {
-    $win.scroll(function () {
-      $('.context-nav').toggleClass('navbar-fixed', $win.scrollTop() > 148);
-    });
+    var $contentNav = $('.context-nav');
+    if ($contentNav.length) {
+      $doc.scroll(function () {
+        $contentNav.toggleClass('navbar-fixed', $doc.scrollTop() > 148);
+      });
+    }
+
     // Open/close mobile menu
     var $menu = $('.mobile-menu-toggle').on('click.menu', function () {
       var $pageHeader = $('.page-header').toggleClass('open');
