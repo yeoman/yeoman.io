@@ -29,7 +29,7 @@ module.exports = function (grunt) {
       // Watch HTML-files and livereload on changes
       watchHtml: true,
 
-      // Watch CSS bakground images and livereload on changes
+      // Watch CSS background images and livereload on changes
       watchCssImages: false,
 
       // Run each image through the image processing pipeline exposed by express-processimage
