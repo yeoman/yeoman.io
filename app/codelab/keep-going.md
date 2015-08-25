@@ -1,9 +1,6 @@
 ---
-layout: default
+layout: codelab
 markdown: 1
-social_text: "Let's Scaffold A Web App With @Yeoman!"
-social_url: http://yeoman.io/codelab.html
-sidebar: sidebars/codelab.html
 ---
 
 # Congratulations!

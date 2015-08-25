@@ -1,9 +1,6 @@
 ---
-layout: default
+layout: codelab
 markdown: 1
-social_text: "Let's Scaffold A Web App With @Yeoman!"
-social_url: http://yeoman.io/codelab.html
-sidebar: sidebars/codelab.html
 ---
 
 # Step 10: Make Todos persistent with local storage
@@ -202,7 +199,7 @@ We can confirm whether our data is being persisted to local storage by checking 
   <p>Tip: It's not a straight forward answer and involves knowing about mock services. Check out <a href="http://andyshora.com/unit-testing-best-practices-angularjs.html">Unit Testing Best Practices in AngularJS</a>, specifically the <em>Mocking Services and Modules in AngularJS</em> section.</p>
 
   <h2>Fix the ng-repeat issue</h2>
-  
+
   <p>For an extra challenge, the ng-repeat function does not accept multiple items with the same value. Try fixing this by looking into "track by" and see if you can get it to work. There is also a bubbling issue that needs to be solved when you use this type of ng-repeat.
   </p>
 </div>
