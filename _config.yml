@@ -14,8 +14,6 @@ atom_path: /blog/atom.xml
 source: app
 destination: .tmp
 
-include: ['.htaccess']
-
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
 show_drafts: true
