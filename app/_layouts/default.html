@@ -7,7 +7,7 @@ markdown: 0
     <div class="container">{{ page.title }}</div>
   </h2>
 
-  <div class="container has-sidebar clearfix">
+  <div class="container clearfix{% if page.sidebar %} has-sidebar{% endif %}">
     {% if page.sidebar %}
       <nav class="context-nav">
       {% include {{page.sidebar}} %}
