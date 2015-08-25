@@ -25,7 +25,7 @@ permalink: /blog/:title.html
 # Markdown library
 markdown: redcarpet
 
-pygments: true
+highlighter: pygments
 
 paginate: 8
 paginate_path: /blog/page:num
