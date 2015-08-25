@@ -14,7 +14,7 @@ Yeoman file utilities are based on the idea you always have two location context
 
 The first context is the _destination context_. The destination is the folder in which Yeoman will be scaffolding a new application. It is your user project folder, it is where you'll write most of the scaffolding.
 
-The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file defines the root of a Yeoman project. This file allows your user to run commands in subdirectories and have them work on the project. This ensure a consistent behaviour for the end user.
+The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file defines the root of a Yeoman project. This file allows your user to run commands in subdirectories and have them work on the project. This ensures a consistent behaviour for the end user.
 
 You can **get** the _destination path_ using `generator.destinationRoot()` or by joining a path using `generator.destinationPath('sub/path')`.
 
