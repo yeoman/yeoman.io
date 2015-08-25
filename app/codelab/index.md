@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: codelab
 title: Let's Scaffold a Web App with Yeoman
-social_text: "Let's Scaffold A Web App With @Yeoman!"
-social_url: http://yeoman.io/codelab.html
-sidebar: sidebars/codelab.html
+redirect_from: '/codelab.html'
 ---
 
 <p class="authors">By Addy Osmani, James Cryer &amp; Pearl Chen</p>
