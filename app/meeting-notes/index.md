@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: single-column
+title: Yeoman Weekly Team Meeting Notes
 markdown: 1
 ---
-
-# Yeoman Weekly Team Meeting Notes
 
 The Yeoman core team mets each week to discuss what we've been working on and the direction of the project.
 We've been using Google Docs for our meeting notes over the past year, but are experimenting with using

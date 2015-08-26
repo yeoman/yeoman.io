@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: single-column
+title: Goals and Roadmap
 markdown: 1
 ---
-
-#Goals and Roadmap
 
 ## Overall project goals
 

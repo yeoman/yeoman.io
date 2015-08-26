@@ -1,14 +1,13 @@
 ---
-layout: default
+title: Yeoman Insight
+layout: single-column
 ---
 
-#Yeoman Insight
-
-##Overview
+## Overview
 
 Yeoman Insight is the metrics reporting tool used by the Yeoman CLI to record and report aggregated usage of the project. From day one (ground zero), we aim to be metrics driven. Having insight into what people are doing with our tool will help measure success of the project and steer its future direction.
 
-##Things to measure
+## Things to measure
 
 There are a number of useful questions we can answer with good metrics:
 
@@ -25,15 +24,15 @@ There are a number of useful questions we can answer with good metrics:
 
 Turns out, [Google Analytics](http://www.google.com/analytics/) is excellent at handling all of these cases.
 
-##Collection Workflow
+## Collection Workflow
 
-###Backend
+### Backend
 
 Google Analytics suits most of our needs. It was designed to allow any type of app (mobile, non-web page properties, installed apps, etc.) to send data to Analytics for processing. It works similar to the existing API, with the exception that cookies are no longer required.
 
 There are a many benefits to using Analytics instead of rolling our own collecting server on App Engine. Perhaps the biggest: not having to process data ourselves.
 
-###yeomaninsight.py
+### yeomaninsight.py
 
 `yeomaninsight.py` is the brains behind the operation, located in the `/cli/bin` folder:
 
@@ -47,7 +46,7 @@ This script is installed globally as an alias `_yeomaninsight` to prevent users 
 
 `_yeomaninsight` is invoked by `/cli/lib/plugins/insight.py`, which creates a folder in the home directory (`~/.yeoman/insight/`) when the cli is run for the first time and prompts the user to opt-in to sending anonymous metrics.
 
-###Recording actions
+### Recording actions
 
 When users run Yeoman CLI commands, the CLI captures the [sub]commands that were issued by calling `yeomaninsight.py`'s record API. The installed package version and name are also passed as flags. yeomaninsight.py then writes the task to an offline logfile named .log (created on first-run of `yeomaninsight.py`).  The format of the file is:
 
@@ -58,7 +57,7 @@ When users run Yeoman CLI commands, the CLI captures the [sub]commands that were
 
 This file is created and saved to the user's home directory (`~/.yeoman/insight/.log`).
 
-####Example run:
+#### Example run:
 
     $ yeoman init
         -> calls "_yeomaninsight -n yeoman -v 0.9.3 record init"
@@ -93,11 +92,11 @@ Notice that
 1. Space separated commands are joined by "/"s to form a fake URL path. This simulates a pageview to record in Analytics.
 - Personalized information like the name of the model being created  ("myModel") is not recorded or sent.
 
-####Why a log file?
+#### Why a log file?
 
 The alternative to stashing actions in .log would be to send live requests to Analytics as commands were issued. The main drawback with that approach is that the tool cannot be used offline. I want to use Yeoman on a plane, bro!
 
-###Sending data
+### Sending data
 
 `yeomaninsight.py` is also responsible for sending the log data to Analytics. We attempt to send data on every command that is run. If a connection is not present, the data is logged to .log and continues to stash until a successful request to Analytics is made. This potentially means that someone could run the CLI once and not use it again for a few hours. That's ok. The timestamp in the log file is sent with the request to Analytics, allowing it to correctly process older results.
 
@@ -105,11 +104,11 @@ The alternative to stashing actions in .log would be to send live requests to An
 
 After a entries are processed, they're immediately removed from the log file.
 
-####Analytics request format
+#### Analytics request format
 
 A command is recorded as a "pageview" in Analytics. yeomaninsight.py makes GET requests to the Analytics endpoint, with the relevant parameters included.
 
-####Example
+#### Example
 
 Eric fires up Yeoman for the first time in 4hrs and runs a few commands:
 
