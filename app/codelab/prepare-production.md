@@ -46,7 +46,7 @@ It will build your project and launch a local web server. Yo Hero!
 ![](/assets/img/codelab/image_36.png)
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="local-storage.html">Go to the next step &raquo;</a>
 </p>

@@ -174,7 +174,7 @@ Fantastic!
 Writing unit tests make it easier to catch bugs as your app gets bigger and when more developers join your team. The scaffolding feature of Yeoman makes writing unit tests easier so no excuse for not writing your own tests! ;)
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="prepare-production.html">Go to the next step &raquo;</a>
 </p>

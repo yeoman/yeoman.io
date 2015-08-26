@@ -39,7 +39,7 @@ To this instantly:
 ![](/assets/img/codelab/image_14.png)
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="write-app.html">Go to the next step &raquo;</a>
 </p>

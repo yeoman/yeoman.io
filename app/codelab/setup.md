@@ -78,7 +78,7 @@ Running the above should output three separate version numbers:
 </div>
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="install-generators.html">Go to the next step &raquo;</a>
 </p>

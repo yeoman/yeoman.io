@@ -204,7 +204,7 @@ We can confirm whether our data is being persisted to local storage by checking 
 </div>
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="keep-going.html">You're done! Keep going &raquo;</a>
 </p>

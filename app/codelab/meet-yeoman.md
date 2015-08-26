@@ -28,4 +28,4 @@ You can install Yeoman generators using the [npm](https://www.npmjs.com/) comman
 
 With so many great tools available to front-end web developers these days it can sometimes be difficult to understand how they all fit together. Deciding on a workflow that you’re happy with is often a very personal endeavour, but getting started isn’t always easy. Yeoman aims to solve this problem by scaffolding workflows for creating modern webapps, while at the same time mixing in many of the best practices that have evolved within the industry.
 
-[&laquo; Return to overview](../codelab.html)
+[&laquo; Return to overview](index.html)

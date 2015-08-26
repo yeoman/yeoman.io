@@ -86,7 +86,7 @@ Yeoman will automatically scaffold out your app, grab your dependencies, and pul
 
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="review-generated-files.html">Go to the next step &raquo;</a>
 </p>

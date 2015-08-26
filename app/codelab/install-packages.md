@@ -160,7 +160,7 @@ Run "grunt serve" again and back in the browser, we can now re-order our list:
 Pat yourself on the back! You just used Yeoman to build a snazzy todo app in no time. Can you imagine doing front-end web development in any other way now?
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="write-unit-tests.html">Go to the next step &raquo;</a>
 </p>

@@ -79,5 +79,5 @@ It will take approximately 60 minutes to complete this codelab. By the end, you'
 
 <p class="codelab-paging">
   Let's get started with
-  <a href="codelab/setup.html">Step 1 &raquo;</a>
+  <a href="setup.html">Step 1 &raquo;</a>
 </p>

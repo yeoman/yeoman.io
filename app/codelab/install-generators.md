@@ -38,7 +38,7 @@ This will start to install the Node packages required for the generator. Using `
 
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="scaffold-app.html">Go to the next step &raquo;</a>
 </p>

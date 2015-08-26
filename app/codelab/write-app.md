@@ -211,7 +211,7 @@ Back in the browser, you can now hit the **X** button to remove the item from th
 One thing you might notice is that we don’t have a way to persist our todo list. Any time we refresh the page our todo items are reset back to the defaults in our `todos` array hardcoded in *main.js*. Don’t worry, we’ll fix this in [Step 10](local-storage.html) after we learn more about installing packages with Bower next in [Step 7](install-packages.html).
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="install-packages.html">Go to the next step &raquo;</a>
 </p>

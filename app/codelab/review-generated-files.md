@@ -27,7 +27,7 @@ In *mytodo*, we have:
 ***test***: a scaffolded out test runner and the unit tests for the project, including boilerplate tests for our controllers.
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
   or
   <a href="preview-inbrowser.html">Go to the next step &raquo;</a>
 </p>

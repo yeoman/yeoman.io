@@ -29,5 +29,5 @@ To find out all the Yeoman commands for the Angular generator take a look at the
 That’s it from your man-in-a-hat for now. Thanks!
 
 <p class="codelab-paging">
-  <a href="../codelab.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; Return to overview</a>
 </p>
