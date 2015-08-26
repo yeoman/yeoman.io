@@ -1,9 +1,8 @@
 ---
 layout: codelab
+title: 'Congratulations!'
 markdown: 1
 ---
-
-# Congratulations!
 
 <div class="mast-holder">
   <img src="/assets/img/yeoman-003.png">

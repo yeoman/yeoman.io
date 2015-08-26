@@ -1,9 +1,8 @@
 ---
 layout: codelab
+title: 'Step 1: Set up your dev environment'
 markdown: 1
 ---
-
-# Step 1: Set up your dev environment
 
 <p class="mast-holder">
   <img src="/assets/img/yeoman-004.png">

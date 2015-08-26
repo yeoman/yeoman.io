@@ -1,6 +1,6 @@
 ---
 layout: codelab
-title: Let's Scaffold a Web App with Yeoman
+title: "Let's Scaffold a Web App with Yeoman"
 redirect_from: '/codelab.html'
 ---
 

@@ -1,9 +1,8 @@
 ---
 layout: codelab
+title: 'Step 7: Use Bower to install packages'
 markdown: 1
 ---
-
-# Step 7: Use Bower to install packages
 
 <div class="mast-holder">
   <img src="/assets/img/yeoman-005.png">

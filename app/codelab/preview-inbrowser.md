@@ -1,9 +1,8 @@
 ---
 layout: codelab
+title: 'Step 5: Preview your app in the browser'
 markdown: 1
 ---
-
-# Step 5: Preview your app in the browser
 
 To preview your web app in your favourite web browser, you don't have to do anything special to set up a local web server on your computer &mdash; it's part of Yeoman.
 

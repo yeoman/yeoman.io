@@ -1,9 +1,8 @@
 ---
 layout: codelab
+title: 'Meet Yeoman'
 markdown: 1
 ---
-
-# Meet Yeoman
 
 Yeoman is a man in a hat with tricks up his sleeve.
 

@@ -1,15 +1,14 @@
 ---
 layout: codelab
+title: 'Step 2: Install a Yeoman generator'
 markdown: 1
 ---
-
-# Step 2: Install a Yeoman generator
 
 In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for AngularJS projects.
 
 ## Install an AngularJS generator
 
-You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [1000+ generators](http://yeoman.io/generators/) now available, many of which have been written by the open-source community.
+You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [1000+ generators](/generators/) now available, many of which have been written by the open-source community.
 
 Install [generator-angular](https://www.npmjs.com/package/generator-angular) using this command:
 

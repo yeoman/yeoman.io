@@ -1,9 +1,8 @@
 ---
 layout: codelab
+title: 'Step 10: Make Todos persistent with local storage'
 markdown: 1
 ---
-
-# Step 10: Make Todos persistent with local storage
 
 Let’s revisit the issue of items not persisting when the browser refreshes.
 
