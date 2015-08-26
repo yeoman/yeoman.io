@@ -4,7 +4,7 @@ title: 'Step 6: Start writing our AngularJS application'
 markdown: 1
 ---
 
-The files that you see in the web browser can be found in the `app` subfolder of your `mytodo` directory. All the instructions in this section assume that you are editing files in this *app* folder.  If you are unsure about any of the changes you should be doing, refer to the <a href="../codelab.html#source-files">final source code</a>.
+The files that you see in the web browser can be found in the `app` subfolder of your `mytodo` directory. All the instructions in this section assume that you are editing files in this *app* folder.  If you are unsure about any of the changes you should be doing, refer to the <a href="index.html#source-files">final source code</a>.
 
 ## Create a new template to show a todo list
 
