@@ -9,16 +9,7 @@ sidebarHTML: true
 <section>
   <div class="blog-post-meta clearfix">
     <p class="date">{{ page.date | date_to_string }}</p>
-    <div class="social">
-      <!--twitter-->
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title }}">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      <!--twitter-->
-
-      <!--plus-->
-      <script src="https://apis.google.com/js/plusone.js"></script><g:plus action="share"></g:plus>
-      <!--plus-->
-    </div>
+    {% include social.html %}
   </div>
 
   <div class="post">
