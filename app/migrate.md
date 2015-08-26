@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: single-column
+markdown: 1
 title: Migrate Yeoman
 ---
 
