@@ -31,7 +31,7 @@ This command will go through the Grunt tasks and configuration Yeoman has set up
 
 ![](/assets/img/codelab/image_35.png)
 
-Your lean, production-ready application is now available in a ***dist*** folder in the root of your ***mytodo*** project. These are the files that you can put on your server using FTP or any other deployment service.
+Your lean, production-ready application is now available in a `dist` folder in the root of your `mytodo` project. These are the files that you can put on your server using FTP or any other deployment service.
 
 ## Build and preview the production-ready app
 

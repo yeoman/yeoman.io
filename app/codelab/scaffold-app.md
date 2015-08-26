@@ -8,7 +8,7 @@ We've used the word "scaffold" a few times but you might not know what that mean
 
 ## Create a project folder
 
-Create a ***mytodo*** folder for all your codelab work:
+Create a `mytodo` folder for all your codelab work:
 
 ```sh
 mkdir mytodo && cd mytodo

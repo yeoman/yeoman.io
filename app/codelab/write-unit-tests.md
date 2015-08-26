@@ -4,11 +4,11 @@ title: 'Step 8: Test with Karma and Jasmine'
 markdown: 1
 ---
 
-For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a ***test*** directory in the root of the ***mytodo*** folder, created a ***karma.conf.js*** file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
+For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a `test` directory in the root of the `mytodo` folder, created a `karma.conf.js` file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
 
 ## Run unit tests
 
-Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our ***Gruntfile.js*** for running tests. It can be run as follows:
+Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our `Gruntfile.js` for running tests. It can be run as follows:
 
 ```sh
 grunt test
@@ -20,7 +20,7 @@ When you run `grunt test`, you'll see some warnings in the Yeoman console. Don�
 
 First, we need to check the Karma configuration to see if it is loading the new Bower components we installed in [Step 7](install-packages.html#install).
 
-Open ***karma.conf.js***. Currently the `files` array should look like this:
+Open `karma.conf.js`. Currently the `files` array should look like this:
 
 ```js
     files: [
@@ -74,7 +74,7 @@ angular.module('mytodoApp')
 
 ## Update unit tests
 
-You’ll find unit tests scaffolded out in the ***test*** folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify.
+You’ll find unit tests scaffolded out in the `test` folder, so open up **test/spec/controllers/main.js**. This is the unit test for your Angular MainCtrl controller that we need to modify.
 
 Your boilerplate test still references `awesomeThings` so delete the following test:
 
@@ -92,7 +92,7 @@ it('should have no items to start', function () {
 });
 ```
 
-Open ***scripts/controllers/main.js***.
+Open `scripts/controllers/main.js`.
 
 Remove the 3 items we added earlier from the `$scope.todos` declaration:
 

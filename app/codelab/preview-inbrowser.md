@@ -28,7 +28,7 @@ Note: You can't have more than one http server running on the same port (default
 
 Open up your favourite text editor and start making changes. Each save will automatically force a browser refresh so you don’t have to do this yourself. This is called *live reloading* and it’s a nice way of getting a real-time view of your application state.
 
-Live reloading is made available to your application through a set of Grunt tasks configured in ***Gruntfile.js***; it watches for changes to your files and automatically reloads them if it detects a change.
+Live reloading is made available to your application through a set of Grunt tasks configured in `Gruntfile.js`; it watches for changes to your files and automatically reloads them if it detects a change.
 
 Below, we edited *main.html* in the *views* directory. Thanks to live reload we go from this:
 

@@ -43,7 +43,7 @@ bower install --save angular-ui-sortable
 bower install --save jquery-ui
 ```
 
-The `--save` option updates the ***bower.json*** file with dependencies on angular-ui-sortable and jquery-ui. This will save you from having to manually add it to *bower.json* yourself.
+The `--save` option updates the `bower.json` file with dependencies on angular-ui-sortable and jquery-ui. This will save you from having to manually add it to *bower.json* yourself.
 
 <div class="note tip">
 
@@ -61,7 +61,7 @@ The `--save` option updates the ***bower.json*** file with dependencies on angul
 
 ## Confirm installation
 
-Take a look at your ***bower_components*** directory just to check that everything is there as expected. You should see folders for "jquery-ui" and "angular-ui-sortable" alongside the previously installed angular packages:
+Take a look at your `bower_components` directory just to check that everything is there as expected. You should see folders for "jquery-ui" and "angular-ui-sortable" alongside the previously installed angular packages:
 
 ![](/assets/img/codelab/image_25.png)
 
