@@ -317,13 +317,17 @@ Navigation
   text-decoration: none;
 }
 
+.section-title {
+  padding: 0.3em 0;
+  border-bottom: 4px solid rgba(215,0,41,0.1);
+}
+
 .content-chunk {
   margin-bottom: 4em;
 }
 
-.section-title {
-  padding: 0.3em 0;
-  border-bottom: 4px solid rgba(215,0,41,0.1);
+.content-chunk p:first-child {
+  margin-top: 0;
 }
 
 /*
