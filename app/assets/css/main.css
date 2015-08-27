@@ -1269,7 +1269,7 @@ Modify as content requires.
   }
 
   .has-sidebar {
-    padding-left: 20em;
+    padding-right: 20em;
     box-sizing: border-box;
   }
 
@@ -1342,7 +1342,7 @@ Modify as content requires.
   .context-nav {
     position: absolute;
     top: 1.3em;
-    left: 0;
+    right: 0;
     width: 17em;
     margin: 0;
     padding: 0;
