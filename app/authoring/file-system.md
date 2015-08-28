@@ -59,7 +59,7 @@ Yeoman is very careful when it comes to overwriting users files. Basically, ever
 
 This behaviour prevents bad surprises and limits the risk of errors. On the other hand, this means every file is written asynchronously to the disk.
 
-As asynchronous APIs are harder to use, Yeoman provide a synchronous file-system API where every files get written to an [in-memory file system](https://github.com/sboudrias/mem-fs) and are only written to disk once when Yeoman is done running.
+As asynchronous APIs are harder to use, Yeoman provide a synchronous file-system API where every file gets written to an [in-memory file system](https://github.com/sboudrias/mem-fs) and are only written to disk once when Yeoman is done running.
 
 This memory file system is shared between all [composed generators](/authoring/composability.html).
 
