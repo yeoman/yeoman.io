@@ -2,19 +2,6 @@
 (function (win, $) {
   'use strict';
 
-  function cleanupDescription(str) {
-    str = str.trim()
-      .replace(/:\w+:/, '') // remove GitHub emojis
-      .replace(/ ?generator for (?:yeoman|yo) ?/i, '')
-      .replace(/(?:a )?(?:yeoman|yo) (?:generator (?:for|to|that|which)?)?/i, '')
-      .replace(/(?:yeoman|yo) generator$/i, '')
-      .replace(/ ?application ?/i, 'app')
-      .trim()
-      .replace(/\.$/, '');
-    str = str.charAt(0).toUpperCase() + str.slice(1);
-    return str;
-  }
-
   function getGeneratorList() {
     return $.getJSON('https://yeoman-generator-list.herokuapp.com');
   }
@@ -32,7 +19,6 @@
         }).map(function (el) {
           el.official = el.ownerWebsite === 'https://github.com/yeoman' ? 'official' : '';
           el.name = el.name.replace('generator-', '');
-          el.description = cleanupDescription(el.description);
           el.stars = el.stars || 0;
           return el;
         }).sort(function (a, b) {
