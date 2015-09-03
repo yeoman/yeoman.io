@@ -44,7 +44,7 @@ Long-term, the project may also assist developers with creating applications usi
 
 ### <a name="what-is-CLI"> What is a command-line interface?</a>
 
-A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal. On Windows, the command shell (`cmd.exe`) or PowerShell, but we recommend you use [`cmder`](http://gooseberrycreative.com/cmder/) instead for an improved experience.
+A command-line interface is a means for developers to interact with a system using text commands. On Linux or OSX, this is often done using the terminal. On Windows, the command shell (`cmd.exe`) or PowerShell, but we recommend you use [`cmder`](http://cmder.net/) instead for an improved experience.
 
 
 ### <a name="what-is-pkg-manager"> What is a package manager?</a>

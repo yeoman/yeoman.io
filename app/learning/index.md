@@ -33,7 +33,7 @@ npm install -g yo bower grunt-cli gulp
 
 *npm is the package manager for [Node.js](https://nodejs.org/) and comes bundled with it.*
 
-*On Windows, we suggest you use an improved command line tool such as [`cmder`](http://gooseberrycreative.com/cmder/) or PowerShell to improve the experience.*
+*On Windows, we suggest you use an improved command line tool such as [`cmder`](http://cmder.net/) or PowerShell to improve the experience.*
 
 
 ### Basic scaffolding
