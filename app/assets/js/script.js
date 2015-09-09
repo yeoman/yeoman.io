@@ -1,35 +1,65 @@
 /*global jQuery, _, List */
 (function (win, $) {
   'use strict';
-  var $win = $(window);
-  var $doc = $(document);
 
   $(function() {
-    var $contentNav = $('.context-nav');
-    if ($contentNav.length) {
-      $doc.scroll(function () {
-        $contentNav.toggleClass('navbar-fixed', $doc.scrollTop() > 148);
-      });
-    }
+    // Define page elements
+    var $win = $(window);
+    var $doc = $(document);
+    var $body = $(document.body);
 
-    // Open/close mobile menu
-    var $menu = $('.mobile-menu-toggle').on('click.menu', function () {
-      var $pageHeader = $('.page-header').toggleClass('open');
-      var $body = $(document.body);
-      if ($pageHeader.hasClass('open')) {
-        setTimeout(function () {
-          $body.on('click.menu', function (e) {
-            var $target = $(e.target);
-            if (!$target.is($menu) && !$target.closest('.main-menu').length) {
-              $menu.trigger('click.menu');
-            }
-          });
-        }, 0);
-      } else {
-        $body.off('click.menu');
+    // Sticky submenu
+    (function() {
+      var $contentNav = $('.context-nav');
+      if ($contentNav.length) {
+        var oldState = null;
+        $doc.scroll(resizer).trigger('scroll');
+        $win.resize(function() {
+          oldState = null;
+          resizer();
+        });
+        function resizer () {
+          var state = $doc.scrollTop() > 148;
+          if (state !== oldState) {
+            toggle(state);
+          }
+        }
+        function toggle (state) {
+          var rightOffset = (
+            $win.outerWidth() - $contentNav.offset().left -
+            $contentNav.outerWidth()
+          ) + 'px';
+          $contentNav
+            .toggleClass('navbar-fixed', state)
+            .css('right', state ? rightOffset : 0);
+          oldState = state;
+        }
       }
-    });
+    })();
 
+    (function() {
+      // Open/close mobile menu
+      var $pageHeader = $('.page-header');
+      var $menu = $('.mobile-menu-toggle')
+      var onClick = function (e) {
+        var $target = $(e.target);
+        if (!$target.is($menu) && !$target.closest('.main-menu').length) {
+          $menu.trigger('click.menu');
+        }
+      };
+      $menu.on('click.menu', function () {
+        $pageHeader.toggleClass('open');
+        if ($pageHeader.hasClass('open')) {
+          setTimeout(function () {
+            $body.on('click.menu', onClick);
+          }, 0);
+        } else {
+          $body.off('click.menu');
+        }
+      });
+    })()
+
+    // Toggle blog menus
     $('.context-nav, .year_divider').click(function () {
       $(this).toggleClass('open');
     });
@@ -38,4 +68,4 @@
     $('pre code').addClass('prettyprint');
     window.prettyPrint();
   });
-})(window, jQuery);
+})(window, window.jQuery);
