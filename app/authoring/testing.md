@@ -139,4 +139,4 @@ assert.fileContent('controllers/user.js', /App\.UserController = Ember\.ObjectCo
 
 ### Others
 
-Refer to the [API documentation](http://yeoman.github.io/generator/helpers.html) for other methods.
+Refer to the [API documentation](http://yeoman.github.io/generator/module-test_helpers.html) for other methods.
