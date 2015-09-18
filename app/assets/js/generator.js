@@ -3,7 +3,7 @@
   'use strict';
 
   function getGeneratorList() {
-    return $.getJSON('https://104.236.186.228');
+    return $.getJSON('http://104.236.186.228');
     // return $.getJSON('https://yeoman-generator-list.herokuapp.com');
   }
 
