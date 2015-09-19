@@ -25,7 +25,7 @@ The `composeWith` method allows the generator to run side-by-side with another g
 
 `composeWith` takes three parameters.
 
- 1. `namespace` - A String declaring the namespace of the generator to compose with. The default matches generators installed on the end user's system. Use [`peerDependencies`](http://blog.nodejs.org/2013/02/07/peer-dependencies/) to install needed generators with this one.
+ 1. `namespace` - A String declaring the namespace of the generator to compose with. The default matches generators installed on the end user's system. Use [`peerDependencies`](https://nodejs.org/en/blog/npm/peer-dependencies/) to install needed generators with this one.
  1. `options` - An Object containing an `options` object and/or an `args` array. The called generator will receive these when it runs.
  1. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
     * `settings.local` - A String that defines a path to the requested generator. This allows the use of sub-generators. It also allows the use of a specific version of a generator. To do so, declare it in the [`dependencies` section inside `package.json`](https://docs.npmjs.com/files/package.json#dependencies). Then reference the path to that generator, usually `node_modules/generator-name`.
