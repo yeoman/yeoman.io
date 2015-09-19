@@ -19,25 +19,25 @@
     var seconds = Math.floor((new Date() - date) / 1000);
     var interval = Math.floor(seconds / 31536000);
     if (interval > 1) {
-        return interval + " years";
+        return interval + ' years';
     }
     interval = Math.floor(seconds / 2592000);
     if (interval > 1) {
-        return interval + " months";
+        return interval + ' months';
     }
     interval = Math.floor(seconds / 86400);
     if (interval > 1) {
-        return interval + " days";
+        return interval + ' days';
     }
     interval = Math.floor(seconds / 3600);
     if (interval > 1) {
-        return interval + " hours";
+        return interval + ' hours';
     }
     interval = Math.floor(seconds / 60);
     if (interval > 1) {
-        return interval + " minutes";
+        return interval + ' minutes';
     }
-    return Math.floor(seconds) + " seconds";
+    return Math.floor(seconds) + ' seconds';
   }
 
   $(function() {
@@ -46,7 +46,7 @@
         var blocked = getBlackListArgs[0];
         var modules = getGeneratorListArgs[0].filter(function (el) {
           return el !== null &&
-            el.desc &&
+            el.description &&
             blocked.indexOf('generator-' + el.name) < 0;
         }).map(function (el) {
           el.official = el.owner.site === 'https://github.com/yeoman' ? 'official' : '';
@@ -66,7 +66,7 @@
           valueNames: [
             'name',
             'stars',
-            'dls'
+            'downloads'
           ]
         });
 
