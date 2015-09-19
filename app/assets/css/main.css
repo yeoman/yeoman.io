@@ -754,13 +754,18 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 .discovery-page td.name a:hover {
   text-decoration: underline;
 }
-.discovery-page .name-author a {
+.discovery-page .name-author {
   font-size: small;
   margin-left: 20px;
 }
+.discovery-page .updated {
+  font-size: smaller;
+  margin-left: 30px;
+}
 
-.discovery-page td.stars {
-  width: 70px;
+.discovery-page td.stars,
+.discovery-page td.installs {
+  width: 75px;
   text-align: center;
 }
 
