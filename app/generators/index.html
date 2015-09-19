@@ -21,6 +21,7 @@ class: discovery-page
         <tr>
           <th class="sort" data-sort="name">Generator</th>
           <th class="sort" data-sort="stars">Stars</th>
+          <th class="sort" data-sort="dls">Installs</th>
         </tr>
       </thead>
       <tbody class="list">
@@ -29,24 +30,33 @@ class: discovery-page
             <td class="name">
               <span class="name-info">
                 <span class="name-website">
-                  <% if (el.website) { %>
-                    <a href="<%- el.website %>"><%- el.name %></a>
+                  <% if (el.site) { %>
+                    <a href="<%- el.site %>"><%- el.name %></a>
                   <% } else { %>
                     <%- el.name %>
                   <% } %>
                 </span>
+                <% if (el.owner.name) { %>
                 <span class="name-author">
-                  <% if (el.ownerWebsite) { %>
-                    <a href="<%- el.ownerWebsite %>"><%- el.owner %></a>
+                  by
+                  <% if (el.owner.site) { %>
+                    <a href="<%- el.owner.site %>"><%- el.owner.name %></a>
                   <% } else { %>
-                    <%- el.owner %>
+                    <%- el.owner.name %>
+                  <% } %>
+                  <% if (el.updated) { %>
+                    <span class="updated">
+                      Last updated: <%- el.updated %> ago
+                    </span>
                   <% } %>
                 </span>
+                <% } %>
               </span>
               <br>
-              <span class="desc"><%- el.description %></span>
+              <span class="desc"><%- el.desc %></span>
             </td>
             <td class="stars"><%- el.stars %></td>
+            <td class="installs"><%- el.dls %></td>
           </tr>
         <% }); %>
       </tbody>
