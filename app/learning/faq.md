@@ -130,7 +130,7 @@ View the details within [#152 ticket for recommended solutions for documentation
 
 You can use use a command line flag to disable them. Eg. `yo webapp --no-insight`
 
-Insight: `--no-insight`  
+Insight: `--no-insight`
 Update Notifier: `--no-update-notifier`
 
 You can also add `yeoman_test` as an environment variable with any value to permanently disable both.
@@ -162,7 +162,7 @@ $ bower install
 
 And check if these folders are created correctly.
 
-### What can I do if _npm install -g yo_ fails on OS X with _sh: node: command not found_ ?
+### What can I do if `npm install -g yo` fails on OS X with `sh: node: command not found` ?
 
 Try
 
