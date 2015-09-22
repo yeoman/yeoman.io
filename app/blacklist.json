@@ -1,5 +1,4 @@
 [
-  "ft-wp",
   "generator-angular-js",
   "generator-angular-phonegap",
   "generator-angular-sparkstack",
@@ -11,19 +10,5 @@
   "generator-mtb-app",
   "generator-onereq",
   "generator-react-coffee-webpack",
-  "generator-wordpress-bob",
-  "elm-yeoman-generator",
-  "freshbooks-cli-create-plugin",
-  "frontendcore-installer",
-  "generators-huya",
-  "hajimetest",
-  "learning-yeoman-ch6",
-  "muzzley-generator",
-  "ng-cli",
-  "nick-site",
-  "spine-cli",
-  "toolbox-utils",
-  "yeoman-blender",
-  "yeoman-generator-nick-site",
-  "yo-node-restify-aws-swagger"
+  "generator-wordpress-bob"
 ]
