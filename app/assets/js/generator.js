@@ -66,7 +66,7 @@
           valueNames: [
             'name',
             'stars',
-            'downloads'
+            'installs'
           ]
         });
 
