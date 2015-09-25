@@ -23,7 +23,7 @@ The most time consuming task of most open source projects is writing and updatin
 
 Chances are you're probably a web developer. If so that's awesome because there's a lot to do making this website better.
 
-Head to [yeoman/yeoman.io](https://github.com/yeoman/yeoman.io) to work on the website and documentation.
+Head to [yeoman/yeoman.github.io](https://github.com/yeoman/yeoman.github.io) to work on the website and documentation.
 
 ## Official Generators
 

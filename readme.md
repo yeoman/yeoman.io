@@ -17,7 +17,7 @@ To get started:
 **1\.** Clone the repository and its submodules:
 
 ```bash
-git clone --recursive git@github.com:yeoman/yeoman.io.git
+git clone --recursive git@github.com:yeoman/yeoman.github.io.git
 cd yeoman.io
 ```
 
