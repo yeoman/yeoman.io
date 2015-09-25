@@ -112,7 +112,7 @@ For beginners `brew uninstall node` and download and install Node from their [we
 
 ### <a name="too-many-files"> I'm getting `EMFILE, too many open files`</a>
 
-EMFILE mean you've reached the OS limit of concurrently open files. There aren't much we can do about it, however you can increase the limit yourself.
+EMFILE means you've reached the OS limit of concurrently open files. There aren't much we can do about it, however you can increase the limit yourself.
 
 Add `ulimit -n [number of files]` to your .bashrc/.zshrc file to increase the soft limit.
 
