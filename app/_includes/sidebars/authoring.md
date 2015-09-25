@@ -9,4 +9,4 @@
  * {% link /authoring/testing.html Unit testing %}
  * {% link /authoring/debugging.html Debugging Generators %}
  * {% link /authoring/integrating-yeoman.html Integrating Yeoman in other tools %}
- * [Full API documentation](http://yeoman.github.io/generator/)
+ * [Full API documentation](http://yeoman.io/generator/generator/)
