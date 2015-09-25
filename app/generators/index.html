@@ -20,14 +20,15 @@ class: discovery-page
       <thead>
         <tr>
           <th class="sort" data-sort="name">Generator</th>
-          <th class="sort" data-sort="stars">Stars</th>
-          <th class="sort" data-sort="installs">Installs</th>
+          <th class="sort metadata last-updated" data-sort="updated">Last Updated</th>
+          <th class="sort metadata" data-sort="stars">Stars</th>
+          <th class="sort metadata" data-sort="installs">Installs</th>
         </tr>
       </thead>
       <tbody class="list">
         <% _.each(modules, function (el) { %>
           <tr class="<%= el.official %>">
-            <td class="name">
+            <td class="name" colspan="4">
               <span class="name-info">
                 <span class="name-website">
                   <% if (el.site) { %>
@@ -44,19 +45,19 @@ class: discovery-page
                   <% } else { %>
                     <%- el.owner.name %>
                   <% } %>
-                  <% if (el.updated) { %>
-                    <span class="updated">
-                      Last updated: <%- el.updated %> ago
-                    </span>
-                  <% } %>
                 </span>
                 <% } %>
+                <span class="metadata">
+                  <% if (el.updated) { %>
+                      <span>Last updated: <%- el.updated %> ago</span>
+                  <% } %>
+                  <span><%- el.stars %></span>
+                  <span><%- el.downloads %></span>
+                </span>
               </span>
               <br>
               <span class="desc"><%- el.description %></span>
             </td>
-            <td class="stars"><%- el.stars %></td>
-            <td class="installs"><%- el.downloads %></td>
           </tr>
         <% }); %>
       </tbody>
