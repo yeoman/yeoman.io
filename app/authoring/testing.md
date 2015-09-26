@@ -46,9 +46,9 @@ Yeoman provide test helpers methods. Require them like this:
 var helpers = require('yeoman-generator').test;
 ```
 
-You can check [the full helpers API here](http://yeoman.io/generator/generator/module-test_helpers.html). These methods will usually be run inside a `before` block.
+You can check [the full helpers API here](http://yeoman.io/generator/module-test_helpers.html). These methods will usually be run inside a `before` block.
 
-The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](http://yeoman.io/generator/generator/RunContext.html) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
+The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](http://yeoman.io/generator/RunContext.html) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
 
 ```js
 var path = require('path');
@@ -113,7 +113,7 @@ helpers.run(path.join( __dirname, '../app'))
 
 ## Assertions helpers
 
-Yeoman extends the [native assert module](https://nodejs.org/api/assert.html) with generator related assertions helpers. You can see the full list of assertions helpers in our [API documentation](http://yeoman.io/generator/generator/assert.html).
+Yeoman extends the [native assert module](https://nodejs.org/api/assert.html) with generator related assertions helpers. You can see the full list of assertions helpers in our [API documentation](http://yeoman.io/generator/assert.html).
 
 Require the assertion helpers:
 
@@ -139,4 +139,4 @@ assert.fileContent('controllers/user.js', /App\.UserController = Ember\.ObjectCo
 
 ### Others
 
-Refer to the [API documentation](http://yeoman.io/generator/generator/module-test_helpers.html) for other methods.
+Refer to the [API documentation](http://yeoman.io/generator/module-test_helpers.html) for other methods.

@@ -126,7 +126,7 @@ You can basically use any _gulp_ plugins with the Yeoman transform stream to pro
 
 ## Legacy File utilities
 
-Yeoman also expose a set of older file utilities. You can refer to the [API documentation](http://yeoman.io/generator/generator/actions.html) to learn more about them.
+Yeoman also expose a set of older file utilities. You can refer to the [API documentation](http://yeoman.io/generator/actions.html) to learn more about them.
 
 The legacy file utilities have been back ported to use the in memory file system. As so, they're safe to use. Although be careful, these methods make a lot of assumptions and as a result will produce edge cases. When possible, prefer the more explicit new `fs` API.
 
@@ -144,7 +144,7 @@ Some popular AST parsers are:
 - [Esprima](https://github.com/ariya/esprima) for parsing JavaScript - you might be interested in [AST-Query](https://github.com/SBoudrias/ast-query) which provide a lower level API to edit Esprima syntax tree.
 - For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
-Yeoman also provides some common html file edition helpers. Refer to the [API documentation](http://yeoman.io/generator/generator/wiring.html) for the list of available methods.
+Yeoman also provides some common html file edition helpers. Refer to the [API documentation](http://yeoman.io/generator/wiring.html) for the list of available methods.
 
 Parsing code file with RegEx is perilous path, and before choosing to do so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If even then you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users code.
 

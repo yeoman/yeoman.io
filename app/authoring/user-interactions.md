@@ -151,4 +151,4 @@ module.exports = generators.Base.extend({
 });
 ```
 
-There's also some other helper methods you can find in the [API documentation](http://yeoman.io/generator/generator/TerminalAdapter.html).
+There's also some other helper methods you can find in the [API documentation](http://yeoman.io/generator/TerminalAdapter.html).
