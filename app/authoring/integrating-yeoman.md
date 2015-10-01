@@ -16,7 +16,7 @@ The first thing you need to know is the environment system is contained in the `
 npm install --save yeoman-environment
 ```
 
-This module provides methods to retrieve installed generators, register and run generators. It also provides the user interfaces adapter that generators are using. We provide a [full API documentation](http://yeoman.io/generator/environment/) (which is the terse list of methods available.)
+This module provides methods to retrieve installed generators, register and run generators. It also provides the user interfaces adapter that generators are using. We provide a [full API documentation](http://yeoman.io/environment/) (which is the terse list of methods available.)
 
 ## Using `yeoman-environment`
 
@@ -122,3 +122,4 @@ See [`lib/util/log.js`](https://github.com/yeoman/environment/blob/master/lib/ut
 Here's a list of modules/plugins/app using `yeoman-environment`. You can use them as inspiration.
 
 - [yo](https://github.com/yeoman/yo)
+- [yeoman-app](https://github.com/yeoman/yeoman-app)
