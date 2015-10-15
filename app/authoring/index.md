@@ -82,6 +82,17 @@ The previous example can be written as follows:
         └───index.js
 ```
 
+If you use this second directory structure, make sure you point the `files` property in your `package.json` at the `generators` folder.
+
+```json
+{
+  "files": [
+    "generators/app",
+    "generators/router"
+  ]
+}
+```
+
 
 ## Extending generator
 
