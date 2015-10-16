@@ -50,11 +50,9 @@
         modules: modules
       });
 
-      $('#plugins-all').html(allTpl).find('.search').show();
-
       var list = new List('plugins-all', {
         valueNames: [
-          'name',
+          'name-website',
           'stars',
           'updated',
           'installs'
