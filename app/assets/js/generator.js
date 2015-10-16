@@ -63,7 +63,7 @@
 
         var list = new List('plugins-all', {
           valueNames: [
-            'name',
+            'name-website',
             'stars',
             'updated',
             'installs'
