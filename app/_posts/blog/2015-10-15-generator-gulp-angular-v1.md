@@ -23,7 +23,7 @@ We followed all the precepts of Yeoman and added our own:
 
 ### Technologies supported
 
-We are not joking around when we talk about this being a stable version. We integrated lots of technologies and languages, from CoffeeSript to TypeScript, to Sass to Stylus. The number of combinations exceeds several million! We wrote tests, documentation and fixed issues for 12 minor versions and 2 release candidates, to be able to deliver a perfectly configured seed project, no matter the options you choose.
+We are not joking around when we talk about this being a stable version. We integrated lots of technologies and languages, from CoffeeScript to TypeScript, to Sass to Stylus. The number of combinations exceeds several million! We wrote tests, documentation and fixed issues for 12 minor versions and 2 release candidates, to be able to deliver a perfectly configured seed project, no matter the options you choose.
 
 ![](/assets/img/blog/technologies-gga.png)
 
@@ -45,7 +45,7 @@ We integrated many optimizations for your web application using a few Gulp plugi
 
 ## 2.0.0 on the road...
 
-But versio 1 is not the end of the road. While maintaining the v1 branch, we started a new Github organization called [FountainJS](https://github.com/FountainJS) targeting a futuristic v2 version. As the context of the build tools has greatly evolved over a year, it’ll be a reboot of the code base.
-The major selling point will be to use Yeoman Generator's composition support, to upgrade to Gulp 4 and to write it in ES6. Finally, I hope to open new horizons in terms of options: dependency management for sure, but why not also Web frameworks (someone talked about React?) and also a backend.
+But version 1.0.0 is not the end of the road. While maintaining the v1 branch, we started a new Github organization called [FountainJS](https://github.com/FountainJS) targeting a futuristic v2 version. As the context of the build tools has greatly evolved over a year, it’ll be a reboot of the code base.
+The major selling point will be to use Yeoman Generator's composition support, to upgrade to Gulp 4 and to write it in ES6. Finally, we hope to open new horizons in terms of options: dependency management for sure, but why not also Web frameworks (someone talked about React?) and also a backend.
 
 Go try out the [generator-gulp-angular](https://www.npmjs.com/package/generator-gulp-angular) v1.0.0 release! Any feedback, issues, or contributions on the new [FountainJS](https://github.com/FountainJS) project will always be appreciated.
