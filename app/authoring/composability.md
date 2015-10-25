@@ -13,7 +13,7 @@ Yeoman offers multiple ways for generators to build upon common ground. There's 
 In Yeoman, composability can be initiated in two ways:
 
  * A generator can decide to compose itself with other generator (e.g., `generator-backbone` uses `generator-mocha`).
- * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails).
+ * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails). Note: end user initiated composition is a planned feature an currently not available.
 
 **Note:** The User composability feature landed in core in version **0.17.0**. It is a work in progress but is stable enough to start using. Further documentation will come after a few refinements to the process and can be expected sooner rather than later!
 
