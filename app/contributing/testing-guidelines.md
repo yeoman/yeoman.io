@@ -101,7 +101,7 @@ assert.throws(class.method.bind(class, 'Invalid param'));
 
 #### Never use scoped variables
 
-When creating test variables, always attach them to the `this` context. You're garanteed that `this` is a totally new object each time a test run. By comparison, scoped variables can easily leaks value and have side effects between tests.
+When creating test variables, always attach them to the `this` context. You're guaranteed that `this` is a totally new object each time a test run. By comparison, scoped variables can easily leak values and have side effects between tests.
 
 ```javascript
 describe('my module', function () {
