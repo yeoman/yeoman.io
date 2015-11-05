@@ -79,7 +79,6 @@ The options hash accepts multiple key-value pairs:
 - `optional` Boolean whether it is optional
 - `type` String, Number, Array, or Object
 - `defaults` Default value for this argument
-- `banner` String to show on usage notes (this one is provided by default)
 
 This method must be called inside the `constructor` method. Otherwise Yeoman won't be able to output the relevant help information when a user calls your generator with the help option: e.g. `yo webapp --help`.
 
