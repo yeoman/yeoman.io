@@ -29,7 +29,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 # Videos
 
-<p>Below you can find a selection of videos and tutorials recorded by members of the Yeoman community. Remember to check the <a href="http://updates.html5rocks.com/tag/front-end">Yeoman Monthly Digest</a> for the latest videos posted each month.</p>
+<p>Below you can find a selection of videos and tutorials recorded by members of the Yeoman community.</p>
 
 <section>
   <h2 class="hero-title">A 5 Minute Introduction To Yeoman</h2>
