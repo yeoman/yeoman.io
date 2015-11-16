@@ -88,6 +88,11 @@ textarea {
 Author's custom styles
 ========================================================================== */
 
+body,
+html {
+  height: 100%;
+}
+
 html {
   font-family: 'Roboto', sans-serif;
 }
@@ -298,8 +303,14 @@ Navigation
 /* Content
 ========================================================================== */
 
+#content {
+  min-height: 100%;
+  margin-bottom: -162px;
+}
+
 .main {
   padding: 0 1.3em;
+  margin-bottom: 175px;
   font-size: 1em;
   line-height: 1.6;
 }
@@ -985,6 +996,10 @@ Modify as content requires.
 
 
 @media only screen and (min-width: 28em) {
+  #content {
+    margin-bottom: -175px;
+  }
+
   .jumbotron {
     padding-top: 5em;
   }
@@ -1089,6 +1104,10 @@ Modify as content requires.
 
 /* Menu gets to be displayed */
 @media only screen and (min-width: 46em) {
+  #content {
+    margin-bottom: -112px;
+  }
+
   .main-menu {
     position: relative;
     z-index: 13;
