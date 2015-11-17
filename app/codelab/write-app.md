@@ -8,9 +8,16 @@ The files that you see in the web browser can be found in the `app` subfolder of
 
 ## Create a new template to show a todo list
 
-Open `views/main.html`.
+First of all, we have to tell our Webapp the name of the AngularJS module we are about to build. The index.html file is the startingpoint of our application and therefore the place to define the name of our module.
 
-To start from a cleaner slate, delete everything from your *main.html* file except for the `div` with a class of `"jumbotron"`. Replace `"jumbotron"` with the class name `"container"`.
+Open `index.html`.
+
+Simply change "ngAppApp" to "mytodoApp". Look for the according line in the index.html file and make shure it looks like this:
+```html
+<body ng-app="mytodoApp">
+```
+
+To start from a cleaner slate, open `views/main.html` and delete everything from your *main.html* file except for the `div` with a class of `"jumbotron"`. Replace `"jumbotron"` with the class name `"container"`.
 
 This is all you should have in *main.html* now:
 
