@@ -1,14 +1,6 @@
-/*global jQuery, _, List, GETSTATICURL */
+/*global jQuery, _, List */
 (function (win, $) {
   'use strict';
-
-  function getGeneratorList() {
-    return $.getJSON('https://storage.googleapis.com/yeoman-generator-list/cache.json');
-  }
-
-  function getBlackList() {
-    return $.getJSON(GETSTATICURL('/blacklist.json'));
-  }
 
   // From http://stackoverflow.com/questions/3177836/
   // how-to-format-time-since-xxx-e-g-4-minutes-ago-
@@ -40,43 +32,42 @@
   }
 
   $(function() {
-    $.when(getGeneratorList(), getBlackList())
-      .done(function (getGeneratorListArgs, getBlackListArgs) {
-        var blocked = getBlackListArgs[0];
-        var modules = getGeneratorListArgs[0].filter(function (el) {
-          return el !== null &&
-            el.description &&
-            blocked.indexOf('generator-' + el.name) < 0;
-        }).map(function (el) {
-          el.official = el.owner.site === 'https://github.com/yeoman' ? 'official' : '';
-          el.updated = timeSince(el.updated);
-          return el;
-        }).sort(function (a, b) {
-          return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
-        });
-
-        var allTpl = _.template($('#plugins-all-template').html(), {
-          modules: modules
-        });
-
-        $('#plugins-all').html(allTpl).find('.search').show();
-
-        var list = new List('plugins-all', {
-          valueNames: [
-            'name',
-            'stars',
-            'updated',
-            'installs'
-          ]
-        });
-
-        if (list.listContainer) {
-          list.on('updated', function () {
-            // If empty show not found message and hide the table head.
-            $('.table thead').toggle(list.matchingItems.length !== 0);
-            $('#search-notfound').toggle(list.matchingItems.length === 0);
-          });
-        }
+    // Use vps until heroku issues are resolved
+    $.getJSON('https://storage.googleapis.com/yeoman-generator-list/cache.json')
+    // $.getJSON('https://yeoman-generator-list.herokuapp.com')
+    .done(function (plugins) {
+      var modules = plugins.filter(function (el) {
+        return el !== null && el.description;
+      }).map(function (el) {
+        el.official = el.owner.site === 'https://github.com/yeoman' ? 'official' : '';
+        el.updated = timeSince(el.updated);
+        return el;
+      }).sort(function (a, b) {
+        return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
       });
+
+      var allTpl = _.template($('#plugins-all-template').html(), {
+        modules: modules
+      });
+
+      $('#plugins-all').html(allTpl).find('.search').show();
+
+      var list = new List('plugins-all', {
+        valueNames: [
+          'name',
+          'stars',
+          'updated',
+          'installs'
+        ]
+      });
+
+      if (list.listContainer) {
+        list.on('updated', function () {
+          // If empty show not found message and hide the table head.
+          $('.table thead').toggle(list.matchingItems.length !== 0);
+          $('#search-notfound').toggle(list.matchingItems.length === 0);
+        });
+      }
+    });
   });
 })(window, jQuery);
