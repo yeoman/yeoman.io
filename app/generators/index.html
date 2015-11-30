@@ -19,7 +19,7 @@ class: discovery-page
       </caption>
       <thead>
         <tr>
-          <th class="sort" data-sort="name">Generator</th>
+          <th class="sort" data-sort="name-website">Generator</th>
           <th class="sort metadata last-updated" data-sort="updated">Last Updated</th>
           <th class="sort metadata" data-sort="stars">Stars</th>
           <th class="sort metadata" data-sort="installs">Installs</th>
@@ -49,10 +49,10 @@ class: discovery-page
                 <% } %>
                 <span class="metadata">
                   <% if (el.updated) { %>
-                      <span>Last updated: <%- el.updated %> ago</span>
+                      <span class="updated">Last updated: <%- el.updated %> ago</span>
                   <% } %>
-                  <span><%- el.stars %></span>
-                  <span><%- el.downloads %></span>
+                  <span class="stars"><%- el.stars %></span>
+                  <span class="installs"><%- el.downloads %></span>
                 </span>
               </span>
               <br>
