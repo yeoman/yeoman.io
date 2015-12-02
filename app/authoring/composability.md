@@ -12,8 +12,8 @@ Yeoman offers multiple ways for generators to build upon common ground. There's 
 
 In Yeoman, composability can be initiated in two ways:
 
- * A generator can decide to compose itself with other generator (e.g., `generator-backbone` uses `generator-mocha`).
- * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails). Note: end user initiated composition is a planned feature an currently not available.
+ * A generator can decide to compose itself with another generator (e.g., `generator-backbone` uses `generator-mocha`).
+ * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails). Note: end user initiated composition is a planned feature and currently not available.
 
 **Note:** The User composability feature landed in core in version **0.17.0**. It is a work in progress but is stable enough to start using. Further documentation will come after a few refinements to the process and can be expected sooner rather than later!
 
@@ -33,7 +33,7 @@ The `composeWith` method allows the generator to run side-by-side with another g
 
       A `weak` link will not run when the composability is user initiated. A `strong` link will always run.
 
-      A `weak` link is for features unrelated to the core of the generator like backend frameworks or CSS preprocessors. A`strong` link is for features requiring an action to occur. An example is scaffolding a _module_ by composing a _route_ generator and a _model_ generator.
+      A `weak` link is for features unrelated to the core of the generator like backend frameworks or CSS preprocessors. A `strong` link is for features requiring an action to occur. An example is scaffolding a _module_ by composing a _route_ generator and a _model_ generator.
 
 
 When composing with a `peerDependencies` generator:
