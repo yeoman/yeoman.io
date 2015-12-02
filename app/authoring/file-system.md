@@ -126,15 +126,15 @@ You can basically use any _gulp_ plugins with the Yeoman transform stream to pro
 
 ## Legacy File utilities
 
-Yeoman also expose a set of older file utilities. You can refer to the [API documentation](http://yeoman.io/generator/actions_actions.html) to learn more about them.
+Yeoman also exposes a set of older file utilities. You can refer to the [API documentation](http://yeoman.io/generator/actions_actions.html) to learn more about them.
 
-The legacy file utilities have been back ported to use the in memory file system. As so, they're safe to use. Although be careful, these methods make a lot of assumptions and as a result will produce edge cases. When possible, prefer the more explicit new `fs` API.
+The legacy file utilities have been back ported to use the in memory file system. As such, they're safe to use. Although be careful, these methods make a lot of assumptions and as a result will produce edge cases. When possible, prefer the more explicit new `fs` API.
 
 The legacy file system make the assumption you want to write to the _destination context_ and you want to read from the _template context_. As so, they don't require you to pass in a complete path, they'll resolve them automatically.
 
 Also, legacy methods like `template` and `copy` will automatically process some templates passing the generator (e.g. `this`) as the data object.
 
-## Tip: Update existing files content
+## Tip: Update existing file's content
 
 Updating a pre-existing file is not always a simple task. The most reliable way to do so is to parse the file AST ([abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree)) and edit it. The main issue with this solution is that editing an AST can be verbose and a bit hard to grasp.
 
@@ -144,7 +144,7 @@ Some popular AST parsers are:
 - [Esprima](https://github.com/ariya/esprima) for parsing JavaScript - you might be interested in [AST-Query](https://github.com/SBoudrias/ast-query) which provide a lower level API to edit Esprima syntax tree.
 - For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
-Parsing code file with RegEx is perilous path, and before choosing to do so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If even then you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users' code.
+Parsing a code file with RegEx is perilous path, and before doing so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users' code.
 
 ## Tip: Writing a Gruntfile
 
