@@ -81,6 +81,7 @@ module.exports = function (grunt) {
       outroot: '<%= yeoman.dist %>',
 
       include: [
+        'google61413692d6c3ee16.html',
         'index.html',
         '404.html',
         'migrate.html',
