@@ -10,5 +10,6 @@
   "generator-mtb-app",
   "generator-onereq",
   "generator-react-coffee-webpack",
-  "generator-wordpress-bob"
+  "generator-wordpress-bob",
+  "generator-polymer-plus"
 ]
