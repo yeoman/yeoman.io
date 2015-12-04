@@ -19,7 +19,7 @@
     "time-grunt": "^1.0.0"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "deploy": "grunt deploy-travis"
