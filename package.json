@@ -12,7 +12,7 @@
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-jekyll": "^0.4.2",
     "grunt-livestyle": "^1.6.0",
-    "grunt-reduce": "^2.1.2",
+    "grunt-reduce": "^2.2.0",
     "jshint-stylish": "^2.0.1",
     "load-grunt-tasks": "^3.1.0",
     "svgo": "^0.5.6",
