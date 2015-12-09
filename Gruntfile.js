@@ -84,7 +84,6 @@ module.exports = function (grunt) {
         'index.html',
         '404.html',
         'migrate.html',
-        'blacklist.json',
         '*/**/*.html',
         'CNAME'
       ],

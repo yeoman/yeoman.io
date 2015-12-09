@@ -5,7 +5,27 @@ title: Generators
 class: discovery-page
 ---
   <section class="main">
-    <small>Your generator must have a GitHub repository description, the `yeoman-generator` keyword and a description in `package.json` to be listed. Official generators are marked with <img src="/assets/img/mustache.svg" width="20px"></small>
+    <a id="instructions-toggle">How to add your generator &raquo;</a>
+    <div id="instructions" style="display:none">
+      <p>
+        Your generator will automatically show up in the list if it meets the following criteria. The list is populated every hour.
+      </p>
+      <ul>
+        <li>Be published on the npmjs.org repository</li>
+        <li>Have the <code>yeoman-generator</code> keyword</li>
+        <li>Have a description in the <code>package.json</code> file or in its associated Github repository</li>
+      </ul>
+      <p>
+        It'd also be nice if your <code>package.json</code> has the following information:
+      </p>
+      <ul>
+        <li>Author information including name and link to your homepage</li>
+        <li>Generator documention link as its homepage (or at least the Github link to its repo)</li>
+      </ul>
+    </div>
+
+    <hr>
+
     <div id="plugins-all">
       <p>Loading generators...</p>
     </div>
@@ -15,7 +35,7 @@ class: discovery-page
   <script type="text/template" id="plugins-all-template">
     <table class="table">
       <caption>
-        <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= modules.length %> generators..." autofocus>
+        <input class="search input-medium search-query" type="search" placeholder="Search in <%= it.modules.length %> generators..." autofocus>
       </caption>
       <thead>
         <tr>
@@ -26,40 +46,43 @@ class: discovery-page
         </tr>
       </thead>
       <tbody class="list">
-        <% _.each(modules, function (el) { %>
-          <tr class="<%= el.official %>">
+        <%each it.modules :el:index %>
+          <tr class="<%if el.official %>official<%if%>">
             <td class="name" colspan="4">
               <span class="name-info">
                 <span class="name-website">
-                  <% if (el.site) { %>
-                    <a href="<%- el.site %>"><%- el.name %></a>
-                  <% } else { %>
-                    <%- el.name %>
-                  <% } %>
+                  <%if el.site %>
+                    <a href="<%= el.site %>"><%= el.name %></a>
+                  <%if else%>
+                    <%= el.name %>
+                  <%if%>
                 </span>
-                <% if (el.owner.name) { %>
+                <%if el.owner.name %>
                 <span class="name-author">
                   by
-                  <% if (el.owner.site) { %>
-                    <a href="<%- el.owner.site %>"><%- el.owner.name %></a>
-                  <% } else { %>
-                    <%- el.owner.name %>
-                  <% } %>
+                  <%if el.owner.site %>
+                    <a href="<%= el.owner.site %>"><%= el.owner.name %></a>
+                  <%if else%>
+                    <%= el.owner.name %>
+                  <%if%>
                 </span>
-                <% } %>
+                <%if%>
                 <span class="metadata">
-                  <% if (el.updated) { %>
-                      <span class="updated">Last updated: <%- el.updated %> ago</span>
-                  <% } %>
-                  <span class="stars"><%- el.stars %></span>
-                  <span class="installs"><%- el.downloads %></span>
+                  <%if el.updated %>
+                    <span>Last updated:
+                      <span class="updated hidden"><%= el.updated %></span>
+                      <%= el.timeSince %> ago
+                    </span>
+                  <%if%>
+                  <span class="stars"><%= el.stars %></span>
+                  <span class="installs"><%= el.downloads %></span>
                 </span>
               </span>
               <br>
-              <span class="desc"><%- el.description %></span>
+              <span class="desc"><%= el.description %></span>
             </td>
           </tr>
-        <% }); %>
+        <%each%>
       </tbody>
     </table>
   </script>​
