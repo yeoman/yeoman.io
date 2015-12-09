@@ -113,6 +113,10 @@ p, pre {
   margin-bottom: 1.3em;
 }
 
+a {
+  cursor: pointer;
+}
+
 code {
   padding: 0.2em 0.4em;
   background: #f8f8f8;
