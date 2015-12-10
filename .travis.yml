@@ -21,8 +21,7 @@ addons:
 
 env:
   global:
-    - CXX="g++-4.8"
-    - CC="gcc-4.8"
+    - CXX="g++-4.8" CC="gcc-4.8"
     secure: bAdIqjrnU4Vcsa1vF7svhbOq4FRkPUbmbELjMmOdU+nxdZNRQozc6ioVNa/mQZOlW33vgSiFfS9V+qJdWsEe4UjlTlwD5CHXnvc0+279wRhFSZ+MyM3M+YEE1/sMX7dRxHCamSwbz3OSYTatte4yTzt4VnW9eoBYq347aBvw5Fc=
 
 before_install:
