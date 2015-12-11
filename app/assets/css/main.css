@@ -751,7 +751,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   position: relative;
 }
 
-.discovery-page tr.official td.name::before {
+.discovery-page tr.official td.generator-item::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -763,10 +763,10 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   opacity: 0.5;
 }
 
-.discovery-page td.name a {
+.discovery-page td.generator-item a {
   text-decoration: none;
 }
-.discovery-page td.name a:hover {
+.discovery-page td.generator-item a:hover {
   text-decoration: underline;
 }
 .discovery-page .name-author {

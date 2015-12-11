@@ -27,10 +27,12 @@
     }));
       var list = new List('plugins-all', {
         valueNames: [
-          'name-website',
+          'name',
+          'owner',
           'stars',
           'updated',
-          'installs'
+          'downloads',
+          'description'
         ]
       });
 

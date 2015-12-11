@@ -49,33 +49,33 @@ class: discovery-page
       </caption>
       <thead>
         <tr>
-          <th class="sort" data-sort="name-website">Generator</th>
+          <th class="sort" data-sort="name">Generator</th>
           <th class="sort metadata last-updated" data-sort="updated">Last Updated</th>
           <th class="sort metadata" data-sort="stars">Stars</th>
-          <th class="sort metadata" data-sort="installs">Installs</th>
+          <th class="sort metadata" data-sort="downloads">Installs</th>
         </tr>
       </thead>
       <tbody class="list">
         <%each it.modules :el:index %>
           <tr class="<%if el.official %>official<%if%>">
-            <td class="name" colspan="4">
+            <td class="generator-item" colspan="4">
               <span class="name-info">
-                <span class="name-website">
-                  <%if el.site %>
-                    <a href="<%= el.site %>"><%= el.name %></a>
-                  <%if else%>
-                    <%= el.name %>
-                  <%if%>
-                </span>
+                <%if el.site %>
+                  <a href="<%= el.site %>">
+                    <span class="name"><%= el.name %></span>
+                  </a>
+                <%if else%>
+                  <span class="name"><%= el.name %></span>
+                <%if%>
                 <%if el.owner.name %>
-                <span class="name-author">
-                  by
-                  <%if el.owner.site %>
-                    <a href="<%= el.owner.site %>"><%= el.owner.name %></a>
-                  <%if else%>
-                    <%= el.owner.name %>
-                  <%if%>
-                </span>
+                  <span class="name-author">
+                    by
+                    <%if el.owner.site %>
+                      <a href="<%= el.owner.site %>"><%= el.owner.name %></a>
+                    <%if else%>
+                      <%= el.owner.name %>
+                    <%if%>
+                  </span>
                 <%if%>
                 <span class="metadata">
                   <%if el.updated %>
@@ -85,11 +85,11 @@ class: discovery-page
                     </span>
                   <%if%>
                   <span class="stars"><%= el.stars %></span>
-                  <span class="installs"><%= el.downloads %></span>
+                  <span class="downloads"><%= el.downloads %></span>
                 </span>
               </span>
               <br>
-              <span class="desc"><%= el.description %></span>
+              <span class="description"><%= el.description %></span>
             </td>
           </tr>
         <%each%>
