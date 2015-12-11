@@ -3,9 +3,10 @@
   'use strict';
 
   // Settings for doT.js
-  doT.templateSettings.interpolate = /\<\%=([\s\S]+?)\%\>/g;
-  doT.templateSettings.conditional = /\<\%if( else)?\s*([\s\S]*?)\s*\%\>/g;
-  doT.templateSettings.iterate = /\<\%each\s*(?:\%\>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\%\>)/g;
+  var doT = win.doT;
+  doT.templateSettings.interpolate = /<\%=([\s\S]+?)\%\>/g;
+  doT.templateSettings.conditional = /<\%if( else)?\s*([\s\S]*?)\s*\%>/g;
+  doT.templateSettings.iterate = /<\%each\s*(?:\%>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\%>)/g;
 
   $(function() {
     var instructions = $('#instructions');
