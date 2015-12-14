@@ -113,12 +113,12 @@ helpers.run(path.join( __dirname, '../app'))
 
 ## Assertions helpers
 
-Yeoman extends the [native assert module](https://nodejs.org/api/assert.html) with generator related assertions helpers. You can see the full list of assertions helpers in our [API documentation](http://yeoman.io/generator/assert.html).
+Yeoman extends the [native assert module](https://nodejs.org/api/assert.html) with generator related assertions helpers. You can see the full list of assertions helpers on the [`yeoman-assert` repository](https://github.com/yeoman/yeoman-assert).
 
 Require the assertion helpers:
 
 ```js
-var assert = require('yeoman-generator').assert;
+var assert = require('yeoman-assert');
 ```
 
 ### Assert files exists
