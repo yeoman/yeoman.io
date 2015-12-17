@@ -59,7 +59,7 @@ this.composeWith('backbone:route', {}, {
 *npm* allows three types of dependencies:
 
  * `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
- * `peerDependencies` get installed alongside the generator, as a sibling. If `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
+ * `peerDependencies` get installed alongside the generator, as a sibling (<strong>*</strong> See note at bottom). If `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
 
     ```
     ├───generator-backbone/
@@ -77,3 +77,5 @@ When using `peerDependencies`, be aware other modules may also need the requeste
   }
 }
 ```
+
+**Note**: as of npm@3, `peerDependencies` are no longer automatically installed. To install these dependencies, they must be manually installed: `npm install generator-yourgenerator generator-gruntfile generator-bootstrap@">=1.0.0"`
