@@ -96,28 +96,17 @@ If you use this second directory structure, make sure you point the `files` prop
 
 ## Extending generator
 
-Once you have this structure in place, it's time to write the actual generator in `app/index.js`.
+Once you have this structure in place, it's time to write the actual generator.
 
-Yeoman offers base generators which you can extend to implement your own behavior. These base generators will add most of the functionality you'd expect to ease your task.
+Yeoman offers a base generator which you can extend to implement your own behavior. This base generator will add most of the functionalities you'd expect to ease your task.
 
-Here's how you'd extend a base generator:
+Here's how you extend the base generator:
 
 ```js
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend();
 ```
-
-If you'd like to require a `name` argument for your generator (for example `foo` in `yo name:router foo`) that will be assigned to `this.name`,  you can instead do the following:
-
-```js
-var generators = require('yeoman-generator');
-
-module.exports = generators.NamedBase.extend();
-```
-
-Either type of generator can be extended to create an app generator or a subcommand generator. `Base` is extended, most often, for an app generator and `NamedBase` for a subcommand generator where a filename is required.
-
 
 The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
 
