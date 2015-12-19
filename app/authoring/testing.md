@@ -40,10 +40,10 @@ describe('backbone:app', function () {
 
 ## Test helpers
 
-Yeoman provide test helpers methods. Require them like this:
+Yeoman provide test helpers methods. They're contained inside the `yeoman-test` package.
 
 ```js
-var helpers = require('yeoman-generator').test;
+var helpers = require('yeoman-test');
 ```
 
 You can check [the full helpers API here](http://yeoman.io/generator/module-test_helpers.html). These methods will usually be run inside a `before` block.
