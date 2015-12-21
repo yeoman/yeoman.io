@@ -23,7 +23,7 @@ generators.Base.extend({
   installingLodash: function() {
     this.npmInstall(['lodash'], { 'saveDev': true });
   }
-}):
+});
 ```
 
 This is equivalent to call:
