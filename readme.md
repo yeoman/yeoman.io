@@ -28,6 +28,9 @@ npm install
 gem install bundler
 bundle install
 ```
+**3\.** Start dev server with Jekyll
+
+```jekyll serve```
 
 Now you're ready to do some work!
 
