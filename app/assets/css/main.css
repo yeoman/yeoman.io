@@ -749,6 +749,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   padding: 10px 5px;
   border-top: 1px solid #ddd;
   position: relative;
+  vertical-align: top;
 }
 
 .discovery-page tr.official td.generator-item::before {
@@ -769,23 +770,25 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 .discovery-page td.generator-item a:hover {
   text-decoration: underline;
 }
+.discovery-page .name-info .name{
+  font-size: larger;
+}
 .discovery-page .name-author {
   font-size: small;
   margin-left: 20px;
 }
-
-.discovery-page span.metadata {
-  font-size: 0.6em;
-  float: right;
+.discovery-page .description{
+  font-size:smaller;
 }
-.discovery-page span.metadata span {
-  display: inline-block;
-  margin-left: 50px;
+
+.discovery-page td.metadata {
+  font-size: smaller;
+  text-align:right;
 }
 
 .discovery-page th.metadata {
   font-size: 0.9em;
-  text-align: right;
+  text-align:right;
   width: 85px;
 }
 .discovery-page th.last-updated {

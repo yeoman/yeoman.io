@@ -56,9 +56,9 @@ class: discovery-page
         </tr>
       </thead>
       <tbody class="list">
-        <%each it.modules :el:index %>
+       <%each it.modules :el:index %>
           <tr class="<%if el.official %>official<%if%>">
-            <td class="generator-item" colspan="4">
+            <td class="generator-item">
               <span class="name-info">
                 <%if el.site %>
                   <a href="<%= el.site %>">
@@ -77,20 +77,20 @@ class: discovery-page
                     <%if%>
                   </span>
                 <%if%>
-                <span class="metadata">
-                  <%if el.updated %>
-                    <span>Last updated:
-                      <span class="updated hidden"><%= el.updated %></span>
-                      <%= el.timeSince %>
-                    </span>
-                  <%if%>
-                  <span class="stars"><%= el.stars %></span>
-                  <span class="downloads"><%= el.downloads %></span>
-                </span>
               </span>
               <br>
               <span class="description"><%= el.description %></span>
             </td>
+            <td class="updated metadata">
+                  <%if el.updated %>
+                    <span>
+                      <span class="hidden"><%= el.updated %></span>
+                      <%= el.timeSince %>
+                    </span>
+                  <%if%>
+            </td>
+            <td class="stars metadata"><%= el.stars %></td>
+            <td class="downloads metadata"><%= el.downloads %></td>
           </tr>
         <%each%>
       </tbody>
