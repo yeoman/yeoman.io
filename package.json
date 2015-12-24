@@ -15,6 +15,7 @@
     "grunt-reduce": "^2.2.0",
     "jshint-stylish": "^2.0.1",
     "load-grunt-tasks": "^3.1.0",
+    "react-tools": "^0.13.3",
     "svgo": "^0.6.1",
     "time-grunt": "^1.0.0"
   },
