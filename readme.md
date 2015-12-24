@@ -28,9 +28,9 @@ npm install
 gem install bundler
 bundle install
 ```
-**3\.** Start dev server with Jekyll
+**3\.** Start dev server with Grunt
 
-```jekyll serve```
+```grunt serve```
 
 Now you're ready to do some work!
 
