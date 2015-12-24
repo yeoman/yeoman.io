@@ -1,3 +1,5 @@
+@import "footer.css";
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -163,6 +165,9 @@ blockquote p {
   display: inline;
 }
 
+.SiteWrapper {
+  overflow: hidden;
+}
 
 /* Page header and nav
 ========================================================================== */
@@ -309,12 +314,10 @@ Navigation
 
 #content {
   min-height: 100%;
-  margin-bottom: -162px;
 }
 
 .main {
   padding: 0 1.3em;
-  margin-bottom: 175px;
   font-size: 1em;
   line-height: 1.6;
 }
@@ -593,52 +596,6 @@ Context/Local Nav
 .context-nav.navbar-fixed {
   position: fixed;
   top: 7.7em;
-}
-
-
-/* Page footer
-========================================================================== */
-
-.page-footer {
-  padding: 2em 2em 1em;
-  background: #1f1f1f;
-  overflow: hidden;
-  text-align: center;
-}
-
-.footer-links {
-  margin: 0 0 1em;
-  padding: 0;
-  list-style: none;
-}
-
-.footer-links li {
-  display: inline-block;
-  margin: 0 0.8em;
-}
-
-.footer-links-contribute li {
-  margin: 0 0.2em;
-}
-
-.footer-links .icon:hover {
-  opacity: 0.5;
-}
-
-.footer-links img {
-  max-width: 2.2em;
-  width: 69px;
-}
-
-.footer-links .btn {
-  display: block;
-  position: relative;
-  top: 0.2em;
-}
-
-.footer-links .btn-improve {
-  background: #333;
-  color: #ccc;
 }
 
 /* Google Code Prettify
@@ -1015,10 +972,6 @@ Modify as content requires.
 
 
 @media only screen and (min-width: 28em) {
-  #content {
-    margin-bottom: -175px;
-  }
-
   .jumbotron {
     padding-top: 5em;
   }
@@ -1058,10 +1011,6 @@ Modify as content requires.
 
   .team img {
     max-width: 5em;
-  }
-
-  .footer-links img {
-    max-width: 3em;
   }
 }
 
@@ -1123,10 +1072,6 @@ Modify as content requires.
 
 /* Menu gets to be displayed */
 @media only screen and (min-width: 46em) {
-  #content {
-    margin-bottom: -112px;
-  }
-
   .main-menu {
     position: relative;
     z-index: 13;
@@ -1236,18 +1181,6 @@ Modify as content requires.
   .team li:nth-child(4n) {
    margin-right: 0;
   }
-
-  .footer-links-social {
-    float: left;
-    text-align: left;
-    width: 50%;
-  }
-
-  .footer-links-contribute {
-    float: right;
-    text-align: right;
-    width: 50%;
-  }
 }
 
 @media only screen and (min-width: 50em) {
@@ -1302,13 +1235,6 @@ Modify as content requires.
 
   .main-container .main {
     padding-top: 0;
-  }
-
-  .page-footer {
-    clear: both;
-    position: relative;
-    z-index: 11;
-    background: #131313;
   }
 }
 
