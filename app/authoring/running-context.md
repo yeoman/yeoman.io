@@ -16,7 +16,7 @@ In other words, each method returned by `Object.getPrototypeOf(Generator)` will 
 
 ### Helper and private methods
 
-Now that you know the prototype methods are considered as action, you may wonder how to define helper or private methods that won't be called automatically. There's three different methods to achieve this.
+Now that you know the prototype methods are considered as action, you may wonder how to define helper or private methods that won't be called automatically. There are three different methods to achieve this.
 
 1. Prefix method name by an underscore (e.g. `_method`).
 2. Use instance methods:
