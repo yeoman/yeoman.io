@@ -34,5 +34,12 @@ before_script:
   - git config --global user.email 'travis@yeoman.io'
   - gem install bundler
   - bundle install
+
 # Silent the script output, we don't want any key made public in the Travis log
 script: npm run-script deploy
+
+# Compiling a lot of our dependencies takes forever. We're caching them
+cache:
+  bundler: true
+  directories:
+    - node_modules
