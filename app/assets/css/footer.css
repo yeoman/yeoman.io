@@ -84,8 +84,6 @@
   display: block;
   position: relative;
   padding-left: 160px;
-  color: #fff;
-  text-decoration: none;
 }
 
 .Donation-sticker {
@@ -99,7 +97,12 @@
   z-index: 1;
 }
 
-@media (max-width: 800px) {
+.Donation-text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
   .Donation {
     text-align: center;
     margin-bottom: 20px;
@@ -111,13 +114,13 @@
     left: -20px;
     right: -20px;
     bottom: -20px;
-    top: -60px;
+    top: -100px;
     overflow: hidden;
   }
 
   .Donation-sticker {
     left: 50%;
     margin-left: -250px;
-    top: -30px;
+    top: 0;
   }
 }
