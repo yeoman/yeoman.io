@@ -7,14 +7,16 @@
   {% include header.html %}
   {% endif %}
 
-  {% if page.markdown == 1 %}
-    {{ content | markdownify }}
-  {% else %}
-    {{ content }}
-  {% endif %}
+  <div class="SiteWrapper">
+    {% if page.markdown == 1 %}
+      {{ content | markdownify }}
+    {% else %}
+      {{ content }}
+    {% endif %}
 
-  {% if page.category != 404 %}
-  {% include foot.html %}
-  {% endif %}
+    {% if page.category != 404 %}
+    {% include foot.html %}
+    {% endif %}
+  </div>
 </body>
 </html>
