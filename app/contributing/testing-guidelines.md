@@ -12,13 +12,13 @@ This testing guide is based on Mocha BDD interface (`describe` / `it`).
 Main principles
 --------------------
 
-#### Tests must be always start with a clean state
+#### Tests must start with a clean state
 
-This means prefer `beforeEach` to `before`. Re-instantiate objects before running each `it` blocks. Create every files required by a test in a `beforeEach` (or commit them in `fixtures/`). Reset any side effects done on the test environment after each test.
+This means prefer `beforeEach` to `before`. Re-instantiate objects before running each `it` blocks. Create every file required by a test in a `beforeEach` (or commit them in `fixtures/`). Reset any side effects done on the test environment after each test.
 
 #### Tests must be runnable in isolation
 
-Each test must pass if they're ran alone. You can run a single test by using `mocha test.js --grep 'test name'`.
+Each test must pass if they're run alone. You can run a single test by using `mocha test.js --grep 'test name'`.
 
 #### Stub most performance heavy operation
 
@@ -33,7 +33,7 @@ Naming convention
 
 `it` blocks cover assertions. They should use as few lines of code as possible. There should be as many `it` block as there is assertion on a method effect.
 
-Instances methods and property should be prefixed by a bang sign (`#find()`). Static methods and property should be prefixed by a dot (`.exclude()`).
+Instance methods and properties should be prefixed by a bang sign (`#find()`). Static methods and properties should be prefixed by a dot (`.exclude()`).
 
 ```javascript
 // Given this object
@@ -53,7 +53,7 @@ describe('Class', function () {
 });
 ```
 
-Methods should end using parentheses, but should not include expected parameters (parameters should be cover in documentation comments).
+Methods should end using parentheses, but should not include expected parameters (parameters should be covered in documentation comments).
 
 `it` blocks should be declarative.
 
@@ -74,7 +74,7 @@ If you must add a message, then describe the expected outcome and why it failed.
 
 ``` javascript
 // BAD
-assert(Generator.appname, 'Generator have an `appname` property');
+assert(Generator.appname, 'Generator has an `appname` property');
 
 // GOOD
 assert(Generator.appname, 'Expected Generator to have an `appname` property');
@@ -87,7 +87,7 @@ Stylistic preferences
 
 #### `.bind()` throwing assertions
 
-When testing that a method throw with invalid parameters, prefer binding the parameters to creating an anonymous function.
+When testing that a method throws with invalid parameters, prefer binding the parameters to creating an anonymous function.
 
 ```javascript
 // BAD
@@ -101,7 +101,7 @@ assert.throws(class.method.bind(class, 'Invalid param'));
 
 #### Never use scoped variables
 
-When creating test variables, always attach them to the `this` context. You're guaranteed that `this` is a totally new object each time a test run. By comparison, scoped variables can easily leak values and have side effects between tests.
+When creating test variables, always attach them to the `this` context. You're guaranteed that `this` is a totally new object each time a test is run. By comparison, scoped variables can easily leak values and have side effects between tests.
 
 ```javascript
 describe('my module', function () {
