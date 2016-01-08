@@ -10,10 +10,10 @@ In a traditional web development workflow, you would need to spend a lot of time
 
 You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [1000+ generators](/generators/) now available, many of which have been written by the open-source community.
 
-Install [generator-angular](https://www.npmjs.com/package/generator-angular) using this command:
+Install [generator-angular](https://www.npmjs.com/package/generator-angular) and [generator-karma](https://github.com/yeoman/generator-karma) using this command:
 
 ```sh
-npm install --global generator-angular@0.11.1
+npm install --global generator-angular@0.11.1 generator-karma
 ```
 
 This will start to install the Node packages required for the generator. Using `@0.12.1` will request a specific version of the generator.
