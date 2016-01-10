@@ -39,7 +39,8 @@ Then install the needed generator(s). Generators are npm packages named `generat
 npm install -g generator-webapp
 ```
 
-*TODO: Add note about troubleshooting installation errors*
+New Node and npm users might runs into permissions issues. These issues shows up in the form of `EACCESS` errors during installation. Refer to the [npm guide to fix permissions]
+(https://docs.npmjs.com/getting-started/fixing-npm-permissions) if this happens to you.
 
 *npm is the package manager for [Node.js](https://nodejs.org/) and comes bundled with it.*
 
