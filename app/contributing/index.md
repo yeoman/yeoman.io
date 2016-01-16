@@ -27,7 +27,7 @@ Head to [yeoman/yeoman.github.io](https://github.com/yeoman/yeoman.github.io) to
 
 ## Official Generators
 
-The core yeoman team maintains a lot of [officials generators](https://github.com/yeoman?query=generator-). You like frameworks? You use one of our generators and have some ideas on how to improve it? Then really this is where you should start!
+The core yeoman team maintains a lot of [official generators](https://github.com/yeoman?query=generator-). You like frameworks? You use one of our generators and have some ideas on how to improve it? Then really this is where you should start!
 
 Checkout out [our github organization](https://github.com/yeoman) to find the repository you'd like to contribute to.
 
