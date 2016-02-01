@@ -156,7 +156,7 @@ After that, simply run the `serve` task like you normally would and enjoy automa
 Yeoman creates a `.gitignore` file for you. This file adds `node_modules` and `bower_components` folders to the blacklist. So, to run the `serve` task and download the Javascript dependencies listed in the `bower.json` file, you need to run both:
 
 ```sh
-npm install
+$ npm install
 $ bower install
 ```
 
