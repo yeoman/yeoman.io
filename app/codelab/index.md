@@ -6,11 +6,11 @@ redirect_from: '/codelab.html'
 
 <p class="authors">By Addy Osmani, James Cryer &amp; Pearl Chen</p>
 
-Allo! Allo! In this 1-hour codelab, you build a fully functional web application from scratch with the help of [Yeoman](/). You'll also use features from [Grunt](http://gruntjs.com) and [Bower](http://bower.io/). The sample app will be written in [AngularJS](https://angularjs.org/).
+Allo! Allo! In this 1-hour codelab, you build a fully functional web application from scratch with the help of [Yeoman](https://github.com/yeoman/yeoman.github.io). You'll also use features from [Grunt](http://gruntjs.com) and [Bower](http://bower.io/). The sample app will be written in [AngularJS](https://angularjs.org/).
 
-<p class="mast-intro"><img src="/assets/img/yeoman-008.png"></p>
+<p class="mast-intro"><img src="/app/assets/img/yeoman-008.png"></p>
 
-Haven't met Yeoman yet? [Start here with an introduction &raquo;](meet-yeoman.html)
+Haven't met Yeoman yet? [Start here with an introduction &raquo;](meet-yeoman.md)
 
 <!-- The command line is where Yeoman, Grunt, and Bower commands are typed. If you're not familiar with your operating system's command line, here's a [cheatsheet to keep handy &raquo;](cli-cheatsheet.html) -->
 
@@ -20,23 +20,23 @@ Don't know any AngularJS? That's okay, we'll walk you through it. However we do 
 
 The sample web app you'll build today will be a Todo app. You will be able to add todos, delete todos, organize your todos using drag and drop, and save todos offline.
 
-![Finished todo app](/assets/img/codelab/image_2.png)
+![Finished todo app](/app/assets/img/codelab/image_2.png)
 
 <h2 id="toc">What's in this codelab?</h2>
 
 We will build the above Todo app from scratch. Each step builds on the previous so go through each step one by one.
 
-* **Step 1:** [Set up your dev environment &raquo;](setup.html)
-* **Step 2:** [Install a Yeoman generator &raquo;](install-generators.html)
-* **Step 3:** [Use a generator to scaffold out your app &raquo;](scaffold-app.html)
-* **Step 4:** [Review the Yeoman-generated app directory structure &raquo;](review-generated-files.html)
-* **Step 5:** [Preview your app in the browser &raquo;](preview-inbrowser.html)
-* **Step 6:** [Start writing our AngularJS application &raquo;](write-app.html)
-* **Step 7:** [Use Bower to install packages &raquo;](install-packages.html)
-* **Step 8:** [Test with Karma and Jasmine &raquo;](write-unit-tests.html)
-* **Step 9:** [Make todos persistent with local storage &raquo;](local-storage.html)
-* **Step 10:** [Get ready for production &raquo;](prepare-production.html)
-* Like what you see? [Yeoman can do more &raquo;](keep-going.html)
+* **Step 1:** [Set up your dev environment &raquo;](setup.md)
+* **Step 2:** [Install a Yeoman generator &raquo;](install-generators.md)
+* **Step 3:** [Use a generator to scaffold out your app &raquo;](scaffold-app.md)
+* **Step 4:** [Review the Yeoman-generated app directory structure &raquo;](review-generated-files.md)
+* **Step 5:** [Preview your app in the browser &raquo;](preview-inbrowser.md)
+* **Step 6:** [Start writing our AngularJS application &raquo;](write-app.md)
+* **Step 7:** [Use Bower to install packages &raquo;](install-packages.md)
+* **Step 8:** [Test with Karma and Jasmine &raquo;](write-unit-tests.md)
+* **Step 9:** [Make todos persistent with local storage &raquo;](local-storage.md)
+* **Step 10:** [Get ready for production &raquo;](prepare-production.md)
+* Like what you see? [Yeoman can do more &raquo;](keep-going.md)
 
 It will take approximately 60 minutes to complete this codelab. By the end, you'll have a snazzy Todo app and your computer will be set up to build even more awesome web apps in the future.
 
@@ -79,5 +79,5 @@ It will take approximately 60 minutes to complete this codelab. By the end, you'
 
 <p class="codelab-paging">
   Let's get started with
-  <a href="setup.html">Step 1 &raquo;</a>
+  <a href="setup.md">Step 1 &raquo;</a>
 </p>
