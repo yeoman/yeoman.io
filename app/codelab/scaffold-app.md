@@ -77,7 +77,7 @@ Yeoman will automatically scaffold out your app, grab your dependencies, and pul
      If you see <code>conflict package.json</code>, it is a temporary error. Hit <strong>y</strong> and then <strong>enter</strong> to continue.
   </p>
   <p>
-     <img src="/assets/img/codelab/conflict.png">
+     <img src="/app/assets/img/codelab/conflict.png">
   </p>
 
 </div>
@@ -86,7 +86,7 @@ Yeoman will automatically scaffold out your app, grab your dependencies, and pul
 
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.md#toc">&laquo; Return to overview</a>
   or
-  <a href="review-generated-files.html">Go to the next step &raquo;</a>
+  <a href="review-generated-files.md">Go to the next step &raquo;</a>
 </p>
