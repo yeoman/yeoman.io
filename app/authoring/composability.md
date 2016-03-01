@@ -19,15 +19,17 @@ In Yeoman, composability can be initiated in two ways:
 
 ## `generator.composeWith()`
 
-The `composeWith` method allows the generator to run side-by-side with another generator. That way it can use features from the other generator instead of having to do it all by itself.
+The `composeWith` method allows the generator to run side-by-side with another generator (or subgenerator). That way it can use features from the other generator instead of having to do it all by itself.
+
+When composing, don't forget about [the running context and the run loop](/authoring/running-context.html). On a given priority group execution, all composed generators will execute functions in that group. Afterwards, this will repeat for the next group. Execution between the generators is the same order as `composeWith` was called, see [execution example](#order).
 
 ### API
 
 `composeWith` takes three parameters.
 
  1. `namespace` - A String declaring the namespace of the generator to compose with. The default matches generators installed on the end user's system. Use [`peerDependencies`](https://nodejs.org/en/blog/npm/peer-dependencies/) to install needed generators with this one.
- 1. `options` - An Object containing an `options` object and/or an `args` array. The called generator will receive these when it runs.
- 1. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
+ 2. `options` - An Object containing an `options` object and/or an `args` array. The called generator will receive these when it runs.
+ 3. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
     * `settings.local` - A String that defines a path to the requested generator. This allows the use of sub-generators. It also allows the use of a specific version of a generator. To do so, declare it in the [`dependencies` section inside `package.json`](https://docs.npmjs.com/files/package.json#dependencies). Then reference the path to that generator, usually `node_modules/generator-name`.
     * `settings.link` - A String that is either `weak` (default), or `strong`.
 
@@ -51,8 +53,51 @@ this.composeWith('backbone:route', {}, {
   local: require.resolve('generator-bootstrap')
 });
 ```
-
 `require.resolve()` returns the path from where Node.js would load the provided module.
+
+### <a name="order"></a>execution example
+```js
+// In my-generator/generators/turbo/index.js
+module.exports = require('yeoman-generator').Base.extend({
+  'prompting' : function () {
+    console.log('prompting - turbo');
+  },
+
+  'writing' : function () {
+    console.log('prompting - turbo');
+  }
+});
+
+// In my-generator/generators/electric/index.js
+module.exports = require('yeoman-generator').Base.extend({
+  'prompting' : function () {
+    console.log('prompting - zap');
+  },
+
+  'writing' : function () {
+    console.log('writing - zap');
+  }
+});
+
+// In my-generator/generators/app/index.js
+module.exports = require('yeoman-generator').Base.extend({
+  'initializing' : function () {
+    this.composeWith('my-generator:turbo');
+    this.composeWith('my-generator:electric');
+  }
+});
+```
+
+Upon running `yo my-generator`, this will result in:
+
+```
+prompting - turbo
+prompting - zap
+writing - turbo
+writing - zap
+```
+
+However, you can alter this by switching the calls for `this.composeWith`, also keep in mind, these can be generators from npm packages, see below.
 
 ## dependencies or peerDependencies
 
