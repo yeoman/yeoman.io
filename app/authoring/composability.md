@@ -64,7 +64,7 @@ module.exports = require('yeoman-generator').Base.extend({
   },
 
   'writing' : function () {
-    console.log('prompting - turbo');
+    console.log('writing - turbo');
   }
 });
 
