@@ -40,6 +40,8 @@ We will build the above Todo app from scratch. Each step builds on the previous 
 
 It will take approximately 60 minutes to complete this codelab. By the end, you'll have a snazzy Todo app and your computer will be set up to build even more awesome web apps in the future.
 
+Tutorial is available in [Russian](http://www.everycloudtech.com/Yeoman "Tutorial in Russian") thanks to [Everycloudtech](http://www.everycloudtech.com/)
+
 <div class="note important" id="source-files">
 
   <h2>View the final source code</h2>
