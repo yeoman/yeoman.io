@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 markdown: 1
 title: Learning resources
@@ -26,6 +26,11 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/blog/2013/03/03/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 * [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
+
+** Translations **
+
+[Let's scaffold a Web App](http://yeoman.io/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
+
 
 # Videos
 
