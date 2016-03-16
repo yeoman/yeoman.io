@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 markdown: 1
 title: Learning resources
