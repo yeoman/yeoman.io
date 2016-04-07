@@ -99,6 +99,11 @@ writing - zap
 
 However, you can alter this by switching the calls for `this.composeWith`, also keep in mind, these can be generators from npm packages, see below.
 
+For a more complex example of composability, check out
+[generator-generator](https://github.com/yeoman/generator-generator/blob/master/app/index.js)
+which is composed of
+[generator-node](https://github.com/yeoman/generator-node).
+
 ## dependencies or peerDependencies
 
 *npm* allows three types of dependencies:
