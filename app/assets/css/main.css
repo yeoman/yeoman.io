@@ -1131,7 +1131,7 @@ Modify as content requires.
   }
 
   .main-nav > li > ul a {
-    padding: 15px 20px;
+    padding: 13px 20px;
     white-space: nowrap;
     border-left: 10px solid rgba(221,0,42,0);
     transition: all 0.3s ease;
