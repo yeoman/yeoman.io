@@ -38,7 +38,6 @@ h1 {
   line-height: 1.2em;
 }
 
-
 p {
   margin: 1em 0;
 }
@@ -55,8 +54,6 @@ ul {
 }
 
 @media only screen and (min-width: 50em) {
-
-
   .yeoman {
     float: left;
     width: 45%;
@@ -75,9 +72,7 @@ ul {
 }
 
 @media only screen and (min-width: 60em) {
-
   h1 {
     font-size: 3em;
   }
-
 }

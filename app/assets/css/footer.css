@@ -24,10 +24,12 @@
 
 .SiteFooter-links a {
   display: inline-block;
+  transition: all 0.5s ease
 }
 
 .SiteFooter-icon {
   width: 30px;
+  transition: all 0.5s ease
 }
 
 .SiteFooter-icon:hover,
@@ -62,7 +64,6 @@
 .SiteFooter-button--light:focus {
   background: #3398a9;
 }
-
 
 @media (max-width: 800px) {
   .SiteFooter {
