@@ -17,7 +17,7 @@ To get started:
 **1\.** Clone the repository and its submodules:
 
 ```bash
-git clone git@github.com:yeoman/yeoman.github.io.git yeoman.io
+git clone https://github.com/yeoman/yeoman.github.io.git yeoman.io
 cd yeoman.io
 ```
 
