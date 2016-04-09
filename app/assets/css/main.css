@@ -82,6 +82,8 @@ textarea {
   resize: vertical;
 }
 
+
+
 /* ==========================================================================
 Author's custom styles
 ========================================================================== */
@@ -240,7 +242,6 @@ Navigation
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 .open .main-menu {
   display: block;
 }
@@ -319,10 +320,6 @@ Navigation
   line-height: 1.6;
 }
 
-.main .bigger-yo-character {
-  max-width: 30%;
-}
-
 .main img {
   max-width: 100%;
   height: auto;
@@ -334,15 +331,6 @@ Navigation
 
 .main a:hover {
   text-decoration: none;
-}
-
-.main .pagination em {
-  font-style: normal;
-  cursor: default;
-}
-
-.main .pagination span {
-  cursor: default;
 }
 
 .section-title {
@@ -654,11 +642,8 @@ pre > code.language-sh:before {
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
 li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
-
 /* Alternate shading for lines */
-/*
-* li.L1,li.L3,li.L5,li.L7,li.L9 { } it was inactivated for use
-*/
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 .contribute-doc {
   margin-top: 2em;
@@ -675,6 +660,7 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
   padding: 20px;
   text-align: center;
 }
+
 
 /* Discovery Page */
 
@@ -736,20 +722,16 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
 .discovery-page td.generator-item a {
   text-decoration: none;
 }
-
 .discovery-page td.generator-item a:hover {
   text-decoration: underline;
 }
-
 .discovery-page .name-info .name{
   font-size: larger;
 }
-
 .discovery-page .name-author {
   font-size: small;
   margin-left: 20px;
 }
-
 .discovery-page .description{
   font-size:smaller;
 }
@@ -764,7 +746,6 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
   text-align:right;
   width: 85px;
 }
-
 .discovery-page th.last-updated {
   width: 125px;
 }
@@ -806,6 +787,7 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
   background: #f2dede;
   padding: 15px;
 }
+
 
 @media print {
   pre .str, code .str { color: #060; }
@@ -984,11 +966,6 @@ Modify as content requires.
   .blog-post-meta .social {
     float: right;
   }
-
-  .main .bigger-yo-character {
-    display:block;
-    margin:0 auto;
-  }
 }
 
 
@@ -1032,11 +1009,6 @@ Modify as content requires.
 
   .team img {
     max-width: 5em;
-  }
-
-  .main .bigger-yo-character {
-    display:block;
-    margin:0 auto;
   }
 }
 
@@ -1159,7 +1131,7 @@ Modify as content requires.
   }
 
   .main-nav > li > ul a {
-    padding: 13px 20px;
+    padding: 15px 20px;
     white-space: nowrap;
     border-left: 10px solid rgba(221,0,42,0);
     transition: all 0.3s ease;
