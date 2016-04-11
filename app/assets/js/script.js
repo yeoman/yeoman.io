@@ -11,11 +11,23 @@
     // Sticky submenu
     (function() {
       var $contentNav = $('.context-nav');
+      var $footer = $('.SiteFooter');
+      var footerState = Math.round($footer.offset().top);
+
       function resizer () {
         var state = $doc.scrollTop() > 148;
+        var endState = Math.round($contentNav.offset().top + $contentNav.height());
+
         if (state !== oldState) {
           toggle(state);
+          $contentNav.removeClass('long-sticky');
         }
+
+        //resize for long lists
+        if (endState > footerState) {
+          $contentNav.addClass('long-sticky');
+        }
+
       }
       function toggle (state) {
         var rightOffset = (
@@ -34,6 +46,7 @@
           oldState = null;
           resizer();
         });
+
       }
     })();
 
