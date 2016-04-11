@@ -610,6 +610,11 @@ Context/Local Nav
   top: 7.7em;
 }
 
+.context-nav.long-sticky {
+  max-height: 390px;
+  overflow: scroll;
+}
+
 /* Google Code Prettify
 ========================================================================== */
 
