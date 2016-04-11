@@ -27,7 +27,6 @@
         if (endState > footerState) {
           $contentNav.addClass('long-sticky');
         }
-
       }
       function toggle (state) {
         var rightOffset = (
@@ -46,7 +45,6 @@
           oldState = null;
           resizer();
         });
-
       }
     })();
 
