@@ -74,3 +74,21 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
   <p>In case you're looking for some more persuasion that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
   </div>
 </section>
+
+<section>
+  <h2 class="hero-title">Building a Polymer app with Yeoman (DotJS)</h2>
+  <div class="row tutorial">
+  <div class="video-container">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/Yd6Q4Wwvpd0" frameborder="0" allowfullscreen class="yt"></iframe>
+  </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="hero-title">Yeoman</h2>
+  <div class="row tutorial">
+  <div class="video-container">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/Hl1sp9axHEY" frameborder="0" allowfullscreen class="yt"></iframe>
+  </div>
+  </div>
+</section>
