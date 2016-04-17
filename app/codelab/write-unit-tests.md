@@ -6,6 +6,21 @@ markdown: 1
 
 For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The Angular generator has two included test frameworks: [ngScenario](https://code.angularjs.org/1.2.16/docs/guide/e2e-testing) and [Jasmine](http://jasmine.github.io/). When we ran `yo angular` earlier in this codelab the generator scaffolded a `test` directory in the root of the `mytodo` folder, created a `karma.conf.js` file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
 
+## Install the testing packages
+Our `Gruntfile.js` depends on `jit-grunt`, `karma-phantomjs-launcher` and `karma-jasmine` in order to execute our tests. Install those like so:
+
+```sh
+npm install jit-grunt --save-dev
+npm install karma-phantomjs-launcher --save-dev
+npm install karma-jasmine --save-dev
+```
+
+Or combine them in one line:
+
+```sh
+npm install jit-grunt karma-phantomjs-launcher karma-jasmine --save-dev
+```
+
 ## Run unit tests
 
 Let’s go back to the command line and kill our Grunt server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a Grunt task scaffolded out in our `Gruntfile.js` for running tests. It can be run as follows:
