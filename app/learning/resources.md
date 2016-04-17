@@ -88,7 +88,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
   <h2 class="hero-title">Yeoman</h2>
   <div class="row tutorial">
   <div class="video-container">
-    <iframe width="640" height="360" src="///www.youtube.com/embed/Hl1sp9axHEY" frameborder="0" allowfullscreen class="yt"></iframe>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/Hl1sp9axHEY" frameborder="0" allowfullscreen class="yt"></iframe>
   </div>
   </div>
 </section>
