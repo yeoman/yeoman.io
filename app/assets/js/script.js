@@ -8,6 +8,35 @@
     var $doc = $(document);
     var $body = $(document.body);
 
+    (function() {
+      var fixedElementOffset = $('.context-nav').offset().top;
+      var footerOffset = $('.SiteFooter').offset().top - 93;
+      var fixedElementHeight = $('.context-nav').height();
+
+      $(window).scroll(function (event) {
+        var y = $(this).scrollTop();
+
+        if (y < 148) {
+          $('.context-nav').css('top','1.3em');
+        } else {
+          $('.context-nav').css('top','6em');
+        }
+
+        if ( y >= fixedElementOffset && ( y + fixedElementHeight ) < footerOffset ) {
+          $('.context-nav').addClass('navbar-fixed').removeClass('navbar-absolute');
+          $('.context-nav').css('top','6em');
+        }
+        
+        else if ( y >= fixedElementOffset && ( y + fixedElementHeight ) >= footerOffset ) {
+          var fixEl = (fixedElementHeight / 2) + fixedElementHeight;
+          var newOffset = Math.round($('.SiteFooter').offset().top - fixEl);
+
+          $('.context-nav').removeClass('navbar-fixed').addClass('navbar-absolute');
+          $('.context-nav').css('top',newOffset);
+        }
+      });
+    })();
+
     // Sticky submenu
     (function() {
       var $contentNav = $('.context-nav');
