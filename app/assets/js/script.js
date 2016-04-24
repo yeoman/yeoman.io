@@ -15,21 +15,20 @@
     var fixedElementHeight = $context.height();
 
     $win.scroll(function (event) {
-      var y = $(this).scrollTop();
+      var y = $win.scrollTop();
       if (y < 148) {
         $context.css('top', '1.3em');
       } else {
         $context.css('top', '6em');
       }
-      if ( y >= fixedElementOffset && y + fixedElementHeight < footerOffset ) {
+      if (y >= fixedElementOffset && y + fixedElementHeight < footerOffset) {
         $context.addClass('navbar-fixed').removeClass('navbar-absolute');
-        $context.css({'top':'6em', 'right':'40px'});
-      }
-      else if ( y >= fixedElementOffset && y + fixedElementHeight >= footerOffset ) {
+        $context.css({'top': '6em', 'right': '40px'});
+      } else if (y >= fixedElementOffset && y + fixedElementHeight >= footerOffset) {
         var fixEl = (fixedElementHeight / 2) + fixedElementHeight;
         var newOffset = $footer.offset().top - fixEl;
         $context.removeClass('navbar-fixed').addClass('navbar-absolute');
-        $context.css({'top':newOffset, 'right':'0'});
+        $context.css({'top': newOffset, 'right': '0'});
       }
     });
 
