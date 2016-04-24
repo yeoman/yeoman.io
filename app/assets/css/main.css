@@ -612,7 +612,7 @@ Context/Local Nav
 
 .context-nav.navbar-absolute {
   position: absolute;
-  right: 0!important;
+  right: 0;
 }
 
 /* Google Code Prettify
