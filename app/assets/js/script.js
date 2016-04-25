@@ -19,25 +19,25 @@
       fixedElementOffset = $context.offset().top;
       footerOffset = $footer.offset().top - 93;
       fixedElementHeight = $context.height();
-    }
 
-    $win.scroll(function (event) {
-      var y = $win.scrollTop();
-      if (y < 148) {
-        $context.css('top', '1.3em');
-      } else {
-        $context.css('top', '6em');
-      }
-      if (y >= fixedElementOffset && y + fixedElementHeight < footerOffset) {
-        $context.addClass('navbar-fixed').removeClass('navbar-absolute');
-        $context.css({'top': '6em', 'right': '40px'});
-      } else if (y >= fixedElementOffset && y + fixedElementHeight >= footerOffset) {
-        var fixEl = (fixedElementHeight / 2) + fixedElementHeight;
-        var newOffset = $footer.offset().top - fixEl;
-        $context.removeClass('navbar-fixed').addClass('navbar-absolute');
-        $context.css({'top': newOffset, 'right': '0'});
-      }
-    });
+      $win.scroll(function (event) {
+        var y = $win.scrollTop();
+        if (y < 148) {
+          $context.css('top', '1.3em');
+        } else {
+          $context.css('top', '6em');
+        }
+        if (y >= fixedElementOffset && y + fixedElementHeight < footerOffset) {
+          $context.addClass('navbar-fixed').removeClass('navbar-absolute');
+          $context.css({'top': '6em', 'right': '40px'});
+        } else if (y >= fixedElementOffset && y + fixedElementHeight >= footerOffset) {
+          var fixEl = (fixedElementHeight / 2) + fixedElementHeight;
+          var newOffset = $footer.offset().top - fixEl;
+          $context.removeClass('navbar-fixed').addClass('navbar-absolute');
+          $context.css({'top': newOffset, 'right': '0'});
+        }
+      });
+    }
 
     // Sticky submenu
     (function() {
