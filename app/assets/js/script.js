@@ -9,10 +9,17 @@
     var $body = $(document.body);
     var $context = $('.context-nav');
     var $footer = $('.SiteFooter');
+    var $container = $('.container');
 
-    var fixedElementOffset = $context.offset().top;
-    var footerOffset = $footer.offset().top - 93;
-    var fixedElementHeight = $context.height();
+    var fixedElementOffset,
+        footerOffset,
+        fixedElementHeight;
+
+    if ($container.hasClass('has-sidebar')) {
+      fixedElementOffset = $context.offset().top;
+      footerOffset = $footer.offset().top - 93;
+      fixedElementHeight = $context.height();
+    }
 
     $win.scroll(function (event) {
       var y = $win.scrollTop();
