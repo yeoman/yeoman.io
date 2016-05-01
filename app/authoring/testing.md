@@ -136,7 +136,3 @@ assert.fileContent('controllers/user.js', /App\.UserController = Ember\.ObjectCo
 ```
 
 `assert.noFileContent()` assert the contrary.
-
-### Others
-
-Refer to the [API documentation](http://yeoman.io/generator/module-test_helpers.html) for other methods.
