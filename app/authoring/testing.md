@@ -53,15 +53,12 @@ The most useful method when unit testing a generator is `helpers.run()`. This me
 ```js
 var path = require('path');
 
-before(function (done) {
-  helpers.run(path.join( __dirname, '../app'))
+before(function () {
+  return helpers.run(path.join( __dirname, '../app'))
     .withOptions({ foo: 'bar' })    // Mock options passed in
     .withArguments(['name-x'])      // Mock the arguments
     .withPrompts({ coffee: false }) // Mock the prompt answers
-    .on('ready', function (generator) {
-      // This is called right before `generator.run()` is called
-    })
-    .on('end', done);
+    .toPromise();                   // Get a Promise back for when the generator finishes
 })
 ```
 
@@ -77,9 +74,7 @@ helpers.run(path.join( __dirname, '../app'))
     fs.copySync(path.join(__dirname, '../templates/common'), dir)
   })
   .withPrompts({ coffee: false })
-  .on('end', function () {
-    // assert something
-  });
+  .toPromise();
 ```
 
 You can also perform asynchronous task in your callback:
@@ -94,8 +89,21 @@ helpers.run(path.join( __dirname, '../app'))
     fs.copy(path.join(__dirname, '../templates/common'), dir, done);
   })
   .withPrompts({ coffee: false })
-  .on('end', function () {
-    // assert something
+  .toPromise();
+```
+
+When using `.toPromise()`, the returned Promise will resolve with the directory that the generator was run in. This can be useful if you want to use a temporary directory that the generator was run in:
+
+```js
+helpers.run(path.join( __dirname, '../app'))
+  .inTmpDir(function (dir) {
+    var done = this.async(); // `this` is the RunContext object.
+    fs.copy(path.join(__dirname, '../templates/common'), dir, done);
+  })
+  .withPrompts({ coffee: false })
+  .toPromise()
+  .then(function (dir) {
+    // assert something about the stuff in `dir`
   });
 ```
 
@@ -105,8 +113,21 @@ If your generator calls `composeWith()`, you may want to mock those dependent ge
 var deps = [
   [helpers.createDummyGenerator(), 'karma:app']
 ];
-helpers.run(path.join( __dirname, '../app'))
+return helpers.run(path.join( __dirname, '../app'))
   .withGenerators(deps)
+  .toPromise();
+```
+
+If you hate promises, you can use the `'ready'`, `'error'`, and `'end'` Events emitted:
+
+```js
+helpers.run(path.join( __dirname, '../app'))
+  .on('error', function (error) {
+    console.log('Oh Noes!', error);
+  })
+  .on('ready', function (generator) {
+    // This is called right before `generator.run()` is called
+  })
   .on('end', done);
 ```
 
