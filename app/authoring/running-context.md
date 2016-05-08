@@ -12,11 +12,11 @@ One of the most important concepts to grasp when writing a Generator is how meth
 
 Each method directly attached to a Generator prototype is considered to be a task. Each task is run in sequence by the Yeoman environment run loop.
 
-In other words, each functions on the object returned by `Object.getPrototypeOf(Generator)` will be automatically run.
+In other words, each function on the object returned by `Object.getPrototypeOf(Generator)` will be automatically run.
 
 ### Helper and private methods
 
-Now that you know the prototype methods are considered to be task, you may wonder how to define helper or private methods that won't be called automatically. There are three different ways to achieve this.
+Now that you know the prototype methods are considered to be a task, you may wonder how to define helper or private methods that won't be called automatically. There are three different ways to achieve this.
 
 1. Prefix method name by an underscore (e.g. `_private_method`).
 2. Use instance methods:
@@ -91,11 +91,11 @@ Follow these priorities guidelines and your generator will play nice with others
 
 # Asynchronous tasks
 
-There's multiples way to pause the run loop until a task is done doing work asynchronously.
+There's multiple ways to pause the run loop until a task is done doing work asynchronously.
 
-The easiest way is to **return a promise**. The loop will continue once the promise resolve, or it'll raise an exception and stop if it fails.
+The easiest way is to **return a promise**. The loop will continue once the promise resolves, or it'll raise an exception and stop if it fails.
 
-If the asynchronous API you're relying upon doesn't support promise, then you can rely on the legacy `this.async()` way. Calling `this.async()` will return a function to call once the task is done. For example:
+If the asynchronous API you're relying upon doesn't support promises, then you can rely on the legacy `this.async()` way. Calling `this.async()` will return a function to call once the task is done. For example:
 
 ```js
 asyncTask: function () {
