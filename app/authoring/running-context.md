@@ -31,7 +31,7 @@ Now that you know the prototype methods are considered to be a task, you may won
       });
     ```
 
-3. Extend a parent generator
+3. Extend a parent generator:
 
     ```js
       var MyBase = generators.Base.extend({
