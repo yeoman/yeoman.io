@@ -23,13 +23,18 @@ The `prompt` method is asynchronous and return a promise. You'll need to return 
 ```js
 module.exports = generators.Base.extend({
   prompting: function () {
-    return this.prompt({
+    return this.prompt([{
       type    : 'input',
       name    : 'name',
       message : 'Your project name',
       default : this.appname // Default to current folder name
-    }).then(function (answers) {
-      this.log(answers.name);
+    }, {
+      type    : 'confirm',
+      name    : 'cool',
+      message : 'Would you like to enable the Cool feature?'
+    }]).then(function (answers) {
+      this.log('app name', answers.name);
+      this.log('cool feature', answers.cool);
     }.bind(this));
   }
 })
