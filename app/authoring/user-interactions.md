@@ -31,8 +31,7 @@ module.exports = generators.Base.extend({
     }, {
       type    : 'confirm',
       name    : 'cool',
-      message : 'Would you like to enable the Cool feature?',
-      default : this.cool
+      message : 'Would you like to enable the Cool feature?'
     }]).then(function (answers) {
       this.log('app name', answers.name);
       this.log('cool feature', answers.cool);
