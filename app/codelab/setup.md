@@ -67,7 +67,7 @@ yo --version
 
   <h2>Versions of the CLI tools that this codelab works with</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.8.1</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yo/issues">tracker</a>.</p>
+  <p>Technology changes quickly! This tutorial has been tested with <strong>yo 1.8.4</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yo/issues">tracker</a>.</p>
 
 </div>
 
