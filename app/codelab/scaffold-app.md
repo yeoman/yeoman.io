@@ -45,6 +45,7 @@ If you have a few generators installed, you'll be able to interactively choose f
 Some generators will also provide optional settings to customize your app with common developer libraries to speed up the initial setup of your development environment.
 
 The FountainJS generator provides some choices to use your favorite:
+
 * framework ([React](https://facebook.github.io/react/), [Angular2](https://angular.io/) or [Angular1](https://angularjs.org/))
 * module management ([Wepack](https://webpack.github.io/), [SystemJS](https://github.com/systemjs/systemjs) or [None with Bower](http://bower.io/))
 * javascript preprocessor ([Babel](https://babeljs.io/), [TypeScript](https://www.typescriptlang.org/) or none)

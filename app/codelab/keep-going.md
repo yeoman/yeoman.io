@@ -27,15 +27,10 @@ For example, the Fountain Angular generator also supports creating new pipes, di
 ## Where to go next
 
 * **Yeoman** is always evolving. Be sure to check out [yeoman.io](http://yeoman.io) for more information and follow [@yeoman](https://twitter.com/yeoman) and [+Yeoman](https://plus.google.com/101063139999404044459/posts) to stay up to date.
-
 * **Fountain** generators ([fountainjs.io](http://fountainjs.io)) helped us write this Todo app quickly and with elegance. Follow [@YeomanFountain](https://twitter.com/yeomanfountain) to stay up to date on new features and new releases.
-
 * **React** ([facebook.github.io/react](https://facebook.github.io/react/)) a javascript library for building user interfaces.
-
 * **Angular2** ([angular.io](https://angular.io/)) a framework to develop across all platforms.
-
 * **Webpack** ([webpack.github.io](https://webpack.github.io/)) a module bundler who takes modules with dependencies and generates static assets representing those modules.
-
 * **JSPM** ([jspm.io](http://jspm.io/)) a frictionless browser package management. Load any module format (ES6, AMD, CommonJS and globals) directly from any registry such as npm and GitHub with flat versioned dependency management.
 
 That’s it from your man-in-a-hat for now. Thanks!
