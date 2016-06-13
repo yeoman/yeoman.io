@@ -41,5 +41,5 @@ To this instantly:
 <p class="codelab-paging">
   <a href="index.html#toc">&laquo; Return to overview</a>
   or
-  <a href="run-unit-test.html">Go to the next step &raquo;</a>
+  <a href="run-unit-tests.html">Go to the next step &raquo;</a>
 </p>
