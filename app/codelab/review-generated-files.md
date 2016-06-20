@@ -6,25 +6,38 @@ markdown: 1
 
 Open up your `mytodo` directory to take a look at what was actually scaffolded. It'll look like this:
 
-![](/assets/img/codelab/image_11.png)
+![](/assets/img/codelab/04_tree_view.png)
 
 In *mytodo*, we have:
 
-`app`: a parent directory for our web application
+`src`: a parent directory for our web application
 
-  * `index.html`: the base html file for our Angular app
-  * `404.html`, `favicon.ico`, and `robots.txt`: commonly used web files so you don’t have to create them yourself
-  * `scripts`: our own JS files
-      * `app.js`: our main Angular application code
-      * `controllers`: our Angular controllers
-  * `styles`: our CSS files
-  * `views`: a place for our Angular templates
+  * `app`: our React + Redux code
+  * `index.html`: the base html file
+  * `index.js`: the entry point for our TodoMVC app
 
-`bower_components`, `bower.json`: our JavaScript/web dependencies, installed by Bower
+`conf`: a parent directory for our configuration files for thrid-party tools (Browsersync, Webpack, Gulp, Karma)
 
-`Gruntfile.js`, `package.json,` and `node_modules`: configuration and dependencies required by our Grunt tasks
+`gulp_tasks` and `gulpfile.js`: our builder tasks
 
-`test`: a scaffolded out test runner and the unit tests for the project, including boilerplate tests for our controllers.
+`.babelrc`, `package.json,` and `node_modules`: configuration and dependencies required
+
+`.gitattributes` and `.gitignore`: configuration for git
+
+
+<div class="note tip">
+
+  <h2>Create the first commit</h2>
+
+  <p>After generation and installation you should have a fresh git repository already initialzing.</p>
+  <p>You can safely add a commit to save the current state by these commands.</p>
+
+<pre>
+<code class="language-sh">git add --all && git commit -m 'First commit'</code>
+</pre>
+
+</div>
+
 
 <p class="codelab-paging">
   <a href="index.html#toc">&laquo; Return to overview</a>

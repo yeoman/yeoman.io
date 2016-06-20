@@ -4,19 +4,19 @@ title: 'Step 2: Install a Yeoman generator'
 markdown: 1
 ---
 
-In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for AngularJS projects.
+In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for FountainJS projects.
 
-## Install an AngularJS generator
+## Install an generator
 
-You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [1000+ generators](/generators/) now available, many of which have been written by the open-source community.
+You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [3500+ generators](/generators/) now available, many of which have been written by the open-source community.
 
-Install [generator-angular](https://www.npmjs.com/package/generator-angular) and [generator-karma](https://github.com/yeoman/generator-karma) using this command:
+Install [generator-fountain-webapp](https://www.npmjs.com/package/generator-fountain-webapp) using this command:
 
 ```sh
-npm install --global generator-angular@0.11.1 generator-karma
+npm install --global generator-fountain-webapp
 ```
 
-This will start to install the Node packages required for the generator. Using `@0.12.1` will request a specific version of the generator.
+This will start to install the Node packages required for the generator.
 
 <div class="note important">
 
@@ -32,7 +32,7 @@ This will start to install the Node packages required for the generator. Using `
 
   <p>Along with using <code>npm install</code> directly, you can search for generators via the Yeoman interactive menu. Run <code>yo</code> and select <b>Install a generator</b> to search for published generators.</p>
 
-  <img src="/assets/img/codelab/image_4.png">
+  <img src="/assets/img/codelab/02_yo_interactive.png">
 
 </div>
 

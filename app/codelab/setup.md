@@ -14,8 +14,8 @@ Most of your interactions with Yeoman will be through the command line. Run comm
 
 Before installing Yeoman, you will need the following:
 
-* Node.js v0.10.x+
-* npm (which comes bundled with Node) v2.1.0+
+* Node.js v4 or higher
+* npm (which comes bundled with Node)
 * git
 
 You can check if you have Node and npm installed by typing:
@@ -24,7 +24,7 @@ You can check if you have Node and npm installed by typing:
 node --version && npm --version
 ```
 
-If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](https://nodejs.org/download/).
+If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](https://nodejs.org/).
 
 The [npm](https://www.npmjs.com/) package manager is bundled with Node, although you might need to update it. Some Node versions ship with rather old versions of npm. You can update npm using this command:
 
@@ -37,14 +37,14 @@ You can check if you have Git installed by typing:
 ```sh
 git --version
 ```
-If you don't have Git, grab the installers from the [git website](http://git-scm.com/).
+If you don't have Git, grab the installers from the [git website](https://git-scm.com/).
 
 ## Install the Yeoman toolset
 
 Once you’ve got Node installed, install the Yeoman toolset:
 
 ```sh
-npm install --global yo bower grunt-cli
+npm install --global yo
 ```
 
 <div class="note important">
@@ -57,23 +57,17 @@ npm install --global yo bower grunt-cli
 
 ## Confirm installation
 
-It is a good idea to check that everything is installed as expected by running commonly used Yeoman commands like `yo`, `bower`, and `grunt` with the `--version` flag as follows:
+It is a good idea to check that everything is installed as expected by running commonly used Yeoman commands like `yo` with the `--version` flag as follows:
 
 ```sh
-yo --version && bower --version && grunt --version
+yo --version
 ```
-
-Running the above should output three separate version numbers:
-
-* Yeoman
-* Bower
-* Grunt CLI (the command-line interface for Grunt)
 
 <div class="note important">
 
   <h2>Versions of the CLI tools that this codelab works with</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>Yeoman 1.4.6</strong>, <strong>Bower 1.4.1</strong>, and <strong>grunt-cli v0.1.13</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yeoman.github.io/issues">tracker</a>.</p>
+  <p>Technology changes quickly! This tutorial has been tested with <strong>yo 1.8.4</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yo/issues">tracker</a>.</p>
 
 </div>
 
