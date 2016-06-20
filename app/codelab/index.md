@@ -4,7 +4,7 @@ title: "Let's Scaffold a Web App with Yeoman"
 redirect_from: '/codelab.html'
 ---
 
-<p class="authors">By Addy Osmani, James Cryer, Pearl Chen &amp; Mehdy Dara</p>
+<p class="authors">By Mehdy Dara</p>
 
 Allo! Allo! In this 25-minutes codelab, you build a fully functional web application from scratch with the help of [Yeoman](/) and [FountainJS](http://fountainjs.io). The sample app will be written in [React](https://facebook.github.io/react/), [Angular2](https://angular.io/) or [Angular1](https://angularjs.org/).
 
