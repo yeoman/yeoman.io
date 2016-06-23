@@ -109,7 +109,7 @@ Once the generator is done running, `public/index.html` will contain:
 
 ## Transform output files through streams
 
-The generator system allow you to apply custom filters on every file writes. Automatically beautifying files, normalizing whitespace, etc, is totally possible.
+The generator system allows you to apply custom filters on every file writes. Automatically beautifying files, normalizing whitespace, etc, is totally possible.
 
 Once per Yeoman process, we will write every modified files to disk. This process is passed through a [vinyl](https://github.com/wearefractal/vinyl) object stream (just like [gulp](http://gulpjs.com/)). Any generator author can register a `transformStream` to modify the file path and/or the content.
 
