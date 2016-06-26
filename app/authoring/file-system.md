@@ -83,7 +83,7 @@ Given the content of `./templates/index.html` is:
 </html>
 ```
 
-We'll then use the [`copyTpl`](https://github.com/sboudrias/mem-fs-editor#copytplfrom-to-context-settings) method to copy the file while processing the content as a template. `copyTpl` is using [ejs template syntax](http://ejs.co).
+We'll then use the [`copyTpl`](https://github.com/sboudrias/mem-fs-editor#copyfrom-to-options) method to copy the file while processing the content as a template. `copyTpl` is using [ejs template syntax](http://ejs.co).
 
 ```js
 generators.Base.extend({
