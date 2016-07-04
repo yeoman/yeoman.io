@@ -35,7 +35,7 @@ module.exports = generators.Base.extend({
     }]).then(function (answers) {
       this.log('app name', answers.name);
       this.log('cool feature', answers.cool);
-    }.bind(this));
+    }).bind(this);
   }
 })
 ```
