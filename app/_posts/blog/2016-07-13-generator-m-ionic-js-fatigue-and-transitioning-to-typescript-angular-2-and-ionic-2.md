@@ -14,14 +14,14 @@ title: Generator-M-Ionic - JS fatigue and transitioning to Typescript, Angular 2
 
 [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) is an open source collection of advanced workflows for building cross-platform HTML5 mobile apps with Ionic. This article gives a quick introduction into the generator's capabilities and refers to more elaborate resources for those willing to work with it.
 
-As we're transitioning to the next generation technology stack with Typescript, Angular 2 and Ionic 2 we're trying to overcome [JS fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.vh3bssyd7) and JS tooling fatigue and bring the development of the different tools closer together. You can help us by joining the discussion!
+As we're transitioning to the next generation technology stack with Typescript, Angular 2 and Ionic 2, we're trying to overcome [JS fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.vh3bssyd7) and JS tooling fatigue and bring the development of the different tools closer together. You can help us by joining the discussion!
 
 ## What's Generator-M-Ionic for?
 > **Advanced workflows for building rock-solid Ionic apps:** develop, prototype, test, build and deliver high quality apps with Yeoman, Gulp, Bower, Angular, Cordova and of course Ionic. All in one sexy generator.
 
-The roots of [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) reach back more than two years when my team and I ([@gruppjo](https://github.com/gruppjo)) at [M-Way Solutions](http://www.mwaysolutions.com/) decided to move our HTML5 mobile app development stack to AngularJS and Ionic in [early 2014](http://blog.mwaysolutions.com/2015/03/26/generator-m-the-state-of-html5-mobile-app-development-at-m-way/). Since then [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) has grown into a full-fledged collection of development tools for building large-scale enterprise apps with [Cordova](http://cordova.apache.org/), [AngularJS](https://angularjs.org/) and [Ionic](http://ionicframework.com/).
+The roots of [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) reach back more than two years when my team and I ([@gruppjo](https://github.com/gruppjo)) at [M-Way Solutions](http://www.mwaysolutions.com/) decided to move our HTML5 mobile app development stack to Angular and Ionic in [early 2014](http://blog.mwaysolutions.com/2015/03/26/generator-m-the-state-of-html5-mobile-app-development-at-m-way/). Since then [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) has grown into a full-fledged collection of development tools for building large-scale enterprise apps with [Cordova](http://cordova.apache.org/), [Angular](https://angularjs.org/) and [Ionic](http://ionicframework.com/).
 
-Built on top of the [Yeoman Ecosystem](http://yeoman.io/) with [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) and [npm](https://www.npmjs.com/), Generator-M-Ionic offers highly efficient workflows for building apps from start to finish by wiring together a complex technology stack and by providing workflows for all important aspects of professional cross-platform HTML5 app development with Cordova, AngularJS and Ionic.
+Built on top of the [Yeoman Ecosystem](http://yeoman.io/) with [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) and [npm](https://www.npmjs.com/), Generator-M-Ionic offers highly efficient workflows for building apps from start to finish by wiring together a complex technology stack and by providing workflows for all important aspects of professional cross-platform HTML5 app development with Cordova, Angular and Ionic.
 
 ![Generator-M-Ionic technology stack](https://raw.githubusercontent.com/gruppjo/blogs/master/16-07-yeoman/img/tech_stack.png)
 
@@ -37,7 +37,7 @@ Here's a brief overview of Generator-M-Ionic's capabilities:
 - [sub generators](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/sub_generators.md) create ready to use components like Angular controllers, templates, services and more
 
 ### Development Workflows
-- `gulp watch` automatically connects the frontend-stack including AngularJS, Ionic and all other bower components, stylesheets, your own Angular and Ionic components with your app and watches for changes
+- `gulp watch` automatically connects the frontend-stack including Angular, Ionic and all other bower components, stylesheets, your own Angular and Ionic components with your app and watches for changes
 - `gulp --livereload "run ios"` builds an app for your device and watches for changes on your dev machine using [Browsersync](https://www.browsersync.io/)
 - ... discover more useful workflows in our [Development Introduction](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md)
 
@@ -56,7 +56,7 @@ Handling [CORS & Proxying](https://github.com/mwaylabs/generator-m-ionic/tree/ma
 Creating things like backends, push services, user management, build infrastructures and others can be hard. Luckily there's ecosystems like the [Ionic Platform](http://ionic.io/), our own enterprise-targeting [Relution](https://www.relution.io/), which your Generator-M-Ionic project integrates into nicely. [Read more](https://github.com/mwaylabs/generator-m-ionic#ecosystems).
 
 ## If that wasn't enough
-... check out our [Github repository](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/programmatically_change_configxml.md) for the full documentation!
+... check out our [GitHub repository](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/programmatically_change_configxml.md) for the full documentation!
 
 Besides that, we recently had the pleasure of publishing a full blog series about Generator-M-Ionic on the [Ionic Blog](http://blog.ionic.io/). Give it a go for a more tutorial-like approach of getting to know the full value of Generator-M-Ionic:
 
