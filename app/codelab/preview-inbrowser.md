@@ -38,6 +38,14 @@ To this instantly:
 
 ![](/assets/img/codelab/05_after_live_reload.png)
 
+<div class="note tip">
+
+  <h2>Don't forgot the test!</h2>
+
+  <p>You have a TodoMVC app tested and you change the title header. You should edit test in `mytodo/src/app/components/Header.spec.js` **or** revert the change for demonstrate livereloading</p>
+
+</div>
+
 <p class="codelab-paging">
   <a href="index.html#toc">&laquo; Return to overview</a>
   or
