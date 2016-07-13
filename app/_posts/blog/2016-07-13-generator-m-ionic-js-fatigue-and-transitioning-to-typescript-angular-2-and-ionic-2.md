@@ -60,9 +60,9 @@ Creating things like backends, push services, user management, build infrastruct
 
 Besides that, we recently had the pleasure of publishing a full blog series about Generator-M-Ionic on the [Ionic Blog](http://blog.ionic.io/). Give it a go for a more tutorial-like approach of getting to know the full value of Generator-M-Ionic:
 
-- Advanced workflows for building rock-solid Ionic apps. Part 1: Playground
-- Advanced workflows for building rock-solid Ionic apps. Part 2: Mountain
-- Advanced workflows for building rock-solid Ionic apps. Part 3: Orbit
+- Advanced workflows for building rock-solid Ionic apps. [Part 1: Playground](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-1/)
+- Advanced workflows for building rock-solid Ionic apps. [Part 2: Mountain](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-2/)
+- Advanced workflows for building rock-solid Ionic apps. [Part 3: Orbit](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-3/)
 
 We'd love to hear your feedback!
 
@@ -85,7 +85,7 @@ There's a lot of choices contributing to [JS fatigue](https://medium.com/@ericcl
 
 There is an [Angular 2 CLI prototype](https://github.com/angular/angular-cli) from the Angular creators and the [Ionic 2 CLI](http://ionicframework.com/docs/v2/cli/) from the Ionic creators. Unfortunately both of them are more or less closed systems which drastically complicates building on top of it to suit your own needs. As of now it's time consuming, partly impossible to get Ionic, Cordova, a proper e2e and unit [testing workflow](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/testing.md), [linting](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/eslint.md), [environments](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/environments.md), [build vars](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/build_vars.md) and many of our other features into each of these tools without forking and largely altering them.
 
-Personally I'm quite intrigued by the flexibility of the [FountainJS Generators](http://fountainjs.io/), which is the next generation of the famous [generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular), both created by [@zckrs](https://twitter.com/Zckrs) and [@Swiip](https://twitter.com/Swiip). I hope we can build on top of their architecture. Relying on the [Yeoman](http://yeoman.io/) architecture allows tremendous flexibility and extensibility in their and our project. Unfortunately the Angular 2 CLI and the Ionic 2 CLI don't use Yeoman and don't provide easy ways to build on top of their functionality. In fact that's exactly the reason [why we started building our generator in the first place](http://blog.mwaysolutions.com/2015/09/21/generator-m-ionic-and-the-search-for-the-holy-grail/).
+Personally I'm quite intrigued by the flexibility of the [FountainJS Generators](http://fountainjs.io/), which is the next generation of the famous [generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular), both created by [@zckrs](https://twitter.com/Zckrs) and [@Swiip](https://twitter.com/Swiip). I hope we can build on top of their architecture. Relying on the [Yeoman](http://yeoman.io/) architecture allows tremendous flexibility and extensibility in their and our project. Unfortunately the Angular 2 CLI and the Ionic 2 CLI don't use Yeoman and don't provide easy ways to build on top of their functionality. In fact that's exactly the same problem we had with Angular 1 and Ionic 1 and is the reason [why we started building our generator in the first place](http://blog.mwaysolutions.com/2015/09/21/generator-m-ionic-and-the-search-for-the-holy-grail/).
 
 ## Get in touch
 You can help by joining the discussion, tell us which features of Generator-M-Ionic, the Angular 2 CLI and the Ionic 2 CLI you like and hopefully we can bring development of all of them closer together, getting rid of some of that decision fatigue and bring better tools for all of us.
