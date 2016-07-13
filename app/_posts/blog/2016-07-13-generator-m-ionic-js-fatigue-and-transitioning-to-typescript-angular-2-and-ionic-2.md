@@ -90,7 +90,7 @@ Personally I'm quite intrigued by the flexibility of the [FountainJS Generators]
 ## Get in touch
 You can help by joining the discussion, tell us which features of Generator-M-Ionic, the Angular 2 CLI and the Ionic 2 CLI you like and hopefully we can bring development of all of them closer together, getting rid of some of that decision fatigue and bring better tools for all of us.
 
-You can start by commenting on [this issue in our repository](https://github.com/mwaylabs/generator-m-ionic/issues/403), or dive deeper into to the corresponding discussion over at the [yeoman repo](https://github.com/yeoman/yeoman/issues/1571), [angular-cli repo](https://github.com/angular/angular-cli/issues/49#issuecomment-206065079) or [ionic-cli repo](https://github.com/driftyco/ionic-cli/issues/845).
+You can start by commenting on [this issue in our repository](https://github.com/mwaylabs/generator-m-ionic/issues/403), or dive deeper into to the corresponding discussion over at the [yeoman repo](https://github.com/yeoman/yeoman/issues/1571), [angular-cli repo](https://github.com/angular/angular-cli/issues/49#issuecomment-196876545) or [ionic-cli repo](https://github.com/driftyco/ionic-cli/issues/845).
 
 Let us know what you think and help us build better tools for the next generation of HTML5 mobile app development!
 
