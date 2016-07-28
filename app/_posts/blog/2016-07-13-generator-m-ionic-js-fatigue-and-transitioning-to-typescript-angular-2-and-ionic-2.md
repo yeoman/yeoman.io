@@ -5,7 +5,7 @@ title: Generator-M-Ionic - JS fatigue and transitioning to Typescript, Angular 2
 
 <p align="center">
   <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
-    <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
+    <img width="175" src="/assets/img/blog/2016-07-13/logo.png">
   </a>
 </p>
 
@@ -23,7 +23,7 @@ The roots of [Generator-M-Ionic](https://github.com/mwaylabs/generator-m-ionic) 
 
 Built on top of the [Yeoman Ecosystem](http://yeoman.io/) with [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) and [npm](https://www.npmjs.com/), Generator-M-Ionic offers highly efficient workflows for building apps from start to finish by wiring together a complex technology stack and by providing workflows for all important aspects of professional cross-platform HTML5 app development with Cordova, Angular and Ionic.
 
-![Generator-M-Ionic technology stack](https://raw.githubusercontent.com/gruppjo/blogs/master/16-07-yeoman/img/tech_stack.png)
+![Generator-M-Ionic technology stack](/assets/img/blog/2016-07-13/tech_stack.png)
 
 Here's a brief overview of Generator-M-Ionic's capabilities:
 
@@ -70,7 +70,7 @@ We'd love to hear your feedback!
 
 With Angular 2 [release candidates](http://angularjs.blogspot.de/2016/06/rc4-now-available.html?view=magazine) and Ionic 2 [betas](http://blog.ionic.io/ionic-2-beta-10-is-live/) now being released almost every week [we're preparing to make our transition](http://blog.mwaysolutions.com/2016/03/23/preparing-for-ionic-2-and-angular-2/) in a reasonable and educated fashion.
 
-![Angular 2 Ionic 2](https://raw.githubusercontent.com/gruppjo/blogs/master/16-07-yeoman/img/angular2_ionic2.png)
+![Angular 2 Ionic 2](/assets/img/blog/2016-07-13/angular2_ionic2.png)
 
 The Angular 1 & Ionic 1 ecosystem is huge and many companies like ourselves, or organizations who use our generator have a large number of apps and assets written for this stack. Therefore the Angular 1 / Ionic 1 stack will continue to play a major role for a long time to come, before the majority of the market will have made its transition.
 
