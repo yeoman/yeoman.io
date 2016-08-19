@@ -6,6 +6,10 @@ markdown: 1
 
 Let’s revisit the issue of items not persisting when the browser refreshes with our React/Redux *mytodo* app.
 
+<div class="note tip">
+  <p>If the persistence is not a issue for you or you're short on time, you can skip this step and jump directly to <a href="keep-going.html">the Step 8 "Get ready for production"</a>.</p>.
+</div>
+
 ## Install npm package
 
 To easily achieve this we can use another Redux module called "[redux-localstorage](https://github.com/elgerlambert/redux-localstorage/tree/1.0-breaking-changes)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html).
@@ -20,7 +24,7 @@ npm install --save redux-localstorage@rc
 
 ## Use redux-localstorage
 
-The Redux store should be configured (`src/app/store/configureStore.js`) to use storage:
+The Redux store should be configured to use storage. Replace the whole your `src/app/store/configureStore.js` by this code:
 
 ```js
 import {compose, createStore} from 'redux';
