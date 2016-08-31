@@ -47,12 +47,12 @@ Some generators will also provide optional settings to customize your app with c
 The FountainJS generator provides some choices to use your favorite:
 
 * framework ([React](https://facebook.github.io/react/), [Angular2](https://angular.io/) or [Angular1](https://angularjs.org/))
-* module management ([Wepack](https://webpack.github.io/), [SystemJS](https://github.com/systemjs/systemjs) or [None with Bower](http://bower.io/))
+* module management ([Webpack](https://webpack.github.io/), [SystemJS](https://github.com/systemjs/systemjs) or [None with Bower](http://bower.io/))
 * javascript preprocessor ([Babel](https://babeljs.io/), [TypeScript](https://www.typescriptlang.org/) or none)
 * css preprocessor ([SASS](http://sass-lang.com/), [LESS](http://lesscss.org/) or none)
 * three sample app (a landing page, hello world, and TodoMVC)
 
-For this codelab, we will use **React**, **Wepack**, **Babel**, **SASS** and the **Redux TodoMVC** sample.
+For this codelab, we will use **React**, **Webpack**, **Babel**, **SASS** and the **Redux TodoMVC** sample.
 
 ![](/assets/img/codelab/03_yo_run_generator.png)
 
