@@ -6,11 +6,11 @@ redirect_from: '/codelab.html'
 
 <p class="authors">By Mehdy Dara</p>
 
-Allo! Allo! In this 25-minutes codelab, you build a fully functional web application from scratch with the help of [Yeoman](/) and [FountainJS](http://fountainjs.io). The sample app will be written in [React](https://facebook.github.io/react/), [Angular2](https://angular.io/) or [Angular1](https://angularjs.org/).
+Allo! Allo! In this 25-minutes codelab, you will build a fully functional web application from scratch with the help of [Yeoman](/) and [FountainJS](http://fountainjs.io). The sample app will be written in [React](https://facebook.github.io/react/), [Angular2](https://angular.io/) or [Angular1](https://angularjs.org/).
 
 <p class="mast-intro"><img src="/assets/img/yeoman-008.png"></p>
 
-Don't know any React or Angular? That's okay, we'll walk you through it. However we do assume that you have some previous JavaScript experience.
+Don't know any React or Angular? That's okay, we'll walk you through it. However, we do assume that you have some previous JavaScript experience.
 
 ## Build this sample app with Yeoman
 
