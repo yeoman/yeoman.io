@@ -68,7 +68,7 @@ const initialState = [
 ];
 ```
 
-Fantastic you have fixed the test:
+Fantastic, you have fixed the test:
 
 ![](/assets/img/codelab/06_run_test.png)
 
