@@ -12,7 +12,7 @@ Let’s revisit the issue of items not persisting when the browser refreshes wit
 
 ## Install npm package
 
-To easily achieve this we can use another Redux module called "[redux-localstorage](https://github.com/elgerlambert/redux-localstorage/tree/1.0-breaking-changes)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html).
+To easily achieve this, we can use another Redux module called "[redux-localstorage](https://github.com/elgerlambert/redux-localstorage/tree/1.0-breaking-changes)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html).
 
 Run the following command:
 
@@ -58,7 +58,7 @@ export default function configureStore(initialState) {
 
 ```
 
-If you look at your app in the browser now you’ll see that there are one item "Use Yeoman" in the todo list. The app is initialising the todos store if local storage is empty and we haven’t given it any todo items yet.
+If you look at your app in the browser, you’ll see that there are one item "Use Yeoman" in the todo list. The app is initialising the todos store if local storage is empty and we haven’t given it any todo items yet.
 
 ![](/assets/img/codelab/07_before_localstorage.png)
 
