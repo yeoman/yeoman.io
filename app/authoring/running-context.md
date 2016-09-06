@@ -24,6 +24,9 @@ Now that you know the prototype methods are considered to be a task, you may won
     ```js
       generators.Base.extend({
         constructor: function () {
+          // Calling the super constructor is important so our generator is correctly set up
+          generators.Base.apply(this, arguments);
+          
           this.helperMethod = function () {
             console.log('won\'t be called automatically');
           };
