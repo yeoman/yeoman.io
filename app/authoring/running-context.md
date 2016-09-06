@@ -19,11 +19,25 @@ In other words, each function on the object returned by `Object.getPrototypeOf(G
 Now that you know the prototype methods are considered to be a task, you may wonder how to define helper or private methods that won't be called automatically. There are three different ways to achieve this.
 
 1. Prefix method name by an underscore (e.g. `_private_method`).
+
+    ```js
+      generators.Base.extend({
+        method1: function () {
+          console.log('hey 1');
+        },
+        _private_method: function(){
+          console.log('private hey');
+        }
+      });
+    ```
 2. Use instance methods:
 
     ```js
       generators.Base.extend({
         constructor: function () {
+          // Calling the super constructor is important so our generator is correctly set up
+          generators.Base.apply(this, arguments);
+          
           this.helperMethod = function () {
             console.log('won\'t be called automatically');
           };
