@@ -6,11 +6,11 @@ sidebar: sidebars/authoring.md
 excerpt: this, that, Yeoman. What is available when and where?
 ---
 
-One of the most important concepts to grasp when writing a Generator is how methods are run and in which context.
+One of the most important concepts to grasp when writing a Generator is how methods are running and in which context.
 
 ## Prototype methods as actions
 
-Each method directly attached to a Generator prototype is considered to be a task. Each task is run in sequence by the Yeoman environment run loop.
+Each method directly attached to a Generator prototype is considered to be a task. Each task is running in sequence by the Yeoman environment run loop.
 
 In other words, each function on the object returned by `Object.getPrototypeOf(Generator)` will be automatically run.
 
