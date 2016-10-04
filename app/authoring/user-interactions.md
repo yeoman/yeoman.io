@@ -18,7 +18,7 @@ For example, it is important to never use `console.log()` or `process.stdout.wri
 
 Prompts are the main way a generator interacts with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer [to its API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
 
-The `prompt` method is asynchronous and return a promise. You'll need to return the promise from your task in order to wait for it's completion before running the next one. ([learn more about asynchronous task](/authoring/running-context.html))
+The `prompt` method is asynchronous and return a promise. You'll need to return the promise from your task in order to wait for its completion before running the next one. ([learn more about asynchronous task](/authoring/running-context.html))
 
 ```js
 module.exports = generators.Base.extend({
