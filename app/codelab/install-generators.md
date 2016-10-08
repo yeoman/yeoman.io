@@ -6,7 +6,7 @@ markdown: 1
 
 In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for FountainJS projects.
 
-## Install an generator
+## Install a generator
 
 You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [3500+ generators](/generators/) now available, many of which have been written by the open-source community.
 
