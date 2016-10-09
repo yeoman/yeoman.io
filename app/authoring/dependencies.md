@@ -21,7 +21,7 @@ For example you want to install lodash as a dev dependency:
 ```js
 generators.Base.extend({
   installingLodash: function() {
-    this.npmInstall(['lodash'], { 'saveDev': true });
+    this.npmInstall(['lodash'], { 'save-dev': true });
   }
 });
 ```
