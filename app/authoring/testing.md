@@ -46,7 +46,7 @@ Yeoman provide test helpers methods. They're contained inside the `yeoman-test` 
 var helpers = require('yeoman-test');
 ```
 
-You can check [the full helpers API here](http://yeoman.io/generator/module-test_helpers.html). These methods will usually be run inside a `before` block.
+You can check [the full helpers API here](https://github.com/yeoman/yeoman-test). These methods will usually be run inside a `before` block.
 
 The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](http://yeoman.io/generator/RunContext.html) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
 
