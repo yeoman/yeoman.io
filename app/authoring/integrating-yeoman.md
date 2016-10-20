@@ -62,7 +62,7 @@ There you go. You just need to put this code in a `bin` runnable file and you ca
 
 ### Find installed generators
 
-But what if you wish to provide access to every Yeoman generators installed on a user machine? Then you need to execute a lookup of the user disk.
+But what if you wish to provide access to every Yeoman generator installed on a user machine? Then you need to execute a lookup of the user disk.
 
 ```js
 env.lookup(function () {
