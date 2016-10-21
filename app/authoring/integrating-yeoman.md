@@ -100,7 +100,7 @@ Note: Generators registered using `#registerStub()` will have `"unknown"` as `re
 
 Yeoman uses _adapters_ as an abstraction layer to allow IDE, code editor and the like to easily provide user interfaces necessary to run a generator.
 
-An adapter is the object responsible for handling all the interaction with the user. If you want to provide a different interaction model from the classical command line, you have to write your own adapter. Every methods to interact with a user are passing through this adapter (mainly: prompting, logging and diffing).
+An adapter is the object responsible for handling all the interaction with the user. If you want to provide a different interaction model from the classical command line, you have to write your own adapter. Every method to interact with a user is passing through this adapter (mainly: prompting, logging and diffing).
 
 By default, Yeoman provides a [Terminal Adapter](https://github.com/yeoman/environment/blob/master/lib/adapter.js). And our test helpers provide a [Test Adapter](https://github.com/yeoman/yeoman-test/blob/master/lib/adapter.js) who's mocking prompts and silencing the output. You can use these as reference for your own implementation.
 
