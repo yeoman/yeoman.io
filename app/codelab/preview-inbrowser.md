@@ -40,7 +40,7 @@ To this instantly:
 
 <div class="note tip">
 
-  <h2>Don't forgot the test!</h2>
+  <h2>Don't forget the test!</h2>
 
   <p>You have a TodoMVC app tested and you change the title header. You should edit test in `mytodo/src/app/components/Header.spec.js` **or** revert the change for demonstrate livereloading</p>
 
