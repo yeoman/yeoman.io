@@ -1,6 +1,7 @@
-/*global jQuery, _, List */
-(function (win, $) {
+(function (win) {
   'use strict';
+
+  var $ = win.jQuery;
 
   // Settings for doT.js
   var doT = win.doT;
@@ -24,10 +25,10 @@
         pluginsAll.html(tpl({
           modules: plugins.sort(function (a, b) {
             return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
-          });
+          })
         }));
 
-        var list = new List('plugins-all', {
+        var list = new win.List('plugins-all', {
           valueNames: [
             'name',
             'owner',
@@ -50,4 +51,4 @@
       }
     });
   });
-})(window, jQuery);
+})(window);
