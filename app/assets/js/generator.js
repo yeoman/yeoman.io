@@ -20,27 +20,33 @@
 
     $.getJSON('https://storage.googleapis.com/generators.yeoman.io/cache.json')
     .done(function (plugins) {
-      pluginsAll.html(tpl({
-        modules: plugins.sort(function (a, b) {
-          return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
-        })
-    }));
-      var list = new List('plugins-all', {
-        valueNames: [
-          'name',
-          'owner',
-          'stars',
-          'updated',
-          'downloads',
-          'description'
-        ]
-      });
+      if (Array.isArray(plugins)) {
+        pluginsAll.html(tpl({
+          modules: plugins.sort(function (a, b) {
+            return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
+          });
+        }));
 
-      if (list.listContainer) {
-        list.on('updated', function () {
-          $('.table thead').toggle(list.matchingItems.length !== 0);
-          $('#search-notfound').toggle(list.matchingItems.length === 0);
+        var list = new List('plugins-all', {
+          valueNames: [
+            'name',
+            'owner',
+            'stars',
+            'updated',
+            'downloads',
+            'description'
+          ]
         });
+
+        if (list.listContainer) {
+          list.on('updated', function () {
+            $('.table thead').toggle(list.matchingItems.length !== 0);
+            $('#search-notfound').toggle(list.matchingItems.length === 0);
+          });
+        }
+      }
+      else {
+        pluginsAll.text('There was a problem fetching the generator list. Please try again later');
       }
     });
   });
