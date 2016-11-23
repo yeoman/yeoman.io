@@ -13,6 +13,7 @@ It can sometimes be hard to know where to start contributing when looking at a l
 The easiest way to start is probably to get involved with our community.
 
 * Hangout in our IRC channel (#yeoman on [Freenode](http://freenode.net/))
+* Visit one of our [Gitter rooms](https://gitter.im/yeoman/home)
 * Answer questions on [StackOverflow (#yeoman)](http://stackoverflow.com/questions/tagged/yeoman)
 * Attend local meetups and speak with your colleagues!
 * Help people asking questions in issues on [yeoman/yeoman](https://github.com/yeoman/yeoman) and generator's repositories.
