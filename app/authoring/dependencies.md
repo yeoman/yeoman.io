@@ -6,7 +6,7 @@ sidebar: sidebars/authoring.md
 excerpt: Working with npm and Bower to manage external dependencies
 ---
 
-Once you've run your generators, you'll often want to run [npm](https://www.npmjs.com/) and [Bower](http://bower.io/) to install any additional dependencies your generators require.
+Once you've run your generators, you'll often want to run [npm](https://www.npmjs.com/) (or [Yarn](https://yarnpkg.com/)) and [Bower](http://bower.io/) to install any additional dependencies your generators require.
 
 As these tasks are very frequent, Yeoman already abstracts them away. We'll also cover how you can launch installation through other tools.
 
@@ -35,13 +35,49 @@ npm install lodash --save-dev
 on the command line in your project.
 
 
+## Yarn
+
+You just need to call `generator.yarnInstall()` to launch the installation. Yeoman will ensure the `yarn install` command is only run once even if it is called multiple time by multiple generators.
+
+For example you want to install lodash as a dev dependency:
+
+```js
+generators.Base.extend({
+  installingLodash: function() {
+    this.yarnInstall(['lodash'], { 'dev': true });
+  }
+});
+```
+
+This is equivalent to call:
+
+```
+yarn add lodash --dev
+```
+
+on the command line in your project.
+
 ## Bower
 
 You just need to call `generator.bowerInstall()` to launch the installation. Yeoman will ensure the `bower install` command is only run once even if it is called multiple time by multiple generators.
 
-## Both?
+## Combined use
 
-Call `generator.installDependencies()` to run both npm and bower.
+Calling `generator.installDependencies()` runs npm and bower by default. You can decide which ones to use be passing booleans for each package manager.
+
+Example for using Yarn with Bower:
+
+```js
+generators.Base.extend({
+  install: function () {
+    this.installDependencies({
+      npm: false,
+      bower: true,
+      yarn: true
+    });
+  }
+});
+```
 
 ## Using other tools
 
