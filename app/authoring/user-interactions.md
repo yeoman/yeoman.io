@@ -21,8 +21,8 @@ Prompts are the main way a generator interacts with a user. The prompt module is
 The `prompt` method is asynchronous and returns a promise. You'll need to return the promise from your task in order to wait for its completion before running the next one. ([learn more about asynchronous task](/authoring/running-context.html))
 
 ```js
-module.exports = generators.Base.extend({
-  prompting: function () {
+module.exports = class extends Generator {
+  prompting() {
     return this.prompt([{
       type    : 'input',
       name    : 'name',
@@ -37,7 +37,7 @@ module.exports = generators.Base.extend({
       this.log('cool feature', answers.cool);
     }.bind(this));
   }
-})
+};
 ```
 
 Note here that we use the [`prompting` queue](/authoring/running-context.html) to ask for feedback from the user.
@@ -90,17 +90,17 @@ Here is an example:
 ```js
 var _ = require('lodash');
 
-module.exports = generators.Base.extend({
+module.exports = class extends Generator {
   // note: arguments and options should be defined in the constructor.
-  constructor: function () {
-    generators.Base.apply(this, arguments);
+  constructor(args, opts) {
+    super(args, opts);
 
     // This makes `appname` a required argument.
     this.argument('appname', { type: String, required: true });
     // And you can then access it later on this way; e.g. CamelCased
     this.appname = _.camelCase(this.appname);
   }
-});
+};
 ```
 
 ### Options
@@ -126,10 +126,10 @@ The options hash (the second argument) accepts multiple key-value pairs:
 Here is an example:
 
 ```js
-module.exports = generators.Base.extend({
+module.exports = class extends Generator {
   // note: arguments and options should be defined in the constructor.
-  constructor: function () {
-    generators.Base.apply(this, arguments);
+  constructor(args, opts) {
+    super(args, opts);
 
     // This method adds support for a `--coffee` flag
     this.option('coffee');
@@ -146,11 +146,11 @@ Outputting information is handled by the `generator.log` module.
 The main method you'll use is simply `generator.log` (e.g. `generator.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
 
 ```js
-module.exports = generators.Base.extend({
-  myAction: function () {
+module.exports = class extends Generator {
+  myAction() {
     this.log('Something has gone wrong!');
   }
-});
+};
 ```
 
 There's also some other helper methods you can find in the [API documentation](http://yeoman.io/environment/TerminalAdapter.html).

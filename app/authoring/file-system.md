@@ -20,15 +20,15 @@ You can **get** the _destination path_ using `generator.destinationRoot()` or by
 
 ```js
 // Given destination root is ~/projects
-generators.Base.extend({
-  paths: function () {
+class extends Generator {
+  paths() {
     this.destinationRoot();
     // returns '~/projects'
 
     this.destinationPath('index.js');
     // returns '~/projects/index.js'
   }
-});
+}
 ```
 
 And you can manually set it using `generator.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
@@ -42,8 +42,8 @@ The template context is defined as `./templates/` by default. You can overwrite 
 You can get the path value using `generator.sourceRoot()` or by joining a path using `generator.templatePath('app/index.js')`.
 
 ```js
-generators.Base.extend({
-  paths: function () {
+class extends Generator {
+  paths() {
     this.sourceRoot();
     // returns './templates'
 
@@ -86,15 +86,15 @@ Given the content of `./templates/index.html` is:
 We'll then use the [`copyTpl`](https://github.com/sboudrias/mem-fs-editor#copyfrom-to-options) method to copy the file while processing the content as a template. `copyTpl` is using [ejs template syntax](http://ejs.co).
 
 ```js
-generators.Base.extend({
-  writing: function () {
+class extends Generator {
+  writing() {
     this.fs.copyTpl(
       this.templatePath('index.html'),
       this.destinationPath('public/index.html'),
       { title: 'Templating with Yeoman' }
     );
   }
-});
+}
 ```
 
 Once the generator is done running, `public/index.html` will contain:
@@ -123,16 +123,6 @@ this.registerTransformStream(beautify({indentSize: 2 }));
 Note that **every file of any type will be passed through this stream**. Make sure any transform stream will passthrough the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.
 
 You can basically use any _gulp_ plugins with the Yeoman transform stream to process generated files during the writing phase.
-
-## Legacy File utilities
-
-Yeoman also exposes a set of older file utilities. You can refer to the [API documentation](http://yeoman.io/generator/actions_actions.html) to learn more about them.
-
-The legacy file utilities have been back ported to use the in memory file system. As such, they're safe to use. Although be careful, these methods make a lot of assumptions and as a result will produce edge cases. When possible, prefer the more explicit new `fs` API.
-
-The legacy file system make the assumption you want to write to the _destination context_ and you want to read from the _template context_. As so, they don't require you to pass in a complete path, they'll resolve them automatically.
-
-Also, legacy methods like `template` and `copy` will automatically process some templates passing the generator (e.g. `this`) as the data object.
 
 ## Tip: Update existing file's content
 
