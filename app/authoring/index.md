@@ -31,12 +31,11 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   "version": "0.1.0",
   "description": "",
   "files": [
-    "app",
-    "router"
+    "generators"
   ],
   "keywords": ["yeoman-generator"],
   "dependencies": {
-    "yeoman-generator": "^0.24.1"
+    "yeoman-generator": "^1.0.0"
   }
 }
 ```
@@ -61,20 +60,6 @@ In an example project, a directory tree could look like this:
 
 ```
 ├───package.json
-├───app/
-│   └───index.js
-└───router/
-    └───index.js
-```
-
-This generator will expose `yo name` and `yo name:router` commands.
-
-You may not like keeping all your code at the root of your folder. Luckily, Yeoman allows for two different directory structures. It'll look in `./` and in `generators/` to register available generators.
-
-The previous example can be written as follows:
-
-```
-├───package.json
 └───generators/
     ├───app/
     │   └───index.js
@@ -82,13 +67,27 @@ The previous example can be written as follows:
         └───index.js
 ```
 
-If you use this second directory structure, make sure you point the `files` property in your `package.json` at the `generators` folder.
+This generator will expose `yo name` and `yo name:router` commands.
+
+Yeoman allows two different directory structures. It'll look in `./` and in `generators/` to register available generators.
+
+The previous example can also be written as follows:
+
+```
+├───package.json
+├───app/
+│   └───index.js
+└───router/
+    └───index.js
+```
+
+If you use this second directory structure, make sure you point the `files` property in your `package.json` at all the generator folders.
 
 ```json
 {
   "files": [
-    "generators/app",
-    "generators/router"
+    "app",
+    "router"
   ]
 }
 ```
@@ -103,14 +102,14 @@ Yeoman offers a base generator which you can extend to implement your own behavi
 In the generator's index.js file, here's how you extend the base generator:
 
 ```js
-var generators = require('yeoman-generator');
+var Generator = require('yeoman-generator');
 
-module.exports = generators.Base.extend();
+module.exports = class extends Generator {};
 ```
 
-The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
-
 We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](https://nodejs.org/api/modules.html#modules_module_exports).
+
+If you need to support ES5 environment, the static `Generator.extend()` method can be used to extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
 
 ### Overwriting the constructor
 
@@ -119,16 +118,16 @@ Some generator methods can only be called inside the `constructor` function. The
 To override the generator constructor, you pass a constructor function to `extend()` like so:
 
 ```js
-module.exports = generators.Base.extend({
+module.exports = class extends Generator {
   // The name `constructor` is important here
-  constructor: function () {
+  constructor(args, opts) {
     // Calling the super constructor is important so our generator is correctly set up
-    generators.Base.apply(this, arguments);
+    super(args, opts);
 
     // Next, add your custom code
-    this.option('coffee'); // This method adds support for a `--coffee` flag
+    this.option('babel'); // This method adds support for a `--babel` flag
   }
-});
+};
 ```
 
 ### Adding your own functionality
@@ -138,14 +137,15 @@ Every method added to the prototype is run once the generator is called--and usu
 Let's add some methods:
 
 ```js
-module.exports = generators.Base.extend({
-  method1: function () {
+module.exports = class extends Generator {
+  method1() {
     console.log('method 1 just ran');
-  },
-  method2: function () {
+  }
+
+  method2() {
     console.log('method 2 just ran');
   }
-});
+};
 ```
 
 When we run the generator later, you'll see these lines logged to the console.

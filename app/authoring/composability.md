@@ -58,34 +58,34 @@ this.composeWith('backbone:route', {}, {
 ### <a name="order"></a>execution example
 ```js
 // In my-generator/generators/turbo/index.js
-module.exports = require('yeoman-generator').Base.extend({
-  'prompting' : function () {
+module.exports = class extends Generator {
+  prompting() {
     console.log('prompting - turbo');
-  },
+  }
 
-  'writing' : function () {
+  writing() {
     console.log('writing - turbo');
   }
-});
+};
 
 // In my-generator/generators/electric/index.js
-module.exports = require('yeoman-generator').Base.extend({
-  'prompting' : function () {
+module.exports = class extends Generator {
+  prompting() {
     console.log('prompting - zap');
-  },
+  }
 
-  'writing' : function () {
+  writing() {
     console.log('writing - zap');
   }
-});
+};
 
 // In my-generator/generators/app/index.js
-module.exports = require('yeoman-generator').Base.extend({
-  'initializing' : function () {
+module.exports = class extends Generator {
+  initializing() {
     this.composeWith('my-generator:turbo');
     this.composeWith('my-generator:electric');
   }
-});
+};
 ```
 
 Upon running `yo my-generator`, this will result in:

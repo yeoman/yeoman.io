@@ -19,11 +19,11 @@ You just need to call `generator.npmInstall()` to run an `npm` installation. Yeo
 For example you want to install lodash as a dev dependency:
 
 ```js
-generators.Base.extend({
-  installingLodash: function() {
+class extends Generator {
+  installingLodash() {
     this.npmInstall(['lodash'], { 'save-dev': true });
   }
-});
+}
 ```
 
 This is equivalent to call:
@@ -50,11 +50,11 @@ Yeoman provides an abstraction to allow users to `spawn` any CLI commands. This 
 For example, if you're a PHP aficionado and wished to run `composer`, you'd write it this way:
 
 ```js
-generators.Base.extend({
-  install: function () {
+class extends Generator {
+  install() {
     this.spawnCommand('composer', ['install']);
   }
-});
+}
 ```
 
 Make sure to call the `spawnCommand` method inside the `install` queue. Your users don't want to wait for an installation command to complete.
