@@ -16,25 +16,16 @@ It is important to keep your tests simple and easily editable.
 
 Usually the best way to organize your tests is to separate each generator and sub-generator into its own `describe` block. Then, add a `describe` block for each option your generator accept. And then, use an `it` block for each assertion (or related assertion).
 
-The code running the generator should be located in a `before` or `beforeEach` block - it usually doesn't belong with your assertions.
-
 In code, you should end up with a structure similar to this:
 
 ```js
 describe('backbone:app', function () {
-  describe('when using require.js', function () {
-    before(function () {
-      // Mock the options, set up an output folder and run the generator
-    });
-
-    it('generate a router.js file', function () {
+  it('generates a project with require.js', function () {
       // assert the file exist
       // assert the file uses AMD definition
-    });
-
-    it('generate a view file');
-    it('generate a base controller');
   });
+
+  it('generates a project with webpack');
 });
 ```
 
@@ -46,19 +37,19 @@ Yeoman provide test helpers methods. They're contained inside the `yeoman-test` 
 var helpers = require('yeoman-test');
 ```
 
-You can check [the full helpers API here](https://github.com/yeoman/yeoman-test). These methods will usually be run inside a `before` block.
+You can check [the full helpers API here](https://github.com/yeoman/yeoman-test).
 
 The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](http://yeoman.io/generator/RunContext.html) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
 
 ```js
 var path = require('path');
 
-before(function () {
-  return helpers.run(path.join( __dirname, '../app'))
+beforeEach(function () {
+  // The object returned act like a promise, so return it to wait until the process is done
+  return helpers.run(path.join(__dirname, '../app'))
     .withOptions({ foo: 'bar' })    // Mock options passed in
     .withArguments(['name-x'])      // Mock the arguments
-    .withPrompts({ coffee: false }) // Mock the prompt answers
-    .toPromise();                   // Get a Promise back for when the generator finishes
+    .withPrompts({ coffee: false }); // Mock the prompt answers
 })
 ```
 
@@ -68,13 +59,15 @@ Sometimes you may want to construct a test scenario for the generator to run wit
 var path = require('path');
 var fs = require('fs-extra');
 
-helpers.run(path.join( __dirname, '../app'))
+helpers.run(path.join(__dirname, '../app'))
   .inTmpDir(function (dir) {
     // `dir` is the path to the new temporary directory
     fs.copySync(path.join(__dirname, '../templates/common'), dir)
   })
   .withPrompts({ coffee: false })
-  .toPromise();
+  .then(function () {
+    assert.file('common/file.txt');
+  });
 ```
 
 You can also perform asynchronous task in your callback:
@@ -83,25 +76,23 @@ You can also perform asynchronous task in your callback:
 var path = require('path');
 var fs = require('fs-extra');
 
-helpers.run(path.join( __dirname, '../app'))
+helpers.run(path.join(__dirname, '../app'))
   .inTmpDir(function (dir) {
     var done = this.async(); // `this` is the RunContext object.
     fs.copy(path.join(__dirname, '../templates/common'), dir, done);
   })
-  .withPrompts({ coffee: false })
-  .toPromise();
+  .withPrompts({ coffee: false });
 ```
 
-When using `.toPromise()`, the returned Promise will resolve with the directory that the generator was run in. This can be useful if you want to use a temporary directory that the generator was run in:
+The run Promise will resolve with the directory that the generator was run in. This can be useful if you want to use a temporary directory that the generator was run in:
 
 ```js
-helpers.run(path.join( __dirname, '../app'))
+helpers.run(path.join(__dirname, '../app'))
   .inTmpDir(function (dir) {
     var done = this.async(); // `this` is the RunContext object.
     fs.copy(path.join(__dirname, '../templates/common'), dir, done);
   })
   .withPrompts({ coffee: false })
-  .toPromise()
   .then(function (dir) {
     // assert something about the stuff in `dir`
   });
@@ -113,15 +104,13 @@ If your generator calls `composeWith()`, you may want to mock those dependent ge
 var deps = [
   [helpers.createDummyGenerator(), 'karma:app']
 ];
-return helpers.run(path.join( __dirname, '../app'))
-  .withGenerators(deps)
-  .toPromise();
+return helpers.run(path.join(__dirname, '../app')).withGenerators(deps);
 ```
 
 If you hate promises, you can use the `'ready'`, `'error'`, and `'end'` Events emitted:
 
 ```js
-helpers.run(path.join( __dirname, '../app'))
+helpers.run(path.join(__dirname, '../app'))
   .on('error', function (error) {
     console.log('Oh Noes!', error);
   })
