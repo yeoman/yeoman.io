@@ -8,7 +8,7 @@ excerpt: How to interact with the file system in efficient ways
 
 ## Location contexts and paths
 
-Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are folders your generator will most likely read from and write to.
+Yeoman file utilities are based on the idea you always have three location contexts on disk. These contexts are folders your generator will most likely read from and write to.
 
 ### Destination context
 
@@ -51,6 +51,17 @@ class extends Generator {
     // returns './templates/index.js'
   }
 });
+```
+
+### Execution context
+
+The execution context is the folder in which Yeoman is being executed. It is useful if your generator needs to scaffold into _that_ folder instead of the _destination context_ - which may point to your user project folder.
+
+You can get the execution context by retrieving the value of the `contextRoot` property of the generator:
+
+```js
+var contextRoot = this.contextRoot ;
+// do something into the folder where Yeoman is being executed
 ```
 
 ## An "in memory" file system
