@@ -15,8 +15,6 @@ In Yeoman, composability can be initiated in two ways:
  * A generator can decide to compose itself with another generator (e.g., `generator-backbone` uses `generator-mocha`).
  * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails). Note: end user initiated composition is a planned feature and currently not available.
 
-**Note:** The User composability feature landed in core in version **0.17.0**. It is a work in progress but is stable enough to start using. Further documentation will come after a few refinements to the process and can be expected sooner rather than later!
-
 ## `generator.composeWith()`
 
 The `composeWith` method allows the generator to run side-by-side with another generator (or subgenerator). That way it can use features from the other generator instead of having to do it all by itself.
@@ -25,35 +23,24 @@ When composing, don't forget about [the running context and the run loop](/autho
 
 ### API
 
-`composeWith` takes three parameters.
+`composeWith` takes two parameters.
 
- 1. `namespace` - A String declaring the namespace of the generator to compose with. The default matches generators installed on the end user's system. Use [`peerDependencies`](https://nodejs.org/en/blog/npm/peer-dependencies/) to install needed generators with this one.
- 2. `options` - An Object containing an `options` object and/or an `args` array. The called generator will receive these when it runs.
- 3. `settings` - An Object used to declare composition settings. The generator uses these when determining how to run other generators.
-    * `settings.local` - A String that defines a path to the requested generator. This allows the use of sub-generators. It also allows the use of a specific version of a generator. To do so, declare it in the [`dependencies` section inside `package.json`](https://docs.npmjs.com/files/package.json#dependencies). Then reference the path to that generator, usually `node_modules/generator-name`.
-    * `settings.link` - A String that is either `weak` (default), or `strong`.
-
-      A `weak` link will not run when the composability is user initiated. A `strong` link will always run.
-
-      A `weak` link is for features unrelated to the core of the generator like backend frameworks or CSS preprocessors. A `strong` link is for features requiring an action to occur. An example is scaffolding a _module_ by composing a _route_ generator and a _model_ generator.
-
+ 1. `generatorPath` - A full path pointing to the generator you want to compose with (usually using `require.resolve()`).
+ 2. `options` - An Object containing containing options to pass to the composed generator once it runs.
 
 When composing with a `peerDependencies` generator:
 
 ```js
-this.composeWith('backbone:route', { options: {
-  rjs: true
-}});
+this.composeWith(require.resolve('generator-bootstrap/generators/app'), {preprocessor: 'sass'});
 ```
 
-When composing with a `dependencies` generator:
+`require.resolve()` returns the path from where Node.js would load the provided module.
+
+Even though it is not an encouraged practice, you can also pass a generator namespace to `composeWith`. In that case, Yeoman will try to find that generator installed as a `peerDependencies` or globally on the end user system.
 
 ```js
-this.composeWith('backbone:route', {}, {
-  local: require.resolve('generator-bootstrap')
-});
+this.composeWith('backbone:route', {rjs: true});
 ```
-`require.resolve()` returns the path from where Node.js would load the provided module.
 
 ### <a name="order"></a>execution example
 ```js
@@ -82,8 +69,8 @@ module.exports = class extends Generator {
 // In my-generator/generators/app/index.js
 module.exports = class extends Generator {
   initializing() {
-    this.composeWith('my-generator:turbo');
-    this.composeWith('my-generator:electric');
+    this.composeWith(require.resolve('../turbo'));
+    this.composeWith(require.resolve('../electric'));
   }
 };
 ```
@@ -97,7 +84,9 @@ writing - turbo
 writing - zap
 ```
 
-However, you can alter this by switching the calls for `this.composeWith`, also keep in mind, these can be generators from npm packages, see below.
+You can alter the function call order by reversing the calls for `composeWith`.
+
+Keep in mind you can compose with other public generators available on npm.
 
 For a more complex example of composability, check out
 [generator-generator](https://github.com/yeoman/generator-generator/blob/master/app/index.js)
@@ -109,7 +98,7 @@ which is composed of
 *npm* allows three types of dependencies:
 
  * `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
- * `peerDependencies` get installed alongside the generator, as a sibling (<strong>*</strong> See note at bottom). If `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
+ * `peerDependencies` get installed alongside the generator, as a sibling. For example, if `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
 
     ```
     ├───generator-backbone/
