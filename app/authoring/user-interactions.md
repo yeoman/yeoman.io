@@ -10,7 +10,7 @@ Your generator will interact a lot with the end user. By default Yeoman runs on 
 
 To allow for this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only use those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
 
-For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from users not using a terminal. Instead, always rely on the UI generic `generator.log()` method, where `generator` is the context of your current generator.
+For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from users not using a terminal. Instead, always rely on the UI generic `this.log()` method, where `this` is the context of your current generator.
 
 ## User interactions
 
@@ -32,10 +32,10 @@ module.exports = class extends Generator {
       type    : 'confirm',
       name    : 'cool',
       message : 'Would you like to enable the Cool feature?'
-    }]).then(function (answers) {
+    }]).then((answers) => {
       this.log('app name', answers.name);
       this.log('cool feature', answers.cool);
-    }.bind(this));
+    });
   }
 };
 ```
@@ -71,17 +71,16 @@ yo webapp my-project
 
 In this example, `my-project` would be the first argument.
 
-To notify the system that we expect an argument, we use the `generator.argument()` method. This method accepts a `name` (String) and an optional hash of options.
+To notify the system that we expect an argument, we use the `this.argument()` method. This method accepts a `name` (String) and an optional hash of options.
 
-The `name` will be used to create a getter on the generator: `generator['name']`.
+The `name` argument will then be available as: `this.options[name]`.
 
 The options hash accepts multiple key-value pairs:
 
 - `desc` Description for the argument
 - `required` Boolean whether it is required
-- `optional` Boolean whether it is optional
-- `type` String, Number, Array, or Object
-- `defaults` Default value for this argument
+- `type` String, Number, Array (can also be a custom function receiving the raw string value and parsing it)
+- `default` Default value for this argument
 
 This method must be called inside the `constructor` method. Otherwise Yeoman won't be able to output the relevant help information when a user calls your generator with the help option: e.g. `yo webapp --help`.
 
@@ -97,11 +96,14 @@ module.exports = class extends Generator {
 
     // This makes `appname` a required argument.
     this.argument('appname', { type: String, required: true });
-    // And you can then access it later on this way; e.g. CamelCased
-    this.appname = _.camelCase(this.appname);
+
+    // And you can then access it later; e.g.
+    this.log(this.options.appname);
   }
 };
 ```
+
+Argument of type `Array` will contains all remaining arguments passed to the generator.
 
 ### Options
 
@@ -119,8 +121,8 @@ The options hash (the second argument) accepts multiple key-value pairs:
 
 - `desc` Description for the option
 - `alias` Short name for option
-- `type` Either Boolean, String or Number
-- `defaults` Default value
+- `type` Either Boolean, String or Number (can also be a custom function receiving the raw string value and parsing it)
+- `default` Default value
 - `hide` Boolean whether to hide from help
 
 Here is an example:
@@ -133,7 +135,8 @@ module.exports = class extends Generator {
 
     // This method adds support for a `--coffee` flag
     this.option('coffee');
-    // And you can then access it later on this way; e.g.
+
+    // And you can then access it later; e.g.
     this.scriptSuffix = (this.options.coffee ? ".coffee": ".js");
   }
 });
