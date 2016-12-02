@@ -133,9 +133,6 @@ Some popular AST parsers are:
 - [Cheerio](https://github.com/cheeriojs/cheerio) for parsing HTML.
 - [Esprima](https://github.com/ariya/esprima) for parsing JavaScript - you might be interested in [AST-Query](https://github.com/SBoudrias/ast-query) which provide a lower level API to edit Esprima syntax tree.
 - For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
+- [Gruntfile Editor](https://github.com/SBoudrias/gruntfile-editor) to dynamically modify a Gruntfile.
 
 Parsing a code file with RegEx is perilous path, and before doing so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users' code.
-
-## Tip: Writing a Gruntfile
-
-Refer to the dedicated [Gruntfile documentation](/authoring/gruntfile.html).
