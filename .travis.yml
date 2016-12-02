@@ -41,5 +41,6 @@ script: npm run-script deploy
 # Compiling a lot of our dependencies takes forever. We're caching them
 cache:
   bundler: true
+  yarn: true
   directories:
     - node_modules
