@@ -33,6 +33,8 @@ class extends Generator {
 
 And you can manually set it using `generator.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
 
+If you want to know from where the user is running `yo`, then you can get the path with `this.contextRoot`. This is the raw path where `yo` was invoked from; before we determine the project root with `.yo-rc.json`.
+
 ### Template context
 
 The template context is the folder in which you store your template files. It is usually the folder from which you'll read and copy.
