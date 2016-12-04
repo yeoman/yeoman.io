@@ -10,9 +10,9 @@ It's been a long time coming, but `yeoman-generator` 1.0 is finally available!
 
 We've been [talking about releasing a 1.0](https://github.com/yeoman/generator/issues/766) release since February 2015. Yeoman has been around since 2012. Over those 4 years, it accumulated a lot of technical debt and depreciated API. We always put a lot of value in maintaining backward compatibility and making upgrading to new version of our core framework as smooth as possible. As such, we started in 2015 to release smaller sets of breaking changes as minor pre 1.0.
 
-It's hard to clearly define when we're ready to accept an API as good enough to be maintained as the baseline of our project. Stripping out useless and deprecated methods brought us to a point where we could clearly see some core accidental complexity. So, we're releasing 1.0 today fixing these and removing all the methods that had been marked a deprecated.
+It's hard to clearly define when we're ready to accept an API as good enough to be maintained as the baseline of our project. Stripping out useless and deprecated methods brought us to a point where we could clearly see some core accidental complexity. So, we're releasing 1.0 today fixing these and removing all the methods that had been marked as deprecated.
 
-If you've been keeping up to date with past `yeoman-generator` release, we expect the update process to be relatively painless.
+If you've been keeping up to date with past `yeoman-generator` releases, we expect the update process to be relatively painless.
 
 ## Changes
 
@@ -20,7 +20,7 @@ The two major changes with this release was rethinking and simplifying the way y
 
 ### Update to option and argument parsing
 
-A lot of bug accumulated around the way the generator system handled option and argument. We believe we fixed most of these as of 1.0.
+A lot of bugs accumulated around the way the generator system handled option and argument. We believe we fixed most of these as of 1.0.
 
 For generator maintainers, the main changes is that argument and options are now both accessible in the same transparent way. Arguments are now accessed as `this.option[argumentName]` instead of `this[argumentName]`. The old way was often creating bugs due to clashes with other instance names.
 
