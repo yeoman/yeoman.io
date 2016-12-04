@@ -33,6 +33,15 @@ class extends Generator {
 
 And you can manually set it using `generator.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
 
+Note that you can use the `contextRoot` property of the generator to retrieve the directory in which Yeoman is being executed:
+
+```js
+var currentDirectory = this.contextRoot ;
+// do something into the folder where Yeoman is being executed
+```
+
+It is useful if your generator needs to scaffold into _that_ directory instead of the _destination context_.
+
 ### Template context
 
 The template context is the folder in which you store your template files. It is usually the folder from which you'll read and copy.
