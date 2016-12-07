@@ -39,7 +39,7 @@ Then install the needed generator(s). Generators are npm packages named `generat
 npm install -g generator-webapp
 ```
 
-New Node and npm users might runs into permissions issues. These issues shows up in the form of `EACCESS` errors during installation. Refer to the [npm guide to fix permissions]
+New Node and npm users might run into permissions issues. These issues show up in the form of `EACCESS` errors during installation. Refer to the [npm guide to fix permissions]
 (https://docs.npmjs.com/getting-started/fixing-npm-permissions) if this happens to you.
 
 *npm is the package manager for [Node.js](https://nodejs.org/) and comes bundled with it.*
@@ -63,7 +63,7 @@ Most generators will ask a series of questions to customize the new project. To 
 yo webapp --help
 ```
 
-A lot of generators rely on build systems (like Grunt or Gulp), and package managers (like npm and Bower). Make sure to visit the generator's site to learn about running and maintaining the new app. Easily access a generator's home page by running:
+A lot of generators rely on build systems (like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)), and package managers (like npm and Bower). Make sure to visit the generator's site to learn about running and maintaining the new app. Easily access a generator's home page by running:
 
 ```sh
 npm home generator-webapp
