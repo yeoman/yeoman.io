@@ -36,6 +36,8 @@ this.composeWith(require.resolve('generator-bootstrap/generators/app'), {preproc
 
 `require.resolve()` returns the path from where Node.js would load the provided module.
 
+Note: If you need to pass `arguments` to a Generator based on a version of `yeoman-generator` older than 1.0, you can do that by providing an `Array` as the `options.arguments` key.
+
 Even though it is not an encouraged practice, you can also pass a generator namespace to `composeWith`. In that case, Yeoman will try to find that generator installed as a `peerDependencies` or globally on the end user system.
 
 ```js
