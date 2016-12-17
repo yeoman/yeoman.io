@@ -3,7 +3,7 @@
   <title>Yeoman Blog</title>
   <link href="http://yeoman.io/blog/atom.xml" rel="self"/>
   <link href="http://yeoman.io"/>
-  <updated>2016-12-17T20:36:10+00:00</updated>
+  <updated>2016-12-17T21:38:03+00:00</updated>
   <id>http://yeoman.io/</id>
   <author>
     <name>Yeoman Team</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>Say allo' to yeoman-generator 1.0</title>
     <link href="http://yeoman.io/blog/hello-generator-1.0.html"/>
-    <updated>2016-12-03T00:00:00+00:00</updated>
+    <updated>2016-12-17T00:00:00+00:00</updated>
     <id>http://yeoman.io/blog/hello-generator-1.0</id>
     <content type="html">&lt;p>It's been a long time coming, but &lt;code>yeoman-generator&lt;/code> 1.0 is finally available!&lt;/p>&lt;ul>&lt;li>&lt;a href=https://github.com/yeoman/generator/releases/tag/v1.0.0>Full changelog&lt;/a>&lt;/li> &lt;li>&lt;a href=https://www.npmjs.com/package/yeoman-generator>Download from npm&lt;/a>&lt;/li>&lt;/ul>&lt;p>We've been &lt;a href=https://github.com/yeoman/generator/issues/766>talking about releasing a 1.0&lt;/a> release since February 2015. Yeoman has been around since 2012. Over those 4 years, it accumulated a lot of technical debt and depreciated API. We always put a lot of value in maintaining backward compatibility and making upgrading to new version of our core framework as smooth as possible. As such, we started in 2015 to release smaller sets of breaking changes as minor pre 1.0.&lt;/p>&lt;p>It's hard to clearly define when we're ready to accept an API as good enough to be maintained as the baseline of our project. Stripping out useless and deprecated methods brought us to a point where we could clearly see some core accidental complexity. So, we're releasing 1.0 today fixing these and removing all the methods that had been marked as deprecated.&lt;/p>&lt;p>If you've been keeping up to date with past &lt;code>yeoman-generator&lt;/code> releases, we expect the update process to be relatively painless.&lt;/p>&lt;h2>Changes&lt;/h2>&lt;p>The two major changes with this release was rethinking and simplifying the way you compose generators and the way you handle options and arguments passed to your generator.&lt;/p>&lt;h3>Update to option and argument parsing&lt;/h3>&lt;p>A lot of bugs accumulated around the way the generator system handled option and argument. We believe we fixed most of these as of 1.0.&lt;/p>&lt;p>For generator maintainers, the main changes is that argument and options are now both accessible in the same transparent way. Arguments are now accessed as &lt;code>this.option[argumentName]&lt;/code> instead of &lt;code>this[argumentName]&lt;/code>. The old way was often creating bugs due to clashes with other instance names.&lt;/p>&lt;p>The &lt;code>type&lt;/code> property should now be correctly respected. It can also be defined as a function taking the string input and parsing it to whatever value you wish.&lt;/p>&lt;div class=highlight>&lt;pre>&lt;code class=language-js data-lang=js>&lt;span class=k>this&lt;/span>&lt;span class=p>.&lt;/span>&lt;span class=nx>option&lt;/span>&lt;span class=p>(&lt;/span>&lt;span class=s1>'bar'&lt;/span>&lt;span class=p>,&lt;/span> &lt;span class=p>{&lt;/span>
   &lt;span class=nx>type&lt;/span>&lt;span class=o>:&lt;/span> &lt;span class=p>(&lt;/span>&lt;span class=nx>input&lt;/span>&lt;span class=p>)&lt;/span> &lt;span class=o>=&amp;gt;&lt;/span> &lt;span class=nx>_&lt;/span>&lt;span class=p>.&lt;/span>&lt;span class=nx>capitalize&lt;/span>&lt;span class=p>(&lt;/span>&lt;span class=nx>input&lt;/span>&lt;span class=p>)&lt;/span>
