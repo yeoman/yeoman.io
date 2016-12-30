@@ -22,7 +22,7 @@ The two major changes with this release was rethinking and simplifying the way y
 
 A lot of bugs accumulated around the way the generator system handled option and argument. We believe we fixed most of these as of 1.0.
 
-For generator maintainers, the main changes is that argument and options are now both accessible in the same transparent way. Arguments are now accessed as `this.option[argumentName]` instead of `this[argumentName]`. The old way was often creating bugs due to clashes with other instance names.
+For generator maintainers, the main changes is that argument and options are now both accessible in the same transparent way. Arguments are now accessed as `this.options[argumentName]` instead of `this[argumentName]`. The old way was often creating bugs due to clashes with other instance names.
 
 The `type` property should now be correctly respected. It can also be defined as a function taking the string input and parsing it to whatever value you wish.
 
