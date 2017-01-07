@@ -26,7 +26,7 @@ When composing, don't forget about [the running context and the run loop](/autho
 `composeWith` takes two parameters.
 
  1. `generatorPath` - A full path pointing to the generator you want to compose with (usually using `require.resolve()`).
- 2. `options` - An Object containing containing options to pass to the composed generator once it runs.
+ 2. `options` - An Object containing options to pass to the composed generator once it runs.
 
 When composing with a `peerDependencies` generator:
 
