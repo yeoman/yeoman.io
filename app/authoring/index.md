@@ -115,7 +115,7 @@ If you need to support ES5 environment, the static `Generator.extend()` method c
 
 Some generator methods can only be called inside the `constructor` function. These special methods may do things like set up important state controls and may not function outside of the constructor.
 
-To override the generator constructor, you pass a constructor function to `extend()` like so:
+To override the generator constructor, add a constructor method like so:
 
 ```js
 module.exports = class extends Generator {
