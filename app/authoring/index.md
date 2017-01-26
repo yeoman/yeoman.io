@@ -139,11 +139,11 @@ Let's add some methods:
 ```js
 module.exports = class extends Generator {
   method1() {
-    console.log('method 1 just ran');
+    this.log('method 1 just ran');
   }
 
   method2() {
-    console.log('method 2 just ran');
+    this.log('method 2 just ran');
   }
 };
 ```
@@ -163,7 +163,7 @@ On the command line, from the root of your generator project (in the `generator-
 npm link
 ```
 
-That will install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
+That will install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `this.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
 
 
 ### Finding the project root
