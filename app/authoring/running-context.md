@@ -125,3 +125,7 @@ asyncTask() {
 ```
 
 If the `done` function is called with an error parameter, the run loop will stop and an exception will be raised.
+
+## Where to go from here?
+
+Now that you know a bit more about the running context of yeoman you could continue by reading [user interactions](/authoring/user-interactions.html).
