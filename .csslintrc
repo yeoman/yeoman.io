@@ -8,6 +8,7 @@
   "display-property-grouping": true,
   "bulletproof-font-face": false,
   "compatible-vendor-prefixes": false,
+  "order-alphabetical": false,
   "regex-selectors": false,
   "errors": false,
   "duplicate-background-images": false,
