@@ -42,12 +42,7 @@
     // Sticky submenu
     (function() {
       var $contentNav = $('.context-nav');
-      function resizer () {
-        var state = $doc.scrollTop() > 148;
-        if (state !== oldState) {
-          toggle(state);
-        }
-      }
+      var oldState = null;
       function toggle (state) {
         var rightOffset = (
           $win.outerWidth() - $contentNav.offset().left -
@@ -58,8 +53,13 @@
           .css('right', state ? rightOffset : 0);
         oldState = state;
       }
+      function resizer () {
+        var state = $doc.scrollTop() > 148;
+        if (state !== oldState) {
+          toggle(state);
+        }
+      }
       if ($contentNav.length) {
-        var oldState = null;
         $doc.scroll(resizer).trigger('scroll');
         $win.resize(function() {
           oldState = null;
