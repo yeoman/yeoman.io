@@ -103,7 +103,7 @@ module.exports = class extends Generator {
 };
 ```
 
-Argument of type `Array` will contains all remaining arguments passed to the generator.
+Argument of type `Array` will contain all remaining arguments passed to the generator.
 
 ### Options
 
