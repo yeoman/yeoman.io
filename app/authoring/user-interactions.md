@@ -98,7 +98,7 @@ module.exports = class extends Generator {
     this.argument('appname', { type: String, required: true });
 
     // And you can then access it later; e.g.
-    this.log(this.options.appname);
+    this.log(this.appname);
   }
 };
 ```
