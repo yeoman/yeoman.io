@@ -3,7 +3,7 @@ layout: documentation
 title: Testing Generators
 category: authoring
 sidebar: sidebars/authoring.md
-excerpt: Yeoman allows and promotes and encourages testing. This is how
+excerpt: Yeoman allows, promotes and encourages testing. This is how.
 ---
 
 Read on to learn more about the testing helpers Yeoman add to ease the pain of unit testing a generator.
@@ -14,7 +14,7 @@ The examples below assume you use [Mocha](http://mochajs.org/) in BDD mode. The 
 
 It is important to keep your tests simple and easily editable.
 
-Usually the best way to organize your tests is to separate each generator and sub-generator into its own `describe` block. Then, add a `describe` block for each option your generator accept. And then, use an `it` block for each assertion (or related assertion).
+Usually the best way to organize your tests is to separate each generator and sub-generator into its own `describe` block. Then, add a `describe` block for each option your generator accepts. And then, use an `it` block for each assertion (or related assertion).
 
 In code, you should end up with a structure similar to this:
 
