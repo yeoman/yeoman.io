@@ -52,7 +52,7 @@ class extends Generator {
     this.templatePath('index.js');
     // returns './templates/index.js'
   }
-});
+};
 ```
 
 ## An "in memory" file system
