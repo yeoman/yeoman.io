@@ -39,7 +39,7 @@ var helpers = require('yeoman-test');
 
 You can check [the full helpers API here](https://github.com/yeoman/yeoman-test).
 
-The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](http://yeoman.io/generator/RunContext.html) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
+The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](https://github.com/yeoman/yeoman-test/blob/master/lib/run-context.js) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
 
 ```js
 var path = require('path');
