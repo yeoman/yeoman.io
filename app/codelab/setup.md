@@ -13,8 +13,8 @@ Most of your interactions with Yeoman will be through the command line. Run comm
 ## Install prerequisites
 
 Before installing the Fountain Webapp Generator, you will need the following:
-* Node.js v6.0.0 or higher
-* NPM v3.0.0 or higher (which comes bundled with Node)
+* Node.js 6 or higher
+* npm 3 or higher (which comes bundled with Node)
 * Git
 
 You can check if you have Node and npm installed by typing:
