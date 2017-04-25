@@ -101,14 +101,14 @@ The available priorities are (in running order):
 4. `default` - If the method name doesn't match a priority, it will be pushed to this group.
 5. `writing` - Where you write the generator specific files (routes, controllers, etc)
 6. `conflicts` - Where conflicts are handled (used internally)
-7. `install` - Where installation are run (npm, bower)
+7. `install` - Where installations are run (npm, bower)
 8. `end` - Called last, cleanup, say _good bye_, etc
 
 Follow these priorities guidelines and your generator will play nice with others.
 
 # Asynchronous tasks
 
-There's multiple ways to pause the run loop until a task is done doing work asynchronously.
+There are multiple ways to pause the run loop until a task is done doing work asynchronously.
 
 The easiest way is to **return a promise**. The loop will continue once the promise resolves, or it'll raise an exception and stop if it fails.
 
@@ -128,4 +128,4 @@ If the `done` function is called with an error parameter, the run loop will stop
 
 ## Where to go from here?
 
-Now that you know a bit more about the running context of yeoman you could continue by reading [user interactions](/authoring/user-interactions.html).
+Now that you know a bit more about the running context of yeoman, you can continue by reading [user interactions](/authoring/user-interactions.html).
