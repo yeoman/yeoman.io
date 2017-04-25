@@ -52,7 +52,7 @@ Yeoman extends the Inquirer.js API by adding a `store` property to question obje
 this.prompt({
   type    : 'input',
   name    : 'username',
-  message : 'What\'s your Github username',
+  message : 'What\'s your Github username?',
   store   : true
 });
 ```
