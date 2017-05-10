@@ -63,7 +63,7 @@ You just need to call `generator.bowerInstall()` to launch the installation. Yeo
 
 ## Combined use
 
-Calling `generator.installDependencies()` runs npm and bower by default. You can decide which ones to use be passing booleans for each package manager.
+Calling `generator.installDependencies()` runs npm and bower by default. You can decide which ones to use by passing booleans for each package manager.
 
 Example for using Yarn with Bower:
 
