@@ -113,7 +113,7 @@ Once the generator is done running, `public/index.html` will contain:
 
 The generator system allows you to apply custom filters on every file writes. Automatically beautifying files, normalizing whitespace, etc, is totally possible.
 
-Once per Yeoman process, we will write every modified files to disk. This process is passed through a [vinyl](https://github.com/wearefractal/vinyl) object stream (just like [gulp](http://gulpjs.com/)). Any generator author can register a `transformStream` to modify the file path and/or the content.
+Once per Yeoman process, we will write every modified file to disk. This process is passed through a [vinyl](https://github.com/wearefractal/vinyl) object stream (just like [gulp](http://gulpjs.com/)). Any generator author can register a `transformStream` to modify the file path and/or the content.
 
 Registering a new modifier is done through the `registerTransformStream()` method. Here's an example:
 
@@ -137,4 +137,4 @@ Some popular AST parsers are:
 - For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 - [Gruntfile Editor](https://github.com/SBoudrias/gruntfile-editor) to dynamically modify a Gruntfile.
 
-Parsing a code file with RegEx is perilous path, and before doing so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users' code.
+Parsing a code file with RegEx is a perilous path, and before doing so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users' code.
