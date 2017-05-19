@@ -9,7 +9,7 @@ Running the `gulp build` task generates an optimized version of your application
 
 ## Gulp-gh-pages
 
-Using [the `gulp-gh-pages` Gulp plugin](https://www.npmjs.com/package/gulp-gh-pages), you can let your application deploy using a specific task, such as `gulp deploy`. It takes various options:
+Using the [`gulp-gh-pages`](https://www.npmjs.com/package/gulp-gh-pages) Gulp plugin, you can let your application deploy using a specific task, such as `gulp deploy`. It takes various options:
 
 * The Git origin, this defaults to `origin`.
 * The branch to push to, defaults to `gh-pages`.
