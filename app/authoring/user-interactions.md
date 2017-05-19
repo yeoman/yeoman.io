@@ -87,8 +87,6 @@ This method must be called inside the `constructor` method. Otherwise Yeoman won
 Here is an example:
 
 ```js
-var _ = require('lodash');
-
 module.exports = class extends Generator {
   // note: arguments and options should be defined in the constructor.
   constructor(args, opts) {
