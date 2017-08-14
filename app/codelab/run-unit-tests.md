@@ -18,7 +18,7 @@ Every tests should pass.
 
 ## Update unit tests
 
-You’ll find unit tests scaffolded in the `src` folder, so open up **src/app/reducers/todos.spec.js**. This is the unit test for your Todos reducer. For example we get focus on the first test who verify the initial state.
+You’ll find unit tests scaffolded in the `src` folder, so open up **src/app/reducers/todos.spec.js**. This is the unit test for your Todos reducer. For example we get focus on the first test who verify the initial state. note: for windows User, you might need to add 127.0.0.1 localhost entry to your etc/hosts file due to a confguration in phantom.
 
 ```js
 it('should handle initial state', () => {
