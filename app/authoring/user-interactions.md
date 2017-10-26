@@ -137,7 +137,7 @@ module.exports = class extends Generator {
     // And you can then access it later; e.g.
     this.scriptSuffix = (this.options.coffee ? ".coffee": ".js");
   }
-});
+};
 ```
 
 ## Outputting Information
