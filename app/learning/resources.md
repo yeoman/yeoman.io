@@ -11,6 +11,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 *Feel free to add additional ones, but make sure it's something of value and include the date.*
 
+* [A step-by-step guide to create and publish a Yeoman generator](http://www.fabianvallejos.com/create-publish-yeoman-generator-guide/) *2017-06-30*
 * [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
 * [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
 * [NetTuts - Building Apps With the Yeoman Workflow](http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254) *2013-07-15*
