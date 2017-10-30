@@ -61,7 +61,7 @@ this.composeWith(require.resolve('generator-node/generators/eslint'), {
 
 Previously the `yeoman-generator` package would expose a lot of unrelated functions.
 
-It now only export the core `Generator` class:
+It now only exports the core `Generator` class:
 
 ```js
 const Generator = require('yeoman-generator');
