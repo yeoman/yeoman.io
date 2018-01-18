@@ -21,9 +21,9 @@ show_drafts: true
 permalink: /blog/:title.html
 
 # Markdown library
-markdown: redcarpet
+markdown: kramdown
 
-highlighter: pygments
+highlighter: rouge
 
 paginate: 8
 paginate_path: /blog/page:num
