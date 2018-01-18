@@ -47,9 +47,10 @@ var path = require('path');
 beforeEach(function () {
   // The object returned acts like a promise, so return it to wait until the process is done
   return helpers.run(path.join(__dirname, '../app'))
-    .withOptions({ foo: 'bar' })    // Mock options passed in
-    .withArguments(['name-x'])      // Mock the arguments
-    .withPrompts({ coffee: false }); // Mock the prompt answers
+    .withOptions({ foo: 'bar' })      // Mock options passed in
+    .withArguments(['name-x'])        // Mock the arguments
+    .withPrompts({ coffee: false })   // Mock the prompt answers
+    .withLocalConfig({ lang: 'en' }); // Mock the local config
 })
 ```
 
