@@ -50,7 +50,7 @@ Add other [`package.json` properties](https://docs.npmjs.com/files/package.json)
 
 ### Folder tree
 
-Yeoman is deeply linked to the file system and to how you structure your directory tree. Each sub-generator is contained within its own folder.
+Yeoman's functionality is dependent on how you structure your directory tree. Each sub-generator is contained within its own folder.
 
 The default generator used when you call `yo name` is the `app` generator. This must be contained within the `app/` directory.
 
