@@ -109,8 +109,6 @@ module.exports = class extends Generator {};
 
 We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](https://nodejs.org/api/modules.html#modules_module_exports).
 
-If you need to support ES5 environment, the static `Generator.extend()` method can be used to extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
-
 ### Overwriting the constructor
 
 Some generator methods can only be called inside the `constructor` function. These special methods may do things like set up important state controls and may not function outside of the constructor.
