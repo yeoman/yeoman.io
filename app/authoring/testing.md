@@ -44,9 +44,9 @@ The most useful method when unit testing a generator is `helpers.run()`. This me
 ```js
 var path = require('path');
 
-beforeEach(function () {
+it("generate a project", function () {
   // The object returned acts like a promise, so return it to wait until the process is done
-  return helpers.run(path.join(__dirname, '../app'))
+  helpers.run(path.join(__dirname, '../app'))
     .withOptions({ foo: 'bar' })      // Mock options passed in
     .withArguments(['name-x'])        // Mock the arguments
     .withPrompts({ coffee: false })   // Mock the prompt answers
