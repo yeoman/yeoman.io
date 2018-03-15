@@ -46,7 +46,7 @@ var path = require('path');
 
 it('generate a project', function () {
   // The object returned acts like a promise, so return it to wait until the process is done
-  helpers.run(path.join(__dirname, '../app'))
+  return helpers.run(path.join(__dirname, '../app'))
     .withOptions({ foo: 'bar' })      // Mock options passed in
     .withArguments(['name-x'])        // Mock the arguments
     .withPrompts({ coffee: false })   // Mock the prompt answers
