@@ -49,22 +49,22 @@ this.composeWith('backbone:route', {rjs: true});
 // In my-generator/generators/turbo/index.js
 module.exports = class extends Generator {
   prompting() {
-    console.log('prompting - turbo');
+    this.log('prompting - turbo');
   }
 
   writing() {
-    console.log('writing - turbo');
+    this.log('writing - turbo');
   }
 };
 
 // In my-generator/generators/electric/index.js
 module.exports = class extends Generator {
   prompting() {
-    console.log('prompting - zap');
+    this.log('prompting - zap');
   }
 
   writing() {
-    console.log('writing - zap');
+    this.log('writing - zap');
   }
 };
 
