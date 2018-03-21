@@ -111,9 +111,9 @@ Options look a lot like arguments, but they are written as command line _flags_.
 yo webapp --coffee
 ```
 
-To notify the system we expect an option, we use the `generator.option()` method. This method accepts a `name` (String) and an optional hash of options.
+To notify the system that we expect an option, we use the `this.option()` method. This method accepts a `name` (String) and an optional hash of options.
 
-The `name` value will be used to retrieve the argument at the matching key `generator.options[name]`.
+The `name` value will be used to retrieve the option at the matching key `this.options[name]`.
 
 The options hash (the second argument) accepts multiple key-value pairs:
 
@@ -142,9 +142,9 @@ module.exports = class extends Generator {
 
 ## Outputting Information
 
-Outputting information is handled by the `generator.log` module.
+Outputting information is handled by the `this.log` module.
 
-The main method you'll use is simply `generator.log` (e.g. `generator.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
+The main method you'll use is simply `this.log` (e.g. `this.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
 
 ```js
 module.exports = class extends Generator {
