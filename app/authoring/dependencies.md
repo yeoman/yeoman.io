@@ -94,3 +94,34 @@ class extends Generator {
 ```
 
 Make sure to call the `spawnCommand` method inside the `install` queue. Your users don't want to wait for an installation command to complete.
+
+## Manage dependencies with `package.json`
+
+You just need to create a variable as same as `package.json` file. `fs` module can read and write it to destination folder as a `package.json` file. `npmInstall` function install all dependencies and dev dependencies.
+
+For example you want to install `eslint` as dev dependency and `react` as dependency. 
+
+```js
+ writing() {
+    const pkgJson = {
+        devDependencies: {
+            eslint: "^3.15.0"
+        },
+        dependencies: {
+            react: "^16.2.0",
+        },
+
+    };
+    // Create package.json file in destination path with pkgJson content
+    this.fs.extendJSON(
+      this.destinationPath('package.json'),
+      pkgJson
+    );
+  }
+
+  install() {
+    this.npmInstall();
+  }
+```
+
+This is equvalent to call `npm install` on created `package.json` file.
