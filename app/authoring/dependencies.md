@@ -95,7 +95,7 @@ class extends Generator {
 
 Make sure to call the `spawnCommand` method inside the `install` queue. Your users don't want to wait for an installation command to complete.
 
-## Manage dependencies with `package.json`
+## Manage dependencies as `package.json`
 
 You just need to create a variable as same as `package.json` file. `fs` module can read and write it to destination folder as a `package.json` file. `npmInstall` function install all dependencies and dev dependencies.
 
