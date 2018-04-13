@@ -5,7 +5,6 @@ node_js:
 branches:
   only:
     - source
-    - fix-travis
 
 addons:
   apt:
