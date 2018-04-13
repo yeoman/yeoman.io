@@ -860,105 +860,116 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
 
 /* Discovery Page */
 
-#plugins-all > table {
+.discovery-page .ais-search-box {
   width: 100%;
+  max-width: 100%;
 }
-
-.discovery-page th {
-  cursor: pointer;
-}
-
-.discovery-page th.sort {
-  text-align: left;
-}
-
-.discovery-page th.sort:before {
-  content: '\21C5';
-  display: inline-block;
-  opacity: .4;
-  font-size: 0.8em;
-  margin-right: 3px;
-}
-
-.discovery-page th.sort.asc:before,
-.discovery-page th.sort.desc:before {
-  opacity: 1;
-  margin-right: 7px;
-}
-
-.discovery-page th.sort.asc:before {
-  content: '\2193';
-  text-align: left;
-}
-
-.discovery-page th.sort.desc:before {
-  content: '\2191';
+.discovery-page .ais-stats--body {
   text-align: right;
+  padding: 10px 0;
 }
 
-.discovery-page td {
+.discovery-page .generator {
   padding: 10px 5px;
   border-top: 1px solid #ddd;
-  position: relative;
-  vertical-align: top;
+  display: flex;
 }
-
-.discovery-page tr.official td.generator-item::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -25px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 7px;
-  background: url(/assets/img/mustache.svg) no-repeat;
-  opacity: 0.5;
+.discovery-page .generator--left {
+  flex: auto;
 }
-
-.discovery-page td.generator-item a {
+.discovery-page .generator--title {
+  display: flex;
+  align-items: center;
+}
+.discovery-page .generator--title a {
   text-decoration: none;
 }
-
-.discovery-page td.generator-item a:hover {
+.discovery-page .generator--title a:hover {
   text-decoration: underline;
 }
-
-.discovery-page .name-info .name{
+.discovery-page .generator--name {
   font-size: larger;
 }
-
-.discovery-page .name-author {
-  font-size: small;
-  margin-left: 20px;
+.discovery-page .generator--name em {
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: underline;
 }
-
-.discovery-page .description{
+.discovery-page .generator--author {
+  font-size: .9rem;
+  margin-left: .5rem;
+}
+.discovery-page .generator--avatar {
+  border-radius: 4px;
+  position: relative;
+}
+.discovery-page .generator--avatar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:white;
+}
+.discovery-page .generator--version {
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: .8rem;
+  color: rgba(0, 0, 0, .5);
+  padding: 2px 4px;
+  margin-left: .5rem;
+}
+.discovery-page .generator--description {
+  font-size: 1rem;
+  padding: .5rem 0px;
+}
+.discovery-page .generator--description em {
+  color: rgba(0, 0, 0, .8);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.discovery-page .generator--right {
+  flex: none;
+  width: 25%;
+  align-items: center;
+  display: flex;
+  text-align: right;
   font-size: smaller;
 }
-
-.discovery-page td.metadata {
-  font-size: smaller;
-  text-align: right;
+.discovery-page .generator--downloads {
+  flex: auto;
+}
+.discovery-page .generator--downloads:before {
+  position: relative;
+  display: inline-block;
+  content: '';
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/search-download.svg);
+  width: 15px;
+  height: 20px;
+  margin-right: 3px;
+  top: 2px;
+}
+.discovery-page .generator--downloads-t1:before {
+  background-image: url(/assets/img/search-hot-t1.svg);
+}
+.discovery-page .generator--downloads-t2:before {
+  background-image: url(/assets/img/search-hot-t2.svg);
+}
+.discovery-page .generator--downloads-t3:before {
+  background-image: url(/assets/img/search-hot-t3.svg);
+}
+.discovery-page .generator--downloads-t4:before {
+  background-image: url(/assets/img/search-hot-t4.svg);
+}
+.discovery-page .generator--date {
+  flex: none;
+  width: 50%;
 }
 
-.discovery-page th.metadata {
-  font-size: 0.9em;
-  text-align: right;
-  width: 85px;
-}
-
-.discovery-page th.last-updated {
-  width: 125px;
-}
-
-.discovery-page input.search {
-  width: 100%;
-  line-height: 1.5em;
-  margin: 20px 0;
-  font-size: 20px;
-  padding: 10px;
-  box-sizing: border-box;
-}
 
 /* Blog */
 

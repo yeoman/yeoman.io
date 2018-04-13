@@ -43,6 +43,10 @@
 </footer><!-- /.footer-links -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+{% if page.title == 'Generators' %}
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js"></script>
+{% endif %}
 
 <script src="/assets/js/libs/prettify.js"></script>
 <script src="/assets/js/script.js"></script>
@@ -50,9 +54,7 @@
 {% if page.title == 'Generators' %}
   <!-- The #bootstrapper script will be removed by grunt-reduce during build. -->
   <!-- Use GETSTATIURL to indicate that manually loaded strings are actually URLs -->
-  <script src="/assets/js/libs/js.cookie.min.js"></script>
   <script src="/assets/js/libs/doT.min.js"></script>
-  <script src="/assets/js/libs/list.js"></script>
   <script src="/assets/js/generator.js"></script>
 {% endif %}
 

@@ -1,76 +1,113 @@
+/*global instantsearch, timeago */
 (function (win) {
   'use strict';
 
   var $ = win.jQuery;
-
-  // Settings for doT.js
   var doT = win.doT;
   doT.templateSettings.interpolate = /<\%=([\s\S]+?)\%\>/g;
-  doT.templateSettings.conditional = /<\%if( else)?\s*([\s\S]*?)\s*\%>/g;
-  doT.templateSettings.iterate = /<\%each\s*(?:\%>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\%>)/g;
+  var itemTemplate = doT.template($('#template-item').text());
+
+  function highlight(item, key) {
+    if (item._highlightResult[key]) {
+      return item._highlightResult[key].value;
+    }
+    return item[key];
+  }
+
+  function getUrl(item) {
+    if (item.homepage) {
+      return item.homepage;
+    }
+    if (item.githubRepo) {
+      return 'https://github.com/' + item.githubRepo.user + '/' + item.githubRepo.project;
+    }
+    return 'https://npmjs.com/package/' + item.name;
+  }
+
+  function getDownloadClass(downloads) {
+    if (downloads < 1000) {
+      return null;
+    }
+    if (downloads < 10000) {
+      return 'generator--downloads-t1';
+    }
+    if (downloads < 50000) {
+      return 'generator--downloads-t2';
+    }
+    if (downloads < 100000) {
+      return 'generator--downloads-t3';
+    }
+    return 'generator--downloads-t4';
+  }
+
 
   $(function() {
+
     var instructions = $('#instructions');
     $('#instructions-toggle').on('click', function (e) {
       e.preventDefault();
       instructions.toggle('fast');
     });
 
-    var tpl = doT.template($('#plugins-all-template').text());
-    var pluginsAll = $('#plugins-all');
-    var lastSha = win.Cookies.get('sha');
+    var search = instantsearch({
+      appId: 'OFCNCOG2CU',
+      apiKey: '14ddf54fd4f3435c1cd4038395a0cf10',
+      indexName: 'npm-search',
+      searchParameters: {
+        filters: 'deprecated:false AND keywords:yeoman-generator'
+      }
+    });
 
-    function insertErrorMsg() {
-      pluginsAll.html('There was a problem fetching the generator list. Please try again later.<br />Or you can use <a href="https://npms.io/search?q=keywords%3Ayeoman-generator">npms.io</a>.');
-    }
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: '#searchbox',
+        poweredBy: true,
+        placeholder: 'Search into all yeoman generators'
+      })
+    )
 
-    function fetchAndDisplayListGenerators(sha) {
-      $.getJSON('https://cdn.rawgit.com/yeoman/yeoman-generator-list/' + sha + '/cache.json')
-      .done(function (plugins) {
-        if (Array.isArray(plugins)) {
-          pluginsAll.html(tpl({
-            modules: plugins.sort(function (a, b) {
-              return a.stars === b.stars ? 0 : a.stars < b.stars ? 1 : -1;
-            })
-          }));
+    search.addWidget(
+      instantsearch.widgets.stats({
+        container: '#stats'
+      })
+    );
 
-          var list = new win.List('plugins-all', {
-            valueNames: [
-              'name',
-              'owner',
-              'stars',
-              'updated',
-              'downloads',
-              'description'
-            ]
-          });
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#results',
+        templates: {
+          empty: 'No matching generator found. Try something else.',
+          item: function(item) {
+            var name = highlight(item, 'name').replace('generator-', '')
+            var url = getUrl(item);
+            var description = highlight(item, 'description');
+            var authorName = item.owner.name;
+            var authorUrl = item.owner.link;
+            var authorAvatar = "https://res.cloudinary.com/hilnmyskv/image/fetch/w_40,h_40,f_auto,q_80,fl_lossy/" + item.owner.avatar;
+            var version = item.version;
+            var downloads = item.downloadsLast30Days;
+            var downloadReadable = item.humanDownloadsLast30Days;
+            var downloadClass = getDownloadClass(downloads);
+            var lastUpdated = timeago().format(item.modified); 
 
-          if (list.listContainer) {
-            list.on('updated', function () {
-              $('.table thead').toggle(list.matchingItems.length !== 0);
-              $('#search-notfound').toggle(list.matchingItems.length === 0);
+            return itemTemplate({
+              name: name,
+              url: url,
+              description: description,
+              authorName: authorName,
+              authorAvatar: authorAvatar,
+              authorUrl: authorUrl,
+              version: version,
+              downloadReadable: downloadReadable,
+              downloadClass: downloadClass,
+              lastUpdated: lastUpdated
             });
           }
         }
-        else {
-          insertErrorMsg();
-        }
       })
-      .fail(insertErrorMsg);
-    }
+    )
 
-    if (lastSha) {
-      fetchAndDisplayListGenerators(lastSha);
-    } else {
-      $.getJSON('https://api.github.com/repos/yeoman/yeoman-generator-list/commits?sha=cache-generators-list')
-      .done(function (response) {
-        var inThirtyMinutes = new Date(new Date().getTime() + 30 * 60 * 1000);
-        win.Cookies.set('sha', response[0].sha, {
-          expires: inThirtyMinutes
-        });
-        fetchAndDisplayListGenerators(response[0].sha);
-      })
-      .fail(insertErrorMsg);
-    }
+    search.start();
   });
 })(window);
+

@@ -25,89 +25,35 @@ class: discovery-page
           <ul>
             <li>Author information including name and link to your homepage.</li>
             <li>Generator documention link as its website.</li>
-            <li>Github link in its repository field. <strong>Note: If your Github repo is no longer available, your generator will not show up in the list until you remove or update the repo field.</strong></li>
+            <li>Github link in its repository field.</li>
           </ul>
         </li>
       </ul>
-      <p>
-        If you don't follow these guidelines, your generator may get added to the <a href="https://github.com/yeoman/yeoman-generator-list/blob/master/src/blacklist.js">blacklist</a>. If your generator is on there, please fix the issues we notified you about and then submit a PR to remove the entry from the blacklist.
-      </p>
     </div>
 
     <hr>
 
-    <div id="plugins-all">
-      <div class="loading-indicator">
-        <div class="sk-circle">
-          <div class="sk-circle1 sk-child"></div>
-          <div class="sk-circle2 sk-child"></div>
-          <div class="sk-circle3 sk-child"></div>
-          <div class="sk-circle4 sk-child"></div>
-          <div class="sk-circle5 sk-child"></div>
-          <div class="sk-circle6 sk-child"></div>
-          <div class="sk-circle7 sk-child"></div>
-          <div class="sk-circle8 sk-child"></div>
-          <div class="sk-circle9 sk-child"></div>
-          <div class="sk-circle10 sk-child"></div>
-          <div class="sk-circle11 sk-child"></div>
-          <div class="sk-circle12 sk-child"></div>
+    <div id="searchbox"></div>
+    <div id="stats"></div>
+    <div id="results"></div>
+    <script type="text/template" id="template-item">
+      <div class="generator">
+        <div class="generator--left">
+          <div class="generator--title">
+            <a href="<%= it.url %>" class="generator--name"><%= it.name %></a>
+            <a class="generator--author" href="<%= it.authorUrl %>">
+                <img width="20" height="20" class="generator--avatar" src="<%= it.authorAvatar %>">
+                <%= it.authorName %>
+            </a>
+            <span class="generator--version"><%= it.version %></span>
+          </div>
+          <div class="generator--description"><%= it.description %></div>
+        </div>
+        <div class="generator--right"->
+          <div class="generator--downloads <%= it.downloadClass %>"><%= it.downloadReadable %></div>
+          <div class="generator--date"><%= it.lastUpdated %></div>
         </div>
       </div>
-    </div>
-    <div class="message" id="search-notfound">No matching generator found. Try something else.</div>
-  </section>
+    </script>
 
-  <script type="text/template" id="plugins-all-template">
-    <table class="table">
-      <caption>
-        <input class="search input-medium search-query" type="search" placeholder="Search in <%= it.modules.length %> generators..." autofocus>
-      </caption>
-      <thead>
-        <tr>
-          <th class="sort" data-sort="name">Generator</th>
-          <th class="sort metadata last-updated" data-sort="updated">Last Updated</th>
-          <th class="sort metadata" data-sort="stars">Stars</th>
-          <th class="sort metadata" data-sort="downloads">Installs</th>
-        </tr>
-      </thead>
-      <tbody class="list">
-       <%each it.modules :el:index %>
-          <tr class="<%if el.official %>official<%if%>">
-            <td class="generator-item">
-              <span class="name-info">
-                <%if el.site %>
-                  <a href="<%= el.site %>">
-                    <span class="name"><%= el.name %></span>
-                  </a>
-                <%if else%>
-                  <span class="name"><%= el.name %></span>
-                <%if%>
-                <%if el.owner.name %>
-                  <span class="name-author">
-                    by
-                    <%if el.owner.site %>
-                      <a href="<%= el.owner.site %>"><%= el.owner.name %></a>
-                    <%if else%>
-                      <%= el.owner.name %>
-                    <%if%>
-                  </span>
-                <%if%>
-              </span>
-              <br>
-              <span class="description"><%= el.description %></span>
-            </td>
-            <td class="updated metadata">
-                  <%if el.updated %>
-                    <span>
-                      <span class="hidden"><%= el.updated %></span>
-                      <%= el.timeSince %>
-                    </span>
-                  <%if%>
-            </td>
-            <td class="stars metadata"><%= el.stars %></td>
-            <td class="downloads metadata"><%= el.downloads %></td>
-          </tr>
-        <%each%>
-      </tbody>
-    </table>
-  </script>​
+  </section>
