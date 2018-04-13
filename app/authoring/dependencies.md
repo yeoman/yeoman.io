@@ -42,23 +42,23 @@ Example defining `eslint` as dev dependency and `react` as dependency:
 
 ```js
 class extends Generator {
-	writing() {
-		const pkgJson = {
-			devDependencies: {
-				eslint: '^3.15.0'
-			},
-			dependencies: {
-				react: '^16.2.0'
-			}
-		};
+  writing() {
+    const pkgJson = {
+      devDependencies: {
+        eslint: '^3.15.0'
+      },
+      dependencies: {
+        react: '^16.2.0'
+      }
+    };
 
-		// Extend or create package.json file in destination path with pkgJson content
-		this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
-	}
+    // Extend or create package.json file in destination path with pkgJson content
+    this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
+  }
 
-	install() {
-		this.npmInstall();
-	}
+  install() {
+    this.npmInstall();
+  }
 };
 ```
 
