@@ -52,7 +52,7 @@ class extends Generator {
       }
     };
 
-    // Extend or create package.json file in destination path with pkgJson content
+    // Extend or create package.json file in destination path
     this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
   }
 
