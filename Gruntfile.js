@@ -71,7 +71,8 @@ module.exports = function (grunt) {
       },
       check: {
         options: {
-          doctor: true
+          doctor: true,
+          src: './'
         }
       }
     },
