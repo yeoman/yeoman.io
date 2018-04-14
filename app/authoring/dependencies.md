@@ -14,7 +14,7 @@ Note that Yeoman provided installation helpers will automatically schedule the i
 
 ## npm
 
-You just need to call `generator.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple times by multiple generators.
+You just need to call `this.npmInstall()` to run an `npm` installation. Yeoman will ensure the `npm install` command is only run once even if it is called multiple times by multiple generators.
 
 For example you want to install lodash as a dev dependency:
 
@@ -64,7 +64,7 @@ class extends Generator {
 
 ## Yarn
 
-You just need to call `generator.yarnInstall()` to launch the installation. Yeoman will ensure the `yarn install` command is only run once even if it is called multiple time by multiple generators.
+You just need to call `this.yarnInstall()` to launch the installation. Yeoman will ensure the `yarn install` command is only run once even if it is called multiple time by multiple generators.
 
 For example you want to install lodash as a dev dependency:
 
@@ -86,11 +86,11 @@ on the command line in your project.
 
 ## Bower
 
-You just need to call `generator.bowerInstall()` to launch the installation. Yeoman will ensure the `bower install` command is only run once even if it is called multiple time by multiple generators.
+You just need to call `this.bowerInstall()` to launch the installation. Yeoman will ensure the `bower install` command is only run once even if it is called multiple time by multiple generators.
 
 ## Combined use
 
-Calling `generator.installDependencies()` runs npm and bower by default. You can decide which ones to use by passing booleans for each package manager.
+Calling `this.installDependencies()` runs npm and bower by default. You can decide which ones to use by passing booleans for each package manager.
 
 Example for using Yarn with Bower:
 

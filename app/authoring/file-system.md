@@ -16,7 +16,7 @@ The first context is the _destination context_. The destination is the folder in
 
 The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file defines the root of a Yeoman project. This file allows your user to run commands in subdirectories and have them work on the project. This ensures a consistent behaviour for the end user.
 
-You can **get** the _destination path_ using `generator.destinationRoot()` or by joining a path using `generator.destinationPath('sub/path')`.
+You can **get** the _destination path_ using `this.destinationRoot()` or by joining a path using `this.destinationPath('sub/path')`.
 
 ```js
 // Given destination root is ~/projects
@@ -31,7 +31,7 @@ class extends Generator {
 }
 ```
 
-And you can manually set it using `generator.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
+And you can manually set it using `this.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
 
 If you want to know from where the user is running `yo`, then you can get the path with `this.contextRoot`. This is the raw path where `yo` was invoked from; before we determine the project root with `.yo-rc.json`.
 
@@ -39,9 +39,9 @@ If you want to know from where the user is running `yo`, then you can get the pa
 
 The template context is the folder in which you store your template files. It is usually the folder from which you'll read and copy.
 
-The template context is defined as `./templates/` by default. You can overwrite this default by using `generator.sourceRoot('new/template/path')`.
+The template context is defined as `./templates/` by default. You can overwrite this default by using `this.sourceRoot('new/template/path')`.
 
-You can get the path value using `generator.sourceRoot()` or by joining a path using `generator.templatePath('app/index.js')`.
+You can get the path value using `this.sourceRoot()` or by joining a path using `this.templatePath('app/index.js')`.
 
 ```js
 class extends Generator {
