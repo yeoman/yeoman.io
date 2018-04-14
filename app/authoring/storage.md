@@ -14,7 +14,7 @@ Here are some common methods you'll use.
 
 ## Methods
 
-### `generator.config.save()`
+### `this.config.save()`
 
 This method will write the configuration to the `.yo-rc.json` file. If the file doesn't exist yet, the `save` method will create it.
 
@@ -22,27 +22,27 @@ The `.yo-rc.json` file also determines the root of a project. Because of that, e
 
 Also note that the `save` method is called automatically each time you `set` a configuration option. So you usually won't need to call it explicitly.
 
-### `generator.config.set()`
+### `this.config.set()`
 
 `set` either takes a key and an associated value, or an object hash of multiple keys/values.
 
 Note that values must be JSON serializable (String, Number or non-recursive objects).
 
-### `generator.config.get()`
+### `this.config.get()`
 
 `get` takes a `String` key as parameter and returns the associated value.
 
-### `generator.config.getAll()`
+### `this.config.getAll()`
 
 Returns an object of the full available configuration.
 
 The returned object is passed by value, not reference. This means you still need to use the `set` method to update the configuration store.
 
-### `generator.config.delete()`
+### `this.config.delete()`
 
 Deletes a key.
 
-### `generator.config.defaults()`
+### `this.config.defaults()`
 
 Accepts a hash of options to use as defaults values. If a key/value pair already exist, the value will remain untouched. If a key is missing, it will be added.
 
