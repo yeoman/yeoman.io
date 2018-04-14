@@ -23,7 +23,7 @@ get-command yo
 node --inspect <path to yo cli.js> <generator> [arguments]
 ```
 
-You can then debug your generator using the Chrome Devtools or your preferred IDE. See https://nodejs.org/en/docs/inspector/ for more info.
+You can then debug your generator using the Chrome Devtools or your preferred IDE. See [Node Debugging Guide](https://nodejs.org/en/docs/inspector/) for more info.
 
 Yeoman generators also provide a debug mode to log relevant lifecycle information. You can activate it by setting the `DEBUG` environment variable to the desired scope (the scope of the generator system is `yeoman:generator`).
 
