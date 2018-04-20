@@ -64,7 +64,7 @@
         poweredBy: true,
         placeholder: 'Search into all yeoman generators'
       })
-    )
+    );
 
     search.addWidget(
       instantsearch.widgets.stats({
@@ -78,17 +78,17 @@
         templates: {
           empty: 'No matching generator found. Try something else.',
           item: function(item) {
-            var name = highlight(item, 'name').replace('generator-', '')
+            var name = highlight(item, 'name').replace('generator-', '');
             var url = getUrl(item);
             var description = highlight(item, 'description');
             var authorName = item.owner.name;
             var authorUrl = item.owner.link;
-            var authorAvatar = "https://res.cloudinary.com/hilnmyskv/image/fetch/w_40,h_40,f_auto,q_80,fl_lossy/" + item.owner.avatar;
+            var authorAvatar = 'https://res.cloudinary.com/hilnmyskv/image/fetch/w_40,h_40,f_auto,q_80,fl_lossy/' + item.owner.avatar;
             var version = item.version;
             var downloads = item.downloadsLast30Days;
             var downloadReadable = item.humanDownloadsLast30Days;
             var downloadClass = getDownloadClass(downloads);
-            var lastUpdated = timeago().format(item.modified); 
+            var lastUpdated = timeago().format(item.modified);
 
             return itemTemplate({
               name: name,
@@ -105,7 +105,7 @@
           }
         }
       })
-    )
+    );
 
     search.start();
   });
