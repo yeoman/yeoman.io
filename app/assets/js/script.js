@@ -12,12 +12,15 @@
     var $container = $('.container');
 
     var fixedElementOffset,
-        footerOffset,
+        // footerOffset,
         fixedElementHeight;
 
     if ($container.hasClass('has-sidebar')) {
       fixedElementOffset = $context.offset().top;
-      footerOffset = $footer.offset().top - 93;
+      // A bug in the microsoft edge.
+      // The variable is assigned the value
+      // $footer.offset().top + 93
+      // footerOffset = $footer.offset().top - 93;
       fixedElementHeight = $context.height();
 
       $win.scroll(function (event) {
@@ -27,12 +30,13 @@
         } else {
           $context.css('top', '6em');
         }
-        if (y >= fixedElementOffset && y + fixedElementHeight < footerOffset) {
+        if (y >= fixedElementOffset && y + fixedElementHeight < $footer.offset().top - 93) {
+          var containerX = $('.container.clearfix').offset().left;
           $context.addClass('navbar-fixed').removeClass('navbar-absolute');
-          $context.css({'top': '6em', 'right': '40px'});
-        } else if (y >= fixedElementOffset && y + fixedElementHeight >= footerOffset) {
-          var fixEl = (fixedElementHeight / 2) + fixedElementHeight;
-          var newOffset = $footer.offset().top - fixEl;
+          $context.css({'top': '6em', 'right': containerX});
+        } else if (y >= fixedElementOffset && y + fixedElementHeight >= $footer.offset().top - 93) {
+          var containerHeight = $('.container.clearfix').height();
+          var newOffset = containerHeight - fixedElementHeight;
           $context.removeClass('navbar-fixed').addClass('navbar-absolute');
           $context.css({'top': newOffset, 'right': '0'});
         }
