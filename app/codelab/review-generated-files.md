@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 4: Review the Yeoman-generated app'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 Open up your `mytodo` directory to take a look at what was actually scaffolded. It'll look like this:

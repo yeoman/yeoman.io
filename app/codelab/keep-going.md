@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Congratulations!'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 <div class="mast-holder">

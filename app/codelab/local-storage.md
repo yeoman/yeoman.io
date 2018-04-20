@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 7: Make Todos persistent with local storage'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 Let’s revisit the issue of items not persisting when the browser refreshes with our React/Redux *mytodo* app.

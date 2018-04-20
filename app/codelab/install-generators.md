@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 2: Install a Yeoman generator'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for FountainJS projects.

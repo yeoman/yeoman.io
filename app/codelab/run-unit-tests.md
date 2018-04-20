@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 6: Test with Karma and Jasmine'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The fountainjs generator has included test framework [Jasmine](http://jasmine.github.io/). When we ran `yo fountain-webapp` earlier in this codelab the generator scaffolded  files with pattern `*.spec.js` in the source folder of the `mytodo` folder, created a `conf/karma.conf.js` file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.

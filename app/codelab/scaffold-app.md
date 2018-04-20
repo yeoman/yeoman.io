@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 3: Use a generator to scaffold out your app'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 We've used the word "scaffold" a few times but you might not know what that means. Scaffolding, in the Yeoman sense of the word, means generating files for your web app based on your specific configuration requests. In this step, you'll see how Yeoman can generate files specifically for your favorite library or framework &mdash; with options for using other external libraries like Webpack, Babel and SASS &mdash; with minimal effort.

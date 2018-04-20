@@ -2,6 +2,7 @@
 layout: codelab
 title: "Let's Scaffold a Web App with Yeoman"
 redirect_from: '/codelab.html'
+sidebar: sidebars/codelab.md
 ---
 
 <p class="authors">By Mehdy Dara</p>

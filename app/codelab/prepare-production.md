@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 8: Get ready for production'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 Ready to show your beautiful todo app to the world? Let’s try to build a production-ready version of it which we can ship.

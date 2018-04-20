@@ -2,6 +2,7 @@
 layout: codelab
 title: 'Step 1: Set up your dev environment'
 markdown: 1
+sidebar: sidebars/codelab.md
 ---
 
 <p class="mast-holder">
