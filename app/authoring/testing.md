@@ -124,6 +124,22 @@ helpers.run(path.join(__dirname, '../app'))
   .on('end', done);
 ```
 
+You can also run a generator importing it as a module. This is usefull if the source code of your generator is transpiled.
+
+You will need to provide the following settings to `run`:
+- `resolved`: Path to the generator, ej: `../src/app/index.js`
+- `namepsace`: Namespace of the generator, ej: `mygenerator:app`
+
+```js
+var MyGenerator = require('../src/app');
+
+helpers.run(MyGenerator, { 
+  resolved: path.join(__dirname, '../src/app/index.js'),
+  namespace: 'mygenerator:app'
+});
+
+```
+
 
 ## Assertions helpers
 
