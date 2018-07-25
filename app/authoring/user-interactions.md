@@ -42,6 +42,36 @@ module.exports = class extends Generator {
 
 Note here that we use the [`prompting` queue](/authoring/running-context.html) to ask for feedback from the user.
 
+#### Using user answers at a later stage
+
+A very common scenario is to use the the user asnwers at a later stage, e.g. in [`writing` queue](/authoring/running-context.html). This can be easily achieved by adding them to `this` context:
+
+```js
+module.exports = class extends Generator {
+  prompting() {
+    return this.prompt([{
+      type    : 'confirm',
+      name    : 'cool',
+      message : 'Would you like to enable the Cool feature?'
+    }]).then((answers) => {
+      this.answers = answers; // add user answers to `this` context
+    });
+  }
+};
+```
+
+At a [later stage](http://yeoman.io/authoring/file-system.html):
+
+```js
+module.exports = class extends Generator {
+  writing() {
+    this.log('cool feature', this.answers.cool); // user answers used at a later stage
+  }
+};
+```
+
+
+
 #### Remembering user preferences
 
 A user may give the same input to certain questions every time they run your generator. For these questions, you probably want to remember what the user answered previously and use that answer as the new `default`.
