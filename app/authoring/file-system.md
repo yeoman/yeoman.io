@@ -109,6 +109,20 @@ Once the generator is done running, `public/index.html` will contain:
 </html>
 ```
 
+We can also use user answers here, provided that they have been stored at [prompting stage](http://yeoman.io/authoring/user-interactions.html):
+
+```js
+class extends Generator {
+  writing() {
+    this.fs.copyTpl(
+      this.templatePath('index.html'),
+      this.destinationPath('public/index.html'),
+      { title: this.answers.title } // using user answer `title` from prompting stage
+    );
+  }
+}
+```
+
 ## Transform output files through streams
 
 The generator system allows you to apply custom filters on every file writes. Automatically beautifying files, normalizing whitespace, etc, is totally possible.
