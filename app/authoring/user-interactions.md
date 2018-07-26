@@ -44,7 +44,7 @@ Note here that we use the [`prompting` queue](/authoring/running-context.html) t
 
 #### Using user answers at a later stage
 
-A very common scenario is to use the the user asnwers at a later stage, e.g. in [`writing` queue](/authoring/running-context.html). This can be easily achieved by adding them to `this` context:
+A very common scenario is to use the the user asnwers at a later stage, e.g. in [`writing` queue](http://yeoman.io/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
 
 ```js
 module.exports = class extends Generator {
@@ -54,23 +54,15 @@ module.exports = class extends Generator {
       name    : 'cool',
       message : 'Would you like to enable the Cool feature?'
     }]).then((answers) => {
-      this.answers = answers; // add user answers to `this` context
+      this.answers = answers; // user answers added to `this` context
     });
   }
-};
-```
 
-At a [later stage](http://yeoman.io/authoring/file-system.html):
-
-```js
-module.exports = class extends Generator {
   writing() {
-    this.log('cool feature', this.answers.cool); // user answers used at a later stage
+    this.log('cool feature', this.answers.cool); // user answer `cool` used
   }
 };
 ```
-
-
 
 #### Remembering user preferences
 
