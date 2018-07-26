@@ -109,15 +109,25 @@ Once the generator is done running, `public/index.html` will contain:
 </html>
 ```
 
-We can also use user answers here, provided that they have been stored at [prompting stage](http://yeoman.io/authoring/user-interactions.html):
+A very common scenario is to store use user answers at [prompting stage](http://yeoman.io/authoring/user-interactions.html) and use them for templating:
 
 ```js
 class extends Generator {
+  prompting() {
+    return this.prompt([{
+      type    : 'input',
+      name    : 'title',
+      message : 'Your project title',
+    }]).then((answers) => {
+      this.answers = answers; // user answers added to `this` context
+    });
+  }
+
   writing() {
     this.fs.copyTpl(
       this.templatePath('index.html'),
       this.destinationPath('public/index.html'),
-      { title: this.answers.title } // using user answer `title` from prompting stage
+      { title: this.answers.title } // user answer `title` used
     );
   }
 }
