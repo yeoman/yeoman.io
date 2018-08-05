@@ -113,14 +113,12 @@ A very common scenario is to store use user answers at [prompting stage](http://
 
 ```js
 class extends Generator {
-  prompting() {
-    return this.prompt([{
+  async prompting() {
+    this.answers = await this.prompt([{
       type    : 'input',
       name    : 'title',
       message : 'Your project title',
-    }]).then((answers) => {
-      this.answers = answers; // user answers added to `this` context
-    });
+    }]);
   }
 
   writing() {

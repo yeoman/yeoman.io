@@ -22,8 +22,8 @@ The `prompt` method is asynchronous and returns a promise. You'll need to return
 
 ```js
 module.exports = class extends Generator {
-  prompting() {
-    return this.prompt([{
+  async prompting() {
+    const answers = await this.prompt([{
       type    : 'input',
       name    : 'name',
       message : 'Your project name',
@@ -32,10 +32,10 @@ module.exports = class extends Generator {
       type    : 'confirm',
       name    : 'cool',
       message : 'Would you like to enable the Cool feature?'
-    }]).then((answers) => {
-      this.log('app name', answers.name);
-      this.log('cool feature', answers.cool);
-    });
+    }]);
+
+    this.log('app name', answers.name);
+    this.log('cool feature', answers.cool);
   }
 };
 ```
@@ -48,14 +48,12 @@ A very common scenario is to use the the user asnwers at a later stage, e.g. in 
 
 ```js
 module.exports = class extends Generator {
-  prompting() {
-    return this.prompt([{
+  async prompting() {
+    this.answers = await this.prompt([{
       type    : 'confirm',
       name    : 'cool',
       message : 'Would you like to enable the Cool feature?'
-    }]).then((answers) => {
-      this.answers = answers; // user answers added to `this` context
-    });
+    }]);
   }
 
   writing() {
