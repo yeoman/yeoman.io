@@ -86,7 +86,8 @@ module.exports = function (grunt) {
         '404.html',
         'migrate.html',
         '*/**/*.html',
-        'CNAME'
+        'CNAME',
+        '_redirects'
       ],
 
       browsers: [
