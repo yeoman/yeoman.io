@@ -13,6 +13,8 @@ atom_path: /blog/atom.xml
 
 source: app
 destination: .tmp
+include:
+- _redirects
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
