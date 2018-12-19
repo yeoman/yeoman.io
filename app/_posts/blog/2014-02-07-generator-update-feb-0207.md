@@ -5,7 +5,7 @@ title: Updates to some of our generators
 
 Today we have a few updated generators for your consumption. nom nom nom. As always, we welcome any and all feedback or bug reports on the relevant trackers.
 
-<img src="http://i.imgur.com/hSEppjX.gif">
+<img src="https://i.imgur.com/hSEppjX.gif">
 
 ## Scaffold a Gruntfile
 

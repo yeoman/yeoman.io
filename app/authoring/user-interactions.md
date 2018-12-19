@@ -44,7 +44,7 @@ Note here that we use the [`prompting` queue](/authoring/running-context.html) t
 
 #### Using user answers at a later stage
 
-A very common scenario is to use the the user answers at a later stage, e.g. in [`writing` queue](http://yeoman.io/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
+A very common scenario is to use the the user answers at a later stage, e.g. in [`writing` queue](https://yeoman.io/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
 
 ```js
 module.exports = class extends Generator {
@@ -174,4 +174,4 @@ module.exports = class extends Generator {
 };
 ```
 
-There's also some other helper methods you can find in the [API documentation](http://yeoman.io/environment/TerminalAdapter.html).
+There's also some other helper methods you can find in the [API documentation](https://yeoman.io/environment/TerminalAdapter.html).

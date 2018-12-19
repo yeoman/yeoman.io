@@ -6,7 +6,7 @@ excerpt: Review project latest releases
 
 First off, Happy Friday!
 
-<img src="http://i.imgur.com/WHfJgag.jpg"/>
+<img src="https://i.imgur.com/WHfJgag.jpg"/>
 
 Today we released updates to six of our official generators. The complete changelogs can be found in our linked release pages lower down.
 

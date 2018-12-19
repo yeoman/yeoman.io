@@ -1,6 +1,6 @@
 # Yeoman.io [![Build Status](https://travis-ci.org/yeoman/yeoman.github.io.svg?branch=source)](https://travis-ci.org/yeoman/yeoman.github.io)
 
-> [Yeoman.io](http://yeoman.io) site
+> [Yeoman.io](https://yeoman.io) site
 
 
 ## Attention!

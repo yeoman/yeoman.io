@@ -103,7 +103,7 @@ We deleted a lot of deprecated functions:
 
 These are all functions that can be replaced by raw npm modules. They didn't require Generator prototype functions.
 
-File handling should all be done with the `this.fs` virtual file system (http://yeoman.io/authoring/file-system.html)
+File handling should all be done with the `this.fs` virtual file system (https://yeoman.io/authoring/file-system.html)
 
 ## Migration guide
 
@@ -116,4 +116,4 @@ As always, feel free to drop in [our gitter chat](https://gitter.im/yeoman/yeoma
 We do hope this release will help you make better and more efficient generators!
 
 Cheers,
-[Simon](https://twitter.com/Vaxilart) and the rest of the [Yeoman team](http://yeoman.io/)
+[Simon](https://twitter.com/Vaxilart) and the rest of the [Yeoman team](https://yeoman.io/)

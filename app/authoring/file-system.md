@@ -109,7 +109,7 @@ Once the generator is done running, `public/index.html` will contain:
 </html>
 ```
 
-A very common scenario is to store use user answers at [prompting stage](http://yeoman.io/authoring/user-interactions.html) and use them for templating:
+A very common scenario is to store use user answers at [prompting stage](https://yeoman.io/authoring/user-interactions.html) and use them for templating:
 
 ```js
 class extends Generator {

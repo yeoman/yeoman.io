@@ -8,7 +8,7 @@ description: Yeoman website
 author:
   name: Yeoman Team
 
-url: http://yeoman.io
+url: https://yeoman.io
 atom_path: /blog/atom.xml
 
 source: app

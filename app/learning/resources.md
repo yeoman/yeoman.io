@@ -28,7 +28,7 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 
 ** Translations **
 
-[Let's scaffold a Web App](http://yeoman.io/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
+[Let's scaffold a Web App](https://yeoman.io/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
 
 
 # Videos

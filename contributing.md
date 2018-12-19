@@ -1,1 +1,1 @@
-See the [contributing docs](http://yeoman.io/contributing)
+See the [contributing docs](https://yeoman.io/contributing)

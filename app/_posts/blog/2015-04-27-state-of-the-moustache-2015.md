@@ -8,7 +8,7 @@ excerpt: Digest of what's new in the Yeoman ecosystem
 
 ## Intro
 
-Allo! Allo! April is a special month for us as it represents 3 years since the project first started and almost 2 years since we decided to rename the binary from [yeoman](http://github.com/yeoman/yeoman) to [yo](http://github.com/yeoman/yo). This month also saw Yeoman grow to [1.3 million](http://www.npm-stats.com/~packages/yo) total installs and 1635 community [generators](http://yeoman.io/generators/).
+Allo! Allo! April is a special month for us as it represents 3 years since the project first started and almost 2 years since we decided to rename the binary from [yeoman](https://github.com/yeoman/yeoman) to [yo](https://github.com/yeoman/yo). This month also saw Yeoman grow to [1.3 million](http://www.npm-stats.com/~packages/yo) total installs and 1635 community [generators](https://yeoman.io/generators/).
 
 A huge thank you to all our contributors and a special call-out to all the global event organisers that featured Yeoman at their events. [YeomanTO](https://twitter.com/YeomanTO), the [Codepen Meetups](https://twitter.com/Smartass_io/status/580501962527010816), [IBM Design Camp](https://twitter.com/kevinSuttle/status/568811512938127361), [OttawaJS](https://twitter.com/solanojuan/status/575807587095990272), [JSMontreal](https://twitter.com/jsmontreal) and others all have our ❤. We couldn't be doing this without you.
 
@@ -69,7 +69,7 @@ Below is a round-up of community authored articles about or mentioning Yeoman wh
 
 [Yeoman, Polymer and Gulp](http://robdodson.me/yeoman-polymer-and-gulp)
 
-[Integrating Yeoman with third-party tools](http://yeoman.io/authoring/integrating-yeoman.html)
+[Integrating Yeoman with third-party tools](https://yeoman.io/authoring/integrating-yeoman.html)
 
 [Using `yo webapp` via Docker](https://asciinema.org/a/13240)
 
@@ -111,7 +111,7 @@ As Simon mentioned in our [0.19 release notes](https://github.com/yeoman/generat
 
 ### Composition FTW
 
-It's been pleasant to see an [increasing](https://twitter.com/tomwayson/status/588564830665084930) number of developers using our [composability](http://yeoman.io/authoring/composability.html) feature for their generators. This enables building upon common ground so that a generator can be run inside another generator, rather than having to replicate functionality. E.g call out to a generator for scaffolding Karma tests rather than doing this inside your AngularApp one.
+It's been pleasant to see an [increasing](https://twitter.com/tomwayson/status/588564830665084930) number of developers using our [composability](https://yeoman.io/authoring/composability.html) feature for their generators. This enables building upon common ground so that a generator can be run inside another generator, rather than having to replicate functionality. E.g call out to a generator for scaffolding Karma tests rather than doing this inside your AngularApp one.
 
 ## Tipping our hat
 
