@@ -17,21 +17,21 @@ class: faq-page
 
 [How do I register or unregister a package on Bower?](#register-unregister-pkg)
 
-[Will the Yeoman project be providing Generators for popular frameworks?</a>](#frameworks-generators)
+[Will the Yeoman project be providing Generators for popular frameworks?](#frameworks-generators)
 
-[What license is Yeoman released under?</a>](#license)
+[What license is Yeoman released under?](#license)
 
-[What should I do before submitting an issue through GitHub?</a>](#submit-issue)
+[What should I do before submitting an issue through GitHub?](#submit-issue)
 
-[`npm` appears to have installed Yeoman but `yo` still gives me "command not found".</a>](#yo-command-not-found)
+[`npm` appears to have installed Yeoman but `yo` still gives me "command not found".](#yo-command-not-found)
 
-[I'm getting `EMFILE, too many open files`</a>](#too-many-files)
+[I'm getting `EMFILE, too many open files`](#too-many-files)
 
-[What should I use for documenting my app?</a>](#documenting-app)
+[What should I use for documenting my app?](#documenting-app)
 
-[How can I disable Insight or Update Notifier?</a>](#disable-notifier)
+[How can I disable Insight or Update Notifier?](#disable-notifier)
 
-[Can I use livereloading with a custom webserver?</a>](#livereloading)
+[Can I use livereloading with a custom webserver?](#livereloading)
 
 [What should I do after cloning a web application generated with Yeoman?](#cloning)
 
