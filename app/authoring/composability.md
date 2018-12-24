@@ -44,6 +44,26 @@ Even though it is not an encouraged practice, you can also pass a generator name
 this.composeWith('backbone:route', {rjs: true});
 ```
 
+### composing with a Generator class
+
+`composeWith` can also take an object as its first argument. The object should have the following properties defined:
+
+- `Generator` - The generator class to compose with
+- `path` - The path to the generator files
+
+This will let you compose with generator classes defined in your project or imported from other modules. Passing `options` as the second argument to `composeWith` works as expected.
+
+```js
+// Import generator-node's main generator
+const NodeGenerator = require('generator-node/generators/app/index.js');
+
+// Compose with it
+this.composeWith({
+  Generator: NodeGenerator,
+  path: require.resolve('generator-node/generators/app')
+});
+```
+
 ### <a name="order"></a>execution example
 ```js
 // In my-generator/generators/turbo/index.js
