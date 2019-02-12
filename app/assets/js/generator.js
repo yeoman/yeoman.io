@@ -54,7 +54,8 @@
       apiKey: '14ddf54fd4f3435c1cd4038395a0cf10',
       indexName: 'npm-search',
       searchParameters: {
-        filters: 'deprecated:false AND computedKeywords:yeoman-generator'
+        filters: 'deprecated:false AND computedKeywords:yeoman-generator',
+        analyticsTags: ['yeoman'],
       }
     });
 
