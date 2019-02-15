@@ -9,27 +9,26 @@ sidebar: sidebars/learning.md
 
 The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
 
-*Feel free to add additional ones, but make sure it's something of value and include the date.*
+_Feel free to add additional ones, but make sure it's something of value and include the date._
 
-* [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
-* [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
-* [NetTuts - Building Apps With the Yeoman Workflow](http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254) *2013-07-15*
-* [HTML5Rocks - Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/)
-* [Kickstart your AngularJS development with Yo, Grunt and Bower](http://www.sitepoint.com/kickstart-your-angularjs-development-with-yeoman-grunt-and-bower/)
-* [Automating AngularJS with Yo, Grunt and Bower](http://newtriks.com/2013/06/11/automating-angularjs-with-yeoman-grunt-and-bower/)
-* [Building HTML5 Apps with Yeoman and Backbone](http://rockyj.in/2013/05/11/yeoman_and_backbone.html)
-* [Continuous Deployment with Yeoman and Jenkins Part II](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins-part-ii.html)
-* [Speed up your framework workflow with Yeoman](http://shoogledesigns.com/blog/blog/2013/08/02/speed-up-your-css-framework-install-with-yeoman/)
-* [Continuous Deployment with Yeoman and Jenkins](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins.html)
-* [Adobe - Yeoman at your service](http://www.adobe.com/devnet/archive/html5/articles/yeoman-at-your-service.html)
-* [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/blog/2013/03/03/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
-* [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
-* [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
+- [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
+- [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
+- [NetTuts - Building Apps With the Yeoman Workflow](http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254) _2013-07-15_
+- [HTML5Rocks - Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/)
+- [Kickstart your AngularJS development with Yo, Grunt and Bower](http://www.sitepoint.com/kickstart-your-angularjs-development-with-yeoman-grunt-and-bower/)
+- [Automating AngularJS with Yo, Grunt and Bower](http://newtriks.com/2013/06/11/automating-angularjs-with-yeoman-grunt-and-bower/)
+- [Building HTML5 Apps with Yeoman and Backbone](http://rockyj.in/2013/05/11/yeoman_and_backbone.html)
+- [Continuous Deployment with Yeoman and Jenkins Part II](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins-part-ii.html)
+- [Speed up your framework workflow with Yeoman](http://shoogledesigns.com/blog/blog/2013/08/02/speed-up-your-css-framework-install-with-yeoman/)
+- [Continuous Deployment with Yeoman and Jenkins](https://weluse.de/blog/continuous-deployment-with-yeoman-and-jenkins.html)
+- [Adobe - Yeoman at your service](http://www.adobe.com/devnet/archive/html5/articles/yeoman-at-your-service.html)
+- [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/blog/2013/03/03/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
+- [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
+- [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
 
 ** Translations **
 
-[Let's scaffold a Web App](https://yeoman.io/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
-
+[Let's scaffold a Web App](/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
 
 # Videos
 

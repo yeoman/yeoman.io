@@ -109,7 +109,7 @@ Once the generator is done running, `public/index.html` will contain:
 </html>
 ```
 
-A very common scenario is to store user answers at the [prompting stage](https://yeoman.io/authoring/user-interactions.html) and use them for templating:
+A very common scenario is to store user answers at the [prompting stage](/authoring/user-interactions.html) and use them for templating:
 
 ```js
 class extends Generator {
@@ -140,8 +140,8 @@ Once per Yeoman process, we will write every modified file to disk. This process
 Registering a new modifier is done through the `registerTransformStream()` method. Here's an example:
 
 ```js
-var beautify = require('gulp-beautify');
-this.registerTransformStream(beautify({indent_size: 2 }));
+var beautify = require("gulp-beautify");
+this.registerTransformStream(beautify({ indent_size: 2 }));
 ```
 
 Note that **every file of any type will be passed through this stream**. Make sure any transform stream will passthrough the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.

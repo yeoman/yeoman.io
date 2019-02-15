@@ -27,8 +27,8 @@ For generator maintainers, the main changes is that argument and options are now
 The `type` property should now be correctly respected. It can also be defined as a function taking the string input and parsing it to whatever value you wish.
 
 ```js
-this.option('bar', {
-  type: (input) => _.capitalize(input)
+this.option("bar", {
+  type: input => _.capitalize(input)
 });
 ```
 
@@ -40,19 +40,23 @@ Previously you'd write a composeWith function as:
 
 ```js
 // OLD API
-this.composeWith('node:eslint', {
-  options: {
-    indent: 2
+this.composeWith(
+  "node:eslint",
+  {
+    options: {
+      indent: 2
+    }
+  },
+  {
+    local: require.resolve("generator-node/generators/eslint")
   }
-}, {
-  local: require.resolve('generator-node/generators/eslint')
-});
+);
 ```
 
 Now, it's just:
 
 ```js
-this.composeWith(require.resolve('generator-node/generators/eslint'), {
+this.composeWith(require.resolve("generator-node/generators/eslint"), {
   indent: 2
 });
 ```
@@ -64,7 +68,7 @@ Previously the `yeoman-generator` package would expose a lot of unrelated functi
 It now only exports the core `Generator` class:
 
 ```js
-const Generator = require('yeoman-generator');
+const Generator = require("yeoman-generator");
 
 export default class extends Generator {}
 ```
@@ -103,7 +107,7 @@ We deleted a lot of deprecated functions:
 
 These are all functions that can be replaced by raw npm modules. They didn't require Generator prototype functions.
 
-File handling should all be done with the `this.fs` virtual file system (https://yeoman.io/authoring/file-system.html)
+File handling should all be done with the `this.fs` virtual file system (/authoring/file-system.html)
 
 ## Migration guide
 

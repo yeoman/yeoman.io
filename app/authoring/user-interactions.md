@@ -23,19 +23,22 @@ The `prompt` method is asynchronous and returns a promise. You'll need to return
 ```js
 module.exports = class extends Generator {
   async prompting() {
-    const answers = await this.prompt([{
-      type    : 'input',
-      name    : 'name',
-      message : 'Your project name',
-      default : this.appname // Default to current folder name
-    }, {
-      type    : 'confirm',
-      name    : 'cool',
-      message : 'Would you like to enable the Cool feature?'
-    }]);
+    const answers = await this.prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Your project name",
+        default: this.appname // Default to current folder name
+      },
+      {
+        type: "confirm",
+        name: "cool",
+        message: "Would you like to enable the Cool feature?"
+      }
+    ]);
 
-    this.log('app name', answers.name);
-    this.log('cool feature', answers.cool);
+    this.log("app name", answers.name);
+    this.log("cool feature", answers.cool);
   }
 };
 ```
@@ -44,20 +47,22 @@ Note here that we use the [`prompting` queue](/authoring/running-context.html) t
 
 #### Using user answers at a later stage
 
-A very common scenario is to use the the user answers at a later stage, e.g. in [`writing` queue](https://yeoman.io/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
+A very common scenario is to use the the user answers at a later stage, e.g. in [`writing` queue](/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
 
 ```js
 module.exports = class extends Generator {
   async prompting() {
-    this.answers = await this.prompt([{
-      type    : 'confirm',
-      name    : 'cool',
-      message : 'Would you like to enable the Cool feature?'
-    }]);
+    this.answers = await this.prompt([
+      {
+        type: "confirm",
+        name: "cool",
+        message: "Would you like to enable the Cool feature?"
+      }
+    ]);
   }
 
   writing() {
-    this.log('cool feature', this.answers.cool); // user answer `cool` used
+    this.log("cool feature", this.answers.cool); // user answer `cool` used
   }
 };
 ```
@@ -70,10 +75,10 @@ Yeoman extends the Inquirer.js API by adding a `store` property to question obje
 
 ```js
 this.prompt({
-  type    : 'input',
-  name    : 'username',
-  message : 'What\'s your GitHub username',
-  store   : true
+  type: "input",
+  name: "username",
+  message: "What's your GitHub username",
+  store: true
 });
 ```
 
@@ -113,7 +118,7 @@ module.exports = class extends Generator {
     super(args, opts);
 
     // This makes `appname` a required argument.
-    this.argument('appname', { type: String, required: true });
+    this.argument("appname", { type: String, required: true });
 
     // And you can then access it later; e.g.
     this.log(this.options.appname);
@@ -152,10 +157,10 @@ module.exports = class extends Generator {
     super(args, opts);
 
     // This method adds support for a `--coffee` flag
-    this.option('coffee');
+    this.option("coffee");
 
     // And you can then access it later; e.g.
-    this.scriptSuffix = (this.options.coffee ? ".coffee": ".js");
+    this.scriptSuffix = this.options.coffee ? ".coffee" : ".js";
   }
 };
 ```
@@ -169,9 +174,9 @@ The main method you'll use is simply `this.log` (e.g. `this.log('Hey! Welcome to
 ```js
 module.exports = class extends Generator {
   myAction() {
-    this.log('Something has gone wrong!');
+    this.log("Something has gone wrong!");
   }
 };
 ```
 
-There's also some other helper methods you can find in the [API documentation](https://yeoman.io/environment/TerminalAdapter.html).
+There's also some other helper methods you can find in the [API documentation](https://yeoman.github.io/environment/TerminalAdapter.html).
