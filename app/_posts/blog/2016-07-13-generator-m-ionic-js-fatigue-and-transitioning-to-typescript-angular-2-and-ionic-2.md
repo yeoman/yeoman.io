@@ -103,4 +103,4 @@ You can start by commenting on [this issue in our repository](https://github.com
 
 Let us know what you think and help us build better tools for the next generation of HTML5 mobile app development!
 
-For everything else our [Github repository](https://github.com/mwaylabs/generator-m-ionic) and [Gitter channel](https://gitter.im/mwaylabs/generator-m-ionic) is the way to go!
+For everything else our [GitHub repository](https://github.com/mwaylabs/generator-m-ionic) and [Gitter channel](https://gitter.im/mwaylabs/generator-m-ionic) is the way to go!
