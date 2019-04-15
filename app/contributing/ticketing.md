@@ -6,7 +6,7 @@ sidebar: sidebars/contributing.md
 excerpt: Overview of the tickets/issues organization inside the Yeoman project
 ---
 
-Yeoman use each projects [Github issue tracker](https://guides.github.com/features/issues/). We use the feature provided by Github to classify our issues so they're easily manageable and help contributors find tasks to complete.
+Yeoman use each projects [GitHub issue tracker](https://guides.github.com/features/issues/). We use the feature provided by GitHub to classify our issues so they're easily manageable and help contributors find tasks to complete.
 
 <aside class="excerpt">
   Disclaimer: The workflow described below is our ideal goal. It is still new (not all of our projects use it at the moment) and some projects may diverge to better fit their specific needs.
@@ -55,7 +55,7 @@ We label things with three levels of difficulty: `easy`, `medium`, `hard`
 
 Difficulty is rated based on the number of moving parts / system section of a particular issue needs to touch. An issue which can be fixed by changing a single method is easy. But an issue requiring changes in 3 parts of the system is hard.
 
-We rate the difficulty level this way in order to provide insight to new contributor on the level of commitment needed to resolve an issue. A hard issue will require a longer time learning Yeoman internals and an easy issue will probably only require some level of node.js knowledge.
+We rate the difficulty level this way in order to provide insight to new contributor on the level of commitment needed to resolve an issue. A hard issue will require a longer time learning Yeoman internals and an easy issue will probably only require some level of Node.js knowledge.
 
 ## Milestone
 
