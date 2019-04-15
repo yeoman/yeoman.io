@@ -45,7 +45,7 @@ We integrated many optimizations for your web application using a few Gulp plugi
 
 ## 2.0.0 on the road...
 
-But version 1.0.0 is not the end of the road. While maintaining the v1 branch, we started a new Github organization called [FountainJS](https://github.com/FountainJS) targeting a futuristic v2 version. As the context of the build tools has greatly evolved over a year, it’ll be a reboot of the code base.
+But version 1.0.0 is not the end of the road. While maintaining the v1 branch, we started a new GitHub organization called [FountainJS](https://github.com/FountainJS) targeting a futuristic v2 version. As the context of the build tools has greatly evolved over a year, it’ll be a reboot of the code base.
 The major selling point will be to use Yeoman Generator's composition support, to upgrade to Gulp 4 and to write it in ES6. Finally, we hope to open new horizons in terms of options: dependency management for sure, but why not also Web frameworks (someone talked about React?) and also a backend.
 
 Go try out the [generator-gulp-angular](https://www.npmjs.com/package/generator-gulp-angular) v1.0.0 release! Any feedback, issues, or contributions on the new [FountainJS](https://github.com/FountainJS) project will always be appreciated.
