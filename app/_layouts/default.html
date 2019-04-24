@@ -9,7 +9,9 @@ markdown: 0
 
   <div class="container clearfix{% if page.sidebar %} has-sidebar{% endif %}">
     {% if page.sidebar %}
+
       <nav class="context-nav">
+        <input id="q" placeholder="Search the doc" />
         {% capture sidebar %}{% include {{ page.sidebar }} %}{% endcapture %}
         {% if sidebarHTML %}
           {{ sidebar }}
