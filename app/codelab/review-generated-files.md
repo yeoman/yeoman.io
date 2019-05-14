@@ -17,7 +17,7 @@ In *mytodo*, we have:
   * `index.html`: the base html file
   * `index.js`: the entry point for our TodoMVC app
 
-`conf`: a parent directory for our configuration files for thrid-party tools (Browsersync, Webpack, Gulp, Karma)
+`conf`: a parent directory for our configuration files for third-party tools (Browsersync, Webpack, Gulp, Karma)
 
 `gulp_tasks` and `gulpfile.js`: our builder tasks
 
