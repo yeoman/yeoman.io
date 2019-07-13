@@ -104,6 +104,8 @@ An adapter is the object responsible for handling all the interaction with the u
 
 By default, Yeoman provides a [Terminal Adapter](https://github.com/yeoman/environment/blob/master/lib/adapter.js). And our test helpers provide a [Test Adapter](https://github.com/yeoman/yeoman-test/blob/master/lib/adapter.js) who's mocking prompts and silencing the output. You can use these as reference for your own implementation.
 
+To install an adapter, use the third parameter of `yeoman.createEnv(args, opts, adapter)`.
+
 An adapter should provide at least three methods.
 
 ### `Adapter#prompt()`
