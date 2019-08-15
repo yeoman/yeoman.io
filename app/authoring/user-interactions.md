@@ -47,7 +47,7 @@ Note here that we use the [`prompting` queue](/authoring/running-context.html) t
 
 #### Using user answers at a later stage
 
-A very common scenario is to use the the user answers at a later stage, e.g. in [`writing` queue](/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
+A very common scenario is to use the user answers at a later stage, e.g. in [`writing` queue](/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
 
 ```js
 module.exports = class extends Generator {
