@@ -26,14 +26,16 @@ _Feel free to add additional ones, but make sure it's something of value and inc
 - [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 - [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
 
-** Translations **
+**Translations**
 
-[Let's scaffold a Web App](/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
+* [Let's scaffold a Web App](/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/).
+
+* [Getting Started](/learning/index.html) and [Let's scaffold a Web App](/codelab/index.html) translated to Arabic: [إنشاء تطبيق ويب متكامل وبناؤه عبر يومِن](https://academy.hsoub.com/programming/workflow/إنشاء-تطبيق-ويب-متكامل-وبناؤه-عبر-yeoman-r761/) by [HsoubAcademy](https://academy.hsoub.com/).
+
 
 # Videos
 
 <p>Below you can find a selection of videos and tutorials recorded by members of the Yeoman community.</p>
-
 <section>
   <h2 class="hero-title">A 5 Minute Introduction To Yeoman</h2>
   <div class="row tutorial">
