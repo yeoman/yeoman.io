@@ -5,7 +5,11 @@
 
 ## Attention!
 
-If you have an issue or contribution for the Yeoman.io website, this is the place! If you want to submit an issue about Yeoman's source code or workflow please visit the [yeoman/yeoman repository](https://github.com/yeoman/yeoman).
+If you have an issue or contribution for the Yeoman.io website, this is the place!
+
+If you want to submit an issue or make a contribution for Yeoman's core source code please visit either the [yo command line repository](https://github.com/yeoman/yo), the [yeoman base classes repository](https://github.com/yeoman/generator), or the [yeoman runtime environment repository](https://github.com/yeoman/environment).
+
+For workflow issues or contributions please visit the [yeoman/yeoman repository](https://github.com/yeoman/yeoman).
 
 
 ## Contributing
