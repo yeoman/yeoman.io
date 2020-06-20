@@ -230,7 +230,7 @@ The Zopfli Compression Algorithm is an open-source compression library that gene
 
 * [gulp-zopfli](https://www.npmjs.com/package/gulp-zopfli)
 
-<div class="note"><strong>Note:</strong> When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to <a href="https://plus.google.com/+IlyaGrigorik/posts/1sxencNkbNS">Ilya Grigorik</a>, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.</div>
+<div class="note"><strong>Note:</strong> When Google Fonts  switched to using Zopfli fonts were ~6% smaller on average, and in some cases up to 15% smaller. According to Ilya Grigorik, for the case of Open Sans it was more than 10% smaller, translating to faster rendering and loading times. Zopfli images can however take longer to decode than JPGs so measure the metrics that matter to you when deciding whether to use WebP.</div>
 
 
 ## Inline Critical path CSS

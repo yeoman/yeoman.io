@@ -22,13 +22,9 @@ There are a number of useful questions we can answer with good metrics:
 - What JS frameworks are people using?
 - Imagine: We just launched Yeoman v2.0 @ AwesomeConf JS 2013. Of course it was picked up by Hacker News! Pssht. But...how many new installs did we drive?
 
-Turns out, [Google Analytics](http://www.google.com/analytics/) is excellent at handling all of these cases.
-
 ## Collection Workflow
 
 ### Backend
-
-Google Analytics suits most of our needs. It was designed to allow any type of app (mobile, non-web page properties, installed apps, etc.) to send data to Analytics for processing. It works similar to the existing API, with the exception that cookies are no longer required.
 
 There are a many benefits to using Analytics instead of rolling our own collecting server on App Engine. Perhaps the biggest: not having to process data ourselves.
 
@@ -42,7 +38,7 @@ There are a many benefits to using Analytics instead of rolling our own collecti
 
 > *Note: /metrics was originally setup as an App Engine Python app before Analytics was chosen as backend. At this time, we don't need a separate server but the code is intact if/when we decide to build a dashboard for Yeoman.*
 
-This script is installed globally as an alias `_yeomaninsight` to prevent users from a.) seeing the script via auto completing "yeoman*" and b.) mitigating running the script directly.  The script is responsible for collecting, stashing, and sending usage data to Google Analytics.
+This script is installed globally as an alias `_yeomaninsight` to prevent users from a.) seeing the script via auto completing "yeoman*" and b.) mitigating running the script directly.
 
 `_yeomaninsight` is invoked by `/cli/lib/plugins/insight.py`, which creates a folder in the home directory (`~/.yeoman/insight/`) when the cli is run for the first time and prompts the user to opt-in to sending anonymous metrics.
 
@@ -123,12 +119,3 @@ Once all data is sent, `.log` is scrubbed clean of past data, although the Clien
 
     1336617026.860.421519437366
 
-###Privacy
-
-Our implementation uses Google Analytics. See their [TOS/Privacy Policy](http://www.google.com/analytics/learn/privacy.html) (e.g. Google's Privacy Policy) for more information. There are a few points worth calling out:
-
-- Recording stats are opt-out. This is determined on first-run of the CLI.
-- We eventually plan to open up the collected data to the public. Everyone will benefit!! We plan to have a metrics dashboard where folks can see the data, as collected by the tool.
-- The Client ID is generated as combination of timestamp + random_number and is in no way tied to personal data like IP address, name, location, or other personally identifiable information. Google Analytics uses this data (in aggregate) in order to differentiate users of an app. It allows us to answer the question: "# of 7 day active users".
-- Data is sent to Analytics, an aggregate collection service. There will be no way for us to see information on any one person.
-- We are not recording names of things that were created (e.g. someone's model name, file naming conventions, etc.)
