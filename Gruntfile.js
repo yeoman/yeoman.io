@@ -30,7 +30,7 @@ module.exports = function (grunt) {
       watchHtml: true,
 
       // Watch CSS background images and livereload on changes
-      watchCssImages: false,
+      watchCssImages: true,
 
       // Run each image through the image processing pipeline exposed by express-processimage
       // Allows you to resize, recompress, change image format, rasterize SVG and much more
@@ -111,7 +111,7 @@ module.exports = function (grunt) {
           login: 'SBoudrias',
           token: process.env.GH_TOKEN,
           commit: true,
-          push: true
+          push: true,
         }
       }
     },
