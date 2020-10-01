@@ -3,7 +3,7 @@
 > [Yeoman.io](https://yeoman.io) site
 
 
-## Attention!
+## Attention! - An Amazing Project
 
 If you have an issue or contribution for the Yeoman.io website, this is the place!
 
