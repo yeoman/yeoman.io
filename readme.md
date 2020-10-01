@@ -1,4 +1,4 @@
-# Yeoman.io [![Build Status](https://travis-ci.org/yeoman/yeoman.github.io.svg?branch=source)](https://travis-ci.org/yeoman/yeoman.github.io)
+# Yeoman.io An Amazing Project[![Build Status](https://travis-ci.org/yeoman/yeoman.github.io.svg?branch=source)](https://travis-ci.org/yeoman/yeoman.github.io)
 
 > [Yeoman.io](https://yeoman.io) site
 
