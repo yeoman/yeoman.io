@@ -25,6 +25,7 @@ _Feel free to add additional ones, but make sure it's something of value and inc
 - [Getting Started With Yeoman 1.0 Beta on Windows](http://decodize.com/blog/2013/03/03/getting-started-with-yeoman-1-dot-0-beta-on-windows/)
 - [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 - [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
+- [Generate Microservices Quickly With Yeoman](https://medium.com/swlh/generate-microservices-quickly-with-yeoman-bc8b8453ea80)
 
 **Translations**
 
