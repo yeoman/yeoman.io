@@ -137,11 +137,11 @@ The generator system allows you to apply custom filters on every file writes. Au
 
 Once per Yeoman process, we will write every modified file to disk. This process is passed through a [vinyl](https://github.com/wearefractal/vinyl) object stream (just like [gulp](http://gulpjs.com/)). Any generator author can register a `transformStream` to modify the file path and/or the content.
 
-Registering a new modifier is done through the `registerTransformStream()` method. Here's an example:
+Queueing a new modifier is done through the `queueTransformStream()` method. Here's an example:
 
 ```js
 var beautify = require("gulp-beautify");
-this.registerTransformStream(beautify({ indent_size: 2 }));
+this.queueTransformStream(beautify({ indent_size: 2 }));
 ```
 
 Note that **every file of any type will be passed through this stream**. Make sure any transform stream will passthrough the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.
