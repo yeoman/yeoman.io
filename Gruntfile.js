@@ -95,27 +95,6 @@ module.exports = function (grunt) {
       ]
     },
 
-    buildcontrol: {
-      dist: {
-        options: {
-          remote: 'git@github.com:yeoman/yeoman.github.io.git',
-          branch: 'master',
-          commit: true,
-          push: true
-        }
-      },
-      travis: {
-        options: {
-          remote: 'https://github.com/yeoman/yeoman.github.io.git',
-          branch: 'master',
-          login: 'SBoudrias',
-          token: process.env.GH_TOKEN,
-          commit: true,
-          push: true
-        }
-      }
-    },
-
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -167,18 +146,6 @@ module.exports = function (grunt) {
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'reduce'
-  ]);
-
-  grunt.registerTask('deploy', [
-    'check',
-    'build',
-    'buildcontrol'
-  ]);
-
-  grunt.registerTask('deploy-travis', [
-    'check',
-    'build',
-    'buildcontrol:travis'
   ]);
 
   grunt.registerTask('default', [
