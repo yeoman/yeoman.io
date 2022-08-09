@@ -1,4 +1,4 @@
-# Yeoman.io [![Build Status](https://travis-ci.org/yeoman/yeoman.github.io.svg?branch=source)](https://travis-ci.org/yeoman/yeoman.github.io)
+# Yeoman.io [![Netlify Status](https://api.netlify.com/api/v1/badges/f9ab5087-4b19-45f2-9c97-e3520ea9da7a/deploy-status?branch=main)](https://app.netlify.com/sites/yeoman/deploys)
 
 > [Yeoman.io](https://yeoman.io) site
 
