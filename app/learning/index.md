@@ -43,7 +43,7 @@ New Node and npm users might run into permissions issues. These issues show up i
 
 *npm is the package manager for [Node.js](https://nodejs.org/) and comes bundled with it.*
 
-*On Windows, we suggest using a better command line tool such as [`cmder`](http://cmder.net/) or PowerShell to improve the experience.*
+*On Windows, we suggest using a better command line tool such as [`cmder`](https://cmder.app/) or PowerShell to improve the experience.*
 
 
 ### Basic scaffolding
