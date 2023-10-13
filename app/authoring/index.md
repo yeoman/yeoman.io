@@ -30,6 +30,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   "name": "generator-name",
   "version": "0.1.0",
   "description": "",
+  "type": "module",
   "files": [
     "generators"
   ],
@@ -102,9 +103,9 @@ Yeoman offers a base generator which you can extend to implement your own behavi
 In the generator's index.js file, here's how you extend the base generator:
 
 ```js
-var Generator = require('yeoman-generator');
+import Generator from 'yeoman-generator';
 
-module.exports = class extends Generator {};
+export default class extends Generator {
 ```
 
 We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](https://nodejs.org/api/modules.html#modules_module_exports).
