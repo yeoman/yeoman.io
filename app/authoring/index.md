@@ -35,7 +35,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   ],
   "keywords": ["yeoman-generator"],
   "dependencies": {
-    "yeoman-generator": "^1.0.0"
+    "yeoman-generator": "^6.0.0"
   }
 }
 ```
@@ -116,7 +116,9 @@ Some generator methods can only be called inside the `constructor` function. The
 To override the generator constructor, add a constructor method like so:
 
 ```js
-module.exports = class extends Generator {
+import Generator from 'yeoman-generator';
+
+export default class extends Generator {
   // The name `constructor` is important here
   constructor(args, opts) {
     // Calling the super constructor is important so our generator is correctly set up
@@ -135,7 +137,7 @@ Every method added to the prototype is run once the generator is called--and usu
 Let's add some methods:
 
 ```js
-module.exports = class extends Generator {
+export default class extends Generator {
   method1() {
     this.log('method 1 just ran');
   }
