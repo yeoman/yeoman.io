@@ -12,8 +12,8 @@ Yeoman offers multiple ways for generators to build upon common ground. There's 
 
 In Yeoman, composability can be initiated in two ways:
 
- * A generator can decide to compose itself with another generator (e.g., `generator-backbone` uses `generator-mocha`).
- * An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails). Note: end user initiated composition is a planned feature and currently not available.
+- A generator can decide to compose itself with another generator (e.g., `generator-backbone` uses `generator-mocha`).
+- An end user may also initiate the composition (e.g., Simon wants to generate a Backbone project with SASS and Rails). Note: end user initiated composition is a planned feature and currently not available.
 
 ## `this.composeWith()`
 
@@ -25,13 +25,17 @@ When composing, don't forget about [the running context and the run loop](/autho
 
 `composeWith` takes two parameters.
 
- 1. `generatorPath` - A full path pointing to the generator you want to compose with (usually using `require.resolve()`).
- 2. `options` - An Object containing options to pass to the composed generator once it runs.
+1.  `generatorPath` - A full path pointing to the generator you want to compose with (usually using [`import.meta.resolve()`](https://nodejs.org/docs/latest-v20.x/api/esm.html#importmetaresolvespecifier) or poly fill with [import-meta-resolve](https://www.npmjs.com/package/import-meta-resolve)).
+2.  `options` - An Object containing options to pass to the composed generator once it runs.
 
 When composing with a `peerDependencies` generator:
 
 ```js
-this.composeWith(require.resolve('generator-bootstrap/generators/app'), {preprocessor: 'sass'});
+import { resolve } from "import-meta-resolve";
+
+this.composeWith(resolve("generator-bootstrap/generators/app"), {
+  preprocessor: "sass",
+});
 ```
 
 `require.resolve()` returns the path from where Node.js would load the provided module.
@@ -41,7 +45,7 @@ Note: If you need to pass `arguments` to a Generator based on a version of `yeom
 Even though it is not an encouraged practice, you can also pass a generator namespace to `composeWith`. In that case, Yeoman will try to find that generator installed as a `peerDependencies` or globally on the end user system.
 
 ```js
-this.composeWith('backbone:route', {rjs: true});
+this.composeWith("backbone:route", { rjs: true });
 ```
 
 ### composing with a Generator class
@@ -55,44 +59,46 @@ This will let you compose with generator classes defined in your project or impo
 
 ```js
 // Import generator-node's main generator
-const NodeGenerator = require('generator-node/generators/app/index.js');
+import NodeGenerator from "generator-node/generators/app/index.js";
+import { resolve } from "import-meta-resolve";
 
 // Compose with it
 this.composeWith({
   Generator: NodeGenerator,
-  path: require.resolve('generator-node/generators/app')
+  path: resolve("generator-node/generators/app"),
 });
 ```
 
 ### <a name="order"></a>execution example
+
 ```js
 // In my-generator/generators/turbo/index.js
-module.exports = class extends Generator {
+export default class extends Generator {
   prompting() {
-    this.log('prompting - turbo');
+    this.log("prompting - turbo");
   }
 
   writing() {
-    this.log('writing - turbo');
+    this.log("writing - turbo");
   }
-};
+}
 
 // In my-generator/generators/electric/index.js
-module.exports = class extends Generator {
+export default class extends Generator {
   prompting() {
-    this.log('prompting - zap');
+    this.log("prompting - zap");
   }
 
   writing() {
-    this.log('writing - zap');
+    this.log("writing - zap");
   }
 };
 
 // In my-generator/generators/app/index.js
-module.exports = class extends Generator {
+export default class extends Generator {
   initializing() {
-    this.composeWith(require.resolve('../turbo'));
-    this.composeWith(require.resolve('../electric'));
+    this.composeWith(resolve("../turbo"));
+    this.composeWith(resolve("../electric"));
   }
 };
 ```
@@ -117,18 +123,19 @@ which is composed of
 
 ## dependencies or peerDependencies
 
-*npm* allows three types of dependencies:
+_npm_ allows three types of dependencies:
 
- * `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
- * `peerDependencies` get installed alongside the generator, as a sibling. For example, if `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
+- `dependencies` get installed local to the generator. It is the best option to control the version of the dependency used. This is the preferred option.
+- `peerDependencies` get installed alongside the generator, as a sibling. For example, if `generator-backbone` declared `generator-gruntfile` as a peer dependency, the folder tree would look this way:
 
-    ```
-    ├───generator-backbone/
-    └───generator-gruntfile/
-    ```
- * `devDependencies` for testing and development utility. This is not needed here.
+  ```
+  ├───generator-backbone/
+  └───generator-gruntfile/
+  ```
 
-When using `peerDependencies`, be aware other modules may also need the requested module. Take care not to create version conflicts by requesting a specific version (or a narrow range of versions). Yeoman's recommendation with `peerDependencies` is to always request _higher or equal to (>=)_ or _any (*)_ available versions. For example:
+- `devDependencies` for testing and development utility. This is not needed here.
+
+When using `peerDependencies`, be aware other modules may also need the requested module. Take care not to create version conflicts by requesting a specific version (or a narrow range of versions). Yeoman's recommendation with `peerDependencies` is to always request _higher or equal to (>=)_ or _any (\*)_ available versions. For example:
 
 ```json
 {

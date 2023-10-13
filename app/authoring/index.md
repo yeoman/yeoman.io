@@ -14,7 +14,6 @@ In reading this section, you'll learn how to create and distribute your own.
   Note: We built a <a href="https://github.com/yeoman/generator-generator">generator-generator</a> to help users get started with their own generator. Feel free to use it to bootstrap your own generator once you understand the below concepts.
 </aside>
 
-
 ## Organizing your generators
 
 ### Setting up as a node module
@@ -31,9 +30,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   "version": "0.1.0",
   "description": "",
   "type": "module",
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "keywords": ["yeoman-generator"],
   "dependencies": {
     "yeoman-generator": "^6.0.0"
@@ -86,26 +83,22 @@ If you use this second directory structure, make sure you point the `files` prop
 
 ```json
 {
-  "files": [
-    "app",
-    "router"
-  ]
+  "files": ["app", "router"]
 }
 ```
-
 
 ## Extending generator
 
 Once you have this structure in place, it's time to write the actual generator.
 
-Yeoman offers a base generator which you can extend to implement your own behavior. This base generator will add most of the functionalities you'd expect to ease your task.
+Yeoman offers a base generator which you can extend to implement your own behaviour. This base generator will add most of the functionalities you'd expect to ease your task.
 
 In the generator's index.js file, here's how you extend the base generator:
 
 ```js
-import Generator from 'yeoman-generator';
+import Generator from "yeoman-generator";
 
-export default class extends Generator {};
+export default class extends Generator {}
 ```
 
 We export the extended generator to make it available to the ecosystem. Node.js supports [ECMAScript modules](https://nodejs.org/api/esm.html#introduction).
@@ -117,7 +110,7 @@ Some generator methods can only be called inside the `constructor` function. The
 To override the generator constructor, add a constructor method like so:
 
 ```js
-import Generator from 'yeoman-generator';
+import Generator from "yeoman-generator";
 
 export default class extends Generator {
   // The name `constructor` is important here
@@ -126,9 +119,9 @@ export default class extends Generator {
     super(args, opts);
 
     // Next, add your custom code
-    this.option('babel'); // This method adds support for a `--babel` flag
+    this.option("babel"); // This method adds support for a `--babel` flag
   }
-};
+}
 ```
 
 ### Adding your own functionality
@@ -140,17 +133,16 @@ Let's add some methods:
 ```js
 export default class extends Generator {
   method1() {
-    this.log('method 1 just ran');
+    this.log("method 1 just ran");
   }
 
   method2() {
-    this.log('method 2 just ran');
+    this.log("method 2 just ran");
   }
-};
+}
 ```
 
 When we run the generator later, you'll see these lines logged to the console.
-
 
 ## Running the generator
 
@@ -166,7 +158,6 @@ npm link
 
 That will install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `this.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
 
-
 ### Finding the project root
 
 While running a generator, Yeoman will try to figure some things out based on the context of the folder it's running from.
@@ -176,7 +167,6 @@ Most importantly, Yeoman searches the directory tree for a `.yo-rc.json` file. I
 The Storage module creates the `.yo-rc.json` file. Calling `this.config.save()` from a generator for the first time will create the file.
 
 So, if your generator is not running in your current working directory, make sure you don't have a `.yo-rc.json` somewhere up the directory tree.
-
 
 ## Where to go from here?
 
