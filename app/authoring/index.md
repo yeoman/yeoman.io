@@ -105,10 +105,10 @@ In the generator's index.js file, here's how you extend the base generator:
 ```js
 import Generator from 'yeoman-generator';
 
-export default class extends Generator {
+export default class extends Generator {};
 ```
 
-We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](https://nodejs.org/api/modules.html#modules_module_exports).
+We export the extended generator to make it available to the ecosystem. Node.js supports [ECMAScript modules](https://nodejs.org/api/esm.html#introduction).
 
 ### Overwriting the constructor
 
