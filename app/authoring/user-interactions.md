@@ -21,26 +21,26 @@ Prompts are the main way a generator interacts with a user. The prompt module is
 The `prompt` method is asynchronous and returns a promise. You'll need to return the promise from your task in order to wait for its completion before running the next one. ([learn more about asynchronous task](/authoring/running-context.html))
 
 ```js
-module.exports = class extends Generator {
+export default class extends Generator {
   async prompting() {
     const answers = await this.prompt([
       {
         type: "input",
         name: "name",
         message: "Your project name",
-        default: this.appname // Default to current folder name
+        default: this.appname, // Default to current folder name
       },
       {
         type: "confirm",
         name: "cool",
-        message: "Would you like to enable the Cool feature?"
-      }
+        message: "Would you like to enable the Cool feature?",
+      },
     ]);
 
     this.log("app name", answers.name);
     this.log("cool feature", answers.cool);
   }
-};
+}
 ```
 
 Note here that we use the [`prompting` queue](/authoring/running-context.html) to ask for feedback from the user.
@@ -50,21 +50,21 @@ Note here that we use the [`prompting` queue](/authoring/running-context.html) t
 A very common scenario is to use the user answers at a later stage, e.g. in [`writing` queue](/authoring/file-system.html). This can be easily achieved by adding them to `this` context:
 
 ```js
-module.exports = class extends Generator {
+export default class extends Generator {
   async prompting() {
     this.answers = await this.prompt([
       {
         type: "confirm",
         name: "cool",
-        message: "Would you like to enable the Cool feature?"
-      }
+        message: "Would you like to enable the Cool feature?",
+      },
     ]);
   }
 
   writing() {
     this.log("cool feature", this.answers.cool); // user answer `cool` used
   }
-};
+}
 ```
 
 #### Remembering user preferences
@@ -78,7 +78,7 @@ this.prompt({
   type: "input",
   name: "username",
   message: "What's your GitHub username",
-  store: true
+  store: true,
 });
 ```
 
@@ -112,7 +112,7 @@ This method must be called inside the `constructor` method. Otherwise Yeoman won
 Here is an example:
 
 ```js
-module.exports = class extends Generator {
+export default class extends Generator {
   // note: arguments and options should be defined in the constructor.
   constructor(args, opts) {
     super(args, opts);
@@ -123,7 +123,7 @@ module.exports = class extends Generator {
     // And you can then access it later; e.g.
     this.log(this.options.appname);
   }
-};
+}
 ```
 
 Argument of type `Array` will contain all remaining arguments passed to the generator.
@@ -151,7 +151,7 @@ The options hash (the second argument) accepts multiple key-value pairs:
 Here is an example:
 
 ```js
-module.exports = class extends Generator {
+export default class extends Generator {
   // note: arguments and options should be defined in the constructor.
   constructor(args, opts) {
     super(args, opts);
@@ -162,7 +162,7 @@ module.exports = class extends Generator {
     // And you can then access it later; e.g.
     this.scriptSuffix = this.options.coffee ? ".coffee" : ".js";
   }
-};
+}
 ```
 
 ## Outputting Information
@@ -172,11 +172,11 @@ Outputting information is handled by the `this.log` module.
 The main method you'll use is simply `this.log` (e.g. `this.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
 
 ```js
-module.exports = class extends Generator {
+export default class extends Generator {
   myAction() {
     this.log("Something has gone wrong!");
   }
-};
+}
 ```
 
 There's also some other helper methods you can find in the [API documentation](https://yeoman.github.io/environment/TerminalAdapter.html).

@@ -36,7 +36,7 @@ on the command line in your project.
 
 ### Manage npm dependencies programmatically
 
-You can programatically create or extend your `package.json` file if you don’t want to use a template but like to have fixed versions of your dependencies. Yeomans file system tools can help you to get this job done.
+You can programmatically create or extend your `package.json` file if you don’t want to use a template but like to have fixed versions of your dependencies. Yeoman's file system tools can help you to get this job done.
 
 Example defining `eslint` as dev dependency and `react` as dependency:
 
@@ -70,9 +70,9 @@ For example you want to install lodash as a dev dependency:
 
 ```js
 generators.Base.extend({
-  installingLodash: function() {
-    this.yarnInstall(['lodash'], { 'dev': true });
-  }
+  installingLodash: function () {
+    this.yarnInstall(["lodash"], { dev: true });
+  },
 });
 ```
 
@@ -100,9 +100,9 @@ generators.Base.extend({
     this.installDependencies({
       npm: false,
       bower: true,
-      yarn: true
+      yarn: true,
     });
-  }
+  },
 });
 ```
 
