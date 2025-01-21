@@ -13,7 +13,7 @@ Yeoman (or "yo") has been a cornerstone of web development tooling for over a de
 
 First released in 2012 by the Chrome DevRel team, Yeoman provides a robust workflow and tools for managing templates, known as “generators.” Its iconic top-hat logo has become one of the most recognizable symbols in open-source development. 🎩❤️  
 
-In its heyday, Yeoman introduced developers to powerful ways of generating project templates, paving the way for modern tools like [Create React App](https://create-react-app.dev). Though no longer at the cutting edge of web tooling, Yeoman remains a valuable resource for developers seeking a stable and proven solution.
+In its heyday, Yeoman introduced developers to powerful ways of generating project templates, paving the way for tools like [Create React App](https://create-react-app.dev). Though no longer at the cutting edge of web tooling, Yeoman remains a valuable resource for developers seeking a stable and proven solution.
 
 
 ## Why Relaunch Maintenance?
