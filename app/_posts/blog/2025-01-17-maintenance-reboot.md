@@ -9,7 +9,7 @@ We’re thrilled to announce the relaunch of Yeoman’s maintenance for 2025. Th
 
 ## A Look Back at Yeoman
 
-For those unfamiliar, Yeoman (or "yo") has been a cornerstone of web development tooling for over a decade.  
+Yeoman (or "yo") has been a cornerstone of web development tooling for over a decade.  
 
 First released in 2012 by the Chrome DevRel team, Yeoman provides a robust workflow and tools for managing templates, known as “generators.” Its iconic top-hat logo has become one of the most recognizable symbols in open-source development. 🎩❤️  
 
