@@ -34,7 +34,7 @@ In *mytodo*, we have:
   <p>You can safely add a commit to save the current state by these commands.</p>
 
 <pre>
-<code class="language-sh">git add --all && git commit -m 'First commit'</code>
+<code class="language-sh">git add --all && git commit -m "First commit"</code>
 </pre>
 
 </div>
