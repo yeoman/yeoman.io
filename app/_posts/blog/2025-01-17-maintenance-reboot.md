@@ -20,6 +20,7 @@ In its heyday, Yeoman introduced developers to powerful ways of generating proje
 
 Yeoman has always been a community-driven project. Over the years, it has gone through cycles of active development and quieter periods, depending on the availability of volunteer maintainers.  
 
+Yeoman is still actively used by many projects such as [JHipster](https://www.jhipster.tech) and [VS Code's extension development starter](https://code.visualstudio.com/api/get-started/your-first-extension).
 After some sporadic updates in recent years, we’re now prioritizing stability, ensuring Yeoman can remain a dependable tool for legacy projects and those who continue to benefit from its features.  
 
 
