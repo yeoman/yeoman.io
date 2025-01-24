@@ -62,7 +62,7 @@ Most generators will ask a series of questions to customize the new project. To 
 yo webapp --help
 ```
 
-A lot of generators rely on build systems (like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)), and package managers (like npm and Bower). Make sure to visit the generator's site to learn about running and maintaining the new app. Easily access a generator's home page by running:
+A lot of generators rely on build systems (like [npm scripts](https://docs.npmjs.com/cli/using-npm/scripts), [Grunt](http://gruntjs.com/), or [Gulp](http://gulpjs.com/)), and package managers (like npm and Bower). Make sure to visit the generator's site to learn about running and maintaining the new app. Easily access a generator's home page by running:
 
 ```sh
 npm home generator-webapp
