@@ -33,7 +33,7 @@ Once inside your generator folder, create a `package.json` file. This file is a 
   "files": ["generators"],
   "keywords": ["yeoman-generator"],
   "dependencies": {
-    "yeoman-generator": "^6.0.0"
+    "yeoman-generator": "^7.0.0"
   }
 }
 ```
@@ -114,9 +114,9 @@ import Generator from "yeoman-generator";
 
 export default class extends Generator {
   // The name `constructor` is important here
-  constructor(args, opts) {
+  constructor(args, opts, features) {
     // Calling the super constructor is important so our generator is correctly set up
-    super(args, opts);
+    super(args, opts, { ...features });
 
     // Next, add your custom code
     this.option("babel"); // This method adds support for a `--babel` flag

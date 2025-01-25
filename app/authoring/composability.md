@@ -31,9 +31,8 @@ When composing, don't forget about [the running context and the run loop](/autho
 When composing with a `peerDependencies` generator:
 
 ```js
-import { resolve } from "import-meta-resolve";
 
-this.composeWith(resolve("generator-bootstrap/generators/app"), {
+await this.composeWith(import.metal.resolve("generator-bootstrap/generators/app"), {
   preprocessor: "sass",
 });
 ```
@@ -45,7 +44,7 @@ Note: If you need to pass `arguments` to a Generator based on a version of `yeom
 Even though it is not an encouraged practice, you can also pass a generator namespace to `composeWith`. In that case, Yeoman will try to find that generator installed as a `peerDependencies` or globally on the end user system.
 
 ```js
-this.composeWith("backbone:route", { rjs: true });
+await this.composeWith("backbone:route", { rjs: true });
 ```
 
 ### composing with a Generator class
@@ -60,12 +59,11 @@ This will let you compose with generator classes defined in your project or impo
 ```js
 // Import generator-node's main generator
 import NodeGenerator from "generator-node/generators/app/index.js";
-import { resolve } from "import-meta-resolve";
 
 // Compose with it
-this.composeWith({
+await this.composeWith({
   Generator: NodeGenerator,
-  path: resolve("generator-node/generators/app"),
+  path: import.meta.resolve("generator-node/generators/app"),
 });
 ```
 
