@@ -19,13 +19,13 @@ Usually the best way to organize your tests is to separate each generator and su
 In code, you should end up with a structure similar to this:
 
 ```js
-describe('backbone:app', function () {
-  it('generates a project with require.js', function () {
-      // assert the file exist
-      // assert the file uses AMD definition
+describe("backbone:app", function () {
+  it("generates a project with require.js", function () {
+    // assert the file exist
+    // assert the file uses AMD definition
   });
 
-  it('generates a project with webpack');
+  it("generates a project with webpack");
 });
 ```
 
@@ -34,7 +34,7 @@ describe('backbone:app', function () {
 Yeoman provide test helpers methods. They're contained inside the `yeoman-test` package.
 
 ```js
-var helpers = require('yeoman-test');
+var helpers = require("yeoman-test");
 ```
 
 You can check [the full helpers API here](https://github.com/yeoman/yeoman-test).
@@ -42,48 +42,51 @@ You can check [the full helpers API here](https://github.com/yeoman/yeoman-test)
 The most useful method when unit testing a generator is `helpers.run()`. This method will return a [RunContext](https://github.com/yeoman/yeoman-test/blob/master/lib/run-context.js) instance on which you can call method to setup a directory, mock prompt, mock arguments, etc.
 
 ```js
-var path = require('path');
+var path = require("path");
 
-it('generate a project', function () {
+it("generate a project", function () {
   // The object returned acts like a promise, so return it to wait until the process is done
-  return helpers.run(path.join(__dirname, '../app'))
-    .withOptions({ foo: 'bar' })      // Mock options passed in
-    .withArguments(['name-x'])        // Mock the arguments
-    .withPrompts({ coffee: false })   // Mock the prompt answers
-    .withLocalConfig({ lang: 'en' }) // Mock the local config
-    .then(function() {
+  return helpers
+    .run(path.join(__dirname, "../app"))
+    .withOptions({ foo: "bar" }) // Mock options passed in
+    .withArguments(["name-x"]) // Mock the arguments
+    .withPrompts({ coffee: false }) // Mock the prompt answers
+    .withLocalConfig({ lang: "en" }) // Mock the local config
+    .then(function () {
       // assert something about the generator
     });
-})
+});
 ```
 
 Sometimes you may want to construct a test scenario for the generator to run with existing contents in the target directory. In which case, you could invoke `inTmpDir()` with a callback function, like so:
 
 ```js
-var path = require('path');
-var fs = require('fs-extra');
+var path = require("path");
+var fs = require("fs-extra");
 
-helpers.run(path.join(__dirname, '../app'))
+helpers
+  .run(path.join(__dirname, "../app"))
   .inTmpDir(function (dir) {
     // `dir` is the path to the new temporary directory
-    fs.copySync(path.join(__dirname, '../templates/common'), dir)
+    fs.copySync(path.join(__dirname, "../templates/common"), dir);
   })
   .withPrompts({ coffee: false })
   .then(function () {
-    assert.file('common/file.txt');
+    assert.file("common/file.txt");
   });
 ```
 
 You can also perform asynchronous task in your callback:
 
 ```js
-var path = require('path');
-var fs = require('fs-extra');
+var path = require("path");
+var fs = require("fs-extra");
 
-helpers.run(path.join(__dirname, '../app'))
+helpers
+  .run(path.join(__dirname, "../app"))
   .inTmpDir(function (dir) {
     var done = this.async(); // `this` is the RunContext object.
-    fs.copy(path.join(__dirname, '../templates/common'), dir, done);
+    fs.copy(path.join(__dirname, "../templates/common"), dir, done);
   })
   .withPrompts({ coffee: false });
 ```
@@ -91,10 +94,11 @@ helpers.run(path.join(__dirname, '../app'))
 The run Promise will resolve with the directory that the generator was run in. This can be useful if you want to use a temporary directory that the generator was run in:
 
 ```js
-helpers.run(path.join(__dirname, '../app'))
+helpers
+  .run(path.join(__dirname, "../app"))
   .inTmpDir(function (dir) {
     var done = this.async(); // `this` is the RunContext object.
-    fs.copy(path.join(__dirname, '../templates/common'), dir, done);
+    fs.copy(path.join(__dirname, "../templates/common"), dir, done);
   })
   .withPrompts({ coffee: false })
   .then(function (dir) {
@@ -105,41 +109,39 @@ helpers.run(path.join(__dirname, '../app'))
 If your generator calls `composeWith()`, you may want to mock those dependent generators. Using `#withGenerators()`, pass in array of arrays that use `#createDummyGenerator()` as the first item and a namespace for the mocked generator as a second item:
 
 ```js
-var deps = [
-  [helpers.createDummyGenerator(), 'karma:app']
-];
-return helpers.run(path.join(__dirname, '../app')).withGenerators(deps);
+var deps = [[helpers.createDummyGenerator(), "karma:app"]];
+return helpers.run(path.join(__dirname, "../app")).withGenerators(deps);
 ```
 
 If you hate promises, you can use the `'ready'`, `'error'`, and `'end'` Events emitted:
 
 ```js
-helpers.run(path.join(__dirname, '../app'))
-  .on('error', function (error) {
-    console.log('Oh Noes!', error);
+helpers
+  .run(path.join(__dirname, "../app"))
+  .on("error", function (error) {
+    console.log("Oh Noes!", error);
   })
-  .on('ready', function (generator) {
+  .on("ready", function (generator) {
     // This is called right before `generator.run()` is called
   })
-  .on('end', done);
+  .on("end", done);
 ```
 
-You can also run a generator importing it as a module. This is usefull if the source code of your generator is transpiled.
+You can also run a generator importing it as a module. This is useful if the source code of your generator is transpiled.
 
 You will need to provide the following settings to `run`:
+
 - `resolved`: Path to the generator, e.g. `../src/app/index.js`
 - `namespace`: Namespace of the generator, e.g. `mygenerator:app`
 
 ```js
-var MyGenerator = require('../src/app');
+var MyGenerator = require("../src/app");
 
-helpers.run(MyGenerator, { 
-  resolved: require.resolve(__dirname, '../src/app/index.js'),
-  namespace: 'mygenerator:app'
+helpers.run(MyGenerator, {
+  resolved: require.resolve(__dirname, "../src/app/index.js"),
+  namespace: "mygenerator:app",
 });
-
 ```
-
 
 ## Assertions helpers
 
@@ -148,13 +150,13 @@ Yeoman extends the [native assert module](https://nodejs.org/api/assert.html) wi
 Require the assertion helpers:
 
 ```js
-var assert = require('yeoman-assert');
+var assert = require("yeoman-assert");
 ```
 
 ### Assert files exists
 
 ```js
-assert.file(['Gruntfile.js', 'app/router.js', 'app/views/main.js']);
+assert.file(["Gruntfile.js", "app/router.js", "app/views/main.js"]);
 ```
 
 `assert.noFile()` assert the contrary.
@@ -162,7 +164,10 @@ assert.file(['Gruntfile.js', 'app/router.js', 'app/views/main.js']);
 ### Assert a file content
 
 ```js
-assert.fileContent('controllers/user.js', /App\.UserController = Ember\.ObjectController\.extend/);
+assert.fileContent(
+  "controllers/user.js",
+  /App\.UserController = Ember\.ObjectController\.extend/
+);
 ```
 
 `assert.noFileContent()` assert the contrary.

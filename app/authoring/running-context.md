@@ -20,47 +20,50 @@ Now that you know the prototype methods are considered to be a task, you may won
 
 1. Prefix method name by an underscore (e.g. `_private_method`).
 
-    ```js
-      class extends Generator {
-        method1() {
-          console.log('hey 1');
-        }
+   ```js
+     class extends Generator {
+       method1() {
+         console.log('hey 1');
+       }
 
-        _private_method() {
-          console.log('private hey');
-        }
-      }
-    ```
+       _private_method() {
+         console.log('private hey');
+       }
+     }
+   ```
+
 2. Use instance methods:
 
-    ```js
-      class extends Generator {
-        constructor(args, opts) {
-          // Calling the super constructor is important so our generator is correctly set up
-          super(args, opts)
+   ```js
+     class extends Generator {
+       constructor(args, opts) {
+         // Calling the super constructor is important so our generator is correctly set up
+         super(args, opts)
 
-          this.helperMethod = function () {
-            console.log('won\'t be called automatically');
-          };
-        }
-      }
-    ```
+         this.helperMethod = function () {
+           console.log('won\'t be called automatically');
+         };
+       }
+     }
+   ```
 
 3. Extend a parent generator:
 
-    ```js
-      class MyBase extends Generator {
-        helper() {
-          console.log('methods on the parent generator won\'t be called automatically');
-        }
-      }
+   ```js
+   class MyBase extends Generator {
+     helper() {
+       console.log(
+         "methods on the parent generator won't be called automatically"
+       );
+     }
+   }
 
-      module.exports = class extends MyBase {
-        exec() {
-          this.helper();
-        }
-      };
-    ```
+   export default class extends MyBase {
+     exec() {
+       this.helper();
+     }
+   }
+   ```
 
 ## The run loop
 
@@ -86,8 +89,8 @@ You can also group multiple methods to be run together in a queue by using a has
 Generator.extend({
   priorityName: {
     method() {},
-    method2() {}
-  }
+    method2() {},
+  },
 });
 ```
 
@@ -102,7 +105,7 @@ The available priorities are (in running order):
 5. `writing` - Where you write the generator specific files (routes, controllers, etc)
 6. `conflicts` - Where conflicts are handled (used internally)
 7. `install` - Where installations are run (npm, bower)
-8. `end` - Called last, cleanup, say _good bye_, etc
+8. `end` - Called last, clean up, say _good bye_, etc
 
 Follow these priorities guidelines and your generator will play nice with others.
 
