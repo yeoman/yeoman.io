@@ -144,7 +144,7 @@ var beautify = require("gulp-beautify");
 this.queueTransformStream(beautify({ indent_size: 2 }));
 ```
 
-Note that **every file of any type will be passed through this stream**. Make sure any transform stream will passthrough the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.
+Note that **every file of any type will be passed through this stream**. Make sure any transform stream will pass through the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.
 
 You can basically use any _gulp_ plugins with the Yeoman transform stream to process generated files during the writing phase.
 
