@@ -79,4 +79,4 @@ We’re excited about this new chapter for Yeoman. While we aren’t introducing
 Stay tuned for updates, and thank you for being part of the Yeoman community! ❤️  
 
 – The Yeoman Maintainers Team  
-[@UlisesGascon](https://github.com/UlisesGascon) and [@JoshuaKGoldberg](https://gist.github.com/JoshuaKGoldberg)
+[@UlisesGascon](https://github.com/UlisesGascon) and [@JoshuaKGoldberg](https://github.com/JoshuaKGoldberg)
