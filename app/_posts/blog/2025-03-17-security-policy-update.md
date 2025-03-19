@@ -3,7 +3,7 @@ layout: blog
 title: How Yeoman is Enhancing Security Through Policy Updates
 ---
 
-This is just the start. We're also working on a **deeper security initiative** to strengthen Yeoman for the long haul. If you're curious or want to contribute, check out the discussion [here "Yeoman issue: Reboot Security 🔒"](https://github.com/yeoman/.github/issues/1).
+This is just the start. We're also working on a **deeper security initiative** to strengthen Yeoman for the long haul. If you're curious or want to contribute, check out the discussion [here](https://github.com/yeoman/.github/issues/1 "Yeoman issue: Reboot Security 🔒").
 
 ---
 We're not just dusting off old code. As part of our **[Maintenance Reboot Initiative](https://yeoman.io/blog/maintenance-reboot)**, we're rebuilding Yeoman for the future—stronger, faster, and definitely more secure. 
