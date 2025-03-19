@@ -21,7 +21,7 @@ Why private? Because public issues can give attackers a head start, and we’re 
 
 ## What Happens After?
 
-- You'll hear from us within **2–5 working days** (we're fast, but coffee breaks exist).  
+- You'll hear from us within **few days** (we're fast, but coffee breaks exist).  
 - We aim to squash confirmed vulnerabilities within **30 days**—complex issues might take a bit longer.  
 - You’ll be looped in throughout the process. Transparency is key.  
 - Once fixed, we’ll shout out your name (if you want) as a thank-you!
