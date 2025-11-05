@@ -52,7 +52,8 @@ To reduce maintenance overhead and improve overall security, several legacy repo
 - [yeoman/yeoman-remote](https://github.com/yeoman/yeoman-remote)  
 - [yeoman/yeoman-dummytest](https://github.com/yeoman/yeoman-dummytest)
 
-These repositories relied on outdated dependencies or duplicated functionality already available elsewhere in the ecosystem.  
+Most of these repositories relied on outdated dependencies or duplicated functionality already available elsewhere in the ecosystem.  
+Others were for initiatives that no longer are being worked on.
 
 Their respective npm packages have also been deprecated.
 
