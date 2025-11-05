@@ -60,6 +60,13 @@ Their respective npm packages have also been deprecated.
 
 Security work is never truly done. We’ll continue monitoring **OpenSSF Scorecard** results, improving automation, and releasing regular maintenance updates.  
 
+In parallel, we are also going through the plethora of still-active Yeoman packages and updating them to modern Node.js conventions.
+That includes migrating from CommonJS (CJS) to ECMAScript Modules (ESM) and updating their dependencies.
+This will make sure users are able to use the latest versions of both Yeoman and non-Yeoman packages, rather than old and potentially insecure predecessors.
+
+Afterwards, we plan on auditing this documentation website and updating it to reflect all the latest changes in Yeoman.
+Quite a lot has happened since the website was last overhauled!
+
 Community feedback will continue to shape our priorities — your insights help keep Yeoman secure and dependable.
 
 ## Join the Conversation
