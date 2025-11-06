@@ -29,7 +29,7 @@ In this example, let's assume `npm` wants to provide a `npm init` command to sca
 First step is to instantiate a new environment instance.
 
 ```js
-var yeoman = require('yeoman-environment');
+var yeoman = require("yeoman-environment");
 var env = yeoman.createEnv();
 ```
 
@@ -38,12 +38,12 @@ Then, we'll want to register our `generator-npm` so it can be used later. You ha
 ```js
 // Here we register a generator based on its path. Providing the namespace
 // is optional.
-env.register(require.resolve('generator-npm'), 'npm:app');
+env.register(require.resolve("generator-npm"), "npm:app");
 
 // Or you can provide a generator constructor. Doing so, you need to provide
 // a namespace manually
 var GeneratorNPM = generators.Base.extend(/* put your methods in here */);
-env.registerStub(GeneratorNPM, 'npm:app');
+env.registerStub(GeneratorNPM, "npm:app");
 ```
 
 Note that you can register as many generators as you want. Registered generators are just made available throughout the environment (to allow composability for example).
@@ -52,10 +52,10 @@ At this point, your environment is ready to run `npm:app`.
 
 ```js
 // In its simplest form
-env.run('npm:app', done);
+env.run("npm:app", done);
 
 // Or passing arguments and options
-env.run('npm:app some-name', { 'skip-install': true }, done);
+env.run("npm:app some-name", { "skip-install": true }, done);
 ```
 
 There you go. You just need to put this code in a `bin` runnable file and you can run a Yeoman generator without using `yo`.
@@ -66,7 +66,7 @@ But what if you wish to provide access to every Yeoman generator installed on a 
 
 ```js
 env.lookup(function () {
-  env.run('angular');
+  env.run("angular");
 });
 ```
 
@@ -110,12 +110,14 @@ An adapter should provide at least three methods.
 
 ### `Adapter#prompt()`
 
-It provides the question-answer functionality (for instance, when you start `yo`, a set of possible actions is prompted to the user). Its signature and behavior follows these of [Inquirer.js](https://github.com/SBoudrias/Inquirer.js). When a generators call `this.prompt`, the call is in the end handled by the adapter.
+It provides the question-answer functionality (for instance, when you start `yo`, a set of possible actions is prompted to the user). Its signature and behaviour follows these of [Inquirer.js](https://github.com/SBoudrias/Inquirer.js). When a generators call `this.prompt`, the call is in the end handled by the adapter.
 
 ### `Adapter#diff()`
+
 Called internally when a conflict is encountered and the user ask for a diff between the old and the new file (both files content is passed as arguments).
 
 ### `Adapter#log()`
+
 It's both a function and an object intended for generic output.
 See [`lib/util/log.js`](https://github.com/yeoman/environment/blob/master/lib/util/log.js) for the complete list of methods to provide.
 
